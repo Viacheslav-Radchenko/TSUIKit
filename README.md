@@ -8,15 +8,15 @@ Set of extended UI components for iOS.
 `SSNavigationStripView` is a navigation menu control with highly customizable design and flexible structure.
 It provides smooth animations for item selection and dynamic content modification.
             
-<img src="https://github.com/Viacheslav-Radchenko/SSUIKit/raw/master/SSNavigationStripView_Screenshot1.png" alt="SSNavigationStripView examples" width="384" height="512" />
-<img src="https://github.com/Viacheslav-Radchenko/SSUIKit/raw/master/SSNavigationStripView_Screenshot2.png" alt="SSNavigationStripView examples" width="384" height="512" />
+<img src="https://raw.github.com/Viacheslav-Radchenko/SSUIKit/master/Screenshots/SSNavigationStripView_Screenshot1.jpg" alt="SSNavigationStripView examples" width="384" height="512" />
+<img src="https://raw.github.com/Viacheslav-Radchenko/SSUIKit/master/Screenshots/SSNavigationStripView_Screenshot2.jpg" alt="SSNavigationStripView examples" width="384" height="512" />
 
 ## SSTabView
 
 `SSTabView` is a container component for set of views or view controllers.
 
-<img src="https://github.com/Viacheslav-Radchenko/SSUIKit/raw/master/SSTabView_Screenshot1.png" alt="SSTabView examples" width="384" height="512" />
-<img src="https://github.com/Viacheslav-Radchenko/SSUIKit/raw/master/SSTabView_Screenshot2.png" alt="SSTabView examples" width="384" height="512" />
+<img src="https://raw.github.com/Viacheslav-Radchenko/SSUIKit/master/Screenshots/SSTabView_Screenshot1.jpg" alt="SSTabView examples" width="384" height="512" />
+<img src="https://raw.github.com/Viacheslav-Radchenko/SSUIKit/master/Screenshots/SSTabView_Screenshot2.jpg" alt="SSTabView examples" width="384" height="512" />
 
 ## Requirements
 
