@@ -752,7 +752,8 @@
     [self updateSections];
     
     [self updateNavigationButtonsStateWithAnimation:NO];
-    [self updateSectionsSelection];
+    [self updateSectionsSelectionBeforeAnimation];
+    [self updateSectionsSelectionAfterAnimation];
     [self updateSectionsLayout];
     [self updateSectionsScrollSizeOnlyIfNewSizeGreater:NO];
     [self updateSectionsScrollPosition];
@@ -767,7 +768,8 @@
     [self updateSections];
     
     [self updateNavigationButtonsStateWithAnimation:NO];
-    [self updateSectionsSelection];
+    [self updateSectionsSelectionBeforeAnimation];
+    [self updateSectionsSelectionAfterAnimation];
     [self updateSectionsLayout];
     [self updateSectionsScrollSizeOnlyIfNewSizeGreater:NO];
     [self updateSectionsScrollPosition];
@@ -783,7 +785,8 @@
     [self updateRightItems];
     
     [self updateNavigationButtonsStateWithAnimation:NO];
-    [self updateSectionsSelection];
+    [self updateSectionsSelectionBeforeAnimation];
+    [self updateSectionsSelectionAfterAnimation];
     [self updateSectionsLayout];
     [self updateSectionsScrollSizeOnlyIfNewSizeGreater:NO];
     [self updateSectionsScrollPosition];
@@ -1431,7 +1434,7 @@
     }
 }
 
-- (void)updateSectionsSelection
+- (void)updateSectionsSelectionBeforeAnimation
 {
     VerboseLog();
     // Check selection
@@ -1459,13 +1462,6 @@
             [sectionInfo.control setTitleEdgeInsets:UIEdgeInsetsMake(0, 0, 0, 0)];
             [sectionInfo.control setImageEdgeInsets:UIEdgeInsetsMake(0, 0, 0, 4)];
         }
-        else
-        {
-            sectionInfo.control.contentHorizontalAlignment = UIControlContentHorizontalAlignmentCenter;
-            [sectionInfo.control setContentEdgeInsets:UIEdgeInsetsMake(0, 0, 0, 0)];
-            [sectionInfo.control setTitleEdgeInsets:UIEdgeInsetsMake(0, 4, 0, 0)];
-            [sectionInfo.control setImageEdgeInsets:UIEdgeInsetsMake(0, 0, 0, 0)];
-        }
     }
     
     for(int i = 0; i < _sections.count; ++i)
@@ -1481,6 +1477,24 @@
         {
             SSNavigationStripComponentInfo *info = _sections[j];
             [_sectionsScrollView sendSubviewToBack:info.container];
+        }
+    }
+}
+
+- (void)updateSectionsSelectionAfterAnimation
+{
+    VerboseLog();
+    // Check selection
+    for (int i = 0; i < _sections.count; ++i)
+    {
+        SSNavigationStripComponentInfo *sectionInfo = _sections[i];
+        if(!(self.sectionsAligment == UIViewContentModeCenter && i < _selectedSection) &&
+           !(self.sectionsAligment == UIViewContentModeCenter && i > _selectedSection))
+        {
+            sectionInfo.control.contentHorizontalAlignment = UIControlContentHorizontalAlignmentCenter;
+            [sectionInfo.control setContentEdgeInsets:UIEdgeInsetsMake(0, 0, 0, 0)];
+            [sectionInfo.control setTitleEdgeInsets:UIEdgeInsetsMake(0, 4, 0, 0)];
+            [sectionInfo.control setImageEdgeInsets:UIEdgeInsetsMake(0, 0, 0, 0)];
         }
     }
 }
@@ -1540,17 +1554,17 @@
         
         _selectedSection = index;
         CGFloat scrollContainerWidthBefore = [self sectionsContainerWidth];
+        [self updateSectionsSelectionBeforeAnimation];
         [self updateNavigationButtonsStateWithAnimation:animated];
         CGFloat scrollContainerWidthAfter = [self sectionsContainerWidth];
         
-        [self updateSectionsSelection];
         [self updateSectionsScrollSizeOnlyIfNewSizeGreater:YES];
-        
         
         [SSUtils performViewAnimationBlock:^{
             [self updateSectionsLayout];
             [self updateEmptySpaceHolderLayout];
             [self updateSectionsScrollPosition];
+            [self updateSectionsSelectionAfterAnimation];
         } withCompletion:^{
             [self updateSectionsScrollSizeOnlyIfNewSizeGreater:NO];
             [self updateEmptySpaceHolderLayout];
@@ -1640,7 +1654,7 @@
         }
         
         CGFloat sectionsContainerWidthBefore = [self sectionsContainerWidth];
-        [self updateSectionsSelection];
+        [self updateSectionsSelectionBeforeAnimation];
         [self updateNavigationButtonsStateWithAnimation:animated];
         
         CGFloat sectionsContainerWidthAfter = [self sectionsContainerWidth];
@@ -1672,6 +1686,7 @@
             [self updateSectionsLayout];
             [self updateEmptySpaceHolderLayout];
             [self updateSectionsScrollPosition];
+            [self updateSectionsSelectionAfterAnimation];
         } withCompletion:^{
             if(sectionsContainerWidthBefore >= sectionsContainerWidthAfter)
             {
@@ -1706,7 +1721,7 @@
         }
     
         CGFloat sectionsContainerWidthBefore = [self sectionsContainerWidth];
-        [self updateSectionsSelection];
+        [self updateSectionsSelectionBeforeAnimation];
         [self updateNavigationButtonsStateWithAnimation:animated];
         [self updateSectionsScrollSizeOnlyIfNewSizeGreater:YES];
         
@@ -1716,6 +1731,7 @@
             [self updateSectionsLayout];
             [self updateEmptySpaceHolderLayout];
             [self updateSectionsScrollPosition];
+            [self updateSectionsSelectionAfterAnimation];
         } withCompletion:^{
             if(sectionsContainerWidthBefore >= sectionsContainerWidthAfter)
             {
