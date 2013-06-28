@@ -1,0 +1,26 @@
+//
+// Prefix header for all source files of the 'TabViewTest' target in the 'TabViewTest' project
+//
+
+#import <Availability.h>
+
+#ifndef __IPHONE_4_0
+#warning "This project uses features only available in iOS SDK 4.0 and later."
+#endif
+
+#define VerboseLog(fmt, ...)   NSLog((@"%s [Line %d] " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__)
+#define IS_IPAD             (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
+#define IS_IPHONE           (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
+#define IS_IPHONE_5         (IS_IPHONE && [[UIScreen mainScreen] bounds].size.height == 568.0f)
+#define SUPPRESS_PERFORM_SELECTOR_LEAK_WARNING(Stuff) \
+                        do { \
+                        _Pragma("clang diagnostic push") \
+                        _Pragma("clang diagnostic ignored \"-Warc-performSelector-leaks\"") \
+                        Stuff; \
+                        _Pragma("clang diagnostic pop") \
+                        } while (0)
+
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+    #import <Foundation/Foundation.h>
+#endif
