@@ -1,8 +1,6 @@
 //
-//  main.m
-//  NavigationStripTest
-//
-//  Created by Viacheslav Radchenko on 6/21/13.
+//  SSNavigtionStripViewDelegate.h
+//  Created by Viacheslav Radchenko on 6/10/13.
 //
 //  The MIT License (MIT)
 //  Copyright © 2013 Viacheslav Radchenko
@@ -25,13 +23,26 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 //  THE SOFTWARE.
 
-#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
 
-#import "TSAppDelegate.h"
+@class TSNavigationStripView;
 
-int main(int argc, char *argv[])
-{
-    @autoreleasepool {
-        return UIApplicationMain(argc, argv, nil, NSStringFromClass([TSAppDelegate class]));
-    }
-}
+@protocol TSNavigationStripViewDelegate <NSObject>
+
+@optional
+
+/**
+ *  @abstract Selection state changed callbacks
+ */
+- (void)navigationStrip:(TSNavigationStripView *)navigationStripView itemAtIndex:(NSInteger)index fromLeftSide:(BOOL)leftSide didChangeState:(BOOL)selected;
+- (void)navigationStrip:(TSNavigationStripView *)navigationStripView willSelectSectionAtIndex:(NSInteger)index animated:(BOOL)animated;
+- (void)navigationStrip:(TSNavigationStripView *)navigationStripView didSelectSectionAtIndex:(NSInteger)index;
+
+/**
+ *  @abstract Invoked only if sectionsAligment is set to UIViewContentAligmentCenter.
+ *  @param    normScrollOffset - in range [-1..1]               
+ */
+- (void)navigationStrip:(TSNavigationStripView *)navigationStripView didScrollTo:(CGFloat)normScrollOffset;
+- (void)navigationStripDidEndScroll:(TSNavigationStripView *)navigationStripView;
+
+@end

@@ -1,5 +1,5 @@
 //
-//  main.m
+//  TSAppDelegate.h
 //  NavigationStripTest
 //
 //  Created by Viacheslav Radchenko on 6/21/13.
@@ -27,11 +27,12 @@
 
 #import <UIKit/UIKit.h>
 
-#import "TSAppDelegate.h"
+@class TSNavigationStripTestViewController;
 
-int main(int argc, char *argv[])
-{
-    @autoreleasepool {
-        return UIApplicationMain(argc, argv, nil, NSStringFromClass([TSAppDelegate class]));
-    }
-}
+@interface TSAppDelegate : UIResponder <UIApplicationDelegate>
+
+@property (strong, nonatomic) UIWindow *window;
+
+@property (strong, nonatomic) TSNavigationStripTestViewController *viewController;
+
+@end

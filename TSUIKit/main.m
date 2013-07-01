@@ -1,6 +1,6 @@
 //
 //  main.m
-//  NavigationStripTest
+//  TSUIKit
 //
 //  Created by Viacheslav Radchenko on 6/21/13.
 //

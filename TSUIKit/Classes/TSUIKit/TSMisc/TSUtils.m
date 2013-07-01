@@ -1,8 +1,8 @@
 //
-//  main.m
-//  NavigationStripTest
+//  TSUtils.m
+//  TSUIKit
 //
-//  Created by Viacheslav Radchenko on 6/21/13.
+//  Created by Viacheslav Radchenko on 6/20/13.
 //
 //  The MIT License (MIT)
 //  Copyright © 2013 Viacheslav Radchenko
@@ -25,13 +25,37 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 //  THE SOFTWARE.
 
-#import <UIKit/UIKit.h>
+#import "TSUtils.h"
 
-#import "TSAppDelegate.h"
+#ifndef VerboseLog
+#define VerboseLog(fmt, ...)  (void)0
+#endif
 
-int main(int argc, char *argv[])
+#define ANIMATION_DURATION      0.3
+
+@implementation TSUtils
+
++ (void)performViewAnimationBlock:(void (^)(void))block withCompletion:(void (^)(void))completion animated:(BOOL)animated
 {
-    @autoreleasepool {
-        return UIApplicationMain(argc, argv, nil, NSStringFromClass([TSAppDelegate class]));
+    VerboseLog();
+    if(animated)
+    {
+        [UIView animateWithDuration:ANIMATION_DURATION
+                         animations:^{
+                             if(block)
+                                 block();
+                         } completion:^(BOOL finished) {
+                             if(completion)
+                                 completion();
+                         }];
+    }
+    else
+    {
+        if(block)
+            block();
+        if(completion)
+            completion();
     }
 }
+
+@end

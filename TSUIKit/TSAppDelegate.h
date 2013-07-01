@@ -1,6 +1,6 @@
 //
-//  main.m
-//  NavigationStripTest
+//  TSAppDelegate.h
+//  TSUIKit
 //
 //  Created by Viacheslav Radchenko on 6/21/13.
 //
@@ -27,11 +27,8 @@
 
 #import <UIKit/UIKit.h>
 
-#import "TSAppDelegate.h"
+@interface TSAppDelegate : UIResponder <UIApplicationDelegate>
 
-int main(int argc, char *argv[])
-{
-    @autoreleasepool {
-        return UIApplicationMain(argc, argv, nil, NSStringFromClass([TSAppDelegate class]));
-    }
-}
+@property (strong, nonatomic) UIWindow *window;
+
+@end

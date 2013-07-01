@@ -1,22 +1,22 @@
-SSUIKit
+TSUIKit
 =======
 
 Set of extended UI components for iOS.
 
-## SSNavigationStripView
+## TSNavigationStripView
 
-`SSNavigationStripView` is a navigation menu control with highly customizable design and flexible structure.
+`TSNavigationStripView` is a navigation menu control with highly customizable design and flexible structure.
 It provides smooth animations for item selection and dynamic content modification.
             
-<img src="https://raw.github.com/Viacheslav-Radchenko/SSUIKit/master/Screenshots/SSNavigationStripView_Screenshot1.jpg" alt="SSNavigationStripView examples" width="384" height="512" />
-<img src="https://raw.github.com/Viacheslav-Radchenko/SSUIKit/master/Screenshots/SSNavigationStripView_Screenshot2.jpg" alt="SSNavigationStripView examples" width="384" height="512" />
+<img src="https://raw.github.com/Viacheslav-Radchenko/TSUIKit/master/Screenshots/TSNavigationStripView_Screenshot1.jpg" alt="TSNavigationStripView examples" width="384" height="512" />
+<img src="https://raw.github.com/Viacheslav-Radchenko/TSUIKit/master/Screenshots/TSNavigationStripView_Screenshot2.jpg" alt="TSNavigationStripView examples" width="384" height="512" />
 
-## SSTabView
+## TSTabView
 
-`SSTabView` is a container component for set of views or view controllers.
+`TSTabView` is a container component for set of views or view controllers.
 
-<img src="https://raw.github.com/Viacheslav-Radchenko/SSUIKit/master/Screenshots/SSTabView_Screenshot1.jpg" alt="SSTabView examples" width="384" height="512" />
-<img src="https://raw.github.com/Viacheslav-Radchenko/SSUIKit/master/Screenshots/SSTabView_Screenshot2.jpg" alt="SSTabView examples" width="384" height="512" />
+<img src="https://raw.github.com/Viacheslav-Radchenko/TSUIKit/master/Screenshots/TSTabView_Screenshot1.jpg" alt="TSTabView examples" width="384" height="512" />
+<img src="https://raw.github.com/Viacheslav-Radchenko/SSUIKit/master/Screenshots/TSTabView_Screenshot2.jpg" alt="TSTabView examples" width="384" height="512" />
 
 ## Requirements
 
@@ -28,12 +28,12 @@ It provides smooth animations for item selection and dynamic content modificatio
 
 ## Demo
 
-Build and run the `SSUIKit` project in Xcode to see examples of each component.
+Build and run the `TSUIKit` project in Xcode to see examples of each component.
 
 ## Installation
 
-All you need to do is drop `SSUIKit` source files into your project and add corresponding `#include "*.h"` to the top of classes that will use particular component.
-`SSUIKit` use `QuartzCore.framework`, so you might need to add it as well.
+All you need to do is drop `TSUIKit` source files into your project and add corresponding `#include "*.h"` to the top of classes that will use particular component.
+`TSUIKit` use `QuartzCore.framework`, so you might need to add it as well.
 
 ## Contact
 
@@ -44,7 +44,7 @@ Viacheslav Radchenko
 
 ## License
 
-SSUKit is available under the MIT license.
+TSUKit is available under the MIT license.
 
 Copyright © 2013 Viacheslav Radchenko.
 

@@ -1,8 +1,8 @@
 //
-//  main.m
-//  NavigationStripTest
+//  TSAppDelegate.h
+//  TabViewTest
 //
-//  Created by Viacheslav Radchenko on 6/21/13.
+//  Created by Viacheslav Radchenko on 6/20/13.
 //
 //  The MIT License (MIT)
 //  Copyright © 2013 Viacheslav Radchenko
@@ -27,11 +27,12 @@
 
 #import <UIKit/UIKit.h>
 
-#import "TSAppDelegate.h"
+@class TSTabViewTestViewController;
 
-int main(int argc, char *argv[])
-{
-    @autoreleasepool {
-        return UIApplicationMain(argc, argv, nil, NSStringFromClass([TSAppDelegate class]));
-    }
-}
+@interface TSAppDelegate : UIResponder <UIApplicationDelegate>
+
+@property (strong, nonatomic) UIWindow *window;
+
+@property (strong, nonatomic) TSTabViewTestViewController *viewController;
+
+@end

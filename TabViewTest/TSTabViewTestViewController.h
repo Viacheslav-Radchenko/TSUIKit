@@ -1,8 +1,8 @@
 //
-//  main.m
-//  NavigationStripTest
+//  TSTabViewTestViewController.h
+//  TabViewTest
 //
-//  Created by Viacheslav Radchenko on 6/21/13.
+//  Created by Viacheslav Radchenko on 6/20/13.
 //
 //  The MIT License (MIT)
 //  Copyright © 2013 Viacheslav Radchenko
@@ -27,11 +27,13 @@
 
 #import <UIKit/UIKit.h>
 
-#import "TSAppDelegate.h"
+@interface TSTabViewTestViewController : UIViewController
 
-int main(int argc, char *argv[])
-{
-    @autoreleasepool {
-        return UIApplicationMain(argc, argv, nil, NSStringFromClass([TSAppDelegate class]));
-    }
-}
+@property (nonatomic, weak) IBOutlet UIView *settingsView;
+@property (nonatomic, weak) IBOutlet UIStepper *numberOfTabs;
+@property (nonatomic, weak) IBOutlet UISegmentedControl *sectionAligment;
+
+- (IBAction)numberOfTabsValueChanged;
+- (IBAction)sectionAligmentValueChanged;
+
+@end

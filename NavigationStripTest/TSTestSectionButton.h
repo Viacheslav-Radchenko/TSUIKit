@@ -1,8 +1,8 @@
 //
-//  main.m
-//  NavigationStripTest
+//  TSTestSectionButton.h
+//  TSUIKit
 //
-//  Created by Viacheslav Radchenko on 6/21/13.
+//  Created by Viacheslav Radchenko on 6/28/13.
 //
 //  The MIT License (MIT)
 //  Copyright © 2013 Viacheslav Radchenko
@@ -27,11 +27,10 @@
 
 #import <UIKit/UIKit.h>
 
-#import "TSAppDelegate.h"
-
-int main(int argc, char *argv[])
+// Example of customized control for section. Draw method is overrided.
+@interface TSTestSectionButton : UIButton
 {
-    @autoreleasepool {
-        return UIApplicationMain(argc, argv, nil, NSStringFromClass([TSAppDelegate class]));
-    }
+    UIColor *_bgColor;
 }
+
+@end

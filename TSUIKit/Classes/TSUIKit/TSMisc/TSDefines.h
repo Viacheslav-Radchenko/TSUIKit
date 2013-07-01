@@ -1,6 +1,6 @@
 //
-//  main.m
-//  NavigationStripTest
+//  TSDefines.h
+//  TSUIKit
 //
 //  Created by Viacheslav Radchenko on 6/21/13.
 //
@@ -25,13 +25,26 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 //  THE SOFTWARE.
 
-#import <UIKit/UIKit.h>
+#ifndef TSUIKit_TSDefines_h
+#define TSUIKit_TSDefines_h
 
-#import "TSAppDelegate.h"
+#ifndef __IPHONE_5_0
+#warning "This project uses features only available in iOS SDK 5.0 and later."
+#endif
 
-int main(int argc, char *argv[])
-{
-    @autoreleasepool {
-        return UIApplicationMain(argc, argv, nil, NSStringFromClass([TSAppDelegate class]));
-    }
-}
+#define VerboseLog(fmt, ...)   NSLog((@"%s [Line %d] " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__)
+
+#define IS_IPAD             (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
+#define IS_IPHONE           (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
+#define IS_IPHONE_5         (IS_IPHONE && [[UIScreen mainScreen] bounds].size.height == 568.0f)
+
+#define SUPPRESS_PERFORM_SELECTOR_LEAK_WARNING(Stuff) \
+                do { \
+                    _Pragma("clang diagnostic push") \
+                    _Pragma("clang diagnostic ignored \"-Warc-performSelector-leaks\"") \
+                    Stuff; \
+                    _Pragma("clang diagnostic pop") \
+                } while (0)
+
+
+#endif

@@ -1,8 +1,8 @@
 //
-//  main.m
-//  NavigationStripTest
+//  TSScrollView.m
+//  TSUIKit
 //
-//  Created by Viacheslav Radchenko on 6/21/13.
+//  Created by Viacheslav Radchenko on 6/14/13.
 //
 //  The MIT License (MIT)
 //  Copyright © 2013 Viacheslav Radchenko
@@ -25,13 +25,29 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 //  THE SOFTWARE.
 
-#import <UIKit/UIKit.h>
+#import "TSScrollView.h"
 
-#import "TSAppDelegate.h"
 
-int main(int argc, char *argv[])
+@implementation TSScrollView
+
+- (void)allowCancelTouchesForClasses:(NSArray *)classNames
 {
-    @autoreleasepool {
-        return UIApplicationMain(argc, argv, nil, NSStringFromClass([TSAppDelegate class]));
-    }
+    _allowCancelTouchesForClasses = classNames;
 }
+
+- (BOOL)touchesShouldCancelInContentView:(UIView *)view
+{
+    if(_allowCancelTouchesForClasses)
+    {
+        for (NSString *className in _allowCancelTouchesForClasses)
+        {
+            if([view isKindOfClass:NSClassFromString(className)])
+            {
+                return YES;
+            }
+        }
+    }
+    return [super touchesShouldCancelInContentView:view];
+}
+
+@end

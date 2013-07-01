@@ -1,8 +1,8 @@
 //
-//  main.m
-//  NavigationStripTest
+//  TSTabViewDataSource.h
+//  TSUIKit
 //
-//  Created by Viacheslav Radchenko on 6/21/13.
+//  Created by Viacheslav Radchenko on 6/18/13.
 //
 //  The MIT License (MIT)
 //  Copyright © 2013 Viacheslav Radchenko
@@ -25,13 +25,23 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 //  THE SOFTWARE.
 
-#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#import "TSNavigationStripDataSource.h"
 
-#import "TSAppDelegate.h"
+/**
+ *  @abstract    TSTabViewDataSource is shared between TSTabView and TSNavigationStripView.  
+ *               TSTabViewDataSource extends TSNavigationStripDataSource providing TSTabView with tabs information. 
+ */
+@protocol TSTabViewDataSource <TSNavigationStripDataSource>
 
-int main(int argc, char *argv[])
-{
-    @autoreleasepool {
-        return UIApplicationMain(argc, argv, nil, NSStringFromClass([TSAppDelegate class]));
-    }
-}
+@optional
+
+/**
+ *  @abstract   Provide UI content for tab at index. Tabs can be represented by subclasses of UIView or UIViewController.
+ *              Only one of these methods is required for implementation.
+ *              tabViewControllerForIndex: has more priority, if it's implemented in data source then viewForIndex: wouldn't be invoked.
+ */
+- (UIViewController *)viewControllerForTabAtIndex:(NSInteger)index;
+- (UIView *)viewForTabAtIndex:(NSInteger)index;
+
+@end

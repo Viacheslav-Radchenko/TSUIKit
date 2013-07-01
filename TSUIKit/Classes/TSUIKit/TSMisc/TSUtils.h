@@ -1,8 +1,8 @@
 //
-//  main.m
-//  NavigationStripTest
+//  TSUtils.h
+//  TSUIKit
 //
-//  Created by Viacheslav Radchenko on 6/21/13.
+//  Created by Viacheslav Radchenko on 6/20/13.
 //
 //  The MIT License (MIT)
 //  Copyright © 2013 Viacheslav Radchenko
@@ -25,13 +25,10 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 //  THE SOFTWARE.
 
-#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
 
-#import "TSAppDelegate.h"
+@interface TSUtils : NSObject
 
-int main(int argc, char *argv[])
-{
-    @autoreleasepool {
-        return UIApplicationMain(argc, argv, nil, NSStringFromClass([TSAppDelegate class]));
-    }
-}
++ (void)performViewAnimationBlock:(void (^)(void))block withCompletion:(void (^)(void))completion animated:(BOOL)animated;
+
+@end

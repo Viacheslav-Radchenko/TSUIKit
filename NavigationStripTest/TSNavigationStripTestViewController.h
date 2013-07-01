@@ -1,8 +1,8 @@
 //
-//  main.m
+//  TSNavigationStripTestViewController.h
 //  NavigationStripTest
 //
-//  Created by Viacheslav Radchenko on 6/21/13.
+//  Created by Viacheslav Radchenko on 4/20/13.
 //
 //  The MIT License (MIT)
 //  Copyright © 2013 Viacheslav Radchenko
@@ -27,11 +27,26 @@
 
 #import <UIKit/UIKit.h>
 
-#import "TSAppDelegate.h"
+@interface TSNavigationStripTestViewController : UIViewController
 
-int main(int argc, char *argv[])
-{
-    @autoreleasepool {
-        return UIApplicationMain(argc, argv, nil, NSStringFromClass([TSAppDelegate class]));
-    }
-}
+@property (nonatomic, weak) IBOutlet UIView *settingsView;
+@property (nonatomic, weak) IBOutlet UISwitch *navigationButtonsAutohide;
+@property (nonatomic, weak) IBOutlet UISwitch *sectionsScrollEnabled;
+@property (nonatomic, weak) IBOutlet UISwitch *debugMode;
+@property (nonatomic, weak) IBOutlet UISwitch *maskSectionsView;
+@property (nonatomic, weak) IBOutlet UIStepper *numberOfLeftItems;
+@property (nonatomic, weak) IBOutlet UIStepper *numberOfSections;
+@property (nonatomic, weak) IBOutlet UIStepper *numberOfRightItems;
+@property (nonatomic, weak) IBOutlet UISegmentedControl *sectionAligment;
+
+
+- (IBAction)navigationButtonsAutohideValueChanged;
+- (IBAction)sectionsScrollEnabledValueChanged;
+- (IBAction)numberOfLeftItemsValueChanged;
+- (IBAction)debugModeValueChanged;
+- (IBAction)maskSectionsViewValueChanged;
+- (IBAction)numberOfSectionsValueChanged;
+- (IBAction)numberOfRightItemsValueChanged;
+- (IBAction)sectionAligmentValueChanged;
+
+@end

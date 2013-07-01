@@ -1,8 +1,8 @@
 //
-//  main.m
-//  NavigationStripTest
+//  TSTabViewDelegate.h
+//  TSUIKit
 //
-//  Created by Viacheslav Radchenko on 6/21/13.
+//  Created by Viacheslav Radchenko on 6/20/13.
 //
 //  The MIT License (MIT)
 //  Copyright © 2013 Viacheslav Radchenko
@@ -25,13 +25,25 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 //  THE SOFTWARE.
 
-#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
 
-#import "TSAppDelegate.h"
+@class TSTabView;
 
-int main(int argc, char *argv[])
-{
-    @autoreleasepool {
-        return UIApplicationMain(argc, argv, nil, NSStringFromClass([TSAppDelegate class]));
-    }
-}
+@protocol TSTabViewDelegate <NSObject>
+
+@optional
+
+/**
+ *  @abstract Selection state changed callbacks
+ */
+- (void)tabView:(TSTabView *)tabView menuItemAtIndex:(NSInteger)index fromLeftSide:(BOOL)leftSide didChangeState:(BOOL)selected;
+- (void)tabView:(TSTabView *)tabView willSelectTabAtIndex:(NSInteger)index animated:(BOOL)animated;
+- (void)tabView:(TSTabView *)tabView didSelectTabAtIndex:(NSInteger)index;
+
+/**
+ *  @abstract 
+ *  @param    normScrollOffset - in range [-1..1]
+ */
+- (void)tabView:(TSTabView *)tabView didScrollTo:(CGFloat)normScrollOffset;
+
+@end

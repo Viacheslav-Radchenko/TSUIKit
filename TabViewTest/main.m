@@ -27,11 +27,11 @@
 
 #import <UIKit/UIKit.h>
 
-#import "SSAppDelegate.h"
+#import "TSAppDelegate.h"
 
 int main(int argc, char *argv[])
 {
     @autoreleasepool {
-        return UIApplicationMain(argc, argv, nil, NSStringFromClass([SSAppDelegate class]));
+        return UIApplicationMain(argc, argv, nil, NSStringFromClass([TSAppDelegate class]));
     }
 }
