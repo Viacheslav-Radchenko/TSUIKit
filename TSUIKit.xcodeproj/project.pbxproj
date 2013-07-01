@@ -231,7 +231,6 @@
 		F6F3CF261781AE4B00C7274F /* TSScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = F6F3CEF11781ABB400C7274F /* TSScrollView.m */; };
 		F6F3CF271781AE4B00C7274F /* TSTabView.m in Sources */ = {isa = PBXBuildFile; fileRef = F6F3CEF41781ABB400C7274F /* TSTabView.m */; };
 		F6F3CF281781AE4B00C7274F /* TSTabViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F6F3CEF81781ABB400C7274F /* TSTabViewModel.m */; };
-		F6F3CF2C1781B00800C7274F /* TSUIKit-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = F6F3CF2B1781B00800C7274F /* TSUIKit-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -1024,7 +1023,6 @@
 				F6F3CF151781ABB500C7274F /* InfoPlist.strings in Resources */,
 				F6F3CF161781ABB500C7274F /* MainStoryboard_iPad.storyboard in Resources */,
 				F6F3CF171781ABB500C7274F /* MainStoryboard_iPhone.storyboard in Resources */,
-				F6F3CF2C1781B00800C7274F /* TSUIKit-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
