@@ -80,7 +80,8 @@
  *  @supported
  *      UIViewContentModeCenter,
  *      UIViewContentModeLeft,
- *      UIViewContentModeRight
+ *      UIViewContentModeRight,
+ *      UIViewContentModeScaleAspectFill
  *  @def
  *      UIViewContentModeCenter
  */
@@ -119,6 +120,12 @@
  *  @def        nil
  */
 @property (nonatomic, strong)           UIImage  *emptySpaceHolderImage;
+
+/**
+ *  @abstract   Tis view would be layouted under selected section and smoothly moved during selection animation
+ *  @def        nil
+ */
+@property (nonatomic, strong)           UIView  *selectionMarker;
 
 
 - (id)initWithFrame:(CGRect)frame;

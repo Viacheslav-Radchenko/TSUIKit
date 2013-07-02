@@ -629,6 +629,23 @@
     _backgroundImageView.hidden = (backgroundImage == nil);
 }
 
+- (void)setSelectionMarker:(UIView *)markerView
+{
+    if(_selectionMarker == markerView)
+        return;
+    if(_selectionMarker)
+    {
+        [_selectionMarker removeFromSuperview];
+    }
+    _selectionMarker = markerView;
+    if(_selectionMarker)
+    {
+        [_sectionsScrollView insertSubview:_selectionMarker atIndex:0];
+        [_sectionsScrollView sendSubviewToBack:_selectionMarker];
+        [self updateSelectionMarkerLayout];
+    }
+}
+
 - (UIImage *)backgroundImage
 {
     VerboseLog();
@@ -668,7 +685,11 @@
     CGFloat sectionsContainerWidth = [self sectionsContainerWidth];
     int sectionsCount = [self.dataSource numberOfSections];
     float width = self.sectionWidth;
-    if(_sectionsAligment == UIViewContentModeCenter && sectionsCount == 1)
+    if(_sectionsAligment == UIViewContentModeScaleAspectFill)
+    {
+        width = (sectionsCount ? sectionsContainerWidth / sectionsCount : sectionsContainerWidth);
+    }
+    else if(_sectionsAligment == UIViewContentModeCenter && sectionsCount == 1)
     {
         width = sectionsContainerWidth;
     }
@@ -1191,7 +1212,6 @@
     else if(_sectionsAligment == UIViewContentModeCenter)
     {
         // if first section selected, space holder image should be in the beginning
-
         TSNavigationStripComponentInfo *firstSectionInfo = _sections[0];
         _emptySpaceHolderLeftImageView.frame = CGRectMake(0, 0, firstSectionInfo.container.frame.origin.x, _emptySpaceHolderLeftImageView.frame.size.height);
         
@@ -1206,12 +1226,34 @@
         _emptySpaceHolderLeftImageView.frame = CGRectMake(0, 0, sectionInfo.container.frame.origin.x, _emptySpaceHolderLeftImageView.frame.size.height);
         _emptySpaceHolderRightImageView.frame = CGRectMake(_sectionsScrollView.contentSize.width, 0, 0, _emptySpaceHolderRightImageView.frame.size.height);
     }
-    else
+    else if(_sectionsAligment == UIViewContentModeLeft)
     {
         TSNavigationStripComponentInfo *sectionInfo = [_sections lastObject];
         CGFloat originX = CGRectGetMaxX(sectionInfo.container.frame);
         _emptySpaceHolderLeftImageView.frame = CGRectMake(0, 0, 0, _emptySpaceHolderLeftImageView.frame.size.height);
         _emptySpaceHolderRightImageView.frame = CGRectMake(originX, 0, _sectionsScrollView.contentSize.width - originX, _emptySpaceHolderRightImageView.frame.size.height);
+    }
+    else
+    {
+        _emptySpaceHolderLeftImageView.frame = CGRectMake(0, 0, 0, _emptySpaceHolderLeftImageView.frame.size.height);
+        _emptySpaceHolderRightImageView.frame = CGRectMake(_sectionsScrollView.contentSize.width, 0, 0, _emptySpaceHolderRightImageView.frame.size.height);
+    }
+}
+
+- (void)updateSelectionMarkerLayout
+{
+    if(_selectionMarker)
+    {
+        if(_sections.count)
+        {
+            _selectionMarker.hidden = NO;
+            TSNavigationStripComponentInfo *info = _sections[_selectedSection];
+            _selectionMarker.frame = info.container.frame;
+        }
+        else
+        {
+            _selectionMarker.hidden = YES;
+        }
     }
 }
 
@@ -1359,6 +1401,8 @@
             }
         }
     }
+    
+    [self updateSelectionMarkerLayout];
 }
 
 - (void)updateSectionsScrollSizeOnlyIfNewSizeGreater:(BOOL)onlyIfGreater
@@ -1421,7 +1465,7 @@
                 newOriginX = rect.origin.x + rect.size.width - sectionsContainerWidth;
             }
         }
-        else
+        else if(_sectionsAligment == UIViewContentModeCenter)
         {
             newOriginX = MAX(0,rect.origin.x - (sectionsContainerWidth - rect.size.width)/2);
         }
@@ -1478,6 +1522,14 @@
             TSNavigationStripComponentInfo *info = _sections[j];
             [_sectionsScrollView sendSubviewToBack:info.container];
         }
+    }
+    
+    // Send back utility subviews
+    [_sectionsScrollView sendSubviewToBack:_emptySpaceHolderLeftImageView];
+    [_sectionsScrollView sendSubviewToBack:_emptySpaceHolderLeftImageView];
+    if(_selectionMarker)
+    {
+        [_sectionsScrollView sendSubviewToBack:_selectionMarker];
     }
 }
 

@@ -39,11 +39,13 @@
     TSNavigationStripModel *_dataSource3;
     TSNavigationStripModel *_dataSource4;
     TSNavigationStripModel *_dataSource5;
+    TSNavigationStripModel *_dataSource6;
     TSNavigationStripView *_navagationStripView1;
     TSNavigationStripView *_navagationStripView2;
     TSNavigationStripView *_navagationStripView3;
     TSNavigationStripView *_navagationStripView4;
     TSNavigationStripView *_navagationStripView5;
+    TSNavigationStripView *_navagationStripView6;
 }
 
 @property (nonatomic, strong) NSArray *navigationStrips;
@@ -87,6 +89,11 @@
     _navagationStripView5.delegate = self;
     [self.view addSubview:_navagationStripView5];
     
+    _navagationStripView6 = [self createNavigationStripView6WithFrame:CGRectMake(20, (IS_IPAD ? 720 : 310), self.view.frame.size.width - 40, 32)];
+    _navagationStripView6.autoresizingMask = UIViewAutoresizingFlexibleWidth;
+    _navagationStripView6.delegate = self;
+    [self.view addSubview:_navagationStripView6];
+    
     _dataSource1 = [[TSNavigationStripModel alloc] initWithNavigationStrip:_navagationStripView1];
     _dataSource2 = [[TSNavigationStripModel alloc] initWithNavigationStrip:_navagationStripView2];
     _dataSource3 = [[TSNavigationStripModel alloc] initWithNavigationStrip:_navagationStripView3];
@@ -94,13 +101,15 @@
     _dataSource4.useEdgeInsetsForSections = YES;
     _dataSource5 = [[TSNavigationStripModel alloc] initWithNavigationStrip:_navagationStripView5];
     _dataSource5.customClassForSection = NSStringFromClass([TSTestSectionButton class]);
+    _dataSource6 = [[TSNavigationStripModel alloc] initWithNavigationStrip:_navagationStripView6];
     
     self.navigationStrips = @[
         _navagationStripView1,
         _navagationStripView2,
         _navagationStripView3,
         _navagationStripView4,
-        _navagationStripView5
+        _navagationStripView5,
+        _navagationStripView6
     ];
     
     self.dataSources = @[
@@ -108,7 +117,8 @@
         _dataSource2,
         _dataSource3,
         _dataSource4,
-        _dataSource5
+        _dataSource5,
+        _dataSource6
     ];
 }
 
@@ -215,8 +225,15 @@
 - (IBAction)sectionAligmentValueChanged
 {
     [self.navigationStrips enumerateObjectsUsingBlock:^(TSNavigationStripView *stripView, NSUInteger idx, BOOL *stop) {
-        stripView.sectionsAligment = (self.sectionAligment.selectedSegmentIndex == 1 ? UIViewContentModeCenter :
-                                     (self.sectionAligment.selectedSegmentIndex == 0 ? UIViewContentModeLeft : UIViewContentModeRight));
+        
+        switch (self.sectionAligment.selectedSegmentIndex)
+        {
+            case 0: stripView.sectionsAligment = UIViewContentModeLeft; break;
+            case 1: stripView.sectionsAligment = UIViewContentModeCenter; break;
+            case 2: stripView.sectionsAligment = UIViewContentModeRight; break;
+            case 3: stripView.sectionsAligment = UIViewContentModeScaleAspectFill; break;
+            default: break;
+        }
         [stripView reloadSectionsData];
     }];
 }
@@ -430,8 +447,7 @@
     return item;
 }
 
-
-#pragma mark - NavigationStrip 4
+#pragma mark - NavigationStrip 5
 
 - (TSNavigationStripView *)createNavigationStripView5WithFrame:(CGRect)rect
 {
@@ -467,7 +483,7 @@
 {
     TSNavigationStripSection *section = [[TSNavigationStripSection alloc] init];
     section.title = [NSString stringWithFormat:@"Section %@",index];
-    section.selectedTitle = [NSString stringWithFormat:@"Section SELECTED %@",index]; //section.title;
+    section.selectedTitle = [NSString stringWithFormat:@"Section SELECTED %@",index];
     section.font = [UIFont systemFontOfSize:12];
     section.selectedFont = [UIFont systemFontOfSize:12];
     section.color = [UIColor lightGrayColor];
@@ -486,6 +502,66 @@
     return item;
 }
 
+#pragma mark - NavigationStrip 6
+
+- (TSNavigationStripView *)createNavigationStripView6WithFrame:(CGRect)rect
+{
+    TSNavigationStripView *stripView = [[TSNavigationStripView alloc] initWithFrame:rect];
+    
+    CGFloat arrowHeight = 4;
+    UIGraphicsBeginImageContext(CGSizeMake(rect.size.height, rect.size.height));
+    CGContextRef currentContext = UIGraphicsGetCurrentContext();
+    UIBezierPath *arrowPath = [UIBezierPath bezierPath];
+    [arrowPath moveToPoint:CGPointMake(0, arrowHeight)];
+    [arrowPath addLineToPoint:CGPointMake(rect.size.width, arrowHeight)];
+    [arrowPath addLineToPoint:CGPointMake(rect.size.width, rect.size.height - arrowHeight)];
+    [arrowPath addLineToPoint:CGPointMake(0, rect.size.height - arrowHeight)];
+    CGContextSetFillColorWithColor(currentContext, [UIColor blackColor].CGColor);
+    CGContextAddPath(currentContext, [arrowPath CGPath]);
+    CGContextDrawPath(currentContext, kCGPathFill);
+    UIImage *img = UIGraphicsGetImageFromCurrentImageContext();
+    
+    stripView.backgroundImage = [img resizableImageWithCapInsets:UIEdgeInsetsMake(img.size.height/2, img.size.width/2, img.size.height/2, img.size.width/2)];
+    
+    [stripView.leftNavigationButton setImage:[UIImage imageNamed:@"NavigationStripLeftSideButton"] forState:UIControlStateNormal];
+    [stripView.leftNavigationButton setImage:[UIImage imageNamed:@"NavigationStripLeftSideButton-Selected"] forState:UIControlStateHighlighted];
+    [stripView.leftNavigationButton setImage:[UIImage imageNamed:@"NavigationStripLeftSideButton-Selected"] forState:UIControlStateDisabled];
+    
+    [stripView.rightNavigationButton setImage:[UIImage imageNamed:@"NavigationStripRightSideButton"] forState:UIControlStateNormal];
+    [stripView.rightNavigationButton setImage:[UIImage imageNamed:@"NavigationStripRightSideButton-Selected"] forState:UIControlStateHighlighted];
+    [stripView.rightNavigationButton setImage:[UIImage imageNamed:@"NavigationStripRightSideButton-Selected"] forState:UIControlStateDisabled];
+    
+    
+    TSTestSectionButton *marker = [[TSTestSectionButton alloc] initWithFrame:CGRectMake(0, 0, rect.size.height, rect.size.height)];
+    marker.selected = YES;
+    marker.backgroundColor = [UIColor redColor];
+    stripView.selectionMarker = marker;
+    
+    return stripView;
+}
+
+- (TSNavigationStripSection *)createSection6WithIndex:(NSNumber *)index
+{
+    TSNavigationStripSection *section = [[TSNavigationStripSection alloc] init];
+    section.title = [NSString stringWithFormat:@"Section %@",index];
+    section.selectedTitle = section.title;
+    section.font = [UIFont systemFontOfSize:12];
+    section.selectedFont = [UIFont systemFontOfSize:12];
+    section.color = [UIColor lightGrayColor];
+    section.selectedColor = [UIColor whiteColor];
+    section.backgroundColor = [UIColor clearColor];
+    section.selectedBackgroundColor = [UIColor clearColor];
+    
+    return section;
+}
+
+- (TSNavigationStripItem *)createItem6WithIndex:(NSNumber *)index
+{
+    TSNavigationStripItem *item = [[TSNavigationStripItem alloc] init];
+    item.icon = [UIImage imageNamed: @"NavigationStripItem"];
+    item.selectedIcon = [UIImage imageNamed: @"NavigationStripItem-Selected"];
+    return item;
+}
 
 #pragma mark - TSNavigationStripViewDelegate
 
@@ -502,7 +578,7 @@
 - (void)navigationStrip:(TSNavigationStripView *)navigationStripView didSelectSectionAtIndex:(NSInteger)index
 {
     VerboseLog(@"index = %d",index);
-// Invoke callback on selection changed
+//    Invoke callback on selection changed
 //    TSNavigationStripModel *model =  (TSNavigationStripModel *)navigationStripView.dataSource;
 //    TSNavigationStripSection *sectionInfo = model.sections[index];
 //    sectionInfo.selectionHandler();
