@@ -46,6 +46,9 @@
  *  +-------------------------------------------------+                                           
  */
 @interface TSTabView : UIView
+{
+    UIScrollView *_scrollView;
+}
 
 @property (nonatomic, weak) id<TSTabViewDelegate>   delegate;
 @property (nonatomic, weak) id<TSTabViewDataSource> dataSource;
@@ -73,6 +76,8 @@
  *  @abstract Currently selected tab.
  */
 @property (nonatomic, assign, readonly) NSInteger selectedTab;
+
+@property (nonatomic, assign) BOOL bounces;
 
 /**
  *  @abstract Should be set appropriatly in case if tab's content represented with UIVewController's subclasses.

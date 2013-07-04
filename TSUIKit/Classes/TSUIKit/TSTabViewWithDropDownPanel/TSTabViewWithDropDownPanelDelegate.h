@@ -1,6 +1,8 @@
 //
-//  SSNavigtionStripViewDelegate.h
-//  Created by Viacheslav Radchenko on 6/10/13.
+//  TSTabViewWithDropDownPanelDelegate.h
+//  TSUIKit
+//
+//  Created by Viacheslav Radchenko on 7/2/13.
 //
 //  The MIT License (MIT)
 //  Copyright © 2013 Viacheslav Radchenko
@@ -23,31 +25,21 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 //  THE SOFTWARE.
 
-#import <Foundation/Foundation.h>
+@class TSTabViewWithDropDownPanel;
 
-@class TSNavigationStripView;
-
-@protocol TSNavigationStripViewDelegate <NSObject>
+/**
+ *  @abstract TSTabViewWithDropDownPanelDelegate extends TSTabViewDelegate protocol.
+ */
+@protocol TSTabViewWithDropDownPanelDelegate <TSTabViewDelegate>
 
 @optional
 
 /**
- *  @abstract Selection state changed callbacks
+ *  @abstract Drop down panel visibility state change callbacks
  */
-- (void)navigationStrip:(TSNavigationStripView *)navigationStripView itemAtIndex:(NSInteger)index fromLeftSide:(BOOL)leftSide didChangeState:(BOOL)selected;
-- (void)navigationStrip:(TSNavigationStripView *)navigationStripView willSelectSectionAtIndex:(NSInteger)index animated:(BOOL)animated;
-- (void)navigationStrip:(TSNavigationStripView *)navigationStripView didSelectSectionAtIndex:(NSInteger)index;
-
-/**
- *  @abstract Invoked only if sectionsAligment is set to UIViewContentAligmentCenter.
- *  @param    normScrollOffset - in range [-1..1]               
- */
-- (void)navigationStrip:(TSNavigationStripView *)navigationStripView didScrollTo:(CGFloat)normScrollOffset;
-- (void)navigationStripDidEndScroll:(TSNavigationStripView *)navigationStripView;
-
-/**
- *  @abstract Invoked when user taps on selected section.
- */
-- (void)navigationStripDidRecognizeTapOnSelectedSection:(TSNavigationStripView *)navigationStripView;
+- (void)tabViewWithDropDownPanel:(TSTabViewWithDropDownPanel *)tabView willShowPanel:(UIView *)panel animated:(BOOL)animated;
+- (void)tabViewWithDropDownPanel:(TSTabViewWithDropDownPanel *)tabView didShowPanel:(UIView *)panel;
+- (void)tabViewWithDropDownPanel:(TSTabViewWithDropDownPanel *)tabView willHidePanel:(UIView *)panel animated:(BOOL)animated;
+- (void)tabViewWithDropDownPanel:(TSTabViewWithDropDownPanel *)tabView didHidePanel:(UIView *)panel;
 
 @end

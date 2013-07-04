@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F63C0A0D17821F8C005AB903 /* TSTabViewWithDropDownPanel.m in Sources */ = {isa = PBXBuildFile; fileRef = F63C0A0C17821F8C005AB903 /* TSTabViewWithDropDownPanel.m */; };
+		F63C0A0E17821F8C005AB903 /* TSTabViewWithDropDownPanel.m in Sources */ = {isa = PBXBuildFile; fileRef = F63C0A0C17821F8C005AB903 /* TSTabViewWithDropDownPanel.m */; };
+		F63C0A0F17821F8C005AB903 /* TSTabViewWithDropDownPanel.m in Sources */ = {isa = PBXBuildFile; fileRef = F63C0A0C17821F8C005AB903 /* TSTabViewWithDropDownPanel.m */; };
+		F67936021785A570009E2365 /* TSTabViewWithDropDownPanelTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F6EE2A4617835D9A00C0C4A3 /* TSTabViewWithDropDownPanelTestViewController.m */; };
+		F67936031785A57B009E2365 /* TSTabViewWithDropDownPanelTestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A4817835D9A00C0C4A3 /* TSTabViewWithDropDownPanelTestViewController.xib */; };
+		F67936041785A57B009E2365 /* TSTabViewWithDropDownPanelTestViewController~ipad.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A4B17835D9A00C0C4A3 /* TSTabViewWithDropDownPanelTestViewController~ipad.xib */; };
 		F680D2681774B2B0005ACD94 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F682C8DC1774B017005141A3 /* QuartzCore.framework */; };
 		F680D2691774B551005ACD94 /* TSNavigationStripTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F682C92B1774B095005141A3 /* TSNavigationStripTestViewController.m */; };
 		F680D26A1774B566005ACD94 /* TSNavigationStripTestViewController~ipad.xib in Resources */ = {isa = PBXBuildFile; fileRef = F682C9611774B0CD005141A3 /* TSNavigationStripTestViewController~ipad.xib */; };
@@ -22,126 +28,14 @@
 		F680D2ED1774BA82005ACD94 /* TSTabViewTestViewController~ipad.xib in Resources */ = {isa = PBXBuildFile; fileRef = F680D2AC1774BA82005ACD94 /* TSTabViewTestViewController~ipad.xib */; };
 		F680D2EE1774BA82005ACD94 /* TSTabViewTestViewController~iphone.xib in Resources */ = {isa = PBXBuildFile; fileRef = F680D2AE1774BA82005ACD94 /* TSTabViewTestViewController~iphone.xib */; };
 		F680D2EF1774BA82005ACD94 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F680D2B01774BA82005ACD94 /* main.m */; };
-		F680D2F01774BA82005ACD94 /* NavigationStripHeaderBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = F680D2B41774BA82005ACD94 /* NavigationStripHeaderBackground.png */; };
-		F680D2F11774BA82005ACD94 /* NavigationStripIcon-Selected.png in Resources */ = {isa = PBXBuildFile; fileRef = F680D2B51774BA82005ACD94 /* NavigationStripIcon-Selected.png */; };
-		F680D2F21774BA82005ACD94 /* NavigationStripIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = F680D2B61774BA82005ACD94 /* NavigationStripIcon.png */; };
-		F680D2F31774BA82005ACD94 /* NavigationStripItem-Selected.png in Resources */ = {isa = PBXBuildFile; fileRef = F680D2B71774BA82005ACD94 /* NavigationStripItem-Selected.png */; };
-		F680D2F41774BA82005ACD94 /* NavigationStripItem.png in Resources */ = {isa = PBXBuildFile; fileRef = F680D2B81774BA82005ACD94 /* NavigationStripItem.png */; };
-		F680D2F51774BA82005ACD94 /* NavigationStripItemBlue.png in Resources */ = {isa = PBXBuildFile; fileRef = F680D2B91774BA82005ACD94 /* NavigationStripItemBlue.png */; };
-		F680D2F61774BA82005ACD94 /* NavigationStripItemGrey.png in Resources */ = {isa = PBXBuildFile; fileRef = F680D2BA1774BA82005ACD94 /* NavigationStripItemGrey.png */; };
-		F680D2F71774BA82005ACD94 /* NavigationStripItemRed.png in Resources */ = {isa = PBXBuildFile; fileRef = F680D2BB1774BA82005ACD94 /* NavigationStripItemRed.png */; };
-		F680D2F81774BA82005ACD94 /* NavigationStripLeftSideButton-Selected.png in Resources */ = {isa = PBXBuildFile; fileRef = F680D2BC1774BA82005ACD94 /* NavigationStripLeftSideButton-Selected.png */; };
-		F680D2F91774BA82005ACD94 /* NavigationStripLeftSideButton.png in Resources */ = {isa = PBXBuildFile; fileRef = F680D2BD1774BA82005ACD94 /* NavigationStripLeftSideButton.png */; };
-		F680D2FA1774BA82005ACD94 /* NavigationStripLeftSideButtonBlue.png in Resources */ = {isa = PBXBuildFile; fileRef = F680D2BE1774BA82005ACD94 /* NavigationStripLeftSideButtonBlue.png */; };
-		F680D2FB1774BA82005ACD94 /* NavigationStripLeftSideButtonGrey.png in Resources */ = {isa = PBXBuildFile; fileRef = F680D2BF1774BA82005ACD94 /* NavigationStripLeftSideButtonGrey.png */; };
-		F680D2FC1774BA82005ACD94 /* NavigationStripLeftSideButtonRed.png in Resources */ = {isa = PBXBuildFile; fileRef = F680D2C01774BA82005ACD94 /* NavigationStripLeftSideButtonRed.png */; };
-		F680D2FD1774BA82005ACD94 /* NavigationStripRightSideButton-Selected.png in Resources */ = {isa = PBXBuildFile; fileRef = F680D2C11774BA82005ACD94 /* NavigationStripRightSideButton-Selected.png */; };
-		F680D2FE1774BA82005ACD94 /* NavigationStripRightSideButton.png in Resources */ = {isa = PBXBuildFile; fileRef = F680D2C21774BA82005ACD94 /* NavigationStripRightSideButton.png */; };
-		F680D2FF1774BA82005ACD94 /* NavigationStripRightSideButtonBlue.png in Resources */ = {isa = PBXBuildFile; fileRef = F680D2C31774BA82005ACD94 /* NavigationStripRightSideButtonBlue.png */; };
-		F680D3001774BA82005ACD94 /* NavigationStripRightSideButtonGrey.png in Resources */ = {isa = PBXBuildFile; fileRef = F680D2C41774BA82005ACD94 /* NavigationStripRightSideButtonGrey.png */; };
-		F680D3011774BA82005ACD94 /* NavigationStripRightSideButtonRed.png in Resources */ = {isa = PBXBuildFile; fileRef = F680D2C51774BA82005ACD94 /* NavigationStripRightSideButtonRed.png */; };
-		F680D3021774BA82005ACD94 /* NavigationStripSectionBackground-Selected.png in Resources */ = {isa = PBXBuildFile; fileRef = F680D2C61774BA82005ACD94 /* NavigationStripSectionBackground-Selected.png */; };
-		F680D3031774BA82005ACD94 /* NavigationStripSectionBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = F680D2C71774BA82005ACD94 /* NavigationStripSectionBackground.png */; };
-		F680D3041774BA82005ACD94 /* NavigationStripSectionBackgroundRed-Selected.png in Resources */ = {isa = PBXBuildFile; fileRef = F680D2C81774BA82005ACD94 /* NavigationStripSectionBackgroundRed-Selected.png */; };
-		F680D3051774BA82005ACD94 /* NavigationStripSectionBackgroundRed.png in Resources */ = {isa = PBXBuildFile; fileRef = F680D2C91774BA82005ACD94 /* NavigationStripSectionBackgroundRed.png */; };
-		F680D3061774BA82005ACD94 /* NavigationStripHeaderBackground@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F680D2CB1774BA82005ACD94 /* NavigationStripHeaderBackground@2x.png */; };
-		F680D3071774BA82005ACD94 /* NavigationStripIcon-Selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F680D2CC1774BA82005ACD94 /* NavigationStripIcon-Selected@2x.png */; };
-		F680D3081774BA82005ACD94 /* NavigationStripIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F680D2CD1774BA82005ACD94 /* NavigationStripIcon@2x.png */; };
-		F680D3091774BA82005ACD94 /* NavigationStripItem-Selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F680D2CE1774BA82005ACD94 /* NavigationStripItem-Selected@2x.png */; };
-		F680D30A1774BA82005ACD94 /* NavigationStripItem@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F680D2CF1774BA82005ACD94 /* NavigationStripItem@2x.png */; };
-		F680D30B1774BA82005ACD94 /* NavigationStripItemBlue@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F680D2D01774BA82005ACD94 /* NavigationStripItemBlue@2x.png */; };
-		F680D30C1774BA82005ACD94 /* NavigationStripItemGrey@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F680D2D11774BA82005ACD94 /* NavigationStripItemGrey@2x.png */; };
-		F680D30D1774BA82005ACD94 /* NavigationStripItemRed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F680D2D21774BA82005ACD94 /* NavigationStripItemRed@2x.png */; };
-		F680D30E1774BA82005ACD94 /* NavigationStripLeftSideButton-Selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F680D2D31774BA82005ACD94 /* NavigationStripLeftSideButton-Selected@2x.png */; };
-		F680D30F1774BA82005ACD94 /* NavigationStripLeftSideButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F680D2D41774BA82005ACD94 /* NavigationStripLeftSideButton@2x.png */; };
-		F680D3101774BA82005ACD94 /* NavigationStripLeftSideButtonBlue@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F680D2D51774BA82005ACD94 /* NavigationStripLeftSideButtonBlue@2x.png */; };
-		F680D3111774BA82005ACD94 /* NavigationStripLeftSideButtonGrey@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F680D2D61774BA82005ACD94 /* NavigationStripLeftSideButtonGrey@2x.png */; };
-		F680D3121774BA82005ACD94 /* NavigationStripLeftSideButtonRed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F680D2D71774BA82005ACD94 /* NavigationStripLeftSideButtonRed@2x.png */; };
-		F680D3131774BA82005ACD94 /* NavigationStripRightSideButton-Selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F680D2D81774BA82005ACD94 /* NavigationStripRightSideButton-Selected@2x.png */; };
-		F680D3141774BA82005ACD94 /* NavigationStripRightSideButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F680D2D91774BA82005ACD94 /* NavigationStripRightSideButton@2x.png */; };
-		F680D3151774BA82005ACD94 /* NavigationStripRightSideButtonBlue@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F680D2DA1774BA82005ACD94 /* NavigationStripRightSideButtonBlue@2x.png */; };
-		F680D3161774BA82005ACD94 /* NavigationStripRightSideButtonGrey@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F680D2DB1774BA82005ACD94 /* NavigationStripRightSideButtonGrey@2x.png */; };
-		F680D3171774BA82005ACD94 /* NavigationStripRightSideButtonRed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F680D2DC1774BA82005ACD94 /* NavigationStripRightSideButtonRed@2x.png */; };
-		F680D3181774BA82005ACD94 /* NavigationStripSectionBackground-Selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F680D2DD1774BA82005ACD94 /* NavigationStripSectionBackground-Selected@2x.png */; };
-		F680D3191774BA82005ACD94 /* NavigationStripSectionBackground@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F680D2DE1774BA82005ACD94 /* NavigationStripSectionBackground@2x.png */; };
-		F680D31A1774BA82005ACD94 /* NavigationStripSectionBackgroundRed-Selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F680D2DF1774BA82005ACD94 /* NavigationStripSectionBackgroundRed-Selected@2x.png */; };
-		F680D31B1774BA82005ACD94 /* NavigationStripSectionBackgroundRed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F680D2E01774BA82005ACD94 /* NavigationStripSectionBackgroundRed@2x.png */; };
 		F680D31E1774BA82005ACD94 /* TSAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F680D2E41774BA82005ACD94 /* TSAppDelegate.m */; };
 		F680D31F1774BA82005ACD94 /* TSTabViewTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F680D2E61774BA82005ACD94 /* TSTabViewTestViewController.m */; };
 		F680D3221774BC5C005ACD94 /* TSTabViewTestViewController~ipad.xib in Resources */ = {isa = PBXBuildFile; fileRef = F680D2AC1774BA82005ACD94 /* TSTabViewTestViewController~ipad.xib */; };
 		F680D3231774BC5C005ACD94 /* TSTabViewTestViewController~iphone.xib in Resources */ = {isa = PBXBuildFile; fileRef = F680D2AE1774BA82005ACD94 /* TSTabViewTestViewController~iphone.xib */; };
 		F680D3251774BC74005ACD94 /* TSTabViewTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F680D2E61774BA82005ACD94 /* TSTabViewTestViewController.m */; };
-		F680D41D177A4E0A005ACD94 /* NavigationStripHeaderBackground_2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F680D419177A4E0A005ACD94 /* NavigationStripHeaderBackground_2@2x.png */; };
-		F680D41F177A4E0A005ACD94 /* NavigationStripSectionBackground_2-Selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F680D41A177A4E0A005ACD94 /* NavigationStripSectionBackground_2-Selected@2x.png */; };
-		F680D421177A4E0A005ACD94 /* NavigationStripSectionBackground_2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F680D41B177A4E0A005ACD94 /* NavigationStripSectionBackground_2@2x.png */; };
-		F680D426177A4E16005ACD94 /* NavigationStripHeaderBackground_2.png in Resources */ = {isa = PBXBuildFile; fileRef = F680D422177A4E16005ACD94 /* NavigationStripHeaderBackground_2.png */; };
-		F680D428177A4E16005ACD94 /* NavigationStripSectionBackground_2-Selected.png in Resources */ = {isa = PBXBuildFile; fileRef = F680D423177A4E16005ACD94 /* NavigationStripSectionBackground_2-Selected.png */; };
-		F680D42A177A4E16005ACD94 /* NavigationStripSectionBackground_2.png in Resources */ = {isa = PBXBuildFile; fileRef = F680D424177A4E16005ACD94 /* NavigationStripSectionBackground_2.png */; };
-		F680D42E177B2FD5005ACD94 /* NavigationStripHeaderBackground_2.png in Resources */ = {isa = PBXBuildFile; fileRef = F680D42B177B2FD5005ACD94 /* NavigationStripHeaderBackground_2.png */; };
-		F680D42F177B2FD5005ACD94 /* NavigationStripSectionBackground_2-Selected.png in Resources */ = {isa = PBXBuildFile; fileRef = F680D42C177B2FD5005ACD94 /* NavigationStripSectionBackground_2-Selected.png */; };
-		F680D430177B2FD5005ACD94 /* NavigationStripSectionBackground_2.png in Resources */ = {isa = PBXBuildFile; fileRef = F680D42D177B2FD5005ACD94 /* NavigationStripSectionBackground_2.png */; };
-		F680D434177B2FE0005ACD94 /* NavigationStripHeaderBackground_2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F680D431177B2FE0005ACD94 /* NavigationStripHeaderBackground_2@2x.png */; };
-		F680D435177B2FE0005ACD94 /* NavigationStripSectionBackground_2-Selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F680D432177B2FE0005ACD94 /* NavigationStripSectionBackground_2-Selected@2x.png */; };
-		F680D436177B2FE0005ACD94 /* NavigationStripSectionBackground_2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F680D433177B2FE0005ACD94 /* NavigationStripSectionBackground_2@2x.png */; };
 		F680D452177D0E0A005ACD94 /* TSTestSectionButton.m in Sources */ = {isa = PBXBuildFile; fileRef = F680D451177D0E09005ACD94 /* TSTestSectionButton.m */; };
 		F680D453177D0E0A005ACD94 /* TSTestSectionButton.m in Sources */ = {isa = PBXBuildFile; fileRef = F680D451177D0E09005ACD94 /* TSTestSectionButton.m */; };
 		F680D454177D0E0A005ACD94 /* TSTestSectionButton.m in Sources */ = {isa = PBXBuildFile; fileRef = F680D451177D0E09005ACD94 /* TSTestSectionButton.m */; };
-		F680D45C177DB4DA005ACD94 /* NavigationStripHeaderBackground_1.png in Resources */ = {isa = PBXBuildFile; fileRef = F680D459177DB4DA005ACD94 /* NavigationStripHeaderBackground_1.png */; };
-		F680D45E177DB4F4005ACD94 /* NavigationStripHeaderBackground_1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F680D45D177DB4F4005ACD94 /* NavigationStripHeaderBackground_1@2x.png */; };
-		F680D461177DB506005ACD94 /* NavigationStripHeaderBackground_1.png in Resources */ = {isa = PBXBuildFile; fileRef = F680D45F177DB506005ACD94 /* NavigationStripHeaderBackground_1.png */; };
-		F680D465177DB50F005ACD94 /* NavigationStripHeaderBackground_1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F680D463177DB50F005ACD94 /* NavigationStripHeaderBackground_1@2x.png */; };
-		F680D467177DB599005ACD94 /* NavigationStripHeaderBackground_1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F680D463177DB50F005ACD94 /* NavigationStripHeaderBackground_1@2x.png */; };
-		F680D468177DB599005ACD94 /* NavigationStripHeaderBackground_2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F680D419177A4E0A005ACD94 /* NavigationStripHeaderBackground_2@2x.png */; };
-		F680D469177DB599005ACD94 /* NavigationStripSectionBackground_2-Selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F680D41A177A4E0A005ACD94 /* NavigationStripSectionBackground_2-Selected@2x.png */; };
-		F680D46A177DB599005ACD94 /* NavigationStripSectionBackground_2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F680D41B177A4E0A005ACD94 /* NavigationStripSectionBackground_2@2x.png */; };
-		F680D46B177DB599005ACD94 /* NavigationStripHeaderBackground@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F682C9121774B095005141A3 /* NavigationStripHeaderBackground@2x.png */; };
-		F680D46C177DB599005ACD94 /* NavigationStripIcon-Selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F682C9131774B095005141A3 /* NavigationStripIcon-Selected@2x.png */; };
-		F680D46D177DB599005ACD94 /* NavigationStripIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F682C9141774B095005141A3 /* NavigationStripIcon@2x.png */; };
-		F680D46E177DB599005ACD94 /* NavigationStripItem-Selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F682C9151774B095005141A3 /* NavigationStripItem-Selected@2x.png */; };
-		F680D46F177DB59A005ACD94 /* NavigationStripItem@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F682C9161774B095005141A3 /* NavigationStripItem@2x.png */; };
-		F680D470177DB59A005ACD94 /* NavigationStripItemBlue@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F682C9171774B095005141A3 /* NavigationStripItemBlue@2x.png */; };
-		F680D471177DB59A005ACD94 /* NavigationStripItemGrey@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F682C9181774B095005141A3 /* NavigationStripItemGrey@2x.png */; };
-		F680D472177DB59A005ACD94 /* NavigationStripItemRed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F682C9191774B095005141A3 /* NavigationStripItemRed@2x.png */; };
-		F680D473177DB59A005ACD94 /* NavigationStripLeftSideButton-Selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F682C91A1774B095005141A3 /* NavigationStripLeftSideButton-Selected@2x.png */; };
-		F680D474177DB59A005ACD94 /* NavigationStripLeftSideButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F682C91B1774B095005141A3 /* NavigationStripLeftSideButton@2x.png */; };
-		F680D475177DB59A005ACD94 /* NavigationStripLeftSideButtonBlue@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F682C91C1774B095005141A3 /* NavigationStripLeftSideButtonBlue@2x.png */; };
-		F680D476177DB59A005ACD94 /* NavigationStripLeftSideButtonGrey@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F682C91D1774B095005141A3 /* NavigationStripLeftSideButtonGrey@2x.png */; };
-		F680D477177DB59A005ACD94 /* NavigationStripLeftSideButtonRed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F682C91E1774B095005141A3 /* NavigationStripLeftSideButtonRed@2x.png */; };
-		F680D478177DB59A005ACD94 /* NavigationStripRightSideButton-Selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F682C91F1774B095005141A3 /* NavigationStripRightSideButton-Selected@2x.png */; };
-		F680D479177DB59A005ACD94 /* NavigationStripRightSideButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F682C9201774B095005141A3 /* NavigationStripRightSideButton@2x.png */; };
-		F680D47A177DB59A005ACD94 /* NavigationStripRightSideButtonBlue@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F682C9211774B095005141A3 /* NavigationStripRightSideButtonBlue@2x.png */; };
-		F680D47B177DB59A005ACD94 /* NavigationStripRightSideButtonGrey@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F682C9221774B095005141A3 /* NavigationStripRightSideButtonGrey@2x.png */; };
-		F680D47C177DB59A005ACD94 /* NavigationStripRightSideButtonRed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F682C9231774B095005141A3 /* NavigationStripRightSideButtonRed@2x.png */; };
-		F680D47D177DB59A005ACD94 /* NavigationStripSectionBackground-Selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F682C9241774B095005141A3 /* NavigationStripSectionBackground-Selected@2x.png */; };
-		F680D47E177DB59A005ACD94 /* NavigationStripSectionBackground@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F682C9251774B095005141A3 /* NavigationStripSectionBackground@2x.png */; };
-		F680D47F177DB59A005ACD94 /* NavigationStripSectionBackgroundRed-Selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F682C9261774B095005141A3 /* NavigationStripSectionBackgroundRed-Selected@2x.png */; };
-		F680D480177DB59A005ACD94 /* NavigationStripSectionBackgroundRed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F682C9271774B095005141A3 /* NavigationStripSectionBackgroundRed@2x.png */; };
-		F680D481177DB5A2005ACD94 /* NavigationStripHeaderBackground_1.png in Resources */ = {isa = PBXBuildFile; fileRef = F680D45F177DB506005ACD94 /* NavigationStripHeaderBackground_1.png */; };
-		F680D482177DB5A2005ACD94 /* NavigationStripHeaderBackground_2.png in Resources */ = {isa = PBXBuildFile; fileRef = F680D422177A4E16005ACD94 /* NavigationStripHeaderBackground_2.png */; };
-		F680D483177DB5A2005ACD94 /* NavigationStripSectionBackground_2-Selected.png in Resources */ = {isa = PBXBuildFile; fileRef = F680D423177A4E16005ACD94 /* NavigationStripSectionBackground_2-Selected.png */; };
-		F680D484177DB5A2005ACD94 /* NavigationStripSectionBackground_2.png in Resources */ = {isa = PBXBuildFile; fileRef = F680D424177A4E16005ACD94 /* NavigationStripSectionBackground_2.png */; };
-		F680D485177DB5A2005ACD94 /* NavigationStripHeaderBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = F682C8FB1774B095005141A3 /* NavigationStripHeaderBackground.png */; };
-		F680D486177DB5A2005ACD94 /* NavigationStripIcon-Selected.png in Resources */ = {isa = PBXBuildFile; fileRef = F682C8FC1774B095005141A3 /* NavigationStripIcon-Selected.png */; };
-		F680D487177DB5A2005ACD94 /* NavigationStripIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = F682C8FD1774B095005141A3 /* NavigationStripIcon.png */; };
-		F680D488177DB5A2005ACD94 /* NavigationStripItem-Selected.png in Resources */ = {isa = PBXBuildFile; fileRef = F682C8FE1774B095005141A3 /* NavigationStripItem-Selected.png */; };
-		F680D489177DB5A2005ACD94 /* NavigationStripItem.png in Resources */ = {isa = PBXBuildFile; fileRef = F682C8FF1774B095005141A3 /* NavigationStripItem.png */; };
-		F680D48A177DB5A2005ACD94 /* NavigationStripItemBlue.png in Resources */ = {isa = PBXBuildFile; fileRef = F682C9001774B095005141A3 /* NavigationStripItemBlue.png */; };
-		F680D48B177DB5A2005ACD94 /* NavigationStripItemGrey.png in Resources */ = {isa = PBXBuildFile; fileRef = F682C9011774B095005141A3 /* NavigationStripItemGrey.png */; };
-		F680D48C177DB5A2005ACD94 /* NavigationStripItemRed.png in Resources */ = {isa = PBXBuildFile; fileRef = F682C9021774B095005141A3 /* NavigationStripItemRed.png */; };
-		F680D48D177DB5A2005ACD94 /* NavigationStripLeftSideButton-Selected.png in Resources */ = {isa = PBXBuildFile; fileRef = F682C9031774B095005141A3 /* NavigationStripLeftSideButton-Selected.png */; };
-		F680D48E177DB5A2005ACD94 /* NavigationStripLeftSideButton.png in Resources */ = {isa = PBXBuildFile; fileRef = F682C9041774B095005141A3 /* NavigationStripLeftSideButton.png */; };
-		F680D48F177DB5A2005ACD94 /* NavigationStripLeftSideButtonBlue.png in Resources */ = {isa = PBXBuildFile; fileRef = F682C9051774B095005141A3 /* NavigationStripLeftSideButtonBlue.png */; };
-		F680D490177DB5A2005ACD94 /* NavigationStripLeftSideButtonGrey.png in Resources */ = {isa = PBXBuildFile; fileRef = F682C9061774B095005141A3 /* NavigationStripLeftSideButtonGrey.png */; };
-		F680D491177DB5A2005ACD94 /* NavigationStripLeftSideButtonRed.png in Resources */ = {isa = PBXBuildFile; fileRef = F682C9071774B095005141A3 /* NavigationStripLeftSideButtonRed.png */; };
-		F680D492177DB5A2005ACD94 /* NavigationStripRightSideButton-Selected.png in Resources */ = {isa = PBXBuildFile; fileRef = F682C9081774B095005141A3 /* NavigationStripRightSideButton-Selected.png */; };
-		F680D493177DB5A2005ACD94 /* NavigationStripRightSideButton.png in Resources */ = {isa = PBXBuildFile; fileRef = F682C9091774B095005141A3 /* NavigationStripRightSideButton.png */; };
-		F680D494177DB5A2005ACD94 /* NavigationStripRightSideButtonBlue.png in Resources */ = {isa = PBXBuildFile; fileRef = F682C90A1774B095005141A3 /* NavigationStripRightSideButtonBlue.png */; };
-		F680D495177DB5A2005ACD94 /* NavigationStripRightSideButtonGrey.png in Resources */ = {isa = PBXBuildFile; fileRef = F682C90B1774B095005141A3 /* NavigationStripRightSideButtonGrey.png */; };
-		F680D496177DB5A2005ACD94 /* NavigationStripRightSideButtonRed.png in Resources */ = {isa = PBXBuildFile; fileRef = F682C90C1774B095005141A3 /* NavigationStripRightSideButtonRed.png */; };
-		F680D497177DB5A2005ACD94 /* NavigationStripSectionBackground-Selected.png in Resources */ = {isa = PBXBuildFile; fileRef = F682C90D1774B095005141A3 /* NavigationStripSectionBackground-Selected.png */; };
-		F680D498177DB5A2005ACD94 /* NavigationStripSectionBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = F682C90E1774B095005141A3 /* NavigationStripSectionBackground.png */; };
-		F680D499177DB5A2005ACD94 /* NavigationStripSectionBackgroundRed-Selected.png in Resources */ = {isa = PBXBuildFile; fileRef = F682C90F1774B095005141A3 /* NavigationStripSectionBackgroundRed-Selected.png */; };
-		F680D49A177DB5A2005ACD94 /* NavigationStripSectionBackgroundRed.png in Resources */ = {isa = PBXBuildFile; fileRef = F682C9101774B095005141A3 /* NavigationStripSectionBackgroundRed.png */; };
 		F682C8951774A718005141A3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F682C8941774A718005141A3 /* UIKit.framework */; };
 		F682C8971774A718005141A3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F682C8961774A718005141A3 /* Foundation.framework */; };
 		F682C8991774A718005141A3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F682C8981774A718005141A3 /* CoreGraphics.framework */; };
@@ -154,54 +48,242 @@
 		F682C92C1774B095005141A3 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F682C8F51774B095005141A3 /* Default-568h@2x.png */; };
 		F682C92D1774B095005141A3 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = F682C8F61774B095005141A3 /* Default.png */; };
 		F682C92E1774B095005141A3 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F682C8F71774B095005141A3 /* Default@2x.png */; };
-		F682C92F1774B095005141A3 /* NavigationStripHeaderBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = F682C8FB1774B095005141A3 /* NavigationStripHeaderBackground.png */; };
-		F682C9301774B095005141A3 /* NavigationStripIcon-Selected.png in Resources */ = {isa = PBXBuildFile; fileRef = F682C8FC1774B095005141A3 /* NavigationStripIcon-Selected.png */; };
-		F682C9311774B095005141A3 /* NavigationStripIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = F682C8FD1774B095005141A3 /* NavigationStripIcon.png */; };
-		F682C9321774B095005141A3 /* NavigationStripItem-Selected.png in Resources */ = {isa = PBXBuildFile; fileRef = F682C8FE1774B095005141A3 /* NavigationStripItem-Selected.png */; };
-		F682C9331774B095005141A3 /* NavigationStripItem.png in Resources */ = {isa = PBXBuildFile; fileRef = F682C8FF1774B095005141A3 /* NavigationStripItem.png */; };
-		F682C9341774B095005141A3 /* NavigationStripItemBlue.png in Resources */ = {isa = PBXBuildFile; fileRef = F682C9001774B095005141A3 /* NavigationStripItemBlue.png */; };
-		F682C9351774B095005141A3 /* NavigationStripItemGrey.png in Resources */ = {isa = PBXBuildFile; fileRef = F682C9011774B095005141A3 /* NavigationStripItemGrey.png */; };
-		F682C9361774B095005141A3 /* NavigationStripItemRed.png in Resources */ = {isa = PBXBuildFile; fileRef = F682C9021774B095005141A3 /* NavigationStripItemRed.png */; };
-		F682C9371774B095005141A3 /* NavigationStripLeftSideButton-Selected.png in Resources */ = {isa = PBXBuildFile; fileRef = F682C9031774B095005141A3 /* NavigationStripLeftSideButton-Selected.png */; };
-		F682C9381774B095005141A3 /* NavigationStripLeftSideButton.png in Resources */ = {isa = PBXBuildFile; fileRef = F682C9041774B095005141A3 /* NavigationStripLeftSideButton.png */; };
-		F682C9391774B095005141A3 /* NavigationStripLeftSideButtonBlue.png in Resources */ = {isa = PBXBuildFile; fileRef = F682C9051774B095005141A3 /* NavigationStripLeftSideButtonBlue.png */; };
-		F682C93A1774B095005141A3 /* NavigationStripLeftSideButtonGrey.png in Resources */ = {isa = PBXBuildFile; fileRef = F682C9061774B095005141A3 /* NavigationStripLeftSideButtonGrey.png */; };
-		F682C93B1774B095005141A3 /* NavigationStripLeftSideButtonRed.png in Resources */ = {isa = PBXBuildFile; fileRef = F682C9071774B095005141A3 /* NavigationStripLeftSideButtonRed.png */; };
-		F682C93C1774B095005141A3 /* NavigationStripRightSideButton-Selected.png in Resources */ = {isa = PBXBuildFile; fileRef = F682C9081774B095005141A3 /* NavigationStripRightSideButton-Selected.png */; };
-		F682C93D1774B095005141A3 /* NavigationStripRightSideButton.png in Resources */ = {isa = PBXBuildFile; fileRef = F682C9091774B095005141A3 /* NavigationStripRightSideButton.png */; };
-		F682C93E1774B095005141A3 /* NavigationStripRightSideButtonBlue.png in Resources */ = {isa = PBXBuildFile; fileRef = F682C90A1774B095005141A3 /* NavigationStripRightSideButtonBlue.png */; };
-		F682C93F1774B095005141A3 /* NavigationStripRightSideButtonGrey.png in Resources */ = {isa = PBXBuildFile; fileRef = F682C90B1774B095005141A3 /* NavigationStripRightSideButtonGrey.png */; };
-		F682C9401774B095005141A3 /* NavigationStripRightSideButtonRed.png in Resources */ = {isa = PBXBuildFile; fileRef = F682C90C1774B095005141A3 /* NavigationStripRightSideButtonRed.png */; };
-		F682C9411774B095005141A3 /* NavigationStripSectionBackground-Selected.png in Resources */ = {isa = PBXBuildFile; fileRef = F682C90D1774B095005141A3 /* NavigationStripSectionBackground-Selected.png */; };
-		F682C9421774B095005141A3 /* NavigationStripSectionBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = F682C90E1774B095005141A3 /* NavigationStripSectionBackground.png */; };
-		F682C9431774B095005141A3 /* NavigationStripSectionBackgroundRed-Selected.png in Resources */ = {isa = PBXBuildFile; fileRef = F682C90F1774B095005141A3 /* NavigationStripSectionBackgroundRed-Selected.png */; };
-		F682C9441774B095005141A3 /* NavigationStripSectionBackgroundRed.png in Resources */ = {isa = PBXBuildFile; fileRef = F682C9101774B095005141A3 /* NavigationStripSectionBackgroundRed.png */; };
-		F682C9451774B095005141A3 /* NavigationStripHeaderBackground@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F682C9121774B095005141A3 /* NavigationStripHeaderBackground@2x.png */; };
-		F682C9461774B095005141A3 /* NavigationStripIcon-Selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F682C9131774B095005141A3 /* NavigationStripIcon-Selected@2x.png */; };
-		F682C9471774B095005141A3 /* NavigationStripIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F682C9141774B095005141A3 /* NavigationStripIcon@2x.png */; };
-		F682C9481774B095005141A3 /* NavigationStripItem-Selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F682C9151774B095005141A3 /* NavigationStripItem-Selected@2x.png */; };
-		F682C9491774B095005141A3 /* NavigationStripItem@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F682C9161774B095005141A3 /* NavigationStripItem@2x.png */; };
-		F682C94A1774B095005141A3 /* NavigationStripItemBlue@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F682C9171774B095005141A3 /* NavigationStripItemBlue@2x.png */; };
-		F682C94B1774B095005141A3 /* NavigationStripItemGrey@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F682C9181774B095005141A3 /* NavigationStripItemGrey@2x.png */; };
-		F682C94C1774B095005141A3 /* NavigationStripItemRed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F682C9191774B095005141A3 /* NavigationStripItemRed@2x.png */; };
-		F682C94D1774B095005141A3 /* NavigationStripLeftSideButton-Selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F682C91A1774B095005141A3 /* NavigationStripLeftSideButton-Selected@2x.png */; };
-		F682C94E1774B095005141A3 /* NavigationStripLeftSideButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F682C91B1774B095005141A3 /* NavigationStripLeftSideButton@2x.png */; };
-		F682C94F1774B095005141A3 /* NavigationStripLeftSideButtonBlue@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F682C91C1774B095005141A3 /* NavigationStripLeftSideButtonBlue@2x.png */; };
-		F682C9501774B095005141A3 /* NavigationStripLeftSideButtonGrey@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F682C91D1774B095005141A3 /* NavigationStripLeftSideButtonGrey@2x.png */; };
-		F682C9511774B095005141A3 /* NavigationStripLeftSideButtonRed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F682C91E1774B095005141A3 /* NavigationStripLeftSideButtonRed@2x.png */; };
-		F682C9521774B095005141A3 /* NavigationStripRightSideButton-Selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F682C91F1774B095005141A3 /* NavigationStripRightSideButton-Selected@2x.png */; };
-		F682C9531774B095005141A3 /* NavigationStripRightSideButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F682C9201774B095005141A3 /* NavigationStripRightSideButton@2x.png */; };
-		F682C9541774B095005141A3 /* NavigationStripRightSideButtonBlue@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F682C9211774B095005141A3 /* NavigationStripRightSideButtonBlue@2x.png */; };
-		F682C9551774B095005141A3 /* NavigationStripRightSideButtonGrey@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F682C9221774B095005141A3 /* NavigationStripRightSideButtonGrey@2x.png */; };
-		F682C9561774B095005141A3 /* NavigationStripRightSideButtonRed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F682C9231774B095005141A3 /* NavigationStripRightSideButtonRed@2x.png */; };
-		F682C9571774B095005141A3 /* NavigationStripSectionBackground-Selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F682C9241774B095005141A3 /* NavigationStripSectionBackground-Selected@2x.png */; };
-		F682C9581774B095005141A3 /* NavigationStripSectionBackground@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F682C9251774B095005141A3 /* NavigationStripSectionBackground@2x.png */; };
-		F682C9591774B095005141A3 /* NavigationStripSectionBackgroundRed-Selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F682C9261774B095005141A3 /* NavigationStripSectionBackgroundRed-Selected@2x.png */; };
-		F682C95A1774B095005141A3 /* NavigationStripSectionBackgroundRed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F682C9271774B095005141A3 /* NavigationStripSectionBackgroundRed@2x.png */; };
 		F682C95D1774B095005141A3 /* TSNavigationStripTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F682C92B1774B095005141A3 /* TSNavigationStripTestViewController.m */; };
 		F682C9651774B0CD005141A3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F682C95F1774B0CD005141A3 /* InfoPlist.strings */; };
 		F682C9661774B0CD005141A3 /* TSNavigationStripTestViewController~ipad.xib in Resources */ = {isa = PBXBuildFile; fileRef = F682C9611774B0CD005141A3 /* TSNavigationStripTestViewController~ipad.xib */; };
 		F682C9671774B0CD005141A3 /* TSNavigationStripTestViewController~iphone.xib in Resources */ = {isa = PBXBuildFile; fileRef = F682C9631774B0CD005141A3 /* TSNavigationStripTestViewController~iphone.xib */; };
+		F6EE2A2817835D1300C0C4A3 /* TSTabViewWithDropDownPanelModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F6EE2A2717835D1300C0C4A3 /* TSTabViewWithDropDownPanelModel.m */; };
+		F6EE2A2917835D1300C0C4A3 /* TSTabViewWithDropDownPanelModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F6EE2A2717835D1300C0C4A3 /* TSTabViewWithDropDownPanelModel.m */; };
+		F6EE2A2A17835D1300C0C4A3 /* TSTabViewWithDropDownPanelModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F6EE2A2717835D1300C0C4A3 /* TSTabViewWithDropDownPanelModel.m */; };
+		F6EE2A3017835D9A00C0C4A3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F682C8941774A718005141A3 /* UIKit.framework */; };
+		F6EE2A3117835D9A00C0C4A3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F682C8961774A718005141A3 /* Foundation.framework */; };
+		F6EE2A3217835D9A00C0C4A3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F682C8981774A718005141A3 /* CoreGraphics.framework */; };
+		F6EE2A3817835D9A00C0C4A3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A3617835D9A00C0C4A3 /* InfoPlist.strings */; };
+		F6EE2A3A17835D9A00C0C4A3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F6EE2A3917835D9A00C0C4A3 /* main.m */; };
+		F6EE2A3E17835D9A00C0C4A3 /* TSAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F6EE2A3D17835D9A00C0C4A3 /* TSAppDelegate.m */; };
+		F6EE2A4017835D9A00C0C4A3 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A3F17835D9A00C0C4A3 /* Default.png */; };
+		F6EE2A4217835D9A00C0C4A3 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A4117835D9A00C0C4A3 /* Default@2x.png */; };
+		F6EE2A4417835D9A00C0C4A3 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A4317835D9A00C0C4A3 /* Default-568h@2x.png */; };
+		F6EE2A4717835D9A00C0C4A3 /* TSTabViewWithDropDownPanelTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F6EE2A4617835D9A00C0C4A3 /* TSTabViewWithDropDownPanelTestViewController.m */; };
+		F6EE2A4A17835D9A00C0C4A3 /* TSTabViewWithDropDownPanelTestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A4817835D9A00C0C4A3 /* TSTabViewWithDropDownPanelTestViewController.xib */; };
+		F6EE2A4D17835D9A00C0C4A3 /* TSTabViewWithDropDownPanelTestViewController~ipad.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A4B17835D9A00C0C4A3 /* TSTabViewWithDropDownPanelTestViewController~ipad.xib */; };
+		F6EE2A891783600200C0C4A3 /* NavigationStripHeaderBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A541783600200C0C4A3 /* NavigationStripHeaderBackground.png */; };
+		F6EE2A8A1783600200C0C4A3 /* NavigationStripHeaderBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A541783600200C0C4A3 /* NavigationStripHeaderBackground.png */; };
+		F6EE2A8B1783600200C0C4A3 /* NavigationStripHeaderBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A541783600200C0C4A3 /* NavigationStripHeaderBackground.png */; };
+		F6EE2A8C1783600200C0C4A3 /* NavigationStripHeaderBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A541783600200C0C4A3 /* NavigationStripHeaderBackground.png */; };
+		F6EE2A8D1783600200C0C4A3 /* NavigationStripHeaderBackground_1.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A551783600200C0C4A3 /* NavigationStripHeaderBackground_1.png */; };
+		F6EE2A8E1783600200C0C4A3 /* NavigationStripHeaderBackground_1.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A551783600200C0C4A3 /* NavigationStripHeaderBackground_1.png */; };
+		F6EE2A8F1783600200C0C4A3 /* NavigationStripHeaderBackground_1.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A551783600200C0C4A3 /* NavigationStripHeaderBackground_1.png */; };
+		F6EE2A901783600200C0C4A3 /* NavigationStripHeaderBackground_1.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A551783600200C0C4A3 /* NavigationStripHeaderBackground_1.png */; };
+		F6EE2A911783600200C0C4A3 /* NavigationStripHeaderBackground_2.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A561783600200C0C4A3 /* NavigationStripHeaderBackground_2.png */; };
+		F6EE2A921783600200C0C4A3 /* NavigationStripHeaderBackground_2.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A561783600200C0C4A3 /* NavigationStripHeaderBackground_2.png */; };
+		F6EE2A931783600200C0C4A3 /* NavigationStripHeaderBackground_2.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A561783600200C0C4A3 /* NavigationStripHeaderBackground_2.png */; };
+		F6EE2A941783600200C0C4A3 /* NavigationStripHeaderBackground_2.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A561783600200C0C4A3 /* NavigationStripHeaderBackground_2.png */; };
+		F6EE2A951783600200C0C4A3 /* NavigationStripIcon-Selected.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A571783600200C0C4A3 /* NavigationStripIcon-Selected.png */; };
+		F6EE2A961783600200C0C4A3 /* NavigationStripIcon-Selected.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A571783600200C0C4A3 /* NavigationStripIcon-Selected.png */; };
+		F6EE2A971783600200C0C4A3 /* NavigationStripIcon-Selected.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A571783600200C0C4A3 /* NavigationStripIcon-Selected.png */; };
+		F6EE2A981783600200C0C4A3 /* NavigationStripIcon-Selected.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A571783600200C0C4A3 /* NavigationStripIcon-Selected.png */; };
+		F6EE2A991783600200C0C4A3 /* NavigationStripIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A581783600200C0C4A3 /* NavigationStripIcon.png */; };
+		F6EE2A9A1783600200C0C4A3 /* NavigationStripIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A581783600200C0C4A3 /* NavigationStripIcon.png */; };
+		F6EE2A9B1783600200C0C4A3 /* NavigationStripIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A581783600200C0C4A3 /* NavigationStripIcon.png */; };
+		F6EE2A9C1783600200C0C4A3 /* NavigationStripIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A581783600200C0C4A3 /* NavigationStripIcon.png */; };
+		F6EE2A9D1783600200C0C4A3 /* NavigationStripItem-Selected.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A591783600200C0C4A3 /* NavigationStripItem-Selected.png */; };
+		F6EE2A9E1783600200C0C4A3 /* NavigationStripItem-Selected.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A591783600200C0C4A3 /* NavigationStripItem-Selected.png */; };
+		F6EE2A9F1783600200C0C4A3 /* NavigationStripItem-Selected.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A591783600200C0C4A3 /* NavigationStripItem-Selected.png */; };
+		F6EE2AA01783600200C0C4A3 /* NavigationStripItem-Selected.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A591783600200C0C4A3 /* NavigationStripItem-Selected.png */; };
+		F6EE2AA11783600200C0C4A3 /* NavigationStripItem.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A5A1783600200C0C4A3 /* NavigationStripItem.png */; };
+		F6EE2AA21783600200C0C4A3 /* NavigationStripItem.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A5A1783600200C0C4A3 /* NavigationStripItem.png */; };
+		F6EE2AA31783600200C0C4A3 /* NavigationStripItem.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A5A1783600200C0C4A3 /* NavigationStripItem.png */; };
+		F6EE2AA41783600200C0C4A3 /* NavigationStripItem.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A5A1783600200C0C4A3 /* NavigationStripItem.png */; };
+		F6EE2AA51783600200C0C4A3 /* NavigationStripItemBlue.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A5B1783600200C0C4A3 /* NavigationStripItemBlue.png */; };
+		F6EE2AA61783600200C0C4A3 /* NavigationStripItemBlue.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A5B1783600200C0C4A3 /* NavigationStripItemBlue.png */; };
+		F6EE2AA71783600200C0C4A3 /* NavigationStripItemBlue.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A5B1783600200C0C4A3 /* NavigationStripItemBlue.png */; };
+		F6EE2AA81783600200C0C4A3 /* NavigationStripItemBlue.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A5B1783600200C0C4A3 /* NavigationStripItemBlue.png */; };
+		F6EE2AA91783600200C0C4A3 /* NavigationStripItemGrey.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A5C1783600200C0C4A3 /* NavigationStripItemGrey.png */; };
+		F6EE2AAA1783600200C0C4A3 /* NavigationStripItemGrey.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A5C1783600200C0C4A3 /* NavigationStripItemGrey.png */; };
+		F6EE2AAB1783600200C0C4A3 /* NavigationStripItemGrey.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A5C1783600200C0C4A3 /* NavigationStripItemGrey.png */; };
+		F6EE2AAC1783600200C0C4A3 /* NavigationStripItemGrey.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A5C1783600200C0C4A3 /* NavigationStripItemGrey.png */; };
+		F6EE2AAD1783600200C0C4A3 /* NavigationStripItemRed.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A5D1783600200C0C4A3 /* NavigationStripItemRed.png */; };
+		F6EE2AAE1783600200C0C4A3 /* NavigationStripItemRed.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A5D1783600200C0C4A3 /* NavigationStripItemRed.png */; };
+		F6EE2AAF1783600200C0C4A3 /* NavigationStripItemRed.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A5D1783600200C0C4A3 /* NavigationStripItemRed.png */; };
+		F6EE2AB01783600200C0C4A3 /* NavigationStripItemRed.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A5D1783600200C0C4A3 /* NavigationStripItemRed.png */; };
+		F6EE2AB11783600200C0C4A3 /* NavigationStripLeftSideButton-Selected.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A5E1783600200C0C4A3 /* NavigationStripLeftSideButton-Selected.png */; };
+		F6EE2AB21783600200C0C4A3 /* NavigationStripLeftSideButton-Selected.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A5E1783600200C0C4A3 /* NavigationStripLeftSideButton-Selected.png */; };
+		F6EE2AB31783600200C0C4A3 /* NavigationStripLeftSideButton-Selected.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A5E1783600200C0C4A3 /* NavigationStripLeftSideButton-Selected.png */; };
+		F6EE2AB41783600200C0C4A3 /* NavigationStripLeftSideButton-Selected.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A5E1783600200C0C4A3 /* NavigationStripLeftSideButton-Selected.png */; };
+		F6EE2AB51783600200C0C4A3 /* NavigationStripLeftSideButton.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A5F1783600200C0C4A3 /* NavigationStripLeftSideButton.png */; };
+		F6EE2AB61783600200C0C4A3 /* NavigationStripLeftSideButton.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A5F1783600200C0C4A3 /* NavigationStripLeftSideButton.png */; };
+		F6EE2AB71783600200C0C4A3 /* NavigationStripLeftSideButton.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A5F1783600200C0C4A3 /* NavigationStripLeftSideButton.png */; };
+		F6EE2AB81783600200C0C4A3 /* NavigationStripLeftSideButton.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A5F1783600200C0C4A3 /* NavigationStripLeftSideButton.png */; };
+		F6EE2AB91783600200C0C4A3 /* NavigationStripLeftSideButtonBlue.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A601783600200C0C4A3 /* NavigationStripLeftSideButtonBlue.png */; };
+		F6EE2ABA1783600200C0C4A3 /* NavigationStripLeftSideButtonBlue.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A601783600200C0C4A3 /* NavigationStripLeftSideButtonBlue.png */; };
+		F6EE2ABB1783600200C0C4A3 /* NavigationStripLeftSideButtonBlue.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A601783600200C0C4A3 /* NavigationStripLeftSideButtonBlue.png */; };
+		F6EE2ABC1783600200C0C4A3 /* NavigationStripLeftSideButtonBlue.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A601783600200C0C4A3 /* NavigationStripLeftSideButtonBlue.png */; };
+		F6EE2ABD1783600200C0C4A3 /* NavigationStripLeftSideButtonGrey.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A611783600200C0C4A3 /* NavigationStripLeftSideButtonGrey.png */; };
+		F6EE2ABE1783600200C0C4A3 /* NavigationStripLeftSideButtonGrey.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A611783600200C0C4A3 /* NavigationStripLeftSideButtonGrey.png */; };
+		F6EE2ABF1783600200C0C4A3 /* NavigationStripLeftSideButtonGrey.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A611783600200C0C4A3 /* NavigationStripLeftSideButtonGrey.png */; };
+		F6EE2AC01783600200C0C4A3 /* NavigationStripLeftSideButtonGrey.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A611783600200C0C4A3 /* NavigationStripLeftSideButtonGrey.png */; };
+		F6EE2AC11783600200C0C4A3 /* NavigationStripLeftSideButtonRed.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A621783600200C0C4A3 /* NavigationStripLeftSideButtonRed.png */; };
+		F6EE2AC21783600200C0C4A3 /* NavigationStripLeftSideButtonRed.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A621783600200C0C4A3 /* NavigationStripLeftSideButtonRed.png */; };
+		F6EE2AC31783600200C0C4A3 /* NavigationStripLeftSideButtonRed.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A621783600200C0C4A3 /* NavigationStripLeftSideButtonRed.png */; };
+		F6EE2AC41783600200C0C4A3 /* NavigationStripLeftSideButtonRed.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A621783600200C0C4A3 /* NavigationStripLeftSideButtonRed.png */; };
+		F6EE2AC51783600200C0C4A3 /* NavigationStripRightSideButton-Selected.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A631783600200C0C4A3 /* NavigationStripRightSideButton-Selected.png */; };
+		F6EE2AC61783600200C0C4A3 /* NavigationStripRightSideButton-Selected.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A631783600200C0C4A3 /* NavigationStripRightSideButton-Selected.png */; };
+		F6EE2AC71783600200C0C4A3 /* NavigationStripRightSideButton-Selected.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A631783600200C0C4A3 /* NavigationStripRightSideButton-Selected.png */; };
+		F6EE2AC81783600200C0C4A3 /* NavigationStripRightSideButton-Selected.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A631783600200C0C4A3 /* NavigationStripRightSideButton-Selected.png */; };
+		F6EE2AC91783600200C0C4A3 /* NavigationStripRightSideButton.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A641783600200C0C4A3 /* NavigationStripRightSideButton.png */; };
+		F6EE2ACA1783600200C0C4A3 /* NavigationStripRightSideButton.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A641783600200C0C4A3 /* NavigationStripRightSideButton.png */; };
+		F6EE2ACB1783600200C0C4A3 /* NavigationStripRightSideButton.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A641783600200C0C4A3 /* NavigationStripRightSideButton.png */; };
+		F6EE2ACC1783600200C0C4A3 /* NavigationStripRightSideButton.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A641783600200C0C4A3 /* NavigationStripRightSideButton.png */; };
+		F6EE2ACD1783600200C0C4A3 /* NavigationStripRightSideButtonBlue.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A651783600200C0C4A3 /* NavigationStripRightSideButtonBlue.png */; };
+		F6EE2ACE1783600200C0C4A3 /* NavigationStripRightSideButtonBlue.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A651783600200C0C4A3 /* NavigationStripRightSideButtonBlue.png */; };
+		F6EE2ACF1783600200C0C4A3 /* NavigationStripRightSideButtonBlue.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A651783600200C0C4A3 /* NavigationStripRightSideButtonBlue.png */; };
+		F6EE2AD01783600200C0C4A3 /* NavigationStripRightSideButtonBlue.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A651783600200C0C4A3 /* NavigationStripRightSideButtonBlue.png */; };
+		F6EE2AD11783600200C0C4A3 /* NavigationStripRightSideButtonGrey.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A661783600200C0C4A3 /* NavigationStripRightSideButtonGrey.png */; };
+		F6EE2AD21783600200C0C4A3 /* NavigationStripRightSideButtonGrey.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A661783600200C0C4A3 /* NavigationStripRightSideButtonGrey.png */; };
+		F6EE2AD31783600200C0C4A3 /* NavigationStripRightSideButtonGrey.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A661783600200C0C4A3 /* NavigationStripRightSideButtonGrey.png */; };
+		F6EE2AD41783600200C0C4A3 /* NavigationStripRightSideButtonGrey.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A661783600200C0C4A3 /* NavigationStripRightSideButtonGrey.png */; };
+		F6EE2AD51783600200C0C4A3 /* NavigationStripRightSideButtonRed.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A671783600200C0C4A3 /* NavigationStripRightSideButtonRed.png */; };
+		F6EE2AD61783600200C0C4A3 /* NavigationStripRightSideButtonRed.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A671783600200C0C4A3 /* NavigationStripRightSideButtonRed.png */; };
+		F6EE2AD71783600200C0C4A3 /* NavigationStripRightSideButtonRed.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A671783600200C0C4A3 /* NavigationStripRightSideButtonRed.png */; };
+		F6EE2AD81783600200C0C4A3 /* NavigationStripRightSideButtonRed.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A671783600200C0C4A3 /* NavigationStripRightSideButtonRed.png */; };
+		F6EE2AD91783600200C0C4A3 /* NavigationStripSectionBackground-Selected.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A681783600200C0C4A3 /* NavigationStripSectionBackground-Selected.png */; };
+		F6EE2ADA1783600200C0C4A3 /* NavigationStripSectionBackground-Selected.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A681783600200C0C4A3 /* NavigationStripSectionBackground-Selected.png */; };
+		F6EE2ADB1783600200C0C4A3 /* NavigationStripSectionBackground-Selected.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A681783600200C0C4A3 /* NavigationStripSectionBackground-Selected.png */; };
+		F6EE2ADC1783600200C0C4A3 /* NavigationStripSectionBackground-Selected.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A681783600200C0C4A3 /* NavigationStripSectionBackground-Selected.png */; };
+		F6EE2ADD1783600200C0C4A3 /* NavigationStripSectionBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A691783600200C0C4A3 /* NavigationStripSectionBackground.png */; };
+		F6EE2ADE1783600200C0C4A3 /* NavigationStripSectionBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A691783600200C0C4A3 /* NavigationStripSectionBackground.png */; };
+		F6EE2ADF1783600200C0C4A3 /* NavigationStripSectionBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A691783600200C0C4A3 /* NavigationStripSectionBackground.png */; };
+		F6EE2AE01783600200C0C4A3 /* NavigationStripSectionBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A691783600200C0C4A3 /* NavigationStripSectionBackground.png */; };
+		F6EE2AE11783600200C0C4A3 /* NavigationStripSectionBackground_2-Selected.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A6A1783600200C0C4A3 /* NavigationStripSectionBackground_2-Selected.png */; };
+		F6EE2AE21783600200C0C4A3 /* NavigationStripSectionBackground_2-Selected.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A6A1783600200C0C4A3 /* NavigationStripSectionBackground_2-Selected.png */; };
+		F6EE2AE31783600200C0C4A3 /* NavigationStripSectionBackground_2-Selected.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A6A1783600200C0C4A3 /* NavigationStripSectionBackground_2-Selected.png */; };
+		F6EE2AE41783600200C0C4A3 /* NavigationStripSectionBackground_2-Selected.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A6A1783600200C0C4A3 /* NavigationStripSectionBackground_2-Selected.png */; };
+		F6EE2AE51783600200C0C4A3 /* NavigationStripSectionBackground_2.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A6B1783600200C0C4A3 /* NavigationStripSectionBackground_2.png */; };
+		F6EE2AE61783600200C0C4A3 /* NavigationStripSectionBackground_2.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A6B1783600200C0C4A3 /* NavigationStripSectionBackground_2.png */; };
+		F6EE2AE71783600200C0C4A3 /* NavigationStripSectionBackground_2.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A6B1783600200C0C4A3 /* NavigationStripSectionBackground_2.png */; };
+		F6EE2AE81783600200C0C4A3 /* NavigationStripSectionBackground_2.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A6B1783600200C0C4A3 /* NavigationStripSectionBackground_2.png */; };
+		F6EE2AE91783600200C0C4A3 /* NavigationStripSectionBackgroundRed-Selected.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A6C1783600200C0C4A3 /* NavigationStripSectionBackgroundRed-Selected.png */; };
+		F6EE2AEA1783600200C0C4A3 /* NavigationStripSectionBackgroundRed-Selected.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A6C1783600200C0C4A3 /* NavigationStripSectionBackgroundRed-Selected.png */; };
+		F6EE2AEB1783600200C0C4A3 /* NavigationStripSectionBackgroundRed-Selected.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A6C1783600200C0C4A3 /* NavigationStripSectionBackgroundRed-Selected.png */; };
+		F6EE2AEC1783600200C0C4A3 /* NavigationStripSectionBackgroundRed-Selected.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A6C1783600200C0C4A3 /* NavigationStripSectionBackgroundRed-Selected.png */; };
+		F6EE2AED1783600200C0C4A3 /* NavigationStripSectionBackgroundRed.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A6D1783600200C0C4A3 /* NavigationStripSectionBackgroundRed.png */; };
+		F6EE2AEE1783600200C0C4A3 /* NavigationStripSectionBackgroundRed.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A6D1783600200C0C4A3 /* NavigationStripSectionBackgroundRed.png */; };
+		F6EE2AEF1783600200C0C4A3 /* NavigationStripSectionBackgroundRed.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A6D1783600200C0C4A3 /* NavigationStripSectionBackgroundRed.png */; };
+		F6EE2AF01783600200C0C4A3 /* NavigationStripSectionBackgroundRed.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A6D1783600200C0C4A3 /* NavigationStripSectionBackgroundRed.png */; };
+		F6EE2AF11783600200C0C4A3 /* NavigationStripHeaderBackground@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A6F1783600200C0C4A3 /* NavigationStripHeaderBackground@2x.png */; };
+		F6EE2AF21783600200C0C4A3 /* NavigationStripHeaderBackground@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A6F1783600200C0C4A3 /* NavigationStripHeaderBackground@2x.png */; };
+		F6EE2AF31783600200C0C4A3 /* NavigationStripHeaderBackground@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A6F1783600200C0C4A3 /* NavigationStripHeaderBackground@2x.png */; };
+		F6EE2AF41783600200C0C4A3 /* NavigationStripHeaderBackground@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A6F1783600200C0C4A3 /* NavigationStripHeaderBackground@2x.png */; };
+		F6EE2AF51783600200C0C4A3 /* NavigationStripHeaderBackground_1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A701783600200C0C4A3 /* NavigationStripHeaderBackground_1@2x.png */; };
+		F6EE2AF61783600200C0C4A3 /* NavigationStripHeaderBackground_1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A701783600200C0C4A3 /* NavigationStripHeaderBackground_1@2x.png */; };
+		F6EE2AF71783600200C0C4A3 /* NavigationStripHeaderBackground_1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A701783600200C0C4A3 /* NavigationStripHeaderBackground_1@2x.png */; };
+		F6EE2AF81783600200C0C4A3 /* NavigationStripHeaderBackground_1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A701783600200C0C4A3 /* NavigationStripHeaderBackground_1@2x.png */; };
+		F6EE2AF91783600200C0C4A3 /* NavigationStripHeaderBackground_2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A711783600200C0C4A3 /* NavigationStripHeaderBackground_2@2x.png */; };
+		F6EE2AFA1783600200C0C4A3 /* NavigationStripHeaderBackground_2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A711783600200C0C4A3 /* NavigationStripHeaderBackground_2@2x.png */; };
+		F6EE2AFB1783600200C0C4A3 /* NavigationStripHeaderBackground_2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A711783600200C0C4A3 /* NavigationStripHeaderBackground_2@2x.png */; };
+		F6EE2AFC1783600200C0C4A3 /* NavigationStripHeaderBackground_2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A711783600200C0C4A3 /* NavigationStripHeaderBackground_2@2x.png */; };
+		F6EE2AFD1783600200C0C4A3 /* NavigationStripIcon-Selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A721783600200C0C4A3 /* NavigationStripIcon-Selected@2x.png */; };
+		F6EE2AFE1783600200C0C4A3 /* NavigationStripIcon-Selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A721783600200C0C4A3 /* NavigationStripIcon-Selected@2x.png */; };
+		F6EE2AFF1783600200C0C4A3 /* NavigationStripIcon-Selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A721783600200C0C4A3 /* NavigationStripIcon-Selected@2x.png */; };
+		F6EE2B001783600200C0C4A3 /* NavigationStripIcon-Selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A721783600200C0C4A3 /* NavigationStripIcon-Selected@2x.png */; };
+		F6EE2B011783600200C0C4A3 /* NavigationStripIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A731783600200C0C4A3 /* NavigationStripIcon@2x.png */; };
+		F6EE2B021783600200C0C4A3 /* NavigationStripIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A731783600200C0C4A3 /* NavigationStripIcon@2x.png */; };
+		F6EE2B031783600200C0C4A3 /* NavigationStripIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A731783600200C0C4A3 /* NavigationStripIcon@2x.png */; };
+		F6EE2B041783600200C0C4A3 /* NavigationStripIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A731783600200C0C4A3 /* NavigationStripIcon@2x.png */; };
+		F6EE2B051783600200C0C4A3 /* NavigationStripItem-Selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A741783600200C0C4A3 /* NavigationStripItem-Selected@2x.png */; };
+		F6EE2B061783600200C0C4A3 /* NavigationStripItem-Selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A741783600200C0C4A3 /* NavigationStripItem-Selected@2x.png */; };
+		F6EE2B071783600200C0C4A3 /* NavigationStripItem-Selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A741783600200C0C4A3 /* NavigationStripItem-Selected@2x.png */; };
+		F6EE2B081783600200C0C4A3 /* NavigationStripItem-Selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A741783600200C0C4A3 /* NavigationStripItem-Selected@2x.png */; };
+		F6EE2B091783600200C0C4A3 /* NavigationStripItem@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A751783600200C0C4A3 /* NavigationStripItem@2x.png */; };
+		F6EE2B0A1783600200C0C4A3 /* NavigationStripItem@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A751783600200C0C4A3 /* NavigationStripItem@2x.png */; };
+		F6EE2B0B1783600200C0C4A3 /* NavigationStripItem@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A751783600200C0C4A3 /* NavigationStripItem@2x.png */; };
+		F6EE2B0C1783600200C0C4A3 /* NavigationStripItem@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A751783600200C0C4A3 /* NavigationStripItem@2x.png */; };
+		F6EE2B0D1783600200C0C4A3 /* NavigationStripItemBlue@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A761783600200C0C4A3 /* NavigationStripItemBlue@2x.png */; };
+		F6EE2B0E1783600200C0C4A3 /* NavigationStripItemBlue@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A761783600200C0C4A3 /* NavigationStripItemBlue@2x.png */; };
+		F6EE2B0F1783600200C0C4A3 /* NavigationStripItemBlue@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A761783600200C0C4A3 /* NavigationStripItemBlue@2x.png */; };
+		F6EE2B101783600200C0C4A3 /* NavigationStripItemBlue@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A761783600200C0C4A3 /* NavigationStripItemBlue@2x.png */; };
+		F6EE2B111783600200C0C4A3 /* NavigationStripItemGrey@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A771783600200C0C4A3 /* NavigationStripItemGrey@2x.png */; };
+		F6EE2B121783600200C0C4A3 /* NavigationStripItemGrey@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A771783600200C0C4A3 /* NavigationStripItemGrey@2x.png */; };
+		F6EE2B131783600200C0C4A3 /* NavigationStripItemGrey@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A771783600200C0C4A3 /* NavigationStripItemGrey@2x.png */; };
+		F6EE2B141783600200C0C4A3 /* NavigationStripItemGrey@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A771783600200C0C4A3 /* NavigationStripItemGrey@2x.png */; };
+		F6EE2B151783600200C0C4A3 /* NavigationStripItemRed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A781783600200C0C4A3 /* NavigationStripItemRed@2x.png */; };
+		F6EE2B161783600200C0C4A3 /* NavigationStripItemRed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A781783600200C0C4A3 /* NavigationStripItemRed@2x.png */; };
+		F6EE2B171783600200C0C4A3 /* NavigationStripItemRed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A781783600200C0C4A3 /* NavigationStripItemRed@2x.png */; };
+		F6EE2B181783600200C0C4A3 /* NavigationStripItemRed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A781783600200C0C4A3 /* NavigationStripItemRed@2x.png */; };
+		F6EE2B191783600200C0C4A3 /* NavigationStripLeftSideButton-Selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A791783600200C0C4A3 /* NavigationStripLeftSideButton-Selected@2x.png */; };
+		F6EE2B1A1783600200C0C4A3 /* NavigationStripLeftSideButton-Selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A791783600200C0C4A3 /* NavigationStripLeftSideButton-Selected@2x.png */; };
+		F6EE2B1B1783600200C0C4A3 /* NavigationStripLeftSideButton-Selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A791783600200C0C4A3 /* NavigationStripLeftSideButton-Selected@2x.png */; };
+		F6EE2B1C1783600200C0C4A3 /* NavigationStripLeftSideButton-Selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A791783600200C0C4A3 /* NavigationStripLeftSideButton-Selected@2x.png */; };
+		F6EE2B1D1783600200C0C4A3 /* NavigationStripLeftSideButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A7A1783600200C0C4A3 /* NavigationStripLeftSideButton@2x.png */; };
+		F6EE2B1E1783600200C0C4A3 /* NavigationStripLeftSideButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A7A1783600200C0C4A3 /* NavigationStripLeftSideButton@2x.png */; };
+		F6EE2B1F1783600200C0C4A3 /* NavigationStripLeftSideButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A7A1783600200C0C4A3 /* NavigationStripLeftSideButton@2x.png */; };
+		F6EE2B201783600200C0C4A3 /* NavigationStripLeftSideButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A7A1783600200C0C4A3 /* NavigationStripLeftSideButton@2x.png */; };
+		F6EE2B211783600200C0C4A3 /* NavigationStripLeftSideButtonBlue@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A7B1783600200C0C4A3 /* NavigationStripLeftSideButtonBlue@2x.png */; };
+		F6EE2B221783600200C0C4A3 /* NavigationStripLeftSideButtonBlue@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A7B1783600200C0C4A3 /* NavigationStripLeftSideButtonBlue@2x.png */; };
+		F6EE2B231783600200C0C4A3 /* NavigationStripLeftSideButtonBlue@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A7B1783600200C0C4A3 /* NavigationStripLeftSideButtonBlue@2x.png */; };
+		F6EE2B241783600200C0C4A3 /* NavigationStripLeftSideButtonBlue@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A7B1783600200C0C4A3 /* NavigationStripLeftSideButtonBlue@2x.png */; };
+		F6EE2B251783600200C0C4A3 /* NavigationStripLeftSideButtonGrey@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A7C1783600200C0C4A3 /* NavigationStripLeftSideButtonGrey@2x.png */; };
+		F6EE2B261783600200C0C4A3 /* NavigationStripLeftSideButtonGrey@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A7C1783600200C0C4A3 /* NavigationStripLeftSideButtonGrey@2x.png */; };
+		F6EE2B271783600200C0C4A3 /* NavigationStripLeftSideButtonGrey@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A7C1783600200C0C4A3 /* NavigationStripLeftSideButtonGrey@2x.png */; };
+		F6EE2B281783600200C0C4A3 /* NavigationStripLeftSideButtonGrey@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A7C1783600200C0C4A3 /* NavigationStripLeftSideButtonGrey@2x.png */; };
+		F6EE2B291783600200C0C4A3 /* NavigationStripLeftSideButtonRed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A7D1783600200C0C4A3 /* NavigationStripLeftSideButtonRed@2x.png */; };
+		F6EE2B2A1783600200C0C4A3 /* NavigationStripLeftSideButtonRed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A7D1783600200C0C4A3 /* NavigationStripLeftSideButtonRed@2x.png */; };
+		F6EE2B2B1783600200C0C4A3 /* NavigationStripLeftSideButtonRed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A7D1783600200C0C4A3 /* NavigationStripLeftSideButtonRed@2x.png */; };
+		F6EE2B2C1783600200C0C4A3 /* NavigationStripLeftSideButtonRed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A7D1783600200C0C4A3 /* NavigationStripLeftSideButtonRed@2x.png */; };
+		F6EE2B2D1783600200C0C4A3 /* NavigationStripRightSideButton-Selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A7E1783600200C0C4A3 /* NavigationStripRightSideButton-Selected@2x.png */; };
+		F6EE2B2E1783600200C0C4A3 /* NavigationStripRightSideButton-Selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A7E1783600200C0C4A3 /* NavigationStripRightSideButton-Selected@2x.png */; };
+		F6EE2B2F1783600200C0C4A3 /* NavigationStripRightSideButton-Selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A7E1783600200C0C4A3 /* NavigationStripRightSideButton-Selected@2x.png */; };
+		F6EE2B301783600200C0C4A3 /* NavigationStripRightSideButton-Selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A7E1783600200C0C4A3 /* NavigationStripRightSideButton-Selected@2x.png */; };
+		F6EE2B311783600200C0C4A3 /* NavigationStripRightSideButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A7F1783600200C0C4A3 /* NavigationStripRightSideButton@2x.png */; };
+		F6EE2B321783600200C0C4A3 /* NavigationStripRightSideButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A7F1783600200C0C4A3 /* NavigationStripRightSideButton@2x.png */; };
+		F6EE2B331783600200C0C4A3 /* NavigationStripRightSideButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A7F1783600200C0C4A3 /* NavigationStripRightSideButton@2x.png */; };
+		F6EE2B341783600200C0C4A3 /* NavigationStripRightSideButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A7F1783600200C0C4A3 /* NavigationStripRightSideButton@2x.png */; };
+		F6EE2B351783600200C0C4A3 /* NavigationStripRightSideButtonBlue@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A801783600200C0C4A3 /* NavigationStripRightSideButtonBlue@2x.png */; };
+		F6EE2B361783600200C0C4A3 /* NavigationStripRightSideButtonBlue@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A801783600200C0C4A3 /* NavigationStripRightSideButtonBlue@2x.png */; };
+		F6EE2B371783600200C0C4A3 /* NavigationStripRightSideButtonBlue@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A801783600200C0C4A3 /* NavigationStripRightSideButtonBlue@2x.png */; };
+		F6EE2B381783600200C0C4A3 /* NavigationStripRightSideButtonBlue@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A801783600200C0C4A3 /* NavigationStripRightSideButtonBlue@2x.png */; };
+		F6EE2B391783600200C0C4A3 /* NavigationStripRightSideButtonGrey@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A811783600200C0C4A3 /* NavigationStripRightSideButtonGrey@2x.png */; };
+		F6EE2B3A1783600200C0C4A3 /* NavigationStripRightSideButtonGrey@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A811783600200C0C4A3 /* NavigationStripRightSideButtonGrey@2x.png */; };
+		F6EE2B3B1783600200C0C4A3 /* NavigationStripRightSideButtonGrey@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A811783600200C0C4A3 /* NavigationStripRightSideButtonGrey@2x.png */; };
+		F6EE2B3C1783600200C0C4A3 /* NavigationStripRightSideButtonGrey@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A811783600200C0C4A3 /* NavigationStripRightSideButtonGrey@2x.png */; };
+		F6EE2B3D1783600200C0C4A3 /* NavigationStripRightSideButtonRed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A821783600200C0C4A3 /* NavigationStripRightSideButtonRed@2x.png */; };
+		F6EE2B3E1783600200C0C4A3 /* NavigationStripRightSideButtonRed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A821783600200C0C4A3 /* NavigationStripRightSideButtonRed@2x.png */; };
+		F6EE2B3F1783600200C0C4A3 /* NavigationStripRightSideButtonRed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A821783600200C0C4A3 /* NavigationStripRightSideButtonRed@2x.png */; };
+		F6EE2B401783600200C0C4A3 /* NavigationStripRightSideButtonRed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A821783600200C0C4A3 /* NavigationStripRightSideButtonRed@2x.png */; };
+		F6EE2B411783600200C0C4A3 /* NavigationStripSectionBackground-Selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A831783600200C0C4A3 /* NavigationStripSectionBackground-Selected@2x.png */; };
+		F6EE2B421783600200C0C4A3 /* NavigationStripSectionBackground-Selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A831783600200C0C4A3 /* NavigationStripSectionBackground-Selected@2x.png */; };
+		F6EE2B431783600200C0C4A3 /* NavigationStripSectionBackground-Selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A831783600200C0C4A3 /* NavigationStripSectionBackground-Selected@2x.png */; };
+		F6EE2B441783600200C0C4A3 /* NavigationStripSectionBackground-Selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A831783600200C0C4A3 /* NavigationStripSectionBackground-Selected@2x.png */; };
+		F6EE2B451783600200C0C4A3 /* NavigationStripSectionBackground@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A841783600200C0C4A3 /* NavigationStripSectionBackground@2x.png */; };
+		F6EE2B461783600200C0C4A3 /* NavigationStripSectionBackground@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A841783600200C0C4A3 /* NavigationStripSectionBackground@2x.png */; };
+		F6EE2B471783600200C0C4A3 /* NavigationStripSectionBackground@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A841783600200C0C4A3 /* NavigationStripSectionBackground@2x.png */; };
+		F6EE2B481783600200C0C4A3 /* NavigationStripSectionBackground@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A841783600200C0C4A3 /* NavigationStripSectionBackground@2x.png */; };
+		F6EE2B491783600200C0C4A3 /* NavigationStripSectionBackground_2-Selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A851783600200C0C4A3 /* NavigationStripSectionBackground_2-Selected@2x.png */; };
+		F6EE2B4A1783600200C0C4A3 /* NavigationStripSectionBackground_2-Selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A851783600200C0C4A3 /* NavigationStripSectionBackground_2-Selected@2x.png */; };
+		F6EE2B4B1783600200C0C4A3 /* NavigationStripSectionBackground_2-Selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A851783600200C0C4A3 /* NavigationStripSectionBackground_2-Selected@2x.png */; };
+		F6EE2B4C1783600200C0C4A3 /* NavigationStripSectionBackground_2-Selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A851783600200C0C4A3 /* NavigationStripSectionBackground_2-Selected@2x.png */; };
+		F6EE2B4D1783600200C0C4A3 /* NavigationStripSectionBackground_2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A861783600200C0C4A3 /* NavigationStripSectionBackground_2@2x.png */; };
+		F6EE2B4E1783600200C0C4A3 /* NavigationStripSectionBackground_2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A861783600200C0C4A3 /* NavigationStripSectionBackground_2@2x.png */; };
+		F6EE2B4F1783600200C0C4A3 /* NavigationStripSectionBackground_2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A861783600200C0C4A3 /* NavigationStripSectionBackground_2@2x.png */; };
+		F6EE2B501783600200C0C4A3 /* NavigationStripSectionBackground_2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A861783600200C0C4A3 /* NavigationStripSectionBackground_2@2x.png */; };
+		F6EE2B511783600200C0C4A3 /* NavigationStripSectionBackgroundRed-Selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A871783600200C0C4A3 /* NavigationStripSectionBackgroundRed-Selected@2x.png */; };
+		F6EE2B521783600200C0C4A3 /* NavigationStripSectionBackgroundRed-Selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A871783600200C0C4A3 /* NavigationStripSectionBackgroundRed-Selected@2x.png */; };
+		F6EE2B531783600200C0C4A3 /* NavigationStripSectionBackgroundRed-Selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A871783600200C0C4A3 /* NavigationStripSectionBackgroundRed-Selected@2x.png */; };
+		F6EE2B541783600200C0C4A3 /* NavigationStripSectionBackgroundRed-Selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A871783600200C0C4A3 /* NavigationStripSectionBackgroundRed-Selected@2x.png */; };
+		F6EE2B551783600200C0C4A3 /* NavigationStripSectionBackgroundRed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A881783600200C0C4A3 /* NavigationStripSectionBackgroundRed@2x.png */; };
+		F6EE2B561783600200C0C4A3 /* NavigationStripSectionBackgroundRed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A881783600200C0C4A3 /* NavigationStripSectionBackgroundRed@2x.png */; };
+		F6EE2B571783600200C0C4A3 /* NavigationStripSectionBackgroundRed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A881783600200C0C4A3 /* NavigationStripSectionBackgroundRed@2x.png */; };
+		F6EE2B581783600200C0C4A3 /* NavigationStripSectionBackgroundRed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A881783600200C0C4A3 /* NavigationStripSectionBackgroundRed@2x.png */; };
+		F6EE2B591783604600C0C4A3 /* TSTabViewWithDropDownPanel.m in Sources */ = {isa = PBXBuildFile; fileRef = F63C0A0C17821F8C005AB903 /* TSTabViewWithDropDownPanel.m */; };
+		F6EE2B5A1783604600C0C4A3 /* TSTabViewWithDropDownPanelModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F6EE2A2717835D1300C0C4A3 /* TSTabViewWithDropDownPanelModel.m */; };
+		F6EE2B5B1783604600C0C4A3 /* TSUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = F6F3CEE71781ABB400C7274F /* TSUtils.m */; };
+		F6EE2B5C1783604600C0C4A3 /* TSNavigationStripModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F6F3CEEB1781ABB400C7274F /* TSNavigationStripModel.m */; };
+		F6EE2B5D1783604600C0C4A3 /* TSNavigationStripView.m in Sources */ = {isa = PBXBuildFile; fileRef = F6F3CEED1781ABB400C7274F /* TSNavigationStripView.m */; };
+		F6EE2B5E1783604600C0C4A3 /* TSScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = F6F3CEF11781ABB400C7274F /* TSScrollView.m */; };
+		F6EE2B5F1783604600C0C4A3 /* TSTabView.m in Sources */ = {isa = PBXBuildFile; fileRef = F6F3CEF41781ABB400C7274F /* TSTabView.m */; };
+		F6EE2B601783604600C0C4A3 /* TSTabViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F6F3CEF81781ABB400C7274F /* TSTabViewModel.m */; };
+		F6EE2B611783605800C0C4A3 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F682C8DC1774B017005141A3 /* QuartzCore.framework */; };
 		F6F3CF0B1781ABB400C7274F /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = F6F3CEE21781ABB400C7274F /* LICENSE */; };
 		F6F3CF0C1781ABB400C7274F /* TSUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = F6F3CEE71781ABB400C7274F /* TSUtils.m */; };
 		F6F3CF0D1781ABB400C7274F /* TSNavigationStripModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F6F3CEEB1781ABB400C7274F /* TSNavigationStripModel.m */; };
@@ -234,6 +316,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F63C0A0B17821F8C005AB903 /* TSTabViewWithDropDownPanel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSTabViewWithDropDownPanel.h; sourceTree = "<group>"; };
+		F63C0A0C17821F8C005AB903 /* TSTabViewWithDropDownPanel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSTabViewWithDropDownPanel.m; sourceTree = "<group>"; };
 		F680D2861774B9C2005ACD94 /* TabViewTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TabViewTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F680D2A61774BA82005ACD94 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		F680D2A71774BA82005ACD94 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
@@ -242,74 +326,14 @@
 		F680D2AD1774BA82005ACD94 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = "TSTabViewTestViewController~ipad.xib"; sourceTree = "<group>"; };
 		F680D2AF1774BA82005ACD94 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = "TSTabViewTestViewController~iphone.xib"; sourceTree = "<group>"; };
 		F680D2B01774BA82005ACD94 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		F680D2B41774BA82005ACD94 /* NavigationStripHeaderBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NavigationStripHeaderBackground.png; sourceTree = "<group>"; };
-		F680D2B51774BA82005ACD94 /* NavigationStripIcon-Selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NavigationStripIcon-Selected.png"; sourceTree = "<group>"; };
-		F680D2B61774BA82005ACD94 /* NavigationStripIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NavigationStripIcon.png; sourceTree = "<group>"; };
-		F680D2B71774BA82005ACD94 /* NavigationStripItem-Selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NavigationStripItem-Selected.png"; sourceTree = "<group>"; };
-		F680D2B81774BA82005ACD94 /* NavigationStripItem.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NavigationStripItem.png; sourceTree = "<group>"; };
-		F680D2B91774BA82005ACD94 /* NavigationStripItemBlue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NavigationStripItemBlue.png; sourceTree = "<group>"; };
-		F680D2BA1774BA82005ACD94 /* NavigationStripItemGrey.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NavigationStripItemGrey.png; sourceTree = "<group>"; };
-		F680D2BB1774BA82005ACD94 /* NavigationStripItemRed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NavigationStripItemRed.png; sourceTree = "<group>"; };
-		F680D2BC1774BA82005ACD94 /* NavigationStripLeftSideButton-Selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NavigationStripLeftSideButton-Selected.png"; sourceTree = "<group>"; };
-		F680D2BD1774BA82005ACD94 /* NavigationStripLeftSideButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NavigationStripLeftSideButton.png; sourceTree = "<group>"; };
-		F680D2BE1774BA82005ACD94 /* NavigationStripLeftSideButtonBlue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NavigationStripLeftSideButtonBlue.png; sourceTree = "<group>"; };
-		F680D2BF1774BA82005ACD94 /* NavigationStripLeftSideButtonGrey.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NavigationStripLeftSideButtonGrey.png; sourceTree = "<group>"; };
-		F680D2C01774BA82005ACD94 /* NavigationStripLeftSideButtonRed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NavigationStripLeftSideButtonRed.png; sourceTree = "<group>"; };
-		F680D2C11774BA82005ACD94 /* NavigationStripRightSideButton-Selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NavigationStripRightSideButton-Selected.png"; sourceTree = "<group>"; };
-		F680D2C21774BA82005ACD94 /* NavigationStripRightSideButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NavigationStripRightSideButton.png; sourceTree = "<group>"; };
-		F680D2C31774BA82005ACD94 /* NavigationStripRightSideButtonBlue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NavigationStripRightSideButtonBlue.png; sourceTree = "<group>"; };
-		F680D2C41774BA82005ACD94 /* NavigationStripRightSideButtonGrey.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NavigationStripRightSideButtonGrey.png; sourceTree = "<group>"; };
-		F680D2C51774BA82005ACD94 /* NavigationStripRightSideButtonRed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NavigationStripRightSideButtonRed.png; sourceTree = "<group>"; };
-		F680D2C61774BA82005ACD94 /* NavigationStripSectionBackground-Selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NavigationStripSectionBackground-Selected.png"; sourceTree = "<group>"; };
-		F680D2C71774BA82005ACD94 /* NavigationStripSectionBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NavigationStripSectionBackground.png; sourceTree = "<group>"; };
-		F680D2C81774BA82005ACD94 /* NavigationStripSectionBackgroundRed-Selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NavigationStripSectionBackgroundRed-Selected.png"; sourceTree = "<group>"; };
-		F680D2C91774BA82005ACD94 /* NavigationStripSectionBackgroundRed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NavigationStripSectionBackgroundRed.png; sourceTree = "<group>"; };
-		F680D2CB1774BA82005ACD94 /* NavigationStripHeaderBackground@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NavigationStripHeaderBackground@2x.png"; sourceTree = "<group>"; };
-		F680D2CC1774BA82005ACD94 /* NavigationStripIcon-Selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NavigationStripIcon-Selected@2x.png"; sourceTree = "<group>"; };
-		F680D2CD1774BA82005ACD94 /* NavigationStripIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NavigationStripIcon@2x.png"; sourceTree = "<group>"; };
-		F680D2CE1774BA82005ACD94 /* NavigationStripItem-Selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NavigationStripItem-Selected@2x.png"; sourceTree = "<group>"; };
-		F680D2CF1774BA82005ACD94 /* NavigationStripItem@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NavigationStripItem@2x.png"; sourceTree = "<group>"; };
-		F680D2D01774BA82005ACD94 /* NavigationStripItemBlue@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NavigationStripItemBlue@2x.png"; sourceTree = "<group>"; };
-		F680D2D11774BA82005ACD94 /* NavigationStripItemGrey@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NavigationStripItemGrey@2x.png"; sourceTree = "<group>"; };
-		F680D2D21774BA82005ACD94 /* NavigationStripItemRed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NavigationStripItemRed@2x.png"; sourceTree = "<group>"; };
-		F680D2D31774BA82005ACD94 /* NavigationStripLeftSideButton-Selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NavigationStripLeftSideButton-Selected@2x.png"; sourceTree = "<group>"; };
-		F680D2D41774BA82005ACD94 /* NavigationStripLeftSideButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NavigationStripLeftSideButton@2x.png"; sourceTree = "<group>"; };
-		F680D2D51774BA82005ACD94 /* NavigationStripLeftSideButtonBlue@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NavigationStripLeftSideButtonBlue@2x.png"; sourceTree = "<group>"; };
-		F680D2D61774BA82005ACD94 /* NavigationStripLeftSideButtonGrey@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NavigationStripLeftSideButtonGrey@2x.png"; sourceTree = "<group>"; };
-		F680D2D71774BA82005ACD94 /* NavigationStripLeftSideButtonRed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NavigationStripLeftSideButtonRed@2x.png"; sourceTree = "<group>"; };
-		F680D2D81774BA82005ACD94 /* NavigationStripRightSideButton-Selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NavigationStripRightSideButton-Selected@2x.png"; sourceTree = "<group>"; };
-		F680D2D91774BA82005ACD94 /* NavigationStripRightSideButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NavigationStripRightSideButton@2x.png"; sourceTree = "<group>"; };
-		F680D2DA1774BA82005ACD94 /* NavigationStripRightSideButtonBlue@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NavigationStripRightSideButtonBlue@2x.png"; sourceTree = "<group>"; };
-		F680D2DB1774BA82005ACD94 /* NavigationStripRightSideButtonGrey@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NavigationStripRightSideButtonGrey@2x.png"; sourceTree = "<group>"; };
-		F680D2DC1774BA82005ACD94 /* NavigationStripRightSideButtonRed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NavigationStripRightSideButtonRed@2x.png"; sourceTree = "<group>"; };
-		F680D2DD1774BA82005ACD94 /* NavigationStripSectionBackground-Selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NavigationStripSectionBackground-Selected@2x.png"; sourceTree = "<group>"; };
-		F680D2DE1774BA82005ACD94 /* NavigationStripSectionBackground@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NavigationStripSectionBackground@2x.png"; sourceTree = "<group>"; };
-		F680D2DF1774BA82005ACD94 /* NavigationStripSectionBackgroundRed-Selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NavigationStripSectionBackgroundRed-Selected@2x.png"; sourceTree = "<group>"; };
-		F680D2E01774BA82005ACD94 /* NavigationStripSectionBackgroundRed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NavigationStripSectionBackgroundRed@2x.png"; sourceTree = "<group>"; };
 		F680D2E31774BA82005ACD94 /* TSAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSAppDelegate.h; sourceTree = "<group>"; };
 		F680D2E41774BA82005ACD94 /* TSAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSAppDelegate.m; sourceTree = "<group>"; };
 		F680D2E51774BA82005ACD94 /* TSTabViewTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSTabViewTestViewController.h; sourceTree = "<group>"; };
 		F680D2E61774BA82005ACD94 /* TSTabViewTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSTabViewTestViewController.m; sourceTree = "<group>"; };
 		F680D2E71774BA82005ACD94 /* TabViewTest-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "TabViewTest-Info.plist"; sourceTree = "<group>"; };
 		F680D2E81774BA82005ACD94 /* TabViewTest-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TabViewTest-Prefix.pch"; sourceTree = "<group>"; };
-		F680D419177A4E0A005ACD94 /* NavigationStripHeaderBackground_2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NavigationStripHeaderBackground_2@2x.png"; sourceTree = "<group>"; };
-		F680D41A177A4E0A005ACD94 /* NavigationStripSectionBackground_2-Selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NavigationStripSectionBackground_2-Selected@2x.png"; sourceTree = "<group>"; };
-		F680D41B177A4E0A005ACD94 /* NavigationStripSectionBackground_2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NavigationStripSectionBackground_2@2x.png"; sourceTree = "<group>"; };
-		F680D422177A4E16005ACD94 /* NavigationStripHeaderBackground_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NavigationStripHeaderBackground_2.png; sourceTree = "<group>"; };
-		F680D423177A4E16005ACD94 /* NavigationStripSectionBackground_2-Selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NavigationStripSectionBackground_2-Selected.png"; sourceTree = "<group>"; };
-		F680D424177A4E16005ACD94 /* NavigationStripSectionBackground_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NavigationStripSectionBackground_2.png; sourceTree = "<group>"; };
-		F680D42B177B2FD5005ACD94 /* NavigationStripHeaderBackground_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NavigationStripHeaderBackground_2.png; sourceTree = "<group>"; };
-		F680D42C177B2FD5005ACD94 /* NavigationStripSectionBackground_2-Selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NavigationStripSectionBackground_2-Selected.png"; sourceTree = "<group>"; };
-		F680D42D177B2FD5005ACD94 /* NavigationStripSectionBackground_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NavigationStripSectionBackground_2.png; sourceTree = "<group>"; };
-		F680D431177B2FE0005ACD94 /* NavigationStripHeaderBackground_2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NavigationStripHeaderBackground_2@2x.png"; sourceTree = "<group>"; };
-		F680D432177B2FE0005ACD94 /* NavigationStripSectionBackground_2-Selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NavigationStripSectionBackground_2-Selected@2x.png"; sourceTree = "<group>"; };
-		F680D433177B2FE0005ACD94 /* NavigationStripSectionBackground_2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NavigationStripSectionBackground_2@2x.png"; sourceTree = "<group>"; };
 		F680D450177D0E09005ACD94 /* TSTestSectionButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSTestSectionButton.h; sourceTree = "<group>"; };
 		F680D451177D0E09005ACD94 /* TSTestSectionButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSTestSectionButton.m; sourceTree = "<group>"; };
-		F680D459177DB4DA005ACD94 /* NavigationStripHeaderBackground_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NavigationStripHeaderBackground_1.png; sourceTree = "<group>"; };
-		F680D45D177DB4F4005ACD94 /* NavigationStripHeaderBackground_1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NavigationStripHeaderBackground_1@2x.png"; sourceTree = "<group>"; };
-		F680D45F177DB506005ACD94 /* NavigationStripHeaderBackground_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NavigationStripHeaderBackground_1.png; sourceTree = "<group>"; };
-		F680D463177DB50F005ACD94 /* NavigationStripHeaderBackground_1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NavigationStripHeaderBackground_1@2x.png"; sourceTree = "<group>"; };
 		F682C8911774A718005141A3 /* TSUIKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TSUIKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F682C8941774A718005141A3 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		F682C8961774A718005141A3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -324,55 +348,80 @@
 		F682C8F51774B095005141A3 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		F682C8F61774B095005141A3 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		F682C8F71774B095005141A3 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
-		F682C8FB1774B095005141A3 /* NavigationStripHeaderBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NavigationStripHeaderBackground.png; sourceTree = "<group>"; };
-		F682C8FC1774B095005141A3 /* NavigationStripIcon-Selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NavigationStripIcon-Selected.png"; sourceTree = "<group>"; };
-		F682C8FD1774B095005141A3 /* NavigationStripIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NavigationStripIcon.png; sourceTree = "<group>"; };
-		F682C8FE1774B095005141A3 /* NavigationStripItem-Selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NavigationStripItem-Selected.png"; sourceTree = "<group>"; };
-		F682C8FF1774B095005141A3 /* NavigationStripItem.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NavigationStripItem.png; sourceTree = "<group>"; };
-		F682C9001774B095005141A3 /* NavigationStripItemBlue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NavigationStripItemBlue.png; sourceTree = "<group>"; };
-		F682C9011774B095005141A3 /* NavigationStripItemGrey.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NavigationStripItemGrey.png; sourceTree = "<group>"; };
-		F682C9021774B095005141A3 /* NavigationStripItemRed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NavigationStripItemRed.png; sourceTree = "<group>"; };
-		F682C9031774B095005141A3 /* NavigationStripLeftSideButton-Selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NavigationStripLeftSideButton-Selected.png"; sourceTree = "<group>"; };
-		F682C9041774B095005141A3 /* NavigationStripLeftSideButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NavigationStripLeftSideButton.png; sourceTree = "<group>"; };
-		F682C9051774B095005141A3 /* NavigationStripLeftSideButtonBlue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NavigationStripLeftSideButtonBlue.png; sourceTree = "<group>"; };
-		F682C9061774B095005141A3 /* NavigationStripLeftSideButtonGrey.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NavigationStripLeftSideButtonGrey.png; sourceTree = "<group>"; };
-		F682C9071774B095005141A3 /* NavigationStripLeftSideButtonRed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NavigationStripLeftSideButtonRed.png; sourceTree = "<group>"; };
-		F682C9081774B095005141A3 /* NavigationStripRightSideButton-Selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NavigationStripRightSideButton-Selected.png"; sourceTree = "<group>"; };
-		F682C9091774B095005141A3 /* NavigationStripRightSideButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NavigationStripRightSideButton.png; sourceTree = "<group>"; };
-		F682C90A1774B095005141A3 /* NavigationStripRightSideButtonBlue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NavigationStripRightSideButtonBlue.png; sourceTree = "<group>"; };
-		F682C90B1774B095005141A3 /* NavigationStripRightSideButtonGrey.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NavigationStripRightSideButtonGrey.png; sourceTree = "<group>"; };
-		F682C90C1774B095005141A3 /* NavigationStripRightSideButtonRed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NavigationStripRightSideButtonRed.png; sourceTree = "<group>"; };
-		F682C90D1774B095005141A3 /* NavigationStripSectionBackground-Selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NavigationStripSectionBackground-Selected.png"; sourceTree = "<group>"; };
-		F682C90E1774B095005141A3 /* NavigationStripSectionBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NavigationStripSectionBackground.png; sourceTree = "<group>"; };
-		F682C90F1774B095005141A3 /* NavigationStripSectionBackgroundRed-Selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NavigationStripSectionBackgroundRed-Selected.png"; sourceTree = "<group>"; };
-		F682C9101774B095005141A3 /* NavigationStripSectionBackgroundRed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NavigationStripSectionBackgroundRed.png; sourceTree = "<group>"; };
-		F682C9121774B095005141A3 /* NavigationStripHeaderBackground@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NavigationStripHeaderBackground@2x.png"; sourceTree = "<group>"; };
-		F682C9131774B095005141A3 /* NavigationStripIcon-Selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NavigationStripIcon-Selected@2x.png"; sourceTree = "<group>"; };
-		F682C9141774B095005141A3 /* NavigationStripIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NavigationStripIcon@2x.png"; sourceTree = "<group>"; };
-		F682C9151774B095005141A3 /* NavigationStripItem-Selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NavigationStripItem-Selected@2x.png"; sourceTree = "<group>"; };
-		F682C9161774B095005141A3 /* NavigationStripItem@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NavigationStripItem@2x.png"; sourceTree = "<group>"; };
-		F682C9171774B095005141A3 /* NavigationStripItemBlue@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NavigationStripItemBlue@2x.png"; sourceTree = "<group>"; };
-		F682C9181774B095005141A3 /* NavigationStripItemGrey@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NavigationStripItemGrey@2x.png"; sourceTree = "<group>"; };
-		F682C9191774B095005141A3 /* NavigationStripItemRed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NavigationStripItemRed@2x.png"; sourceTree = "<group>"; };
-		F682C91A1774B095005141A3 /* NavigationStripLeftSideButton-Selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NavigationStripLeftSideButton-Selected@2x.png"; sourceTree = "<group>"; };
-		F682C91B1774B095005141A3 /* NavigationStripLeftSideButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NavigationStripLeftSideButton@2x.png"; sourceTree = "<group>"; };
-		F682C91C1774B095005141A3 /* NavigationStripLeftSideButtonBlue@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NavigationStripLeftSideButtonBlue@2x.png"; sourceTree = "<group>"; };
-		F682C91D1774B095005141A3 /* NavigationStripLeftSideButtonGrey@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NavigationStripLeftSideButtonGrey@2x.png"; sourceTree = "<group>"; };
-		F682C91E1774B095005141A3 /* NavigationStripLeftSideButtonRed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NavigationStripLeftSideButtonRed@2x.png"; sourceTree = "<group>"; };
-		F682C91F1774B095005141A3 /* NavigationStripRightSideButton-Selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NavigationStripRightSideButton-Selected@2x.png"; sourceTree = "<group>"; };
-		F682C9201774B095005141A3 /* NavigationStripRightSideButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NavigationStripRightSideButton@2x.png"; sourceTree = "<group>"; };
-		F682C9211774B095005141A3 /* NavigationStripRightSideButtonBlue@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NavigationStripRightSideButtonBlue@2x.png"; sourceTree = "<group>"; };
-		F682C9221774B095005141A3 /* NavigationStripRightSideButtonGrey@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NavigationStripRightSideButtonGrey@2x.png"; sourceTree = "<group>"; };
-		F682C9231774B095005141A3 /* NavigationStripRightSideButtonRed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NavigationStripRightSideButtonRed@2x.png"; sourceTree = "<group>"; };
-		F682C9241774B095005141A3 /* NavigationStripSectionBackground-Selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NavigationStripSectionBackground-Selected@2x.png"; sourceTree = "<group>"; };
-		F682C9251774B095005141A3 /* NavigationStripSectionBackground@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NavigationStripSectionBackground@2x.png"; sourceTree = "<group>"; };
-		F682C9261774B095005141A3 /* NavigationStripSectionBackgroundRed-Selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NavigationStripSectionBackgroundRed-Selected@2x.png"; sourceTree = "<group>"; };
-		F682C9271774B095005141A3 /* NavigationStripSectionBackgroundRed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NavigationStripSectionBackgroundRed@2x.png"; sourceTree = "<group>"; };
 		F682C92A1774B095005141A3 /* TSNavigationStripTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSNavigationStripTestViewController.h; sourceTree = "<group>"; };
 		F682C92B1774B095005141A3 /* TSNavigationStripTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSNavigationStripTestViewController.m; sourceTree = "<group>"; };
 		F682C9601774B0CD005141A3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = InfoPlist.strings; sourceTree = "<group>"; };
 		F682C9621774B0CD005141A3 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = "TSNavigationStripTestViewController~ipad.xib"; sourceTree = "<group>"; };
 		F682C9641774B0CD005141A3 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = "TSNavigationStripTestViewController~iphone.xib"; sourceTree = "<group>"; };
+		F6EE2A2517834B5200C0C4A3 /* TSTabViewWithDropDownPanelDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSTabViewWithDropDownPanelDelegate.h; sourceTree = "<group>"; };
+		F6EE2A2617835D1300C0C4A3 /* TSTabViewWithDropDownPanelModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSTabViewWithDropDownPanelModel.h; sourceTree = "<group>"; };
+		F6EE2A2717835D1300C0C4A3 /* TSTabViewWithDropDownPanelModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSTabViewWithDropDownPanelModel.m; sourceTree = "<group>"; };
+		F6EE2A2F17835D9A00C0C4A3 /* TabViewWithDropDownPanel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TabViewWithDropDownPanel.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F6EE2A3517835D9A00C0C4A3 /* TabViewWithDropDownPanel-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TabViewWithDropDownPanel-Info.plist"; sourceTree = "<group>"; };
+		F6EE2A3717835D9A00C0C4A3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		F6EE2A3917835D9A00C0C4A3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F6EE2A3B17835D9A00C0C4A3 /* TabViewWithDropDownPanel-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TabViewWithDropDownPanel-Prefix.pch"; sourceTree = "<group>"; };
+		F6EE2A3C17835D9A00C0C4A3 /* TSAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TSAppDelegate.h; sourceTree = "<group>"; };
+		F6EE2A3D17835D9A00C0C4A3 /* TSAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TSAppDelegate.m; sourceTree = "<group>"; };
+		F6EE2A3F17835D9A00C0C4A3 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		F6EE2A4117835D9A00C0C4A3 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		F6EE2A4317835D9A00C0C4A3 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		F6EE2A4517835D9A00C0C4A3 /* TSTabViewWithDropDownPanelTestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TSTabViewWithDropDownPanelTestViewController.h; sourceTree = "<group>"; };
+		F6EE2A4617835D9A00C0C4A3 /* TSTabViewWithDropDownPanelTestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TSTabViewWithDropDownPanelTestViewController.m; sourceTree = "<group>"; };
+		F6EE2A4917835D9A00C0C4A3 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/TSTabViewWithDropDownPanelTestViewController.xib; sourceTree = "<group>"; };
+		F6EE2A4C17835D9A00C0C4A3 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = "en.lproj/TSTabViewWithDropDownPanelTestViewController~ipad.xib"; sourceTree = "<group>"; };
+		F6EE2A541783600200C0C4A3 /* NavigationStripHeaderBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NavigationStripHeaderBackground.png; sourceTree = "<group>"; };
+		F6EE2A551783600200C0C4A3 /* NavigationStripHeaderBackground_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NavigationStripHeaderBackground_1.png; sourceTree = "<group>"; };
+		F6EE2A561783600200C0C4A3 /* NavigationStripHeaderBackground_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NavigationStripHeaderBackground_2.png; sourceTree = "<group>"; };
+		F6EE2A571783600200C0C4A3 /* NavigationStripIcon-Selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NavigationStripIcon-Selected.png"; sourceTree = "<group>"; };
+		F6EE2A581783600200C0C4A3 /* NavigationStripIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NavigationStripIcon.png; sourceTree = "<group>"; };
+		F6EE2A591783600200C0C4A3 /* NavigationStripItem-Selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NavigationStripItem-Selected.png"; sourceTree = "<group>"; };
+		F6EE2A5A1783600200C0C4A3 /* NavigationStripItem.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NavigationStripItem.png; sourceTree = "<group>"; };
+		F6EE2A5B1783600200C0C4A3 /* NavigationStripItemBlue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NavigationStripItemBlue.png; sourceTree = "<group>"; };
+		F6EE2A5C1783600200C0C4A3 /* NavigationStripItemGrey.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NavigationStripItemGrey.png; sourceTree = "<group>"; };
+		F6EE2A5D1783600200C0C4A3 /* NavigationStripItemRed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NavigationStripItemRed.png; sourceTree = "<group>"; };
+		F6EE2A5E1783600200C0C4A3 /* NavigationStripLeftSideButton-Selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NavigationStripLeftSideButton-Selected.png"; sourceTree = "<group>"; };
+		F6EE2A5F1783600200C0C4A3 /* NavigationStripLeftSideButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NavigationStripLeftSideButton.png; sourceTree = "<group>"; };
+		F6EE2A601783600200C0C4A3 /* NavigationStripLeftSideButtonBlue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NavigationStripLeftSideButtonBlue.png; sourceTree = "<group>"; };
+		F6EE2A611783600200C0C4A3 /* NavigationStripLeftSideButtonGrey.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NavigationStripLeftSideButtonGrey.png; sourceTree = "<group>"; };
+		F6EE2A621783600200C0C4A3 /* NavigationStripLeftSideButtonRed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NavigationStripLeftSideButtonRed.png; sourceTree = "<group>"; };
+		F6EE2A631783600200C0C4A3 /* NavigationStripRightSideButton-Selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NavigationStripRightSideButton-Selected.png"; sourceTree = "<group>"; };
+		F6EE2A641783600200C0C4A3 /* NavigationStripRightSideButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NavigationStripRightSideButton.png; sourceTree = "<group>"; };
+		F6EE2A651783600200C0C4A3 /* NavigationStripRightSideButtonBlue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NavigationStripRightSideButtonBlue.png; sourceTree = "<group>"; };
+		F6EE2A661783600200C0C4A3 /* NavigationStripRightSideButtonGrey.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NavigationStripRightSideButtonGrey.png; sourceTree = "<group>"; };
+		F6EE2A671783600200C0C4A3 /* NavigationStripRightSideButtonRed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NavigationStripRightSideButtonRed.png; sourceTree = "<group>"; };
+		F6EE2A681783600200C0C4A3 /* NavigationStripSectionBackground-Selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NavigationStripSectionBackground-Selected.png"; sourceTree = "<group>"; };
+		F6EE2A691783600200C0C4A3 /* NavigationStripSectionBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NavigationStripSectionBackground.png; sourceTree = "<group>"; };
+		F6EE2A6A1783600200C0C4A3 /* NavigationStripSectionBackground_2-Selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NavigationStripSectionBackground_2-Selected.png"; sourceTree = "<group>"; };
+		F6EE2A6B1783600200C0C4A3 /* NavigationStripSectionBackground_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NavigationStripSectionBackground_2.png; sourceTree = "<group>"; };
+		F6EE2A6C1783600200C0C4A3 /* NavigationStripSectionBackgroundRed-Selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NavigationStripSectionBackgroundRed-Selected.png"; sourceTree = "<group>"; };
+		F6EE2A6D1783600200C0C4A3 /* NavigationStripSectionBackgroundRed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NavigationStripSectionBackgroundRed.png; sourceTree = "<group>"; };
+		F6EE2A6F1783600200C0C4A3 /* NavigationStripHeaderBackground@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NavigationStripHeaderBackground@2x.png"; sourceTree = "<group>"; };
+		F6EE2A701783600200C0C4A3 /* NavigationStripHeaderBackground_1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NavigationStripHeaderBackground_1@2x.png"; sourceTree = "<group>"; };
+		F6EE2A711783600200C0C4A3 /* NavigationStripHeaderBackground_2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NavigationStripHeaderBackground_2@2x.png"; sourceTree = "<group>"; };
+		F6EE2A721783600200C0C4A3 /* NavigationStripIcon-Selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NavigationStripIcon-Selected@2x.png"; sourceTree = "<group>"; };
+		F6EE2A731783600200C0C4A3 /* NavigationStripIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NavigationStripIcon@2x.png"; sourceTree = "<group>"; };
+		F6EE2A741783600200C0C4A3 /* NavigationStripItem-Selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NavigationStripItem-Selected@2x.png"; sourceTree = "<group>"; };
+		F6EE2A751783600200C0C4A3 /* NavigationStripItem@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NavigationStripItem@2x.png"; sourceTree = "<group>"; };
+		F6EE2A761783600200C0C4A3 /* NavigationStripItemBlue@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NavigationStripItemBlue@2x.png"; sourceTree = "<group>"; };
+		F6EE2A771783600200C0C4A3 /* NavigationStripItemGrey@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NavigationStripItemGrey@2x.png"; sourceTree = "<group>"; };
+		F6EE2A781783600200C0C4A3 /* NavigationStripItemRed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NavigationStripItemRed@2x.png"; sourceTree = "<group>"; };
+		F6EE2A791783600200C0C4A3 /* NavigationStripLeftSideButton-Selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NavigationStripLeftSideButton-Selected@2x.png"; sourceTree = "<group>"; };
+		F6EE2A7A1783600200C0C4A3 /* NavigationStripLeftSideButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NavigationStripLeftSideButton@2x.png"; sourceTree = "<group>"; };
+		F6EE2A7B1783600200C0C4A3 /* NavigationStripLeftSideButtonBlue@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NavigationStripLeftSideButtonBlue@2x.png"; sourceTree = "<group>"; };
+		F6EE2A7C1783600200C0C4A3 /* NavigationStripLeftSideButtonGrey@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NavigationStripLeftSideButtonGrey@2x.png"; sourceTree = "<group>"; };
+		F6EE2A7D1783600200C0C4A3 /* NavigationStripLeftSideButtonRed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NavigationStripLeftSideButtonRed@2x.png"; sourceTree = "<group>"; };
+		F6EE2A7E1783600200C0C4A3 /* NavigationStripRightSideButton-Selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NavigationStripRightSideButton-Selected@2x.png"; sourceTree = "<group>"; };
+		F6EE2A7F1783600200C0C4A3 /* NavigationStripRightSideButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NavigationStripRightSideButton@2x.png"; sourceTree = "<group>"; };
+		F6EE2A801783600200C0C4A3 /* NavigationStripRightSideButtonBlue@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NavigationStripRightSideButtonBlue@2x.png"; sourceTree = "<group>"; };
+		F6EE2A811783600200C0C4A3 /* NavigationStripRightSideButtonGrey@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NavigationStripRightSideButtonGrey@2x.png"; sourceTree = "<group>"; };
+		F6EE2A821783600200C0C4A3 /* NavigationStripRightSideButtonRed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NavigationStripRightSideButtonRed@2x.png"; sourceTree = "<group>"; };
+		F6EE2A831783600200C0C4A3 /* NavigationStripSectionBackground-Selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NavigationStripSectionBackground-Selected@2x.png"; sourceTree = "<group>"; };
+		F6EE2A841783600200C0C4A3 /* NavigationStripSectionBackground@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NavigationStripSectionBackground@2x.png"; sourceTree = "<group>"; };
+		F6EE2A851783600200C0C4A3 /* NavigationStripSectionBackground_2-Selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NavigationStripSectionBackground_2-Selected@2x.png"; sourceTree = "<group>"; };
+		F6EE2A861783600200C0C4A3 /* NavigationStripSectionBackground_2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NavigationStripSectionBackground_2@2x.png"; sourceTree = "<group>"; };
+		F6EE2A871783600200C0C4A3 /* NavigationStripSectionBackgroundRed-Selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NavigationStripSectionBackgroundRed-Selected@2x.png"; sourceTree = "<group>"; };
+		F6EE2A881783600200C0C4A3 /* NavigationStripSectionBackgroundRed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NavigationStripSectionBackgroundRed@2x.png"; sourceTree = "<group>"; };
 		F6F3CEE21781ABB400C7274F /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		F6F3CEE51781ABB400C7274F /* TSDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSDefines.h; sourceTree = "<group>"; };
 		F6F3CEE61781ABB400C7274F /* TSUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSUtils.h; sourceTree = "<group>"; };
@@ -442,15 +491,37 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F6EE2A2C17835D9A00C0C4A3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F6EE2B611783605800C0C4A3 /* QuartzCore.framework in Frameworks */,
+				F6EE2A3017835D9A00C0C4A3 /* UIKit.framework in Frameworks */,
+				F6EE2A3117835D9A00C0C4A3 /* Foundation.framework in Frameworks */,
+				F6EE2A3217835D9A00C0C4A3 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F63C0A0A17821CD3005AB903 /* TSTabViewWithDropDownPanel */ = {
+			isa = PBXGroup;
+			children = (
+				F63C0A0B17821F8C005AB903 /* TSTabViewWithDropDownPanel.h */,
+				F63C0A0C17821F8C005AB903 /* TSTabViewWithDropDownPanel.m */,
+				F6EE2A2517834B5200C0C4A3 /* TSTabViewWithDropDownPanelDelegate.h */,
+				F6EE2A2617835D1300C0C4A3 /* TSTabViewWithDropDownPanelModel.h */,
+				F6EE2A2717835D1300C0C4A3 /* TSTabViewWithDropDownPanelModel.m */,
+			);
+			path = TSTabViewWithDropDownPanel;
+			sourceTree = "<group>";
+		};
 		F680D28A1774B9C2005ACD94 /* TabViewTest */ = {
 			isa = PBXGroup;
 			children = (
 				F680D3211774BA8E005ACD94 /* Supporting Files */,
 				F680D2A91774BA82005ACD94 /* en.lproj */,
-				F680D2B11774BA82005ACD94 /* Resources */,
 				F680D2E31774BA82005ACD94 /* TSAppDelegate.h */,
 				F680D2E41774BA82005ACD94 /* TSAppDelegate.m */,
 				F680D2E51774BA82005ACD94 /* TSTabViewTestViewController.h */,
@@ -469,89 +540,6 @@
 			path = en.lproj;
 			sourceTree = "<group>";
 		};
-		F680D2B11774BA82005ACD94 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				F680D2B21774BA82005ACD94 /* Textures */,
-			);
-			path = Resources;
-			sourceTree = "<group>";
-		};
-		F680D2B21774BA82005ACD94 /* Textures */ = {
-			isa = PBXGroup;
-			children = (
-				F680D2B31774BA82005ACD94 /* 1x */,
-				F680D2CA1774BA82005ACD94 /* 2x */,
-			);
-			path = Textures;
-			sourceTree = "<group>";
-		};
-		F680D2B31774BA82005ACD94 /* 1x */ = {
-			isa = PBXGroup;
-			children = (
-				F680D459177DB4DA005ACD94 /* NavigationStripHeaderBackground_1.png */,
-				F680D42B177B2FD5005ACD94 /* NavigationStripHeaderBackground_2.png */,
-				F680D42C177B2FD5005ACD94 /* NavigationStripSectionBackground_2-Selected.png */,
-				F680D42D177B2FD5005ACD94 /* NavigationStripSectionBackground_2.png */,
-				F680D2B41774BA82005ACD94 /* NavigationStripHeaderBackground.png */,
-				F680D2B51774BA82005ACD94 /* NavigationStripIcon-Selected.png */,
-				F680D2B61774BA82005ACD94 /* NavigationStripIcon.png */,
-				F680D2B71774BA82005ACD94 /* NavigationStripItem-Selected.png */,
-				F680D2B81774BA82005ACD94 /* NavigationStripItem.png */,
-				F680D2B91774BA82005ACD94 /* NavigationStripItemBlue.png */,
-				F680D2BA1774BA82005ACD94 /* NavigationStripItemGrey.png */,
-				F680D2BB1774BA82005ACD94 /* NavigationStripItemRed.png */,
-				F680D2BC1774BA82005ACD94 /* NavigationStripLeftSideButton-Selected.png */,
-				F680D2BD1774BA82005ACD94 /* NavigationStripLeftSideButton.png */,
-				F680D2BE1774BA82005ACD94 /* NavigationStripLeftSideButtonBlue.png */,
-				F680D2BF1774BA82005ACD94 /* NavigationStripLeftSideButtonGrey.png */,
-				F680D2C01774BA82005ACD94 /* NavigationStripLeftSideButtonRed.png */,
-				F680D2C11774BA82005ACD94 /* NavigationStripRightSideButton-Selected.png */,
-				F680D2C21774BA82005ACD94 /* NavigationStripRightSideButton.png */,
-				F680D2C31774BA82005ACD94 /* NavigationStripRightSideButtonBlue.png */,
-				F680D2C41774BA82005ACD94 /* NavigationStripRightSideButtonGrey.png */,
-				F680D2C51774BA82005ACD94 /* NavigationStripRightSideButtonRed.png */,
-				F680D2C61774BA82005ACD94 /* NavigationStripSectionBackground-Selected.png */,
-				F680D2C71774BA82005ACD94 /* NavigationStripSectionBackground.png */,
-				F680D2C81774BA82005ACD94 /* NavigationStripSectionBackgroundRed-Selected.png */,
-				F680D2C91774BA82005ACD94 /* NavigationStripSectionBackgroundRed.png */,
-			);
-			path = 1x;
-			sourceTree = "<group>";
-		};
-		F680D2CA1774BA82005ACD94 /* 2x */ = {
-			isa = PBXGroup;
-			children = (
-				F680D45D177DB4F4005ACD94 /* NavigationStripHeaderBackground_1@2x.png */,
-				F680D431177B2FE0005ACD94 /* NavigationStripHeaderBackground_2@2x.png */,
-				F680D432177B2FE0005ACD94 /* NavigationStripSectionBackground_2-Selected@2x.png */,
-				F680D433177B2FE0005ACD94 /* NavigationStripSectionBackground_2@2x.png */,
-				F680D2CB1774BA82005ACD94 /* NavigationStripHeaderBackground@2x.png */,
-				F680D2CC1774BA82005ACD94 /* NavigationStripIcon-Selected@2x.png */,
-				F680D2CD1774BA82005ACD94 /* NavigationStripIcon@2x.png */,
-				F680D2CE1774BA82005ACD94 /* NavigationStripItem-Selected@2x.png */,
-				F680D2CF1774BA82005ACD94 /* NavigationStripItem@2x.png */,
-				F680D2D01774BA82005ACD94 /* NavigationStripItemBlue@2x.png */,
-				F680D2D11774BA82005ACD94 /* NavigationStripItemGrey@2x.png */,
-				F680D2D21774BA82005ACD94 /* NavigationStripItemRed@2x.png */,
-				F680D2D31774BA82005ACD94 /* NavigationStripLeftSideButton-Selected@2x.png */,
-				F680D2D41774BA82005ACD94 /* NavigationStripLeftSideButton@2x.png */,
-				F680D2D51774BA82005ACD94 /* NavigationStripLeftSideButtonBlue@2x.png */,
-				F680D2D61774BA82005ACD94 /* NavigationStripLeftSideButtonGrey@2x.png */,
-				F680D2D71774BA82005ACD94 /* NavigationStripLeftSideButtonRed@2x.png */,
-				F680D2D81774BA82005ACD94 /* NavigationStripRightSideButton-Selected@2x.png */,
-				F680D2D91774BA82005ACD94 /* NavigationStripRightSideButton@2x.png */,
-				F680D2DA1774BA82005ACD94 /* NavigationStripRightSideButtonBlue@2x.png */,
-				F680D2DB1774BA82005ACD94 /* NavigationStripRightSideButtonGrey@2x.png */,
-				F680D2DC1774BA82005ACD94 /* NavigationStripRightSideButtonRed@2x.png */,
-				F680D2DD1774BA82005ACD94 /* NavigationStripSectionBackground-Selected@2x.png */,
-				F680D2DE1774BA82005ACD94 /* NavigationStripSectionBackground@2x.png */,
-				F680D2DF1774BA82005ACD94 /* NavigationStripSectionBackgroundRed-Selected@2x.png */,
-				F680D2E01774BA82005ACD94 /* NavigationStripSectionBackgroundRed@2x.png */,
-			);
-			path = 2x;
-			sourceTree = "<group>";
-		};
 		F680D3211774BA8E005ACD94 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -568,9 +556,11 @@
 		F682C8881774A718005141A3 = {
 			isa = PBXGroup;
 			children = (
+				F6EE2A511783600200C0C4A3 /* SharedResources */,
 				F6F3CEE01781ABB400C7274F /* TSUIKit */,
 				F682C8E61774B054005141A3 /* NavigationStripTest */,
 				F680D28A1774B9C2005ACD94 /* TabViewTest */,
+				F6EE2A3317835D9A00C0C4A3 /* TabViewWithDropDownPanel */,
 				F682C8931774A718005141A3 /* Frameworks */,
 				F682C8921774A718005141A3 /* Products */,
 			);
@@ -582,6 +572,7 @@
 				F682C8911774A718005141A3 /* TSUIKit.app */,
 				F682C8E21774B054005141A3 /* NavigationStripTest.app */,
 				F680D2861774B9C2005ACD94 /* TabViewTest.app */,
+				F6EE2A2F17835D9A00C0C4A3 /* TabViewWithDropDownPanel.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -601,7 +592,6 @@
 			isa = PBXGroup;
 			children = (
 				F682C95E1774B0CD005141A3 /* en.lproj */,
-				F682C8F81774B095005141A3 /* Resources */,
 				F682C92A1774B095005141A3 /* TSNavigationStripTestViewController.h */,
 				F682C92B1774B095005141A3 /* TSNavigationStripTestViewController.m */,
 				F682C8EF1774B054005141A3 /* TSAppDelegate.h */,
@@ -626,89 +616,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		F682C8F81774B095005141A3 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				F682C8F91774B095005141A3 /* Textures */,
-			);
-			path = Resources;
-			sourceTree = "<group>";
-		};
-		F682C8F91774B095005141A3 /* Textures */ = {
-			isa = PBXGroup;
-			children = (
-				F682C8FA1774B095005141A3 /* 1x */,
-				F682C9111774B095005141A3 /* 2x */,
-			);
-			path = Textures;
-			sourceTree = "<group>";
-		};
-		F682C8FA1774B095005141A3 /* 1x */ = {
-			isa = PBXGroup;
-			children = (
-				F680D45F177DB506005ACD94 /* NavigationStripHeaderBackground_1.png */,
-				F680D422177A4E16005ACD94 /* NavigationStripHeaderBackground_2.png */,
-				F680D423177A4E16005ACD94 /* NavigationStripSectionBackground_2-Selected.png */,
-				F680D424177A4E16005ACD94 /* NavigationStripSectionBackground_2.png */,
-				F682C8FB1774B095005141A3 /* NavigationStripHeaderBackground.png */,
-				F682C8FC1774B095005141A3 /* NavigationStripIcon-Selected.png */,
-				F682C8FD1774B095005141A3 /* NavigationStripIcon.png */,
-				F682C8FE1774B095005141A3 /* NavigationStripItem-Selected.png */,
-				F682C8FF1774B095005141A3 /* NavigationStripItem.png */,
-				F682C9001774B095005141A3 /* NavigationStripItemBlue.png */,
-				F682C9011774B095005141A3 /* NavigationStripItemGrey.png */,
-				F682C9021774B095005141A3 /* NavigationStripItemRed.png */,
-				F682C9031774B095005141A3 /* NavigationStripLeftSideButton-Selected.png */,
-				F682C9041774B095005141A3 /* NavigationStripLeftSideButton.png */,
-				F682C9051774B095005141A3 /* NavigationStripLeftSideButtonBlue.png */,
-				F682C9061774B095005141A3 /* NavigationStripLeftSideButtonGrey.png */,
-				F682C9071774B095005141A3 /* NavigationStripLeftSideButtonRed.png */,
-				F682C9081774B095005141A3 /* NavigationStripRightSideButton-Selected.png */,
-				F682C9091774B095005141A3 /* NavigationStripRightSideButton.png */,
-				F682C90A1774B095005141A3 /* NavigationStripRightSideButtonBlue.png */,
-				F682C90B1774B095005141A3 /* NavigationStripRightSideButtonGrey.png */,
-				F682C90C1774B095005141A3 /* NavigationStripRightSideButtonRed.png */,
-				F682C90D1774B095005141A3 /* NavigationStripSectionBackground-Selected.png */,
-				F682C90E1774B095005141A3 /* NavigationStripSectionBackground.png */,
-				F682C90F1774B095005141A3 /* NavigationStripSectionBackgroundRed-Selected.png */,
-				F682C9101774B095005141A3 /* NavigationStripSectionBackgroundRed.png */,
-			);
-			path = 1x;
-			sourceTree = "<group>";
-		};
-		F682C9111774B095005141A3 /* 2x */ = {
-			isa = PBXGroup;
-			children = (
-				F680D463177DB50F005ACD94 /* NavigationStripHeaderBackground_1@2x.png */,
-				F680D419177A4E0A005ACD94 /* NavigationStripHeaderBackground_2@2x.png */,
-				F680D41A177A4E0A005ACD94 /* NavigationStripSectionBackground_2-Selected@2x.png */,
-				F680D41B177A4E0A005ACD94 /* NavigationStripSectionBackground_2@2x.png */,
-				F682C9121774B095005141A3 /* NavigationStripHeaderBackground@2x.png */,
-				F682C9131774B095005141A3 /* NavigationStripIcon-Selected@2x.png */,
-				F682C9141774B095005141A3 /* NavigationStripIcon@2x.png */,
-				F682C9151774B095005141A3 /* NavigationStripItem-Selected@2x.png */,
-				F682C9161774B095005141A3 /* NavigationStripItem@2x.png */,
-				F682C9171774B095005141A3 /* NavigationStripItemBlue@2x.png */,
-				F682C9181774B095005141A3 /* NavigationStripItemGrey@2x.png */,
-				F682C9191774B095005141A3 /* NavigationStripItemRed@2x.png */,
-				F682C91A1774B095005141A3 /* NavigationStripLeftSideButton-Selected@2x.png */,
-				F682C91B1774B095005141A3 /* NavigationStripLeftSideButton@2x.png */,
-				F682C91C1774B095005141A3 /* NavigationStripLeftSideButtonBlue@2x.png */,
-				F682C91D1774B095005141A3 /* NavigationStripLeftSideButtonGrey@2x.png */,
-				F682C91E1774B095005141A3 /* NavigationStripLeftSideButtonRed@2x.png */,
-				F682C91F1774B095005141A3 /* NavigationStripRightSideButton-Selected@2x.png */,
-				F682C9201774B095005141A3 /* NavigationStripRightSideButton@2x.png */,
-				F682C9211774B095005141A3 /* NavigationStripRightSideButtonBlue@2x.png */,
-				F682C9221774B095005141A3 /* NavigationStripRightSideButtonGrey@2x.png */,
-				F682C9231774B095005141A3 /* NavigationStripRightSideButtonRed@2x.png */,
-				F682C9241774B095005141A3 /* NavigationStripSectionBackground-Selected@2x.png */,
-				F682C9251774B095005141A3 /* NavigationStripSectionBackground@2x.png */,
-				F682C9261774B095005141A3 /* NavigationStripSectionBackgroundRed-Selected@2x.png */,
-				F682C9271774B095005141A3 /* NavigationStripSectionBackgroundRed@2x.png */,
-			);
-			path = 2x;
-			sourceTree = "<group>";
-		};
 		F682C95E1774B0CD005141A3 /* en.lproj */ = {
 			isa = PBXGroup;
 			children = (
@@ -717,6 +624,117 @@
 				F682C9631774B0CD005141A3 /* TSNavigationStripTestViewController~iphone.xib */,
 			);
 			path = en.lproj;
+			sourceTree = "<group>";
+		};
+		F6EE2A3317835D9A00C0C4A3 /* TabViewWithDropDownPanel */ = {
+			isa = PBXGroup;
+			children = (
+				F6EE2A3C17835D9A00C0C4A3 /* TSAppDelegate.h */,
+				F6EE2A3D17835D9A00C0C4A3 /* TSAppDelegate.m */,
+				F6EE2A4517835D9A00C0C4A3 /* TSTabViewWithDropDownPanelTestViewController.h */,
+				F6EE2A4617835D9A00C0C4A3 /* TSTabViewWithDropDownPanelTestViewController.m */,
+				F6EE2A4817835D9A00C0C4A3 /* TSTabViewWithDropDownPanelTestViewController.xib */,
+				F6EE2A4B17835D9A00C0C4A3 /* TSTabViewWithDropDownPanelTestViewController~ipad.xib */,
+				F6EE2A3417835D9A00C0C4A3 /* Supporting Files */,
+			);
+			path = TabViewWithDropDownPanel;
+			sourceTree = "<group>";
+		};
+		F6EE2A3417835D9A00C0C4A3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F6EE2A3517835D9A00C0C4A3 /* TabViewWithDropDownPanel-Info.plist */,
+				F6EE2A3617835D9A00C0C4A3 /* InfoPlist.strings */,
+				F6EE2A3917835D9A00C0C4A3 /* main.m */,
+				F6EE2A3B17835D9A00C0C4A3 /* TabViewWithDropDownPanel-Prefix.pch */,
+				F6EE2A3F17835D9A00C0C4A3 /* Default.png */,
+				F6EE2A4117835D9A00C0C4A3 /* Default@2x.png */,
+				F6EE2A4317835D9A00C0C4A3 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F6EE2A511783600200C0C4A3 /* SharedResources */ = {
+			isa = PBXGroup;
+			children = (
+				F6EE2A521783600200C0C4A3 /* Textures */,
+			);
+			path = SharedResources;
+			sourceTree = "<group>";
+		};
+		F6EE2A521783600200C0C4A3 /* Textures */ = {
+			isa = PBXGroup;
+			children = (
+				F6EE2A531783600200C0C4A3 /* 1x */,
+				F6EE2A6E1783600200C0C4A3 /* 2x */,
+			);
+			path = Textures;
+			sourceTree = "<group>";
+		};
+		F6EE2A531783600200C0C4A3 /* 1x */ = {
+			isa = PBXGroup;
+			children = (
+				F6EE2A541783600200C0C4A3 /* NavigationStripHeaderBackground.png */,
+				F6EE2A551783600200C0C4A3 /* NavigationStripHeaderBackground_1.png */,
+				F6EE2A561783600200C0C4A3 /* NavigationStripHeaderBackground_2.png */,
+				F6EE2A571783600200C0C4A3 /* NavigationStripIcon-Selected.png */,
+				F6EE2A581783600200C0C4A3 /* NavigationStripIcon.png */,
+				F6EE2A591783600200C0C4A3 /* NavigationStripItem-Selected.png */,
+				F6EE2A5A1783600200C0C4A3 /* NavigationStripItem.png */,
+				F6EE2A5B1783600200C0C4A3 /* NavigationStripItemBlue.png */,
+				F6EE2A5C1783600200C0C4A3 /* NavigationStripItemGrey.png */,
+				F6EE2A5D1783600200C0C4A3 /* NavigationStripItemRed.png */,
+				F6EE2A5E1783600200C0C4A3 /* NavigationStripLeftSideButton-Selected.png */,
+				F6EE2A5F1783600200C0C4A3 /* NavigationStripLeftSideButton.png */,
+				F6EE2A601783600200C0C4A3 /* NavigationStripLeftSideButtonBlue.png */,
+				F6EE2A611783600200C0C4A3 /* NavigationStripLeftSideButtonGrey.png */,
+				F6EE2A621783600200C0C4A3 /* NavigationStripLeftSideButtonRed.png */,
+				F6EE2A631783600200C0C4A3 /* NavigationStripRightSideButton-Selected.png */,
+				F6EE2A641783600200C0C4A3 /* NavigationStripRightSideButton.png */,
+				F6EE2A651783600200C0C4A3 /* NavigationStripRightSideButtonBlue.png */,
+				F6EE2A661783600200C0C4A3 /* NavigationStripRightSideButtonGrey.png */,
+				F6EE2A671783600200C0C4A3 /* NavigationStripRightSideButtonRed.png */,
+				F6EE2A681783600200C0C4A3 /* NavigationStripSectionBackground-Selected.png */,
+				F6EE2A691783600200C0C4A3 /* NavigationStripSectionBackground.png */,
+				F6EE2A6A1783600200C0C4A3 /* NavigationStripSectionBackground_2-Selected.png */,
+				F6EE2A6B1783600200C0C4A3 /* NavigationStripSectionBackground_2.png */,
+				F6EE2A6C1783600200C0C4A3 /* NavigationStripSectionBackgroundRed-Selected.png */,
+				F6EE2A6D1783600200C0C4A3 /* NavigationStripSectionBackgroundRed.png */,
+			);
+			path = 1x;
+			sourceTree = "<group>";
+		};
+		F6EE2A6E1783600200C0C4A3 /* 2x */ = {
+			isa = PBXGroup;
+			children = (
+				F6EE2A6F1783600200C0C4A3 /* NavigationStripHeaderBackground@2x.png */,
+				F6EE2A701783600200C0C4A3 /* NavigationStripHeaderBackground_1@2x.png */,
+				F6EE2A711783600200C0C4A3 /* NavigationStripHeaderBackground_2@2x.png */,
+				F6EE2A721783600200C0C4A3 /* NavigationStripIcon-Selected@2x.png */,
+				F6EE2A731783600200C0C4A3 /* NavigationStripIcon@2x.png */,
+				F6EE2A741783600200C0C4A3 /* NavigationStripItem-Selected@2x.png */,
+				F6EE2A751783600200C0C4A3 /* NavigationStripItem@2x.png */,
+				F6EE2A761783600200C0C4A3 /* NavigationStripItemBlue@2x.png */,
+				F6EE2A771783600200C0C4A3 /* NavigationStripItemGrey@2x.png */,
+				F6EE2A781783600200C0C4A3 /* NavigationStripItemRed@2x.png */,
+				F6EE2A791783600200C0C4A3 /* NavigationStripLeftSideButton-Selected@2x.png */,
+				F6EE2A7A1783600200C0C4A3 /* NavigationStripLeftSideButton@2x.png */,
+				F6EE2A7B1783600200C0C4A3 /* NavigationStripLeftSideButtonBlue@2x.png */,
+				F6EE2A7C1783600200C0C4A3 /* NavigationStripLeftSideButtonGrey@2x.png */,
+				F6EE2A7D1783600200C0C4A3 /* NavigationStripLeftSideButtonRed@2x.png */,
+				F6EE2A7E1783600200C0C4A3 /* NavigationStripRightSideButton-Selected@2x.png */,
+				F6EE2A7F1783600200C0C4A3 /* NavigationStripRightSideButton@2x.png */,
+				F6EE2A801783600200C0C4A3 /* NavigationStripRightSideButtonBlue@2x.png */,
+				F6EE2A811783600200C0C4A3 /* NavigationStripRightSideButtonGrey@2x.png */,
+				F6EE2A821783600200C0C4A3 /* NavigationStripRightSideButtonRed@2x.png */,
+				F6EE2A831783600200C0C4A3 /* NavigationStripSectionBackground-Selected@2x.png */,
+				F6EE2A841783600200C0C4A3 /* NavigationStripSectionBackground@2x.png */,
+				F6EE2A851783600200C0C4A3 /* NavigationStripSectionBackground_2-Selected@2x.png */,
+				F6EE2A861783600200C0C4A3 /* NavigationStripSectionBackground_2@2x.png */,
+				F6EE2A871783600200C0C4A3 /* NavigationStripSectionBackgroundRed-Selected@2x.png */,
+				F6EE2A881783600200C0C4A3 /* NavigationStripSectionBackgroundRed@2x.png */,
+			);
+			path = 2x;
 			sourceTree = "<group>";
 		};
 		F6F3CEE01781ABB400C7274F /* TSUIKit */ = {
@@ -754,6 +772,7 @@
 		F6F3CEE31781ABB400C7274F /* TSUIKit */ = {
 			isa = PBXGroup;
 			children = (
+				F63C0A0A17821CD3005AB903 /* TSTabViewWithDropDownPanel */,
 				F6F3CEE41781ABB400C7274F /* TSMisc */,
 				F6F3CEE81781ABB400C7274F /* TSNavigationStripView */,
 				F6F3CEEF1781ABB400C7274F /* TSScrollView */,
@@ -861,6 +880,23 @@
 			productReference = F682C8E21774B054005141A3 /* NavigationStripTest.app */;
 			productType = "com.apple.product-type.application";
 		};
+		F6EE2A2E17835D9A00C0C4A3 /* TabViewWithDropDownPanel */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F6EE2A4E17835D9A00C0C4A3 /* Build configuration list for PBXNativeTarget "TabViewWithDropDownPanel" */;
+			buildPhases = (
+				F6EE2A2B17835D9A00C0C4A3 /* Sources */,
+				F6EE2A2C17835D9A00C0C4A3 /* Frameworks */,
+				F6EE2A2D17835D9A00C0C4A3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TabViewWithDropDownPanel;
+			productName = TabViewWithDropDownPanel;
+			productReference = F6EE2A2F17835D9A00C0C4A3 /* TabViewWithDropDownPanel.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -886,6 +922,7 @@
 				F682C8901774A718005141A3 /* TSUIKit */,
 				F682C8E11774B054005141A3 /* NavigationStripTest */,
 				F680D2851774B9C2005ACD94 /* TabViewTest */,
+				F6EE2A2E17835D9A00C0C4A3 /* TabViewWithDropDownPanel */,
 			);
 		};
 /* End PBXProject section */
@@ -901,58 +938,58 @@
 				F680D2EC1774BA82005ACD94 /* InfoPlist.strings in Resources */,
 				F680D2ED1774BA82005ACD94 /* TSTabViewTestViewController~ipad.xib in Resources */,
 				F680D2EE1774BA82005ACD94 /* TSTabViewTestViewController~iphone.xib in Resources */,
-				F680D2F01774BA82005ACD94 /* NavigationStripHeaderBackground.png in Resources */,
-				F680D2F11774BA82005ACD94 /* NavigationStripIcon-Selected.png in Resources */,
-				F680D2F21774BA82005ACD94 /* NavigationStripIcon.png in Resources */,
-				F680D2F31774BA82005ACD94 /* NavigationStripItem-Selected.png in Resources */,
-				F680D2F41774BA82005ACD94 /* NavigationStripItem.png in Resources */,
-				F680D2F51774BA82005ACD94 /* NavigationStripItemBlue.png in Resources */,
-				F680D2F61774BA82005ACD94 /* NavigationStripItemGrey.png in Resources */,
-				F680D2F71774BA82005ACD94 /* NavigationStripItemRed.png in Resources */,
-				F680D2F81774BA82005ACD94 /* NavigationStripLeftSideButton-Selected.png in Resources */,
-				F680D2F91774BA82005ACD94 /* NavigationStripLeftSideButton.png in Resources */,
-				F680D2FA1774BA82005ACD94 /* NavigationStripLeftSideButtonBlue.png in Resources */,
-				F680D2FB1774BA82005ACD94 /* NavigationStripLeftSideButtonGrey.png in Resources */,
-				F680D2FC1774BA82005ACD94 /* NavigationStripLeftSideButtonRed.png in Resources */,
-				F680D2FD1774BA82005ACD94 /* NavigationStripRightSideButton-Selected.png in Resources */,
-				F680D2FE1774BA82005ACD94 /* NavigationStripRightSideButton.png in Resources */,
-				F680D2FF1774BA82005ACD94 /* NavigationStripRightSideButtonBlue.png in Resources */,
-				F680D3001774BA82005ACD94 /* NavigationStripRightSideButtonGrey.png in Resources */,
-				F680D3011774BA82005ACD94 /* NavigationStripRightSideButtonRed.png in Resources */,
-				F680D3021774BA82005ACD94 /* NavigationStripSectionBackground-Selected.png in Resources */,
-				F680D3031774BA82005ACD94 /* NavigationStripSectionBackground.png in Resources */,
-				F680D3041774BA82005ACD94 /* NavigationStripSectionBackgroundRed-Selected.png in Resources */,
-				F680D3051774BA82005ACD94 /* NavigationStripSectionBackgroundRed.png in Resources */,
-				F680D3061774BA82005ACD94 /* NavigationStripHeaderBackground@2x.png in Resources */,
-				F680D3071774BA82005ACD94 /* NavigationStripIcon-Selected@2x.png in Resources */,
-				F680D3081774BA82005ACD94 /* NavigationStripIcon@2x.png in Resources */,
-				F680D3091774BA82005ACD94 /* NavigationStripItem-Selected@2x.png in Resources */,
-				F680D30A1774BA82005ACD94 /* NavigationStripItem@2x.png in Resources */,
-				F680D30B1774BA82005ACD94 /* NavigationStripItemBlue@2x.png in Resources */,
-				F680D30C1774BA82005ACD94 /* NavigationStripItemGrey@2x.png in Resources */,
-				F680D30D1774BA82005ACD94 /* NavigationStripItemRed@2x.png in Resources */,
-				F680D30E1774BA82005ACD94 /* NavigationStripLeftSideButton-Selected@2x.png in Resources */,
-				F680D30F1774BA82005ACD94 /* NavigationStripLeftSideButton@2x.png in Resources */,
-				F680D3101774BA82005ACD94 /* NavigationStripLeftSideButtonBlue@2x.png in Resources */,
-				F680D3111774BA82005ACD94 /* NavigationStripLeftSideButtonGrey@2x.png in Resources */,
-				F680D3121774BA82005ACD94 /* NavigationStripLeftSideButtonRed@2x.png in Resources */,
-				F680D3131774BA82005ACD94 /* NavigationStripRightSideButton-Selected@2x.png in Resources */,
-				F680D3141774BA82005ACD94 /* NavigationStripRightSideButton@2x.png in Resources */,
-				F680D3151774BA82005ACD94 /* NavigationStripRightSideButtonBlue@2x.png in Resources */,
-				F680D3161774BA82005ACD94 /* NavigationStripRightSideButtonGrey@2x.png in Resources */,
-				F680D3171774BA82005ACD94 /* NavigationStripRightSideButtonRed@2x.png in Resources */,
-				F680D3181774BA82005ACD94 /* NavigationStripSectionBackground-Selected@2x.png in Resources */,
-				F680D3191774BA82005ACD94 /* NavigationStripSectionBackground@2x.png in Resources */,
-				F680D31A1774BA82005ACD94 /* NavigationStripSectionBackgroundRed-Selected@2x.png in Resources */,
-				F680D31B1774BA82005ACD94 /* NavigationStripSectionBackgroundRed@2x.png in Resources */,
-				F680D42E177B2FD5005ACD94 /* NavigationStripHeaderBackground_2.png in Resources */,
-				F680D42F177B2FD5005ACD94 /* NavigationStripSectionBackground_2-Selected.png in Resources */,
-				F680D430177B2FD5005ACD94 /* NavigationStripSectionBackground_2.png in Resources */,
-				F680D434177B2FE0005ACD94 /* NavigationStripHeaderBackground_2@2x.png in Resources */,
-				F680D435177B2FE0005ACD94 /* NavigationStripSectionBackground_2-Selected@2x.png in Resources */,
-				F680D436177B2FE0005ACD94 /* NavigationStripSectionBackground_2@2x.png in Resources */,
-				F680D45C177DB4DA005ACD94 /* NavigationStripHeaderBackground_1.png in Resources */,
-				F680D45E177DB4F4005ACD94 /* NavigationStripHeaderBackground_1@2x.png in Resources */,
+				F6EE2A8B1783600200C0C4A3 /* NavigationStripHeaderBackground.png in Resources */,
+				F6EE2A8F1783600200C0C4A3 /* NavigationStripHeaderBackground_1.png in Resources */,
+				F6EE2A931783600200C0C4A3 /* NavigationStripHeaderBackground_2.png in Resources */,
+				F6EE2A971783600200C0C4A3 /* NavigationStripIcon-Selected.png in Resources */,
+				F6EE2A9B1783600200C0C4A3 /* NavigationStripIcon.png in Resources */,
+				F6EE2A9F1783600200C0C4A3 /* NavigationStripItem-Selected.png in Resources */,
+				F6EE2AA31783600200C0C4A3 /* NavigationStripItem.png in Resources */,
+				F6EE2AA71783600200C0C4A3 /* NavigationStripItemBlue.png in Resources */,
+				F6EE2AAB1783600200C0C4A3 /* NavigationStripItemGrey.png in Resources */,
+				F6EE2AAF1783600200C0C4A3 /* NavigationStripItemRed.png in Resources */,
+				F6EE2AB31783600200C0C4A3 /* NavigationStripLeftSideButton-Selected.png in Resources */,
+				F6EE2AB71783600200C0C4A3 /* NavigationStripLeftSideButton.png in Resources */,
+				F6EE2ABB1783600200C0C4A3 /* NavigationStripLeftSideButtonBlue.png in Resources */,
+				F6EE2ABF1783600200C0C4A3 /* NavigationStripLeftSideButtonGrey.png in Resources */,
+				F6EE2AC31783600200C0C4A3 /* NavigationStripLeftSideButtonRed.png in Resources */,
+				F6EE2AC71783600200C0C4A3 /* NavigationStripRightSideButton-Selected.png in Resources */,
+				F6EE2ACB1783600200C0C4A3 /* NavigationStripRightSideButton.png in Resources */,
+				F6EE2ACF1783600200C0C4A3 /* NavigationStripRightSideButtonBlue.png in Resources */,
+				F6EE2AD31783600200C0C4A3 /* NavigationStripRightSideButtonGrey.png in Resources */,
+				F6EE2AD71783600200C0C4A3 /* NavigationStripRightSideButtonRed.png in Resources */,
+				F6EE2ADB1783600200C0C4A3 /* NavigationStripSectionBackground-Selected.png in Resources */,
+				F6EE2ADF1783600200C0C4A3 /* NavigationStripSectionBackground.png in Resources */,
+				F6EE2AE31783600200C0C4A3 /* NavigationStripSectionBackground_2-Selected.png in Resources */,
+				F6EE2AE71783600200C0C4A3 /* NavigationStripSectionBackground_2.png in Resources */,
+				F6EE2AEB1783600200C0C4A3 /* NavigationStripSectionBackgroundRed-Selected.png in Resources */,
+				F6EE2AEF1783600200C0C4A3 /* NavigationStripSectionBackgroundRed.png in Resources */,
+				F6EE2AF31783600200C0C4A3 /* NavigationStripHeaderBackground@2x.png in Resources */,
+				F6EE2AF71783600200C0C4A3 /* NavigationStripHeaderBackground_1@2x.png in Resources */,
+				F6EE2AFB1783600200C0C4A3 /* NavigationStripHeaderBackground_2@2x.png in Resources */,
+				F6EE2AFF1783600200C0C4A3 /* NavigationStripIcon-Selected@2x.png in Resources */,
+				F6EE2B031783600200C0C4A3 /* NavigationStripIcon@2x.png in Resources */,
+				F6EE2B071783600200C0C4A3 /* NavigationStripItem-Selected@2x.png in Resources */,
+				F6EE2B0B1783600200C0C4A3 /* NavigationStripItem@2x.png in Resources */,
+				F6EE2B0F1783600200C0C4A3 /* NavigationStripItemBlue@2x.png in Resources */,
+				F6EE2B131783600200C0C4A3 /* NavigationStripItemGrey@2x.png in Resources */,
+				F6EE2B171783600200C0C4A3 /* NavigationStripItemRed@2x.png in Resources */,
+				F6EE2B1B1783600200C0C4A3 /* NavigationStripLeftSideButton-Selected@2x.png in Resources */,
+				F6EE2B1F1783600200C0C4A3 /* NavigationStripLeftSideButton@2x.png in Resources */,
+				F6EE2B231783600200C0C4A3 /* NavigationStripLeftSideButtonBlue@2x.png in Resources */,
+				F6EE2B271783600200C0C4A3 /* NavigationStripLeftSideButtonGrey@2x.png in Resources */,
+				F6EE2B2B1783600200C0C4A3 /* NavigationStripLeftSideButtonRed@2x.png in Resources */,
+				F6EE2B2F1783600200C0C4A3 /* NavigationStripRightSideButton-Selected@2x.png in Resources */,
+				F6EE2B331783600200C0C4A3 /* NavigationStripRightSideButton@2x.png in Resources */,
+				F6EE2B371783600200C0C4A3 /* NavigationStripRightSideButtonBlue@2x.png in Resources */,
+				F6EE2B3B1783600200C0C4A3 /* NavigationStripRightSideButtonGrey@2x.png in Resources */,
+				F6EE2B3F1783600200C0C4A3 /* NavigationStripRightSideButtonRed@2x.png in Resources */,
+				F6EE2B431783600200C0C4A3 /* NavigationStripSectionBackground-Selected@2x.png in Resources */,
+				F6EE2B471783600200C0C4A3 /* NavigationStripSectionBackground@2x.png in Resources */,
+				F6EE2B4B1783600200C0C4A3 /* NavigationStripSectionBackground_2-Selected@2x.png in Resources */,
+				F6EE2B4F1783600200C0C4A3 /* NavigationStripSectionBackground_2@2x.png in Resources */,
+				F6EE2B531783600200C0C4A3 /* NavigationStripSectionBackgroundRed-Selected@2x.png in Resources */,
+				F6EE2B571783600200C0C4A3 /* NavigationStripSectionBackgroundRed@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -960,58 +997,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F680D481177DB5A2005ACD94 /* NavigationStripHeaderBackground_1.png in Resources */,
-				F680D482177DB5A2005ACD94 /* NavigationStripHeaderBackground_2.png in Resources */,
-				F680D483177DB5A2005ACD94 /* NavigationStripSectionBackground_2-Selected.png in Resources */,
-				F680D484177DB5A2005ACD94 /* NavigationStripSectionBackground_2.png in Resources */,
-				F680D485177DB5A2005ACD94 /* NavigationStripHeaderBackground.png in Resources */,
-				F680D486177DB5A2005ACD94 /* NavigationStripIcon-Selected.png in Resources */,
-				F680D487177DB5A2005ACD94 /* NavigationStripIcon.png in Resources */,
-				F680D488177DB5A2005ACD94 /* NavigationStripItem-Selected.png in Resources */,
-				F680D489177DB5A2005ACD94 /* NavigationStripItem.png in Resources */,
-				F680D48A177DB5A2005ACD94 /* NavigationStripItemBlue.png in Resources */,
-				F680D48B177DB5A2005ACD94 /* NavigationStripItemGrey.png in Resources */,
-				F680D48C177DB5A2005ACD94 /* NavigationStripItemRed.png in Resources */,
-				F680D48D177DB5A2005ACD94 /* NavigationStripLeftSideButton-Selected.png in Resources */,
-				F680D48E177DB5A2005ACD94 /* NavigationStripLeftSideButton.png in Resources */,
-				F680D48F177DB5A2005ACD94 /* NavigationStripLeftSideButtonBlue.png in Resources */,
-				F680D490177DB5A2005ACD94 /* NavigationStripLeftSideButtonGrey.png in Resources */,
-				F680D491177DB5A2005ACD94 /* NavigationStripLeftSideButtonRed.png in Resources */,
-				F680D492177DB5A2005ACD94 /* NavigationStripRightSideButton-Selected.png in Resources */,
-				F680D493177DB5A2005ACD94 /* NavigationStripRightSideButton.png in Resources */,
-				F680D494177DB5A2005ACD94 /* NavigationStripRightSideButtonBlue.png in Resources */,
-				F680D495177DB5A2005ACD94 /* NavigationStripRightSideButtonGrey.png in Resources */,
-				F680D496177DB5A2005ACD94 /* NavigationStripRightSideButtonRed.png in Resources */,
-				F680D497177DB5A2005ACD94 /* NavigationStripSectionBackground-Selected.png in Resources */,
-				F680D498177DB5A2005ACD94 /* NavigationStripSectionBackground.png in Resources */,
-				F680D499177DB5A2005ACD94 /* NavigationStripSectionBackgroundRed-Selected.png in Resources */,
-				F680D49A177DB5A2005ACD94 /* NavigationStripSectionBackgroundRed.png in Resources */,
-				F680D467177DB599005ACD94 /* NavigationStripHeaderBackground_1@2x.png in Resources */,
-				F680D468177DB599005ACD94 /* NavigationStripHeaderBackground_2@2x.png in Resources */,
-				F680D469177DB599005ACD94 /* NavigationStripSectionBackground_2-Selected@2x.png in Resources */,
-				F680D46A177DB599005ACD94 /* NavigationStripSectionBackground_2@2x.png in Resources */,
-				F680D46B177DB599005ACD94 /* NavigationStripHeaderBackground@2x.png in Resources */,
-				F680D46C177DB599005ACD94 /* NavigationStripIcon-Selected@2x.png in Resources */,
-				F680D46D177DB599005ACD94 /* NavigationStripIcon@2x.png in Resources */,
-				F680D46E177DB599005ACD94 /* NavigationStripItem-Selected@2x.png in Resources */,
-				F680D46F177DB59A005ACD94 /* NavigationStripItem@2x.png in Resources */,
-				F680D470177DB59A005ACD94 /* NavigationStripItemBlue@2x.png in Resources */,
-				F680D471177DB59A005ACD94 /* NavigationStripItemGrey@2x.png in Resources */,
-				F680D472177DB59A005ACD94 /* NavigationStripItemRed@2x.png in Resources */,
-				F680D473177DB59A005ACD94 /* NavigationStripLeftSideButton-Selected@2x.png in Resources */,
-				F680D474177DB59A005ACD94 /* NavigationStripLeftSideButton@2x.png in Resources */,
-				F680D475177DB59A005ACD94 /* NavigationStripLeftSideButtonBlue@2x.png in Resources */,
-				F680D476177DB59A005ACD94 /* NavigationStripLeftSideButtonGrey@2x.png in Resources */,
-				F680D477177DB59A005ACD94 /* NavigationStripLeftSideButtonRed@2x.png in Resources */,
-				F680D478177DB59A005ACD94 /* NavigationStripRightSideButton-Selected@2x.png in Resources */,
-				F680D479177DB59A005ACD94 /* NavigationStripRightSideButton@2x.png in Resources */,
-				F680D47A177DB59A005ACD94 /* NavigationStripRightSideButtonBlue@2x.png in Resources */,
-				F680D47B177DB59A005ACD94 /* NavigationStripRightSideButtonGrey@2x.png in Resources */,
-				F680D47C177DB59A005ACD94 /* NavigationStripRightSideButtonRed@2x.png in Resources */,
-				F680D47D177DB59A005ACD94 /* NavigationStripSectionBackground-Selected@2x.png in Resources */,
-				F680D47E177DB59A005ACD94 /* NavigationStripSectionBackground@2x.png in Resources */,
-				F680D47F177DB59A005ACD94 /* NavigationStripSectionBackgroundRed-Selected@2x.png in Resources */,
-				F680D480177DB59A005ACD94 /* NavigationStripSectionBackgroundRed@2x.png in Resources */,
+				F67936031785A57B009E2365 /* TSTabViewWithDropDownPanelTestViewController.xib in Resources */,
+				F67936041785A57B009E2365 /* TSTabViewWithDropDownPanelTestViewController~ipad.xib in Resources */,
 				F680D3221774BC5C005ACD94 /* TSTabViewTestViewController~ipad.xib in Resources */,
 				F680D3231774BC5C005ACD94 /* TSTabViewTestViewController~iphone.xib in Resources */,
 				F680D26A1774B566005ACD94 /* TSNavigationStripTestViewController~ipad.xib in Resources */,
@@ -1023,6 +1010,58 @@
 				F6F3CF151781ABB500C7274F /* InfoPlist.strings in Resources */,
 				F6F3CF161781ABB500C7274F /* MainStoryboard_iPad.storyboard in Resources */,
 				F6F3CF171781ABB500C7274F /* MainStoryboard_iPhone.storyboard in Resources */,
+				F6EE2A891783600200C0C4A3 /* NavigationStripHeaderBackground.png in Resources */,
+				F6EE2A8D1783600200C0C4A3 /* NavigationStripHeaderBackground_1.png in Resources */,
+				F6EE2A911783600200C0C4A3 /* NavigationStripHeaderBackground_2.png in Resources */,
+				F6EE2A951783600200C0C4A3 /* NavigationStripIcon-Selected.png in Resources */,
+				F6EE2A991783600200C0C4A3 /* NavigationStripIcon.png in Resources */,
+				F6EE2A9D1783600200C0C4A3 /* NavigationStripItem-Selected.png in Resources */,
+				F6EE2AA11783600200C0C4A3 /* NavigationStripItem.png in Resources */,
+				F6EE2AA51783600200C0C4A3 /* NavigationStripItemBlue.png in Resources */,
+				F6EE2AA91783600200C0C4A3 /* NavigationStripItemGrey.png in Resources */,
+				F6EE2AAD1783600200C0C4A3 /* NavigationStripItemRed.png in Resources */,
+				F6EE2AB11783600200C0C4A3 /* NavigationStripLeftSideButton-Selected.png in Resources */,
+				F6EE2AB51783600200C0C4A3 /* NavigationStripLeftSideButton.png in Resources */,
+				F6EE2AB91783600200C0C4A3 /* NavigationStripLeftSideButtonBlue.png in Resources */,
+				F6EE2ABD1783600200C0C4A3 /* NavigationStripLeftSideButtonGrey.png in Resources */,
+				F6EE2AC11783600200C0C4A3 /* NavigationStripLeftSideButtonRed.png in Resources */,
+				F6EE2AC51783600200C0C4A3 /* NavigationStripRightSideButton-Selected.png in Resources */,
+				F6EE2AC91783600200C0C4A3 /* NavigationStripRightSideButton.png in Resources */,
+				F6EE2ACD1783600200C0C4A3 /* NavigationStripRightSideButtonBlue.png in Resources */,
+				F6EE2AD11783600200C0C4A3 /* NavigationStripRightSideButtonGrey.png in Resources */,
+				F6EE2AD51783600200C0C4A3 /* NavigationStripRightSideButtonRed.png in Resources */,
+				F6EE2AD91783600200C0C4A3 /* NavigationStripSectionBackground-Selected.png in Resources */,
+				F6EE2ADD1783600200C0C4A3 /* NavigationStripSectionBackground.png in Resources */,
+				F6EE2AE11783600200C0C4A3 /* NavigationStripSectionBackground_2-Selected.png in Resources */,
+				F6EE2AE51783600200C0C4A3 /* NavigationStripSectionBackground_2.png in Resources */,
+				F6EE2AE91783600200C0C4A3 /* NavigationStripSectionBackgroundRed-Selected.png in Resources */,
+				F6EE2AED1783600200C0C4A3 /* NavigationStripSectionBackgroundRed.png in Resources */,
+				F6EE2AF11783600200C0C4A3 /* NavigationStripHeaderBackground@2x.png in Resources */,
+				F6EE2AF51783600200C0C4A3 /* NavigationStripHeaderBackground_1@2x.png in Resources */,
+				F6EE2AF91783600200C0C4A3 /* NavigationStripHeaderBackground_2@2x.png in Resources */,
+				F6EE2AFD1783600200C0C4A3 /* NavigationStripIcon-Selected@2x.png in Resources */,
+				F6EE2B011783600200C0C4A3 /* NavigationStripIcon@2x.png in Resources */,
+				F6EE2B051783600200C0C4A3 /* NavigationStripItem-Selected@2x.png in Resources */,
+				F6EE2B091783600200C0C4A3 /* NavigationStripItem@2x.png in Resources */,
+				F6EE2B0D1783600200C0C4A3 /* NavigationStripItemBlue@2x.png in Resources */,
+				F6EE2B111783600200C0C4A3 /* NavigationStripItemGrey@2x.png in Resources */,
+				F6EE2B151783600200C0C4A3 /* NavigationStripItemRed@2x.png in Resources */,
+				F6EE2B191783600200C0C4A3 /* NavigationStripLeftSideButton-Selected@2x.png in Resources */,
+				F6EE2B1D1783600200C0C4A3 /* NavigationStripLeftSideButton@2x.png in Resources */,
+				F6EE2B211783600200C0C4A3 /* NavigationStripLeftSideButtonBlue@2x.png in Resources */,
+				F6EE2B251783600200C0C4A3 /* NavigationStripLeftSideButtonGrey@2x.png in Resources */,
+				F6EE2B291783600200C0C4A3 /* NavigationStripLeftSideButtonRed@2x.png in Resources */,
+				F6EE2B2D1783600200C0C4A3 /* NavigationStripRightSideButton-Selected@2x.png in Resources */,
+				F6EE2B311783600200C0C4A3 /* NavigationStripRightSideButton@2x.png in Resources */,
+				F6EE2B351783600200C0C4A3 /* NavigationStripRightSideButtonBlue@2x.png in Resources */,
+				F6EE2B391783600200C0C4A3 /* NavigationStripRightSideButtonGrey@2x.png in Resources */,
+				F6EE2B3D1783600200C0C4A3 /* NavigationStripRightSideButtonRed@2x.png in Resources */,
+				F6EE2B411783600200C0C4A3 /* NavigationStripSectionBackground-Selected@2x.png in Resources */,
+				F6EE2B451783600200C0C4A3 /* NavigationStripSectionBackground@2x.png in Resources */,
+				F6EE2B491783600200C0C4A3 /* NavigationStripSectionBackground_2-Selected@2x.png in Resources */,
+				F6EE2B4D1783600200C0C4A3 /* NavigationStripSectionBackground_2@2x.png in Resources */,
+				F6EE2B511783600200C0C4A3 /* NavigationStripSectionBackgroundRed-Selected@2x.png in Resources */,
+				F6EE2B551783600200C0C4A3 /* NavigationStripSectionBackgroundRed@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1033,61 +1072,126 @@
 				F682C92C1774B095005141A3 /* Default-568h@2x.png in Resources */,
 				F682C92D1774B095005141A3 /* Default.png in Resources */,
 				F682C92E1774B095005141A3 /* Default@2x.png in Resources */,
-				F682C92F1774B095005141A3 /* NavigationStripHeaderBackground.png in Resources */,
-				F682C9301774B095005141A3 /* NavigationStripIcon-Selected.png in Resources */,
-				F682C9311774B095005141A3 /* NavigationStripIcon.png in Resources */,
-				F682C9321774B095005141A3 /* NavigationStripItem-Selected.png in Resources */,
-				F682C9331774B095005141A3 /* NavigationStripItem.png in Resources */,
-				F682C9341774B095005141A3 /* NavigationStripItemBlue.png in Resources */,
-				F682C9351774B095005141A3 /* NavigationStripItemGrey.png in Resources */,
-				F682C9361774B095005141A3 /* NavigationStripItemRed.png in Resources */,
-				F682C9371774B095005141A3 /* NavigationStripLeftSideButton-Selected.png in Resources */,
-				F682C9381774B095005141A3 /* NavigationStripLeftSideButton.png in Resources */,
-				F682C9391774B095005141A3 /* NavigationStripLeftSideButtonBlue.png in Resources */,
-				F682C93A1774B095005141A3 /* NavigationStripLeftSideButtonGrey.png in Resources */,
-				F682C93B1774B095005141A3 /* NavigationStripLeftSideButtonRed.png in Resources */,
-				F682C93C1774B095005141A3 /* NavigationStripRightSideButton-Selected.png in Resources */,
-				F682C93D1774B095005141A3 /* NavigationStripRightSideButton.png in Resources */,
-				F682C93E1774B095005141A3 /* NavigationStripRightSideButtonBlue.png in Resources */,
-				F682C93F1774B095005141A3 /* NavigationStripRightSideButtonGrey.png in Resources */,
-				F682C9401774B095005141A3 /* NavigationStripRightSideButtonRed.png in Resources */,
-				F682C9411774B095005141A3 /* NavigationStripSectionBackground-Selected.png in Resources */,
-				F682C9421774B095005141A3 /* NavigationStripSectionBackground.png in Resources */,
-				F682C9431774B095005141A3 /* NavigationStripSectionBackgroundRed-Selected.png in Resources */,
-				F682C9441774B095005141A3 /* NavigationStripSectionBackgroundRed.png in Resources */,
-				F682C9451774B095005141A3 /* NavigationStripHeaderBackground@2x.png in Resources */,
-				F682C9461774B095005141A3 /* NavigationStripIcon-Selected@2x.png in Resources */,
-				F682C9471774B095005141A3 /* NavigationStripIcon@2x.png in Resources */,
-				F682C9481774B095005141A3 /* NavigationStripItem-Selected@2x.png in Resources */,
-				F682C9491774B095005141A3 /* NavigationStripItem@2x.png in Resources */,
-				F682C94A1774B095005141A3 /* NavigationStripItemBlue@2x.png in Resources */,
-				F682C94B1774B095005141A3 /* NavigationStripItemGrey@2x.png in Resources */,
-				F682C94C1774B095005141A3 /* NavigationStripItemRed@2x.png in Resources */,
-				F682C94D1774B095005141A3 /* NavigationStripLeftSideButton-Selected@2x.png in Resources */,
-				F682C94E1774B095005141A3 /* NavigationStripLeftSideButton@2x.png in Resources */,
-				F682C94F1774B095005141A3 /* NavigationStripLeftSideButtonBlue@2x.png in Resources */,
-				F682C9501774B095005141A3 /* NavigationStripLeftSideButtonGrey@2x.png in Resources */,
-				F682C9511774B095005141A3 /* NavigationStripLeftSideButtonRed@2x.png in Resources */,
-				F682C9521774B095005141A3 /* NavigationStripRightSideButton-Selected@2x.png in Resources */,
-				F682C9531774B095005141A3 /* NavigationStripRightSideButton@2x.png in Resources */,
-				F682C9541774B095005141A3 /* NavigationStripRightSideButtonBlue@2x.png in Resources */,
-				F682C9551774B095005141A3 /* NavigationStripRightSideButtonGrey@2x.png in Resources */,
-				F682C9561774B095005141A3 /* NavigationStripRightSideButtonRed@2x.png in Resources */,
-				F682C9571774B095005141A3 /* NavigationStripSectionBackground-Selected@2x.png in Resources */,
-				F682C9581774B095005141A3 /* NavigationStripSectionBackground@2x.png in Resources */,
-				F682C9591774B095005141A3 /* NavigationStripSectionBackgroundRed-Selected@2x.png in Resources */,
-				F682C95A1774B095005141A3 /* NavigationStripSectionBackgroundRed@2x.png in Resources */,
 				F682C9651774B0CD005141A3 /* InfoPlist.strings in Resources */,
 				F682C9661774B0CD005141A3 /* TSNavigationStripTestViewController~ipad.xib in Resources */,
 				F682C9671774B0CD005141A3 /* TSNavigationStripTestViewController~iphone.xib in Resources */,
-				F680D41D177A4E0A005ACD94 /* NavigationStripHeaderBackground_2@2x.png in Resources */,
-				F680D41F177A4E0A005ACD94 /* NavigationStripSectionBackground_2-Selected@2x.png in Resources */,
-				F680D421177A4E0A005ACD94 /* NavigationStripSectionBackground_2@2x.png in Resources */,
-				F680D426177A4E16005ACD94 /* NavigationStripHeaderBackground_2.png in Resources */,
-				F680D428177A4E16005ACD94 /* NavigationStripSectionBackground_2-Selected.png in Resources */,
-				F680D42A177A4E16005ACD94 /* NavigationStripSectionBackground_2.png in Resources */,
-				F680D461177DB506005ACD94 /* NavigationStripHeaderBackground_1.png in Resources */,
-				F680D465177DB50F005ACD94 /* NavigationStripHeaderBackground_1@2x.png in Resources */,
+				F6EE2A8A1783600200C0C4A3 /* NavigationStripHeaderBackground.png in Resources */,
+				F6EE2A8E1783600200C0C4A3 /* NavigationStripHeaderBackground_1.png in Resources */,
+				F6EE2A921783600200C0C4A3 /* NavigationStripHeaderBackground_2.png in Resources */,
+				F6EE2A961783600200C0C4A3 /* NavigationStripIcon-Selected.png in Resources */,
+				F6EE2A9A1783600200C0C4A3 /* NavigationStripIcon.png in Resources */,
+				F6EE2A9E1783600200C0C4A3 /* NavigationStripItem-Selected.png in Resources */,
+				F6EE2AA21783600200C0C4A3 /* NavigationStripItem.png in Resources */,
+				F6EE2AA61783600200C0C4A3 /* NavigationStripItemBlue.png in Resources */,
+				F6EE2AAA1783600200C0C4A3 /* NavigationStripItemGrey.png in Resources */,
+				F6EE2AAE1783600200C0C4A3 /* NavigationStripItemRed.png in Resources */,
+				F6EE2AB21783600200C0C4A3 /* NavigationStripLeftSideButton-Selected.png in Resources */,
+				F6EE2AB61783600200C0C4A3 /* NavigationStripLeftSideButton.png in Resources */,
+				F6EE2ABA1783600200C0C4A3 /* NavigationStripLeftSideButtonBlue.png in Resources */,
+				F6EE2ABE1783600200C0C4A3 /* NavigationStripLeftSideButtonGrey.png in Resources */,
+				F6EE2AC21783600200C0C4A3 /* NavigationStripLeftSideButtonRed.png in Resources */,
+				F6EE2AC61783600200C0C4A3 /* NavigationStripRightSideButton-Selected.png in Resources */,
+				F6EE2ACA1783600200C0C4A3 /* NavigationStripRightSideButton.png in Resources */,
+				F6EE2ACE1783600200C0C4A3 /* NavigationStripRightSideButtonBlue.png in Resources */,
+				F6EE2AD21783600200C0C4A3 /* NavigationStripRightSideButtonGrey.png in Resources */,
+				F6EE2AD61783600200C0C4A3 /* NavigationStripRightSideButtonRed.png in Resources */,
+				F6EE2ADA1783600200C0C4A3 /* NavigationStripSectionBackground-Selected.png in Resources */,
+				F6EE2ADE1783600200C0C4A3 /* NavigationStripSectionBackground.png in Resources */,
+				F6EE2AE21783600200C0C4A3 /* NavigationStripSectionBackground_2-Selected.png in Resources */,
+				F6EE2AE61783600200C0C4A3 /* NavigationStripSectionBackground_2.png in Resources */,
+				F6EE2AEA1783600200C0C4A3 /* NavigationStripSectionBackgroundRed-Selected.png in Resources */,
+				F6EE2AEE1783600200C0C4A3 /* NavigationStripSectionBackgroundRed.png in Resources */,
+				F6EE2AF21783600200C0C4A3 /* NavigationStripHeaderBackground@2x.png in Resources */,
+				F6EE2AF61783600200C0C4A3 /* NavigationStripHeaderBackground_1@2x.png in Resources */,
+				F6EE2AFA1783600200C0C4A3 /* NavigationStripHeaderBackground_2@2x.png in Resources */,
+				F6EE2AFE1783600200C0C4A3 /* NavigationStripIcon-Selected@2x.png in Resources */,
+				F6EE2B021783600200C0C4A3 /* NavigationStripIcon@2x.png in Resources */,
+				F6EE2B061783600200C0C4A3 /* NavigationStripItem-Selected@2x.png in Resources */,
+				F6EE2B0A1783600200C0C4A3 /* NavigationStripItem@2x.png in Resources */,
+				F6EE2B0E1783600200C0C4A3 /* NavigationStripItemBlue@2x.png in Resources */,
+				F6EE2B121783600200C0C4A3 /* NavigationStripItemGrey@2x.png in Resources */,
+				F6EE2B161783600200C0C4A3 /* NavigationStripItemRed@2x.png in Resources */,
+				F6EE2B1A1783600200C0C4A3 /* NavigationStripLeftSideButton-Selected@2x.png in Resources */,
+				F6EE2B1E1783600200C0C4A3 /* NavigationStripLeftSideButton@2x.png in Resources */,
+				F6EE2B221783600200C0C4A3 /* NavigationStripLeftSideButtonBlue@2x.png in Resources */,
+				F6EE2B261783600200C0C4A3 /* NavigationStripLeftSideButtonGrey@2x.png in Resources */,
+				F6EE2B2A1783600200C0C4A3 /* NavigationStripLeftSideButtonRed@2x.png in Resources */,
+				F6EE2B2E1783600200C0C4A3 /* NavigationStripRightSideButton-Selected@2x.png in Resources */,
+				F6EE2B321783600200C0C4A3 /* NavigationStripRightSideButton@2x.png in Resources */,
+				F6EE2B361783600200C0C4A3 /* NavigationStripRightSideButtonBlue@2x.png in Resources */,
+				F6EE2B3A1783600200C0C4A3 /* NavigationStripRightSideButtonGrey@2x.png in Resources */,
+				F6EE2B3E1783600200C0C4A3 /* NavigationStripRightSideButtonRed@2x.png in Resources */,
+				F6EE2B421783600200C0C4A3 /* NavigationStripSectionBackground-Selected@2x.png in Resources */,
+				F6EE2B461783600200C0C4A3 /* NavigationStripSectionBackground@2x.png in Resources */,
+				F6EE2B4A1783600200C0C4A3 /* NavigationStripSectionBackground_2-Selected@2x.png in Resources */,
+				F6EE2B4E1783600200C0C4A3 /* NavigationStripSectionBackground_2@2x.png in Resources */,
+				F6EE2B521783600200C0C4A3 /* NavigationStripSectionBackgroundRed-Selected@2x.png in Resources */,
+				F6EE2B561783600200C0C4A3 /* NavigationStripSectionBackgroundRed@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F6EE2A2D17835D9A00C0C4A3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F6EE2A3817835D9A00C0C4A3 /* InfoPlist.strings in Resources */,
+				F6EE2A4017835D9A00C0C4A3 /* Default.png in Resources */,
+				F6EE2A4217835D9A00C0C4A3 /* Default@2x.png in Resources */,
+				F6EE2A4417835D9A00C0C4A3 /* Default-568h@2x.png in Resources */,
+				F6EE2A4A17835D9A00C0C4A3 /* TSTabViewWithDropDownPanelTestViewController.xib in Resources */,
+				F6EE2A4D17835D9A00C0C4A3 /* TSTabViewWithDropDownPanelTestViewController~ipad.xib in Resources */,
+				F6EE2A8C1783600200C0C4A3 /* NavigationStripHeaderBackground.png in Resources */,
+				F6EE2A901783600200C0C4A3 /* NavigationStripHeaderBackground_1.png in Resources */,
+				F6EE2A941783600200C0C4A3 /* NavigationStripHeaderBackground_2.png in Resources */,
+				F6EE2A981783600200C0C4A3 /* NavigationStripIcon-Selected.png in Resources */,
+				F6EE2A9C1783600200C0C4A3 /* NavigationStripIcon.png in Resources */,
+				F6EE2AA01783600200C0C4A3 /* NavigationStripItem-Selected.png in Resources */,
+				F6EE2AA41783600200C0C4A3 /* NavigationStripItem.png in Resources */,
+				F6EE2AA81783600200C0C4A3 /* NavigationStripItemBlue.png in Resources */,
+				F6EE2AAC1783600200C0C4A3 /* NavigationStripItemGrey.png in Resources */,
+				F6EE2AB01783600200C0C4A3 /* NavigationStripItemRed.png in Resources */,
+				F6EE2AB41783600200C0C4A3 /* NavigationStripLeftSideButton-Selected.png in Resources */,
+				F6EE2AB81783600200C0C4A3 /* NavigationStripLeftSideButton.png in Resources */,
+				F6EE2ABC1783600200C0C4A3 /* NavigationStripLeftSideButtonBlue.png in Resources */,
+				F6EE2AC01783600200C0C4A3 /* NavigationStripLeftSideButtonGrey.png in Resources */,
+				F6EE2AC41783600200C0C4A3 /* NavigationStripLeftSideButtonRed.png in Resources */,
+				F6EE2AC81783600200C0C4A3 /* NavigationStripRightSideButton-Selected.png in Resources */,
+				F6EE2ACC1783600200C0C4A3 /* NavigationStripRightSideButton.png in Resources */,
+				F6EE2AD01783600200C0C4A3 /* NavigationStripRightSideButtonBlue.png in Resources */,
+				F6EE2AD41783600200C0C4A3 /* NavigationStripRightSideButtonGrey.png in Resources */,
+				F6EE2AD81783600200C0C4A3 /* NavigationStripRightSideButtonRed.png in Resources */,
+				F6EE2ADC1783600200C0C4A3 /* NavigationStripSectionBackground-Selected.png in Resources */,
+				F6EE2AE01783600200C0C4A3 /* NavigationStripSectionBackground.png in Resources */,
+				F6EE2AE41783600200C0C4A3 /* NavigationStripSectionBackground_2-Selected.png in Resources */,
+				F6EE2AE81783600200C0C4A3 /* NavigationStripSectionBackground_2.png in Resources */,
+				F6EE2AEC1783600200C0C4A3 /* NavigationStripSectionBackgroundRed-Selected.png in Resources */,
+				F6EE2AF01783600200C0C4A3 /* NavigationStripSectionBackgroundRed.png in Resources */,
+				F6EE2AF41783600200C0C4A3 /* NavigationStripHeaderBackground@2x.png in Resources */,
+				F6EE2AF81783600200C0C4A3 /* NavigationStripHeaderBackground_1@2x.png in Resources */,
+				F6EE2AFC1783600200C0C4A3 /* NavigationStripHeaderBackground_2@2x.png in Resources */,
+				F6EE2B001783600200C0C4A3 /* NavigationStripIcon-Selected@2x.png in Resources */,
+				F6EE2B041783600200C0C4A3 /* NavigationStripIcon@2x.png in Resources */,
+				F6EE2B081783600200C0C4A3 /* NavigationStripItem-Selected@2x.png in Resources */,
+				F6EE2B0C1783600200C0C4A3 /* NavigationStripItem@2x.png in Resources */,
+				F6EE2B101783600200C0C4A3 /* NavigationStripItemBlue@2x.png in Resources */,
+				F6EE2B141783600200C0C4A3 /* NavigationStripItemGrey@2x.png in Resources */,
+				F6EE2B181783600200C0C4A3 /* NavigationStripItemRed@2x.png in Resources */,
+				F6EE2B1C1783600200C0C4A3 /* NavigationStripLeftSideButton-Selected@2x.png in Resources */,
+				F6EE2B201783600200C0C4A3 /* NavigationStripLeftSideButton@2x.png in Resources */,
+				F6EE2B241783600200C0C4A3 /* NavigationStripLeftSideButtonBlue@2x.png in Resources */,
+				F6EE2B281783600200C0C4A3 /* NavigationStripLeftSideButtonGrey@2x.png in Resources */,
+				F6EE2B2C1783600200C0C4A3 /* NavigationStripLeftSideButtonRed@2x.png in Resources */,
+				F6EE2B301783600200C0C4A3 /* NavigationStripRightSideButton-Selected@2x.png in Resources */,
+				F6EE2B341783600200C0C4A3 /* NavigationStripRightSideButton@2x.png in Resources */,
+				F6EE2B381783600200C0C4A3 /* NavigationStripRightSideButtonBlue@2x.png in Resources */,
+				F6EE2B3C1783600200C0C4A3 /* NavigationStripRightSideButtonGrey@2x.png in Resources */,
+				F6EE2B401783600200C0C4A3 /* NavigationStripRightSideButtonRed@2x.png in Resources */,
+				F6EE2B441783600200C0C4A3 /* NavigationStripSectionBackground-Selected@2x.png in Resources */,
+				F6EE2B481783600200C0C4A3 /* NavigationStripSectionBackground@2x.png in Resources */,
+				F6EE2B4C1783600200C0C4A3 /* NavigationStripSectionBackground_2-Selected@2x.png in Resources */,
+				F6EE2B501783600200C0C4A3 /* NavigationStripSectionBackground_2@2x.png in Resources */,
+				F6EE2B541783600200C0C4A3 /* NavigationStripSectionBackgroundRed-Selected@2x.png in Resources */,
+				F6EE2B581783600200C0C4A3 /* NavigationStripSectionBackgroundRed@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1108,6 +1212,8 @@
 				F680D31E1774BA82005ACD94 /* TSAppDelegate.m in Sources */,
 				F680D31F1774BA82005ACD94 /* TSTabViewTestViewController.m in Sources */,
 				F680D454177D0E0A005ACD94 /* TSTestSectionButton.m in Sources */,
+				F63C0A0F17821F8C005AB903 /* TSTabViewWithDropDownPanel.m in Sources */,
+				F6EE2A2A17835D1300C0C4A3 /* TSTabViewWithDropDownPanelModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1115,6 +1221,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F67936021785A570009E2365 /* TSTabViewWithDropDownPanelTestViewController.m in Sources */,
 				F680D3251774BC74005ACD94 /* TSTabViewTestViewController.m in Sources */,
 				F680D2691774B551005ACD94 /* TSNavigationStripTestViewController.m in Sources */,
 				F680D452177D0E0A005ACD94 /* TSTestSectionButton.m in Sources */,
@@ -1128,6 +1235,8 @@
 				F6F3CF191781ABB500C7274F /* TSAppDelegate.m in Sources */,
 				F6F3CF1A1781ABB500C7274F /* TSModelController.m in Sources */,
 				F6F3CF1B1781ABB500C7274F /* TSRootViewController.m in Sources */,
+				F63C0A0D17821F8C005AB903 /* TSTabViewWithDropDownPanel.m in Sources */,
+				F6EE2A2817835D1300C0C4A3 /* TSTabViewWithDropDownPanelModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1145,6 +1254,26 @@
 				F682C8F11774B054005141A3 /* TSAppDelegate.m in Sources */,
 				F682C95D1774B095005141A3 /* TSNavigationStripTestViewController.m in Sources */,
 				F680D453177D0E0A005ACD94 /* TSTestSectionButton.m in Sources */,
+				F63C0A0E17821F8C005AB903 /* TSTabViewWithDropDownPanel.m in Sources */,
+				F6EE2A2917835D1300C0C4A3 /* TSTabViewWithDropDownPanelModel.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F6EE2A2B17835D9A00C0C4A3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F6EE2B591783604600C0C4A3 /* TSTabViewWithDropDownPanel.m in Sources */,
+				F6EE2B5A1783604600C0C4A3 /* TSTabViewWithDropDownPanelModel.m in Sources */,
+				F6EE2B5B1783604600C0C4A3 /* TSUtils.m in Sources */,
+				F6EE2B5C1783604600C0C4A3 /* TSNavigationStripModel.m in Sources */,
+				F6EE2B5D1783604600C0C4A3 /* TSNavigationStripView.m in Sources */,
+				F6EE2B5E1783604600C0C4A3 /* TSScrollView.m in Sources */,
+				F6EE2B5F1783604600C0C4A3 /* TSTabView.m in Sources */,
+				F6EE2B601783604600C0C4A3 /* TSTabViewModel.m in Sources */,
+				F6EE2A3A17835D9A00C0C4A3 /* main.m in Sources */,
+				F6EE2A3E17835D9A00C0C4A3 /* TSAppDelegate.m in Sources */,
+				F6EE2A4717835D9A00C0C4A3 /* TSTabViewWithDropDownPanelTestViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1197,6 +1326,30 @@
 				F682C9641774B0CD005141A3 /* en */,
 			);
 			name = "TSNavigationStripTestViewController~iphone.xib";
+			sourceTree = "<group>";
+		};
+		F6EE2A3617835D9A00C0C4A3 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F6EE2A3717835D9A00C0C4A3 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		F6EE2A4817835D9A00C0C4A3 /* TSTabViewWithDropDownPanelTestViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F6EE2A4917835D9A00C0C4A3 /* en */,
+			);
+			name = TSTabViewWithDropDownPanelTestViewController.xib;
+			sourceTree = "<group>";
+		};
+		F6EE2A4B17835D9A00C0C4A3 /* TSTabViewWithDropDownPanelTestViewController~ipad.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F6EE2A4C17835D9A00C0C4A3 /* en */,
+			);
+			name = "TSTabViewWithDropDownPanelTestViewController~ipad.xib";
 			sourceTree = "<group>";
 		};
 		F6F3CEFC1781ABB400C7274F /* InfoPlist.strings */ = {
@@ -1277,7 +1430,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1302,7 +1455,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1364,6 +1517,30 @@
 			};
 			name = Release;
 		};
+		F6EE2A4F17835D9A00C0C4A3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TabViewWithDropDownPanel/TabViewWithDropDownPanel-Prefix.pch";
+				INFOPLIST_FILE = "TabViewWithDropDownPanel/TabViewWithDropDownPanel-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		F6EE2A5017835D9A00C0C4A3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TabViewWithDropDownPanel/TabViewWithDropDownPanel-Prefix.pch";
+				INFOPLIST_FILE = "TabViewWithDropDownPanel/TabViewWithDropDownPanel-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1399,6 +1576,15 @@
 			buildConfigurations = (
 				F682C8F31774B054005141A3 /* Debug */,
 				F682C8F41774B054005141A3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F6EE2A4E17835D9A00C0C4A3 /* Build configuration list for PBXNativeTarget "TabViewWithDropDownPanel" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F6EE2A4F17835D9A00C0C4A3 /* Debug */,
+				F6EE2A5017835D9A00C0C4A3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

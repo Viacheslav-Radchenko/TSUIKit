@@ -1,5 +1,5 @@
 //
-// Prefix header for all source files of the 'TabViewTest' target in the 'TabViewTest' project
+// Prefix header for all source files of the 'TabViewWithDropDownPanel' target in the 'TabViewWithDropDownPanel' project
 //
 
 #import <Availability.h>

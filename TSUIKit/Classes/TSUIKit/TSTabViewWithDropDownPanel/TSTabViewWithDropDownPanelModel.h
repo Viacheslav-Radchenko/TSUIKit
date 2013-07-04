@@ -1,6 +1,8 @@
 //
-//  SSNavigtionStripViewDelegate.h
-//  Created by Viacheslav Radchenko on 6/10/13.
+//  TSTabViewWithDropDownPanelModel.h
+//  TSUIKit
+//
+//  Created by Viacheslav Radchenko on 7/2/13.
 //
 //  The MIT License (MIT)
 //  Copyright © 2013 Viacheslav Radchenko
@@ -23,31 +25,17 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 //  THE SOFTWARE.
 
-#import <Foundation/Foundation.h>
-
-@class TSNavigationStripView;
-
-@protocol TSNavigationStripViewDelegate <NSObject>
-
-@optional
+#import "TSTabViewModel.h"
 
 /**
- *  @abstract Selection state changed callbacks
+ *  @abstract  TSTabViewWithDropDownPanelModel extends TSTabViewModel. 
+ *             Actually it uses same date model as TSTabViewModel and implements same TSTabViewDataSource protocol.
+ *             Separate entity was added only for convenience and possible future extensions.
+ *
+ *             Again, all models are just ready to use examples of possible data source implementation. 
+ *             You free to create your own implementation of TSTabViewDataSource protocol.
  */
-- (void)navigationStrip:(TSNavigationStripView *)navigationStripView itemAtIndex:(NSInteger)index fromLeftSide:(BOOL)leftSide didChangeState:(BOOL)selected;
-- (void)navigationStrip:(TSNavigationStripView *)navigationStripView willSelectSectionAtIndex:(NSInteger)index animated:(BOOL)animated;
-- (void)navigationStrip:(TSNavigationStripView *)navigationStripView didSelectSectionAtIndex:(NSInteger)index;
 
-/**
- *  @abstract Invoked only if sectionsAligment is set to UIViewContentAligmentCenter.
- *  @param    normScrollOffset - in range [-1..1]               
- */
-- (void)navigationStrip:(TSNavigationStripView *)navigationStripView didScrollTo:(CGFloat)normScrollOffset;
-- (void)navigationStripDidEndScroll:(TSNavigationStripView *)navigationStripView;
-
-/**
- *  @abstract Invoked when user taps on selected section.
- */
-- (void)navigationStripDidRecognizeTapOnSelectedSection:(TSNavigationStripView *)navigationStripView;
+@interface TSTabViewWithDropDownPanelModel : TSTabViewModel
 
 @end

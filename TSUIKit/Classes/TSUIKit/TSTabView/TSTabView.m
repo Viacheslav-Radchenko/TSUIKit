@@ -34,7 +34,6 @@
 
 @interface TSTabView () <UIScrollViewDelegate, TSNavigationStripViewDelegate>
 {
-    UIScrollView *_scrollView;
     TSNavigationStripView *_navigationMenu;
     
     // Tabs can be represented by subclasses of UIView or UIViewController.
@@ -112,6 +111,16 @@
 {
     _contentViewEdgeInsets = edgeInsets;
     [self updateComponentsLayout];
+}
+
+- (BOOL)bounces
+{
+    return _scrollView.bounces;
+}
+
+- (void)setBounces:(BOOL)bounces
+{
+    _scrollView.bounces = bounces;
 }
 
 #pragma mark - Update layout

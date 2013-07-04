@@ -1,8 +1,8 @@
 //
-//  TSTabViewTestViewController.m
-//  TabViewTest
+//  TSTabViewWithDropDownPanelTestViewController.m
+//  TabViewWithDropDownPanel
 //
-//  Created by Viacheslav Radchenko on 6/20/13.
+//  Created by Viacheslav Radchenko on 7/2/13.
 //
 //  The MIT License (MIT)
 //  Copyright © 2013 Viacheslav Radchenko
@@ -25,110 +25,86 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 //  THE SOFTWARE.
 
-#import <QuartzCore/QuartzCore.h>
-#import "TSTabViewTestViewController.h"
-#import "TSTabView.h"
-#import "TSTabViewModel.h"
+#import "TSTabViewWithDropDownPanelTestViewController.h"
+#import "TSTabViewWithDropDownPanel.h"
+#import "TSTabViewWithDropDownPanelModel.h"
 #import "TSDefines.h"
-#import "TSTestSectionButton.h"
 
-@interface TSTabViewTestViewController () <TSTabViewDelegate>
+#import <QuartzCore/QuartzCore.h>
+
+@interface TSTabViewWithDropDownPanelTestViewController () <TSTabViewWithDropDownPanelDelegate, UIGestureRecognizerDelegate, UITableViewDataSource, UITableViewDelegate>
 {
-    TSTabView *_tabView1;
-    TSTabView *_tabView2;
-    TSTabView *_tabView3;
-    TSTabView *_tabView4;
-    TSTabView *_tabView5;
-    TSTabViewModel *_tabViewModel1;
-    TSTabViewModel *_tabViewModel2;
-    TSTabViewModel *_tabViewModel3;
-    TSTabViewModel *_tabViewModel4;
-    TSTabViewModel *_tabViewModel5;
+    TSTabViewWithDropDownPanel *_tabView1;
+    TSTabViewWithDropDownPanel *_tabView2;
+    TSTabViewWithDropDownPanel *_tabView3;
+    TSTabViewWithDropDownPanelModel *_tabViewModel1;
+    TSTabViewWithDropDownPanelModel *_tabViewModel2;
+    TSTabViewWithDropDownPanelModel *_tabViewModel3;
 }
 
 @property (nonatomic, strong) NSArray *dataSources;
+@property (nonatomic, strong) NSArray *tabViews;
 
 @end
 
-@implementation TSTabViewTestViewController
+@implementation TSTabViewWithDropDownPanelTestViewController
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
-    
-    self.settingsView.layer.cornerRadius = 4;
-    self.settingsView.layer.shadowOpacity = 0.5;
-    self.settingsView.layer.shadowOffset = CGSizeMake(2, 4);
-    
-    _tabView1 = [self createTabView1WithFrame:CGRectMake(20, (IS_IPAD ? 90 : 20), self.view.frame.size.width - 40, (IS_IPAD ? 110 : 100))];
+    _tabView1 = [self createTabView1WithFrame:CGRectMake(20, (IS_IPAD ? 20 : 20), self.view.frame.size.width - 40, (IS_IPAD ? 240 : 120))];
     _tabView1.backgroundColor = [UIColor grayColor];
     _tabView1.autoresizingMask = UIViewAutoresizingFlexibleWidth;
     _tabView1.delegate = self;
+    _tabView1.attachedPanel = [self createDropDownMenu];
     [self.view addSubview:_tabView1];
     
-    _tabView2 = [self createTabView2WithFrame:CGRectMake(20, (IS_IPAD ? 230 : 160), self.view.frame.size.width - 40, (IS_IPAD ? 110 : 100))];
+    _tabView2 = [self createTabView2WithFrame:CGRectMake(20, (IS_IPAD ? 280 : 140), self.view.frame.size.width - 40, (IS_IPAD ? 240 : 120))];
     _tabView2.backgroundColor = [UIColor grayColor];
     _tabView2.autoresizingMask = UIViewAutoresizingFlexibleWidth;
     _tabView2.delegate = self;
+    _tabView2.attachedPanel = [self createDropDownMenu2];
     [self.view addSubview:_tabView2];
     
-    _tabView3 = [self createTabView3WithFrame:CGRectMake(20, (IS_IPAD ? 370 : 300), self.view.frame.size.width - 40, (IS_IPAD ? 110 : 100))];
+    _tabView3 = [self createTabView3WithFrame:CGRectMake(20, (IS_IPAD ? 540 : 280), self.view.frame.size.width - 40, (IS_IPAD ? 240 : 120))];
     _tabView3.backgroundColor = [UIColor grayColor];
     _tabView3.autoresizingMask = UIViewAutoresizingFlexibleWidth;
     _tabView3.delegate = self;
+    _tabView3.showPanelBelowNavigationMenu = NO;
+    _tabView3.attachedPanel = [self createDropDownMenu3];
     [self.view addSubview:_tabView3];
     
-    _tabView4 = [self createTabView4WithFrame:CGRectMake(20, (IS_IPAD ? 510 : 440), self.view.frame.size.width - 40, (IS_IPAD ? 110 : 100))];
-    _tabView4.backgroundColor = [UIColor lightGrayColor];
-    _tabView4.autoresizingMask = UIViewAutoresizingFlexibleWidth;
-    _tabView4.delegate = self;
-    [self.view addSubview:_tabView4];
-    
-    _tabView5 = [self createTabView5WithFrame:CGRectMake(20, (IS_IPAD ? 650 : 440), self.view.frame.size.width - 40, (IS_IPAD ? 110 : 100))];
-    _tabView5.autoresizingMask = UIViewAutoresizingFlexibleWidth;
-    _tabView5.delegate = self;
-    [self.view addSubview:_tabView5];
-    
-    _tabViewModel1 = [[TSTabViewModel alloc] initWithTabView:_tabView1];
+    _tabViewModel1 = [[TSTabViewWithDropDownPanelModel alloc] initWithTabView:_tabView1];
     [_tabViewModel1 setTabs:@[[self createSection1WithIndex:@0],
-                             [self createSection1WithIndex:@1],
-                             [self createSection1WithIndex:@2]]];
-    [_tabViewModel1 setItems:@[[self createItem1WithIndex:@0],[self createItem1WithIndex:@1]] fromLeft:YES];
-   
+                [self createSection1WithIndex:@1],
+                [self createSection1WithIndex:@2]]];
     
-    _tabViewModel2 = [[TSTabViewModel alloc] initWithTabView:_tabView2];
+    [_tabViewModel1 setItems:@[[self createItem1WithIndex:@0]] fromLeft:YES];
+
+    
+    _tabViewModel2 = [[TSTabViewWithDropDownPanelModel alloc] initWithTabView:_tabView2];
     [_tabViewModel2 setTabs:@[[self createSection2WithIndex:@0],
-                              [self createSection2WithIndex:@1],
-                              [self createSection2WithIndex:@2]]];
-    
+                             [self createSection2WithIndex:@1],
+                             [self createSection2WithIndex:@2]]];
     [_tabViewModel2 insertNewItem:[self createItem2WithIndex:@0] atIndex:0 fromLeft:YES animated:NO];
-    [_tabViewModel2 insertNewItem:[self createItem2WithIndex:@1] atIndex:1 fromLeft:YES animated:NO];
-    [_tabViewModel2 insertNewItem:[self createItem2WithIndex:@2] atIndex:0 fromLeft:NO animated:NO];
     
-    _tabViewModel3 = [[TSTabViewModel alloc] initWithTabView:_tabView3];
+    _tabViewModel3 = [[TSTabViewWithDropDownPanelModel alloc] initWithTabView:_tabView3];
+    _tabViewModel3.useEdgeInsetsForSections = YES;
     [_tabViewModel3 setTabs:@[[self createSection3WithIndex:@0],
-                              [self createSection3WithIndex:@1],
-                              [self createSection3WithIndex:@2]]];
-    
-    _tabViewModel4 = [[TSTabViewModel alloc] initWithTabView:_tabView4];
-    _tabViewModel4.useEdgeInsetsForSections = YES;
-    [_tabViewModel4 setTabs:@[[self createSection4WithIndex:@0],
-                        [self createSection4WithIndex:@1],
-                        [self createSection4WithIndex:@2]]];
-    
-    _tabViewModel5 = [[TSTabViewModel alloc] initWithTabView:_tabView5];
-    _tabViewModel5.customClassForSection = NSStringFromClass([TSTestSectionButton class]);
-    [_tabViewModel5 setTabs:@[[self createSection5WithIndex:@0],
-                            [self createSection5WithIndex:@1],
-                            [self createSection5WithIndex:@2]]];
+                             [self createSection3WithIndex:@1],
+                             [self createSection3WithIndex:@2]]];
+    [_tabViewModel3 insertNewItem:[self createItem2WithIndex:@0] atIndex:0 fromLeft:YES animated:NO];
     
     self.dataSources = @[
                          _tabViewModel1,
                          _tabViewModel2,
-                         _tabViewModel3,
-                         _tabViewModel4,
-                         _tabViewModel5
+                         _tabViewModel3
+                         ];
+    self.tabViews = @[
+                         _tabView1,
+                         _tabView2,
+                         _tabView3
                          ];
 }
 
@@ -159,15 +135,70 @@
     label.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
     label.textAlignment = NSTextAlignmentCenter;
     [tabView addSubview:label];
+    
+
+    // Add gesture for drop down menu
+    UIPanGestureRecognizer *gesture = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(panGestureHandler:)];
+    gesture.delegate = self;
+    [tabView addGestureRecognizer:gesture];
     return tabView;
 }
 
-#pragma mark - NavigationStrip 1
+#pragma mark - UIGestureRecognizerDelegate
 
-- (TSTabView *)createTabView1WithFrame:(CGRect)rect
+- (BOOL)gestureRecognizerShouldBegin:(UIPanGestureRecognizer *)panGestureRecognizer {
+    CGPoint translation = [panGestureRecognizer translationInView:panGestureRecognizer.view];
+    return fabs(translation.y) > fabs(translation.x);
+}
+
+- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer
+{
+	return YES;
+}
+
+#pragma mark - Gesture Handler for TabView1 & TabView2
+
+- (void)panGestureHandler:(UIGestureRecognizer *)gesture
+{
+    CGPoint pos = [gesture locationInView:self.view];
+    
+    TSTabViewWithDropDownPanel *tabViewInFocus;
+    for (TSTabViewWithDropDownPanel *tabView in self.tabViews)
+    {
+        if(CGRectContainsPoint(tabView.frame,pos))
+        {
+            tabViewInFocus = tabView;
+            break;
+        }
+    }
+    
+    if(tabViewInFocus)
+    {
+        static CGPoint lastPos;
+        pos = [gesture locationInView:tabViewInFocus];
+        CGFloat delta = pos.y - lastPos.y;
+        if(gesture.state == UIGestureRecognizerStateBegan)
+        {
+            lastPos = [gesture locationInView:tabViewInFocus];
+        }
+        else if(gesture.state == UIGestureRecognizerStateChanged)
+        {
+            [tabViewInFocus movePanel:delta finished:NO];
+        }
+        else
+        {
+            [tabViewInFocus movePanel:delta finished:YES];
+        }
+        lastPos = pos;
+    }
+}
+
+#pragma mark - TabView 1
+
+- (TSTabViewWithDropDownPanel *)createTabView1WithFrame:(CGRect)rect
 {
     TSNavigationStripView *navagationStripView = [self createNavigationStripView1WithFrame:CGRectMake(0, 0, 128, 32)];
-    return [[TSTabView alloc] initWithFrame:rect navigationMenu:navagationStripView];
+    return [[TSTabViewWithDropDownPanel alloc] initWithFrame:rect navigationMenu:navagationStripView];
 }
 
 - (TSNavigationStripView *)createNavigationStripView1WithFrame:(CGRect)rect
@@ -239,12 +270,41 @@
     return item;
 }
 
-#pragma mark - NavigationStrip 2
+- (UIView *)createDropDownMenu
+{
+    UIView *tabView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 60, 60)];
+    tabView.backgroundColor = [UIColor clearColor];
+    tabView.layer.shadowOffset = CGSizeMake(0, 4);
+    tabView.layer.shadowColor = [UIColor blackColor].CGColor;
+    tabView.layer.shadowRadius = 4;
+    tabView.layer.shadowOpacity = 0.8;
+    
+    UIImageView *imgView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, tabView.frame.size.width, tabView.frame.size.height)];
+    UIImage *img = [UIImage imageNamed:@"NavigationStripHeaderBackground"];
+    img = [img resizableImageWithCapInsets:UIEdgeInsetsMake(img.size.height/2, img.size.width/2, img.size.height/2, img.size.width/2)];
+    imgView.image = img;
+    imgView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
 
-- (TSTabView *)createTabView2WithFrame:(CGRect)rect
+    [tabView addSubview:imgView];
+    UILabel *label = [[UILabel alloc] initWithFrame:tabView.bounds];
+    label.text = @"Menu";
+    label.font = [UIFont boldSystemFontOfSize:32];
+    label.textColor = [UIColor whiteColor];
+    label.backgroundColor = [UIColor clearColor];
+    label.shadowColor = [UIColor colorWithWhite:0 alpha:0.5];
+    label.shadowOffset = CGSizeMake(1, 1);
+    label.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+    label.textAlignment = NSTextAlignmentCenter;
+    [tabView addSubview:label];
+    return tabView;
+}
+
+#pragma mark - TabView 2
+
+- (TSTabViewWithDropDownPanel *)createTabView2WithFrame:(CGRect)rect
 {
     TSNavigationStripView *navagationStripView = [self createNavigationStripView2WithFrame:CGRectMake(0, 0, 128, 32)];
-    TSTabView *tabView = [[TSTabView alloc] initWithFrame:rect navigationMenu:navagationStripView];
+    TSTabViewWithDropDownPanel *tabView = [[TSTabViewWithDropDownPanel alloc] initWithFrame:rect navigationMenu:navagationStripView];
     tabView.navigationMenuEdgeInsets = UIEdgeInsetsMake(10, 10, 0, 10);
     return tabView;
 }
@@ -296,60 +356,59 @@
     return item;
 }
 
-#pragma mark - NavigationStrip 3
+- (UIView *)createDropDownMenu2
+{
+    UIView *tabView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 60, 60)];
+    tabView.backgroundColor = [UIColor clearColor];
+    
+    CGSize size = tabView.bounds.size;
+    CGFloat cornerRadius = 16;
+    UIGraphicsBeginImageContext(size);
+    CGContextRef currentContext = UIGraphicsGetCurrentContext();
+    UIBezierPath *arrowPath = [UIBezierPath bezierPath];
+    [arrowPath moveToPoint:CGPointMake(0, 0)];
+    [arrowPath addLineToPoint:CGPointMake(size.width, 0)];
+    [arrowPath addArcWithCenter:CGPointMake(size.width, cornerRadius) radius:cornerRadius startAngle:M_PI_2 endAngle:M_PI clockwise:NO];
+    [arrowPath addLineToPoint:CGPointMake(size.width - cornerRadius, size.height - cornerRadius)];
+    [arrowPath addArcWithCenter:CGPointMake(size.width - 2*cornerRadius, size.height - cornerRadius) radius:cornerRadius startAngle:0 endAngle:M_PI_2 clockwise:YES];
+    [arrowPath addLineToPoint:CGPointMake(2*cornerRadius, size.height)];
+    [arrowPath addArcWithCenter:CGPointMake(2*cornerRadius, size.height - cornerRadius) radius:cornerRadius startAngle:M_PI_2 endAngle:M_PI clockwise:YES];
+    [arrowPath addLineToPoint:CGPointMake(cornerRadius, cornerRadius)];
+    [arrowPath addArcWithCenter:CGPointMake(0, cornerRadius) radius:cornerRadius startAngle:0 endAngle:M_PI_2 clockwise:NO];
+    CGContextSetFillColorWithColor(currentContext, [UIColor colorWithWhite:0.0 alpha:0.75f].CGColor);
+    CGContextAddPath(currentContext, [arrowPath CGPath]);
+    CGContextDrawPath(currentContext, kCGPathFill);
+    UIImage *img = UIGraphicsGetImageFromCurrentImageContext();
+    img = [img resizableImageWithCapInsets:UIEdgeInsetsMake(img.size.height/2, img.size.width/2, img.size.height/2, img.size.width/2)];
 
-- (TSTabView *)createTabView3WithFrame:(CGRect)rect
+    UIImageView *subView = [[UIImageView alloc] initWithFrame:CGRectInset(tabView.bounds, 20, 0)];
+    subView.image = img;
+    subView.clipsToBounds = YES;
+    subView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+    [tabView addSubview:subView];
+ 
+    UILabel *label = [[UILabel alloc] initWithFrame:tabView.bounds];
+    label.text = @"Menu";
+    label.font = [UIFont boldSystemFontOfSize:32];
+    label.textColor = [UIColor whiteColor];
+    label.backgroundColor = [UIColor clearColor];
+    label.shadowColor = [UIColor colorWithWhite:0 alpha:0.5];
+    label.shadowOffset = CGSizeMake(1, 1);
+    label.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+    label.textAlignment = NSTextAlignmentCenter;
+    [tabView addSubview:label];
+    return tabView;
+}
+
+#pragma mark - TabView 3
+
+- (TSTabViewWithDropDownPanel *)createTabView3WithFrame:(CGRect)rect
 {
     TSNavigationStripView *navagationStripView = [self createNavigationStripView3WithFrame:CGRectMake(0, 0, 128, 32)];
-    return [[TSTabView alloc] initWithFrame:rect navigationMenu:navagationStripView];
+    return [[TSTabViewWithDropDownPanel alloc] initWithFrame:rect navigationMenu:navagationStripView];
 }
 
 - (TSNavigationStripView *)createNavigationStripView3WithFrame:(CGRect)rect
-{
-    TSNavigationStripView *stripView = [[TSNavigationStripView alloc] initWithFrame:rect];
-    
-    stripView.backgroundColor = [UIColor blackColor];
-    
-    [stripView.leftNavigationButton setImage:[UIImage imageNamed:@"NavigationStripLeftSideButtonBlue"] forState:UIControlStateNormal];
-    [stripView.leftNavigationButton setImage:[UIImage imageNamed:@"NavigationStripLeftSideButtonGrey"] forState:UIControlStateDisabled];
-    
-    [stripView.rightNavigationButton setImage:[UIImage imageNamed:@"NavigationStripRightSideButtonBlue"] forState:UIControlStateNormal];
-    [stripView.rightNavigationButton setImage:[UIImage imageNamed:@"NavigationStripRightSideButtonGrey"] forState:UIControlStateDisabled];
-    
-    return stripView;
-}
-
-- (TSTabViewSection *)createSection3WithIndex:(NSNumber *)index
-{
-    TSTabViewSection *section = [[TSTabViewSection alloc] init];
-    section.title = [NSString stringWithFormat:@"Section %@",index];
-    section.selectedTitle = [NSString stringWithFormat:@"Section %@ SEL",index];
-    section.icon = [UIImage imageNamed: @"NavigationStripIcon"];
-    section.selectedIcon = [UIImage imageNamed: @"NavigationStripIcon-Selected"];
-    section.font = [UIFont italicSystemFontOfSize:15];
-    section.selectedFont = [UIFont italicSystemFontOfSize:15];
-    section.color = [UIColor colorWithWhite:0.3f alpha:1];
-    section.selectedColor = [UIColor colorWithWhite:0.6f alpha:1];
-    UIImage *img = [UIImage imageNamed:@"NavigationStripSectionBackground"];
-    section.backgroundImage = [img resizableImageWithCapInsets:UIEdgeInsetsMake(img.size.height/2, img.size.width/2, img.size.height/2, img.size.width/2)];
-    img = [UIImage imageNamed:@"NavigationStripSectionBackground-Selected"];
-    section.selectedBackgroundImage = [img resizableImageWithCapInsets:UIEdgeInsetsMake(img.size.height/2, img.size.width/2, img.size.height/2, img.size.width/2)];
-
-    
-    // Create tab view
-    section.tabContent = [self createTabWithTitle:[NSString stringWithFormat:@"Tab %@",index]];
-    return section;
-}
-
-#pragma mark - NavigationStrip 4
-
-- (TSTabView *)createTabView4WithFrame:(CGRect)rect
-{
-    TSNavigationStripView *navagationStripView = [self createNavigationStripView4WithFrame:CGRectMake(0, 0, 128, 32)];
-    return [[TSTabView alloc] initWithFrame:rect navigationMenu:navagationStripView];
-}
-
-- (TSNavigationStripView *)createNavigationStripView4WithFrame:(CGRect)rect
 {
     TSNavigationStripView *stripView = [[TSNavigationStripView alloc] initWithFrame:rect];
     
@@ -368,7 +427,37 @@
     return stripView;
 }
 
-- (TSTabViewSection *)createSection4WithIndex:(NSNumber *)index
+- (UIView *)createDropDownMenu3
+{
+    UIView *tabView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 60, 60)];
+    tabView.backgroundColor = [UIColor colorWithWhite:0.85 alpha:1];
+
+    UILabel *label = [[UILabel alloc] initWithFrame:tabView.bounds];
+    label.text = @"Menu";
+    label.font = [UIFont boldSystemFontOfSize:32];
+    label.textColor = [UIColor whiteColor];
+    label.backgroundColor = [UIColor clearColor];
+    label.shadowColor = [UIColor colorWithWhite:0 alpha:0.5];
+    label.shadowOffset = CGSizeMake(1, 1);
+    label.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+    label.textAlignment = NSTextAlignmentCenter;
+    [tabView addSubview:label];
+    return tabView;
+}
+
+- (UITableView *)createTableView
+{
+    UITableView *tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, 100, 100)];
+    tableView.delegate = self;
+    tableView.dataSource = self;
+    
+    UIPanGestureRecognizer *gesture = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(slideGestureHandler:)];
+    gesture.delegate = self;
+    [tableView addGestureRecognizer:gesture];
+    return tableView;
+}
+
+- (TSTabViewSection *)createSection3WithIndex:(NSNumber *)index
 {
     TSTabViewSection *section = [[TSTabViewSection alloc] init];
     section.title = [NSString stringWithFormat:@"Section %@",index];
@@ -383,68 +472,56 @@
     section.selectedBackgroundImage = [img resizableImageWithCapInsets:UIEdgeInsetsMake(img.size.height/2, img.size.width/2, img.size.height/2, img.size.width/2)];
     
     // Create tab view
-    section.tabContent = [self createTabWithTitle:[NSString stringWithFormat:@"Tab %@",index]];
+    section.tabContent = [self createTableView];
     return section;
 }
 
-#pragma mark - NavigationStrip 5
+#pragma mark - UITableViewDataSource
 
-const CGFloat kArrowHeight = 4;
-
-- (TSTabView *)createTabView5WithFrame:(CGRect)rect
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    TSNavigationStripView *navagationStripView = [self createNavigationStripView5WithFrame:CGRectMake(0, 0, 128, 32)];
-    TSTabView *tabView = [[TSTabView alloc] initWithFrame:rect navigationMenu:navagationStripView];
-    tabView.navigationMenuEdgeInsets = UIEdgeInsetsMake(-kArrowHeight, 0, 0, 0);
-    tabView.contentViewEdgeInsets = UIEdgeInsetsMake(navagationStripView.frame.size.height - 2 * kArrowHeight, 0, 0, 0);
-    return tabView;
+    NSString *kCell = @"kCell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kCell];
+    if(!cell)
+    {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:kCell];
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    }
+    cell.textLabel.text = [NSString stringWithFormat:@"Row %d",indexPath.row];
+    return cell;
 }
 
-- (TSNavigationStripView *)createNavigationStripView5WithFrame:(CGRect)rect
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    TSNavigationStripView *stripView = [[TSNavigationStripView alloc] initWithFrame:rect];
-    
-    CGFloat arrowHeight = kArrowHeight;
-    UIGraphicsBeginImageContext(CGSizeMake(rect.size.height, rect.size.height));
-    CGContextRef currentContext = UIGraphicsGetCurrentContext();
-    UIBezierPath *arrowPath = [UIBezierPath bezierPath];
-    [arrowPath moveToPoint:CGPointMake(0, arrowHeight)];
-    [arrowPath addLineToPoint:CGPointMake(rect.size.width, arrowHeight)];
-    [arrowPath addLineToPoint:CGPointMake(rect.size.width, rect.size.height - arrowHeight)];
-    [arrowPath addLineToPoint:CGPointMake(0, rect.size.height - arrowHeight)];
-    CGContextSetFillColorWithColor(currentContext, [UIColor blackColor].CGColor);
-    CGContextAddPath(currentContext, [arrowPath CGPath]);
-    CGContextDrawPath(currentContext, kCGPathFill);
-    UIImage *img = UIGraphicsGetImageFromCurrentImageContext();
-    
-    stripView.backgroundImage = [img resizableImageWithCapInsets:UIEdgeInsetsMake(img.size.height/2, img.size.width/2, img.size.height/2, img.size.width/2)];
-    
-    [stripView.leftNavigationButton setImage:[UIImage imageNamed:@"NavigationStripLeftSideButton"] forState:UIControlStateNormal];
-    [stripView.leftNavigationButton setImage:[UIImage imageNamed:@"NavigationStripLeftSideButton-Selected"] forState:UIControlStateHighlighted];
-    [stripView.leftNavigationButton setImage:[UIImage imageNamed:@"NavigationStripLeftSideButton-Selected"] forState:UIControlStateDisabled];
-    
-    [stripView.rightNavigationButton setImage:[UIImage imageNamed:@"NavigationStripRightSideButton"] forState:UIControlStateNormal];
-    [stripView.rightNavigationButton setImage:[UIImage imageNamed:@"NavigationStripRightSideButton-Selected"] forState:UIControlStateHighlighted];
-    [stripView.rightNavigationButton setImage:[UIImage imageNamed:@"NavigationStripRightSideButton-Selected"] forState:UIControlStateDisabled];
-    
-    return stripView;
+    return  20;
 }
 
-- (TSTabViewSection *)createSection5WithIndex:(NSNumber *)index
+#pragma mark - UIPanGestureRecognizer for TabView 3
+
+- (void)slideGestureHandler:(UIPanGestureRecognizer *)gesture
 {
-    TSTabViewSection *section = [[TSTabViewSection alloc] init];
-    section.title = [NSString stringWithFormat:@"Section %@",index];
-    section.selectedTitle = [NSString stringWithFormat:@"Section SELECTED %@",index]; //section.title;
-    section.font = [UIFont systemFontOfSize:12];
-    section.selectedFont = [UIFont systemFontOfSize:12];
-    section.color = [UIColor lightGrayColor];
-    section.selectedColor = [UIColor whiteColor];
-    section.backgroundColor = [UIColor blackColor];
-    section.selectedBackgroundColor = [UIColor blackColor];
+    UITableView *tableView = (UITableView *)gesture.view;
     
-    // Create tab view
-    section.tabContent = [self createTabWithTitle:[NSString stringWithFormat:@"Tab %@",index]];
-    return section;
+    static CGPoint lastPos;
+    CGPoint pos = [gesture locationInView:_tabView3];
+    CGFloat delta = pos.y - lastPos.y;
+    if(gesture.state == UIGestureRecognizerStateBegan)
+    {
+        lastPos = [gesture locationInView:_tabView3];
+    }
+    else if(gesture.state == UIGestureRecognizerStateChanged)
+    {
+        if((delta > 0 && tableView.contentOffset.y <= 0) ||
+           ( delta < 0))
+        {
+            [_tabView3 movePanel:delta finished:NO];
+        }
+    }
+    else
+    {
+        [_tabView3 movePanel:-delta finished:YES];
+    }
+    lastPos = pos;
 }
 
 #pragma mark - TSTabViewDelegate
@@ -452,6 +529,15 @@ const CGFloat kArrowHeight = 4;
 - (void)tabView:(TSTabView *)tabView menuItemAtIndex:(NSInteger)index fromLeftSide:(BOOL)leftSide didChangeState:(BOOL)selected
 {
     VerboseLog(@"index = %d leftSide = %@ selected = %@",index,@(leftSide),@(selected));
+    TSTabViewWithDropDownPanel *tabViewWithPanel = (TSTabViewWithDropDownPanel *)tabView;
+    if(selected)
+    {
+        [tabViewWithPanel showDropDownPanelWithAnimation:YES];
+    }
+    else
+    {
+        [tabViewWithPanel hideDropDownPanelWithAnimation:YES];
+    }
 }
 
 - (void)tabView:(TSTabView *)tabView willSelectSectionAtIndex:(NSInteger)index
@@ -469,37 +555,26 @@ const CGFloat kArrowHeight = 4;
     VerboseLog(@"normScrollOffset = %f",normScrollOffset);
 }
 
-#pragma mark - Actions
-
-- (IBAction)numberOfTabsValueChanged
+- (void)tabViewWithDropDownPanel:(TSTabViewWithDropDownPanel *)tabView willShowPanel:(UIView *)panel animated:(BOOL)animated
 {
-    int count = [_tabViewModel1 numberOfSections];
-    int index = (count ? arc4random() % count : 0);
-    if(self.numberOfTabs.value > count) // increase
-    {
-        SUPPRESS_PERFORM_SELECTOR_LEAK_WARNING(
-        [self.dataSources enumerateObjectsUsingBlock:^(TSTabViewModel *dataSource, NSUInteger idx, BOOL *stop) {
-            TSTabViewSection *section = [self performSelector:NSSelectorFromString([NSString stringWithFormat:@"createSection%dWithIndex:",idx + 1]) withObject:@(index)];
-            [dataSource insertNewTab:section atIndex:index animated:YES];
-        }];
-                                               );
-    }
-    else //decrease
-    {
-        [self.dataSources enumerateObjectsUsingBlock:^(TSTabViewModel *dataSource, NSUInteger idx, BOOL *stop) {
-            [dataSource removeTabAtIndex:index animated:YES];
-        }];
-    }
+    VerboseLog();
+    [tabView.navigationMenu selectItemAtIndex:0 fromLeftSide:YES];
 }
 
-- (IBAction)sectionAligmentValueChanged
+- (void)tabViewWithDropDownPanel:(TSTabViewWithDropDownPanel *)tabView didShowPanel:(UIView *)panel
 {
-    [self.dataSources enumerateObjectsUsingBlock:^(TSTabViewModel *dataSource, NSUInteger idx, BOOL *stop) {
-        dataSource.tabView.navigationMenu.sectionsAligment = (self.sectionAligment.selectedSegmentIndex == 1 ? UIViewContentModeCenter :
-                                      (self.sectionAligment.selectedSegmentIndex == 0 ? UIViewContentModeLeft : UIViewContentModeRight));
-        [dataSource.tabView reloadData];
-    }];
+    VerboseLog();
 }
 
+- (void)tabViewWithDropDownPanel:(TSTabViewWithDropDownPanel *)tabView willHidePanel:(UIView *)panel animated:(BOOL)animated
+{
+    VerboseLog();
+}
+
+- (void)tabViewWithDropDownPanel:(TSTabViewWithDropDownPanel *)tabView didHidePanel:(UIView *)panel
+{
+    VerboseLog();
+    [tabView.navigationMenu deselectItemAtIndex:0 fromLeftSide:YES];
+}
 
 @end

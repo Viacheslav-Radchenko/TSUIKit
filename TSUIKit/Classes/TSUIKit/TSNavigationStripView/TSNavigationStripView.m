@@ -51,6 +51,8 @@
 @property (nonatomic, strong) UIView *container;
 @property (nonatomic, strong) UIButton *control;
 
+@property (nonatomic, strong) UITapGestureRecognizer *tapGesture;
+
 @end
 
 @implementation TSNavigationStripComponentInfo
@@ -395,6 +397,8 @@
             }
             _sectionDraggingInfo.normScroll = normScroll;
         }
+        
+        [self updateSelectionMarkerLayout];
     }
 }
 
@@ -456,7 +460,6 @@
                 [self updateSectionsScrollPosition];
                 [self updateEmptySpaceHolderLayout];
             } withCompletion:nil animated:YES];
-            
             
             if(self.delegate && [self.delegate respondsToSelector:@selector(navigationStripDidEndScroll:)])
             {
@@ -772,6 +775,7 @@
     [self updateRightItems];
     [self updateSections];
     
+    [self updateCenterContainerLayout];
     [self updateNavigationButtonsStateWithAnimation:NO];
     [self updateSectionsSelectionBeforeAnimation];
     [self updateSectionsSelectionAfterAnimation];
@@ -787,7 +791,6 @@
     VerboseLog();
     if(!self.dataSource) return;
     [self updateSections];
-    
     [self updateNavigationButtonsStateWithAnimation:NO];
     [self updateSectionsSelectionBeforeAnimation];
     [self updateSectionsSelectionAfterAnimation];
@@ -805,6 +808,7 @@
     [self updateLeftItems];
     [self updateRightItems];
     
+    [self updateCenterContainerLayout];
     [self updateNavigationButtonsStateWithAnimation:NO];
     [self updateSectionsSelectionBeforeAnimation];
     [self updateSectionsSelectionAfterAnimation];
@@ -850,7 +854,7 @@
     itemInfo.container.frame = CGRectMake(0, 0, itemInfo.defaultWidth, self.frame.size.height);
     
     // Tag is internal reference on index; it starts from |1|; for left items it would be negative; for right items it would be positive
-    itemInfo.control.tag = (leftSide ? -(index + 1) : (index + 1));
+    itemInfo.container.tag = itemInfo.control.tag = (leftSide ? -(index + 1) : (index + 1));
     return itemInfo;
 }
 
@@ -983,7 +987,10 @@
     CGRect rect = CGRectMake(0, 0, self.frame.size.height, self.frame.size.height);
     itemInfo.container = [[UIView alloc] initWithFrame:rect];
     itemInfo.container.backgroundColor = [UIColor clearColor];
+    itemInfo.container.tag = index;
     itemInfo.container.autoresizingMask = UIViewAutoresizingFlexibleHeight;
+    itemInfo.tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(sectionTapGestureRecognizer:)];
+    [itemInfo.container addGestureRecognizer:itemInfo.tapGesture];
     if(self.dataSource && [self.dataSource respondsToSelector:@selector(customSectionControlForIndex:)])
     {
         itemInfo.control = [self.dataSource customSectionControlForIndex:index];
@@ -1001,9 +1008,10 @@
     itemInfo.container.frame = CGRectMake(0, 0, itemInfo.defaultWidth, self.frame.size.height);
     
     [itemInfo.control addTarget:self action:@selector(sectionButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
-    itemInfo.control.tag = index;
+    itemInfo.container.tag = itemInfo.control.tag = index;
     itemInfo.control.selected = (index == self.selectedSection);
-    itemInfo.control.userInteractionEnabled = !itemInfo.control.selected ;
+    itemInfo.control.userInteractionEnabled = !itemInfo.control.selected;
+    itemInfo.tapGesture.enabled = itemInfo.control.selected;
     
     return itemInfo;
 }
@@ -1485,8 +1493,9 @@
     for (int i = 0; i < _sections.count; ++i)
     {
         TSNavigationStripComponentInfo *sectionInfo = _sections[i];
-        sectionInfo.control.tag = i;
+        sectionInfo.container.tag = sectionInfo.control.tag = i;
         sectionInfo.control.selected = (i == _selectedSection);
+        sectionInfo.tapGesture.enabled = sectionInfo.control.selected;
         sectionInfo.control.userInteractionEnabled = !sectionInfo.control.selected;
         sectionInfo.control.backgroundColor = (sectionInfo.control.selected ? sectionInfo.defaultSelectedBackgroundColor : sectionInfo.defaultBackgroundColor);
         sectionInfo.control.titleLabel.font = (sectionInfo.control.selected ? sectionInfo.defaultSelectedFont : sectionInfo.defaultFont);
@@ -1588,6 +1597,18 @@
     if(self.delegate && [self.delegate respondsToSelector:@selector(navigationStrip:itemAtIndex:fromLeftSide:didChangeState:)])
     {
         [self.delegate navigationStrip:self itemAtIndex:index fromLeftSide:leftSide didChangeState:sender.selected];
+    }
+}
+
+- (void)sectionTapGestureRecognizer:(UITapGestureRecognizer *)recognizer
+{
+    int sectionIndex = recognizer.view.tag;
+    if(sectionIndex == _selectedSection)
+    {
+        if(self.delegate && [self.delegate respondsToSelector:@selector(navigationStripDidRecognizeTapOnSelectedSection:)])
+        {
+            [self.delegate navigationStripDidRecognizeTapOnSelectedSection:self];
+        }
     }
 }
 
@@ -1833,7 +1854,7 @@
             x += info.container.frame.size.width;
             
             // Update index
-            info.control.tag = (leftSide ? -(i + 1) : (i + 1));
+            info.container.tag = info.control.tag = (leftSide ? -(i + 1) : (i + 1));
         }
         
         // Update items container size
@@ -1888,7 +1909,7 @@
                 x += info.container.frame.size.width;
                 
                 // Update index
-                info.control.tag = (leftSide ? -(i + 1) : (i + 1));
+                info.container.tag = info.control.tag = (leftSide ? -(i + 1) : (i + 1));
             }
             
             // Update items container size

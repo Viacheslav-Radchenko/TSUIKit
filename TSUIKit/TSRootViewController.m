@@ -76,7 +76,8 @@
     {
         _modelController = [[TSModelController alloc] initWithPages: @[
                             @"TSNavigationStripTestViewController",
-                            @"TSTabViewTestViewController"]
+                            @"TSTabViewTestViewController",
+                            @"TSTabViewWithDropDownPanelTestViewController"]
                             ];
     }
     return _modelController;
