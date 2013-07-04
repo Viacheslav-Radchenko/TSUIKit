@@ -18,6 +18,12 @@ It provides smooth animations for item selection and dynamic content modificatio
 <img src="https://raw.github.com/Viacheslav-Radchenko/TSUIKit/master/Screenshots/TSTabView_Screenshot1.jpg" alt="TSTabView examples" width="384" height="512" />
 <img src="https://raw.github.com/Viacheslav-Radchenko/SSUIKit/master/Screenshots/TSTabView_Screenshot2.jpg" alt="TSTabView examples" width="384" height="512" />
 
+## TSTabViewWithDropDownPanel
+
+`TSTabViewWithDropDownPanel` extends TSTabView. Custom panel can be attached to navigation menu witch would pull down/up on top of tabs container.
+
+<img src="https://raw.github.com/Viacheslav-Radchenko/TSUIKit/master/Screenshots/TSTabViewWithDropDownPanel_Screenshot1.jpg" alt="TSTabViewWithDropDownPanel examples" width="384" height="512" />
+
 ## Requirements
 
 * Xcode 4.5 or higher
@@ -33,6 +39,7 @@ Build and run the `TSUIKit` project in Xcode to see examples of each component.
 ## Installation
 
 All you need to do is drop `TSUIKit` source files into your project and add corresponding `#include "*.h"` to the top of classes that will use particular component.
+`TS*Models` are optional part of `TSUIKit` infrastructure. They provide ready to use examples of corresponding data source implementations. You may use them or implement your own data sources.
 `TSUIKit` use `QuartzCore.framework`, so you might need to add it as well.
 
 ## Contact
