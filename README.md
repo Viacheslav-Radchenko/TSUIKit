@@ -35,6 +35,7 @@ It provides smooth animations for item selection and dynamic content modificatio
 ## Demo
 
 Build and run the `TSUIKit` project in Xcode to see examples of each component.
+Right now better way to see components functionality is to compile examples provided with project, they fully display structure and dynamics of controls, as well as possible use cases.
 
 ## Installation
 
