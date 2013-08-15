@@ -32,11 +32,16 @@
 #warning "This project uses features only available in iOS SDK 5.0 and later."
 #endif
 
-#define VerboseLog(fmt, ...)   NSLog((@"%s [Line %d] " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__)
+#define VerboseLog(fmt, ...)    NSLog((@"%s [Line %d] " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__)
 
-#define IS_IPAD             (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
-#define IS_IPHONE           (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
-#define IS_IPHONE_5         (IS_IPHONE && [[UIScreen mainScreen] bounds].size.height == 568.0f)
+#define IS_IPAD                 (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
+#define IS_IPHONE               (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
+#define IS_IPHONE_5             (IS_IPHONE && [[UIScreen mainScreen] bounds].size.height == 568.0f)
+
+#define CLAMP(min, max, val)    ((val) < (min) ? (min) : ((val) > (max) ? (max) : (val)))
+#define LERP(min, max, t)       ((min) + ((max) - (min)) * (t))
+
+#define EPS 0.000001
 
 #define SUPPRESS_PERFORM_SELECTOR_LEAK_WARNING(Stuff) \
                 do { \

@@ -10,6 +10,10 @@
 		F63C0A0D17821F8C005AB903 /* TSTabViewWithDropDownPanel.m in Sources */ = {isa = PBXBuildFile; fileRef = F63C0A0C17821F8C005AB903 /* TSTabViewWithDropDownPanel.m */; };
 		F63C0A0E17821F8C005AB903 /* TSTabViewWithDropDownPanel.m in Sources */ = {isa = PBXBuildFile; fileRef = F63C0A0C17821F8C005AB903 /* TSTabViewWithDropDownPanel.m */; };
 		F63C0A0F17821F8C005AB903 /* TSTabViewWithDropDownPanel.m in Sources */ = {isa = PBXBuildFile; fileRef = F63C0A0C17821F8C005AB903 /* TSTabViewWithDropDownPanel.m */; };
+		F678EB3717B5346B00F1AD5D /* TSTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = F678EB3617B5346B00F1AD5D /* TSTableView.m */; };
+		F678EB3E17B664E000F1AD5D /* TSTableViewHeaderPanel.m in Sources */ = {isa = PBXBuildFile; fileRef = F678EB3D17B664E000F1AD5D /* TSTableViewHeaderPanel.m */; };
+		F678EB4317B6681100F1AD5D /* TSTableViewHeaderSection.m in Sources */ = {isa = PBXBuildFile; fileRef = F678EB4217B6681100F1AD5D /* TSTableViewHeaderSection.m */; };
+		F678EB9E17B84AC700F1AD5D /* TSTableViewExpandControlPanel.m in Sources */ = {isa = PBXBuildFile; fileRef = F678EB9D17B84AC700F1AD5D /* TSTableViewExpandControlPanel.m */; };
 		F67936021785A570009E2365 /* TSTabViewWithDropDownPanelTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F6EE2A4617835D9A00C0C4A3 /* TSTabViewWithDropDownPanelTestViewController.m */; };
 		F67936031785A57B009E2365 /* TSTabViewWithDropDownPanelTestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A4817835D9A00C0C4A3 /* TSTabViewWithDropDownPanelTestViewController.xib */; };
 		F67936041785A57B009E2365 /* TSTabViewWithDropDownPanelTestViewController~ipad.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A4B17835D9A00C0C4A3 /* TSTabViewWithDropDownPanelTestViewController~ipad.xib */; };
@@ -52,6 +56,38 @@
 		F682C9651774B0CD005141A3 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F682C95F1774B0CD005141A3 /* InfoPlist.strings */; };
 		F682C9661774B0CD005141A3 /* TSNavigationStripTestViewController~ipad.xib in Resources */ = {isa = PBXBuildFile; fileRef = F682C9611774B0CD005141A3 /* TSNavigationStripTestViewController~ipad.xib */; };
 		F682C9671774B0CD005141A3 /* TSNavigationStripTestViewController~iphone.xib in Resources */ = {isa = PBXBuildFile; fileRef = F682C9631774B0CD005141A3 /* TSNavigationStripTestViewController~iphone.xib */; };
+		F6A4C46317BD1F6000AA8195 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F682C8941774A718005141A3 /* UIKit.framework */; };
+		F6A4C46417BD1F6000AA8195 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F682C8961774A718005141A3 /* Foundation.framework */; };
+		F6A4C46517BD1F6000AA8195 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F682C8981774A718005141A3 /* CoreGraphics.framework */; };
+		F6A4C46B17BD1F6000AA8195 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F6A4C46917BD1F6000AA8195 /* InfoPlist.strings */; };
+		F6A4C46D17BD1F6000AA8195 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F6A4C46C17BD1F6000AA8195 /* main.m */; };
+		F6A4C47117BD1F6000AA8195 /* TSAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F6A4C47017BD1F6000AA8195 /* TSAppDelegate.m */; };
+		F6A4C47317BD1F6000AA8195 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = F6A4C47217BD1F6000AA8195 /* Default.png */; };
+		F6A4C47517BD1F6000AA8195 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6A4C47417BD1F6000AA8195 /* Default@2x.png */; };
+		F6A4C47717BD1F6000AA8195 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6A4C47617BD1F6000AA8195 /* Default-568h@2x.png */; };
+		F6A4C47A17BD1F6000AA8195 /* TSTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F6A4C47917BD1F6000AA8195 /* TSTableViewController.m */; };
+		F6A4C47D17BD1F6000AA8195 /* TSTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6A4C47B17BD1F6000AA8195 /* TSTableViewController.xib */; };
+		F6A4C48017BD1F6000AA8195 /* TSTableViewController~ipad.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6A4C47E17BD1F6000AA8195 /* TSTableViewController~ipad.xib */; };
+		F6A4C48417BD213D00AA8195 /* TSTableViewHeaderPanel.m in Sources */ = {isa = PBXBuildFile; fileRef = F678EB3D17B664E000F1AD5D /* TSTableViewHeaderPanel.m */; };
+		F6A4C48517BD213D00AA8195 /* TSTableViewHeaderSection.m in Sources */ = {isa = PBXBuildFile; fileRef = F678EB4217B6681100F1AD5D /* TSTableViewHeaderSection.m */; };
+		F6A4C48617BD213D00AA8195 /* TSTableViewExpandControlPanel.m in Sources */ = {isa = PBXBuildFile; fileRef = F678EB9D17B84AC700F1AD5D /* TSTableViewExpandControlPanel.m */; };
+		F6A4C48717BD213D00AA8195 /* TSTableViewExpandRow.m in Sources */ = {isa = PBXBuildFile; fileRef = F6A8689317BA16CC003AF8D4 /* TSTableViewExpandRow.m */; };
+		F6A4C48817BD213D00AA8195 /* TSTableViewContentHolder.m in Sources */ = {isa = PBXBuildFile; fileRef = F6A8689617BA38EA003AF8D4 /* TSTableViewContentHolder.m */; };
+		F6A4C48917BD213D00AA8195 /* TSTableViewRow.m in Sources */ = {isa = PBXBuildFile; fileRef = F6A8689917BA4D92003AF8D4 /* TSTableViewRow.m */; };
+		F6A4C48A17BD213D00AA8195 /* TSTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = F678EB3617B5346B00F1AD5D /* TSTableView.m */; };
+		F6A4C48B17BD213D00AA8195 /* TSTableViewHeaderSectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = F6A8688D17B94269003AF8D4 /* TSTableViewHeaderSectionView.m */; };
+		F6A4C48C17BD213D00AA8195 /* TSTableViewExpandRowButton.m in Sources */ = {isa = PBXBuildFile; fileRef = F6A8689017BA16AE003AF8D4 /* TSTableViewExpandRowButton.m */; };
+		F6A4C48D17BD213D00AA8195 /* TSTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F6A8689C17BA7FEE003AF8D4 /* TSTableViewCell.m */; };
+		F6A4C48E17BD213D00AA8195 /* TSTableViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F6A8689F17BC1B4A003AF8D4 /* TSTableViewModel.m */; };
+		F6A4C48F17BD227900AA8195 /* TSUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = F6F3CEE71781ABB400C7274F /* TSUtils.m */; };
+		F6A4C49017BD812400AA8195 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F682C8DC1774B017005141A3 /* QuartzCore.framework */; };
+		F6A8688E17B9426A003AF8D4 /* TSTableViewHeaderSectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = F6A8688D17B94269003AF8D4 /* TSTableViewHeaderSectionView.m */; };
+		F6A8689117BA16AE003AF8D4 /* TSTableViewExpandRowButton.m in Sources */ = {isa = PBXBuildFile; fileRef = F6A8689017BA16AE003AF8D4 /* TSTableViewExpandRowButton.m */; };
+		F6A8689417BA16CD003AF8D4 /* TSTableViewExpandRow.m in Sources */ = {isa = PBXBuildFile; fileRef = F6A8689317BA16CC003AF8D4 /* TSTableViewExpandRow.m */; };
+		F6A8689717BA38EA003AF8D4 /* TSTableViewContentHolder.m in Sources */ = {isa = PBXBuildFile; fileRef = F6A8689617BA38EA003AF8D4 /* TSTableViewContentHolder.m */; };
+		F6A8689A17BA4D93003AF8D4 /* TSTableViewRow.m in Sources */ = {isa = PBXBuildFile; fileRef = F6A8689917BA4D92003AF8D4 /* TSTableViewRow.m */; };
+		F6A8689D17BA7FEF003AF8D4 /* TSTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F6A8689C17BA7FEE003AF8D4 /* TSTableViewCell.m */; };
+		F6A868A017BC1B4E003AF8D4 /* TSTableViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F6A8689F17BC1B4A003AF8D4 /* TSTableViewModel.m */; };
 		F6EE2A2817835D1300C0C4A3 /* TSTabViewWithDropDownPanelModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F6EE2A2717835D1300C0C4A3 /* TSTabViewWithDropDownPanelModel.m */; };
 		F6EE2A2917835D1300C0C4A3 /* TSTabViewWithDropDownPanelModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F6EE2A2717835D1300C0C4A3 /* TSTabViewWithDropDownPanelModel.m */; };
 		F6EE2A2A17835D1300C0C4A3 /* TSTabViewWithDropDownPanelModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F6EE2A2717835D1300C0C4A3 /* TSTabViewWithDropDownPanelModel.m */; };
@@ -318,6 +354,16 @@
 /* Begin PBXFileReference section */
 		F63C0A0B17821F8C005AB903 /* TSTabViewWithDropDownPanel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSTabViewWithDropDownPanel.h; sourceTree = "<group>"; };
 		F63C0A0C17821F8C005AB903 /* TSTabViewWithDropDownPanel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSTabViewWithDropDownPanel.m; sourceTree = "<group>"; };
+		F678EB3517B5346B00F1AD5D /* TSTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSTableView.h; sourceTree = "<group>"; };
+		F678EB3617B5346B00F1AD5D /* TSTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSTableView.m; sourceTree = "<group>"; };
+		F678EB3C17B664E000F1AD5D /* TSTableViewHeaderPanel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSTableViewHeaderPanel.h; sourceTree = "<group>"; };
+		F678EB3D17B664E000F1AD5D /* TSTableViewHeaderPanel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSTableViewHeaderPanel.m; sourceTree = "<group>"; };
+		F678EB3F17B664FF00F1AD5D /* TSTableViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSTableViewDataSource.h; sourceTree = "<group>"; };
+		F678EB4017B6657E00F1AD5D /* TSTableViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSTableViewDelegate.h; sourceTree = "<group>"; };
+		F678EB4117B6681100F1AD5D /* TSTableViewHeaderSection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSTableViewHeaderSection.h; sourceTree = "<group>"; };
+		F678EB4217B6681100F1AD5D /* TSTableViewHeaderSection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSTableViewHeaderSection.m; sourceTree = "<group>"; };
+		F678EB9C17B84AC700F1AD5D /* TSTableViewExpandControlPanel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSTableViewExpandControlPanel.h; sourceTree = "<group>"; };
+		F678EB9D17B84AC700F1AD5D /* TSTableViewExpandControlPanel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSTableViewExpandControlPanel.m; sourceTree = "<group>"; };
 		F680D2861774B9C2005ACD94 /* TabViewTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TabViewTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F680D2A61774BA82005ACD94 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		F680D2A71774BA82005ACD94 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
@@ -353,6 +399,35 @@
 		F682C9601774B0CD005141A3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = InfoPlist.strings; sourceTree = "<group>"; };
 		F682C9621774B0CD005141A3 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = "TSNavigationStripTestViewController~ipad.xib"; sourceTree = "<group>"; };
 		F682C9641774B0CD005141A3 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = "TSNavigationStripTestViewController~iphone.xib"; sourceTree = "<group>"; };
+		F6A4C45D17BD008900AA8195 /* TSTableViewAppearanceCoordinator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSTableViewAppearanceCoordinator.h; sourceTree = "<group>"; };
+		F6A4C46217BD1F5F00AA8195 /* TableView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TableView.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F6A4C46817BD1F6000AA8195 /* TableView-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TableView-Info.plist"; sourceTree = "<group>"; };
+		F6A4C46A17BD1F6000AA8195 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		F6A4C46C17BD1F6000AA8195 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F6A4C46E17BD1F6000AA8195 /* TableView-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TableView-Prefix.pch"; sourceTree = "<group>"; };
+		F6A4C46F17BD1F6000AA8195 /* TSAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TSAppDelegate.h; sourceTree = "<group>"; };
+		F6A4C47017BD1F6000AA8195 /* TSAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TSAppDelegate.m; sourceTree = "<group>"; };
+		F6A4C47217BD1F6000AA8195 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		F6A4C47417BD1F6000AA8195 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		F6A4C47617BD1F6000AA8195 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		F6A4C47817BD1F6000AA8195 /* TSTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TSTableViewController.h; sourceTree = "<group>"; };
+		F6A4C47917BD1F6000AA8195 /* TSTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TSTableViewController.m; sourceTree = "<group>"; };
+		F6A4C47C17BD1F6000AA8195 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/TSTableViewController.xib; sourceTree = "<group>"; };
+		F6A4C47F17BD1F6000AA8195 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = "en.lproj/TSTableViewController~ipad.xib"; sourceTree = "<group>"; };
+		F6A8688C17B94269003AF8D4 /* TSTableViewHeaderSectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSTableViewHeaderSectionView.h; sourceTree = "<group>"; };
+		F6A8688D17B94269003AF8D4 /* TSTableViewHeaderSectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSTableViewHeaderSectionView.m; sourceTree = "<group>"; };
+		F6A8688F17BA16AE003AF8D4 /* TSTableViewExpandRowButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSTableViewExpandRowButton.h; sourceTree = "<group>"; };
+		F6A8689017BA16AE003AF8D4 /* TSTableViewExpandRowButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSTableViewExpandRowButton.m; sourceTree = "<group>"; };
+		F6A8689217BA16CC003AF8D4 /* TSTableViewExpandRow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSTableViewExpandRow.h; sourceTree = "<group>"; };
+		F6A8689317BA16CC003AF8D4 /* TSTableViewExpandRow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSTableViewExpandRow.m; sourceTree = "<group>"; };
+		F6A8689517BA38EA003AF8D4 /* TSTableViewContentHolder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSTableViewContentHolder.h; sourceTree = "<group>"; };
+		F6A8689617BA38EA003AF8D4 /* TSTableViewContentHolder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSTableViewContentHolder.m; sourceTree = "<group>"; };
+		F6A8689817BA4D92003AF8D4 /* TSTableViewRow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSTableViewRow.h; sourceTree = "<group>"; };
+		F6A8689917BA4D92003AF8D4 /* TSTableViewRow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSTableViewRow.m; sourceTree = "<group>"; };
+		F6A8689B17BA7FED003AF8D4 /* TSTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSTableViewCell.h; sourceTree = "<group>"; };
+		F6A8689C17BA7FEE003AF8D4 /* TSTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSTableViewCell.m; sourceTree = "<group>"; };
+		F6A8689E17BC1B48003AF8D4 /* TSTableViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSTableViewModel.h; sourceTree = "<group>"; };
+		F6A8689F17BC1B4A003AF8D4 /* TSTableViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSTableViewModel.m; sourceTree = "<group>"; };
 		F6EE2A2517834B5200C0C4A3 /* TSTabViewWithDropDownPanelDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSTabViewWithDropDownPanelDelegate.h; sourceTree = "<group>"; };
 		F6EE2A2617835D1300C0C4A3 /* TSTabViewWithDropDownPanelModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSTabViewWithDropDownPanelModel.h; sourceTree = "<group>"; };
 		F6EE2A2717835D1300C0C4A3 /* TSTabViewWithDropDownPanelModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSTabViewWithDropDownPanelModel.m; sourceTree = "<group>"; };
@@ -491,6 +566,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F6A4C45F17BD1F5F00AA8195 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F6A4C49017BD812400AA8195 /* QuartzCore.framework in Frameworks */,
+				F6A4C46317BD1F6000AA8195 /* UIKit.framework in Frameworks */,
+				F6A4C46417BD1F6000AA8195 /* Foundation.framework in Frameworks */,
+				F6A4C46517BD1F6000AA8195 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F6EE2A2C17835D9A00C0C4A3 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -515,6 +601,46 @@
 				F6EE2A2717835D1300C0C4A3 /* TSTabViewWithDropDownPanelModel.m */,
 			);
 			path = TSTabViewWithDropDownPanel;
+			sourceTree = "<group>";
+		};
+		F678EB3417B5344100F1AD5D /* TSTableView */ = {
+			isa = PBXGroup;
+			children = (
+				F678EB3B17B664E000F1AD5D /* Private */,
+				F678EB3517B5346B00F1AD5D /* TSTableView.h */,
+				F678EB3617B5346B00F1AD5D /* TSTableView.m */,
+				F678EB3F17B664FF00F1AD5D /* TSTableViewDataSource.h */,
+				F678EB4017B6657E00F1AD5D /* TSTableViewDelegate.h */,
+				F6A8688C17B94269003AF8D4 /* TSTableViewHeaderSectionView.h */,
+				F6A8688D17B94269003AF8D4 /* TSTableViewHeaderSectionView.m */,
+				F6A8688F17BA16AE003AF8D4 /* TSTableViewExpandRowButton.h */,
+				F6A8689017BA16AE003AF8D4 /* TSTableViewExpandRowButton.m */,
+				F6A8689B17BA7FED003AF8D4 /* TSTableViewCell.h */,
+				F6A8689C17BA7FEE003AF8D4 /* TSTableViewCell.m */,
+				F6A8689E17BC1B48003AF8D4 /* TSTableViewModel.h */,
+				F6A8689F17BC1B4A003AF8D4 /* TSTableViewModel.m */,
+			);
+			path = TSTableView;
+			sourceTree = "<group>";
+		};
+		F678EB3B17B664E000F1AD5D /* Private */ = {
+			isa = PBXGroup;
+			children = (
+				F678EB3C17B664E000F1AD5D /* TSTableViewHeaderPanel.h */,
+				F678EB3D17B664E000F1AD5D /* TSTableViewHeaderPanel.m */,
+				F678EB4117B6681100F1AD5D /* TSTableViewHeaderSection.h */,
+				F678EB4217B6681100F1AD5D /* TSTableViewHeaderSection.m */,
+				F678EB9C17B84AC700F1AD5D /* TSTableViewExpandControlPanel.h */,
+				F678EB9D17B84AC700F1AD5D /* TSTableViewExpandControlPanel.m */,
+				F6A8689217BA16CC003AF8D4 /* TSTableViewExpandRow.h */,
+				F6A8689317BA16CC003AF8D4 /* TSTableViewExpandRow.m */,
+				F6A8689517BA38EA003AF8D4 /* TSTableViewContentHolder.h */,
+				F6A8689617BA38EA003AF8D4 /* TSTableViewContentHolder.m */,
+				F6A8689817BA4D92003AF8D4 /* TSTableViewRow.h */,
+				F6A8689917BA4D92003AF8D4 /* TSTableViewRow.m */,
+				F6A4C45D17BD008900AA8195 /* TSTableViewAppearanceCoordinator.h */,
+			);
+			path = Private;
 			sourceTree = "<group>";
 		};
 		F680D28A1774B9C2005ACD94 /* TabViewTest */ = {
@@ -561,6 +687,7 @@
 				F682C8E61774B054005141A3 /* NavigationStripTest */,
 				F680D28A1774B9C2005ACD94 /* TabViewTest */,
 				F6EE2A3317835D9A00C0C4A3 /* TabViewWithDropDownPanel */,
+				F6A4C46617BD1F6000AA8195 /* TableView */,
 				F682C8931774A718005141A3 /* Frameworks */,
 				F682C8921774A718005141A3 /* Products */,
 			);
@@ -573,6 +700,7 @@
 				F682C8E21774B054005141A3 /* NavigationStripTest.app */,
 				F680D2861774B9C2005ACD94 /* TabViewTest.app */,
 				F6EE2A2F17835D9A00C0C4A3 /* TabViewWithDropDownPanel.app */,
+				F6A4C46217BD1F5F00AA8195 /* TableView.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -624,6 +752,34 @@
 				F682C9631774B0CD005141A3 /* TSNavigationStripTestViewController~iphone.xib */,
 			);
 			path = en.lproj;
+			sourceTree = "<group>";
+		};
+		F6A4C46617BD1F6000AA8195 /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				F6A4C46F17BD1F6000AA8195 /* TSAppDelegate.h */,
+				F6A4C47017BD1F6000AA8195 /* TSAppDelegate.m */,
+				F6A4C47817BD1F6000AA8195 /* TSTableViewController.h */,
+				F6A4C47917BD1F6000AA8195 /* TSTableViewController.m */,
+				F6A4C47B17BD1F6000AA8195 /* TSTableViewController.xib */,
+				F6A4C47E17BD1F6000AA8195 /* TSTableViewController~ipad.xib */,
+				F6A4C46717BD1F6000AA8195 /* Supporting Files */,
+			);
+			path = TableView;
+			sourceTree = "<group>";
+		};
+		F6A4C46717BD1F6000AA8195 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F6A4C46817BD1F6000AA8195 /* TableView-Info.plist */,
+				F6A4C46917BD1F6000AA8195 /* InfoPlist.strings */,
+				F6A4C46C17BD1F6000AA8195 /* main.m */,
+				F6A4C46E17BD1F6000AA8195 /* TableView-Prefix.pch */,
+				F6A4C47217BD1F6000AA8195 /* Default.png */,
+				F6A4C47417BD1F6000AA8195 /* Default@2x.png */,
+				F6A4C47617BD1F6000AA8195 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		F6EE2A3317835D9A00C0C4A3 /* TabViewWithDropDownPanel */ = {
@@ -772,6 +928,7 @@
 		F6F3CEE31781ABB400C7274F /* TSUIKit */ = {
 			isa = PBXGroup;
 			children = (
+				F678EB3417B5344100F1AD5D /* TSTableView */,
 				F63C0A0A17821CD3005AB903 /* TSTabViewWithDropDownPanel */,
 				F6F3CEE41781ABB400C7274F /* TSMisc */,
 				F6F3CEE81781ABB400C7274F /* TSNavigationStripView */,
@@ -880,6 +1037,23 @@
 			productReference = F682C8E21774B054005141A3 /* NavigationStripTest.app */;
 			productType = "com.apple.product-type.application";
 		};
+		F6A4C46117BD1F5F00AA8195 /* TableView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F6A4C48117BD1F6000AA8195 /* Build configuration list for PBXNativeTarget "TableView" */;
+			buildPhases = (
+				F6A4C45E17BD1F5F00AA8195 /* Sources */,
+				F6A4C45F17BD1F5F00AA8195 /* Frameworks */,
+				F6A4C46017BD1F5F00AA8195 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TableView;
+			productName = TableView;
+			productReference = F6A4C46217BD1F5F00AA8195 /* TableView.app */;
+			productType = "com.apple.product-type.application";
+		};
 		F6EE2A2E17835D9A00C0C4A3 /* TabViewWithDropDownPanel */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = F6EE2A4E17835D9A00C0C4A3 /* Build configuration list for PBXNativeTarget "TabViewWithDropDownPanel" */;
@@ -923,6 +1097,7 @@
 				F682C8E11774B054005141A3 /* NavigationStripTest */,
 				F680D2851774B9C2005ACD94 /* TabViewTest */,
 				F6EE2A2E17835D9A00C0C4A3 /* TabViewWithDropDownPanel */,
+				F6A4C46117BD1F5F00AA8195 /* TableView */,
 			);
 		};
 /* End PBXProject section */
@@ -1130,6 +1305,19 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F6A4C46017BD1F5F00AA8195 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F6A4C46B17BD1F6000AA8195 /* InfoPlist.strings in Resources */,
+				F6A4C47317BD1F6000AA8195 /* Default.png in Resources */,
+				F6A4C47517BD1F6000AA8195 /* Default@2x.png in Resources */,
+				F6A4C47717BD1F6000AA8195 /* Default-568h@2x.png in Resources */,
+				F6A4C47D17BD1F6000AA8195 /* TSTableViewController.xib in Resources */,
+				F6A4C48017BD1F6000AA8195 /* TSTableViewController~ipad.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F6EE2A2D17835D9A00C0C4A3 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1237,6 +1425,17 @@
 				F6F3CF1B1781ABB500C7274F /* TSRootViewController.m in Sources */,
 				F63C0A0D17821F8C005AB903 /* TSTabViewWithDropDownPanel.m in Sources */,
 				F6EE2A2817835D1300C0C4A3 /* TSTabViewWithDropDownPanelModel.m in Sources */,
+				F678EB3717B5346B00F1AD5D /* TSTableView.m in Sources */,
+				F678EB3E17B664E000F1AD5D /* TSTableViewHeaderPanel.m in Sources */,
+				F678EB4317B6681100F1AD5D /* TSTableViewHeaderSection.m in Sources */,
+				F678EB9E17B84AC700F1AD5D /* TSTableViewExpandControlPanel.m in Sources */,
+				F6A8688E17B9426A003AF8D4 /* TSTableViewHeaderSectionView.m in Sources */,
+				F6A8689117BA16AE003AF8D4 /* TSTableViewExpandRowButton.m in Sources */,
+				F6A8689417BA16CD003AF8D4 /* TSTableViewExpandRow.m in Sources */,
+				F6A8689717BA38EA003AF8D4 /* TSTableViewContentHolder.m in Sources */,
+				F6A8689A17BA4D93003AF8D4 /* TSTableViewRow.m in Sources */,
+				F6A8689D17BA7FEF003AF8D4 /* TSTableViewCell.m in Sources */,
+				F6A868A017BC1B4E003AF8D4 /* TSTableViewModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1256,6 +1455,28 @@
 				F680D453177D0E0A005ACD94 /* TSTestSectionButton.m in Sources */,
 				F63C0A0E17821F8C005AB903 /* TSTabViewWithDropDownPanel.m in Sources */,
 				F6EE2A2917835D1300C0C4A3 /* TSTabViewWithDropDownPanelModel.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F6A4C45E17BD1F5F00AA8195 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F6A4C48F17BD227900AA8195 /* TSUtils.m in Sources */,
+				F6A4C48417BD213D00AA8195 /* TSTableViewHeaderPanel.m in Sources */,
+				F6A4C48517BD213D00AA8195 /* TSTableViewHeaderSection.m in Sources */,
+				F6A4C48617BD213D00AA8195 /* TSTableViewExpandControlPanel.m in Sources */,
+				F6A4C48717BD213D00AA8195 /* TSTableViewExpandRow.m in Sources */,
+				F6A4C48817BD213D00AA8195 /* TSTableViewContentHolder.m in Sources */,
+				F6A4C48917BD213D00AA8195 /* TSTableViewRow.m in Sources */,
+				F6A4C48A17BD213D00AA8195 /* TSTableView.m in Sources */,
+				F6A4C48B17BD213D00AA8195 /* TSTableViewHeaderSectionView.m in Sources */,
+				F6A4C48C17BD213D00AA8195 /* TSTableViewExpandRowButton.m in Sources */,
+				F6A4C48D17BD213D00AA8195 /* TSTableViewCell.m in Sources */,
+				F6A4C48E17BD213D00AA8195 /* TSTableViewModel.m in Sources */,
+				F6A4C46D17BD1F6000AA8195 /* main.m in Sources */,
+				F6A4C47117BD1F6000AA8195 /* TSAppDelegate.m in Sources */,
+				F6A4C47A17BD1F6000AA8195 /* TSTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1326,6 +1547,30 @@
 				F682C9641774B0CD005141A3 /* en */,
 			);
 			name = "TSNavigationStripTestViewController~iphone.xib";
+			sourceTree = "<group>";
+		};
+		F6A4C46917BD1F6000AA8195 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F6A4C46A17BD1F6000AA8195 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		F6A4C47B17BD1F6000AA8195 /* TSTableViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F6A4C47C17BD1F6000AA8195 /* en */,
+			);
+			name = TSTableViewController.xib;
+			sourceTree = "<group>";
+		};
+		F6A4C47E17BD1F6000AA8195 /* TSTableViewController~ipad.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F6A4C47F17BD1F6000AA8195 /* en */,
+			);
+			name = "TSTableViewController~ipad.xib";
 			sourceTree = "<group>";
 		};
 		F6EE2A3617835D9A00C0C4A3 /* InfoPlist.strings */ = {
@@ -1517,6 +1762,32 @@
 			};
 			name = Release;
 		};
+		F6A4C48217BD1F6000AA8195 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TableView/TableView-Prefix.pch";
+				INFOPLIST_FILE = "TableView/TableView-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		F6A4C48317BD1F6000AA8195 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TableView/TableView-Prefix.pch";
+				INFOPLIST_FILE = "TableView/TableView-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
 		F6EE2A4F17835D9A00C0C4A3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1579,6 +1850,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		F6A4C48117BD1F6000AA8195 /* Build configuration list for PBXNativeTarget "TableView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F6A4C48217BD1F6000AA8195 /* Debug */,
+				F6A4C48317BD1F6000AA8195 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 		F6EE2A4E17835D9A00C0C4A3 /* Build configuration list for PBXNativeTarget "TabViewWithDropDownPanel" */ = {
 			isa = XCConfigurationList;

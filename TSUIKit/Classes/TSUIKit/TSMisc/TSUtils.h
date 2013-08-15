@@ -31,4 +31,8 @@
 
 + (void)performViewAnimationBlock:(void (^)(void))block withCompletion:(void (^)(void))completion animated:(BOOL)animated;
 
++ (UIImage *)imageWithColor:(UIColor *)color andSize:(CGSize)size;
++ (void)drawLinearGradientInContext:(CGContextRef)context rect:(CGRect)rect startColor:(CGColorRef)startColor endColor:(CGColorRef)endColor;
++ (void)drawLineInContext:(CGContextRef)context startPoint:(CGPoint)startPoint endPoint:(CGPoint)endPoint color:(CGColorRef)color lineWidth:(CGFloat)lineWidth;
+
 @end

@@ -93,7 +93,6 @@
 
 @interface TSNavigationStripModel : NSObject <TSNavigationStripDataSource>
 {
-@protected
     NSMutableArray *_leftItems;
     NSMutableArray *_rightItems;
     NSMutableArray *_sections;
