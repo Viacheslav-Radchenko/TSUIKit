@@ -3,20 +3,72 @@
 //  TSUIKit
 //
 //  Created by Viacheslav Radchenko on 8/14/13.
-//  Copyright (c) 2013 Viacheslav Radchenko. All rights reserved.
 //
+//  The MIT License (MIT)
+//  Copyright © 2013 Viacheslav Radchenko
+//
+//  Permission is hereby granted, free of charge, to any person obtaining a copy
+//  of this software and associated documentation files (the "Software"), to deal
+//  in the Software without restriction, including without limitation the rights
+//  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+//  copies of the Software, and to permit persons to whom the Software is
+//  furnished to do so, subject to the following conditions:
+//
+//  The above copyright notice and this permission notice shall be included in
+//  all copies or substantial portions of the Software.
+//
+//  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+//  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+//  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+//  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+//  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+//  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+//  THE SOFTWARE.
 
 #import <Foundation/Foundation.h>
 #import "TSTableView.h"
 
 /**
- *  @abstract
+ *  @abstract   Classes provided below implement prototype for TSTableViewDataSource.
+ *              It is optional part of TSTableView infrastructure, inluded as an example of possible data source implementation.
+ *
+ *              This prototype provides enough flexibility for building custom TSTableView containers.
+ *              If you need something completly different you can always implement your own data source entity.
+ */
+
+
+/**************************************************************************************************************************************/
+
+/**
+ *  @abstract  TSColumn provides infromation about content and appearance of TSTableViewHederSectionView component.
+ *             Initialization dictionary can contain values for properties specified in  TSColumn interface. 
+ *             Example:
+ *
+ *              NSDictionary *columnInfo = @{ 
+ *                  @"title" : @"Column 1", 
+ *                  @"subtitle" : @"This is first column", 
+ *                  @"subcolumns" : @[
+ *                                      @{ @"title" : @"Subcolumn 1.1"},
+ *                                      @{ @"title" : @"Subcolumn 1.2"}
+ *                                    ]
+ *              };
  */
 
 @interface TSColumn : NSObject
 
 @property (nonatomic, strong) NSString *title;
+@property (nonatomic, strong) NSString *subtitle;
+@property (nonatomic, strong) UIImage *icon;
+@property (nonatomic, strong) UIColor *color;
+@property (nonatomic, strong) UIColor *titleColor;
+@property (nonatomic, strong) UIColor *subtitleColor;
 @property (nonatomic, strong) NSArray *subcolumns;
+@property (nonatomic, assign) CGFloat titleFontSize;
+@property (nonatomic, assign) CGFloat subtitleFontSize;
+@property (nonatomic, assign) CGFloat defWidth;
+@property (nonatomic, assign) CGFloat minWidth;
+@property (nonatomic, assign) CGFloat maxWidth;
+@property (nonatomic, assign) CGFloat headerHeight;
 
 + (id)columnWithTitle:(NSString *)title;
 + (id)columnWithTitle:(NSString *)title andSubcolumns:(NSArray *)sublolumns;
@@ -28,8 +80,10 @@
 
 @end
 
+/**************************************************************************************************************************************/
+
 /**
- *  @abstract
+ *  @abstract TSRow provides information about table row content (cells) and hierarchy (subrows)
  */
 
 @interface TSRow : NSObject
@@ -46,8 +100,10 @@
 
 @end
 
+/**************************************************************************************************************************************/
+
 /**
- *  @abstract
+ *  @abstract TSCell provides inforamation about TableView cell content
  */
 
 @interface TSCell : NSObject
@@ -61,11 +117,19 @@
 
 @end
 
+/**************************************************************************************************************************************/
+
 /**
- *  @abstract
+ *  @abstract   TSTableViewModel is a prototype for TSTableViewDataSource
+ *              There are two ready to use appearance styles: TSTableViewStyleDark and TSTableViewStyleLight.
  */
 
 @class TSTableView;
+
+typedef enum {
+    TSTableViewStyleDark,
+    TSTableViewStyleLight
+} TSTableViewStyle;
 
 @interface TSTableViewModel : NSObject <TSTableViewDataSource>
 {
@@ -77,14 +141,20 @@
 @property (nonatomic, strong, readonly) NSArray *columns;
 @property (nonatomic, strong, readonly) NSArray *rows;
 @property (nonatomic, strong, readonly) TSTableView *tableView;
+@property (nonatomic, assign, readonly) TSTableViewStyle tableStyle;
 
-- (id)initWithTableView:(TSTableView *)tableView;
+@property (nonatomic, assign) CGFloat heightForRow;
+@property (nonatomic, assign) CGFloat widthForExpandItem;
+
+- (id)initWithTableView:(TSTableView *)tableView andStyle:(TSTableViewStyle)style;
 - (void)setColumns:(NSArray *)columns andRows:(NSArray *)rows;
 - (void)setColumnsInfo:(NSArray *)columns andRowsInfo:(NSArray *)rows;
 
+// Not implemented yet
+- (void)insertRow:(TSRow *)rowInfo atPath:(NSIndexPath *)indexPath;
+- (void)removeRowAtPath:(NSIndexPath *)indexPath;
+
 @end
-
-
 
 //TSTableViewModel *model = [[TSTableViewModel alloc] initWithTableView:tableView];
 //[model setColumns:@[@"Column 1", @"Column 2", [TSColumn  columnWithTitle:@"Column" andSubcolumns:@[@"Column 3", @"Column 4"]]]

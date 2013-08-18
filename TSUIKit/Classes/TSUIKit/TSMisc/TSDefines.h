@@ -41,6 +41,9 @@
 #define CLAMP(min, max, val)    ((val) < (min) ? (min) : ((val) > (max) ? (max) : (val)))
 #define LERP(min, max, t)       ((min) + ((max) - (min)) * (t))
 
+#define UIColorFromRGB(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
+
+
 #define EPS 0.000001
 
 #define SUPPRESS_PERFORM_SELECTOR_LEAK_WARNING(Stuff) \

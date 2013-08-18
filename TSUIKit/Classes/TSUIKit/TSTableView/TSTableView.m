@@ -3,8 +3,27 @@
 //  TSUIKit
 //
 //  Created by Viacheslav Radchenko on 8/9/13.
-//  Copyright (c) 2013 Viacheslav Radchenko. All rights reserved.
 //
+//  The MIT License (MIT)
+//  Copyright © 2013 Viacheslav Radchenko
+//
+//  Permission is hereby granted, free of charge, to any person obtaining a copy
+//  of this software and associated documentation files (the "Software"), to deal
+//  in the Software without restriction, including without limitation the rights
+//  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+//  copies of the Software, and to permit persons to whom the Software is
+//  furnished to do so, subject to the following conditions:
+//
+//  The above copyright notice and this permission notice shall be included in
+//  all copies or substantial portions of the Software.
+//
+//  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+//  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+//  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+//  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+//  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+//  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+//  THE SOFTWARE.
 
 #import "TSTableView.h"
 #import "TSTableViewHeaderPanel.h"
@@ -15,6 +34,9 @@
 #import "TSUtils.h"
 
 #define DEF_TABLE_CONTENT_ADDITIONAL_SIZE   32
+#define DEF_TABLE_MIN_COLUMN_WIDTH          64
+#define DEF_TABLE_MAX_COLUMN_WIDTH          512
+#define DEF_TABLE_DEF_COLUMN_WIDTH          128
 
 #ifndef VerboseLog
 #define VerboseLog(fmt, ...)  (void)0
@@ -22,13 +44,26 @@
 
 @interface TSTableView () <TSTableViewHeaderPanelDelegate, TSTableViewExpandControlPanelDelegate, TSTableViewContentHolderDelegate, TSTableViewAppearanceCoordinator>
 
+@property (nonatomic, assign) CGFloat contentAdditionalSize;
 @property (nonatomic, strong) TSTableViewHeaderPanel *tableHeader;
 @property (nonatomic, strong) TSTableViewExpandControlPanel *tableControlPanel;
 @property (nonatomic, strong) TSTableViewContentHolder *tableContentHolder;
+@property (nonatomic, strong) UIImageView *headerBackgroundImageView;
+@property (nonatomic, strong) UIImageView *expandPanelBackgroundImageView;
+@property (nonatomic, strong) UIImageView *topLeftCornerBackgroundImageView;
 
 @end
 
 @implementation TSTableView
+
+@dynamic allowRowSelection;
+@dynamic allowColumnSelection;
+@dynamic maxNestingLevel;
+@dynamic expandPanelBackgroundImage;
+@dynamic headerBackgroundImage;
+@dynamic topLeftCornerBackgroundImage;
+@dynamic headerBackgroundColor;
+@dynamic expandPanelBackgroundColor;
 
 - (id)init
 {
@@ -60,13 +95,15 @@
 - (void)initialize
 {
     VerboseLog();
-    self.backgroundColor = [UIColor lightGrayColor];
+    self.backgroundColor = [UIColor redColor];
     
+    _lineNumbersColor = [UIColor blackColor];
     _contentAdditionalSize = DEF_TABLE_CONTENT_ADDITIONAL_SIZE;
    
     CGRect headerRect = CGRectMake(0, 0, self.frame.size.width, 0);
     _tableHeader = [[TSTableViewHeaderPanel alloc] initWithFrame: headerRect];
     _tableHeader.autoresizingMask = UIViewAutoresizingFlexibleWidth;
+    _tableHeader.backgroundColor = [UIColor clearColor];
     _tableHeader.headerDelegate = self;
     [self addSubview:_tableHeader];
     
@@ -74,6 +111,7 @@
     _tableControlPanel = [[TSTableViewExpandControlPanel alloc] initWithFrame:controlPanelRect];
     _tableControlPanel.autoresizingMask = UIViewAutoresizingFlexibleHeight;
     _tableControlPanel.controlPanelDelegate = self;
+    _tableControlPanel.backgroundColor = [UIColor clearColor];
     [self addSubview: _tableControlPanel];
     
     CGRect contentRect = CGRectMake(0, 0, self.frame.size.width, self.frame.size.height);
@@ -92,27 +130,121 @@
     _tableContentHolder.dataSource = (id)self;
 }
 
-#pragma mark - Setters
+#pragma mark - Getters & Setters
 
-- (void)setMinColumnWidth:(CGFloat)minColumnWidth
+- (NSInteger)maxNestingLevel
 {
-    _tableHeader.minColumnWidth = minColumnWidth;
+    return _tableControlPanel.maxNestingLevel;
 }
 
-- (CGFloat)minColumnWidth
+- (BOOL)allowRowSelection
 {
-    return _tableHeader.minColumnWidth;
+    return _tableContentHolder.allowRowSelection;
 }
 
-- (void)setMaxColumnWidth:(CGFloat)maxColumnWidth
+- (void)setAllowRowSelection:(BOOL)val
 {
-    _tableHeader.maxColumnWidth = maxColumnWidth;
+    _tableContentHolder.allowRowSelection = val;
 }
 
-- (CGFloat)maxColumnWidth
+- (BOOL)allowColumnSelection
 {
-    return _tableHeader.maxColumnWidth;
+    return _tableHeader.allowColumnSelection;
 }
+
+- (void)setAllowColumnRowSelection:(BOOL)val
+{
+    _tableHeader.allowColumnSelection = val;
+}
+
+- (UIImage *)headerBackgroundImage
+{
+    return self.headerBackgroundImageView.image;
+}
+
+- (void)setHeaderBackgroundImage:(UIImage *)image
+{
+    self.headerBackgroundImageView.image = image;
+}
+
+- (UIImage *)expandPanelBackgroundImage
+{
+    return self.expandPanelBackgroundImageView.image;
+}
+
+- (void)setExpandPanelBackgroundImage:(UIImage *)image
+{
+    self.expandPanelBackgroundImageView.image = image;
+}
+
+- (UIImage *)topLeftCornerBackgroundImage
+{
+    return self.topLeftCornerBackgroundImageView.image;
+}
+
+- (void)setTopLeftCornerBackgroundImage:(UIImage *)image
+{
+    self.topLeftCornerBackgroundImageView.image = image;
+}
+
+- (UIColor *)headerBackgroundColor
+{
+    return _tableHeader.backgroundColor;
+}
+
+- (void)setHeaderBackgroundColor:(UIColor *)color
+{
+    _tableHeader.backgroundColor = color;
+}
+
+- (UIColor *)expandPanelBackgroundColor
+{
+    return _tableControlPanel.backgroundColor;
+}
+
+- (void)setExpandPanelBackgroundColor:(UIColor *)color
+{
+    _tableControlPanel.backgroundColor = color;
+}
+
+- (void)setBackgroundColor:(UIColor *)backgroundColor
+{
+    [super setBackgroundColor:backgroundColor];
+    _tableContentHolder.backgroundColor = backgroundColor;
+}
+
+- (UIImageView *)headerBackgroundImageView
+{
+    if(!_headerBackgroundImageView)
+    {
+        _headerBackgroundImageView = [[UIImageView alloc] initWithFrame:_tableHeader.frame];
+        _headerBackgroundImageView.autoresizingMask = UIViewAutoresizingFlexibleWidth;
+        [self insertSubview:_headerBackgroundImageView belowSubview:_tableHeader];
+    }
+    return _headerBackgroundImageView;
+}
+
+- (UIImageView *)expandPanelBackgroundImageView
+{
+    if(!_expandPanelBackgroundImageView)
+    {
+        _expandPanelBackgroundImageView = [[UIImageView alloc] initWithFrame:_tableControlPanel.frame];
+        _expandPanelBackgroundImageView.autoresizingMask = UIViewAutoresizingFlexibleHeight;
+        [self insertSubview:_expandPanelBackgroundImageView belowSubview:_tableControlPanel];
+    }
+    return _expandPanelBackgroundImageView;
+}
+
+- (UIImageView *)topLeftCornerBackgroundImageView
+{
+    if(!_topLeftCornerBackgroundImageView)
+    {
+        _topLeftCornerBackgroundImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, _tableControlPanel.frame.size.width, _tableHeader.frame.size.height)];
+        [self addSubview:_topLeftCornerBackgroundImageView];
+    }
+    return _topLeftCornerBackgroundImageView;
+}
+
 
 #pragma mark - Layout
 
@@ -120,7 +252,7 @@
 {
     VerboseLog();
     CGFloat headerHeight = [_tableHeader headerHeight];
-    CGFloat controlPanleWidth = [_tableControlPanel expandControlPanelWidth];
+    CGFloat controlPanleWidth = [_tableControlPanel panelWidth];
     CGFloat tableWidth = [_tableHeader tableTotalWidth];
     CGFloat tableHeight = [_tableControlPanel tableHeight];
     
@@ -135,6 +267,15 @@
     CGRect contentRect = CGRectMake(controlPanleWidth, headerHeight, self.frame.size.width - controlPanleWidth, self.frame.size.height - headerHeight);
     _tableContentHolder.frame = contentRect;
     _tableContentHolder.contentSize = CGSizeMake(tableWidth + _contentAdditionalSize, tableHeight + _contentAdditionalSize);
+    
+    if(_headerBackgroundImageView)
+        _headerBackgroundImageView.frame = _tableHeader.frame;
+    
+    if(_expandPanelBackgroundImageView)
+        _expandPanelBackgroundImageView.frame = _tableControlPanel.frame;
+
+    if(_topLeftCornerBackgroundImageView)
+        _topLeftCornerBackgroundImageView.frame = CGRectMake(0, 0, _tableControlPanel.frame.size.width, _tableHeader.frame.size.height);
 }
 
 - (void)updateContentOffset
@@ -166,6 +307,12 @@
     [self updateLayout];
 }
 
+- (void)tableViewHeader:(TSTableViewHeaderPanel *)header didSelectColumnAtPath:(NSIndexPath *)columnPath
+{
+    VerboseLog();
+    [_tableContentHolder selectColumnAtPath:columnPath animated:YES];
+}
+
 #pragma mark - TSTableViewExpandControlPanelDelegate
 
 - (void)tableViewSideControlPanel:(TSTableViewExpandControlPanel *)controlPanel expandStateDidChange:(BOOL)expand forRow:(NSIndexPath *)rowPath
@@ -182,25 +329,6 @@
     VerboseLog();
     [_tableControlPanel setContentOffset:CGPointMake(self.tableControlPanel.contentOffset.x, contentOffset.y) animated:animated];
     [_tableHeader setContentOffset:CGPointMake(contentOffset.x, self.tableHeader.contentOffset.y) animated:animated];
-}
-
-#pragma mark - Provide DataSource functionality
-
-- (NSMethodSignature *)methodSignatureForSelector:(SEL)aSelector
-{
-    NSMethodSignature *signature = [super methodSignatureForSelector:aSelector];
-    if(!signature)
-        signature = [(id)self.dataSource methodSignatureForSelector:aSelector];
-    
-    return signature;
-}
-
-- (void)forwardInvocation:(NSInvocation *)anInvocation
-{
-    if ([self.dataSource respondsToSelector:[anInvocation selector]])
-        [anInvocation invokeWithTarget:self.dataSource];
-    else
-        [super forwardInvocation:anInvocation];
 }
 
 #pragma mark - 
@@ -228,26 +356,87 @@
     [self updateLayout];
 }
 
+- (void)selectRowAtPath:(NSIndexPath *)rowPath animated:(BOOL)animated
+{
+    [_tableContentHolder selectRowAtPath:rowPath animated:animated];
+}
+
+- (void)resetRowSelectionWithAnimtaion:(BOOL)animated
+{
+    [_tableContentHolder resetRowSelectionWithAnimtaion:YES];
+}
+
+- (void)selectColumnAtPath:(NSIndexPath *)rowPath animated:(BOOL)animated
+{
+    [_tableContentHolder selectRowAtPath:rowPath animated:animated];
+}
+
+- (void)resetColumnSelectionWithAnimtaion:(BOOL)animated
+{
+    [_tableContentHolder resetColumnSelectionWithAnimtaion:YES];
+}
+
+#pragma mark - Provide TSTableViewDataSource functionality
+
+- (NSMethodSignature *)methodSignatureForSelector:(SEL)aSelector
+{
+    NSMethodSignature *signature = [super methodSignatureForSelector:aSelector];
+    if(!signature)
+        signature = [(id)self.dataSource methodSignatureForSelector:aSelector];
+    
+    return signature;
+}
+
+- (void)forwardInvocation:(NSInvocation *)anInvocation
+{
+    if ([self.dataSource respondsToSelector:[anInvocation selector]])
+        [anInvocation invokeWithTarget:self.dataSource];
+    else
+        [super forwardInvocation:anInvocation];
+}
+
 #pragma mark - TSTableViewAppearanceCoordinator
 
-/**
- *  @abstract Return YES if subrows of row at specified path should be visible
- */
 - (BOOL)isRowExpanded:(NSIndexPath *)indexPath
 {
-    VerboseLog();
     return [_tableControlPanel isRowExpanded:indexPath];
 }
 
-- (CGFloat)controlPanelExpandItemWidth
+- (BOOL)isRowVisible:(NSIndexPath *)indexPath
 {
-    VerboseLog();
-    return 20;
+    return [_tableControlPanel isRowVisible:indexPath];
 }
 
-/**
- *  @abstract Return total width of all columns
- */
+- (UIImage *)controlPanelExpandItemNormalBackgroundImage
+{
+    return _expandItemNormalBackgroundImage;
+}
+
+- (UIImage *)controlPanelExpandItemSelectedBackgroundImage
+{
+    return _expandItemSelectedBackgroundImage;
+}
+
+- (UIImage *)controlPanelExpandSectionBackgroundImage
+{
+    return _expandSectionBackgroundImage;
+}
+
+- (BOOL)lineNumbersAreHidden
+{
+    return _lineNumbersHidden;
+}
+
+- (BOOL)highlightControlsOnTap
+{
+    return _highlightControlsOnTap;
+}
+
+- (UIColor *)lineNumbersColor
+{
+    return _lineNumbersColor;
+}
+
 - (CGFloat)tableTotalWidth
 {
     VerboseLog();
@@ -260,9 +449,12 @@
     return [_tableControlPanel tableTotalHeight];
 }
 
-/**
- *  @abstract Return width for column at specified path
- */
+- (CGFloat)tableHeight
+{
+    VerboseLog();
+    return [_tableControlPanel tableHeight];
+}
+
 - (CGFloat)widthForColumnAtIndex:(NSInteger)columnIndex
 {
     VerboseLog();
@@ -275,10 +467,36 @@
     return [_tableHeader widthForColumnAtPath:columnPath];
 }
 
-- (CGFloat)defaultWidthForColumnAtPath:(NSIndexPath *)columnPath
+- (CGFloat)offsetForColumnAtPath:(NSIndexPath *)columnPath
 {
     VerboseLog();
-    return 128;
+    return [_tableHeader offsetForColumnAtPath:columnPath];
+}
+
+- (CGFloat)defaultWidthForColumnAtIndex:(NSInteger)index
+{
+    if(self.dataSource && [self.dataSource respondsToSelector:@selector(defaultWidthForColumnAtIndex:)])
+    {
+        return [self.dataSource defaultWidthForColumnAtIndex:index];
+    }
+    return DEF_TABLE_DEF_COLUMN_WIDTH;
+}
+
+- (CGFloat)minimalWidthForColumnAtIndex:(NSInteger)index
+{
+    if(self.dataSource && [self.dataSource respondsToSelector:@selector(minimalWidthForColumnAtIndex:)])
+    {
+        return [self.dataSource minimalWidthForColumnAtIndex:index];
+    }
+    return DEF_TABLE_MIN_COLUMN_WIDTH;
+}
+- (CGFloat)maximalWidthForColumnAtIndex:(NSInteger)index
+{
+    if(self.dataSource && [self.dataSource respondsToSelector:@selector(maximalWidthForColumnAtIndex:)])
+    {
+        return [self.dataSource maximalWidthForColumnAtIndex:index];
+    }
+    return DEF_TABLE_MAX_COLUMN_WIDTH;
 }
 
 - (TSTableViewCell *)cellViewForRowAtPath:(NSIndexPath *)indexPath cellIndex:(NSInteger)index
@@ -289,6 +507,38 @@
 - (TSTableViewHeaderSectionView *)headerSectionViewForColumnAtPath:(NSIndexPath *)indexPath
 {
     return [self.dataSource tableView:self headerSectionViewForColumnAtPath:indexPath];
+}
+
+#pragma mark - Modify content
+
+- (void)insertRowAtPath:(NSIndexPath *)path animated:(BOOL)animated
+{
+     NSAssert(FALSE, @"Not implemented");
+}
+
+- (void)updateRowAtPath:(NSIndexPath *)path animated:(BOOL)animated
+{
+    NSAssert(FALSE, @"Not implemented");
+}
+
+- (void)removeRowAtPath:(NSIndexPath *)path animated:(BOOL)animated
+{
+     NSAssert(FALSE, @"Not implemented");
+}
+
+- (void)insertRowsAtPathes:(NSArray *)pathes animated:(BOOL)animated
+{
+     NSAssert(FALSE, @"Not implemented");
+}
+
+- (void)updateRowsAtPathes:(NSArray *)pathes animated:(BOOL)animated
+{
+    NSAssert(FALSE, @"Not implemented");
+}
+
+- (void)removeRowsAtPathes:(NSArray *)pathes animated:(BOOL)animated
+{
+     NSAssert(FALSE, @"Not implemented");
 }
 
 @end

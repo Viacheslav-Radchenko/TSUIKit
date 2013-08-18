@@ -3,21 +3,32 @@
 //  TSUIKit
 //
 //  Created by Viacheslav Radchenko on 8/13/13.
-//  Copyright (c) 2013 Viacheslav Radchenko. All rights reserved.
 //
+//  The MIT License (MIT)
+//  Copyright © 2013 Viacheslav Radchenko
+//
+//  Permission is hereby granted, free of charge, to any person obtaining a copy
+//  of this software and associated documentation files (the "Software"), to deal
+//  in the Software without restriction, including without limitation the rights
+//  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+//  copies of the Software, and to permit persons to whom the Software is
+//  furnished to do so, subject to the following conditions:
+//
+//  The above copyright notice and this permission notice shall be included in
+//  all copies or substantial portions of the Software.
+//
+//  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+//  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+//  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+//  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+//  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+//  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+//  THE SOFTWARE.
 
 #import "TSTableViewCell.h"
 #import "TSUtils.h"
 
 @interface TSTableViewCell ()
-{
-    UIColor *_topColor;
-    UIColor *_bottomColor;
-    UIColor *_topBorderColor;
-    UIColor *_bottomBorderColor;
-    UIColor *_leftBorderColor;
-    UIColor *_rightBorderColor;
-}
 
 @end
 
@@ -28,12 +39,7 @@
     self = [super initWithFrame:frame];
     if (self)
     {
-        _topColor = [UIColor colorWithWhite:1.0f alpha:1.0f];
-        _bottomColor = [UIColor colorWithWhite:1.0f alpha:1.0f];
-        _topBorderColor = [UIColor whiteColor];
-        _bottomBorderColor = [UIColor colorWithWhite:0.7f alpha:1.0f];
-        _leftBorderColor = [UIColor whiteColor];
-        _rightBorderColor = [UIColor colorWithWhite:0.7f alpha:1.0f];
+
     }
     return self;
 }
@@ -43,48 +49,92 @@
     if(!_textLabel)
     {
         _textLabel = [[UILabel alloc] initWithFrame:self.bounds];
-        _textLabel.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
         _textLabel.backgroundColor = [UIColor clearColor];
         _textLabel.textAlignment = NSTextAlignmentCenter;
         _textLabel.font = [UIFont systemFontOfSize:14.0f];
+        _textLabel.textColor = [UIColor darkGrayColor];
         [self addSubview:_textLabel];
+        
+        [self setNeedsLayout];
     }
     return _textLabel;
+}
+
+- (UILabel *)detailsLabel
+{
+    if(!_detailsLabel)
+    {
+        _detailsLabel = [[UILabel alloc] initWithFrame:self.bounds];
+        _detailsLabel.backgroundColor = [UIColor clearColor];
+        _detailsLabel.textAlignment = NSTextAlignmentCenter;
+        _detailsLabel.font = [UIFont systemFontOfSize:10.0f];
+        _detailsLabel.textColor = [UIColor grayColor];
+        [self addSubview:_detailsLabel];
+        
+        [self setNeedsLayout];
+    }
+    return _detailsLabel;
+}
+
+- (UIImageView *)iconView
+{
+    if(!_iconView)
+    {
+        _iconView = [[UIImageView alloc] initWithFrame:self.bounds];
+        _iconView.backgroundColor = [UIColor clearColor];
+        _iconView.contentMode = UIViewContentModeScaleAspectFit;
+        [self addSubview:_iconView];
+        
+        [self setNeedsLayout];
+    }
+    return _iconView;
+}
+
+- (UIImageView *)backgroundImageView
+{
+    if(!_backgroundImageView)
+    {
+        _backgroundImageView = [[UIImageView alloc] initWithFrame:self.bounds];
+        _backgroundImageView.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
+        _backgroundImageView.backgroundColor = [UIColor clearColor];
+        [self insertSubview:_backgroundImageView atIndex:0];
+    }
+    return _backgroundImageView;
 }
 
 - (void)layoutSubviews
 {
     [super layoutSubviews];
-    [self setNeedsDisplay];
-}
-
-- (void)drawRect:(CGRect)rect
-{
-    CGContextRef context = UIGraphicsGetCurrentContext();
-    [TSUtils drawLinearGradientInContext:context
-                                    rect:self.bounds
-                              startColor:_topColor.CGColor
-                                endColor:_bottomColor.CGColor];
-    [TSUtils drawLineInContext:context
-                    startPoint:CGPointMake(0, 0)
-                      endPoint:CGPointMake(self.bounds.size.width - 1, 0)
-                         color:_topBorderColor.CGColor
-                     lineWidth:0.5];
-    [TSUtils drawLineInContext:context
-                    startPoint:CGPointMake(0, self.bounds.size.height - 1)
-                      endPoint:CGPointMake(self.bounds.size.width - 1, self.bounds.size.height - 1)
-                         color:_bottomBorderColor.CGColor
-                     lineWidth:0.5];
-    [TSUtils drawLineInContext:context
-                    startPoint:CGPointMake(self.bounds.size.width - 1, 0)
-                      endPoint:CGPointMake(self.bounds.size.width - 1, self.bounds.size.height - 1)
-                         color:_rightBorderColor.CGColor
-                     lineWidth:0.5];
-    [TSUtils drawLineInContext:context
-                    startPoint:CGPointMake(0, 0)
-                      endPoint:CGPointMake(0, self.bounds.size.height - 1)
-                         color:_leftBorderColor.CGColor
-                     lineWidth:0.5];
+    
+    CGFloat x = 0;
+    CGFloat y = 0;
+    if(_iconView)
+    {
+        _iconView.frame = CGRectMake(0, 0, _iconView.image.size.width, self.bounds.size.height);
+        x += _iconView.image.size.width;
+    }
+    
+    if(_textLabel && _detailsLabel)
+    {
+        [_textLabel sizeToFit];
+        [_detailsLabel sizeToFit];
+        
+        CGFloat offset = 2;
+        CGFloat height = _textLabel.frame.size.height + offset + _detailsLabel.frame.size.height;
+        y = (self.bounds.size.height - height)/2;
+        y = MAX(0 , y);
+        _textLabel.frame = CGRectMake(x, y, self.bounds.size.width - x, _textLabel.frame.size.height);
+        y += _textLabel.frame.size.height + offset;
+        _detailsLabel.frame = CGRectMake(x, y, self.bounds.size.width - x, _detailsLabel.frame.size.height);
+    }
+    else if(_detailsLabel)
+    {
+        _detailsLabel.frame = CGRectMake(x, 0, self.bounds.size.width - x, self.bounds.size.height);
+    }
+    else if(_textLabel)
+    {
+        _textLabel.frame = CGRectMake(x, 0, self.bounds.size.width - x, self.bounds.size.height);
+    }
 }
 
 @end

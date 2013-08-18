@@ -71,19 +71,43 @@
 		F6A4C48417BD213D00AA8195 /* TSTableViewHeaderPanel.m in Sources */ = {isa = PBXBuildFile; fileRef = F678EB3D17B664E000F1AD5D /* TSTableViewHeaderPanel.m */; };
 		F6A4C48517BD213D00AA8195 /* TSTableViewHeaderSection.m in Sources */ = {isa = PBXBuildFile; fileRef = F678EB4217B6681100F1AD5D /* TSTableViewHeaderSection.m */; };
 		F6A4C48617BD213D00AA8195 /* TSTableViewExpandControlPanel.m in Sources */ = {isa = PBXBuildFile; fileRef = F678EB9D17B84AC700F1AD5D /* TSTableViewExpandControlPanel.m */; };
-		F6A4C48717BD213D00AA8195 /* TSTableViewExpandRow.m in Sources */ = {isa = PBXBuildFile; fileRef = F6A8689317BA16CC003AF8D4 /* TSTableViewExpandRow.m */; };
+		F6A4C48717BD213D00AA8195 /* TSTableViewExpandSection.m in Sources */ = {isa = PBXBuildFile; fileRef = F6A8689317BA16CC003AF8D4 /* TSTableViewExpandSection.m */; };
 		F6A4C48817BD213D00AA8195 /* TSTableViewContentHolder.m in Sources */ = {isa = PBXBuildFile; fileRef = F6A8689617BA38EA003AF8D4 /* TSTableViewContentHolder.m */; };
 		F6A4C48917BD213D00AA8195 /* TSTableViewRow.m in Sources */ = {isa = PBXBuildFile; fileRef = F6A8689917BA4D92003AF8D4 /* TSTableViewRow.m */; };
 		F6A4C48A17BD213D00AA8195 /* TSTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = F678EB3617B5346B00F1AD5D /* TSTableView.m */; };
 		F6A4C48B17BD213D00AA8195 /* TSTableViewHeaderSectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = F6A8688D17B94269003AF8D4 /* TSTableViewHeaderSectionView.m */; };
-		F6A4C48C17BD213D00AA8195 /* TSTableViewExpandRowButton.m in Sources */ = {isa = PBXBuildFile; fileRef = F6A8689017BA16AE003AF8D4 /* TSTableViewExpandRowButton.m */; };
 		F6A4C48D17BD213D00AA8195 /* TSTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F6A8689C17BA7FEE003AF8D4 /* TSTableViewCell.m */; };
 		F6A4C48E17BD213D00AA8195 /* TSTableViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F6A8689F17BC1B4A003AF8D4 /* TSTableViewModel.m */; };
 		F6A4C48F17BD227900AA8195 /* TSUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = F6F3CEE71781ABB400C7274F /* TSUtils.m */; };
 		F6A4C49017BD812400AA8195 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F682C8DC1774B017005141A3 /* QuartzCore.framework */; };
+		F6A4C49517BFD9C900AA8195 /* NavigationStripHeaderBackground@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A6F1783600200C0C4A3 /* NavigationStripHeaderBackground@2x.png */; };
+		F6A4C49617BFD9C900AA8195 /* NavigationStripHeaderBackground_1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A701783600200C0C4A3 /* NavigationStripHeaderBackground_1@2x.png */; };
+		F6A4C49717BFD9C900AA8195 /* NavigationStripHeaderBackground_2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A711783600200C0C4A3 /* NavigationStripHeaderBackground_2@2x.png */; };
+		F6A4C49817BFD9C900AA8195 /* NavigationStripIcon-Selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A721783600200C0C4A3 /* NavigationStripIcon-Selected@2x.png */; };
+		F6A4C49917BFD9C900AA8195 /* NavigationStripIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A731783600200C0C4A3 /* NavigationStripIcon@2x.png */; };
+		F6A4C49A17BFD9C900AA8195 /* NavigationStripItem-Selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A741783600200C0C4A3 /* NavigationStripItem-Selected@2x.png */; };
+		F6A4C49B17BFD9C900AA8195 /* NavigationStripItem@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A751783600200C0C4A3 /* NavigationStripItem@2x.png */; };
+		F6A4C49C17BFD9C900AA8195 /* NavigationStripItemBlue@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A761783600200C0C4A3 /* NavigationStripItemBlue@2x.png */; };
+		F6A4C49D17BFD9C900AA8195 /* NavigationStripItemGrey@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A771783600200C0C4A3 /* NavigationStripItemGrey@2x.png */; };
+		F6A4C49E17BFD9C900AA8195 /* NavigationStripItemRed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A781783600200C0C4A3 /* NavigationStripItemRed@2x.png */; };
+		F6A4C49F17BFD9C900AA8195 /* NavigationStripLeftSideButton-Selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A791783600200C0C4A3 /* NavigationStripLeftSideButton-Selected@2x.png */; };
+		F6A4C4A017BFD9C900AA8195 /* NavigationStripLeftSideButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A7A1783600200C0C4A3 /* NavigationStripLeftSideButton@2x.png */; };
+		F6A4C4A117BFD9C900AA8195 /* NavigationStripLeftSideButtonBlue@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A7B1783600200C0C4A3 /* NavigationStripLeftSideButtonBlue@2x.png */; };
+		F6A4C4A217BFD9C900AA8195 /* NavigationStripLeftSideButtonGrey@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A7C1783600200C0C4A3 /* NavigationStripLeftSideButtonGrey@2x.png */; };
+		F6A4C4A317BFD9C900AA8195 /* NavigationStripLeftSideButtonRed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A7D1783600200C0C4A3 /* NavigationStripLeftSideButtonRed@2x.png */; };
+		F6A4C4A417BFD9C900AA8195 /* NavigationStripRightSideButton-Selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A7E1783600200C0C4A3 /* NavigationStripRightSideButton-Selected@2x.png */; };
+		F6A4C4A517BFD9C900AA8195 /* NavigationStripRightSideButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A7F1783600200C0C4A3 /* NavigationStripRightSideButton@2x.png */; };
+		F6A4C4A617BFD9C900AA8195 /* NavigationStripRightSideButtonBlue@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A801783600200C0C4A3 /* NavigationStripRightSideButtonBlue@2x.png */; };
+		F6A4C4A717BFD9C900AA8195 /* NavigationStripRightSideButtonGrey@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A811783600200C0C4A3 /* NavigationStripRightSideButtonGrey@2x.png */; };
+		F6A4C4A817BFD9C900AA8195 /* NavigationStripRightSideButtonRed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A821783600200C0C4A3 /* NavigationStripRightSideButtonRed@2x.png */; };
+		F6A4C4A917BFD9C900AA8195 /* NavigationStripSectionBackground-Selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A831783600200C0C4A3 /* NavigationStripSectionBackground-Selected@2x.png */; };
+		F6A4C4AA17BFD9C900AA8195 /* NavigationStripSectionBackground@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A841783600200C0C4A3 /* NavigationStripSectionBackground@2x.png */; };
+		F6A4C4AB17BFD9C900AA8195 /* NavigationStripSectionBackground_2-Selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A851783600200C0C4A3 /* NavigationStripSectionBackground_2-Selected@2x.png */; };
+		F6A4C4AC17BFD9C900AA8195 /* NavigationStripSectionBackground_2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A861783600200C0C4A3 /* NavigationStripSectionBackground_2@2x.png */; };
+		F6A4C4AD17BFD9C900AA8195 /* NavigationStripSectionBackgroundRed-Selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A871783600200C0C4A3 /* NavigationStripSectionBackgroundRed-Selected@2x.png */; };
+		F6A4C4AE17BFD9C900AA8195 /* NavigationStripSectionBackgroundRed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A881783600200C0C4A3 /* NavigationStripSectionBackgroundRed@2x.png */; };
 		F6A8688E17B9426A003AF8D4 /* TSTableViewHeaderSectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = F6A8688D17B94269003AF8D4 /* TSTableViewHeaderSectionView.m */; };
-		F6A8689117BA16AE003AF8D4 /* TSTableViewExpandRowButton.m in Sources */ = {isa = PBXBuildFile; fileRef = F6A8689017BA16AE003AF8D4 /* TSTableViewExpandRowButton.m */; };
-		F6A8689417BA16CD003AF8D4 /* TSTableViewExpandRow.m in Sources */ = {isa = PBXBuildFile; fileRef = F6A8689317BA16CC003AF8D4 /* TSTableViewExpandRow.m */; };
+		F6A8689417BA16CD003AF8D4 /* TSTableViewExpandSection.m in Sources */ = {isa = PBXBuildFile; fileRef = F6A8689317BA16CC003AF8D4 /* TSTableViewExpandSection.m */; };
 		F6A8689717BA38EA003AF8D4 /* TSTableViewContentHolder.m in Sources */ = {isa = PBXBuildFile; fileRef = F6A8689617BA38EA003AF8D4 /* TSTableViewContentHolder.m */; };
 		F6A8689A17BA4D93003AF8D4 /* TSTableViewRow.m in Sources */ = {isa = PBXBuildFile; fileRef = F6A8689917BA4D92003AF8D4 /* TSTableViewRow.m */; };
 		F6A8689D17BA7FEF003AF8D4 /* TSTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F6A8689C17BA7FEE003AF8D4 /* TSTableViewCell.m */; };
@@ -416,10 +440,8 @@
 		F6A4C47F17BD1F6000AA8195 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = "en.lproj/TSTableViewController~ipad.xib"; sourceTree = "<group>"; };
 		F6A8688C17B94269003AF8D4 /* TSTableViewHeaderSectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSTableViewHeaderSectionView.h; sourceTree = "<group>"; };
 		F6A8688D17B94269003AF8D4 /* TSTableViewHeaderSectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSTableViewHeaderSectionView.m; sourceTree = "<group>"; };
-		F6A8688F17BA16AE003AF8D4 /* TSTableViewExpandRowButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSTableViewExpandRowButton.h; sourceTree = "<group>"; };
-		F6A8689017BA16AE003AF8D4 /* TSTableViewExpandRowButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSTableViewExpandRowButton.m; sourceTree = "<group>"; };
-		F6A8689217BA16CC003AF8D4 /* TSTableViewExpandRow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSTableViewExpandRow.h; sourceTree = "<group>"; };
-		F6A8689317BA16CC003AF8D4 /* TSTableViewExpandRow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSTableViewExpandRow.m; sourceTree = "<group>"; };
+		F6A8689217BA16CC003AF8D4 /* TSTableViewExpandSection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSTableViewExpandSection.h; sourceTree = "<group>"; };
+		F6A8689317BA16CC003AF8D4 /* TSTableViewExpandSection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSTableViewExpandSection.m; sourceTree = "<group>"; };
 		F6A8689517BA38EA003AF8D4 /* TSTableViewContentHolder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSTableViewContentHolder.h; sourceTree = "<group>"; };
 		F6A8689617BA38EA003AF8D4 /* TSTableViewContentHolder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSTableViewContentHolder.m; sourceTree = "<group>"; };
 		F6A8689817BA4D92003AF8D4 /* TSTableViewRow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSTableViewRow.h; sourceTree = "<group>"; };
@@ -613,8 +635,6 @@
 				F678EB4017B6657E00F1AD5D /* TSTableViewDelegate.h */,
 				F6A8688C17B94269003AF8D4 /* TSTableViewHeaderSectionView.h */,
 				F6A8688D17B94269003AF8D4 /* TSTableViewHeaderSectionView.m */,
-				F6A8688F17BA16AE003AF8D4 /* TSTableViewExpandRowButton.h */,
-				F6A8689017BA16AE003AF8D4 /* TSTableViewExpandRowButton.m */,
 				F6A8689B17BA7FED003AF8D4 /* TSTableViewCell.h */,
 				F6A8689C17BA7FEE003AF8D4 /* TSTableViewCell.m */,
 				F6A8689E17BC1B48003AF8D4 /* TSTableViewModel.h */,
@@ -632,8 +652,8 @@
 				F678EB4217B6681100F1AD5D /* TSTableViewHeaderSection.m */,
 				F678EB9C17B84AC700F1AD5D /* TSTableViewExpandControlPanel.h */,
 				F678EB9D17B84AC700F1AD5D /* TSTableViewExpandControlPanel.m */,
-				F6A8689217BA16CC003AF8D4 /* TSTableViewExpandRow.h */,
-				F6A8689317BA16CC003AF8D4 /* TSTableViewExpandRow.m */,
+				F6A8689217BA16CC003AF8D4 /* TSTableViewExpandSection.h */,
+				F6A8689317BA16CC003AF8D4 /* TSTableViewExpandSection.m */,
 				F6A8689517BA38EA003AF8D4 /* TSTableViewContentHolder.h */,
 				F6A8689617BA38EA003AF8D4 /* TSTableViewContentHolder.m */,
 				F6A8689817BA4D92003AF8D4 /* TSTableViewRow.h */,
@@ -1309,6 +1329,32 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6A4C49517BFD9C900AA8195 /* NavigationStripHeaderBackground@2x.png in Resources */,
+				F6A4C49617BFD9C900AA8195 /* NavigationStripHeaderBackground_1@2x.png in Resources */,
+				F6A4C49717BFD9C900AA8195 /* NavigationStripHeaderBackground_2@2x.png in Resources */,
+				F6A4C49817BFD9C900AA8195 /* NavigationStripIcon-Selected@2x.png in Resources */,
+				F6A4C49917BFD9C900AA8195 /* NavigationStripIcon@2x.png in Resources */,
+				F6A4C49A17BFD9C900AA8195 /* NavigationStripItem-Selected@2x.png in Resources */,
+				F6A4C49B17BFD9C900AA8195 /* NavigationStripItem@2x.png in Resources */,
+				F6A4C49C17BFD9C900AA8195 /* NavigationStripItemBlue@2x.png in Resources */,
+				F6A4C49D17BFD9C900AA8195 /* NavigationStripItemGrey@2x.png in Resources */,
+				F6A4C49E17BFD9C900AA8195 /* NavigationStripItemRed@2x.png in Resources */,
+				F6A4C49F17BFD9C900AA8195 /* NavigationStripLeftSideButton-Selected@2x.png in Resources */,
+				F6A4C4A017BFD9C900AA8195 /* NavigationStripLeftSideButton@2x.png in Resources */,
+				F6A4C4A117BFD9C900AA8195 /* NavigationStripLeftSideButtonBlue@2x.png in Resources */,
+				F6A4C4A217BFD9C900AA8195 /* NavigationStripLeftSideButtonGrey@2x.png in Resources */,
+				F6A4C4A317BFD9C900AA8195 /* NavigationStripLeftSideButtonRed@2x.png in Resources */,
+				F6A4C4A417BFD9C900AA8195 /* NavigationStripRightSideButton-Selected@2x.png in Resources */,
+				F6A4C4A517BFD9C900AA8195 /* NavigationStripRightSideButton@2x.png in Resources */,
+				F6A4C4A617BFD9C900AA8195 /* NavigationStripRightSideButtonBlue@2x.png in Resources */,
+				F6A4C4A717BFD9C900AA8195 /* NavigationStripRightSideButtonGrey@2x.png in Resources */,
+				F6A4C4A817BFD9C900AA8195 /* NavigationStripRightSideButtonRed@2x.png in Resources */,
+				F6A4C4A917BFD9C900AA8195 /* NavigationStripSectionBackground-Selected@2x.png in Resources */,
+				F6A4C4AA17BFD9C900AA8195 /* NavigationStripSectionBackground@2x.png in Resources */,
+				F6A4C4AB17BFD9C900AA8195 /* NavigationStripSectionBackground_2-Selected@2x.png in Resources */,
+				F6A4C4AC17BFD9C900AA8195 /* NavigationStripSectionBackground_2@2x.png in Resources */,
+				F6A4C4AD17BFD9C900AA8195 /* NavigationStripSectionBackgroundRed-Selected@2x.png in Resources */,
+				F6A4C4AE17BFD9C900AA8195 /* NavigationStripSectionBackgroundRed@2x.png in Resources */,
 				F6A4C46B17BD1F6000AA8195 /* InfoPlist.strings in Resources */,
 				F6A4C47317BD1F6000AA8195 /* Default.png in Resources */,
 				F6A4C47517BD1F6000AA8195 /* Default@2x.png in Resources */,
@@ -1430,8 +1476,7 @@
 				F678EB4317B6681100F1AD5D /* TSTableViewHeaderSection.m in Sources */,
 				F678EB9E17B84AC700F1AD5D /* TSTableViewExpandControlPanel.m in Sources */,
 				F6A8688E17B9426A003AF8D4 /* TSTableViewHeaderSectionView.m in Sources */,
-				F6A8689117BA16AE003AF8D4 /* TSTableViewExpandRowButton.m in Sources */,
-				F6A8689417BA16CD003AF8D4 /* TSTableViewExpandRow.m in Sources */,
+				F6A8689417BA16CD003AF8D4 /* TSTableViewExpandSection.m in Sources */,
 				F6A8689717BA38EA003AF8D4 /* TSTableViewContentHolder.m in Sources */,
 				F6A8689A17BA4D93003AF8D4 /* TSTableViewRow.m in Sources */,
 				F6A8689D17BA7FEF003AF8D4 /* TSTableViewCell.m in Sources */,
@@ -1466,12 +1511,11 @@
 				F6A4C48417BD213D00AA8195 /* TSTableViewHeaderPanel.m in Sources */,
 				F6A4C48517BD213D00AA8195 /* TSTableViewHeaderSection.m in Sources */,
 				F6A4C48617BD213D00AA8195 /* TSTableViewExpandControlPanel.m in Sources */,
-				F6A4C48717BD213D00AA8195 /* TSTableViewExpandRow.m in Sources */,
+				F6A4C48717BD213D00AA8195 /* TSTableViewExpandSection.m in Sources */,
 				F6A4C48817BD213D00AA8195 /* TSTableViewContentHolder.m in Sources */,
 				F6A4C48917BD213D00AA8195 /* TSTableViewRow.m in Sources */,
 				F6A4C48A17BD213D00AA8195 /* TSTableView.m in Sources */,
 				F6A4C48B17BD213D00AA8195 /* TSTableViewHeaderSectionView.m in Sources */,
-				F6A4C48C17BD213D00AA8195 /* TSTableViewExpandRowButton.m in Sources */,
 				F6A4C48D17BD213D00AA8195 /* TSTableViewCell.m in Sources */,
 				F6A4C48E17BD213D00AA8195 /* TSTableViewModel.m in Sources */,
 				F6A4C46D17BD1F6000AA8195 /* main.m in Sources */,
@@ -1858,6 +1902,7 @@
 				F6A4C48317BD1F6000AA8195 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F6EE2A4E17835D9A00C0C4A3 /* Build configuration list for PBXNativeTarget "TabViewWithDropDownPanel" */ = {
 			isa = XCConfigurationList;

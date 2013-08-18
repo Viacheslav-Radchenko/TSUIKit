@@ -3,8 +3,27 @@
 //  TSUIKit
 //
 //  Created by Viacheslav Radchenko on 8/9/13.
-//  Copyright (c) 2013 Viacheslav Radchenko. All rights reserved.
 //
+//  The MIT License (MIT)
+//  Copyright © 2013 Viacheslav Radchenko
+//
+//  Permission is hereby granted, free of charge, to any person obtaining a copy
+//  of this software and associated documentation files (the "Software"), to deal
+//  in the Software without restriction, including without limitation the rights
+//  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+//  copies of the Software, and to permit persons to whom the Software is
+//  furnished to do so, subject to the following conditions:
+//
+//  The above copyright notice and this permission notice shall be included in
+//  all copies or substantial portions of the Software.
+//
+//  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+//  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+//  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+//  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+//  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+//  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+//  THE SOFTWARE.
 
 #import "TSTableViewHeaderPanel.h"
 #import "TSTableViewHeaderSection.h"
@@ -13,9 +32,6 @@
 #import "TSTableViewAppearanceCoordinator.h"
 #import "TSUtils.h"
 #import "TSDefines.h"
-
-#define DEF_TABLE_MIN_COLUMN_WIDTH  64
-#define DEF_TABLE_MAX_COLUMN_WIDTH  512
 
 #ifndef VerboseLog
 #define VerboseLog(fmt, ...)  (void)0
@@ -27,14 +43,9 @@
     CGFloat _headerHeight;
     CGPoint _lastTouchPos;
     BOOL _changingColumnSize;
-    
-    UIColor *_topColor;
-    UIColor *_bottomColor;
-    UIColor *_topBorderColor;
-    UIColor *_bottomBorderColor;
-    UIColor *_leftBorderColor;
-    UIColor *_rightBorderColor;
 }
+
+@property (nonatomic, strong) UITapGestureRecognizer *tapGestureRecognizer;
 
 @end
 
@@ -72,18 +83,12 @@
     VerboseLog();
     self.backgroundColor = [UIColor lightGrayColor];
     self.scrollEnabled = NO;
+    _allowColumnSelection = YES;
     _changingColumnSize = NO;
     _headerSections = [[NSMutableArray alloc] init];
     
-    _minColumnWidth = DEF_TABLE_MIN_COLUMN_WIDTH;
-    _maxColumnWidth = DEF_TABLE_MAX_COLUMN_WIDTH;
-    
-    _topColor = [UIColor colorWithWhite:0.95f alpha:1.0f];
-    _bottomColor = [UIColor colorWithWhite:0.9f alpha:1.0f];
-    _topBorderColor = [UIColor whiteColor];
-    _bottomBorderColor = [UIColor colorWithWhite:0.7f alpha:1.0f];
-    _leftBorderColor = [UIColor whiteColor];
-    _rightBorderColor = [UIColor colorWithWhite:0.7f alpha:1.0f];
+    _tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapGestureDidRecognized:)];
+    [self addGestureRecognizer:_tapGestureRecognizer];
 }
 
 - (TSTableViewHeaderSection *)headerSectionAtIndex:(NSInteger)index
@@ -120,50 +125,23 @@
     return section;
 }
 
-#pragma mark - Custom Draw
 
-
-- (void)layoutSubviews
-{
-    [super layoutSubviews];
-    [self setNeedsDisplay];
-}
-
-- (void)drawRect:(CGRect)rect
-{
-    CGContextRef context = UIGraphicsGetCurrentContext();
-    [TSUtils drawLinearGradientInContext:context
-                                    rect:self.bounds
-                              startColor:_topColor.CGColor
-                                endColor:_bottomColor.CGColor];
-    [TSUtils drawLineInContext:context
-                    startPoint:CGPointMake(0, 0)
-                      endPoint:CGPointMake(self.bounds.size.width - 1, 0)
-                         color:_topBorderColor.CGColor
-                     lineWidth:0.5];
-    [TSUtils drawLineInContext:context
-                    startPoint:CGPointMake(0, self.bounds.size.height - 1)
-                      endPoint:CGPointMake(self.bounds.size.width - 1, self.bounds.size.height - 1)
-                         color:_bottomBorderColor.CGColor
-                     lineWidth:0.5];
-
-}
-
+#pragma mark - Getters & Setters
 
 #pragma mark - Slide Button
 
 - (void)addSlideButtonToSection:(TSTableViewHeaderSection *)section
 {
     VerboseLog();
-    CGFloat slideBtnWidth = 8;
+    CGFloat slideBtnWidth = 16;
     UIButton *slideBtn = [[UIButton alloc] initWithFrame:CGRectMake(section.frame.size.width - slideBtnWidth, 0, slideBtnWidth, section.frame.size.height)];
-    slideBtn.showsTouchWhenHighlighted = YES;
+    slideBtn.showsTouchWhenHighlighted = [self.dataSource highlightControlsOnTap];
     [slideBtn addTarget:self action:@selector(slideBtnTouchBegin:withEvent:) forControlEvents:UIControlEventTouchDown];
     [slideBtn addTarget:self action:@selector(slideBtnTouch:withEvent:) forControlEvents:UIControlEventAllTouchEvents];
     [slideBtn addTarget:self action:@selector(slideBtnTouchEnd:withEvent:) forControlEvents:UIControlEventTouchUpInside];
     [slideBtn addTarget:self action:@selector(slideBtnTouchEnd:withEvent:) forControlEvents:UIControlEventTouchUpOutside];
     slideBtn.tag = section.subcolumnsRange.location + section.subcolumnsRange.length - 1;
-    slideBtn.backgroundColor = [UIColor colorWithWhite:0.0 alpha:0.1];
+    slideBtn.backgroundColor = [UIColor clearColor];
     slideBtn.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleHeight;
     [section addSubview:slideBtn];
 }
@@ -193,7 +171,9 @@
         CGPoint centerPoint = [[[event allTouches] anyObject] locationInView:self];
         CGFloat delta = centerPoint.x - _lastTouchPos.x;
         CGFloat newWidth = oldWidth + delta;
-        newWidth = CLAMP(_minColumnWidth, _maxColumnWidth, newWidth);
+        CGFloat maxWidth = [self.dataSource maximalWidthForColumnAtIndex:columnIndex];
+        CGFloat minWidth = [self.dataSource minimalWidthForColumnAtIndex:columnIndex];
+        newWidth = CLAMP(minWidth, maxWidth, (int)newWidth);
         [self changeColumnWidthOnAmount:newWidth - oldWidth forColumn:columnIndex animated:NO];
         
         if(self.headerDelegate)
@@ -219,44 +199,9 @@
     if(self.dataSource)
     {
         _headerHeight = 0;
-        NSInteger numberOfColumns = [self.dataSource numberOfColumnsAtPath:nil];
-        NSInteger columnsCount = 0;
-       
         CGFloat xOffset = 0;
-        for(int i = 0; i < numberOfColumns; i++)
-        {
-            NSIndexPath *columnPath = [NSIndexPath indexPathWithIndex:i];
-            CGFloat columnWidth = [self.dataSource defaultWidthForColumnAtPath:columnPath];
-            CGFloat columnHeight = [self.dataSource heightForHeaderSectionAtPath:columnPath];
-            CGFloat totalHeight = columnHeight;
-            CGFloat totalWidth = columnWidth;
-            
-            TSTableViewHeaderSection *columnSection = [[TSTableViewHeaderSection alloc] initWithFrame:CGRectMake(xOffset, 0, columnWidth, columnHeight)];
-            columnSection.backgroundColor = [UIColor clearColor];
-            columnSection.subcolumnsRange = NSMakeRange(columnsCount, 1);
-            [self addSubview:columnSection];
-            [_headerSections addObject:columnSection];
-            
-            [self loadSectionAtPath:columnPath section:columnSection];
-            [self loadSubsectionsAtPath:columnPath section:columnSection yOffset:columnHeight totalHeight:&totalHeight totalWidth:&totalWidth];
-            [self addSlideButtonToSection:columnSection];
-            
-            columnSection.frame = CGRectMake(xOffset, 0, totalWidth, columnHeight);
-            
-            if(totalHeight > _headerHeight)
-                _headerHeight = totalHeight;
-            
-            xOffset += totalWidth;
-            columnsCount += columnSection.subcolumnsRange.length;
-        }
         
-        for(int i = 0; i < numberOfColumns; i++)
-        {
-            TSTableViewHeaderSection *columnSection = _headerSections[i];
-            columnSection.frame = CGRectMake(columnSection.frame.origin.x, columnSection.frame.origin.y, columnSection.frame.size.width, _headerHeight);
-            if(columnSection.subsections.count == 0)
-                columnSection.sectionView.frame = columnSection.bounds;
-        }
+        [self loadSubsectionsAtPath:nil section:nil yOffset:0 totalHeight:&_headerHeight totalWidth:&xOffset];
     }
 }
 
@@ -284,20 +229,21 @@
         CGFloat columnsCount = 0;
         for(int j = 0; j < numberOfColumns; j++)
         {
-            NSIndexPath *subsectionPath = [sectionPath indexPathByAddingIndex:j];
-            CGFloat columnWidth = [self.dataSource defaultWidthForColumnAtPath:subsectionPath];
+            NSInteger columnIndex = (rootSection ? rootSection.subcolumnsRange.location + columnsCount : columnsCount);
+            NSIndexPath *subsectionPath = (sectionPath ? [sectionPath indexPathByAddingIndex:j] : [NSIndexPath indexPathWithIndex:j]);
+            CGFloat columnWidth = [self.dataSource defaultWidthForColumnAtIndex:columnIndex];
             CGFloat columnHeight = [self.dataSource heightForHeaderSectionAtPath:subsectionPath];
             CGFloat subsectionsHeight = columnHeight;
             CGFloat subsectionsWidth = columnWidth;
             
             TSTableViewHeaderSection *columnSection = [[TSTableViewHeaderSection alloc] initWithFrame:CGRectMake(xOffset, yOffset, columnWidth, columnHeight)];
             columnSection.backgroundColor = [UIColor clearColor];
-            columnSection.subcolumnsRange = NSMakeRange(rootSection.subcolumnsRange.location + columnsCount, 1);
+            columnSection.subcolumnsRange = NSMakeRange(columnIndex, 1);
             [subsections addObject:columnSection];
             
             [self loadSectionAtPath:subsectionPath section:columnSection];
             [self loadSubsectionsAtPath:subsectionPath section:columnSection yOffset:columnHeight totalHeight:&subsectionsHeight totalWidth:&subsectionsWidth];
-            if(j != numberOfColumns - 1)
+            if(j != numberOfColumns - 1 || !rootSection)
                 [self addSlideButtonToSection:columnSection];
             
             columnSection.frame = CGRectMake(xOffset, yOffset, subsectionsWidth, subsectionsHeight);
@@ -317,8 +263,17 @@
             if(columnSection.subsections.count == 0)
                 columnSection.sectionView.frame = columnSection.bounds;
         }
-        rootSection.subcolumnsRange = NSMakeRange(rootSection.subcolumnsRange.location, columnsCount);
-        rootSection.subsections = [NSArray arrayWithArray:subsections];
+        if(rootSection)
+        {
+            rootSection.subcolumnsRange = NSMakeRange(rootSection.subcolumnsRange.location, columnsCount);
+            rootSection.subsections = [NSArray arrayWithArray:subsections];
+        }
+        else
+        {
+            [_headerSections addObjectsFromArray:subsections];
+            for(UIView *v in _headerSections)
+                [self addSubview:v];
+        }
         *totalHeight += maxHeight;
         *totalWidth = xOffset;
     }
@@ -389,6 +344,49 @@
     VerboseLog();
     TSTableViewHeaderSection *section = [self headerSectionAtPath:indexPath];
     return section.frame.size.width;
+}
+
+- (CGFloat)offsetForColumnAtPath:(NSIndexPath *)indexPath
+{
+    UIView *section = [self headerSectionAtPath:indexPath];
+    CGFloat xOffset = section.frame.origin.x;
+    while (section.superview != self)
+    {
+        xOffset += section.superview.frame.origin.x;
+        section = section.superview;
+    }
+    return xOffset;
+}
+
+#pragma mark - Selection
+
+- (void)tapGestureDidRecognized:(UITapGestureRecognizer *)recognizer
+{
+    if(_allowColumnSelection)
+    {
+#warning check if need content offet
+        CGPoint pos = [recognizer locationInView:self];
+        NSIndexPath *columnIndexPath = [self findColumnAtPosition:pos parentColumn:nil parentColumnPath:nil];
+        if(columnIndexPath && self.headerDelegate)
+        {
+            [self.headerDelegate tableViewHeader:self didSelectColumnAtPath:columnIndexPath];
+        }
+    }
+}
+
+- (NSIndexPath *)findColumnAtPosition:(CGPoint)pos parentColumn:(TSTableViewHeaderSection *)parentColumn parentColumnPath:(NSIndexPath *)parentColumnPath
+{
+    NSArray *columns = (parentColumn ? parentColumn.subsections : _headerSections);
+    for(int i = 0; i < columns.count; i++)
+    {
+        TSTableViewHeaderSection *column = columns[i];
+        if(CGRectContainsPoint(column.frame, pos))
+        {
+            NSIndexPath *columnIndexPath = (parentColumnPath ? [parentColumnPath indexPathByAddingIndex:i] : [NSIndexPath indexPathWithIndex:i]);
+            return [self findColumnAtPosition:CGPointMake(pos.x - column.frame.origin.x, pos.y - column.frame.origin.y) parentColumn:column parentColumnPath:columnIndexPath];
+        }
+    }
+    return parentColumnPath;
 }
 
 @end

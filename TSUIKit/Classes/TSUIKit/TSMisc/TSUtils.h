@@ -31,8 +31,14 @@
 
 + (void)performViewAnimationBlock:(void (^)(void))block withCompletion:(void (^)(void))completion animated:(BOOL)animated;
 
++ (UIColor *)colorWithHexString:(NSString *)stringToConvert;
+
 + (UIImage *)imageWithColor:(UIColor *)color andSize:(CGSize)size;
++ (UIImage *)imageWithInnerShadow:(CGColorRef)shadowColor blurSize:(CGFloat)blurSize andSize:(CGSize)size;
+
 + (void)drawLinearGradientInContext:(CGContextRef)context rect:(CGRect)rect startColor:(CGColorRef)startColor endColor:(CGColorRef)endColor;
 + (void)drawLineInContext:(CGContextRef)context startPoint:(CGPoint)startPoint endPoint:(CGPoint)endPoint color:(CGColorRef)color lineWidth:(CGFloat)lineWidth;
++ (void)drawPolygonInContext:(CGContextRef)context points:(NSArray *)points fillColor:(CGColorRef)fillColor strokeColor:(CGColorRef)strokeColor strokeSize:(CGFloat)strokeSize;
++ (void)drawInnerShadowRectInContext:(CGContextRef)context rect:(CGRect)rect shadowColor:(CGColorRef)shadowColor blurSize:(CGFloat)blurSize;
 
 @end

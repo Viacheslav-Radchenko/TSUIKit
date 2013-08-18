@@ -3,6 +3,16 @@ TSUIKit
 
 Set of extended UI components for iOS.
 
+## TSTableView
+
+`TSTableView` is UI component for displaying multicolumns tabular data with support of hierarchical rows and columns structure..
+It provides smooth animations for item selection and dynamic content modification.
+            
+<img src="https://raw.github.com/Viacheslav-Radchenko/TSUIKit/master/Screenshots/TSTableView_SCreenshot1.png" alt="TSTableView examples" width="384" height="512" />
+<img src="https://raw.github.com/Viacheslav-Radchenko/TSUIKit/master/Screenshots/TSTableView_SCreenshot2.png" alt="TSTableView examples" width="384" height="512" />
+
+
+
 ## TSNavigationStripView
 
 `TSNavigationStripView` is a navigation menu control with highly customizable design and flexible structure.

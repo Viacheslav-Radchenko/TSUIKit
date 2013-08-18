@@ -58,6 +58,22 @@
     }
 }
 
++ (UIColor *)colorWithHexString:(NSString *)stringToConvert
+{
+    NSString *noHashString = [stringToConvert stringByReplacingOccurrencesOfString:@"#" withString:@""]; // remove the #
+    NSScanner *scanner = [NSScanner scannerWithString:noHashString];
+    [scanner setCharactersToBeSkipped:[NSCharacterSet symbolCharacterSet]]; // remove + and $
+    
+    unsigned hex;
+    if (![scanner scanHexInt:&hex]) return nil;
+    int a = (hex >> 24) & 0xFF;
+    int r = (hex >> 16) & 0xFF;
+    int g = (hex >> 8) & 0xFF;
+    int b = (hex) & 0xFF;
+    
+    return [UIColor colorWithRed:r / 255.0f green:g / 255.0f blue:b / 255.0f alpha:a / 255.0f];
+}
+
 + (UIImage *)imageWithColor:(UIColor *)color andSize:(CGSize)size
 {
     VerboseLog();
@@ -67,6 +83,21 @@
     
     CGContextSetFillColorWithColor(context, [color CGColor]);
     CGContextFillRect(context, rect);
+    
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    return image;
+}
+
++ (UIImage *)imageWithInnerShadow:(CGColorRef)shadowColor blurSize:(CGFloat)blurSize andSize:(CGSize)size
+{
+    VerboseLog();
+    CGRect rect = CGRectMake(0.0f, 0.0f, size.width, size.height);
+    UIGraphicsBeginImageContext(rect.size);
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    
+    [self drawInnerShadowRectInContext:context rect:rect shadowColor:shadowColor blurSize:blurSize];
     
     UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
@@ -102,11 +133,60 @@
     CGContextSetLineCap(context, kCGLineCapSquare);
     CGContextSetStrokeColorWithColor(context, color);
     CGContextSetLineWidth(context, lineWidth);
-    CGContextMoveToPoint(context, startPoint.x + 0.5, startPoint.y + 0.5);
-    CGContextAddLineToPoint(context, endPoint.x + 0.5, endPoint.y + 0.5);
+    CGContextMoveToPoint(context, startPoint.x, startPoint.y);
+    CGContextAddLineToPoint(context, endPoint.x, endPoint.y);
     CGContextStrokePath(context);
     CGContextRestoreGState(context);
 }
 
+
++ (void)drawPolygonInContext:(CGContextRef)context points:(NSArray *)points fillColor:(CGColorRef)fillColor strokeColor:(CGColorRef)strokeColor strokeSize:(CGFloat)strokeSize
+{
+    CGContextSaveGState(context);
+    CGContextSetLineCap(context, kCGLineCapSquare);
+    CGContextSetStrokeColorWithColor(context, strokeColor);
+    CGContextSetFillColorWithColor(context, fillColor);
+    CGContextSetLineWidth(context, strokeSize);
+    for(int i = 0; i < points.count; i++)
+    {
+        NSValue *pointVal = points[i];
+        CGPoint point = [pointVal CGPointValue];
+        if(i == 0)
+            CGContextMoveToPoint(context, point.x, point.y);
+        else
+            CGContextAddLineToPoint(context, point.x, point.y);
+    }
+    CGContextFillPath(context);
+    if(strokeSize > 0)
+        CGContextStrokePath(context);
+    CGContextRestoreGState(context);
+}
+
+
++ (void)drawInnerShadowRectInContext:(CGContextRef)context rect:(CGRect)rect shadowColor:(CGColorRef)shadowColor blurSize:(CGFloat)blurSize
+{
+    CGMutablePathRef visiblePath = CGPathCreateMutable();
+    CGPathAddRect(visiblePath, NULL, rect);
+    CGPathCloseSubpath(visiblePath);
+    
+    CGMutablePathRef path = CGPathCreateMutable();
+    CGPathAddRect(path, NULL, CGRectInset(rect, -32, -32));
+    CGPathAddRect(path, NULL, rect);
+    CGPathCloseSubpath(path);
+
+    CGContextAddPath(context, visiblePath);
+    CGContextClip(context);
+    
+    CGContextSaveGState(context);
+    CGContextSetShadowWithColor(context, CGSizeZero, blurSize, shadowColor);
+    
+    CGContextAddPath(context, path);
+    CGContextEOFillPath(context);
+  
+    CGContextRestoreGState(context);
+    
+    CGPathRelease(path);
+    CGPathRelease(visiblePath);
+}
 
 @end

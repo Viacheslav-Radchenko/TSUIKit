@@ -1,5 +1,5 @@
 //
-//  TSTableViewCell.h
+//  TSTableViewExpandSection.h
 //  TSUIKit
 //
 //  Created by Viacheslav Radchenko on 8/13/13.
@@ -27,19 +27,16 @@
 
 #import <UIKit/UIKit.h>
 
-/**
- *  @abstract   TSTableViewCell is base class for cell in TSTableView row.
- *              Inherit from TSTableViewCell to provide additinal functionality or another appearance.
- *
- *  @remark     textLabel, detailsLabel, iconView and backgroundImageView - are lazy loaded on first call.
- *              If your code wouldn't use these properties they wouldn't be part of TSTableViewHeaderSectionView hierarchy.
- */
+@interface TSTableViewExpandSection : UIView
 
-@interface TSTableViewCell : UIView
+@property (nonatomic, assign) CGFloat rowHeight;
+@property (nonatomic, assign) BOOL expanded;
+@property (nonatomic, strong) NSIndexPath *rowPath;
+@property (nonatomic, strong) NSArray *subrows;
+@property (nonatomic, strong) UIButton *expandButton;
+@property (nonatomic, strong, readonly) UILabel *lineLabel;
+@property (nonatomic, strong, readonly) UIImageView *backgroundImage;
 
-@property (nonatomic, strong) UILabel *textLabel;
-@property (nonatomic, strong) UILabel *detailsLabel;
-@property (nonatomic, strong) UIImageView *iconView;
-@property (nonatomic, strong) UIImageView *backgroundImageView;
+- (void)setLineNumber:(NSInteger)lineNumber;
 
 @end

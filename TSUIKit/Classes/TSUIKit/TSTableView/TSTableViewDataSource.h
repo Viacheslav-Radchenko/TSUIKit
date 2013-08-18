@@ -3,8 +3,27 @@
 //  TSUIKit
 //
 //  Created by Viacheslav Radchenko on 8/10/13.
-//  Copyright (c) 2013 Viacheslav Radchenko. All rights reserved.
 //
+//  The MIT License (MIT)
+//  Copyright © 2013 Viacheslav Radchenko
+//
+//  Permission is hereby granted, free of charge, to any person obtaining a copy
+//  of this software and associated documentation files (the "Software"), to deal
+//  in the Software without restriction, including without limitation the rights
+//  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+//  copies of the Software, and to permit persons to whom the Software is
+//  furnished to do so, subject to the following conditions:
+//
+//  The above copyright notice and this permission notice shall be included in
+//  all copies or substantial portions of the Software.
+//
+//  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+//  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+//  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+//  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+//  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+//  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+//  THE SOFTWARE.
 
 #import <Foundation/Foundation.h>
 
@@ -44,21 +63,41 @@
 /**
  *  @abstract Return height for header section at specified path
  */
-- (CGFloat)heightForHeaderSectionAtPath:(NSIndexPath *)columnPath;
-
-/**
- *  @abstract Return default/prefered width for column at specified path
- */
-- (CGFloat)defaultWidthForColumnAtPath:(NSIndexPath *)columnPath;
-
-/**
- *  @abstract Return height for header section at specified path
- */
 - (TSTableViewCell *)tableView:(TSTableView *)tableView cellViewForRowAtPath:(NSIndexPath *)indexPath cellIndex:(NSInteger)index;
 
 /**
  *  @abstract Return height for header section at specified path
  */
 - (TSTableViewHeaderSectionView *)tableView:(TSTableView *)tableView headerSectionViewForColumnAtPath:(NSIndexPath *)indexPath;
+
+@optional
+
+/**
+ *  @abstract Return height for header section at specified path
+ */
+- (CGFloat)heightForHeaderSectionAtPath:(NSIndexPath *)columnPath;
+
+/**
+ *  @abstract Return width for expand item  in left side control of panel
+ *            Total width of control panel would be calculated based on next expression: maxNesingLevel * widthForExpandItem                                           
+ *            where maxNesingLevel is maximal depth of subrows hierarchy
+ */
+- (CGFloat)widthForExpandItem;
+
+/**
+ *  @abstract Return default/prefered width for column at specified index
+ */
+- (CGFloat)defaultWidthForColumnAtIndex:(NSInteger)index;
+
+/**
+ *  @abstract Return minimal width for column at specified index
+ */
+- (CGFloat)minimalWidthForColumnAtIndex:(NSInteger)index;
+
+/**
+ *  @abstract Return maximal width for column at specified index
+ */
+- (CGFloat)maximalWidthForColumnAtIndex:(NSInteger)index;
+
 
 @end
