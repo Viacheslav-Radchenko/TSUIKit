@@ -5,11 +5,11 @@ Set of extended UI components for iOS.
 
 ## TSTableView
 
-`TSTableView` is UI component for displaying multicolumns tabular data with support of hierarchical rows and columns structure..
+`TSTableView` is UI component for displaying multicolumns tabular data with support of hierarchical rows and columns structure.
 It provides smooth animations for item selection and dynamic content modification.
             
-<img src="https://raw.github.com/Viacheslav-Radchenko/TSUIKit/master/Screenshots/TSTableView_SCreenshot1.png" alt="TSTableView examples" width="384" height="512" />
-<img src="https://raw.github.com/Viacheslav-Radchenko/TSUIKit/master/Screenshots/TSTableView_SCreenshot2.png" alt="TSTableView examples" width="384" height="512" />
+<img src="https://raw.github.com/Viacheslav-Radchenko/TSUIKit/master/Screenshots/TSTableView_SCreenshot1.png" alt="TSTableView examples" width="360" height="480" />
+<img src="https://raw.github.com/Viacheslav-Radchenko/TSUIKit/master/Screenshots/TSTableView_SCreenshot2.png" alt="TSTableView examples" width="360" height="480" />
 
 
 
@@ -18,21 +18,21 @@ It provides smooth animations for item selection and dynamic content modificatio
 `TSNavigationStripView` is a navigation menu control with highly customizable design and flexible structure.
 It provides smooth animations for item selection and dynamic content modification.
             
-<img src="https://raw.github.com/Viacheslav-Radchenko/TSUIKit/master/Screenshots/TSNavigationStripView_Screenshot1.jpg" alt="TSNavigationStripView examples" width="384" height="512" />
-<img src="https://raw.github.com/Viacheslav-Radchenko/TSUIKit/master/Screenshots/TSNavigationStripView_Screenshot2.jpg" alt="TSNavigationStripView examples" width="384" height="512" />
+<img src="https://raw.github.com/Viacheslav-Radchenko/TSUIKit/master/Screenshots/TSNavigationStripView_Screenshot1.jpg" alt="TSNavigationStripView examples" width="360" height="480" />
+<img src="https://raw.github.com/Viacheslav-Radchenko/TSUIKit/master/Screenshots/TSNavigationStripView_Screenshot2.jpg" alt="TSNavigationStripView examples" width="360" height="480" />
 
 ## TSTabView
 
 `TSTabView` is a container component for set of views or view controllers.
 
-<img src="https://raw.github.com/Viacheslav-Radchenko/TSUIKit/master/Screenshots/TSTabView_Screenshot1.jpg" alt="TSTabView examples" width="384" height="512" />
-<img src="https://raw.github.com/Viacheslav-Radchenko/SSUIKit/master/Screenshots/TSTabView_Screenshot2.jpg" alt="TSTabView examples" width="384" height="512" />
+<img src="https://raw.github.com/Viacheslav-Radchenko/TSUIKit/master/Screenshots/TSTabView_Screenshot1.jpg" alt="TSTabView examples" width="360" height="480" />
+<img src="https://raw.github.com/Viacheslav-Radchenko/SSUIKit/master/Screenshots/TSTabView_Screenshot2.jpg" alt="TSTabView examples" width="360" height="480" />
 
 ## TSTabViewWithDropDownPanel
 
 `TSTabViewWithDropDownPanel` extends `TSTabView`. Custom view can be attached to drop down panel which pull down/up on top of tabs container.
 
-<img src="https://raw.github.com/Viacheslav-Radchenko/TSUIKit/master/Screenshots/TSTabViewWithDropDownPanel_Screenshot1.jpg" alt="TSTabViewWithDropDownPanel examples" width="384" height="512" />
+<img src="https://raw.github.com/Viacheslav-Radchenko/TSUIKit/master/Screenshots/TSTabViewWithDropDownPanel_Screenshot1.jpg" alt="TSTabViewWithDropDownPanel examples" width="360" height="480" />
 
 ## Requirements
 
