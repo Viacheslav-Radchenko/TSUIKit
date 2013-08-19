@@ -616,19 +616,22 @@
         cell.textLabel.text = [cellInfo.value description];
     }
     
-    TSColumn *columnInfo = [self columnAtIndex:index];
-    if(columnInfo.titleColor)
-        cell.textLabel.textColor = columnInfo.titleColor;
-    
     CGFloat color;
     if(_tableStyle == TSTableViewStyleDark)
     {
         color = 0.16f + 0.04f * (1 - (indexPath.length - 1)/(float)tableView.maxNestingLevel);
+        
+        cell.textLabel.textColor = [UIColor grayColor];
     }
     else
     {
         color = 0.9f + 0.1f * (1 - (indexPath.length - 1)/(float)tableView.maxNestingLevel);
+        cell.textLabel.textColor = [UIColor darkGrayColor];
     }
+    
+    TSColumn *columnInfo = [self columnAtIndex:index];
+    if(columnInfo.titleColor)
+        cell.textLabel.textColor = columnInfo.titleColor;
     
     if(columnInfo.color)
     {
@@ -668,11 +671,13 @@
     if(_tableStyle == TSTableViewStyleDark)
     {
         section.textLabel.layer.shadowColor = [UIColor blackColor].CGColor;
+        section.textLabel.textColor = [UIColor grayColor];
         section.backgroundImageView.image = [self headerSectionBackgroundImageWithBaseColor2:column.color];
     }
     else
     {
         section.backgroundImageView.image = [self headerSectionBackgroundImageWithBaseColor:column.color];
+        section.textLabel.textColor = [UIColor darkGrayColor];
     }
     
     if(column.title)

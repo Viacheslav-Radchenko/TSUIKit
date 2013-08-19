@@ -46,7 +46,7 @@
                                                        @"headerHeight" : @24,
                                                        @"defWidth" : @64,
                                                        @"titleFontSize" : @"10",
-                                                       @"titleColor" : @"FF0000CF"}
+                                                       @"titleColor" : @"FFCFCF00"}
                                                     ]
                                             }
                                          ]
@@ -375,14 +375,14 @@
     [self.view addSubview:_tableView1];
     
     _model1 = [[TSTableViewModel alloc] initWithTableView:_tableView1 andStyle:TSTableViewStyleDark];
-    [_model1 setColumnsInfo:columns andRowsInfo:rows];
+    [_model1 setColumnsInfo:columns2 andRowsInfo:rows2];
     
     _tableView2 = [[TSTableView alloc] initWithFrame:CGRectMake(20, self.view.frame.size.height/2 + 10, self.view.frame.size.width - 40, self.view.frame.size.height/2 - 30)];
     _tableView2.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
     [self.view addSubview:_tableView2];
     
     _model2 = [[TSTableViewModel alloc] initWithTableView:_tableView2 andStyle:TSTableViewStyleLight];
-    [_model2 setColumnsInfo:columns1 andRowsInfo:rows];
+    [_model2 setColumnsInfo:columns2 andRowsInfo:rows2];
 }
 
 - (void)didReceiveMemoryWarning
