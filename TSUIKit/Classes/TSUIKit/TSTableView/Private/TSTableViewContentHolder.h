@@ -35,6 +35,17 @@
  *  @abstract Invoked when user manually changing content offset (i.e. scrolling)
  */
 - (void)tableViewContentHolder:(TSTableViewContentHolder *)contentHolder contentOffsetDidChange:(CGPoint)contentOffset animated:(BOOL)animated;
+/**
+ *  @abstract Invoked when user manually changing row selection (i.e. tap on row)
+ */
+- (void)tableViewContentHolder:(TSTableViewContentHolder *)contentHolder willSelectRowAtPath:(NSIndexPath *)rowPath animated:(BOOL)animated;
+- (void)tableViewContentHolder:(TSTableViewContentHolder *)contentHolder didSelectRowAtPath:(NSIndexPath *)rowPath;
+
+/**
+ *  @abstract Invoked when user manually changing column selection (i.e. tap on column header)
+ */
+- (void)tableViewContentHolder:(TSTableViewContentHolder *)contentHolder willSelectColumnAtPath:(NSIndexPath *)columnPath animated:(BOOL)animated;
+- (void)tableViewContentHolder:(TSTableViewContentHolder *)contentHolder didSelectColumnAtPath:(NSIndexPath *)columnPath;
 
 @end
 
@@ -113,5 +124,15 @@
  *  @abstract Hide current row selection
  */
 - (void)resetColumnSelectionWithAnimtaion:(BOOL)animated;
+
+/**
+ *  @abstract Return path to selected row. If no row currently selected return nil.
+ */
+- (NSIndexPath *)pathToSelectedRow;
+
+/**
+ *  @abstract Return path to selected column. If no column currently selected return nil.
+ */
+- (NSIndexPath *)pathToSelectedColumn;
 
 @end

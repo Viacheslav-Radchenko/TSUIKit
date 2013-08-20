@@ -125,12 +125,21 @@
 - (void)expandBtnTouchUpInside:(UIButton *)sender withEvent:(UIEvent *)event
 {
     VerboseLog();
+    BOOL animated = YES;
     TSTableViewExpandSection *rowView = (TSTableViewExpandSection *)sender.superview;
-    [self changeExpandStateForRow:rowView.rowPath toValue:!sender.selected animated:YES];
     if(self.controlPanelDelegate)
     {
-        [self.controlPanelDelegate tableViewSideControlPanel:self expandStateDidChange:sender.selected forRow:rowView.rowPath];
+        [self.controlPanelDelegate tableViewSideControlPanel:self expandStateWillChange:sender.selected animated:animated forRow:rowView.rowPath];
     }
+    [self changeExpandStateForRow:rowView.rowPath toValue:!sender.selected animated:animated];
+    // tweak to invoke expandStateDidChange: after aniamtion finished
+    [TSUtils performViewAnimationBlock:nil withCompletion:^{
+        if(self.controlPanelDelegate)
+        {
+            [self.controlPanelDelegate tableViewSideControlPanel:self expandStateDidChange:sender.selected forRow:rowView.rowPath];
+        }
+    } animated:animated];
+    
 }
 
 #pragma mark -
@@ -211,7 +220,7 @@
         
         if(parentRowView)
         {
-            parentRowView.subrows = [NSArray arrayWithArray:newRows];
+            parentRowView.subrows = newRows;
         }
         else
         {
@@ -230,7 +239,7 @@
 - (void)changeExpandStateForRow:(NSIndexPath *)rowPath toValue:(BOOL)expanded animated:(BOOL)animated
 {
     VerboseLog();
-    [self changeExpandStateForSubrows:_rows rowsIndexInPath:0 fullPath:rowPath toValue:(BOOL)expanded animated:animated];
+    [self changeExpandStateForSubrows:_rows rowsIndexInPath:0 fullPath:rowPath toValue:expanded animated:animated];
 }
 
 - (void)changeExpandStateForSubrows:(NSArray *)subrows rowsIndexInPath:(NSInteger)index fullPath:(NSIndexPath *)rowPath toValue:(BOOL)expanded animated:(BOOL)animated
@@ -358,6 +367,9 @@
         {
             TSTableViewExpandSection *row = subrows[i];
             row.expanded = expanded;
+            // first row in group may have offset that is not equal to 0
+            if(i == 0)
+                yOffset = row.frame.origin.y;
             CGRect rect = row.frame;
             rect.size.height = [self heightForRow:row includingSubrows:expanded];
             rect.origin.y = yOffset;
@@ -406,6 +418,66 @@
 {
     VerboseLog();
     return _totalWidth;
+}
+
+#pragma mark - Modify content
+
+
+- (void)insertRowAtPath:(NSIndexPath *)path animated:(BOOL)animated
+{
+    // Find subrows where new row should be inserted
+    TSTableViewExpandSection *row;
+    NSMutableArray *rows = _rows;
+    for(int i = 0; i < path.length - 1; i++)
+    {
+        NSInteger index = [path indexAtPosition:i];
+        row = rows[index];
+        rows = row.subrows;
+    }
+    
+    // Find position where new row should be inserted
+//    NSInteger lastIndex = [path indexAtPosition:path.length - 1];
+//    UIImage *controlPanelExpandBackImage = [self.dataSource controlPanelExpandSectionBackgroundImage];
+//    CGFloat rowHeight = [self.dataSource heightForRowAtPath:path];
+//    CGFloat expandItemWidth = [self.dataSource  widthForExpandItem];
+//    CGFloat totalSubrowHeight = rowHeight;
+//    CGFloat totalSubrowWidth = expandItemWidth;
+//    CGFloat yOffset = 0;
+//    
+//    TSTableViewExpandSection *rowView = [[TSTableViewExpandSection alloc] initWithFrame:CGRectMake(totalSubrowWidth, yOffset,expandItemWidth, rowHeight)];
+//    rowView.rowPath = path;
+//    rowView.rowHeight = rowHeight;
+//    if(controlPanelExpandBackImage)
+//    {
+//        rowView.backgroundImage.image = controlPanelExpandBackImage;
+//    }
+//    if(![self.dataSource lineNumbersAreHidden])
+//    {
+//        [rowView setLineNumber:lastIndex + 1];
+//        rowView.lineLabel.textColor = [self.dataSource lineNumbersColor];
+//    }
+//    [self addExpandButtonAtPath:path expandRowView:rowView];
+//    [self loadSubrowsForRowAtPath:path expandRowView:rowView totalHeight:&totalSubrowHeight totalWidth:&totalSubrowWidth];
+//    
+//    rowView.frame = CGRectMake(rowView.frame.origin.x, rowView.frame.origin.y, rowView.frame.size.width, totalSubrowHeight);
+//    
+//    if(maxWidth < totalSubrowWidth)
+//        maxWidth = totalSubrowWidth;
+//    [newRows addObject:rowView];
+//    yOffset += totalSubrowHeight;
+//    
+//    
+//    [rows insertObject:rowInfo atIndex:lastIndex];
+}
+
+- (void)updateRowAtPath:(NSIndexPath *)path animated:(BOOL)animated
+{
+    
+}
+
+- (void)removeRowAtPath:(NSIndexPath *)path animated:(BOOL)animated
+{
+    
 }
 
 @end

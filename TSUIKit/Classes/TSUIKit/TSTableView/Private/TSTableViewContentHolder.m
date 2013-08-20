@@ -444,6 +444,9 @@
         for(int i = 0; i < subrows.count; i++)
         {
             TSTableViewRow *row = subrows[i];
+            // first row in group may have offset that is not equal to 0
+            if(i == 0)
+                yOffset = row.frame.origin.y;
             CGRect rect = row.frame;
             rect.size.height = [self heightForRow:row includingSubrows:expanded];
             rect.origin.y = yOffset;
@@ -471,6 +474,12 @@
 - (void)selectRowAtPath:(NSIndexPath *)rowPath animated:(BOOL)animated
 {
     VerboseLog();
+    [self selectRowAtPath:rowPath animated:animated internal:NO];
+}
+
+- (void)selectRowAtPath:(NSIndexPath *)rowPath animated:(BOOL)animated internal:(BOOL)internal
+{
+    VerboseLog();
     if(![self.dataSource isRowVisible:rowPath])
     {
         [TSUtils performViewAnimationBlock:^{
@@ -480,6 +489,12 @@
         } animated:animated];
         return;
     }
+    
+    if(internal && self.contentHolderDelegate)
+    {
+        [self.contentHolderDelegate tableViewContentHolder:self willSelectRowAtPath:rowPath animated:animated];
+    }
+    
     TSTableViewRow *row = [self rowAtPath:rowPath];
     CGRect rect = row.frame;
     UIView *rowView = row;
@@ -496,13 +511,28 @@
     [TSUtils performViewAnimationBlock:^{
         self.rowSelectionView.frame = rect;
         self.rowSelectionView.alpha = 1;
-    } withCompletion:nil animated:animated];
+    } withCompletion:^{
+        if(internal && self.contentHolderDelegate)
+        {
+            [self.contentHolderDelegate tableViewContentHolder:self didSelectRowAtPath:rowPath];
+        }
+    } animated:animated];
 }
 
 - (void)selectColumnAtPath:(NSIndexPath *)columnPath animated:(BOOL)animated
 {
     VerboseLog();
- 
+    [self selectColumnAtPath:columnPath animated:animated internal:NO];
+}
+
+- (void)selectColumnAtPath:(NSIndexPath *)columnPath animated:(BOOL)animated internal:(BOOL)internal
+{
+    VerboseLog();
+    if(internal && self.contentHolderDelegate)
+    {
+        [self.contentHolderDelegate tableViewContentHolder:self willSelectColumnAtPath:columnPath animated:animated];
+    }
+    
     CGFloat width = [self.dataSource widthForColumnAtPath:columnPath];
     CGFloat offset = [self.dataSource offsetForColumnAtPath:columnPath];
     CGFloat height = [self.dataSource tableHeight];
@@ -513,7 +543,12 @@
     [TSUtils performViewAnimationBlock:^{
         self.columnSelectionView.frame = CGRectMake(offset, 0, width, height);
         self.columnSelectionView.alpha = 1;
-    } withCompletion:nil animated:animated];
+    } withCompletion:^{
+        if(internal && self.contentHolderDelegate)
+        {
+            [self.contentHolderDelegate tableViewContentHolder:self didSelectColumnAtPath:columnPath];
+        }
+    } animated:animated];
 }
 
 - (void)resetRowSelectionWithAnimtaion:(BOOL)animated
@@ -551,18 +586,27 @@
         [self selectColumnAtPath:self.columnSelectionView.selectedItem animated:animated];
 }
 
+- (NSIndexPath *)pathToSelectedRow
+{
+    return _rowSelectionView.selectedItem;
+}
+
+- (NSIndexPath *)pathToSelectedColumn
+{
+    return _columnSelectionView.selectedItem;
+}
+
 #pragma mark - Selection 
 
 - (void)tapGestureDidRecognized:(UITapGestureRecognizer *)recognizer
 {
     if(_allowRowSelection)
     {
-#warning check if need content offet
         CGPoint pos = [recognizer locationInView:self];
         NSIndexPath *rowIndexPath = [self findRowAtPosition:pos parentRow:nil parentPowPath:nil];
         if(rowIndexPath)
         {
-            [self selectRowAtPath:rowIndexPath animated:YES];
+            [self selectRowAtPath:rowIndexPath animated:YES internal:YES];
         }
     }
 }

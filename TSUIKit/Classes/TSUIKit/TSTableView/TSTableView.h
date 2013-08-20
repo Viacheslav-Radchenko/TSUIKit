@@ -179,10 +179,21 @@
  */
 - (void)resetColumnSelectionWithAnimtaion:(BOOL)animated;
 
-// Not implemented yet
+/**
+ *  @abstract Return path to selected row. If no row currently selected return nil.
+ */
+- (NSIndexPath *)pathToSelectedRow;
+
+/**
+ *  @abstract Return path to selected column. If no column currently selected return nil.
+ */
+- (NSIndexPath *)pathToSelectedColumn;
+
 - (void)insertRowAtPath:(NSIndexPath *)path animated:(BOOL)animated;
 - (void)updateRowAtPath:(NSIndexPath *)path animated:(BOOL)animated;
 - (void)removeRowAtPath:(NSIndexPath *)path animated:(BOOL)animated;
+
+// Not implemented yet
 - (void)insertRowsAtPathes:(NSArray *)pathes animated:(BOOL)animated;
 - (void)updateRowsAtPathes:(NSArray *)pathes animated:(BOOL)animated;
 - (void)removeRowsAtPathes:(NSArray *)pathes animated:(BOOL)animated;

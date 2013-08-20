@@ -31,13 +31,14 @@
 
 @protocol TSTableViewDelegate <NSObject>
 
-- (void)tableView:(TSTableView *)tableView willSelectRowAtPath:(NSIndexPath *)rowPath animated:(BOOL)animated;
 - (void)tableView:(TSTableView *)tableView didSelectRowAtPath:(NSIndexPath *)rowPath;
 
 @optional
-- (void)tableView:(TSTableView *)tableView widthWillChangeForColumnAtIndex:(NSInteger)columnIndex;
+- (void)tableView:(TSTableView *)tableView willSelectRowAtPath:(NSIndexPath *)rowPath animated:(BOOL)animated;
+- (void)tableView:(TSTableView *)tableView willSelectColumnAtPath:(NSIndexPath *)columnPath animated:(BOOL)animated;
+- (void)tableView:(TSTableView *)tableView didSelectColumnAtPath:(NSIndexPath *)columnPath;
 - (void)tableView:(TSTableView *)tableView widthDidChangeForColumnAtIndex:(NSInteger)columnIndex;
-- (void)tableView:(TSTableView *)tableView expandStateWillChangeForRowAtPath:(NSIndexPath *)rowPath;
-- (void)tableView:(TSTableView *)tableView expandStateDidChangeForRowAtPath:(NSIndexPath *)rowPath;
+- (void)tableView:(TSTableView *)tableView expandStateWillChange:(BOOL)expand forRowAtPath:(NSIndexPath *)rowPath animated:(BOOL)animated;
+- (void)tableView:(TSTableView *)tableView expandStateDidChange:(BOOL)expand forRowAtPath:(NSIndexPath *)rowPath;
 
 @end

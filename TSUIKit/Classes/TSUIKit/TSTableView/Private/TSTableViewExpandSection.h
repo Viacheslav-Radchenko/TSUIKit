@@ -32,7 +32,7 @@
 @property (nonatomic, assign) CGFloat rowHeight;
 @property (nonatomic, assign) BOOL expanded;
 @property (nonatomic, strong) NSIndexPath *rowPath;
-@property (nonatomic, strong) NSArray *subrows;
+@property (nonatomic, strong) NSMutableArray *subrows;
 @property (nonatomic, strong) UIButton *expandButton;
 @property (nonatomic, strong, readonly) UILabel *lineLabel;
 @property (nonatomic, strong, readonly) UIImageView *backgroundImage;

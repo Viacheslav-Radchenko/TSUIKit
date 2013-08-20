@@ -364,7 +364,6 @@
 {
     if(_allowColumnSelection)
     {
-#warning check if need content offet
         CGPoint pos = [recognizer locationInView:self];
         NSIndexPath *columnIndexPath = [self findColumnAtPosition:pos parentColumn:nil parentColumnPath:nil];
         if(columnIndexPath && self.headerDelegate)

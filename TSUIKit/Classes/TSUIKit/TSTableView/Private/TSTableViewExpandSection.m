@@ -125,7 +125,7 @@
     [self updateLineLabelLayout];
 }
 
-- (void)setSubrows:(NSArray *)subrows
+- (void)setSubrows:(NSMutableArray *)subrows
 {
     if(_subrows)
         for(UIView *v in _subrows)

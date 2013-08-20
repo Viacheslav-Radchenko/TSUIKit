@@ -89,7 +89,7 @@
 @interface TSRow : NSObject
 
 @property (nonatomic, strong) NSArray *cells;
-@property (nonatomic, strong) NSArray *subrows;
+@property (nonatomic, strong) NSMutableArray *subrows;
 
 + (id)rowWithCells:(NSArray *)cells;
 + (id)rowWithCells:(NSArray *)cells andSubrows:(NSArray *)subrows;
@@ -134,6 +134,7 @@ typedef enum {
 @interface TSTableViewModel : NSObject <TSTableViewDataSource>
 {
     NSMutableArray *_columns;
+    NSMutableArray *_bottomEndColumns;
     NSMutableArray *_rows;
     TSTableView *_tableView;
 }

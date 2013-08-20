@@ -42,6 +42,13 @@
 #define VerboseLog(fmt, ...)  (void)0
 #endif
 
+// Add private API in TSTableViewContentHolder to TSTableView scope
+@interface TSTableViewContentHolder (Private)
+
+- (void)selectColumnAtPath:(NSIndexPath *)columnPath animated:(BOOL)animated internal:(BOOL)internal;
+
+@end
+
 @interface TSTableView () <TSTableViewHeaderPanelDelegate, TSTableViewExpandControlPanelDelegate, TSTableViewContentHolderDelegate, TSTableViewAppearanceCoordinator>
 
 @property (nonatomic, assign) CGFloat contentAdditionalSize;
@@ -305,21 +312,39 @@
     CGFloat delta = newWidth - oldWidth;
     [_tableContentHolder changeColumnWidthOnAmount:delta forColumn:columnIndex animated:NO];
     [self updateLayout];
+    
+    if(self.delegate && [self.delegate respondsToSelector:@selector(tableView:widthDidChangeForColumnAtIndex:)])
+    {
+        [self.delegate tableView:self widthDidChangeForColumnAtIndex:columnIndex];
+    }
 }
 
 - (void)tableViewHeader:(TSTableViewHeaderPanel *)header didSelectColumnAtPath:(NSIndexPath *)columnPath
 {
     VerboseLog();
-    [_tableContentHolder selectColumnAtPath:columnPath animated:YES];
+    [_tableContentHolder selectColumnAtPath:columnPath animated:YES internal:YES];
 }
 
 #pragma mark - TSTableViewExpandControlPanelDelegate
 
+- (void)tableViewSideControlPanel:(TSTableViewExpandControlPanel *)controlPanel expandStateWillChange:(BOOL)expand animated:(BOOL)animated forRow:(NSIndexPath *)rowPath
+{
+    VerboseLog();
+    if(self.delegate && [self.delegate respondsToSelector:@selector(tableView:expandStateWillChange:forRowAtPath:animated:)])
+    {
+        [self.delegate tableView:self expandStateWillChange:expand forRowAtPath:rowPath animated:animated];
+    }
+    [self updateLayout];
+    [_tableContentHolder changeExpandStateForRow:rowPath toValue:expand animated:animated];
+}
 - (void)tableViewSideControlPanel:(TSTableViewExpandControlPanel *)controlPanel expandStateDidChange:(BOOL)expand forRow:(NSIndexPath *)rowPath
 {
     VerboseLog();
-    [_tableContentHolder changeExpandStateForRow:rowPath toValue:expand animated:YES];
-    [self updateLayout];
+    
+    if(self.delegate && [self.delegate respondsToSelector:@selector(tableView:expandStateDidChange:forRowAtPath:)])
+    {
+        [self.delegate tableView:self expandStateDidChange:expand forRowAtPath:rowPath];
+    }
 }
 
 #pragma mark - TSTableViewContentHolderDelegate
@@ -329,6 +354,42 @@
     VerboseLog();
     [_tableControlPanel setContentOffset:CGPointMake(self.tableControlPanel.contentOffset.x, contentOffset.y) animated:animated];
     [_tableHeader setContentOffset:CGPointMake(contentOffset.x, self.tableHeader.contentOffset.y) animated:animated];
+}
+
+- (void)tableViewContentHolder:(TSTableViewContentHolder *)contentHolder willSelectRowAtPath:(NSIndexPath *)rowPath animated:(BOOL)animated
+{
+    VerboseLog();
+    if(self.delegate && [self.delegate respondsToSelector:@selector(tableView:willSelectRowAtPath:animated:)])
+    {
+        [self.delegate tableView:self willSelectRowAtPath:rowPath animated:animated];
+    }
+}
+
+- (void)tableViewContentHolder:(TSTableViewContentHolder *)contentHolder didSelectRowAtPath:(NSIndexPath *)rowPath
+{
+    VerboseLog();
+    if(self.delegate)
+    {
+        [self.delegate tableView:self didSelectRowAtPath:rowPath];
+    }
+}
+
+- (void)tableViewContentHolder:(TSTableViewContentHolder *)contentHolder willSelectColumnAtPath:(NSIndexPath *)columnPath animated:(BOOL)animated
+{
+    VerboseLog();
+    if(self.delegate && [self.delegate respondsToSelector:@selector(tableView:willSelectColumnAtPath:animated:)])
+    {
+        [self.delegate tableView:self willSelectColumnAtPath:columnPath animated:animated];
+    }
+}
+
+- (void)tableViewContentHolder:(TSTableViewContentHolder *)contentHolder didSelectColumnAtPath:(NSIndexPath *)columnPath
+{
+    VerboseLog();
+    if(self.delegate && [self.delegate respondsToSelector:@selector(tableView:didSelectColumnAtPath:)])
+    {
+        [self.delegate tableView:self didSelectColumnAtPath:columnPath];
+    }
 }
 
 #pragma mark - 
@@ -374,6 +435,16 @@
 - (void)resetColumnSelectionWithAnimtaion:(BOOL)animated
 {
     [_tableContentHolder resetColumnSelectionWithAnimtaion:YES];
+}
+
+- (NSIndexPath *)pathToSelectedRow
+{
+    return [_tableContentHolder pathToSelectedRow];
+}
+
+- (NSIndexPath *)pathToSelectedColumn
+{
+    return [_tableContentHolder pathToSelectedColumn];
 }
 
 #pragma mark - Provide TSTableViewDataSource functionality
@@ -513,7 +584,9 @@
 
 - (void)insertRowAtPath:(NSIndexPath *)path animated:(BOOL)animated
 {
-     NSAssert(FALSE, @"Not implemented");
+    [_tableControlPanel insertRowAtPath:path animated:animated];
+    //[_tableContentHolder insertRowAtPath:path animated:animated];
+    [self updateLayout];
 }
 
 - (void)updateRowAtPath:(NSIndexPath *)path animated:(BOOL)animated

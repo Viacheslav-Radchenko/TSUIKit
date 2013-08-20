@@ -34,6 +34,7 @@
 /**
  *  @abstract Invoked when user manually changing expand state
  */
+- (void)tableViewSideControlPanel:(TSTableViewExpandControlPanel *)controlPanel expandStateWillChange:(BOOL)expand animated:(BOOL)animated forRow:(NSIndexPath *)rowPath;
 - (void)tableViewSideControlPanel:(TSTableViewExpandControlPanel *)controlPanel expandStateDidChange:(BOOL)expand forRow:(NSIndexPath *)rowPath;
 
 @end
@@ -114,5 +115,10 @@
  *            Equal to maxNestingLevel * widthOfExpandItem
  */
 - (CGFloat)panelWidth;
+
+
+- (void)insertRowAtPath:(NSIndexPath *)path animated:(BOOL)animated;
+- (void)updateRowAtPath:(NSIndexPath *)path animated:(BOOL)animated;
+- (void)removeRowAtPath:(NSIndexPath *)path animated:(BOOL)animated;
 
 @end

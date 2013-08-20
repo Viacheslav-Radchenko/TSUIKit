@@ -329,6 +329,18 @@
 
 /**************************************************************************************************************************************/
 
+@interface TSTableViewModel ()
+{
+    NSMutableDictionary *_cachedHeaderSectionBackgroundImages;
+    NSMutableDictionary *_cachedCellBackgroundImages;
+    UIImage *_cachedGeneralBackgroundImage;
+    UIImage *_cachedExpandSectionBackgroundImage;
+    UIImage *_cachedExpandItemNormalBackgroundImage;
+    UIImage *_cachedExpandItemSelectedBackgroundImage;
+}
+
+@end
+
 @implementation TSTableViewModel
 
 - (id)initWithTableView:(TSTableView *)tableView andStyle:(TSTableViewStyle)style
@@ -345,27 +357,25 @@
         {
             _tableView.lineNumbersColor = [UIColor blackColor];
             _tableView.backgroundColor = [UIColor grayColor];
-            _tableView.headerBackgroundImage = [self generalBackgroundImage];
-            _tableView.expandPanelBackgroundImage = [self generalBackgroundImage];
-            _tableView.topLeftCornerBackgroundImage = [self generalBackgroundImage];
-            _tableView.expandItemNormalBackgroundImage = [self expandItemNormalBackgroundImage];
-            _tableView.expandItemSelectedBackgroundImage = [self expandItemSelectedBackgroundImage];
-            _tableView.expandSectionBackgroundImage = [self expandSectionBackgroundImage];
         }
         else
         {
             _tableView.lineNumbersColor = [UIColor lightGrayColor];
             _tableView.backgroundColor = [UIColor colorWithWhite:0.12 alpha:1];
-            _tableView.headerBackgroundImage = [self generalBackgroundImage2];
-            _tableView.expandPanelBackgroundImage = [self generalBackgroundImage2];
-            _tableView.topLeftCornerBackgroundImage = [self generalBackgroundImage2];
-            _tableView.expandItemNormalBackgroundImage = [self expandItemNormalBackgroundImage2];
-            _tableView.expandItemSelectedBackgroundImage = [self expandItemSelectedBackgroundImage2];
-            _tableView.expandSectionBackgroundImage = [self expandSectionBackgroundImage2];
         }
+        
+        _tableView.headerBackgroundImage = [self generalBackgroundImage];
+        _tableView.expandPanelBackgroundImage = [self generalBackgroundImage];
+        _tableView.topLeftCornerBackgroundImage = [self generalBackgroundImage];
+        _tableView.expandItemNormalBackgroundImage = [self expandItemNormalBackgroundImage];
+        _tableView.expandItemSelectedBackgroundImage = [self expandItemSelectedBackgroundImage];
+        _tableView.expandSectionBackgroundImage = [self expandSectionBackgroundImage];
         
         _rows = [[NSMutableArray alloc] init];
         _columns = [[NSMutableArray alloc] init];
+        _bottomEndColumns = [[NSMutableArray alloc] init];
+        _cachedHeaderSectionBackgroundImages = [[NSMutableDictionary alloc] init];
+        _cachedCellBackgroundImages = [[NSMutableDictionary alloc] init];
     }
     return self;
 }
@@ -374,6 +384,7 @@
 {
     VerboseLog();
     [_columns removeAllObjects];
+    [_bottomEndColumns removeAllObjects];
     [_rows removeAllObjects];
     
     for(id column in columns)
@@ -390,6 +401,8 @@
         {
             NSAssert(FALSE, @"Type is not supported");
         }
+        
+        [self addEndColumnsFrom:[_columns lastObject]];
     }
     
     for(id row in rows)
@@ -411,6 +424,21 @@
     [_tableView reloadData];
 }
 
+- (void)addEndColumnsFrom:(TSColumn *)parentColumn
+{
+    if(parentColumn.subcolumns.count == 0)
+    {
+        [_bottomEndColumns addObject:parentColumn];
+    }
+    else 
+    {
+        for(TSColumn *column in parentColumn.subcolumns)
+        {
+            [self addEndColumnsFrom:column];
+        }
+    }
+}
+
 - (void)setColumnsInfo:(NSArray *)columns andRowsInfo:(NSArray *)rows
 {
     VerboseLog();
@@ -427,6 +455,7 @@
         {
             NSAssert(FALSE, @"Type is not supported");
         }
+        [self addEndColumnsFrom:[_columns lastObject]];
     }
     
     for(NSDictionary *rowInfo in rows)
@@ -483,10 +512,11 @@
 - (TSColumn *)columnAtIndex:(NSInteger)index
 {
     VerboseLog(@"index = %d",index);
-#warning use additiona array with end level column's sections to have constant time access to columns 
-    return [self findColumnAtIndex:&index inColumns:_columns];
+
+    return [_bottomEndColumns objectAtIndex:index];
 }
 
+// Find specified column recursevly in TSColumn hierarchy
 - (TSColumn *)findColumnAtIndex:(NSInteger *)index inColumns:(NSArray *)columns
 {
     TSColumn *found;
@@ -607,57 +637,37 @@
     VerboseLog();
     TSCell *cellInfo = [self cellAtRowPath:indexPath atIndex:index];
     TSTableViewCell *cell = [[TSTableViewCell alloc] init];
-    if([cellInfo.value isKindOfClass:[NSNull class]])
-    {
-        cell.textLabel.text = @"";
-    }
-    else
-    {
-        cell.textLabel.text = [cellInfo.value description];
-    }
-    
-    CGFloat color;
-    if(_tableStyle == TSTableViewStyleDark)
-    {
-        color = 0.16f + 0.04f * (1 - (indexPath.length - 1)/(float)tableView.maxNestingLevel);
-        
-        cell.textLabel.textColor = [UIColor grayColor];
-    }
-    else
-    {
-        color = 0.9f + 0.1f * (1 - (indexPath.length - 1)/(float)tableView.maxNestingLevel);
-        cell.textLabel.textColor = [UIColor darkGrayColor];
-    }
+    cell.textLabel.text = (cellInfo.value == [NSNull null] ? @"" : [cellInfo.value description]);
     
     TSColumn *columnInfo = [self columnAtIndex:index];
     if(columnInfo.titleColor)
-        cell.textLabel.textColor = columnInfo.titleColor;
-    
-    if(columnInfo.color)
     {
-        color = 0.9f + 0.1f * (1 - (indexPath.length - 1)/(float)tableView.maxNestingLevel);
-        CGColorRef colorRef = columnInfo.color.CGColor;
-        const float *rgb = CGColorGetComponents(colorRef);
-        
-        if(_tableStyle == TSTableViewStyleDark)
-        {
-            cell.backgroundImageView.image = [self cellBackgroundImageWithBaseColor2:[UIColor colorWithRed:color *rgb[0]  green:color *rgb[1] blue:color *rgb[2] alpha:1]];
-        }
-        else
-        {
-            cell.backgroundImageView.image = [self cellBackgroundImageWithBaseColor:[UIColor colorWithRed:color *rgb[0]  green:color *rgb[1] blue:color *rgb[2] alpha:1]];
-        }
+        cell.textLabel.textColor = columnInfo.titleColor;
     }
     else
     {
         if(_tableStyle == TSTableViewStyleDark)
-        {
-            cell.backgroundImageView.image = [self cellBackgroundImageWithBaseColor2:[UIColor colorWithWhite:color alpha:1]];
-        }
+            cell.textLabel.textColor = [UIColor grayColor];
         else
-        {
-            cell.backgroundImageView.image = [self cellBackgroundImageWithBaseColor:[UIColor colorWithWhite:color alpha:1]];
-        }
+            cell.textLabel.textColor = [UIColor darkGrayColor];
+    }
+    
+    // Values and proportions below just came up from my head, there is no special logic for this... it just looks fine, that's all
+    if(columnInfo.color)
+    {
+        CGFloat color = 0.9f + 0.1f * (1 - (indexPath.length - 1)/(float)tableView.maxNestingLevel);
+        CGColorRef colorRef = columnInfo.color.CGColor;
+        const float *rgb = CGColorGetComponents(colorRef);
+        cell.backgroundImageView.image = [self cellBackgroundImageWithTintColor:[UIColor colorWithRed:color * rgb[0]  green:color * rgb[1] blue:color * rgb[2] alpha:1]];
+    }
+    else
+    {
+        CGFloat color;
+        if(_tableStyle == TSTableViewStyleDark)
+            color = 0.16f + 0.04f * (1 - (indexPath.length - 1)/(float)tableView.maxNestingLevel);
+        else
+            color = 0.9f + 0.1f * (1 - (indexPath.length - 1)/(float)tableView.maxNestingLevel);
+        cell.backgroundImageView.image = [self cellBackgroundImageWithTintColor:[UIColor colorWithWhite:color alpha:1]];
     }
     return cell;
 }
@@ -672,13 +682,12 @@
     {
         section.textLabel.layer.shadowColor = [UIColor blackColor].CGColor;
         section.textLabel.textColor = [UIColor grayColor];
-        section.backgroundImageView.image = [self headerSectionBackgroundImageWithBaseColor2:column.color];
     }
     else
     {
-        section.backgroundImageView.image = [self headerSectionBackgroundImageWithBaseColor:column.color];
         section.textLabel.textColor = [UIColor darkGrayColor];
     }
+    section.backgroundImageView.image = [self headerSectionBackgroundImageWithTintColor:column.color];
     
     if(column.title)
         section.textLabel.text = column.title;
@@ -702,17 +711,117 @@
 
 - (void)insertRow:(TSRow *)rowInfo atPath:(NSIndexPath *)indexPath
 {
-    NSAssert(FALSE, @"Not implemented");
+    TSRow *row;
+    NSMutableArray *rows = _rows;
+    for(int i = 0; i < indexPath.length - 1; i++)
+    {
+        NSInteger index = [indexPath indexAtPosition:i];
+        row = rows[index];
+        rows = row.subrows;
+    }
+    NSInteger lastIndex = [indexPath indexAtPosition:indexPath.length - 1];
+    [rows insertObject:rowInfo atIndex:lastIndex];
+    [_tableView insertRowAtPath:indexPath animated:YES];
 }
 
 - (void)removeRowAtPath:(NSIndexPath *)indexPath
 {
-    NSAssert(FALSE, @"Not implemented");
+    TSRow *row;
+    NSMutableArray *rows = _rows;
+    for(int i = 0; i < indexPath.length - 1; i++)
+    {
+        NSInteger index = [indexPath indexAtPosition:i];
+        row = rows[index];
+        rows = row.subrows;
+    }
+    NSInteger lastIndex = [indexPath indexAtPosition:indexPath.length - 1];
+    [rows removeObjectAtIndex:lastIndex];
+    [_tableView removeRowAtPath:indexPath animated:YES];
 }
 
 #pragma mark - Create background images
 
-- (UIImage *)cellBackgroundImageWithBaseColor:(UIColor *)color
+- (UIImage *)cellBackgroundImageWithTintColor:(UIColor *)color
+{
+    id key = (color ? color : [NSNull null]);
+    UIImage *image = _cachedCellBackgroundImages[key];
+    if(!image)
+    {
+        if(_tableStyle == TSTableViewStyleDark)
+            image = [self darkCellBackgroundImageWithTintColor:color];
+        else
+            image = [self lightCellBackgroundImageWithTintColor:color];
+        _cachedCellBackgroundImages[key] = image;
+    }
+    return image;
+}
+
+- (UIImage *)headerSectionBackgroundImageWithTintColor:(UIColor *)color
+{
+    id key = (color ? color : [NSNull null]);
+    UIImage *image = _cachedHeaderSectionBackgroundImages[key];
+    if(!image)
+    {
+        if(_tableStyle == TSTableViewStyleDark)
+            image = [self darkHeaderSectionBackgroundImageWithTintColor:color];
+        else
+            image = [self lightHeaderSectionBackgroundImageWithTintColor:color];
+        _cachedHeaderSectionBackgroundImages[key] = image;
+    }
+    return image;
+}
+
+- (UIImage *)expandSectionBackgroundImage
+{
+    if(!_cachedExpandSectionBackgroundImage)
+    {
+        if(_tableStyle == TSTableViewStyleDark)
+            _cachedExpandSectionBackgroundImage = [self darkExpandSectionBackgroundImage];
+        else
+            _cachedExpandSectionBackgroundImage = [self lightExpandSectionBackgroundImage];
+    }
+    return _cachedExpandSectionBackgroundImage;
+}
+
+- (UIImage *)expandItemNormalBackgroundImage
+{
+    if(!_cachedExpandItemNormalBackgroundImage)
+    {
+        if(_tableStyle == TSTableViewStyleDark)
+            _cachedExpandItemNormalBackgroundImage = [self darkExpandItemNormalBackgroundImage];
+        else
+            _cachedExpandItemNormalBackgroundImage = [self lightExpandItemNormalBackgroundImage];
+    }
+    return _cachedExpandItemNormalBackgroundImage;
+}
+
+- (UIImage *)expandItemSelectedBackgroundImage
+{
+    if(!_cachedExpandItemSelectedBackgroundImage)
+    {
+        if(_tableStyle == TSTableViewStyleDark)
+            _cachedExpandItemSelectedBackgroundImage = [self darkExpandItemSelectedBackgroundImage];
+        else
+            _cachedExpandItemSelectedBackgroundImage = [self lightExpandItemSelectedBackgroundImage];
+    }
+    return _cachedExpandItemSelectedBackgroundImage;
+}
+
+- (UIImage *)generalBackgroundImage
+{
+    if(!_cachedGeneralBackgroundImage)
+    {
+        if(_tableStyle == TSTableViewStyleDark)
+            _cachedGeneralBackgroundImage = [self darkGeneralBackgroundImage];
+        else
+            _cachedGeneralBackgroundImage = [self lightGeneralBackgroundImage];
+    }
+    return _cachedGeneralBackgroundImage;
+}
+
+#pragma mark - Create background images for Light style
+
+- (UIImage *)lightCellBackgroundImageWithTintColor:(UIColor *)color
 {
     UIColor *topColor = (color ? color : [UIColor whiteColor]);
     UIColor *bottomColor = (color ? color : [UIColor whiteColor]);
@@ -752,11 +861,10 @@
     
     UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
-    
     return [image resizableImageWithCapInsets:UIEdgeInsetsMake(rect.size.height/2, rect.size.width/2, rect.size.height/2, rect.size.width/2)];
 }
 
-- (UIImage *)headerSectionBackgroundImageWithBaseColor:(UIColor *)color
+- (UIImage *)lightHeaderSectionBackgroundImageWithTintColor:(UIColor *)color
 {
     UIColor *topColor = [UIColor colorWithWhite:0.95f alpha:1.0f];
     UIColor *bottomColor = (color ? color : [UIColor colorWithWhite:0.9f alpha:1.0f]);
@@ -803,12 +911,10 @@
     
     UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
-    
     return [image resizableImageWithCapInsets:UIEdgeInsetsMake(rect.size.height/2, rect.size.width/2, rect.size.height/2, rect.size.width/2)];
 }
 
-
-- (UIImage *)expandSectionBackgroundImage
+- (UIImage *)lightExpandSectionBackgroundImage
 {
     UIColor *topColor = [UIColor colorWithWhite:0.95f alpha:1.0f];
     UIColor *bottomColor = [UIColor colorWithWhite:0.9f alpha:1.0f];
@@ -855,12 +961,11 @@
     
     UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
-    
     return [image resizableImageWithCapInsets:UIEdgeInsetsMake(rect.size.height/2, rect.size.width/2, rect.size.height/2, rect.size.width/2)];
 }
 
 
-- (UIImage *)expandItemNormalBackgroundImage
+- (UIImage *)lightExpandItemNormalBackgroundImage
 {
     CGFloat expandItemWidth = [self widthForExpandItem];
     CGFloat rowHeight = [self heightForRow];
@@ -885,11 +990,10 @@
     
     UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
-    
     return image;
 }
 
-- (UIImage *)expandItemSelectedBackgroundImage
+- (UIImage *)lightExpandItemSelectedBackgroundImage
 {
     CGFloat expandItemWidth = [self widthForExpandItem];
     CGFloat rowHeight = [self heightForRow];
@@ -930,7 +1034,7 @@
     return image;
 }
 
-- (UIImage *)generalBackgroundImage
+- (UIImage *)lightGeneralBackgroundImage
 {
     UIColor *topColor = [UIColor colorWithWhite:0.95f alpha:1.0f];
     UIColor *bottomColor = [UIColor colorWithWhite:0.9f alpha:1.0f];
@@ -974,9 +1078,9 @@
     return [image resizableImageWithCapInsets:UIEdgeInsetsMake(rect.size.height/2, rect.size.width/2, rect.size.height/2, rect.size.width/2)];
 }
 
-#pragma mark - Create background images
+#pragma mark - Create background images for Dark Style
 
-- (UIImage *)cellBackgroundImageWithBaseColor2:(UIColor *)color
+- (UIImage *)darkCellBackgroundImageWithTintColor:(UIColor *)color
 {
     UIColor *topColor = (color ? color : [UIColor colorWithWhite:0.2f alpha:1.0f]);
     UIColor *bottomColor = (color ? color : [UIColor colorWithWhite:0.15f alpha:1.0f]);
@@ -1016,11 +1120,10 @@
 
     UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
-    
     return [image resizableImageWithCapInsets:UIEdgeInsetsMake(rect.size.height/2, rect.size.width/2, rect.size.height/2, rect.size.width/2)];
 }
 
-- (UIImage *)headerSectionBackgroundImageWithBaseColor2:(UIColor *)color
+- (UIImage *)darkHeaderSectionBackgroundImageWithTintColor:(UIColor *)color
 {
     UIColor *topColor =         [UIColor colorWithWhite:0.2f alpha:1.0f];
     UIColor *bottomColor =   (color ? color :  [UIColor colorWithWhite:0.15f alpha:1.0f]);
@@ -1068,11 +1171,9 @@
     UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
     return [image resizableImageWithCapInsets:UIEdgeInsetsMake(2, rect.size.width/2, 2, rect.size.width/2) resizingMode:UIImageResizingModeStretch];
-    
 }
 
-
-- (UIImage *)expandSectionBackgroundImage2
+- (UIImage *)darkExpandSectionBackgroundImage
 {
     UIColor *topColor =         [UIColor colorWithWhite:0.2f alpha:1.0f];
     UIColor *bottomColor =      [UIColor colorWithWhite:0.15f alpha:1.0f];
@@ -1124,7 +1225,7 @@
 }
 
 
-- (UIImage *)expandItemNormalBackgroundImage2
+- (UIImage *)darkExpandItemNormalBackgroundImage
 {
     CGFloat expandItemWidth = [self widthForExpandItem];
     CGFloat rowHeight = [self heightForRow];
@@ -1177,7 +1278,7 @@
     return image;
 }
 
-- (UIImage *)expandItemSelectedBackgroundImage2
+- (UIImage *)darkExpandItemSelectedBackgroundImage
 {
     CGFloat expandItemWidth = [self widthForExpandItem];
     CGFloat rowHeight = [self heightForRow];
@@ -1229,7 +1330,7 @@
     return image;
 }
 
-- (UIImage *)generalBackgroundImage2
+- (UIImage *)darkGeneralBackgroundImage
 {
     UIColor *topColor =         [UIColor colorWithWhite:0.2f alpha:1.0f];
     UIColor *bottomColor =      [UIColor colorWithWhite:0.15f alpha:1.0f];
