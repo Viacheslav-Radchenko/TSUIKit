@@ -327,19 +327,11 @@
 
 #pragma mark - TSTableViewExpandControlPanelDelegate
 
-- (void)tableViewSideControlPanel:(TSTableViewExpandControlPanel *)controlPanel expandStateWillChange:(BOOL)expand animated:(BOOL)animated forRow:(NSIndexPath *)rowPath
-{
-    VerboseLog();
-    if(self.delegate && [self.delegate respondsToSelector:@selector(tableView:expandStateWillChange:forRowAtPath:animated:)])
-    {
-        [self.delegate tableView:self expandStateWillChange:expand forRowAtPath:rowPath animated:animated];
-    }
-    [self updateLayout];
-    [_tableContentHolder changeExpandStateForRow:rowPath toValue:expand animated:animated];
-}
 - (void)tableViewSideControlPanel:(TSTableViewExpandControlPanel *)controlPanel expandStateDidChange:(BOOL)expand forRow:(NSIndexPath *)rowPath
 {
     VerboseLog();
+    [self updateLayout];
+    [_tableContentHolder changeExpandStateForRow:rowPath toValue:expand animated:YES];
     
     if(self.delegate && [self.delegate respondsToSelector:@selector(tableView:expandStateDidChange:forRowAtPath:)])
     {
@@ -585,18 +577,25 @@
 - (void)insertRowAtPath:(NSIndexPath *)path animated:(BOOL)animated
 {
     [_tableControlPanel insertRowAtPath:path animated:animated];
-    //[_tableContentHolder insertRowAtPath:path animated:animated];
-    [self updateLayout];
+    [_tableContentHolder insertRowAtPath:path animated:animated];
+    [TSUtils performViewAnimationBlock:^{
+        [self updateLayout];
+    } withCompletion:nil animated:animated];
 }
 
 - (void)updateRowAtPath:(NSIndexPath *)path animated:(BOOL)animated
 {
-    NSAssert(FALSE, @"Not implemented");
+    [_tableControlPanel updateRowAtPath:path animated:animated];
+    [_tableContentHolder updateRowAtPath:path animated:animated];
 }
 
 - (void)removeRowAtPath:(NSIndexPath *)path animated:(BOOL)animated
 {
-     NSAssert(FALSE, @"Not implemented");
+    [_tableControlPanel removeRowAtPath:path animated:animated];
+    [_tableContentHolder removeRowAtPath:path animated:animated];
+    [TSUtils performViewAnimationBlock:^{
+        [self updateLayout];
+    } withCompletion:nil animated:animated];
 }
 
 - (void)insertRowsAtPathes:(NSArray *)pathes animated:(BOOL)animated

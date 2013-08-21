@@ -30,7 +30,7 @@
 @interface TSTableViewRow : UIView
 
 @property (nonatomic, assign) CGFloat rowHeight;
-@property (nonatomic, strong) NSArray *subrows;
+@property (nonatomic, strong) NSMutableArray *subrows;
 @property (nonatomic, strong) NSArray *cells;
 
 @end

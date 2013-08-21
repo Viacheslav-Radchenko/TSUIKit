@@ -72,9 +72,9 @@
 
 - (IBAction)numberOfRowsValueChanged:(UIStepper *)stepper
 {
-//    NSInteger val = [stepper value];
-//    if(val > _stepperPreviousValue)
-//    {
+    NSInteger val = [stepper value];
+    if(val > _stepperPreviousValue)
+    {
 //        for(int i = 0; i < _dataModels.count; i++)
 //        {
 //            TSTableView *table = _tables[i];
@@ -86,20 +86,20 @@
 //            TSRow *row = [self generateNewRow];
 //            [model insertRow:row atPath:rowPath];
 //        }
-//    }
-//    else
-//    {
-//        for(int i = 0; i < _dataModels.count; i++)
-//        {
-//            TSTableView *table = _tables[i];
-//            TSTableViewModel *model = _dataModels[i];
-//            NSIndexPath *rowPath = [table pathToSelectedRow];
-//            
-//            TSRow *row = [self generateNewRow];
-//            [model insertRow:row atPath:rowPath];
-//        }
-//    }
-//    _stepperPreviousValue = val;
+    }
+    else
+    {
+        for(int i = 0; i < _dataModels.count; i++)
+        {
+            TSTableView *table = _tables[i];
+            TSTableViewModel *model = _dataModels[i];
+            NSIndexPath *rowPath = [table pathToSelectedRow];
+            if(rowPath)
+                [model removeRowAtPath:rowPath];
+            
+        }
+    }
+    _stepperPreviousValue = val;
 }
 
 - (IBAction)expandAllButtonPressed
@@ -150,11 +150,6 @@
 }
 
 - (void)tableView:(TSTableView *)tableView widthDidChangeForColumnAtIndex:(NSInteger)columnIndex
-{
-    VerboseLog();
-}
-
-- (void)tableView:(TSTableView *)tableView expandStateWillChange:(BOOL)expand forRowAtPath:(NSIndexPath *)rowPath animated:(BOOL)animated
 {
     VerboseLog();
 }

@@ -34,11 +34,12 @@
     if(self = [super initWithFrame:frame])
     {
         self.clipsToBounds = YES;
+        self.backgroundColor = [UIColor clearColor];
     }
     return self;
 }
 
-- (void)setSubrows:(NSArray *)subrows
+- (void)setSubrows:(NSMutableArray *)subrows
 {
     if(_subrows)
         for(UIView *v in _subrows)

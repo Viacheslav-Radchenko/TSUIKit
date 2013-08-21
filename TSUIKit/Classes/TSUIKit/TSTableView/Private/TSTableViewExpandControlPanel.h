@@ -34,7 +34,6 @@
 /**
  *  @abstract Invoked when user manually changing expand state
  */
-- (void)tableViewSideControlPanel:(TSTableViewExpandControlPanel *)controlPanel expandStateWillChange:(BOOL)expand animated:(BOOL)animated forRow:(NSIndexPath *)rowPath;
 - (void)tableViewSideControlPanel:(TSTableViewExpandControlPanel *)controlPanel expandStateDidChange:(BOOL)expand forRow:(NSIndexPath *)rowPath;
 
 @end

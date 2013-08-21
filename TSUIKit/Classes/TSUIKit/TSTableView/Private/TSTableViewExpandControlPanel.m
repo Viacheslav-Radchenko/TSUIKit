@@ -125,21 +125,12 @@
 - (void)expandBtnTouchUpInside:(UIButton *)sender withEvent:(UIEvent *)event
 {
     VerboseLog();
-    BOOL animated = YES;
     TSTableViewExpandSection *rowView = (TSTableViewExpandSection *)sender.superview;
+    [self changeExpandStateForRow:rowView.rowPath toValue:!sender.selected animated:YES];
     if(self.controlPanelDelegate)
     {
-        [self.controlPanelDelegate tableViewSideControlPanel:self expandStateWillChange:sender.selected animated:animated forRow:rowView.rowPath];
+        [self.controlPanelDelegate tableViewSideControlPanel:self expandStateDidChange:sender.selected forRow:rowView.rowPath];
     }
-    [self changeExpandStateForRow:rowView.rowPath toValue:!sender.selected animated:animated];
-    // tweak to invoke expandStateDidChange: after aniamtion finished
-    [TSUtils performViewAnimationBlock:nil withCompletion:^{
-        if(self.controlPanelDelegate)
-        {
-            [self.controlPanelDelegate tableViewSideControlPanel:self expandStateDidChange:sender.selected forRow:rowView.rowPath];
-        }
-    } animated:animated];
-    
 }
 
 #pragma mark -
@@ -155,27 +146,20 @@
     
     if(self.dataSource)
     {
-        _maxNestingLevel = 0;
-        _totalWidth = 0;
-        _totalHeight = 0;
-        [self loadSubrowsForRowAtPath:nil expandRowView:nil totalHeight:&_totalHeight totalWidth:&_totalWidth];
+        [self loadSubrowsForRowAtPath:nil expandRowView:nil];
+        [self updateLayout];
+        [self updateLineNumbers];
     }
 }
 
-- (void)loadSubrowsForRowAtPath:(NSIndexPath *)rowPath expandRowView:(TSTableViewExpandSection *)parentRowView  totalHeight:(CGFloat *)totalHeight totalWidth:(CGFloat *)totalWidth
+- (void)loadSubrowsForRowAtPath:(NSIndexPath *)rowPath expandRowView:(TSTableViewExpandSection *)parentRowView 
 {
     VerboseLog();
-    if(_maxNestingLevel < rowPath.length)
-    {
-        _maxNestingLevel = rowPath.length;
-    }
     NSInteger numberOfRows = [self.dataSource numberOfRowsAtPath:rowPath];
     if(numberOfRows)
     {
         CGFloat controlPanelExpandButtonWidth = [self.dataSource widthForExpandItem];
         UIImage *controlPanelExpandBackImage = [self.dataSource controlPanelExpandSectionBackgroundImage];
-        CGFloat maxWidth = 0;
-        CGFloat yOffset = *totalHeight;
         NSMutableArray *newRows = [[NSMutableArray alloc] init];
         for(int j = 0; j < numberOfRows; j++)
         {
@@ -186,10 +170,7 @@
                 subrowPath = [NSIndexPath indexPathWithIndex:j];
             
             CGFloat rowHeight = [self.dataSource heightForRowAtPath:subrowPath];
-            CGFloat totalSubrowHeight = rowHeight;
-            CGFloat totalSubrowWidth = controlPanelExpandButtonWidth;
-            
-            TSTableViewExpandSection *rowView = [[TSTableViewExpandSection alloc] initWithFrame:CGRectMake(*totalWidth, yOffset,controlPanelExpandButtonWidth, rowHeight)];
+            TSTableViewExpandSection *rowView = [[TSTableViewExpandSection alloc] initWithFrame:CGRectMake(0, 0,controlPanelExpandButtonWidth, rowHeight)];
             rowView.rowPath = subrowPath;
             rowView.rowHeight = rowHeight;
             if(controlPanelExpandBackImage)
@@ -198,24 +179,12 @@
             }
             if(![self.dataSource lineNumbersAreHidden])
             {
-                [rowView setLineNumber:j + 1];
                 rowView.lineLabel.textColor = [self.dataSource lineNumbersColor];
             }
             [self addExpandButtonAtPath:subrowPath expandRowView:rowView];
-            [self loadSubrowsForRowAtPath:subrowPath expandRowView:rowView totalHeight:&totalSubrowHeight totalWidth:&totalSubrowWidth];
+            [self loadSubrowsForRowAtPath:subrowPath expandRowView:rowView];
             
-            rowView.frame = CGRectMake(rowView.frame.origin.x, rowView.frame.origin.y, rowView.frame.size.width, totalSubrowHeight);
-            
-            if(maxWidth < totalSubrowWidth)
-                maxWidth = totalSubrowWidth;
             [newRows addObject:rowView];
-            yOffset += totalSubrowHeight;
-        }
-        
-        for(int j = 0; j < numberOfRows; j++)
-        {
-            TSTableViewExpandSection *rowView = newRows[j];
-            rowView.frame = CGRectMake(rowView.frame.origin.x, rowView.frame.origin.y, maxWidth, rowView.frame.size.height);
         }
         
         if(parentRowView)
@@ -228,9 +197,6 @@
             for(UIView *row in _rows)
                 [self addSubview:row];
         }
-        
-        *totalWidth += maxWidth;
-        *totalHeight = yOffset;
     }
 }
 
@@ -468,6 +434,11 @@
 //    
 //    
 //    [rows insertObject:rowInfo atIndex:lastIndex];
+    
+    [TSUtils performViewAnimationBlock:^{
+        [self updateLayout];
+    } withCompletion:nil animated:animated];
+    [self updateLineNumbers];
 }
 
 - (void)updateRowAtPath:(NSIndexPath *)path animated:(BOOL)animated
@@ -477,7 +448,112 @@
 
 - (void)removeRowAtPath:(NSIndexPath *)path animated:(BOOL)animated
 {
+    // Find subrows where row should be removed
+    TSTableViewExpandSection *row;
+    NSMutableArray *rows = _rows;
+    for(int i = 0; i < path.length - 1; i++)
+    {
+        NSInteger index = [path indexAtPosition:i];
+        row = rows[index];
+        rows = row.subrows;
+    }
     
+    // Find position where new row should be inserted
+    NSInteger lastIndex = [path indexAtPosition:path.length - 1];
+    TSTableViewExpandSection *removedRow = rows[lastIndex];
+    [removedRow removeFromSuperview];
+    [rows removeObject:removedRow];
+    
+    if(rows.count == 0)
+        row.expandButton = nil;
+    
+    [TSUtils performViewAnimationBlock:^{
+        [self updateLayout];
+    } withCompletion:nil animated:animated];
+    [self updateLineNumbers];
+}
+
+#pragma mark - Update layout
+
+- (void)updateLineNumbers
+{
+     if([self.dataSource lineNumbersAreHidden]) return;
+    [self updateLineNumbersForRows:_rows];
+}
+
+- (void)updateLineNumbersForRows:(NSArray *)rows
+{
+    for(int i = 0; i < rows.count; i++)
+    {
+        TSTableViewExpandSection *row = rows[i];
+        [row setLineNumber:i + 1];
+        if(row.subrows.count)
+            [self updateLineNumbersForRows:row.subrows];
+    }
+}
+
+- (void)updateLayout
+{
+    _totalHeight = 0;
+    _totalWidth = 0;
+    _maxNestingLevel = 0;
+    [self updateLayoutForRows:_rows yOffset:0 xOffset:0 totalWidth:&_totalWidth totalHeight:&_totalHeight nestingLevel:&_maxNestingLevel];
+    [self adjustRowWidthTo:_totalWidth forRows:_rows];
+}
+
+- (void)updateLayoutForRows:(NSArray *)rows
+                    yOffset:(CGFloat)yOffset
+                    xOffset:(CGFloat)xOffset
+                 totalWidth:(CGFloat *)totalWidth
+                totalHeight:(CGFloat *)totalHeight
+               nestingLevel:(NSInteger *)maxNestingLevel
+{
+    CGFloat controlPanelExpandButtonWidth = [self.dataSource widthForExpandItem];
+    CGFloat maxWidth = 0;
+    NSInteger maxNestLevel = 0;
+    for(int i = 0; i < rows.count; i++)
+    {
+        TSTableViewExpandSection *row = rows[i];
+        CGFloat rowHeight = row.rowHeight;
+        CGFloat totalRowHeight = rowHeight;
+        CGFloat totalRowWidth = controlPanelExpandButtonWidth;
+        NSInteger nestingLevel = 1;
+        if(row.subrows.count)
+        {
+            [self updateLayoutForRows:row.subrows
+                              yOffset:totalRowHeight
+                              xOffset:totalRowWidth
+                           totalWidth:&totalRowWidth
+                          totalHeight:&totalRowHeight
+                          nestingLevel:&nestingLevel];
+        }
+        CGFloat visibleHeight = [self heightForRow:row includingSubrows:row.expanded];
+        row.frame = CGRectMake(xOffset, yOffset, row.frame.size.width, visibleHeight);
+        yOffset += visibleHeight;
+        *totalHeight += totalRowHeight;
+        
+        if(totalRowWidth > maxWidth)
+            maxWidth = totalRowWidth;
+        
+        if(nestingLevel > maxNestLevel)
+            maxNestLevel = nestingLevel;
+    }
+    *totalWidth += maxWidth;
+    *maxNestingLevel += maxNestLevel;
+}
+
+- (void)adjustRowWidthTo:(CGFloat)rowWidth forRows:(NSArray *)rows
+{
+    CGFloat controlPanelExpandButtonWidth = [self.dataSource widthForExpandItem];
+    for(int i = 0; i < rows.count; i++)
+    {
+        TSTableViewExpandSection *row = rows[i];
+        row.frame = CGRectMake(row.frame.origin.x, row.frame.origin.y, rowWidth, row.frame.size.height);
+        if(row.subrows.count)
+        {
+            [self adjustRowWidthTo:rowWidth - controlPanelExpandButtonWidth  forRows:row.subrows];
+        }
+    }
 }
 
 @end

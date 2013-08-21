@@ -241,10 +241,13 @@
     }
     [_rows removeAllObjects];
     
+    [self resetColumnSelectionWithAnimtaion:NO];
+    [self resetRowSelectionWithAnimtaion:NO];
+    
     if(self.dataSource)
     {
-        CGFloat totalHeight = 0;
-        [self loadSubrowsForRowAtPath:nil rowView:nil yOffset:&totalHeight];
+        [self loadSubrowsForRowAtPath:nil rowView:nil];
+        [self updateLayout];
     }
     
     if(_rowSelectionView)
@@ -253,7 +256,7 @@
     }
 }
 
-- (void)loadSubrowsForRowAtPath:(NSIndexPath *)rowPath rowView:(TSTableViewRow *)parentRowView  yOffset:(CGFloat *)yOffset
+- (void)loadSubrowsForRowAtPath:(NSIndexPath *)rowPath rowView:(TSTableViewRow *)parentRowView
 {
     VerboseLog();
     NSInteger numberOfRows = [self.dataSource numberOfRowsAtPath:rowPath];
@@ -275,21 +278,18 @@
             else
                 subrowPath = [NSIndexPath indexPathWithIndex:j];
             
-            CGFloat totalSubrowHeight = 0;
-            TSTableViewRow *rowView = [[TSTableViewRow alloc] initWithFrame:CGRectMake(0, *yOffset, tableWidth, 0)];
-            [self loadCellsForRowAtPath:subrowPath rowView:rowView yOffset:&totalSubrowHeight];
-            [self loadSubrowsForRowAtPath:subrowPath rowView:rowView yOffset:&totalSubrowHeight];
-            
-            rowView.backgroundColor = [UIColor clearColor];
-            rowView.frame = CGRectMake(rowView.frame.origin.x, rowView.frame.origin.y, rowView.frame.size.width, totalSubrowHeight);
-            
+            CGFloat rowHeight = [self.dataSource heightForRowAtPath:rowPath];
+            TSTableViewRow *rowView = [[TSTableViewRow alloc] initWithFrame:CGRectMake(0, 0, tableWidth, rowHeight)];
+            rowView.rowHeight = rowHeight;
+            [self loadCellsForRowAtPath:subrowPath rowView:rowView];
+            [self loadSubrowsForRowAtPath:subrowPath rowView:rowView];
+        
             [subRows addObject:rowView];
-            *yOffset += totalSubrowHeight;
         }
         
         if(parentRowView)
         {
-            parentRowView.subrows = [NSArray arrayWithArray:subRows];
+            parentRowView.subrows = subRows;
         }
         else
         {
@@ -300,26 +300,55 @@
     }
 }
 
-- (void)loadCellsForRowAtPath:(NSIndexPath *)rowPath rowView:(TSTableViewRow *)parentRowView yOffset:(CGFloat *)yOffset
+- (void)loadCellsForRowAtPath:(NSIndexPath *)rowPath rowView:(TSTableViewRow *)parentRowView
 {
     VerboseLog();
     NSInteger numberOfColumns = [self.dataSource numberOfColumns];
     NSMutableArray *newCells = [[NSMutableArray alloc] initWithCapacity:numberOfColumns];
-    CGFloat rowHeight = [self.dataSource heightForRowAtPath:rowPath];
     CGFloat xOffset = 0;
     for(int j = 0; j < numberOfColumns; j++)
     {
         CGFloat columnWidth = [self.dataSource widthForColumnAtIndex:j];
         TSTableViewCell *cellView = [self.dataSource cellViewForRowAtPath:rowPath cellIndex:j];
-        cellView.frame = CGRectMake(xOffset, 0, columnWidth, rowHeight);
+        cellView.frame = CGRectMake(xOffset, 0, columnWidth, parentRowView.rowHeight);
         [newCells addObject:cellView];  
         xOffset += columnWidth;
     }
-    parentRowView.rowHeight = rowHeight;
     parentRowView.cells = [NSArray arrayWithArray:newCells];
-    *yOffset += rowHeight;
 }
 
+#pragma mark -
+
+- (void)updateLayout
+{
+    CGFloat totalHeight = 0;
+    CGFloat tableWidth = [self.dataSource tableTotalWidth];
+    [self updateLayoutForRows:_rows atPath:nil tableWidth:tableWidth yOffset:&totalHeight];
+}
+
+- (void)updateLayoutForRows:(NSArray *)rows atPath:(NSIndexPath *)path tableWidth:(CGFloat)tableWidth yOffset:(CGFloat *)yOffset
+{
+    for(int i = 0; i < rows.count; i++)
+    {
+        NSIndexPath *rowPath;
+        if(path)
+            rowPath = [path indexPathByAddingIndex:i];
+        else
+            rowPath = [NSIndexPath indexPathWithIndex:i];
+        
+        TSTableViewRow *row = rows[i];
+        CGFloat totalRowHeight = row.rowHeight;
+        CGFloat offset = *yOffset;
+
+        if(row.subrows.count)
+        {
+            [self updateLayoutForRows:row.subrows atPath:rowPath tableWidth:tableWidth yOffset:&totalRowHeight];
+        }
+        CGFloat visibleHeight = [self heightForRow:row includingSubrows:[self.dataSource isRowExpanded:rowPath]];
+        row.frame = CGRectMake(row.frame.origin.x, offset, tableWidth, visibleHeight);
+        *yOffset += visibleHeight;
+    }
+}
 
 #pragma mark - Modify content
 
@@ -327,7 +356,8 @@
 {
     VerboseLog();
     [self changeColumnWidthForRows:_rows onAmount:delta forColumn:columnIndex animated:animated];
-    [self updateSelectionWithAnimation:animated];
+    [self updateRowSelectionWithAnimation:animated];
+    [self updateColumnSelectionWithAnimation:animated];
 }
 
 - (void)changeColumnWidthForRows:(NSArray *)rows onAmount:(CGFloat)delta forColumn:(NSInteger)columnIndex animated:(BOOL)animated
@@ -357,8 +387,9 @@
 - (void)changeExpandStateForRow:(NSIndexPath *)rowPath toValue:(BOOL)expanded animated:(BOOL)animated
 {
     VerboseLog();
-    [self changeExpandStateForSubrows:_rows rowsIndexInPath:0 fullPath:rowPath toValue:(BOOL)expanded animated:animated];
-    [self updateSelectionWithAnimation:animated];
+    [self changeExpandStateForSubrows:_rows rowsIndexInPath:0 fullPath:rowPath toValue:expanded animated:animated];
+    [self updateRowSelectionWithAnimation:animated];
+    [self updateColumnSelectionWithAnimation:animated];
 }
 
 - (void)changeExpandStateForSubrows:(NSArray *)subrows rowsIndexInPath:(NSInteger)index fullPath:(NSIndexPath *)rowPath toValue:(BOOL)expanded animated:(BOOL)animated
@@ -415,14 +446,16 @@
 {
     VerboseLog();
     [self changeExpandStateForAllSubrows:_rows rowsPath:nil toValue:YES animated:animated];
-    [self updateSelectionWithAnimation:animated];
+    [self updateRowSelectionWithAnimation:animated];
+    [self updateColumnSelectionWithAnimation:animated];
 }
 
 - (void)collapseAllRowsWithAnimation:(BOOL)animated
 {
     VerboseLog();
     [self changeExpandStateForAllSubrows:_rows rowsPath:nil toValue:NO animated:animated];
-    [self updateSelectionWithAnimation:animated];
+    [self updateRowSelectionWithAnimation:animated];
+    [self updateColumnSelectionWithAnimation:animated];
 }
 
 - (void)changeExpandStateForAllSubrows:(NSArray *)subrows rowsPath:(NSIndexPath *)rowsPath toValue:(BOOL)expanded animated:(BOOL)animated
@@ -555,11 +588,11 @@
 {
     if(_rowSelectionView)
     {
+        self.rowSelectionView.selectedItem = nil;
         [TSUtils performViewAnimationBlock:^{
             self.rowSelectionView.alpha = 0;
         } withCompletion:^{
             self.rowSelectionView.hidden = YES;
-            self.rowSelectionView.selectedItem = nil;
         } animated:animated];
     }
 }
@@ -568,20 +601,23 @@
 {
     if(_columnSelectionView)
     {
+        self.columnSelectionView.selectedItem = nil;
         [TSUtils performViewAnimationBlock:^{
             self.columnSelectionView.alpha = 0;
         } withCompletion:^{
             self.columnSelectionView.hidden = YES;
-            self.columnSelectionView.selectedItem = nil;
         } animated:animated];
     }
 }
 
-- (void)updateSelectionWithAnimation:(BOOL)animated
+- (void)updateRowSelectionWithAnimation:(BOOL)animated
 {
     if(_rowSelectionView && _rowSelectionView.selectedItem)
         [self selectRowAtPath:self.rowSelectionView.selectedItem animated:animated];
-    
+}
+
+- (void)updateColumnSelectionWithAnimation:(BOOL)animated
+{
     if(_columnSelectionView && _columnSelectionView.selectedItem)
         [self selectColumnAtPath:self.columnSelectionView.selectedItem animated:animated];
 }
@@ -624,6 +660,147 @@
         }
     }
     return parentRowPath;
+}
+
+#pragma mark - Modify content
+
+
+- (void)insertRowAtPath:(NSIndexPath *)path animated:(BOOL)animated
+{
+    // Find subrows where new row should be inserted
+    TSTableViewRow *row;
+    NSMutableArray *rows = _rows;
+    for(int i = 0; i < path.length - 1; i++)
+    {
+        NSInteger index = [path indexAtPosition:i];
+        row = rows[index];
+        rows = row.subrows;
+    }
+    
+    // Find position where new row should be inserted
+    //    NSInteger lastIndex = [path indexAtPosition:path.length - 1];
+    //    UIImage *controlPanelExpandBackImage = [self.dataSource controlPanelExpandSectionBackgroundImage];
+    //    CGFloat rowHeight = [self.dataSource heightForRowAtPath:path];
+    //    CGFloat expandItemWidth = [self.dataSource  widthForExpandItem];
+    //    CGFloat totalSubrowHeight = rowHeight;
+    //    CGFloat totalSubrowWidth = expandItemWidth;
+    //    CGFloat yOffset = 0;
+    //
+    //    TSTableViewExpandSection *rowView = [[TSTableViewExpandSection alloc] initWithFrame:CGRectMake(totalSubrowWidth, yOffset,expandItemWidth, rowHeight)];
+    //    rowView.rowPath = path;
+    //    rowView.rowHeight = rowHeight;
+    //    if(controlPanelExpandBackImage)
+    //    {
+    //        rowView.backgroundImage.image = controlPanelExpandBackImage;
+    //    }
+    //    if(![self.dataSource lineNumbersAreHidden])
+    //    {
+    //        [rowView setLineNumber:lastIndex + 1];
+    //        rowView.lineLabel.textColor = [self.dataSource lineNumbersColor];
+    //    }
+    //    [self addExpandButtonAtPath:path expandRowView:rowView];
+    //    [self loadSubrowsForRowAtPath:path expandRowView:rowView totalHeight:&totalSubrowHeight totalWidth:&totalSubrowWidth];
+    //
+    //    rowView.frame = CGRectMake(rowView.frame.origin.x, rowView.frame.origin.y, rowView.frame.size.width, totalSubrowHeight);
+    //
+    //    if(maxWidth < totalSubrowWidth)
+    //        maxWidth = totalSubrowWidth;
+    //    [newRows addObject:rowView];
+    //    yOffset += totalSubrowHeight;
+    //
+    //
+    //    [rows insertObject:rowInfo atIndex:lastIndex];
+}
+
+- (void)updateRowAtPath:(NSIndexPath *)path animated:(BOOL)animated
+{
+    
+}
+
+- (void)removeRowAtPath:(NSIndexPath *)path animated:(BOOL)animated
+{
+    // Find subrows where row should be removed
+    TSTableViewRow *row;
+    NSMutableArray *rows = _rows;
+    for(int i = 0; i < path.length - 1; i++)
+    {
+        NSInteger index = [path indexAtPosition:i];
+        row = rows[index];
+        rows = row.subrows;
+    }
+    
+    // Find position where new row should be inserted
+    NSInteger lastIndex = [path indexAtPosition:path.length - 1];
+    TSTableViewRow *removedRow = rows[lastIndex];
+    [removedRow removeFromSuperview];
+    [rows removeObject:removedRow];
+    
+    [self updateCurrectSelectionOnRemoveRowAtPath:path animated:animated];
+    
+    [TSUtils performViewAnimationBlock:^{
+        [self updateLayout];
+    } withCompletion:nil animated:animated];
+}
+
+- (void)updateCurrectSelectionOnRemoveRowAtPath:(NSIndexPath *)path animated:(BOOL)animated
+{
+    // update selection
+    if(_rowSelectionView.selectedItem)
+    {
+        // if selected row is removed then just reset selection
+        if([_rowSelectionView.selectedItem isEqual:path])
+        {
+            [self resetRowSelectionWithAnimtaion:animated];
+        }
+        else if(_rowSelectionView.selectedItem.length > path.length)
+        {
+            //is selection path is deeper it might be affected due to row deletion
+            BOOL equal = YES;
+            // compare both pathes to find equal range in the beginning
+            NSIndexPath *newSelectionPath;
+            for(int i = 0; i < _rowSelectionView.selectedItem.length; i++)
+            {
+                NSInteger selectionIndex = [_rowSelectionView.selectedItem indexAtPosition:i];
+                if(equal && i < path.length)
+                {
+                    NSInteger removeIndex = [path indexAtPosition:i];
+                    if(path.length == i - 1) // end of the removed roew path
+                    {
+                        if(selectionIndex == removeIndex) // if selection is subrow in removed row hierarchy then reset selection
+                        {
+                            [self resetRowSelectionWithAnimtaion:animated];
+                            newSelectionPath = nil;
+                            break;
+                        }
+                        else if(selectionIndex > removeIndex) // correct selection index if it greater the removed row
+                        {
+                            selectionIndex--;
+                            equal = NO;
+                        }
+                    }
+                    else if(removeIndex != selectionIndex) // if found first difference in pathes, remove path still have inner subrows so it wouldn't affect selection row
+                    {
+                        equal = NO;
+                    }
+                }
+                
+                if(newSelectionPath)
+                    newSelectionPath = [newSelectionPath indexPathByAddingIndex:i];
+                else
+                    newSelectionPath = [NSIndexPath indexPathWithIndex:i];
+            }
+            
+            if(newSelectionPath)
+            {
+                [self selectRowAtPath:newSelectionPath animated:animated];
+            }
+            else
+            {
+                [self updateRowSelectionWithAnimation:animated];
+            }
+        }
+    }
+    [self updateColumnSelectionWithAnimation:animated];
 }
 
 @end

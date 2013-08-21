@@ -38,7 +38,6 @@
 - (void)tableView:(TSTableView *)tableView willSelectColumnAtPath:(NSIndexPath *)columnPath animated:(BOOL)animated;
 - (void)tableView:(TSTableView *)tableView didSelectColumnAtPath:(NSIndexPath *)columnPath;
 - (void)tableView:(TSTableView *)tableView widthDidChangeForColumnAtIndex:(NSInteger)columnIndex;
-- (void)tableView:(TSTableView *)tableView expandStateWillChange:(BOOL)expand forRowAtPath:(NSIndexPath *)rowPath animated:(BOOL)animated;
 - (void)tableView:(TSTableView *)tableView expandStateDidChange:(BOOL)expand forRowAtPath:(NSIndexPath *)rowPath;
 
 @end
