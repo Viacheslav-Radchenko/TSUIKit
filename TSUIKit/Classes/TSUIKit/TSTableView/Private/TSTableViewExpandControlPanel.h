@@ -115,9 +115,8 @@
  */
 - (CGFloat)panelWidth;
 
-
+// Modify content
 - (void)insertRowAtPath:(NSIndexPath *)path animated:(BOOL)animated;
-- (void)updateRowAtPath:(NSIndexPath *)path animated:(BOOL)animated;
 - (void)removeRowAtPath:(NSIndexPath *)path animated:(BOOL)animated;
 
 @end

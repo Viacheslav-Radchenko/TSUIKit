@@ -33,9 +33,6 @@
 #import "TSUtils.h"
 #import "TSDefines.h"
 
-#ifndef VerboseLog
-#define VerboseLog(fmt, ...)  (void)0
-#endif
 
 @interface TSTableViewHeaderPanel ()
 {
@@ -98,7 +95,7 @@
     NSArray *sections = _headerSections;
     while(sections && sections.count)
     {
-        for(int i = 0; i < sections.count; i++)
+        for(int i = 0; i < sections.count;  ++i)
         {
             section = sections[i];
             if(index < section.subcolumnsRange.location + section.subcolumnsRange.length)
@@ -116,7 +113,7 @@
     VerboseLog();
     TSTableViewHeaderSection *section;
     NSArray *sections = _headerSections;
-    for(int i = 0; i < indexPath.length; i++)
+    for(int i = 0; i < indexPath.length;  ++i)
     {
         NSInteger index = [indexPath indexAtPosition:i];
         section = sections[index];
@@ -133,7 +130,7 @@
 - (void)addSlideButtonToSection:(TSTableViewHeaderSection *)section
 {
     VerboseLog();
-    CGFloat slideBtnWidth = 16;
+    CGFloat slideBtnWidth = 20;
     UIButton *slideBtn = [[UIButton alloc] initWithFrame:CGRectMake(section.frame.size.width - slideBtnWidth, 0, slideBtnWidth, section.frame.size.height)];
     slideBtn.showsTouchWhenHighlighted = [self.dataSource highlightControlsOnTap];
     [slideBtn addTarget:self action:@selector(slideBtnTouchBegin:withEvent:) forControlEvents:UIControlEventTouchDown];
@@ -227,7 +224,7 @@
         CGFloat xOffset = 0;
         CGFloat maxHeight = 0;
         CGFloat columnsCount = 0;
-        for(int j = 0; j < numberOfColumns; j++)
+        for(int j = 0; j < numberOfColumns;  ++j)
         {
             NSInteger columnIndex = (rootSection ? rootSection.subcolumnsRange.location + columnsCount : columnsCount);
             NSIndexPath *subsectionPath = (sectionPath ? [sectionPath indexPathByAddingIndex:j] : [NSIndexPath indexPathWithIndex:j]);
@@ -256,7 +253,7 @@
         }
         
         // Update section's size to max height
-        for(int j = 0; j < numberOfColumns; j++)
+        for(int j = 0; j < numberOfColumns;  ++j)
         {
             TSTableViewHeaderSection *columnSection = subsections[j];
             columnSection.frame = CGRectMake(columnSection.frame.origin.x, columnSection.frame.origin.y, columnSection.frame.size.width, maxHeight);
@@ -288,13 +285,13 @@
     NSArray *sections = _headerSections;
     while(sections && sections.count)
     {
-        for(int i = 0; i < sections.count; i++)
+        for(int i = 0; i < sections.count;  ++i)
         {
             section = sections[i];
             if(columnIndex < section.subcolumnsRange.location + section.subcolumnsRange.length)
             {
                 [TSUtils performViewAnimationBlock:^{
-                    for(int j = i; j < sections.count; j++)
+                    for(int j = i; j < sections.count;  ++j)
                     {
                         TSTableViewHeaderSection *tmp = sections[j];
                         CGRect rect = tmp.frame;
@@ -318,7 +315,7 @@
 {
     VerboseLog();
     CGFloat width = 0;
-    for(int j = 0; j < _headerSections.count; j++)
+    for(int j = 0; j < _headerSections.count;  ++j)
     {
         TSTableViewHeaderSection *columnSection = _headerSections[j];
         width += columnSection.frame.size.width;
@@ -376,7 +373,7 @@
 - (NSIndexPath *)findColumnAtPosition:(CGPoint)pos parentColumn:(TSTableViewHeaderSection *)parentColumn parentColumnPath:(NSIndexPath *)parentColumnPath
 {
     NSArray *columns = (parentColumn ? parentColumn.subsections : _headerSections);
-    for(int i = 0; i < columns.count; i++)
+    for(int i = 0; i < columns.count;  ++i)
     {
         TSTableViewHeaderSection *column = columns[i];
         if(CGRectContainsPoint(column.frame, pos))

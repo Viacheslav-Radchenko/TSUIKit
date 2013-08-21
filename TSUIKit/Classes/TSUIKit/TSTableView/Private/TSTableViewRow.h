@@ -27,10 +27,21 @@
 
 #import <UIKit/UIKit.h>
 
+
 @interface TSTableViewRow : UIView
 
-@property (nonatomic, assign) CGFloat rowHeight;
-@property (nonatomic, strong) NSMutableArray *subrows;
 @property (nonatomic, strong) NSArray *cells;
+
+@end
+
+@interface TSTableViewRowProxy : NSObject
+
+@property (nonatomic, assign) CGFloat rowHeight;
+@property (nonatomic, assign) CGRect frame;
+@property (nonatomic, strong) TSTableViewRow *rowView;
+@property (nonatomic, strong) NSMutableArray *subrows;
+
+
+- (void)setFrame:(CGRect)frame animated:(BOOL)animated;
 
 @end

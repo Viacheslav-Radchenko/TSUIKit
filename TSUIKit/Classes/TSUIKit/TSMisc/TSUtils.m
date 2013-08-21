@@ -26,10 +26,7 @@
 //  THE SOFTWARE.
 
 #import "TSUtils.h"
-
-#ifndef VerboseLog
-#define VerboseLog(fmt, ...)  (void)0
-#endif
+#import "TSDefines.h"
 
 #define ANIMATION_DURATION      0.3
 
@@ -40,14 +37,24 @@
     VerboseLog();
     if(animated)
     {
-        [UIView animateWithDuration:ANIMATION_DURATION
-                         animations:^{
-                             if(block)
-                                 block();
-                         } completion:^(BOOL finished) {
-                             if(completion)
-                                 completion();
-                         }];
+        if(block)
+        {
+            [UIView animateWithDuration:ANIMATION_DURATION
+                             animations:^{
+                                     block();
+                             } completion:^(BOOL finished) {
+                                 if(completion)
+                                     completion();
+                             }];
+        }
+        else if(completion) // if we don't animate then use simpler api
+        {
+            double delayInSeconds = ANIMATION_DURATION;
+            dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
+            dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+                completion();
+            });
+        }
     }
     else
     {
@@ -147,7 +154,7 @@
     CGContextSetStrokeColorWithColor(context, strokeColor);
     CGContextSetFillColorWithColor(context, fillColor);
     CGContextSetLineWidth(context, strokeSize);
-    for(int i = 0; i < points.count; i++)
+    for(int i = 0; i < points.count; ++i)
     {
         NSValue *pointVal = points[i];
         CGPoint point = [pointVal CGPointValue];

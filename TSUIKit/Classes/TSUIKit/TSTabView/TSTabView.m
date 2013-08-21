@@ -28,9 +28,7 @@
 #import "TSTabView.h"
 #import "TSUtils.h"
 
-#ifndef VerboseLog
-#define VerboseLog(fmt, ...)  (void)0
-#endif
+ 
 
 @interface TSTabView () <UIScrollViewDelegate, TSNavigationStripViewDelegate>
 {

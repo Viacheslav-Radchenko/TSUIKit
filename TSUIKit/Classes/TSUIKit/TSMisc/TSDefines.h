@@ -32,7 +32,10 @@
 #warning "This project uses features only available in iOS SDK 5.0 and later."
 #endif
 
-#define VerboseLog(fmt, ...)    NSLog((@"%s [Line %d] " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__)
+//#define VerboseLog(fmt, ...)    NSLog((@"%s [Line %d] " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__)
+#ifndef VerboseLog
+#define VerboseLog(fmt, ...)  (void)0
+#endif
 
 #define IS_IPAD                 (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
 #define IS_IPHONE               (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)

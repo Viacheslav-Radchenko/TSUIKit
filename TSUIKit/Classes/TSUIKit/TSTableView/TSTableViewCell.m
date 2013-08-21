@@ -39,7 +39,27 @@
     self = [super initWithFrame:frame];
     if (self)
     {
+        _reuseIdentifier = NSStringFromClass([TSTableViewCell class]);
+    }
+    return self;
+}
 
+- (id)init
+{
+    self = [super init];
+    if (self)
+    {
+        _reuseIdentifier = NSStringFromClass([TSTableViewCell class]);
+    }
+    return self;
+}
+
+- (id)initWithReuseIdentifier:(NSString *)reuseId
+{
+    self = [super init];
+    if (self)
+    {
+        _reuseIdentifier = (reuseId ? reuseId : NSStringFromClass([TSTableViewCell class]));
     }
     return self;
 }
@@ -81,7 +101,6 @@
     if(!_iconView)
     {
         _iconView = [[UIImageView alloc] initWithFrame:self.bounds];
-        _iconView.backgroundColor = [UIColor clearColor];
         _iconView.contentMode = UIViewContentModeScaleAspectFit;
         [self addSubview:_iconView];
         
@@ -96,7 +115,6 @@
     {
         _backgroundImageView = [[UIImageView alloc] initWithFrame:self.bounds];
         _backgroundImageView.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
-        _backgroundImageView.backgroundColor = [UIColor clearColor];
         [self insertSubview:_backgroundImageView atIndex:0];
     }
     return _backgroundImageView;

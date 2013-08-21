@@ -37,9 +37,12 @@
 
 @interface TSTableViewCell : UIView
 
+@property (nonatomic, strong, readonly) NSString *reuseIdentifier;
 @property (nonatomic, strong) UILabel *textLabel;
 @property (nonatomic, strong) UILabel *detailsLabel;
 @property (nonatomic, strong) UIImageView *iconView;
 @property (nonatomic, strong) UIImageView *backgroundImageView;
+
+- (id)initWithReuseIdentifier:(NSString *)reuseId;
 
 @end

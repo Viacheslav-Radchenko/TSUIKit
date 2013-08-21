@@ -32,15 +32,12 @@
 #import "TSTableViewDataSource.h"
 #import "TSTableViewAppearanceCoordinator.h"
 #import "TSUtils.h"
+#import "TSDefines.h"
 
 #define DEF_TABLE_CONTENT_ADDITIONAL_SIZE   32
 #define DEF_TABLE_MIN_COLUMN_WIDTH          64
 #define DEF_TABLE_MAX_COLUMN_WIDTH          512
 #define DEF_TABLE_DEF_COLUMN_WIDTH          128
-
-#ifndef VerboseLog
-#define VerboseLog(fmt, ...)  (void)0
-#endif
 
 // Add private API in TSTableViewContentHolder to TSTableView scope
 @interface TSTableViewContentHolder (Private)
@@ -285,23 +282,24 @@
         _topLeftCornerBackgroundImageView.frame = CGRectMake(0, 0, _tableControlPanel.frame.size.width, _tableHeader.frame.size.height);
 }
 
-- (void)updateContentOffset
-{
-    VerboseLog();
-#warning change on something more smarter
-    _tableHeader.contentOffset = CGPointZero;
-    _tableControlPanel.contentOffset = CGPointZero;
-    _tableContentHolder.contentOffset = CGPointZero;
-}
-
 - (void)reloadData
 {
     VerboseLog();
+    [self clearCachedData];
     [self.tableHeader reloadData];
     [self.tableControlPanel reloadData];
     [self.tableContentHolder reloadData];
     [self updateLayout];
-    [self updateContentOffset];
+}
+
+- (TSTableViewCell *)dequeueReusableCellViewWithIdentifier:(NSString *)identifier
+{
+    return [_tableContentHolder dequeueReusableCellViewWithIdentifier:identifier];
+}
+
+- (void)clearCachedData
+{
+    [_tableContentHolder clearCachedData];
 }
 
 #pragma mark - TSTableViewHeaderPanelDelegate 
@@ -583,12 +581,6 @@
     } withCompletion:nil animated:animated];
 }
 
-- (void)updateRowAtPath:(NSIndexPath *)path animated:(BOOL)animated
-{
-    [_tableControlPanel updateRowAtPath:path animated:animated];
-    [_tableContentHolder updateRowAtPath:path animated:animated];
-}
-
 - (void)removeRowAtPath:(NSIndexPath *)path animated:(BOOL)animated
 {
     [_tableControlPanel removeRowAtPath:path animated:animated];
@@ -596,6 +588,11 @@
     [TSUtils performViewAnimationBlock:^{
         [self updateLayout];
     } withCompletion:nil animated:animated];
+}
+
+- (void)updateRowAtPath:(NSIndexPath *)path
+{
+    [_tableContentHolder updateRowAtPath:path];
 }
 
 - (void)insertRowsAtPathes:(NSArray *)pathes animated:(BOOL)animated

@@ -30,9 +30,6 @@
 #import "TSDefines.h"
 #import  <QuartzCore/QuartzCore.h>
 
-#ifndef VerboseLog
-#define VerboseLog(fmt, ...)  (void)0
-#endif
 
 typedef enum {
     kTSDropDownPanelState_Hidden,

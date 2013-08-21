@@ -26,6 +26,7 @@
 //  THE SOFTWARE.
 
 #import "TSTableViewRow.h"
+#import "TSUtils.h"
 
 @implementation TSTableViewRow
 
@@ -34,24 +35,9 @@
     if(self = [super initWithFrame:frame])
     {
         self.clipsToBounds = YES;
-        self.backgroundColor = [UIColor clearColor];
     }
     return self;
 }
-
-- (void)setSubrows:(NSMutableArray *)subrows
-{
-    if(_subrows)
-        for(UIView *v in _subrows)
-            [v removeFromSuperview];
-    
-    _subrows = subrows;
-    
-    if(_subrows)
-        for(UIView *v in _subrows)
-            [self addSubview:v];
-}
-
 
 - (void)setCells:(NSArray *)cells
 {
@@ -64,6 +50,68 @@
     if(_cells)
         for(UIView *v in _cells)
             [self addSubview:v];
+}
+
+@end
+
+/*******************************************************************************************************************/
+
+@interface TSTableViewRowProxy ()
+{
+    CGRect _originalFrame;
+}
+@end
+
+@implementation TSTableViewRowProxy
+
+- (void)setFrame:(CGRect)frame
+{
+    _frame = frame;
+    _originalFrame = frame;
+    if(_rowView)
+        _rowView.frame = frame;
+}
+
+- (void)setRowView:(TSTableViewRow *)rowView
+{
+    _rowView = rowView;
+    if(CGRectEqualToRect(_originalFrame, _frame))
+    {
+        _rowView.frame = _frame;
+    }
+    else
+    {
+        _rowView.frame = _originalFrame;
+        [TSUtils performViewAnimationBlock:^{
+            _rowView.frame = _frame;
+        } withCompletion:nil animated:YES];
+        _originalFrame = _frame;
+    }
+}
+
+- (void)setFrame:(CGRect)frame animated:(BOOL)animated
+{
+    if(animated)
+    {
+        if(_rowView)
+        {
+            [TSUtils performViewAnimationBlock:^{
+                self.frame = frame;
+            } withCompletion:nil animated:YES];
+        }
+        else
+        {
+            _originalFrame = _frame;
+            _frame = frame;
+            [TSUtils performViewAnimationBlock:nil withCompletion:^{
+                _originalFrame = _frame;
+            } animated:YES];
+        }
+    }
+    else
+    {
+        self.frame = frame;
+    }
 }
 
 @end

@@ -28,9 +28,7 @@
 #import "TSScrollView.h"
 #import "TSUtils.h"
 
-#ifndef VerboseLog
-#define VerboseLog(fmt, ...)  (void)0
-#endif
+ 
 
 #define LEFT_SIDE_BUTTON_TAG    1
 #define RIGHT_SIDE_BUTTON_TAG   2

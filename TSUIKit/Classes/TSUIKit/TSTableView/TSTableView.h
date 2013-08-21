@@ -32,6 +32,7 @@
 
 /**
  *  @abstract   TSTableView is UI component for displaying multicolumns tabular data. It supports hierarchical rows and columns structure.
+ *              Component optimized to display big sets of data: row and cell views are cached internaly and reused during scrolling/expanding.
  *              Basic layout is shown below:
  *
  *  +-----+-------------------------------------------+
@@ -55,8 +56,6 @@
  *  +-----+-------------------------------------------+
  *
  *
- *  @todo   TSTableViewColumns are not reused right now. It may have inpact on performance when displaying a lot of data.
- *          Going to work on this in near future...
  */
 
 @interface TSTableView : UIView
@@ -145,6 +144,16 @@
 - (void)reloadData;
 
 /**
+ *  @abstract Reuse cached instance of cell view with specified Id.
+ */
+- (TSTableViewCell *)dequeueReusableCellViewWithIdentifier:(NSString *)identifier;
+
+/**
+ *  @abstract Clear cached data (reusable rows, cells that aren't used at this moment).
+ */
+- (void)clearCachedData;
+
+/**
  *  @abstract Change expand state of the row
  */
 - (void)changeExpandStateForRow:(NSIndexPath *)rowPath toValue:(BOOL)expanded animated:(BOOL)animated;
@@ -190,8 +199,8 @@
 - (NSIndexPath *)pathToSelectedColumn;
 
 - (void)insertRowAtPath:(NSIndexPath *)path animated:(BOOL)animated;
-- (void)updateRowAtPath:(NSIndexPath *)path animated:(BOOL)animated;
 - (void)removeRowAtPath:(NSIndexPath *)path animated:(BOOL)animated;
+- (void)updateRowAtPath:(NSIndexPath *)path;
 
 // Not implemented yet
 - (void)insertRowsAtPathes:(NSArray *)pathes animated:(BOOL)animated;

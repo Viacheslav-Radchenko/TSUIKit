@@ -28,6 +28,7 @@
 #import <UIKit/UIKit.h>
 
 @class TSTableViewContentHolder;
+@class TSTableViewCell;
 
 @protocol TSTableViewContentHolderDelegate <NSObject>
 
@@ -57,9 +58,6 @@
 @protocol TSTableViewAppearanceCoordinator;
 
 @interface TSTableViewContentHolder : UIScrollView
-{
-    NSMutableArray *_rows;
-}
 
 @property (nonatomic, weak) id<TSTableViewContentHolderDelegate> contentHolderDelegate;
 @property (nonatomic, weak) id<TSTableViewDataSource, TSTableViewAppearanceCoordinator> dataSource;
@@ -135,9 +133,19 @@
  */
 - (NSIndexPath *)pathToSelectedColumn;
 
+/**
+ *  @abstract Reuse cached instance of cell view with specified Id.
+ */
+- (TSTableViewCell *)dequeueReusableCellViewWithIdentifier:(NSString *)identifier;
+
+/**
+ *  @abstract Clear cached data (reusable rows, cells that aren't used at this moment).
+ */
+- (void)clearCachedData;
+
 // Modify content
 - (void)insertRowAtPath:(NSIndexPath *)path animated:(BOOL)animated;
-- (void)updateRowAtPath:(NSIndexPath *)path animated:(BOOL)animated;
 - (void)removeRowAtPath:(NSIndexPath *)path animated:(BOOL)animated;
+- (void)updateRowAtPath:(NSIndexPath *)path;
 
 @end

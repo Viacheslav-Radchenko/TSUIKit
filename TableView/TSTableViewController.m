@@ -19,6 +19,8 @@
     TSTableViewModel *_model2;
     NSArray *_tables;
     NSArray *_dataModels;
+    NSArray *_rowExamples;
+    
     
     NSInteger _stepperPreviousValue;
 }
@@ -36,6 +38,12 @@
     self.settingsView.layer.shadowOpacity = 0.5;
     self.settingsView.layer.shadowOffset = CGSizeMake(2, 4);
     
+    // Row examples should correspond to columnsInfo* and rowsInfo* used below
+    _rowExamples = @[
+        [self rowExample1],
+        [self rowExample3],
+    ];
+    
     NSArray *columns1 = [self columnsInfo1];
     NSArray *rows1 = [self rowsInfo1];
 
@@ -47,8 +55,8 @@
     _model1 = [[TSTableViewModel alloc] initWithTableView:_tableView1 andStyle:TSTableViewStyleDark];
     [_model1 setColumnsInfo:columns1 andRowsInfo:rows1];
     
-    NSArray *columns2 = [self columnsInfo2];
-    NSArray *rows2 = [self rowsInfo2];
+    NSArray *columns2 = [self columnsInfo3];
+    NSArray *rows2 = [self rowsInfo3];
     
     _tableView2 = [[TSTableView alloc] initWithFrame:CGRectMake(20, self.view.frame.size.height/2 + 50, self.view.frame.size.width - 40, self.view.frame.size.height/2 - 70)];
     _tableView2.autoresizingMask = UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
@@ -75,21 +83,21 @@
     NSInteger val = [stepper value];
     if(val > _stepperPreviousValue)
     {
-//        for(int i = 0; i < _dataModels.count; i++)
-//        {
-//            TSTableView *table = _tables[i];
-//            TSTableViewModel *model = _dataModels[i];
-//            NSIndexPath *rowPath = [table pathToSelectedRow];
-//            if(!rowPath)
-//                rowPath = [NSIndexPath indexPathWithIndex:0];
-//            
-//            TSRow *row = [self generateNewRow];
-//            [model insertRow:row atPath:rowPath];
-//        }
+        for(int i = 0; i < _dataModels.count;  ++i)
+        {
+            TSTableView *table = _tables[i];
+            TSTableViewModel *model = _dataModels[i];
+            NSIndexPath *rowPath = [table pathToSelectedRow];
+            if(!rowPath)
+                rowPath = [NSIndexPath indexPathWithIndex:0];
+            
+            TSRow *row = _rowExamples[i];
+            [model insertRow:row atPath:rowPath];
+        }
     }
     else
     {
-        for(int i = 0; i < _dataModels.count; i++)
+        for(int i = 0; i < _dataModels.count;  ++i)
         {
             TSTableView *table = _tables[i];
             TSTableViewModel *model = _dataModels[i];
@@ -193,8 +201,22 @@
     return columns;
 }
 
+- (TSRow *)rowExample1
+{
+    return [TSRow rowWithDictionary:@{ @"cells" : @[
+                                       @{ @"value" : @"New Row"},
+                                       @{ @"value" : @"Value 100"},
+                                       @{ @"value" : @10},
+                                       @{ @"value" : @10},
+                                       @{ @"value" : @"*"},
+                                       @{ @"value" : @10},
+                                       @{ @"value" : @100}
+                                       ]
+     }];
+}
 
-- (NSArray *)rowsInfo1
+
+- (NSArray *)rowsInfo1_
 {
     NSArray *rows = @[
                       @{ @"cells" : @[
@@ -513,6 +535,17 @@
     return rows;
 }
 
+- (NSArray *)rowsInfo1
+{
+    int N = 10;
+    NSMutableArray *mutArray = [[NSMutableArray alloc] init];
+    for(int i = 0; i < N;  ++i)
+    {
+        [mutArray addObjectsFromArray:[self rowsInfo1_]];
+    }
+    return mutArray;
+}
+
 #pragma mark  - Data set 2
 
 - (NSArray *)columnsInfo2
@@ -547,6 +580,10 @@
     return columns;
 }
 
+- (TSRow *)rowExample2
+{
+    return [self rowExample1];
+}
 
 - (NSArray *)rowsInfo2
 {
@@ -565,7 +602,7 @@
     return columns;
 }
 
-- (NSArray *)rowsInfo3
+- (NSArray *)rowsInfo3_
 {
     NSArray *rows = @[
                        @{ @"cells" : @[
@@ -713,8 +750,28 @@
                                   ]
                           },
                        ];
-    
     return rows;
+}
+
+- (TSRow *)rowExample3
+{
+    return [TSRow rowWithDictionary:@{ @"cells" : @[
+                @{ @"value" : @"Value 4"},
+                @{ @"value" : @123},
+                @{ @"value" : @4431}
+                ]
+            }];
+}
+
+- (NSArray *)rowsInfo3
+{
+    int N = 10;
+    NSMutableArray *mutArray = [[NSMutableArray alloc] init];
+    for(int i = 0; i < N;  ++i)
+    {
+        [mutArray addObjectsFromArray:[self rowsInfo3_]];
+    }
+    return mutArray;
 }
 
 @end

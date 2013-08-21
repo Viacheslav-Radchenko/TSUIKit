@@ -34,9 +34,6 @@
 
 #import <QuartzCore/QuartzCore.h>
 
-#ifndef VerboseLog
-#define VerboseLog(fmt, ...)  (void)0
-#endif
 
 #define MIN_COLUMN_WIDTH          64
 #define MAX_COLUMN_WIDTH          512
@@ -478,7 +475,7 @@
     VerboseLog();
     TSRow *row;
     NSArray *rows = _rows;
-    for(int i = 0; i < indexPath.length; i++)
+    for(int i = 0; i < indexPath.length;  ++i)
     {
         NSInteger index = [indexPath indexAtPosition:i];
         row = rows[index];
@@ -492,7 +489,7 @@
     VerboseLog();
     TSColumn *column;
     NSArray *columns = _columns;
-    for(int i = 0; i < indexPath.length; i++)
+    for(int i = 0; i < indexPath.length;  ++i)
     {
         NSInteger index = [indexPath indexAtPosition:i];
         column = columns[index];
@@ -520,7 +517,7 @@
 - (TSColumn *)findColumnAtIndex:(NSInteger *)index inColumns:(NSArray *)columns
 {
     TSColumn *found;
-    for (int i = 0; i < columns.count; i++)
+    for (int i = 0; i < columns.count;  ++i)
     {
         TSColumn *column = columns[i];
         if(column.subcolumns.count == 0)
@@ -635,8 +632,12 @@
 - (TSTableViewCell *)tableView:(TSTableView *)tableView cellViewForRowAtPath:(NSIndexPath *)indexPath cellIndex:(NSInteger)index
 {
     VerboseLog();
+    NSString * const kReuseCellId = @"TSTableViewCell";
     TSCell *cellInfo = [self cellAtRowPath:indexPath atIndex:index];
-    TSTableViewCell *cell = [[TSTableViewCell alloc] init];
+    TSTableViewCell *cell =  [tableView dequeueReusableCellViewWithIdentifier:kReuseCellId];
+    if(!cell)
+        cell = [[TSTableViewCell alloc] initWithReuseIdentifier:kReuseCellId];
+
     cell.textLabel.text = (cellInfo.value == [NSNull null] ? @"" : [cellInfo.value description]);
     
     TSColumn *columnInfo = [self columnAtIndex:index];
@@ -713,7 +714,7 @@
 {
     TSRow *row;
     NSMutableArray *rows = _rows;
-    for(int i = 0; i < indexPath.length - 1; i++)
+    for(int i = 0; i < indexPath.length - 1;  ++i)
     {
         NSInteger index = [indexPath indexAtPosition:i];
         row = rows[index];
@@ -728,7 +729,7 @@
 {
     TSRow *row;
     NSMutableArray *rows = _rows;
-    for(int i = 0; i < indexPath.length - 1; i++)
+    for(int i = 0; i < indexPath.length - 1;  ++i)
     {
         NSInteger index = [indexPath indexAtPosition:i];
         row = rows[index];
@@ -1242,7 +1243,7 @@
                         ];
 
     CGMutablePathRef path = CGPathCreateMutable();
-    for(int i = 0; i < points.count; i++)
+    for(int i = 0; i < points.count;  ++i)
     {
         NSValue *pointVal = points[i];
         CGPoint point = [pointVal CGPointValue];
@@ -1295,7 +1296,7 @@
                          ];
 
     CGMutablePathRef path = CGPathCreateMutable();
-    for(int i = 0; i < points.count; i++)
+    for(int i = 0; i < points.count;  ++i)
     {
         NSValue *pointVal = points[i];
         CGPoint point = [pointVal CGPointValue];
