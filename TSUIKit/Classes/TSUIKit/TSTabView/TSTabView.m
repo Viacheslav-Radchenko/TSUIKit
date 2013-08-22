@@ -27,7 +27,7 @@
 
 #import "TSTabView.h"
 #import "TSUtils.h"
-
+#import "TSDefines.h"
  
 
 @interface TSTabView () <UIScrollViewDelegate, TSNavigationStripViewDelegate>

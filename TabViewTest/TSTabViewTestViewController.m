@@ -65,12 +65,14 @@
     _tabView1.backgroundColor = [UIColor grayColor];
     _tabView1.autoresizingMask = UIViewAutoresizingFlexibleWidth;
     _tabView1.delegate = self;
+    _tabView1.bounces = NO;
     [self.view addSubview:_tabView1];
     
     _tabView2 = [self createTabView2WithFrame:CGRectMake(20, (IS_IPAD ? 230 : 160), self.view.frame.size.width - 40, (IS_IPAD ? 110 : 100))];
     _tabView2.backgroundColor = [UIColor grayColor];
     _tabView2.autoresizingMask = UIViewAutoresizingFlexibleWidth;
     _tabView2.delegate = self;
+    _tabView2.bounces = NO;
     [self.view addSubview:_tabView2];
     
     _tabView3 = [self createTabView3WithFrame:CGRectMake(20, (IS_IPAD ? 370 : 300), self.view.frame.size.width - 40, (IS_IPAD ? 110 : 100))];

@@ -172,7 +172,7 @@
         CGFloat minWidth = [self.dataSource minimalWidthForColumnAtIndex:columnIndex];
         newWidth = CLAMP(minWidth, maxWidth, (int)newWidth);
         [self changeColumnWidthOnAmount:newWidth - oldWidth forColumn:columnIndex animated:NO];
-        
+    
         if(self.headerDelegate)
         {
             [self.headerDelegate tableViewHeader:self columnWidthDidChange:columnIndex oldWidth:oldWidth newWidth:newWidth];

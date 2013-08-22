@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F6141E2D17C58462003455EB /* TSTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F6A4C47917BD1F6000AA8195 /* TSTableViewController.m */; };
+		F6141E2E17C58480003455EB /* TSTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6A4C47B17BD1F6000AA8195 /* TSTableViewController.xib */; };
+		F6141E2F17C58480003455EB /* TSTableViewController~ipad.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6A4C47E17BD1F6000AA8195 /* TSTableViewController~ipad.xib */; };
 		F63C0A0D17821F8C005AB903 /* TSTabViewWithDropDownPanel.m in Sources */ = {isa = PBXBuildFile; fileRef = F63C0A0C17821F8C005AB903 /* TSTabViewWithDropDownPanel.m */; };
 		F63C0A0E17821F8C005AB903 /* TSTabViewWithDropDownPanel.m in Sources */ = {isa = PBXBuildFile; fileRef = F63C0A0C17821F8C005AB903 /* TSTabViewWithDropDownPanel.m */; };
 		F63C0A0F17821F8C005AB903 /* TSTabViewWithDropDownPanel.m in Sources */ = {isa = PBXBuildFile; fileRef = F63C0A0C17821F8C005AB903 /* TSTabViewWithDropDownPanel.m */; };
@@ -1192,6 +1195,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6141E2E17C58480003455EB /* TSTableViewController.xib in Resources */,
+				F6141E2F17C58480003455EB /* TSTableViewController~ipad.xib in Resources */,
 				F67936031785A57B009E2365 /* TSTabViewWithDropDownPanelTestViewController.xib in Resources */,
 				F67936041785A57B009E2365 /* TSTabViewWithDropDownPanelTestViewController~ipad.xib in Resources */,
 				F680D3221774BC5C005ACD94 /* TSTabViewTestViewController~ipad.xib in Resources */,
@@ -1455,6 +1460,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6141E2D17C58462003455EB /* TSTableViewController.m in Sources */,
 				F67936021785A570009E2365 /* TSTabViewWithDropDownPanelTestViewController.m in Sources */,
 				F680D3251774BC74005ACD94 /* TSTabViewTestViewController.m in Sources */,
 				F680D2691774B551005ACD94 /* TSNavigationStripTestViewController.m in Sources */,

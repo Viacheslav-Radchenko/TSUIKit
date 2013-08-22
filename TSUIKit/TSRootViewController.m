@@ -75,6 +75,7 @@
     if (!_modelController)
     {
         _modelController = [[TSModelController alloc] initWithPages: @[
+                            @"TSTableViewController",
                             @"TSNavigationStripTestViewController",
                             @"TSTabViewTestViewController",
                             @"TSTabViewWithDropDownPanelTestViewController"]

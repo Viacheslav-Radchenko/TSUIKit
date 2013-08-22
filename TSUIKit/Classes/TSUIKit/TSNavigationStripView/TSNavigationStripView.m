@@ -27,7 +27,7 @@
 #import "TSNavigationStripView.h"
 #import "TSScrollView.h"
 #import "TSUtils.h"
-
+#import "TSDefines.h"
  
 
 #define LEFT_SIDE_BUTTON_TAG    1
