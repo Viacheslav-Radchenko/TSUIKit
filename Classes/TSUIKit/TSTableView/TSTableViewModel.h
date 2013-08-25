@@ -121,14 +121,14 @@
 
 /**
  *  @abstract   TSTableViewModel is a prototype for TSTableViewDataSource
- *              There are two ready to use appearance styles: TSTableViewStyleDark and TSTableViewStyleLight.
+ *              There are two ready-to-use appearance styles: kTSTableViewStyleDark and kTSTableViewStyleLight.
  */
 
 @class TSTableView;
 
 typedef enum {
-    TSTableViewStyleDark,
-    TSTableViewStyleLight
+    kTSTableViewStyleDark,
+    kTSTableViewStyleLight
 } TSTableViewStyle;
 
 @interface TSTableViewModel : NSObject <TSTableViewDataSource>
@@ -144,16 +144,37 @@ typedef enum {
 @property (nonatomic, strong, readonly) TSTableView *tableView;
 @property (nonatomic, assign, readonly) TSTableViewStyle tableStyle;
 
-@property (nonatomic, assign) CGFloat heightForRow;
-@property (nonatomic, assign) CGFloat widthForExpandItem;
+@property (nonatomic, assign) CGFloat heightForRow; // This model use fixed row height. TSTableView support rows with varied height
+@property (nonatomic, assign) CGFloat widthForExpandItem; // Width of one nesting level in expand panel. Total panel width would be widthForExpandItem * maxRowNestingLevel
 
 - (id)initWithTableView:(TSTableView *)tableView andStyle:(TSTableViewStyle)style;
+
+/**
+ *  @abstract Initialize with array of TSColumn objects and array TSRow objects
+ */
 - (void)setColumns:(NSArray *)columns andRows:(NSArray *)rows;
+
+/**
+ *  @abstract Initialize with array of NSDictionary decriptions for columns and array of NSDictionary decriptions for rows
+ */
 - (void)setColumnsInfo:(NSArray *)columns andRowsInfo:(NSArray *)rows;
 
-// Not implemented yet
+/**
+ *  @abstract Initialize with array of TSRow objects. Columns hierarchy remains the same
+ */
+- (void)setRows:(NSArray *)rows;
+
+/**
+ *  @abstract Initialize array of NSDictionary decriptions for rows. Rows hierarchy remains the same
+ */
+- (void)setRowsInfo:(NSArray *)rows;
+
+/**
+ *  @abstract Modify data model
+ */
 - (void)insertRow:(TSRow *)rowInfo atPath:(NSIndexPath *)indexPath;
 - (void)removeRowAtPath:(NSIndexPath *)indexPath;
+- (void)replcaceRowAtPath:(NSIndexPath *)indexPath withRow:(TSRow *)rowInfo;
 
 @end
 

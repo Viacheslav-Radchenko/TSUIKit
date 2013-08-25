@@ -365,6 +365,8 @@
 		F614210F17C6BEF8003455EB /* NavigationStripSectionBackgroundRed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F614200D17C6BEF8003455EB /* NavigationStripSectionBackgroundRed@2x.png */; };
 		F614211017C6BEF8003455EB /* NavigationStripSectionBackgroundRed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F614200D17C6BEF8003455EB /* NavigationStripSectionBackgroundRed@2x.png */; };
 		F614211117C6BEF8003455EB /* NavigationStripSectionBackgroundRed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F614200D17C6BEF8003455EB /* NavigationStripSectionBackgroundRed@2x.png */; };
+		F614220917CA02C3003455EB /* TSTableViewController+TestDataDefinition.m in Sources */ = {isa = PBXBuildFile; fileRef = F614220817CA02C3003455EB /* TSTableViewController+TestDataDefinition.m */; };
+		F614220A17CA02C3003455EB /* TSTableViewController+TestDataDefinition.m in Sources */ = {isa = PBXBuildFile; fileRef = F614220817CA02C3003455EB /* TSTableViewController+TestDataDefinition.m */; };
 		F67936021785A570009E2365 /* TSTabViewWithDropDownPanelTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F6EE2A4617835D9A00C0C4A3 /* TSTabViewWithDropDownPanelTestViewController.m */; };
 		F67936031785A57B009E2365 /* TSTabViewWithDropDownPanelTestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A4817835D9A00C0C4A3 /* TSTabViewWithDropDownPanelTestViewController.xib */; };
 		F67936041785A57B009E2365 /* TSTabViewWithDropDownPanelTestViewController~ipad.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A4B17835D9A00C0C4A3 /* TSTabViewWithDropDownPanelTestViewController~ipad.xib */; };
@@ -544,6 +546,8 @@
 		F614200B17C6BEF8003455EB /* NavigationStripSectionBackground_2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NavigationStripSectionBackground_2@2x.png"; sourceTree = "<group>"; };
 		F614200C17C6BEF8003455EB /* NavigationStripSectionBackgroundRed-Selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NavigationStripSectionBackgroundRed-Selected@2x.png"; sourceTree = "<group>"; };
 		F614200D17C6BEF8003455EB /* NavigationStripSectionBackgroundRed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NavigationStripSectionBackgroundRed@2x.png"; sourceTree = "<group>"; };
+		F614220717CA02C3003455EB /* TSTableViewController+TestDataDefinition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TSTableViewController+TestDataDefinition.h"; sourceTree = "<group>"; };
+		F614220817CA02C3003455EB /* TSTableViewController+TestDataDefinition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "TSTableViewController+TestDataDefinition.m"; sourceTree = "<group>"; };
 		F680D2861774B9C2005ACD94 /* TabViewTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TabViewTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F680D2A61774BA82005ACD94 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		F680D2A71774BA82005ACD94 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
@@ -1005,6 +1009,8 @@
 				F6A4C47B17BD1F6000AA8195 /* TSTableViewController.xib */,
 				F6A4C47E17BD1F6000AA8195 /* TSTableViewController~ipad.xib */,
 				F6A4C46717BD1F6000AA8195 /* Supporting Files */,
+				F614220717CA02C3003455EB /* TSTableViewController+TestDataDefinition.h */,
+				F614220817CA02C3003455EB /* TSTableViewController+TestDataDefinition.m */,
 			);
 			path = TableView;
 			sourceTree = "<group>";
@@ -1594,6 +1600,7 @@
 				F6141F4A17C6A64C003455EB /* TSTabViewModel.m in Sources */,
 				F6141F4F17C6A64C003455EB /* TSTabViewWithDropDownPanel.m in Sources */,
 				F6141F5417C6A64C003455EB /* TSTabViewWithDropDownPanelModel.m in Sources */,
+				F614220917CA02C3003455EB /* TSTableViewController+TestDataDefinition.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1651,6 +1658,7 @@
 				F6141F4E17C6A64C003455EB /* TSTabViewModel.m in Sources */,
 				F6141F5317C6A64C003455EB /* TSTabViewWithDropDownPanel.m in Sources */,
 				F6141F5817C6A64C003455EB /* TSTabViewWithDropDownPanelModel.m in Sources */,
+				F614220A17CA02C3003455EB /* TSTableViewController+TestDataDefinition.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -350,7 +350,7 @@
         _heightForRow = DEF_ROW_HEIGHT;
         _widthForExpandItem = DEF_EXPAND_ITEM_WIDTH;
         
-        if(_tableStyle == TSTableViewStyleLight)
+        if(_tableStyle == kTSTableViewStyleLight)
         {
             _tableView.lineNumbersColor = [UIColor blackColor];
             _tableView.backgroundColor = [UIColor grayColor];
@@ -440,6 +440,7 @@
 {
     VerboseLog();
     [_columns removeAllObjects];
+    [_bottomEndColumns removeAllObjects];
     [_rows removeAllObjects];
     
     for(NSDictionary *columnInfo in columns)
@@ -469,6 +470,51 @@
     [_tableView reloadData];
 }
 
+
+- (void)setRows:(NSArray *)rows
+{
+    VerboseLog();
+    [_rows removeAllObjects];
+    
+    for(id row in rows)
+    {
+        if([row isKindOfClass:[TSRow class]])
+        {
+            [_rows addObject:row];
+        }
+        else if([row isKindOfClass:[NSArray class]])
+        {
+            [_rows addObject:[[TSRow alloc] initWithCells:row]];
+        }
+        else
+        {
+            NSAssert(FALSE, @"Type is not supported");
+        }
+    }
+    
+    [_tableView reloadData];
+}
+
+
+- (void)setRowsInfo:(NSArray *)rows
+{
+    VerboseLog();
+    [_rows removeAllObjects];
+
+    for(NSDictionary *rowInfo in rows)
+    {
+        if([rowInfo isKindOfClass:[NSDictionary class]])
+        {
+            [_rows addObject:[TSRow rowWithDictionary:rowInfo]];
+        }
+        else
+        {
+            NSAssert(FALSE, @"Type is not supported");
+        }
+    }
+    [_tableView reloadRowsData];
+    
+}
 
 - (TSRow *)rowAtPath:(NSIndexPath *)indexPath
 {
@@ -647,13 +693,13 @@
     }
     else
     {
-        if(_tableStyle == TSTableViewStyleDark)
+        if(_tableStyle == kTSTableViewStyleDark)
             cell.textLabel.textColor = [UIColor grayColor];
         else
             cell.textLabel.textColor = [UIColor darkGrayColor];
     }
     
-    // Values and proportions below just came up from my head, there is no special logic for this... it just looks fine, that's all
+    // Color values and proportions below just came up from my head, there is no special logic for this... it just looks fine, that's all
     if(columnInfo.color)
     {
         CGFloat color = 0.9f + 0.1f * (1 - (indexPath.length - 1)/(float)tableView.maxNestingLevel);
@@ -664,7 +710,7 @@
     else
     {
         CGFloat color;
-        if(_tableStyle == TSTableViewStyleDark)
+        if(_tableStyle == kTSTableViewStyleDark)
             color = 0.16f + 0.04f * (1 - (indexPath.length - 1)/(float)tableView.maxNestingLevel);
         else
             color = 0.9f + 0.1f * (1 - (indexPath.length - 1)/(float)tableView.maxNestingLevel);
@@ -679,7 +725,7 @@
     TSColumn *column = [self columnAtPath:indexPath];
     TSTableViewHeaderSectionView *section = [[TSTableViewHeaderSectionView alloc] init];
     
-    if(_tableStyle == TSTableViewStyleDark)
+    if(_tableStyle == kTSTableViewStyleDark)
     {
         section.textLabel.layer.shadowColor = [UIColor blackColor].CGColor;
         section.textLabel.textColor = [UIColor grayColor];
@@ -712,6 +758,7 @@
 
 - (void)insertRow:(TSRow *)rowInfo atPath:(NSIndexPath *)indexPath
 {
+    VerboseLog();
     TSRow *row;
     NSMutableArray *rows = _rows;
     for(int i = 0; i < indexPath.length - 1;  ++i)
@@ -727,6 +774,7 @@
 
 - (void)removeRowAtPath:(NSIndexPath *)indexPath
 {
+    VerboseLog();
     TSRow *row;
     NSMutableArray *rows = _rows;
     for(int i = 0; i < indexPath.length - 1;  ++i)
@@ -740,6 +788,22 @@
     [_tableView removeRowAtPath:indexPath animated:YES];
 }
 
+- (void)replcaceRowAtPath:(NSIndexPath *)indexPath withRow:(TSRow *)rowInfo
+{
+    VerboseLog();
+    TSRow *row;
+    NSMutableArray *rows = _rows;
+    for(int i = 0; i < indexPath.length - 1;  ++i)
+    {
+        NSInteger index = [indexPath indexAtPosition:i];
+        row = rows[index];
+        rows = row.subrows;
+    }
+    NSInteger lastIndex = [indexPath indexAtPosition:indexPath.length - 1];
+    [rows replaceObjectAtIndex:lastIndex withObject:rowInfo];
+    [_tableView updateRowAtPath:indexPath];
+}
+
 #pragma mark - Create background images
 
 - (UIImage *)cellBackgroundImageWithTintColor:(UIColor *)color
@@ -748,7 +812,7 @@
     UIImage *image = _cachedCellBackgroundImages[key];
     if(!image)
     {
-        if(_tableStyle == TSTableViewStyleDark)
+        if(_tableStyle == kTSTableViewStyleDark)
             image = [self darkCellBackgroundImageWithTintColor:color];
         else
             image = [self lightCellBackgroundImageWithTintColor:color];
@@ -763,7 +827,7 @@
     UIImage *image = _cachedHeaderSectionBackgroundImages[key];
     if(!image)
     {
-        if(_tableStyle == TSTableViewStyleDark)
+        if(_tableStyle == kTSTableViewStyleDark)
             image = [self darkHeaderSectionBackgroundImageWithTintColor:color];
         else
             image = [self lightHeaderSectionBackgroundImageWithTintColor:color];
@@ -776,7 +840,7 @@
 {
     if(!_cachedExpandSectionBackgroundImage)
     {
-        if(_tableStyle == TSTableViewStyleDark)
+        if(_tableStyle == kTSTableViewStyleDark)
             _cachedExpandSectionBackgroundImage = [self darkExpandSectionBackgroundImage];
         else
             _cachedExpandSectionBackgroundImage = [self lightExpandSectionBackgroundImage];
@@ -788,7 +852,7 @@
 {
     if(!_cachedExpandItemNormalBackgroundImage)
     {
-        if(_tableStyle == TSTableViewStyleDark)
+        if(_tableStyle == kTSTableViewStyleDark)
             _cachedExpandItemNormalBackgroundImage = [self darkExpandItemNormalBackgroundImage];
         else
             _cachedExpandItemNormalBackgroundImage = [self lightExpandItemNormalBackgroundImage];
@@ -800,7 +864,7 @@
 {
     if(!_cachedExpandItemSelectedBackgroundImage)
     {
-        if(_tableStyle == TSTableViewStyleDark)
+        if(_tableStyle == kTSTableViewStyleDark)
             _cachedExpandItemSelectedBackgroundImage = [self darkExpandItemSelectedBackgroundImage];
         else
             _cachedExpandItemSelectedBackgroundImage = [self lightExpandItemSelectedBackgroundImage];
@@ -812,7 +876,7 @@
 {
     if(!_cachedGeneralBackgroundImage)
     {
-        if(_tableStyle == TSTableViewStyleDark)
+        if(_tableStyle == kTSTableViewStyleDark)
             _cachedGeneralBackgroundImage = [self darkGeneralBackgroundImage];
         else
             _cachedGeneralBackgroundImage = [self lightGeneralBackgroundImage];
