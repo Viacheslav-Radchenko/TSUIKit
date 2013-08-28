@@ -6,7 +6,7 @@ Set of extended UI components for iOS.
 ## TSTableView
 
 `TSTableView` is UI component for displaying multi columns tabular data with support of hierarchical rows and columns structure.
-It provides smooth animations for item selection and dynamic content modification. Some features listed below:
+It provides smooth animations for item selection and dynamic content modification. Some features are listed below:
 
 * Suport muti columns data structure.
 * Support hierarchical column definition (i.e. column may have subsections).
@@ -17,10 +17,10 @@ It provides smooth animations for item selection and dynamic content modificatio
 * Allow expand/collapse subrows content.
 * Support simple declarative syntax for columns and rows content definition.
 * Providing your own implementation of TSTableViewDataSource protocol will allow you fully customise structure and appearance of the table.
-* Default TSTableViewModel implement TSTableViewDataSource protocol and include two built in styles (see screenshots).
+* Default TSTableViewModel implements TSTableViewDataSource protocol and includes two built in styles (see screenshots).
             
 <img src="https://raw.github.com/Viacheslav-Radchenko/TSUIKit/master/Screenshots/TSTableView_SCreenshot1.png" alt="TSTableView examples" width="360" height="480" />
-<img src="https://raw.github.com/Viacheslav-Radchenko/TSUIKit/master/Screenshots/TSTableView_SCreenshot2.png" alt="TSTableView examples" width="360" height="480" />
+<img src="https://raw.github.com/Viacheslav-Radchenko/TSUIKit/master/Screenshots/TSTableView_Screenshot4.png" alt="TSTableView examples" width="360" height="480" />
 
 Example of TSTableView object instantiation provided below. See more complex examples in project.
 ```

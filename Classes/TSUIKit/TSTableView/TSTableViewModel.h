@@ -69,6 +69,7 @@
 @property (nonatomic, assign) CGFloat minWidth;
 @property (nonatomic, assign) CGFloat maxWidth;
 @property (nonatomic, assign) CGFloat headerHeight;
+@property (nonatomic, assign) NSTextAlignment textAlignment;
 
 + (id)columnWithTitle:(NSString *)title;
 + (id)columnWithTitle:(NSString *)title andSubcolumns:(NSArray *)sublolumns;
@@ -109,6 +110,11 @@
 @interface TSCell : NSObject
 
 @property (nonatomic, strong) NSObject *value;
+@property (nonatomic, strong) NSString *details;
+@property (nonatomic, strong) UIImage *icon;
+@property (nonatomic, assign) NSTextAlignment textAlignment;
+@property (nonatomic, strong) UIColor *textColor;
+@property (nonatomic, strong) UIColor *detailsColor;
 
 + (id)cellWithValue:(NSObject *)value;
 + (id)cellWithDictionary:(NSDictionary *)info;

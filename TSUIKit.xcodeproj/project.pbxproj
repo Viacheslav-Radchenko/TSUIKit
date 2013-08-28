@@ -367,6 +367,18 @@
 		F614211117C6BEF8003455EB /* NavigationStripSectionBackgroundRed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F614200D17C6BEF8003455EB /* NavigationStripSectionBackgroundRed@2x.png */; };
 		F614220917CA02C3003455EB /* TSTableViewController+TestDataDefinition.m in Sources */ = {isa = PBXBuildFile; fileRef = F614220817CA02C3003455EB /* TSTableViewController+TestDataDefinition.m */; };
 		F614220A17CA02C3003455EB /* TSTableViewController+TestDataDefinition.m in Sources */ = {isa = PBXBuildFile; fileRef = F614220817CA02C3003455EB /* TSTableViewController+TestDataDefinition.m */; };
+		F657417E17CD731E00826563 /* TableViewFolderIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F657417D17CD731E00826563 /* TableViewFolderIcon@2x.png */; };
+		F657417F17CD731E00826563 /* TableViewFolderIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F657417D17CD731E00826563 /* TableViewFolderIcon@2x.png */; };
+		F657418117CD74A400826563 /* TableViewFileIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F657418017CD74A400826563 /* TableViewFileIcon@2x.png */; };
+		F657418217CD74A400826563 /* TableViewFileIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F657418017CD74A400826563 /* TableViewFileIcon@2x.png */; };
+		F657418417CD78C100826563 /* TableViewPackageIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F657418317CD78C100826563 /* TableViewPackageIcon@2x.png */; };
+		F657418517CD78C100826563 /* TableViewPackageIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F657418317CD78C100826563 /* TableViewPackageIcon@2x.png */; };
+		F657418917CD818F00826563 /* TableViewFileIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = F657418617CD818F00826563 /* TableViewFileIcon.png */; };
+		F657418A17CD818F00826563 /* TableViewFileIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = F657418617CD818F00826563 /* TableViewFileIcon.png */; };
+		F657418B17CD818F00826563 /* TableViewFolderIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = F657418717CD818F00826563 /* TableViewFolderIcon.png */; };
+		F657418C17CD818F00826563 /* TableViewFolderIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = F657418717CD818F00826563 /* TableViewFolderIcon.png */; };
+		F657418D17CD818F00826563 /* TableViewPackageIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = F657418817CD818F00826563 /* TableViewPackageIcon.png */; };
+		F657418E17CD818F00826563 /* TableViewPackageIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = F657418817CD818F00826563 /* TableViewPackageIcon.png */; };
 		F67936021785A570009E2365 /* TSTabViewWithDropDownPanelTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F6EE2A4617835D9A00C0C4A3 /* TSTabViewWithDropDownPanelTestViewController.m */; };
 		F67936031785A57B009E2365 /* TSTabViewWithDropDownPanelTestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A4817835D9A00C0C4A3 /* TSTabViewWithDropDownPanelTestViewController.xib */; };
 		F67936041785A57B009E2365 /* TSTabViewWithDropDownPanelTestViewController~ipad.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6EE2A4B17835D9A00C0C4A3 /* TSTabViewWithDropDownPanelTestViewController~ipad.xib */; };
@@ -548,6 +560,12 @@
 		F614200D17C6BEF8003455EB /* NavigationStripSectionBackgroundRed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "NavigationStripSectionBackgroundRed@2x.png"; sourceTree = "<group>"; };
 		F614220717CA02C3003455EB /* TSTableViewController+TestDataDefinition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TSTableViewController+TestDataDefinition.h"; sourceTree = "<group>"; };
 		F614220817CA02C3003455EB /* TSTableViewController+TestDataDefinition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "TSTableViewController+TestDataDefinition.m"; sourceTree = "<group>"; };
+		F657417D17CD731E00826563 /* TableViewFolderIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TableViewFolderIcon@2x.png"; sourceTree = "<group>"; };
+		F657418017CD74A400826563 /* TableViewFileIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TableViewFileIcon@2x.png"; sourceTree = "<group>"; };
+		F657418317CD78C100826563 /* TableViewPackageIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TableViewPackageIcon@2x.png"; sourceTree = "<group>"; };
+		F657418617CD818F00826563 /* TableViewFileIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TableViewFileIcon.png; sourceTree = "<group>"; };
+		F657418717CD818F00826563 /* TableViewFolderIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TableViewFolderIcon.png; sourceTree = "<group>"; };
+		F657418817CD818F00826563 /* TableViewPackageIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TableViewPackageIcon.png; sourceTree = "<group>"; };
 		F680D2861774B9C2005ACD94 /* TabViewTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TabViewTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F680D2A61774BA82005ACD94 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		F680D2A71774BA82005ACD94 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
@@ -815,6 +833,7 @@
 		F6141FD717C6BEF8003455EB /* Textures */ = {
 			isa = PBXGroup;
 			children = (
+				F657416E17CD6D3C00826563 /* TableView */,
 				F6141FD817C6BEF8003455EB /* 1x */,
 				F6141FF317C6BEF8003455EB /* 2x */,
 			);
@@ -883,6 +902,36 @@
 				F614200B17C6BEF8003455EB /* NavigationStripSectionBackground_2@2x.png */,
 				F614200C17C6BEF8003455EB /* NavigationStripSectionBackgroundRed-Selected@2x.png */,
 				F614200D17C6BEF8003455EB /* NavigationStripSectionBackgroundRed@2x.png */,
+			);
+			path = 2x;
+			sourceTree = "<group>";
+		};
+		F657416E17CD6D3C00826563 /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				F657416F17CD6D3C00826563 /* 1x */,
+				F657417117CD6D3C00826563 /* 2x */,
+			);
+			name = TableView;
+			path = SharedResources/Textures/TableView;
+			sourceTree = SOURCE_ROOT;
+		};
+		F657416F17CD6D3C00826563 /* 1x */ = {
+			isa = PBXGroup;
+			children = (
+				F657418617CD818F00826563 /* TableViewFileIcon.png */,
+				F657418717CD818F00826563 /* TableViewFolderIcon.png */,
+				F657418817CD818F00826563 /* TableViewPackageIcon.png */,
+			);
+			path = 1x;
+			sourceTree = "<group>";
+		};
+		F657417117CD6D3C00826563 /* 2x */ = {
+			isa = PBXGroup;
+			children = (
+				F657418317CD78C100826563 /* TableViewPackageIcon@2x.png */,
+				F657418017CD74A400826563 /* TableViewFileIcon@2x.png */,
+				F657417D17CD731E00826563 /* TableViewFolderIcon@2x.png */,
 			);
 			path = 2x;
 			sourceTree = "<group>";
@@ -1336,6 +1385,12 @@
 				F614210317C6BEF8003455EB /* NavigationStripSectionBackground_2@2x.png in Resources */,
 				F614210817C6BEF8003455EB /* NavigationStripSectionBackgroundRed-Selected@2x.png in Resources */,
 				F614210D17C6BEF8003455EB /* NavigationStripSectionBackgroundRed@2x.png in Resources */,
+				F657417E17CD731E00826563 /* TableViewFolderIcon@2x.png in Resources */,
+				F657418117CD74A400826563 /* TableViewFileIcon@2x.png in Resources */,
+				F657418417CD78C100826563 /* TableViewPackageIcon@2x.png in Resources */,
+				F657418917CD818F00826563 /* TableViewFileIcon.png in Resources */,
+				F657418B17CD818F00826563 /* TableViewFolderIcon.png in Resources */,
+				F657418D17CD818F00826563 /* TableViewPackageIcon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1468,6 +1523,12 @@
 				F614210717C6BEF8003455EB /* NavigationStripSectionBackground_2@2x.png in Resources */,
 				F614210C17C6BEF8003455EB /* NavigationStripSectionBackgroundRed-Selected@2x.png in Resources */,
 				F614211117C6BEF8003455EB /* NavigationStripSectionBackgroundRed@2x.png in Resources */,
+				F657417F17CD731E00826563 /* TableViewFolderIcon@2x.png in Resources */,
+				F657418217CD74A400826563 /* TableViewFileIcon@2x.png in Resources */,
+				F657418517CD78C100826563 /* TableViewPackageIcon@2x.png in Resources */,
+				F657418A17CD818F00826563 /* TableViewFileIcon.png in Resources */,
+				F657418C17CD818F00826563 /* TableViewFolderIcon.png in Resources */,
+				F657418E17CD818F00826563 /* TableViewPackageIcon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

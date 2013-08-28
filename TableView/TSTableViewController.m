@@ -40,20 +40,22 @@
     self.settingsView.layer.shadowOffset = CGSizeMake(2, 4);
     
     // Top table
-    NSArray *columns1 = [self columnsInfo1];
-    NSArray *rows1 = [self rowsInfo1];
-
     _tableView1 = [[TSTableView alloc] initWithFrame:CGRectMake(20, 80, self.view.frame.size.width - 40, self.view.frame.size.height/2 - 70)];
     _tableView1.autoresizingMask = UIViewAutoresizingFlexibleBottomMargin | UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
     _tableView1.delegate = self;
     [self.view addSubview:_tableView1];
     
     _model1 = [[TSTableViewModel alloc] initWithTableView:_tableView1 andStyle:kTSTableViewStyleDark];
-    [_model1 setColumnsInfo:columns1 andRowsInfo:rows1];
+//    NSArray *columns1 = [self columnsInfo1];
+//    NSArray *rows1 = [self rowsInfo1];
+//    [_model1 setColumnsInfo:columns1 andRowsInfo:rows1];
+    
+    NSArray *columns1 = [self columnsForFileSystemTree];
+    NSArray *rows1 = [self rowsForAppDirectory];
+    [_model1 setColumns:columns1 andRows:rows1];
     
     // Bottom table
-    NSArray *columns2 = [self columnsInfo2];
-    NSArray *rows2 = [self rowsInfo2];
+   
     
     _tableView2 = [[TSTableView alloc] initWithFrame:CGRectMake(20, self.view.frame.size.height/2 + 50, self.view.frame.size.width - 40, self.view.frame.size.height/2 - 70)];
     _tableView2.autoresizingMask = UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
@@ -62,7 +64,14 @@
     [self.view addSubview:_tableView2];
     
     _model2 = [[TSTableViewModel alloc] initWithTableView:_tableView2 andStyle:kTSTableViewStyleLight];
-    [_model2 setColumnsInfo:columns2 andRowsInfo:rows2];
+    
+//    NSArray *columns2 = [self columnsInfo2];
+//    NSArray *rows2 = [self rowsInfo2];
+//    [_model2 setColumnsInfo:columns2 andRowsInfo:rows2];
+    
+    NSArray *columns2 = [self columnsForFileSystemTree];
+    NSArray *rows2 = [self rowsForAppDirectory];
+    [_model2 setColumns:columns2 andRows:rows2];
     
     _dataModels = @[_model1, _model2];
     _tables = @[_tableView1, _tableView2];
@@ -170,5 +179,123 @@
 {
     VerboseLog();
 }
+
+#pragma mark - FileSystem
+
+- (NSArray *)columnsForFileSystemTree
+{
+    NSArray *columns = @[
+                         [TSColumn columnWithDictionary:@{ @"title" : @"Filename", @"subtitle" : @"Files in Application directory", @"minWidth" : @128, @"defWidth" : @288 }],
+                         [TSColumn columnWithDictionary:@{ @"title" : @"Attributes", @"subcolumns" : @[
+                          @{ @"title" : @"File size", @"titleFontSize" : @12, @"titleColor" : @"FF006F00", @"headerHeight" : @24, @"defWidth" : @64},
+                                     @{ @"title" : @"Modification date", @"titleFontSize" : @12, @"headerHeight" : @24, @"defWidth" : @200},
+                                     @{ @"title" : @"Creation date", @"titleFontSize" : @12, @"headerHeight" : @24, @"defWidth" : @200}
+                          ]}
+                          ]
+                         ];
+    return columns;
+}
+
+- (NSArray *)rowsForAppDirectory
+{
+    NSArray *dirs = [[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask];
+    if(!dirs || dirs.count ==0)
+        return nil;
+    
+    NSURL *rootUrl = [dirs lastObject];
+    
+    return [self rowsForDirectory:[rootUrl URLByDeletingLastPathComponent]];
+}
+
+- (NSArray *)rowsForDirectory:(NSURL *)rootUrl
+{
+    NSError *error = nil;
+    NSArray *properties = @[
+        NSURLLocalizedNameKey,
+        NSURLCreationDateKey,
+        NSURLContentModificationDateKey,
+        NSURLIsSymbolicLinkKey,
+        NSURLIsDirectoryKey,
+        NSURLIsHiddenKey,
+        NSURLFileSizeKey
+    ];
+    
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"HH:MM  dd-MMM-YYYY"];
+    
+    NSArray *array = [[NSFileManager defaultManager] contentsOfDirectoryAtURL:rootUrl
+                                                   includingPropertiesForKeys:properties
+                                                                      options:0//(NSDirectoryEnumerationSkipsHiddenFiles)
+                                                                        error:&error];
+    NSMutableArray *rows = [[NSMutableArray alloc] initWithCapacity:array.count];
+    for(NSURL * url in array)
+    {
+        NSString *localizedName = nil;
+        [url getResourceValue:&localizedName forKey:NSURLLocalizedNameKey error:NULL];
+        
+        NSNumber *isPackage = nil;
+        [url getResourceValue:&isPackage forKey:NSURLIsPackageKey error:NULL];
+        
+        NSNumber *isDirectory = nil;
+        [url getResourceValue:&isDirectory forKey:NSURLIsDirectoryKey error:NULL];
+        
+        NSNumber *isHidden = nil;
+        [url getResourceValue:&isHidden forKey:NSURLIsHiddenKey error:NULL];
+        
+        NSNumber *isSymbolic = nil;
+        [url getResourceValue:&isSymbolic forKey:NSURLIsSymbolicLinkKey error:NULL];
+        
+        TSCell *cellFilename = [TSCell cellWithValue:localizedName];
+        cellFilename.textAlignment = NSTextAlignmentLeft;
+        NSArray *subrows = @[];
+        if([isDirectory boolValue])
+        {
+            subrows = [self rowsForDirectory:url];
+            cellFilename.icon = [UIImage imageNamed:@"TableViewFolderIcon"];
+            
+        }
+        else
+        {
+            cellFilename.icon = [UIImage imageNamed:@"TableViewFileIcon"];
+            cellFilename.textColor = [UIColor colorWithRed:0.5 green:0.4 blue:0 alpha:1];
+        }
+        
+        if([isHidden boolValue])
+        {
+            cellFilename.textColor = [UIColor colorWithRed:0.5 green:0.1 blue:0.1 alpha:1];
+        }
+        
+        if([isPackage boolValue])
+        {
+            cellFilename.icon = [UIImage imageNamed:@"TableViewPackageIcon"];
+        }
+
+        NSNumber *fileSize = nil;
+        [url getResourceValue:&fileSize forKey:NSURLFileSizeKey error:NULL];
+        NSString *fileSizeStr = @"";
+        if(fileSize)
+            fileSizeStr = [NSString stringWithFormat:@"%.2f kb",[fileSize floatValue]/1024];
+        
+        NSDate *creationDate = nil;
+        [url getResourceValue:&creationDate forKey:NSURLCreationDateKey error:NULL];
+        
+        NSDate *modificationDate = nil;
+        [url getResourceValue:&modificationDate forKey:NSURLContentModificationDateKey error:NULL];
+
+        TSRow *row = [TSRow rowWithDictionary:@{
+                      @"cells" : @[
+                              cellFilename,
+                              @{@"value" : fileSizeStr},
+                              @{@"value" : [dateFormatter stringFromDate:modificationDate]},
+                              @{@"value" : [dateFormatter stringFromDate:creationDate]}
+                              
+                      ],
+                      @"subrows" : subrows
+         }];
+        [rows addObject:row];
+    }
+    return [NSArray arrayWithArray:rows];
+}
+
 
 @end
