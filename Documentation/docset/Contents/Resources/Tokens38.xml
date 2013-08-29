@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Protocols/TSTableViewHeaderPanelDelegate.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intf/TSTableViewHeaderPanelDelegate</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSTableViewHeaderPanel.h</DeclaredIn>
+            
+			
+			<NodeRef refid="38"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/TSTableViewHeaderPanelDelegate/tableViewHeader:columnWidthDidChange:oldWidth:newWidth:</TokenIdentifier>
+			<Abstract type="html">Invoked when user manually changing column width</Abstract>
+			<DeclaredIn>TSTableViewHeaderPanel.h</DeclaredIn>
+			
+			<Declaration>- (void)tableViewHeader:(TSTableViewHeaderPanel *)header columnWidthDidChange:(NSInteger)columnIndex oldWidth:(CGFloat)oldWidth newWidth:(CGFloat)newWidth</Declaration>
+			
+			
+			<Anchor>//api/name/tableViewHeader:columnWidthDidChange:oldWidth:newWidth:</Anchor>
+            <NodeRef refid="38"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/TSTableViewHeaderPanelDelegate/tableViewHeader:didSelectColumnAtPath:</TokenIdentifier>
+			<Abstract type="html">Invoked when user tap on section header</Abstract>
+			<DeclaredIn>TSTableViewHeaderPanel.h</DeclaredIn>
+			
+			<Declaration>- (void)tableViewHeader:(TSTableViewHeaderPanel *)header didSelectColumnAtPath:(NSIndexPath *)columnPath</Declaration>
+			
+			
+			<Anchor>//api/name/tableViewHeader:didSelectColumnAtPath:</Anchor>
+            <NodeRef refid="38"/>
+		</Token>
+		
+        
+	</File>
+</Tokens>

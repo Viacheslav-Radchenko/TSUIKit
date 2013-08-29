@@ -1,0 +1,827 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
+		<title>TSTableViewDataSource Protocol Reference</title>
+		<meta id="xcode-display" name="xcode-display" content="render"/>
+		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
+		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
+		<meta name="generator" content="appledoc 2.1 (build 858)" />
+	</head>
+	<body>
+		<header id="top_header">
+			<div id="library" class="hideInXcode">
+				<h1><a id="libraryTitle" href="../index.html">TSUIKit </a></h1>
+				<a id="developerHome" href="../index.html">Viacheslav Radchenko</a>
+			</div>
+			
+			<div id="title" role="banner">
+				<h1 class="hideInXcode">TSTableViewDataSource Protocol Reference</h1>
+			</div>
+			<ul id="headerButtons" role="toolbar">
+				<li id="toc_button">
+					<button aria-label="Show Table of Contents" role="checkbox" class="open" id="table_of_contents"><span class="disclosure"></span>Table of Contents</button>
+				</li>
+				<li id="jumpto_button" role="navigation">
+					<select id="jumpTo">
+	<option value="top">Jump To&#133;</option>
+	
+	
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<option value="instance_methods">Instance Methods</option>
+	
+	<option value="//api/name/defaultWidthForColumnAtIndex:">&nbsp;&nbsp;&nbsp;&nbsp;- defaultWidthForColumnAtIndex:</option>
+	
+	<option value="//api/name/heightForHeaderSectionAtPath:">&nbsp;&nbsp;&nbsp;&nbsp;- heightForHeaderSectionAtPath:</option>
+	
+	<option value="//api/name/heightForRowAtPath:">&nbsp;&nbsp;&nbsp;&nbsp;- heightForRowAtPath:</option>
+	
+	<option value="//api/name/maximalWidthForColumnAtIndex:">&nbsp;&nbsp;&nbsp;&nbsp;- maximalWidthForColumnAtIndex:</option>
+	
+	<option value="//api/name/minimalWidthForColumnAtIndex:">&nbsp;&nbsp;&nbsp;&nbsp;- minimalWidthForColumnAtIndex:</option>
+	
+	<option value="//api/name/numberOfColumns">&nbsp;&nbsp;&nbsp;&nbsp;- numberOfColumns</option>
+	
+	<option value="//api/name/numberOfColumnsAtPath:">&nbsp;&nbsp;&nbsp;&nbsp;- numberOfColumnsAtPath:</option>
+	
+	<option value="//api/name/numberOfRows">&nbsp;&nbsp;&nbsp;&nbsp;- numberOfRows</option>
+	
+	<option value="//api/name/numberOfRowsAtPath:">&nbsp;&nbsp;&nbsp;&nbsp;- numberOfRowsAtPath:</option>
+	
+	<option value="//api/name/tableView:cellViewForRowAtPath:cellIndex:">&nbsp;&nbsp;&nbsp;&nbsp;- tableView:cellViewForRowAtPath:cellIndex:</option>
+	
+	<option value="//api/name/tableView:headerSectionViewForColumnAtPath:">&nbsp;&nbsp;&nbsp;&nbsp;- tableView:headerSectionViewForColumnAtPath:</option>
+	
+	<option value="//api/name/widthForExpandItem">&nbsp;&nbsp;&nbsp;&nbsp;- widthForExpandItem</option>
+	
+	
+	
+</select>
+				</li>
+			</ul>
+		</header>
+		<nav id="tocContainer" class="isShowingTOC">
+			<ul id="toc" role="tree">
+				
+
+
+
+<li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
+	
+</ul></li>
+
+
+
+
+
+
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/defaultWidthForColumnAtIndex:">defaultWidthForColumnAtIndex:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/heightForHeaderSectionAtPath:">heightForHeaderSectionAtPath:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/heightForRowAtPath:">heightForRowAtPath:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/maximalWidthForColumnAtIndex:">maximalWidthForColumnAtIndex:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/minimalWidthForColumnAtIndex:">minimalWidthForColumnAtIndex:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/numberOfColumns">numberOfColumns</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/numberOfColumnsAtPath:">numberOfColumnsAtPath:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/numberOfRows">numberOfRows</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/numberOfRowsAtPath:">numberOfRowsAtPath:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/tableView:cellViewForRowAtPath:cellIndex:">tableView:cellViewForRowAtPath:cellIndex:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/tableView:headerSectionViewForColumnAtPath:">tableView:headerSectionViewForColumnAtPath:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/widthForExpandItem">widthForExpandItem</a></span></li>
+	
+</ul></li>
+
+
+			</ul>
+		</nav>
+		<article>
+			<div id="contents" class="isShowingTOC" role="main">
+				<a title="TSTableViewDataSource Protocol Reference" name="top"></a>
+				<div class="main-navigation navigation-top">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="header">
+					<div class="section-header">
+						<h1 class="title title-header">TSTableViewDataSource Protocol Reference</h1>
+					</div>		
+				</div>
+				<div id="container">	
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<td class="specification-title">Conforms to</td>
+	<td class="specification-value">NSObject</td>
+</tr><tr>
+	<td class="specification-title">Declared in</td>
+	<td class="specification-value">TSTableViewDataSource.h</td>
+</tr>
+						</tbody></table></div>
+					
+                    
+                    
+					
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						<h2 class="subtitle subtitle-tasks">Tasks</h2>
+						
+						
+						
+						
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/numberOfColumns">&ndash;&nbsp;numberOfColumns</a></code>
+	</span>
+	
+	<span class="task-item-suffix">required method</span>
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/numberOfRows">&ndash;&nbsp;numberOfRows</a></code>
+	</span>
+	
+	<span class="task-item-suffix">required method</span>
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/numberOfColumnsAtPath:">&ndash;&nbsp;numberOfColumnsAtPath:</a></code>
+	</span>
+	
+	<span class="task-item-suffix">required method</span>
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/numberOfRowsAtPath:">&ndash;&nbsp;numberOfRowsAtPath:</a></code>
+	</span>
+	
+	<span class="task-item-suffix">required method</span>
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/heightForRowAtPath:">&ndash;&nbsp;heightForRowAtPath:</a></code>
+	</span>
+	
+	<span class="task-item-suffix">required method</span>
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/tableView:cellViewForRowAtPath:cellIndex:">&ndash;&nbsp;tableView:cellViewForRowAtPath:cellIndex:</a></code>
+	</span>
+	
+	<span class="task-item-suffix">required method</span>
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/tableView:headerSectionViewForColumnAtPath:">&ndash;&nbsp;tableView:headerSectionViewForColumnAtPath:</a></code>
+	</span>
+	
+	<span class="task-item-suffix">required method</span>
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/heightForHeaderSectionAtPath:">&ndash;&nbsp;heightForHeaderSectionAtPath:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/widthForExpandItem">&ndash;&nbsp;widthForExpandItem</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/defaultWidthForColumnAtIndex:">&ndash;&nbsp;defaultWidthForColumnAtIndex:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/minimalWidthForColumnAtIndex:">&ndash;&nbsp;minimalWidthForColumnAtIndex:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/maximalWidthForColumnAtIndex:">&ndash;&nbsp;maximalWidthForColumnAtIndex:</a></code>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+					</div>
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Instance Methods" name="instance_methods"></a>
+						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/defaultWidthForColumnAtIndex:" title="defaultWidthForColumnAtIndex:"></a>
+	<h3 class="subsubtitle method-title">defaultWidthForColumnAtIndex:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Return default/prefered width for column at specified index</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (CGFloat)defaultWidthForColumnAtIndex:(NSInteger)<em>index</em></code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">TSTableViewDataSource.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/heightForHeaderSectionAtPath:" title="heightForHeaderSectionAtPath:"></a>
+	<h3 class="subsubtitle method-title">heightForHeaderSectionAtPath:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Return height for header section at specified path</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (CGFloat)heightForHeaderSectionAtPath:(NSIndexPath *)<em>columnPath</em></code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">TSTableViewDataSource.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/heightForRowAtPath:" title="heightForRowAtPath:"></a>
+	<h3 class="subsubtitle method-title">heightForRowAtPath:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Return height for row at specified path</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (CGFloat)heightForRowAtPath:(NSIndexPath *)<em>indexPath</em></code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">TSTableViewDataSource.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/maximalWidthForColumnAtIndex:" title="maximalWidthForColumnAtIndex:"></a>
+	<h3 class="subsubtitle method-title">maximalWidthForColumnAtIndex:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Return maximal width for column at specified index</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (CGFloat)maximalWidthForColumnAtIndex:(NSInteger)<em>index</em></code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">TSTableViewDataSource.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/minimalWidthForColumnAtIndex:" title="minimalWidthForColumnAtIndex:"></a>
+	<h3 class="subsubtitle method-title">minimalWidthForColumnAtIndex:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Return minimal width for column at specified index</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (CGFloat)minimalWidthForColumnAtIndex:(NSInteger)<em>index</em></code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">TSTableViewDataSource.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/numberOfColumns" title="numberOfColumns"></a>
+	<h3 class="subsubtitle method-title">numberOfColumns</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Total number of columns (including subcolumns) in table</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (NSInteger)numberOfColumns</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">TSTableViewDataSource.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/numberOfColumnsAtPath:" title="numberOfColumnsAtPath:"></a>
+	<h3 class="subsubtitle method-title">numberOfColumnsAtPath:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Number of subcolumns at specified path</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (NSInteger)numberOfColumnsAtPath:(NSIndexPath *)<em>indexPath</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>indexPath</em></dt>
+			<dd><ul>
+<li>if nil, return number top level columns</li>
+</ul>
+</dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">TSTableViewDataSource.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/numberOfRows" title="numberOfRows"></a>
+	<h3 class="subsubtitle method-title">numberOfRows</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Total number of rows (including subrows) in table</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (NSInteger)numberOfRows</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">TSTableViewDataSource.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/numberOfRowsAtPath:" title="numberOfRowsAtPath:"></a>
+	<h3 class="subsubtitle method-title">numberOfRowsAtPath:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Number of subrows at specified path</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (NSInteger)numberOfRowsAtPath:(NSIndexPath *)<em>indexPath</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>indexPath</em></dt>
+			<dd><ul>
+<li>if nil, return number top level rows</li>
+</ul>
+</dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">TSTableViewDataSource.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/tableView:cellViewForRowAtPath:cellIndex:" title="tableView:cellViewForRowAtPath:cellIndex:"></a>
+	<h3 class="subsubtitle method-title">tableView:cellViewForRowAtPath:cellIndex:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Return height for header section at specified path</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (TSTableViewCell *)tableView:(TSTableView *)<em>tableView</em> cellViewForRowAtPath:(NSIndexPath *)<em>indexPath</em> cellIndex:(NSInteger)<em>index</em></code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">TSTableViewDataSource.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/tableView:headerSectionViewForColumnAtPath:" title="tableView:headerSectionViewForColumnAtPath:"></a>
+	<h3 class="subsubtitle method-title">tableView:headerSectionViewForColumnAtPath:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Return height for header section at specified path</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (TSTableViewHeaderSectionView *)tableView:(TSTableView *)<em>tableView</em> headerSectionViewForColumnAtPath:(NSIndexPath *)<em>indexPath</em></code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">TSTableViewDataSource.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/widthForExpandItem" title="widthForExpandItem"></a>
+	<h3 class="subsubtitle method-title">widthForExpandItem</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Return width for expand item  in left side control of panel
+              Total width of control panel would be calculated based on next expression: maxNesingLevel * widthForExpandItem                                         <br/>
+              where maxNesingLevel is maximal depth of subrows hierarchy</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (CGFloat)widthForExpandItem</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">TSTableViewDataSource.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
+					
+                    
+                    
+				</div>
+				<div class="main-navigation navigation-bottom">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="footer">
+					<hr />
+					<div class="footer-copyright">
+						<p><span class="copyright">&copy; 2013 Viacheslav Radchenko. All rights reserved. (Last updated: 2013-08-29)</span><br />
+						
+						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.1 (build 858)</a>.</span></p>
+						
+					</div>
+				</div>
+			</div>
+		</article>
+		<script type="text/javascript">
+			function jumpToChange()
+			{
+				window.location.hash = this.options[this.selectedIndex].value;
+			}
+			
+			function toggleTOC()
+			{
+				var contents = document.getElementById('contents');
+				var tocContainer = document.getElementById('tocContainer');
+				
+				if (this.getAttribute('class') == 'open')
+				{
+					this.setAttribute('class', '');
+					contents.setAttribute('class', '');
+					tocContainer.setAttribute('class', '');
+					
+					window.name = "hideTOC";
+				}
+				else
+				{
+					this.setAttribute('class', 'open');
+					contents.setAttribute('class', 'isShowingTOC');
+					tocContainer.setAttribute('class', 'isShowingTOC');
+					
+					window.name = "";
+				}
+				return false;
+			}
+			
+			function toggleTOCEntryChildren(e)
+			{
+				e.stopPropagation();
+				var currentClass = this.getAttribute('class');
+				if (currentClass == 'children') {
+					this.setAttribute('class', 'children open');
+				}
+				else if (currentClass == 'children open') {
+					this.setAttribute('class', 'children');
+				}
+				return false;
+			}
+			
+			function tocEntryClick(e)
+			{
+				e.stopPropagation();
+				return true;
+			}
+			
+			function init()
+			{
+				var selectElement = document.getElementById('jumpTo');
+				selectElement.addEventListener('change', jumpToChange, false);
+				
+				var tocButton = document.getElementById('table_of_contents');
+				tocButton.addEventListener('click', toggleTOC, false);
+				
+				var taskTreeItem = document.getElementById('task_treeitem');
+				if (taskTreeItem.getElementsByTagName('li').length > 0)
+				{
+					taskTreeItem.setAttribute('class', 'children');
+					taskTreeItem.firstChild.setAttribute('class', 'disclosure');
+				}
+				
+				var tocList = document.getElementById('toc');
+				
+				var tocEntries = tocList.getElementsByTagName('li');
+				for (var i = 0; i < tocEntries.length; i++) {
+					tocEntries[i].addEventListener('click', toggleTOCEntryChildren, false);
+				}
+				
+				var tocLinks = tocList.getElementsByTagName('a');
+				for (var i = 0; i < tocLinks.length; i++) {
+					tocLinks[i].addEventListener('click', tocEntryClick, false);
+				}
+				
+				if (window.name == "hideTOC") {
+					toggleTOC.call(tocButton);
+				}
+			}
+			
+			window.onload = init;
+			
+			// If showing in Xcode, hide the TOC and Header
+			if (navigator.userAgent.match(/xcode/i)) {
+				document.getElementById("contents").className = "hideInXcode"
+				document.getElementById("tocContainer").className = "hideInXcode"
+				document.getElementById("top_header").className = "hideInXcode"
+			}
+			
+		</script>
+	</body>
+</html>

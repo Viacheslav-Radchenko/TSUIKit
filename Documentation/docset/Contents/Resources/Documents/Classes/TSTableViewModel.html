@@ -1,0 +1,1030 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
+		<title>TSTableViewModel Class Reference</title>
+		<meta id="xcode-display" name="xcode-display" content="render"/>
+		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
+		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
+		<meta name="generator" content="appledoc 2.1 (build 858)" />
+	</head>
+	<body>
+		<header id="top_header">
+			<div id="library" class="hideInXcode">
+				<h1><a id="libraryTitle" href="../index.html">TSUIKit </a></h1>
+				<a id="developerHome" href="../index.html">Viacheslav Radchenko</a>
+			</div>
+			
+			<div id="title" role="banner">
+				<h1 class="hideInXcode">TSTableViewModel Class Reference</h1>
+			</div>
+			<ul id="headerButtons" role="toolbar">
+				<li id="toc_button">
+					<button aria-label="Show Table of Contents" role="checkbox" class="open" id="table_of_contents"><span class="disclosure"></span>Table of Contents</button>
+				</li>
+				<li id="jumpto_button" role="navigation">
+					<select id="jumpTo">
+	<option value="top">Jump To&#133;</option>
+	
+	<option value="overview">Overview</option>
+	
+	
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+	
+	
+	
+	<option value="properties">Properties</option>
+	
+	<option value="//api/name/columns">&nbsp;&nbsp;&nbsp;&nbsp;columns</option>
+	
+	<option value="//api/name/heightForRow">&nbsp;&nbsp;&nbsp;&nbsp;heightForRow</option>
+	
+	<option value="//api/name/rows">&nbsp;&nbsp;&nbsp;&nbsp;rows</option>
+	
+	<option value="//api/name/tableStyle">&nbsp;&nbsp;&nbsp;&nbsp;tableStyle</option>
+	
+	<option value="//api/name/tableView">&nbsp;&nbsp;&nbsp;&nbsp;tableView</option>
+	
+	<option value="//api/name/widthForExpandItem">&nbsp;&nbsp;&nbsp;&nbsp;widthForExpandItem</option>
+	
+	
+	
+	
+	
+	
+	<option value="instance_methods">Instance Methods</option>
+	
+	<option value="//api/name/initWithTableView:andStyle:">&nbsp;&nbsp;&nbsp;&nbsp;- initWithTableView:andStyle:</option>
+	
+	<option value="//api/name/insertRow:atPath:">&nbsp;&nbsp;&nbsp;&nbsp;- insertRow:atPath:</option>
+	
+	<option value="//api/name/removeRowAtPath:">&nbsp;&nbsp;&nbsp;&nbsp;- removeRowAtPath:</option>
+	
+	<option value="//api/name/replcaceRowAtPath:withRow:">&nbsp;&nbsp;&nbsp;&nbsp;- replcaceRowAtPath:withRow:</option>
+	
+	<option value="//api/name/setColumns:andRows:">&nbsp;&nbsp;&nbsp;&nbsp;- setColumns:andRows:</option>
+	
+	<option value="//api/name/setColumnsInfo:andRowsInfo:">&nbsp;&nbsp;&nbsp;&nbsp;- setColumnsInfo:andRowsInfo:</option>
+	
+	<option value="//api/name/setRows:">&nbsp;&nbsp;&nbsp;&nbsp;- setRows:</option>
+	
+	<option value="//api/name/setRowsInfo:">&nbsp;&nbsp;&nbsp;&nbsp;- setRowsInfo:</option>
+	
+	
+	
+</select>
+				</li>
+			</ul>
+		</header>
+		<nav id="tocContainer" class="isShowingTOC">
+			<ul id="toc" role="tree">
+				
+<li role="treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#overview">Overview</a></span></li>
+
+
+
+
+<li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
+	
+</ul></li>
+
+
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#properties">Properties</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/columns">columns</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/heightForRow">heightForRow</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/rows">rows</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/tableStyle">tableStyle</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/tableView">tableView</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/widthForExpandItem">widthForExpandItem</a></span></li>
+	
+</ul></li>
+
+
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/initWithTableView:andStyle:">initWithTableView:andStyle:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/insertRow:atPath:">insertRow:atPath:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/removeRowAtPath:">removeRowAtPath:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/replcaceRowAtPath:withRow:">replcaceRowAtPath:withRow:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/setColumns:andRows:">setColumns:andRows:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/setColumnsInfo:andRowsInfo:">setColumnsInfo:andRowsInfo:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/setRows:">setRows:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/setRowsInfo:">setRowsInfo:</a></span></li>
+	
+</ul></li>
+
+
+			</ul>
+		</nav>
+		<article>
+			<div id="contents" class="isShowingTOC" role="main">
+				<a title="TSTableViewModel Class Reference" name="top"></a>
+				<div class="main-navigation navigation-top">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="header">
+					<div class="section-header">
+						<h1 class="title title-header">TSTableViewModel Class Reference</h1>
+					</div>		
+				</div>
+				<div id="container">	
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<td class="specification-title">Inherits from</td>
+	<td class="specification-value">NSObject</td>
+</tr><tr>
+	<td class="specification-title">Conforms to</td>
+	<td class="specification-value"><a href="../Protocols/TSTableViewDataSource.html">TSTableViewDataSource</a></td>
+</tr><tr>
+	<td class="specification-title">Declared in</td>
+	<td class="specification-value">TSTableViewModel.h</td>
+</tr>
+						</tbody></table></div>
+					
+                    
+                    
+					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>TSTableViewModel is a prototype for <a href="../Protocols/TSTableViewDataSource.html">TSTableViewDataSource</a>.
+    There are two default ready-to-use appearance styles kTSTableViewStyleDark and kTSTableViewStyleLight provided by TSTableViewModel.</p>
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						<h2 class="subtitle subtitle-tasks">Tasks</h2>
+						
+						
+						
+						
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/columns">&nbsp;&nbsp;columns</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/rows">&nbsp;&nbsp;rows</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/tableView">&nbsp;&nbsp;tableView</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/tableStyle">&nbsp;&nbsp;tableStyle</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/heightForRow">&nbsp;&nbsp;heightForRow</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/widthForExpandItem">&nbsp;&nbsp;widthForExpandItem</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/initWithTableView:andStyle:">&ndash;&nbsp;initWithTableView:andStyle:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/setColumns:andRows:">&ndash;&nbsp;setColumns:andRows:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/setColumnsInfo:andRowsInfo:">&ndash;&nbsp;setColumnsInfo:andRowsInfo:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/setRows:">&ndash;&nbsp;setRows:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/setRowsInfo:">&ndash;&nbsp;setRowsInfo:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/insertRow:atPath:">&ndash;&nbsp;insertRow:atPath:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/removeRowAtPath:">&ndash;&nbsp;removeRowAtPath:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/replcaceRowAtPath:withRow:">&ndash;&nbsp;replcaceRowAtPath:withRow:</a></code>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Properties" name="properties"></a>
+						<h2 class="subtitle subtitle-methods">Properties</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/columns" title="columns"></a>
+	<h3 class="subsubtitle method-title">columns</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Readonly array with information about columns hierarchy.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) NSArray *columns</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">TSTableViewModel.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/heightForRow" title="heightForRow"></a>
+	<h3 class="subsubtitle method-title">heightForRow</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Row height.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) CGFloat heightForRow</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<div class="warning"><p><strong>Warning:</strong> This data model use fixed row height. Override TSTableViewModel to provide varied row height functionality.  <a href="../Classes/TSTableView.html">TSTableView</a> support <a href="#//api/name/rows">rows</a> with varied height.</p></div>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">TSTableViewModel.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/rows" title="rows"></a>
+	<h3 class="subsubtitle method-title">rows</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Readonly array with information about rows data.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) NSArray *rows</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">TSTableViewModel.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/tableStyle" title="tableStyle"></a>
+	<h3 class="subsubtitle method-title">tableStyle</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p><a href="../Classes/TSTableView.html">TSTableView</a> style choosen during initialization</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign, readonly) TSTableViewStyle tableStyle</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">TSTableViewModel.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/tableView" title="tableView"></a>
+	<h3 class="subsubtitle method-title">tableView</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Readonly reference to <a href="../Classes/TSTableView.html">TSTableView</a> instance managed by this model.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) TSTableView *tableView</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">TSTableViewModel.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/widthForExpandItem" title="widthForExpandItem"></a>
+	<h3 class="subsubtitle method-title">widthForExpandItem</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Width of one nesting level in expand panel. Total panel width would be widthForExpandItem * maxRowNestingLevel.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) CGFloat widthForExpandItem</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">TSTableViewModel.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Instance Methods" name="instance_methods"></a>
+						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/initWithTableView:andStyle:" title="initWithTableView:andStyle:"></a>
+	<h3 class="subsubtitle method-title">initWithTableView:andStyle:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Initialize instance of TSTableViewModel with corresponding <a href="../Classes/TSTableView.html">TSTableView</a> object and appearance style.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (id)initWithTableView:(TSTableView *)<em>tableView</em> andStyle:(TSTableViewStyle)<em>style</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>tableView</em></dt>
+			<dd><p>Instance of <a href="../Classes/TSTableView.html">TSTableView</a> which would be managed by this data model.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>style</em></dt>
+			<dd><p>Appearance style of <a href="../Classes/TSTableView.html">TSTableView</a>.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">TSTableViewModel.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/insertRow:atPath:" title="insertRow:atPath:"></a>
+	<h3 class="subsubtitle method-title">insertRow:atPath:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Insert new row at specified path. <a href="../Classes/TSTableView.html">TSTableView</a> would be notified about changes in data model.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)insertRow:(TSRow *)<em>rowInfo</em> atPath:(NSIndexPath *)<em>indexPath</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>rowInfo</em></dt>
+			<dd><p><a href="../Classes/TSRow.html">TSRow</a> instance with new data.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>indexPath</em></dt>
+			<dd><p>Insert positon.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">TSTableViewModel.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/removeRowAtPath:" title="removeRowAtPath:"></a>
+	<h3 class="subsubtitle method-title">removeRowAtPath:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Remove row at specified path. <a href="../Classes/TSTableView.html">TSTableView</a> would be notified about changes in data model.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)removeRowAtPath:(NSIndexPath *)<em>indexPath</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>indexPath</em></dt>
+			<dd><p>Remove positon.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">TSTableViewModel.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/replcaceRowAtPath:withRow:" title="replcaceRowAtPath:withRow:"></a>
+	<h3 class="subsubtitle method-title">replcaceRowAtPath:withRow:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Replace (update) information in row at specified path. <a href="../Classes/TSTableView.html">TSTableView</a> would be notified about changes in data model.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)replcaceRowAtPath:(NSIndexPath *)<em>indexPath</em> withRow:(TSRow *)<em>rowInfo</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>indexPath</em></dt>
+			<dd><p>Updated row positon.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>rowInfo</em></dt>
+			<dd><p><a href="../Classes/TSRow.html">TSRow</a> instance with new data.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">TSTableViewModel.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/setColumns:andRows:" title="setColumns:andRows:"></a>
+	<h3 class="subsubtitle method-title">setColumns:andRows:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Initialize with array of <a href="../Classes/TSColumn.html">TSColumn</a> objects and array <a href="../Classes/TSRow.html">TSRow</a> objects.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)setColumns:(NSArray *)<em>columns</em> andRows:(NSArray *)<em>rows</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>columns</em></dt>
+			<dd><p>Array with <a href="../Classes/TSColumn.html">TSColumn</a> objects.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>rows</em></dt>
+			<dd><p>Array with <a href="../Classes/TSRow.html">TSRow</a> objects.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">TSTableViewModel.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/setColumnsInfo:andRowsInfo:" title="setColumnsInfo:andRowsInfo:"></a>
+	<h3 class="subsubtitle method-title">setColumnsInfo:andRowsInfo:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Initialize with array of NSDictionary decriptions for <a href="#//api/name/columns">columns</a> and array of NSDictionary decriptions for <a href="#//api/name/rows">rows</a>.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)setColumnsInfo:(NSArray *)<em>columns</em> andRowsInfo:(NSArray *)<em>rows</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>columns</em></dt>
+			<dd><p>Array with <a href="#//api/name/columns">columns</a> information.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>rows</em></dt>
+			<dd><p>Array with <a href="#//api/name/rows">rows</a> data.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">TSTableViewModel.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/setRows:" title="setRows:"></a>
+	<h3 class="subsubtitle method-title">setRows:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Initialize with array of <a href="../Classes/TSRow.html">TSRow</a> objects. Columns hierarchy remains the same.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)setRows:(NSArray *)<em>rows</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>rows</em></dt>
+			<dd><p>Array with <a href="../Classes/TSRow.html">TSRow</a> objects.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">TSTableViewModel.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/setRowsInfo:" title="setRowsInfo:"></a>
+	<h3 class="subsubtitle method-title">setRowsInfo:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Initialize with array of NSDictionary decriptions for <a href="#//api/name/rows">rows</a>. Rows hierarchy remains the same.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)setRowsInfo:(NSArray *)<em>rows</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>rows</em></dt>
+			<dd><p>Array with <a href="#//api/name/rows">rows</a> data.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">TSTableViewModel.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
+					
+                    
+                    
+				</div>
+				<div class="main-navigation navigation-bottom">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="footer">
+					<hr />
+					<div class="footer-copyright">
+						<p><span class="copyright">&copy; 2013 Viacheslav Radchenko. All rights reserved. (Last updated: 2013-08-29)</span><br />
+						
+						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.1 (build 858)</a>.</span></p>
+						
+					</div>
+				</div>
+			</div>
+		</article>
+		<script type="text/javascript">
+			function jumpToChange()
+			{
+				window.location.hash = this.options[this.selectedIndex].value;
+			}
+			
+			function toggleTOC()
+			{
+				var contents = document.getElementById('contents');
+				var tocContainer = document.getElementById('tocContainer');
+				
+				if (this.getAttribute('class') == 'open')
+				{
+					this.setAttribute('class', '');
+					contents.setAttribute('class', '');
+					tocContainer.setAttribute('class', '');
+					
+					window.name = "hideTOC";
+				}
+				else
+				{
+					this.setAttribute('class', 'open');
+					contents.setAttribute('class', 'isShowingTOC');
+					tocContainer.setAttribute('class', 'isShowingTOC');
+					
+					window.name = "";
+				}
+				return false;
+			}
+			
+			function toggleTOCEntryChildren(e)
+			{
+				e.stopPropagation();
+				var currentClass = this.getAttribute('class');
+				if (currentClass == 'children') {
+					this.setAttribute('class', 'children open');
+				}
+				else if (currentClass == 'children open') {
+					this.setAttribute('class', 'children');
+				}
+				return false;
+			}
+			
+			function tocEntryClick(e)
+			{
+				e.stopPropagation();
+				return true;
+			}
+			
+			function init()
+			{
+				var selectElement = document.getElementById('jumpTo');
+				selectElement.addEventListener('change', jumpToChange, false);
+				
+				var tocButton = document.getElementById('table_of_contents');
+				tocButton.addEventListener('click', toggleTOC, false);
+				
+				var taskTreeItem = document.getElementById('task_treeitem');
+				if (taskTreeItem.getElementsByTagName('li').length > 0)
+				{
+					taskTreeItem.setAttribute('class', 'children');
+					taskTreeItem.firstChild.setAttribute('class', 'disclosure');
+				}
+				
+				var tocList = document.getElementById('toc');
+				
+				var tocEntries = tocList.getElementsByTagName('li');
+				for (var i = 0; i < tocEntries.length; i++) {
+					tocEntries[i].addEventListener('click', toggleTOCEntryChildren, false);
+				}
+				
+				var tocLinks = tocList.getElementsByTagName('a');
+				for (var i = 0; i < tocLinks.length; i++) {
+					tocLinks[i].addEventListener('click', tocEntryClick, false);
+				}
+				
+				if (window.name == "hideTOC") {
+					toggleTOC.call(tocButton);
+				}
+			}
+			
+			window.onload = init;
+			
+			// If showing in Xcode, hide the TOC and Header
+			if (navigator.userAgent.match(/xcode/i)) {
+				document.getElementById("contents").className = "hideInXcode"
+				document.getElementById("tocContainer").className = "hideInXcode"
+				document.getElementById("top_header").className = "hideInXcode"
+			}
+			
+		</script>
+	</body>
+</html>

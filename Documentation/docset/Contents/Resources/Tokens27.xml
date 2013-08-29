@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/TSUtils.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/TSUtils</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSUtils.h</DeclaredIn>
+            
+			
+			<NodeRef refid="27"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/TSUtils/performViewAnimationBlock:withCompletion:animated:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSUtils.h</DeclaredIn>
+			
+			<Declaration>+ (void)performViewAnimationBlock:(void ( ^ ) ( void ))block withCompletion:(void ( ^ ) ( void ))completion animated:(BOOL)animated</Declaration>
+			
+			
+			<Anchor>//api/name/performViewAnimationBlock:withCompletion:animated:</Anchor>
+            <NodeRef refid="27"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/TSUtils/colorWithHexString:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSUtils.h</DeclaredIn>
+			
+			<Declaration>+ (UIColor *)colorWithHexString:(NSString *)stringToConvert</Declaration>
+			
+			
+			<Anchor>//api/name/colorWithHexString:</Anchor>
+            <NodeRef refid="27"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/TSUtils/imageWithColor:andSize:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSUtils.h</DeclaredIn>
+			
+			<Declaration>+ (UIImage *)imageWithColor:(UIColor *)color andSize:(CGSize)size</Declaration>
+			
+			
+			<Anchor>//api/name/imageWithColor:andSize:</Anchor>
+            <NodeRef refid="27"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/TSUtils/imageWithInnerShadow:blurSize:andSize:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSUtils.h</DeclaredIn>
+			
+			<Declaration>+ (UIImage *)imageWithInnerShadow:(CGColorRef)shadowColor blurSize:(CGFloat)blurSize andSize:(CGSize)size</Declaration>
+			
+			
+			<Anchor>//api/name/imageWithInnerShadow:blurSize:andSize:</Anchor>
+            <NodeRef refid="27"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/TSUtils/drawLinearGradientInContext:rect:startColor:endColor:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSUtils.h</DeclaredIn>
+			
+			<Declaration>+ (void)drawLinearGradientInContext:(CGContextRef)context rect:(CGRect)rect startColor:(CGColorRef)startColor endColor:(CGColorRef)endColor</Declaration>
+			
+			
+			<Anchor>//api/name/drawLinearGradientInContext:rect:startColor:endColor:</Anchor>
+            <NodeRef refid="27"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/TSUtils/drawLineInContext:startPoint:endPoint:color:lineWidth:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSUtils.h</DeclaredIn>
+			
+			<Declaration>+ (void)drawLineInContext:(CGContextRef)context startPoint:(CGPoint)startPoint endPoint:(CGPoint)endPoint color:(CGColorRef)color lineWidth:(CGFloat)lineWidth</Declaration>
+			
+			
+			<Anchor>//api/name/drawLineInContext:startPoint:endPoint:color:lineWidth:</Anchor>
+            <NodeRef refid="27"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/TSUtils/drawPolygonInContext:points:fillColor:strokeColor:strokeSize:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSUtils.h</DeclaredIn>
+			
+			<Declaration>+ (void)drawPolygonInContext:(CGContextRef)context points:(NSArray *)points fillColor:(CGColorRef)fillColor strokeColor:(CGColorRef)strokeColor strokeSize:(CGFloat)strokeSize</Declaration>
+			
+			
+			<Anchor>//api/name/drawPolygonInContext:points:fillColor:strokeColor:strokeSize:</Anchor>
+            <NodeRef refid="27"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/TSUtils/drawInnerShadowRectInContext:rect:shadowColor:blurSize:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSUtils.h</DeclaredIn>
+			
+			<Declaration>+ (void)drawInnerShadowRectInContext:(CGContextRef)context rect:(CGRect)rect shadowColor:(CGColorRef)shadowColor blurSize:(CGFloat)blurSize</Declaration>
+			
+			
+			<Anchor>//api/name/drawInnerShadowRectInContext:rect:shadowColor:blurSize:</Anchor>
+            <NodeRef refid="27"/>
+		</Token>
+		
+        
+	</File>
+</Tokens>

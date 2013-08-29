@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Protocols/TSTabViewDelegate.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intf/TSTabViewDelegate</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSTabViewDelegate.h</DeclaredIn>
+            
+			
+			<NodeRef refid="31"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/TSTabViewDelegate/tabView:menuItemAtIndex:fromLeftSide:didChangeState:</TokenIdentifier>
+			<Abstract type="html">Selection state changed callbacks</Abstract>
+			<DeclaredIn>TSTabViewDelegate.h</DeclaredIn>
+			
+			<Declaration>- (void)tabView:(TSTabView *)tabView menuItemAtIndex:(NSInteger)index fromLeftSide:(BOOL)leftSide didChangeState:(BOOL)selected</Declaration>
+			
+			
+			<Anchor>//api/name/tabView:menuItemAtIndex:fromLeftSide:didChangeState:</Anchor>
+            <NodeRef refid="31"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/TSTabViewDelegate/tabView:willSelectTabAtIndex:animated:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSTabViewDelegate.h</DeclaredIn>
+			
+			<Declaration>- (void)tabView:(TSTabView *)tabView willSelectTabAtIndex:(NSInteger)index animated:(BOOL)animated</Declaration>
+			
+			
+			<Anchor>//api/name/tabView:willSelectTabAtIndex:animated:</Anchor>
+            <NodeRef refid="31"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/TSTabViewDelegate/tabView:didSelectTabAtIndex:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSTabViewDelegate.h</DeclaredIn>
+			
+			<Declaration>- (void)tabView:(TSTabView *)tabView didSelectTabAtIndex:(NSInteger)index</Declaration>
+			
+			
+			<Anchor>//api/name/tabView:didSelectTabAtIndex:</Anchor>
+            <NodeRef refid="31"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/TSTabViewDelegate/tabView:didScrollTo:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSTabViewDelegate.h</DeclaredIn>
+			
+			<Declaration>- (void)tabView:(TSTabView *)tabView didScrollTo:(CGFloat)normScrollOffset</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>normScrollOffset</Name>
+					<Abstract type="html">- in range [-1..1]</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/tabView:didScrollTo:</Anchor>
+            <NodeRef refid="31"/>
+		</Token>
+		
+        
+	</File>
+</Tokens>

@@ -30,17 +30,17 @@
 
 
 /**
- *  @abstract   Classes provided below implement prototype for TSNavigationStripDataSource.
- *              It is optional part of TSNavigationStripView infrastructure, inluded as an example of possible data source implementation.
- *              
- *              This prototype provides enough flexibility for building custom TSNavigationStripView controls. 
- *              If you need something completly different you can always implement your own data source entity.
+    @abstract   Classes provided below implement prototype for TSNavigationStripDataSource.
+                It is optional part of TSNavigationStripView infrastructure, inluded as an example of possible data source implementation.
+                
+                This prototype provides enough flexibility for building custom TSNavigationStripView controls. 
+                If you need something completly different you can always implement your own data source entity.
  */
 
 /**************************************************************************************************************************************/
 
 /**
- *  @abstract   TSNavigationStripComponent is base class, which provides appearance information for TSNavigationStripView's section or item.
+    @abstract   TSNavigationStripComponent is base class, which provides appearance information for TSNavigationStripView's section or item.
  */
 
 @interface TSNavigationStripComponent : NSObject
@@ -88,7 +88,7 @@
 /**************************************************************************************************************************************/
 
 /**
- *  @abstract   TSNavigationStripModel is a prototype for TSNavigationStripDataSource
+    @abstract   TSNavigationStripModel is a prototype for TSNavigationStripDataSource
  */
 
 @interface TSNavigationStripModel : NSObject <TSNavigationStripDataSource>
@@ -105,21 +105,21 @@
 @property (nonatomic, strong, readonly) TSNavigationStripView *navigationStrip;
 
 /**
- *  @abstract   if YES edge insets are used for section's content. Need for some UI layouts where graphics from one section should overlap sibling sections 
- *  @def        NO
+    @abstract   if YES edge insets are used for section's content. Need for some UI layouts where graphics from one section should overlap sibling sections 
+    @def        NO
  */
 @property (nonatomic, assign) BOOL useEdgeInsetsForSections;
 
 /**
- *  @abstract   if not set then UIButton class is used
- *  @def        nil
+    @abstract   if not set then UIButton class is used
+    @def        nil
  */
 @property (nonatomic, strong) NSString *customClassForSection;
 
 - (id)initWithNavigationStrip:(TSNavigationStripView *)navigationStrip;
 
 /**
- *  @abstract Modify content
+    @abstract Modify content
  */
 - (void)setSections:(NSArray *)sections;
 - (void)setItems:(NSArray *)sections fromLeft:(BOOL)fromLeft;

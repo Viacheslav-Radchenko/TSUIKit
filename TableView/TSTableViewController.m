@@ -77,10 +77,16 @@
     _tables = @[_tableView1, _tableView2];
     
     // Row examples should correspond to columnsInfo* and rowsInfo* used above
+//    _rowExamples = @[
+//                     [self rowExample1],
+//                     [self rowExample2],
+//                     ];
+    
     _rowExamples = @[
-                     [self rowExample1],
-                     [self rowExample2],
+                     [self rowForDummyFile],
+                     [self rowForDummyFile],
                      ];
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -295,6 +301,20 @@
         [rows addObject:row];
     }
     return [NSArray arrayWithArray:rows];
+}
+
+- (TSRow *)rowForDummyFile
+{
+    TSRow *row = [TSRow rowWithDictionary:@{
+                  @"cells" : @[
+                  @{@"value" : @"New File"},
+                  @{@"value" : @"-"},
+                  @{@"value" : @"-"},
+                  @{@"value" : @"-"}
+                  ],
+                }];
+    return row;
+
 }
 
 

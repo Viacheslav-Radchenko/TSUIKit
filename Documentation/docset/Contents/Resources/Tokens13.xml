@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/TSTabViewSection.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/TSTabViewSection</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSTabViewModel.h</DeclaredIn>
+            
+			
+			<NodeRef refid="13"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTabViewSection/setTabContent:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSTabViewModel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) UIView *tabContent</Declaration>
+			
+			
+			<Anchor>//api/name/tabContent</Anchor>
+            <NodeRef refid="13"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTabViewSection/tabContent</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSTabViewModel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) UIView *tabContent</Declaration>
+			
+			
+			<Anchor>//api/name/tabContent</Anchor>
+            <NodeRef refid="13"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/TSTabViewSection/tabContent</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSTabViewModel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) UIView *tabContent</Declaration>
+			
+			
+			<Anchor>//api/name/tabContent</Anchor>
+            <NodeRef refid="13"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTabViewSection/setTabController:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSTabViewModel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) UIViewController *tabController</Declaration>
+			
+			
+			<Anchor>//api/name/tabController</Anchor>
+            <NodeRef refid="13"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTabViewSection/tabController</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSTabViewModel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) UIViewController *tabController</Declaration>
+			
+			
+			<Anchor>//api/name/tabController</Anchor>
+            <NodeRef refid="13"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/TSTabViewSection/tabController</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSTabViewModel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) UIViewController *tabController</Declaration>
+			
+			
+			<Anchor>//api/name/tabController</Anchor>
+            <NodeRef refid="13"/>
+		</Token>
+		
+        
+	</File>
+</Tokens>

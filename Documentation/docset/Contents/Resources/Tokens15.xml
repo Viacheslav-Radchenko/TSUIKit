@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/TSTabViewWithDropDownPanelModel.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/TSTabViewWithDropDownPanelModel</TokenIdentifier>
+			<Abstract type="html">TSTabViewWithDropDownPanelModel extends TSTabViewModel. 
+               Actually it uses same date model as TSTabViewModel and implements same TSTabViewDataSource protocol.
+               Separate entity was added only for convenience and possible future extensions.
+*
+               Again, all models are just ready to use examples of possible data source implementation. 
+               You free to create your own implementation of TSTabViewDataSource protocol.</Abstract>
+			<DeclaredIn>TSTabViewWithDropDownPanelModel.h</DeclaredIn>
+            
+			
+			<NodeRef refid="15"/>
+		</Token>
+		
+		
+        
+	</File>
+</Tokens>

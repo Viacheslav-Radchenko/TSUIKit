@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Protocols/TSTableViewDataSource.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intf/TSTableViewDataSource</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSTableViewDataSource.h</DeclaredIn>
+            
+			
+			<NodeRef refid="35"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/TSTableViewDataSource/numberOfColumns</TokenIdentifier>
+			<Abstract type="html">Total number of columns (including subcolumns) in table</Abstract>
+			<DeclaredIn>TSTableViewDataSource.h</DeclaredIn>
+			
+			<Declaration>- (NSInteger)numberOfColumns</Declaration>
+			
+			
+			<Anchor>//api/name/numberOfColumns</Anchor>
+            <NodeRef refid="35"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/TSTableViewDataSource/numberOfRows</TokenIdentifier>
+			<Abstract type="html">Total number of rows (including subrows) in table</Abstract>
+			<DeclaredIn>TSTableViewDataSource.h</DeclaredIn>
+			
+			<Declaration>- (NSInteger)numberOfRows</Declaration>
+			
+			
+			<Anchor>//api/name/numberOfRows</Anchor>
+            <NodeRef refid="35"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/TSTableViewDataSource/numberOfColumnsAtPath:</TokenIdentifier>
+			<Abstract type="html">Number of subcolumns at specified path</Abstract>
+			<DeclaredIn>TSTableViewDataSource.h</DeclaredIn>
+			
+			<Declaration>- (NSInteger)numberOfColumnsAtPath:(NSIndexPath *)indexPath</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>indexPath</Name>
+					<Abstract type="html">- if nil, return number top level columns</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/numberOfColumnsAtPath:</Anchor>
+            <NodeRef refid="35"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/TSTableViewDataSource/numberOfRowsAtPath:</TokenIdentifier>
+			<Abstract type="html">Number of subrows at specified path</Abstract>
+			<DeclaredIn>TSTableViewDataSource.h</DeclaredIn>
+			
+			<Declaration>- (NSInteger)numberOfRowsAtPath:(NSIndexPath *)indexPath</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>indexPath</Name>
+					<Abstract type="html">- if nil, return number top level rows</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/numberOfRowsAtPath:</Anchor>
+            <NodeRef refid="35"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/TSTableViewDataSource/heightForRowAtPath:</TokenIdentifier>
+			<Abstract type="html">Return height for row at specified path</Abstract>
+			<DeclaredIn>TSTableViewDataSource.h</DeclaredIn>
+			
+			<Declaration>- (CGFloat)heightForRowAtPath:(NSIndexPath *)indexPath</Declaration>
+			
+			
+			<Anchor>//api/name/heightForRowAtPath:</Anchor>
+            <NodeRef refid="35"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/TSTableViewDataSource/tableView:cellViewForRowAtPath:cellIndex:</TokenIdentifier>
+			<Abstract type="html">Return height for header section at specified path</Abstract>
+			<DeclaredIn>TSTableViewDataSource.h</DeclaredIn>
+			
+			<Declaration>- (TSTableViewCell *)tableView:(TSTableView *)tableView cellViewForRowAtPath:(NSIndexPath *)indexPath cellIndex:(NSInteger)index</Declaration>
+			
+			
+			<Anchor>//api/name/tableView:cellViewForRowAtPath:cellIndex:</Anchor>
+            <NodeRef refid="35"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/TSTableViewDataSource/tableView:headerSectionViewForColumnAtPath:</TokenIdentifier>
+			<Abstract type="html">Return height for header section at specified path</Abstract>
+			<DeclaredIn>TSTableViewDataSource.h</DeclaredIn>
+			
+			<Declaration>- (TSTableViewHeaderSectionView *)tableView:(TSTableView *)tableView headerSectionViewForColumnAtPath:(NSIndexPath *)indexPath</Declaration>
+			
+			
+			<Anchor>//api/name/tableView:headerSectionViewForColumnAtPath:</Anchor>
+            <NodeRef refid="35"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/TSTableViewDataSource/heightForHeaderSectionAtPath:</TokenIdentifier>
+			<Abstract type="html">Return height for header section at specified path</Abstract>
+			<DeclaredIn>TSTableViewDataSource.h</DeclaredIn>
+			
+			<Declaration>- (CGFloat)heightForHeaderSectionAtPath:(NSIndexPath *)columnPath</Declaration>
+			
+			
+			<Anchor>//api/name/heightForHeaderSectionAtPath:</Anchor>
+            <NodeRef refid="35"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/TSTableViewDataSource/widthForExpandItem</TokenIdentifier>
+			<Abstract type="html">Return width for expand item  in left side control of panel
+              Total width of control panel would be calculated based on next expression: maxNesingLevel * widthForExpandItem                                           
+              where maxNesingLevel is maximal depth of subrows hierarchy</Abstract>
+			<DeclaredIn>TSTableViewDataSource.h</DeclaredIn>
+			
+			<Declaration>- (CGFloat)widthForExpandItem</Declaration>
+			
+			
+			<Anchor>//api/name/widthForExpandItem</Anchor>
+            <NodeRef refid="35"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/TSTableViewDataSource/defaultWidthForColumnAtIndex:</TokenIdentifier>
+			<Abstract type="html">Return default/prefered width for column at specified index</Abstract>
+			<DeclaredIn>TSTableViewDataSource.h</DeclaredIn>
+			
+			<Declaration>- (CGFloat)defaultWidthForColumnAtIndex:(NSInteger)index</Declaration>
+			
+			
+			<Anchor>//api/name/defaultWidthForColumnAtIndex:</Anchor>
+            <NodeRef refid="35"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/TSTableViewDataSource/minimalWidthForColumnAtIndex:</TokenIdentifier>
+			<Abstract type="html">Return minimal width for column at specified index</Abstract>
+			<DeclaredIn>TSTableViewDataSource.h</DeclaredIn>
+			
+			<Declaration>- (CGFloat)minimalWidthForColumnAtIndex:(NSInteger)index</Declaration>
+			
+			
+			<Anchor>//api/name/minimalWidthForColumnAtIndex:</Anchor>
+            <NodeRef refid="35"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/TSTableViewDataSource/maximalWidthForColumnAtIndex:</TokenIdentifier>
+			<Abstract type="html">Return maximal width for column at specified index</Abstract>
+			<DeclaredIn>TSTableViewDataSource.h</DeclaredIn>
+			
+			<Declaration>- (CGFloat)maximalWidthForColumnAtIndex:(NSInteger)index</Declaration>
+			
+			
+			<Anchor>//api/name/maximalWidthForColumnAtIndex:</Anchor>
+            <NodeRef refid="35"/>
+		</Token>
+		
+        
+	</File>
+</Tokens>

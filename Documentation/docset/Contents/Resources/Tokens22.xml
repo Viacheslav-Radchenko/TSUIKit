@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/TSTableViewHeaderSection.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/TSTableViewHeaderSection</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSTableViewHeaderSection.h</DeclaredIn>
+            
+			
+			<NodeRef refid="22"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTableViewHeaderSection/setSectionView:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSTableViewHeaderSection.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) TSTableViewHeaderSectionView *sectionView</Declaration>
+			
+			
+			<Anchor>//api/name/sectionView</Anchor>
+            <NodeRef refid="22"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTableViewHeaderSection/sectionView</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSTableViewHeaderSection.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) TSTableViewHeaderSectionView *sectionView</Declaration>
+			
+			
+			<Anchor>//api/name/sectionView</Anchor>
+            <NodeRef refid="22"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/TSTableViewHeaderSection/sectionView</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSTableViewHeaderSection.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) TSTableViewHeaderSectionView *sectionView</Declaration>
+			
+			
+			<Anchor>//api/name/sectionView</Anchor>
+            <NodeRef refid="22"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTableViewHeaderSection/setSubsections:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSTableViewHeaderSection.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSArray *subsections</Declaration>
+			
+			
+			<Anchor>//api/name/subsections</Anchor>
+            <NodeRef refid="22"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTableViewHeaderSection/subsections</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSTableViewHeaderSection.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSArray *subsections</Declaration>
+			
+			
+			<Anchor>//api/name/subsections</Anchor>
+            <NodeRef refid="22"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/TSTableViewHeaderSection/subsections</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSTableViewHeaderSection.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSArray *subsections</Declaration>
+			
+			
+			<Anchor>//api/name/subsections</Anchor>
+            <NodeRef refid="22"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTableViewHeaderSection/setSubcolumnsRange:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSTableViewHeaderSection.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) NSRange subcolumnsRange</Declaration>
+			
+			
+			<Anchor>//api/name/subcolumnsRange</Anchor>
+            <NodeRef refid="22"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTableViewHeaderSection/subcolumnsRange</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSTableViewHeaderSection.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) NSRange subcolumnsRange</Declaration>
+			
+			
+			<Anchor>//api/name/subcolumnsRange</Anchor>
+            <NodeRef refid="22"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/TSTableViewHeaderSection/subcolumnsRange</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSTableViewHeaderSection.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) NSRange subcolumnsRange</Declaration>
+			
+			
+			<Anchor>//api/name/subcolumnsRange</Anchor>
+            <NodeRef refid="22"/>
+		</Token>
+		
+        
+	</File>
+</Tokens>

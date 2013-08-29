@@ -6,6 +6,20 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		F63D2F1517CE48F900515A24 /* Documentation */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = F63D2F1817CE48F900515A24 /* Build configuration list for PBXAggregateTarget "Documentation" */;
+			buildPhases = (
+				F63D2F1917CE490000515A24 /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = Documentation;
+			productName = Documentation;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		F6141E2D17C58462003455EB /* TSTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F6A4C47917BD1F6000AA8195 /* TSTableViewController.m */; };
 		F6141E2E17C58480003455EB /* TSTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F6A4C47B17BD1F6000AA8195 /* TSTableViewController.xib */; };
@@ -1243,6 +1257,7 @@
 				F680D2851774B9C2005ACD94 /* TabViewTest */,
 				F6EE2A2E17835D9A00C0C4A3 /* TabViewWithDropDownPanel */,
 				F6A4C46117BD1F5F00AA8195 /* TableView */,
+				F63D2F1517CE48F900515A24 /* Documentation */,
 			);
 		};
 /* End PBXProject section */
@@ -1600,6 +1615,22 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		F63D2F1917CE490000515A24 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "appledoc \\\n--project-name \"${PROJECT_NAME}\" \\\n--project-company \"Viacheslav Radchenko\" \\\n--company-id \"com.viacheslav.radchenko\" \\\n--output \"Documentation\" \\\n--install-docset \\\n--logformat xcode \\\n--keep-undocumented-objects \\\n--keep-undocumented-members \\\n--keep-intermediate-files \\\n--no-repeat-first-par \\\n--no-warn-invalid-crossref \\\n--merge-categories \\\n--exit-threshold 2 \\\n--docset-platform-family iphoneos \\\n--ignore \"*.m\" \\\n--index-desc \"${PROJECT_DIR}/readme.md\" \\\n\"${PROJECT_DIR}/Classes\"";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		F680D2821774B9C2005ACD94 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -1877,6 +1908,20 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		F63D2F1617CE48F900515A24 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		F63D2F1717CE48F900515A24 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		F680D29D1774B9C3005ACD94 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -2068,6 +2113,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		F63D2F1817CE48F900515A24 /* Build configuration list for PBXAggregateTarget "Documentation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F63D2F1617CE48F900515A24 /* Debug */,
+				F63D2F1717CE48F900515A24 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		F680D29C1774B9C3005ACD94 /* Build configuration list for PBXNativeTarget "TabViewTest" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

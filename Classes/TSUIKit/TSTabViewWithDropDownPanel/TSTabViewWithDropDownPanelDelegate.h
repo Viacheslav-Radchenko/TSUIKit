@@ -28,14 +28,14 @@
 @class TSTabViewWithDropDownPanel;
 
 /**
- *  @abstract TSTabViewWithDropDownPanelDelegate extends TSTabViewDelegate protocol.
+    @abstract TSTabViewWithDropDownPanelDelegate extends TSTabViewDelegate protocol.
  */
 @protocol TSTabViewWithDropDownPanelDelegate <TSTabViewDelegate>
 
 @optional
 
 /**
- *  @abstract Drop down panel visibility state change callbacks
+    @abstract Drop down panel visibility state change callbacks
  */
 - (void)tabViewWithDropDownPanel:(TSTabViewWithDropDownPanel *)tabView willShowPanel:(UIView *)panel animated:(BOOL)animated;
 - (void)tabViewWithDropDownPanel:(TSTabViewWithDropDownPanel *)tabView didShowPanel:(UIView *)panel;

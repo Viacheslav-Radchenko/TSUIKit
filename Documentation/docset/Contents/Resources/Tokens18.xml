@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/TSTableViewContentHolder.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/TSTableViewContentHolder</TokenIdentifier>
+			<Abstract type="html">TSTableViewContentHolder is subcomponent of TSTableView. It displays rows hierarchy.</Abstract>
+			<DeclaredIn>TSTableViewContentHolder.h</DeclaredIn>
+            
+			
+			<NodeRef refid="18"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTableViewContentHolder/setContentHolderDelegate:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSTableViewContentHolder.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, weak) id&lt;TSTableViewContentHolderDelegate&gt; contentHolderDelegate</Declaration>
+			
+			
+			<Anchor>//api/name/contentHolderDelegate</Anchor>
+            <NodeRef refid="18"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTableViewContentHolder/contentHolderDelegate</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSTableViewContentHolder.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, weak) id&lt;TSTableViewContentHolderDelegate&gt; contentHolderDelegate</Declaration>
+			
+			
+			<Anchor>//api/name/contentHolderDelegate</Anchor>
+            <NodeRef refid="18"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/TSTableViewContentHolder/contentHolderDelegate</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSTableViewContentHolder.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, weak) id&lt;TSTableViewContentHolderDelegate&gt; contentHolderDelegate</Declaration>
+			
+			
+			<Anchor>//api/name/contentHolderDelegate</Anchor>
+            <NodeRef refid="18"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTableViewContentHolder/setDataSource:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSTableViewContentHolder.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, weak) id&lt;TSTableViewDataSource,TSTableViewAppearanceCoordinator&gt; dataSource</Declaration>
+			
+			
+			<Anchor>//api/name/dataSource</Anchor>
+            <NodeRef refid="18"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTableViewContentHolder/dataSource</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSTableViewContentHolder.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, weak) id&lt;TSTableViewDataSource,TSTableViewAppearanceCoordinator&gt; dataSource</Declaration>
+			
+			
+			<Anchor>//api/name/dataSource</Anchor>
+            <NodeRef refid="18"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/TSTableViewContentHolder/dataSource</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSTableViewContentHolder.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, weak) id&lt;TSTableViewDataSource,TSTableViewAppearanceCoordinator&gt; dataSource</Declaration>
+			
+			
+			<Anchor>//api/name/dataSource</Anchor>
+            <NodeRef refid="18"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTableViewContentHolder/setColumnSelectionColor:</TokenIdentifier>
+			<Abstract type="html">Color of column selection outline</Abstract>
+			<DeclaredIn>TSTableViewContentHolder.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) UIColor *columnSelectionColor</Declaration>
+			
+			
+			<Anchor>//api/name/columnSelectionColor</Anchor>
+            <NodeRef refid="18"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTableViewContentHolder/columnSelectionColor</TokenIdentifier>
+			<Abstract type="html">Color of column selection outline</Abstract>
+			<DeclaredIn>TSTableViewContentHolder.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) UIColor *columnSelectionColor</Declaration>
+			
+			
+			<Anchor>//api/name/columnSelectionColor</Anchor>
+            <NodeRef refid="18"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/TSTableViewContentHolder/columnSelectionColor</TokenIdentifier>
+			<Abstract type="html">Color of column selection outline</Abstract>
+			<DeclaredIn>TSTableViewContentHolder.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) UIColor *columnSelectionColor</Declaration>
+			
+			
+			<Anchor>//api/name/columnSelectionColor</Anchor>
+            <NodeRef refid="18"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTableViewContentHolder/setRowSelectionColor:</TokenIdentifier>
+			<Abstract type="html">Color of row selection outline</Abstract>
+			<DeclaredIn>TSTableViewContentHolder.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) UIColor *rowSelectionColor</Declaration>
+			
+			
+			<Anchor>//api/name/rowSelectionColor</Anchor>
+            <NodeRef refid="18"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTableViewContentHolder/rowSelectionColor</TokenIdentifier>
+			<Abstract type="html">Color of row selection outline</Abstract>
+			<DeclaredIn>TSTableViewContentHolder.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) UIColor *rowSelectionColor</Declaration>
+			
+			
+			<Anchor>//api/name/rowSelectionColor</Anchor>
+            <NodeRef refid="18"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/TSTableViewContentHolder/rowSelectionColor</TokenIdentifier>
+			<Abstract type="html">Color of row selection outline</Abstract>
+			<DeclaredIn>TSTableViewContentHolder.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) UIColor *rowSelectionColor</Declaration>
+			
+			
+			<Anchor>//api/name/rowSelectionColor</Anchor>
+            <NodeRef refid="18"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTableViewContentHolder/setAllowRowSelection:</TokenIdentifier>
+			<Abstract type="html">Allow row selection on tap
+    @def YES</Abstract>
+			<DeclaredIn>TSTableViewContentHolder.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL allowRowSelection</Declaration>
+			
+			
+			<Anchor>//api/name/allowRowSelection</Anchor>
+            <NodeRef refid="18"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTableViewContentHolder/allowRowSelection</TokenIdentifier>
+			<Abstract type="html">Allow row selection on tap
+    @def YES</Abstract>
+			<DeclaredIn>TSTableViewContentHolder.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL allowRowSelection</Declaration>
+			
+			
+			<Anchor>//api/name/allowRowSelection</Anchor>
+            <NodeRef refid="18"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/TSTableViewContentHolder/allowRowSelection</TokenIdentifier>
+			<Abstract type="html">Allow row selection on tap
+    @def YES</Abstract>
+			<DeclaredIn>TSTableViewContentHolder.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL allowRowSelection</Declaration>
+			
+			
+			<Anchor>//api/name/allowRowSelection</Anchor>
+            <NodeRef refid="18"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTableViewContentHolder/reloadData</TokenIdentifier>
+			<Abstract type="html">Reload column data</Abstract>
+			<DeclaredIn>TSTableViewContentHolder.h</DeclaredIn>
+			
+			<Declaration>- (void)reloadData</Declaration>
+			
+			
+			<Anchor>//api/name/reloadData</Anchor>
+            <NodeRef refid="18"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTableViewContentHolder/changeColumnWidthOnAmount:forColumn:animated:</TokenIdentifier>
+			<Abstract type="html">Change width of specified column</Abstract>
+			<DeclaredIn>TSTableViewContentHolder.h</DeclaredIn>
+			
+			<Declaration>- (void)changeColumnWidthOnAmount:(CGFloat)delta forColumn:(NSInteger)columnIndex animated:(BOOL)animated</Declaration>
+			
+			
+			<Anchor>//api/name/changeColumnWidthOnAmount:forColumn:animated:</Anchor>
+            <NodeRef refid="18"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTableViewContentHolder/changeExpandStateForRow:toValue:animated:</TokenIdentifier>
+			<Abstract type="html">Change expand state of the row</Abstract>
+			<DeclaredIn>TSTableViewContentHolder.h</DeclaredIn>
+			
+			<Declaration>- (void)changeExpandStateForRow:(NSIndexPath *)rowPath toValue:(BOOL)expanded animated:(BOOL)animated</Declaration>
+			
+			
+			<Anchor>//api/name/changeExpandStateForRow:toValue:animated:</Anchor>
+            <NodeRef refid="18"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTableViewContentHolder/expandAllRowsWithAnimation:</TokenIdentifier>
+			<Abstract type="html">Expand all rows</Abstract>
+			<DeclaredIn>TSTableViewContentHolder.h</DeclaredIn>
+			
+			<Declaration>- (void)expandAllRowsWithAnimation:(BOOL)animated</Declaration>
+			
+			
+			<Anchor>//api/name/expandAllRowsWithAnimation:</Anchor>
+            <NodeRef refid="18"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTableViewContentHolder/collapseAllRowsWithAnimation:</TokenIdentifier>
+			<Abstract type="html">Collapse all rows</Abstract>
+			<DeclaredIn>TSTableViewContentHolder.h</DeclaredIn>
+			
+			<Declaration>- (void)collapseAllRowsWithAnimation:(BOOL)animated</Declaration>
+			
+			
+			<Anchor>//api/name/collapseAllRowsWithAnimation:</Anchor>
+            <NodeRef refid="18"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTableViewContentHolder/selectRowAtPath:animated:</TokenIdentifier>
+			<Abstract type="html">Select row at path</Abstract>
+			<DeclaredIn>TSTableViewContentHolder.h</DeclaredIn>
+			
+			<Declaration>- (void)selectRowAtPath:(NSIndexPath *)rowPath animated:(BOOL)animated</Declaration>
+			
+			
+			<Anchor>//api/name/selectRowAtPath:animated:</Anchor>
+            <NodeRef refid="18"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTableViewContentHolder/selectColumnAtPath:animated:</TokenIdentifier>
+			<Abstract type="html">Select column at path</Abstract>
+			<DeclaredIn>TSTableViewContentHolder.h</DeclaredIn>
+			
+			<Declaration>- (void)selectColumnAtPath:(NSIndexPath *)columnPath animated:(BOOL)animated</Declaration>
+			
+			
+			<Anchor>//api/name/selectColumnAtPath:animated:</Anchor>
+            <NodeRef refid="18"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTableViewContentHolder/resetRowSelectionWithAnimtaion:</TokenIdentifier>
+			<Abstract type="html">Hide current row selection</Abstract>
+			<DeclaredIn>TSTableViewContentHolder.h</DeclaredIn>
+			
+			<Declaration>- (void)resetRowSelectionWithAnimtaion:(BOOL)animated</Declaration>
+			
+			
+			<Anchor>//api/name/resetRowSelectionWithAnimtaion:</Anchor>
+            <NodeRef refid="18"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTableViewContentHolder/resetColumnSelectionWithAnimtaion:</TokenIdentifier>
+			<Abstract type="html">Hide current row selection</Abstract>
+			<DeclaredIn>TSTableViewContentHolder.h</DeclaredIn>
+			
+			<Declaration>- (void)resetColumnSelectionWithAnimtaion:(BOOL)animated</Declaration>
+			
+			
+			<Anchor>//api/name/resetColumnSelectionWithAnimtaion:</Anchor>
+            <NodeRef refid="18"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTableViewContentHolder/pathToSelectedRow</TokenIdentifier>
+			<Abstract type="html">Return path to selected row. If no row currently selected return nil.</Abstract>
+			<DeclaredIn>TSTableViewContentHolder.h</DeclaredIn>
+			
+			<Declaration>- (NSIndexPath *)pathToSelectedRow</Declaration>
+			
+			
+			<Anchor>//api/name/pathToSelectedRow</Anchor>
+            <NodeRef refid="18"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTableViewContentHolder/pathToSelectedColumn</TokenIdentifier>
+			<Abstract type="html">Return path to selected column. If no column currently selected return nil.</Abstract>
+			<DeclaredIn>TSTableViewContentHolder.h</DeclaredIn>
+			
+			<Declaration>- (NSIndexPath *)pathToSelectedColumn</Declaration>
+			
+			
+			<Anchor>//api/name/pathToSelectedColumn</Anchor>
+            <NodeRef refid="18"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTableViewContentHolder/dequeueReusableCellViewWithIdentifier:</TokenIdentifier>
+			<Abstract type="html">Reuse cached instance of cell view with specified Id.</Abstract>
+			<DeclaredIn>TSTableViewContentHolder.h</DeclaredIn>
+			
+			<Declaration>- (TSTableViewCell *)dequeueReusableCellViewWithIdentifier:(NSString *)identifier</Declaration>
+			
+			
+			<Anchor>//api/name/dequeueReusableCellViewWithIdentifier:</Anchor>
+            <NodeRef refid="18"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTableViewContentHolder/clearCachedData</TokenIdentifier>
+			<Abstract type="html">Clear cached data (reusable rows, cells that aren&apos;t used at this moment).</Abstract>
+			<DeclaredIn>TSTableViewContentHolder.h</DeclaredIn>
+			
+			<Declaration>- (void)clearCachedData</Declaration>
+			
+			
+			<Anchor>//api/name/clearCachedData</Anchor>
+            <NodeRef refid="18"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTableViewContentHolder/insertRowAtPath:animated:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSTableViewContentHolder.h</DeclaredIn>
+			
+			<Declaration>- (void)insertRowAtPath:(NSIndexPath *)path animated:(BOOL)animated</Declaration>
+			
+			
+			<Anchor>//api/name/insertRowAtPath:animated:</Anchor>
+            <NodeRef refid="18"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTableViewContentHolder/removeRowAtPath:animated:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSTableViewContentHolder.h</DeclaredIn>
+			
+			<Declaration>- (void)removeRowAtPath:(NSIndexPath *)path animated:(BOOL)animated</Declaration>
+			
+			
+			<Anchor>//api/name/removeRowAtPath:animated:</Anchor>
+            <NodeRef refid="18"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTableViewContentHolder/updateRowAtPath:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSTableViewContentHolder.h</DeclaredIn>
+			
+			<Declaration>- (void)updateRowAtPath:(NSIndexPath *)path</Declaration>
+			
+			
+			<Anchor>//api/name/updateRowAtPath:</Anchor>
+            <NodeRef refid="18"/>
+		</Token>
+		
+        
+	</File>
+</Tokens>

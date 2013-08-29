@@ -1,0 +1,647 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/TSColumn.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/TSColumn</TokenIdentifier>
+			<Abstract type="html">TSColumn provides infromation about content and appearance of TSTableViewHederSectionView component. Initialization dictionary can contain values for properties specified in  TSColumn interface. Example:</Abstract>
+			<DeclaredIn>TSTableViewModel.h</DeclaredIn>
+            
+			
+			<NodeRef refid="2"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSColumn/setSubcolumns:</TokenIdentifier>
+			<Abstract type="html">Array of subcolumns/subsections.</Abstract>
+			<DeclaredIn>TSTableViewModel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSArray *subcolumns</Declaration>
+			
+			
+			<Anchor>//api/name/subcolumns</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSColumn/subcolumns</TokenIdentifier>
+			<Abstract type="html">Array of subcolumns/subsections.</Abstract>
+			<DeclaredIn>TSTableViewModel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSArray *subcolumns</Declaration>
+			
+			
+			<Anchor>//api/name/subcolumns</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/TSColumn/subcolumns</TokenIdentifier>
+			<Abstract type="html">Array of subcolumns/subsections.</Abstract>
+			<DeclaredIn>TSTableViewModel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSArray *subcolumns</Declaration>
+			
+			
+			<Anchor>//api/name/subcolumns</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSColumn/setTitle:</TokenIdentifier>
+			<Abstract type="html">Column title.</Abstract>
+			<DeclaredIn>TSTableViewModel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSString *title</Declaration>
+			
+			
+			<Anchor>//api/name/title</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSColumn/title</TokenIdentifier>
+			<Abstract type="html">Column title.</Abstract>
+			<DeclaredIn>TSTableViewModel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSString *title</Declaration>
+			
+			
+			<Anchor>//api/name/title</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/TSColumn/title</TokenIdentifier>
+			<Abstract type="html">Column title.</Abstract>
+			<DeclaredIn>TSTableViewModel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSString *title</Declaration>
+			
+			
+			<Anchor>//api/name/title</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSColumn/setSubtitle:</TokenIdentifier>
+			<Abstract type="html">Column details.</Abstract>
+			<DeclaredIn>TSTableViewModel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSString *subtitle</Declaration>
+			
+			
+			<Anchor>//api/name/subtitle</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSColumn/subtitle</TokenIdentifier>
+			<Abstract type="html">Column details.</Abstract>
+			<DeclaredIn>TSTableViewModel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSString *subtitle</Declaration>
+			
+			
+			<Anchor>//api/name/subtitle</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/TSColumn/subtitle</TokenIdentifier>
+			<Abstract type="html">Column details.</Abstract>
+			<DeclaredIn>TSTableViewModel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSString *subtitle</Declaration>
+			
+			
+			<Anchor>//api/name/subtitle</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSColumn/setIcon:</TokenIdentifier>
+			<Abstract type="html">Column icon.</Abstract>
+			<DeclaredIn>TSTableViewModel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) UIImage *icon</Declaration>
+			
+			
+			<Anchor>//api/name/icon</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSColumn/icon</TokenIdentifier>
+			<Abstract type="html">Column icon.</Abstract>
+			<DeclaredIn>TSTableViewModel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) UIImage *icon</Declaration>
+			
+			
+			<Anchor>//api/name/icon</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/TSColumn/icon</TokenIdentifier>
+			<Abstract type="html">Column icon.</Abstract>
+			<DeclaredIn>TSTableViewModel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) UIImage *icon</Declaration>
+			
+			
+			<Anchor>//api/name/icon</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSColumn/setColor:</TokenIdentifier>
+			<Abstract type="html">Tint color for background.</Abstract>
+			<DeclaredIn>TSTableViewModel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) UIColor *color</Declaration>
+			
+			
+			<Anchor>//api/name/color</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSColumn/color</TokenIdentifier>
+			<Abstract type="html">Tint color for background.</Abstract>
+			<DeclaredIn>TSTableViewModel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) UIColor *color</Declaration>
+			
+			
+			<Anchor>//api/name/color</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/TSColumn/color</TokenIdentifier>
+			<Abstract type="html">Tint color for background.</Abstract>
+			<DeclaredIn>TSTableViewModel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) UIColor *color</Declaration>
+			
+			
+			<Anchor>//api/name/color</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSColumn/setTitleColor:</TokenIdentifier>
+			<Abstract type="html">Color for title.</Abstract>
+			<DeclaredIn>TSTableViewModel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) UIColor *titleColor</Declaration>
+			
+			
+			<Anchor>//api/name/titleColor</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSColumn/titleColor</TokenIdentifier>
+			<Abstract type="html">Color for title.</Abstract>
+			<DeclaredIn>TSTableViewModel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) UIColor *titleColor</Declaration>
+			
+			
+			<Anchor>//api/name/titleColor</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/TSColumn/titleColor</TokenIdentifier>
+			<Abstract type="html">Color for title.</Abstract>
+			<DeclaredIn>TSTableViewModel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) UIColor *titleColor</Declaration>
+			
+			
+			<Anchor>//api/name/titleColor</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSColumn/setSubtitleColor:</TokenIdentifier>
+			<Abstract type="html">Color for details.</Abstract>
+			<DeclaredIn>TSTableViewModel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) UIColor *subtitleColor</Declaration>
+			
+			
+			<Anchor>//api/name/subtitleColor</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSColumn/subtitleColor</TokenIdentifier>
+			<Abstract type="html">Color for details.</Abstract>
+			<DeclaredIn>TSTableViewModel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) UIColor *subtitleColor</Declaration>
+			
+			
+			<Anchor>//api/name/subtitleColor</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/TSColumn/subtitleColor</TokenIdentifier>
+			<Abstract type="html">Color for details.</Abstract>
+			<DeclaredIn>TSTableViewModel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) UIColor *subtitleColor</Declaration>
+			
+			
+			<Anchor>//api/name/subtitleColor</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSColumn/setTitleFontSize:</TokenIdentifier>
+			<Abstract type="html">Title font size.</Abstract>
+			<DeclaredIn>TSTableViewModel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) CGFloat titleFontSize</Declaration>
+			
+			
+			<Anchor>//api/name/titleFontSize</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSColumn/titleFontSize</TokenIdentifier>
+			<Abstract type="html">Title font size.</Abstract>
+			<DeclaredIn>TSTableViewModel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) CGFloat titleFontSize</Declaration>
+			
+			
+			<Anchor>//api/name/titleFontSize</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/TSColumn/titleFontSize</TokenIdentifier>
+			<Abstract type="html">Title font size.</Abstract>
+			<DeclaredIn>TSTableViewModel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) CGFloat titleFontSize</Declaration>
+			
+			
+			<Anchor>//api/name/titleFontSize</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSColumn/setSubtitleFontSize:</TokenIdentifier>
+			<Abstract type="html">Details font size.</Abstract>
+			<DeclaredIn>TSTableViewModel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) CGFloat subtitleFontSize</Declaration>
+			
+			
+			<Anchor>//api/name/subtitleFontSize</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSColumn/subtitleFontSize</TokenIdentifier>
+			<Abstract type="html">Details font size.</Abstract>
+			<DeclaredIn>TSTableViewModel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) CGFloat subtitleFontSize</Declaration>
+			
+			
+			<Anchor>//api/name/subtitleFontSize</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/TSColumn/subtitleFontSize</TokenIdentifier>
+			<Abstract type="html">Details font size.</Abstract>
+			<DeclaredIn>TSTableViewModel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) CGFloat subtitleFontSize</Declaration>
+			
+			
+			<Anchor>//api/name/subtitleFontSize</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSColumn/setDefWidth:</TokenIdentifier>
+			<Abstract type="html">Default (or initial) column width.</Abstract>
+			<DeclaredIn>TSTableViewModel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) CGFloat defWidth</Declaration>
+			
+			
+			<Anchor>//api/name/defWidth</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSColumn/defWidth</TokenIdentifier>
+			<Abstract type="html">Default (or initial) column width.</Abstract>
+			<DeclaredIn>TSTableViewModel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) CGFloat defWidth</Declaration>
+			
+			
+			<Anchor>//api/name/defWidth</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/TSColumn/defWidth</TokenIdentifier>
+			<Abstract type="html">Default (or initial) column width.</Abstract>
+			<DeclaredIn>TSTableViewModel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) CGFloat defWidth</Declaration>
+			
+			
+			<Anchor>//api/name/defWidth</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSColumn/setMinWidth:</TokenIdentifier>
+			<Abstract type="html">Minimal column width.</Abstract>
+			<DeclaredIn>TSTableViewModel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) CGFloat minWidth</Declaration>
+			
+			
+			<Anchor>//api/name/minWidth</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSColumn/minWidth</TokenIdentifier>
+			<Abstract type="html">Minimal column width.</Abstract>
+			<DeclaredIn>TSTableViewModel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) CGFloat minWidth</Declaration>
+			
+			
+			<Anchor>//api/name/minWidth</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/TSColumn/minWidth</TokenIdentifier>
+			<Abstract type="html">Minimal column width.</Abstract>
+			<DeclaredIn>TSTableViewModel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) CGFloat minWidth</Declaration>
+			
+			
+			<Anchor>//api/name/minWidth</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSColumn/setMaxWidth:</TokenIdentifier>
+			<Abstract type="html">Maximal column width.</Abstract>
+			<DeclaredIn>TSTableViewModel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) CGFloat maxWidth</Declaration>
+			
+			
+			<Anchor>//api/name/maxWidth</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSColumn/maxWidth</TokenIdentifier>
+			<Abstract type="html">Maximal column width.</Abstract>
+			<DeclaredIn>TSTableViewModel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) CGFloat maxWidth</Declaration>
+			
+			
+			<Anchor>//api/name/maxWidth</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/TSColumn/maxWidth</TokenIdentifier>
+			<Abstract type="html">Maximal column width.</Abstract>
+			<DeclaredIn>TSTableViewModel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) CGFloat maxWidth</Declaration>
+			
+			
+			<Anchor>//api/name/maxWidth</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSColumn/setHeaderHeight:</TokenIdentifier>
+			<Abstract type="html">Column header height.</Abstract>
+			<DeclaredIn>TSTableViewModel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) CGFloat headerHeight</Declaration>
+			
+			
+			<Anchor>//api/name/headerHeight</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSColumn/headerHeight</TokenIdentifier>
+			<Abstract type="html">Column header height.</Abstract>
+			<DeclaredIn>TSTableViewModel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) CGFloat headerHeight</Declaration>
+			
+			
+			<Anchor>//api/name/headerHeight</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/TSColumn/headerHeight</TokenIdentifier>
+			<Abstract type="html">Column header height.</Abstract>
+			<DeclaredIn>TSTableViewModel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) CGFloat headerHeight</Declaration>
+			
+			
+			<Anchor>//api/name/headerHeight</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSColumn/setTextAlignment:</TokenIdentifier>
+			<Abstract type="html">Text aligment used for title and details.</Abstract>
+			<DeclaredIn>TSTableViewModel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) NSTextAlignment textAlignment</Declaration>
+			
+			
+			<Anchor>//api/name/textAlignment</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSColumn/textAlignment</TokenIdentifier>
+			<Abstract type="html">Text aligment used for title and details.</Abstract>
+			<DeclaredIn>TSTableViewModel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) NSTextAlignment textAlignment</Declaration>
+			
+			
+			<Anchor>//api/name/textAlignment</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/TSColumn/textAlignment</TokenIdentifier>
+			<Abstract type="html">Text aligment used for title and details.</Abstract>
+			<DeclaredIn>TSTableViewModel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) NSTextAlignment textAlignment</Declaration>
+			
+			
+			<Anchor>//api/name/textAlignment</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/TSColumn/columnWithTitle:</TokenIdentifier>
+			<Abstract type="html">Create column with title.</Abstract>
+			<DeclaredIn>TSTableViewModel.h</DeclaredIn>
+			
+			<Declaration>+ (id)columnWithTitle:(NSString *)title</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>title</Name>
+					<Abstract type="html">Title displayed in column header.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/columnWithTitle:</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/TSColumn/columnWithTitle:andSubcolumns:</TokenIdentifier>
+			<Abstract type="html">Create column with title and subcolumns.</Abstract>
+			<DeclaredIn>TSTableViewModel.h</DeclaredIn>
+			
+			<Declaration>+ (id)columnWithTitle:(NSString *)title andSubcolumns:(NSArray *)sublolumns</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>title</Name>
+					<Abstract type="html">Title displayed in column header.</Abstract>
+				</Parameter><Parameter>
+					<Name>sublolumns</Name>
+					<Abstract type="html">Array of TSColumn objects or NSString titles for subcolumns.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/columnWithTitle:andSubcolumns:</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/TSColumn/columnWithDictionary:</TokenIdentifier>
+			<Abstract type="html">Create column with dictionary which define content and properties of TSColumn.</Abstract>
+			<DeclaredIn>TSTableViewModel.h</DeclaredIn>
+			
+			<Declaration>+ (id)columnWithDictionary:(NSDictionary *)info</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>info</Name>
+					<Abstract type="html">Dictionary containes values for named properties of TSColumn.
+
+     NSDictionary *columnInfo = @{
+         @&quot;title&quot; : @&quot;Column 1&quot;,
+         @&quot;subtitle&quot; : @&quot;This is first column&quot;,
+         @&quot;subcolumns&quot; : @[
+                     @{ @&quot;title&quot; : @&quot;Subcolumn 1.1&quot;},
+                     @{ @&quot;title&quot; : @&quot;Subcolumn 1.2&quot;}
+                 ]
+     };</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/columnWithDictionary:</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSColumn/initWithTitle:</TokenIdentifier>
+			<Abstract type="html">Initialize column with title.</Abstract>
+			<DeclaredIn>TSTableViewModel.h</DeclaredIn>
+			
+			<Declaration>- (id)initWithTitle:(NSString *)title</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>title</Name>
+					<Abstract type="html">Title displayed in column header.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/initWithTitle:</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSColumn/initWithTitle:andSubcolumns:</TokenIdentifier>
+			<Abstract type="html">Initialize column with title and subcolumns.</Abstract>
+			<DeclaredIn>TSTableViewModel.h</DeclaredIn>
+			
+			<Declaration>- (id)initWithTitle:(NSString *)title andSubcolumns:(NSArray *)sublolumns</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>title</Name>
+					<Abstract type="html">Title displayed in column header.</Abstract>
+				</Parameter><Parameter>
+					<Name>sublolumns</Name>
+					<Abstract type="html">Array of TSColumn objects or NSString titles for subcolumns.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/initWithTitle:andSubcolumns:</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSColumn/initWithDictionary:</TokenIdentifier>
+			<Abstract type="html">Initialize column with dictionary which define content and properties of TSColumn.</Abstract>
+			<DeclaredIn>TSTableViewModel.h</DeclaredIn>
+			
+			<Declaration>- (id)initWithDictionary:(NSDictionary *)info</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>info</Name>
+					<Abstract type="html">Dictionary containes values for named properties of TSColumn.
+
+     NSDictionary *columnInfo = @{
+         @&quot;title&quot; : @&quot;Column 1&quot;,
+         @&quot;subtitle&quot; : @&quot;This is first column&quot;,
+         @&quot;subcolumns&quot; : @[
+                     @{ @&quot;title&quot; : @&quot;Subcolumn 1.1&quot;},
+                     @{ @&quot;title&quot; : @&quot;Subcolumn 1.2&quot;}
+                   ]
+     };</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/initWithDictionary:</Anchor>
+            <NodeRef refid="2"/>
+		</Token>
+		
+        
+	</File>
+</Tokens>

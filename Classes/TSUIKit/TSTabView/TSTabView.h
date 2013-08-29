@@ -31,19 +31,19 @@
 #import "TSNavigationStripView.h"
 
 /**
- *  @abstract   TSTabView is a container for set of views or view controllers.
- *              Provides smooth animations while switching between visible tabs and for dynamic content modification.
- *              Basic layout shown below:
+    @abstract   TSTabView is a container for set of views or view controllers.
+                Provides smooth animations while switching between visible tabs and for dynamic content modification.
+                Basic layout shown below:
  *
- *  +------------+---+--------------+---+-------------+
- *  | LEFT ITEMS | < |   SECTIONS   | > | RIGHT ITEMS |  <-- TSNavigationStripView as a subview. Set during TSTabView initialization.
- *  +------------+---+--------------+---+-------------+
- *  |                                                 |
- *  |                                                 |
- *  |                      TABS                       |  <-- Content container. Tabs can be represented by subclasses of UIView or UIViewController.
- *  |                                                 |
- *  |                                                 |
- *  +-------------------------------------------------+                                           
+    +------------+---+--------------+---+-------------+
+    | LEFT ITEMS | < |   SECTIONS   | > | RIGHT ITEMS |  <-- TSNavigationStripView as a subview. Set during TSTabView initialization.
+    +------------+---+--------------+---+-------------+
+    |                                                 |
+    |                                                 |
+    |                      TABS                       |  <-- Content container. Tabs can be represented by subclasses of UIView or UIViewController.
+    |                                                 |
+    |                                                 |
+    +-------------------------------------------------+                                           
  */
 @interface TSTabView : UIView
 {
@@ -54,34 +54,34 @@
 @property (nonatomic, weak) id<TSTabViewDataSource> dataSource;
 
 /**
- *  @abstract   Navigation control. Set during TSTabView initialization.
+    @abstract   Navigation control. Set during TSTabView initialization.
  */
 @property (nonatomic, strong, readonly) TSNavigationStripView *navigationMenu;
 
 /**
- *  @abstract   Customize position and bounds of TSNavigationStripView and tabs container in root view.
- *              By default both insets are UIEdgeInsetsZero: 
- *                  - TSNavigationStripView is located along top edge of TSTabView view.
- *                  - Tabs container is located below and fill remaining space in TSTabView view.
- *              If navigationMenuEdgeInsets is UIEdgeInsetsZero, then contentViewEdgeInsets is applied considering TSNavigationStripView size.
- *              If navigationMenuEdgeInsets isn't UIEdgeInsetsZero, then contentViewEdgeInsets is applied relative root view's frame,
- *              size of TSNavigationStripView isn't taken into account during layout calculation.
- *              This allows creating overlapping layouts when TSNavigationStripView is located above tabs container.
- *  @def        UIEdgeInsetsZero
+    @abstract   Customize position and bounds of TSNavigationStripView and tabs container in root view.
+                By default both insets are UIEdgeInsetsZero: 
+                    - TSNavigationStripView is located along top edge of TSTabView view.
+                    - Tabs container is located below and fill remaining space in TSTabView view.
+                If navigationMenuEdgeInsets is UIEdgeInsetsZero, then contentViewEdgeInsets is applied considering TSNavigationStripView size.
+                If navigationMenuEdgeInsets isn't UIEdgeInsetsZero, then contentViewEdgeInsets is applied relative root view's frame,
+                size of TSNavigationStripView isn't taken into account during layout calculation.
+                This allows creating overlapping layouts when TSNavigationStripView is located above tabs container.
+    @def        UIEdgeInsetsZero
  */
 @property (nonatomic, assign) UIEdgeInsets navigationMenuEdgeInsets;
 @property (nonatomic, assign) UIEdgeInsets contentViewEdgeInsets;
 
 /**
- *  @abstract Currently selected tab.
+    @abstract Currently selected tab.
  */
 @property (nonatomic, assign, readonly) NSInteger selectedTab;
 
 @property (nonatomic, assign) BOOL bounces;
 
 /**
- *  @abstract Should be set appropriatly in case if tab's content represented with UIVewController's subclasses.
- *            Needed to keep valid UIViewControllers hierarchy.
+    @abstract Should be set appropriatly in case if tab's content represented with UIVewController's subclasses.
+              Needed to keep valid UIViewControllers hierarchy.
  */
 @property (nonatomic, weak) UIViewController *parentViewController;
 
@@ -91,12 +91,12 @@
 - (void)reloadTabsData;
 
 /**
- *  @abstract Selection.
+    @abstract Selection.
  */
 - (void)selectTabAtIndex:(NSInteger)index animated:(BOOL)animated;
 
 /**
- *  @abstract Content modification. Should be invoked when data source content has been changed.
+    @abstract Content modification. Should be invoked when data source content has been changed.
  */
 - (void)insertTabAtIndex:(NSInteger)index animated:(BOOL)animated;
 - (void)removeTabAtIndex:(NSInteger)index animated:(BOOL)animated;

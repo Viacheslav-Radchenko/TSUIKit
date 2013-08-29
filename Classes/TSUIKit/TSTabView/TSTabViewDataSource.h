@@ -29,17 +29,17 @@
 #import "TSNavigationStripDataSource.h"
 
 /**
- *  @abstract    TSTabViewDataSource is shared between TSTabView and TSNavigationStripView.  
- *               TSTabViewDataSource extends TSNavigationStripDataSource providing TSTabView with tabs information. 
+    @abstract    TSTabViewDataSource is shared between TSTabView and TSNavigationStripView.  
+                 TSTabViewDataSource extends TSNavigationStripDataSource providing TSTabView with tabs information. 
  */
 @protocol TSTabViewDataSource <TSNavigationStripDataSource>
 
 @optional
 
 /**
- *  @abstract   Provide UI content for tab at index. Tabs can be represented by subclasses of UIView or UIViewController.
- *              Only one of these methods is required for implementation.
- *              tabViewControllerForIndex: has more priority, if it's implemented in data source then viewForIndex: wouldn't be invoked.
+    @abstract   Provide UI content for tab at index. Tabs can be represented by subclasses of UIView or UIViewController.
+                Only one of these methods is required for implementation.
+                tabViewControllerForIndex: has more priority, if it's implemented in data source then viewForIndex: wouldn't be invoked.
  */
 - (UIViewController *)viewControllerForTabAtIndex:(NSInteger)index;
 - (UIView *)viewForTabAtIndex:(NSInteger)index;

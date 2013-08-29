@@ -34,7 +34,7 @@
 #define RIGHT_SIDE_BUTTON_TAG   2
 
 /**
- *  @abstract   Information container. For internal use. 
+    @abstract   Information container. For internal use. 
  */
 
 @interface TSNavigationStripComponentInfo : UIView

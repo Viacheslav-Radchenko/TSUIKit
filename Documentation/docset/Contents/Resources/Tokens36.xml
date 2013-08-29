@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Protocols/TSTableViewDelegate.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intf/TSTableViewDelegate</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSTableViewDelegate.h</DeclaredIn>
+            
+			
+			<NodeRef refid="36"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/TSTableViewDelegate/tableView:didSelectRowAtPath:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSTableViewDelegate.h</DeclaredIn>
+			
+			<Declaration>- (void)tableView:(TSTableView *)tableView didSelectRowAtPath:(NSIndexPath *)rowPath</Declaration>
+			
+			
+			<Anchor>//api/name/tableView:didSelectRowAtPath:</Anchor>
+            <NodeRef refid="36"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/TSTableViewDelegate/tableView:willSelectRowAtPath:animated:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSTableViewDelegate.h</DeclaredIn>
+			
+			<Declaration>- (void)tableView:(TSTableView *)tableView willSelectRowAtPath:(NSIndexPath *)rowPath animated:(BOOL)animated</Declaration>
+			
+			
+			<Anchor>//api/name/tableView:willSelectRowAtPath:animated:</Anchor>
+            <NodeRef refid="36"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/TSTableViewDelegate/tableView:willSelectColumnAtPath:animated:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSTableViewDelegate.h</DeclaredIn>
+			
+			<Declaration>- (void)tableView:(TSTableView *)tableView willSelectColumnAtPath:(NSIndexPath *)columnPath animated:(BOOL)animated</Declaration>
+			
+			
+			<Anchor>//api/name/tableView:willSelectColumnAtPath:animated:</Anchor>
+            <NodeRef refid="36"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/TSTableViewDelegate/tableView:didSelectColumnAtPath:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSTableViewDelegate.h</DeclaredIn>
+			
+			<Declaration>- (void)tableView:(TSTableView *)tableView didSelectColumnAtPath:(NSIndexPath *)columnPath</Declaration>
+			
+			
+			<Anchor>//api/name/tableView:didSelectColumnAtPath:</Anchor>
+            <NodeRef refid="36"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/TSTableViewDelegate/tableView:widthDidChangeForColumnAtIndex:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSTableViewDelegate.h</DeclaredIn>
+			
+			<Declaration>- (void)tableView:(TSTableView *)tableView widthDidChangeForColumnAtIndex:(NSInteger)columnIndex</Declaration>
+			
+			
+			<Anchor>//api/name/tableView:widthDidChangeForColumnAtIndex:</Anchor>
+            <NodeRef refid="36"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/TSTableViewDelegate/tableView:expandStateDidChange:forRowAtPath:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSTableViewDelegate.h</DeclaredIn>
+			
+			<Declaration>- (void)tableView:(TSTableView *)tableView expandStateDidChange:(BOOL)expand forRowAtPath:(NSIndexPath *)rowPath</Declaration>
+			
+			
+			<Anchor>//api/name/tableView:expandStateDidChange:forRowAtPath:</Anchor>
+            <NodeRef refid="36"/>
+		</Token>
+		
+        
+	</File>
+</Tokens>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/TSScrollView.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/TSScrollView</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSScrollView.h</DeclaredIn>
+            
+			
+			<NodeRef refid="9"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSScrollView/allowCancelTouchesForClasses:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSScrollView.h</DeclaredIn>
+			
+			<Declaration>- (void)allowCancelTouchesForClasses:(NSArray *)classNames</Declaration>
+			
+			
+			<Anchor>//api/name/allowCancelTouchesForClasses:</Anchor>
+            <NodeRef refid="9"/>
+		</Token>
+		
+        
+	</File>
+</Tokens>

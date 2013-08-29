@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/TSTabViewWithDropDownPanel.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/TSTabViewWithDropDownPanel</TokenIdentifier>
+			<Abstract type="html">TSTabViewWithDropDownPanel extends TSTabView. 
+                Custom panel can be attached to navigation menu and pull down/up on top of tabs container.
+                Provides smooth animations while switching between visible tabs and for dynamic content modification.
+                Basic layout shown below:
+*
+    |              TSNavigationStripView              |  &lt;-- TSNavigationStripView as a subview. Set during TSTabView initialization.
+    |                                                 |
+    |              ATTACHED PANEL (MENU)              | &lt;-- Custom UIView.
+    |                                                 |
+    |                                                 |
+    |                      TABS                       |  &lt;-- Content container. Tabs can be represented by subclasses of UIView or UIViewController.
+    |                                                 |
+    |                                                 |</Abstract>
+			<DeclaredIn>TSTabViewWithDropDownPanel.h</DeclaredIn>
+            
+			
+			<NodeRef refid="14"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTabViewWithDropDownPanel/setAttachedPanel:</TokenIdentifier>
+			<Abstract type="html">Custom UIView. Would be shouwn in drop down container.
+    @def        nil</Abstract>
+			<DeclaredIn>TSTabViewWithDropDownPanel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) UIView *attachedPanel</Declaration>
+			
+			
+			<Anchor>//api/name/attachedPanel</Anchor>
+            <NodeRef refid="14"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTabViewWithDropDownPanel/attachedPanel</TokenIdentifier>
+			<Abstract type="html">Custom UIView. Would be shouwn in drop down container.
+    @def        nil</Abstract>
+			<DeclaredIn>TSTabViewWithDropDownPanel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) UIView *attachedPanel</Declaration>
+			
+			
+			<Anchor>//api/name/attachedPanel</Anchor>
+            <NodeRef refid="14"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/TSTabViewWithDropDownPanel/attachedPanel</TokenIdentifier>
+			<Abstract type="html">Custom UIView. Would be shouwn in drop down container.
+    @def        nil</Abstract>
+			<DeclaredIn>TSTabViewWithDropDownPanel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) UIView *attachedPanel</Declaration>
+			
+			
+			<Anchor>//api/name/attachedPanel</Anchor>
+            <NodeRef refid="14"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTabViewWithDropDownPanel/setDelegate:</TokenIdentifier>
+			<Abstract type="html">TSTabViewWithDropDownPanelDelegate extends TSTabViewDelegate with callback for DropDownPanel state changes.</Abstract>
+			<DeclaredIn>TSTabViewWithDropDownPanel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, weak) id&lt;TSTabViewWithDropDownPanelDelegate&gt; delegate</Declaration>
+			
+			
+			<Anchor>//api/name/delegate</Anchor>
+            <NodeRef refid="14"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTabViewWithDropDownPanel/delegate</TokenIdentifier>
+			<Abstract type="html">TSTabViewWithDropDownPanelDelegate extends TSTabViewDelegate with callback for DropDownPanel state changes.</Abstract>
+			<DeclaredIn>TSTabViewWithDropDownPanel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, weak) id&lt;TSTabViewWithDropDownPanelDelegate&gt; delegate</Declaration>
+			
+			
+			<Anchor>//api/name/delegate</Anchor>
+            <NodeRef refid="14"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/TSTabViewWithDropDownPanel/delegate</TokenIdentifier>
+			<Abstract type="html">TSTabViewWithDropDownPanelDelegate extends TSTabViewDelegate with callback for DropDownPanel state changes.</Abstract>
+			<DeclaredIn>TSTabViewWithDropDownPanel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, weak) id&lt;TSTabViewWithDropDownPanelDelegate&gt; delegate</Declaration>
+			
+			
+			<Anchor>//api/name/delegate</Anchor>
+            <NodeRef refid="14"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTabViewWithDropDownPanel/setShouldAdjustTabsContainerSize:</TokenIdentifier>
+			<Abstract type="html">If YES then tabs container&apos;s size would be changed during DropDownPanel show/hide animation
+                If NO then DropDownPanel will be shown on top of tabs container.
+    @def        YES</Abstract>
+			<DeclaredIn>TSTabViewWithDropDownPanel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL shouldAdjustTabsContainerSize</Declaration>
+			
+			
+			<Anchor>//api/name/shouldAdjustTabsContainerSize</Anchor>
+            <NodeRef refid="14"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTabViewWithDropDownPanel/shouldAdjustTabsContainerSize</TokenIdentifier>
+			<Abstract type="html">If YES then tabs container&apos;s size would be changed during DropDownPanel show/hide animation
+                If NO then DropDownPanel will be shown on top of tabs container.
+    @def        YES</Abstract>
+			<DeclaredIn>TSTabViewWithDropDownPanel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL shouldAdjustTabsContainerSize</Declaration>
+			
+			
+			<Anchor>//api/name/shouldAdjustTabsContainerSize</Anchor>
+            <NodeRef refid="14"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/TSTabViewWithDropDownPanel/shouldAdjustTabsContainerSize</TokenIdentifier>
+			<Abstract type="html">If YES then tabs container&apos;s size would be changed during DropDownPanel show/hide animation
+                If NO then DropDownPanel will be shown on top of tabs container.
+    @def        YES</Abstract>
+			<DeclaredIn>TSTabViewWithDropDownPanel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL shouldAdjustTabsContainerSize</Declaration>
+			
+			
+			<Anchor>//api/name/shouldAdjustTabsContainerSize</Anchor>
+            <NodeRef refid="14"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTabViewWithDropDownPanel/setShowPanelOnSelectedSectionTap:</TokenIdentifier>
+			<Abstract type="html">If YES then DropDownPanel will be shown/hidden on selected section tap.
+    @def        YES</Abstract>
+			<DeclaredIn>TSTabViewWithDropDownPanel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL showPanelOnSelectedSectionTap</Declaration>
+			
+			
+			<Anchor>//api/name/showPanelOnSelectedSectionTap</Anchor>
+            <NodeRef refid="14"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTabViewWithDropDownPanel/showPanelOnSelectedSectionTap</TokenIdentifier>
+			<Abstract type="html">If YES then DropDownPanel will be shown/hidden on selected section tap.
+    @def        YES</Abstract>
+			<DeclaredIn>TSTabViewWithDropDownPanel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL showPanelOnSelectedSectionTap</Declaration>
+			
+			
+			<Anchor>//api/name/showPanelOnSelectedSectionTap</Anchor>
+            <NodeRef refid="14"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/TSTabViewWithDropDownPanel/showPanelOnSelectedSectionTap</TokenIdentifier>
+			<Abstract type="html">If YES then DropDownPanel will be shown/hidden on selected section tap.
+    @def        YES</Abstract>
+			<DeclaredIn>TSTabViewWithDropDownPanel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL showPanelOnSelectedSectionTap</Declaration>
+			
+			
+			<Anchor>//api/name/showPanelOnSelectedSectionTap</Anchor>
+            <NodeRef refid="14"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTabViewWithDropDownPanel/setShowPanelBelowNavigationMenu:</TokenIdentifier>
+			<Abstract type="html">If YES then DropDownPanel will be shown below NavigationMenu.
+                If NO then DropDownPanel will be shown above NavigationMenu and NavigationMenu itself will slide down.
+    @def        YES</Abstract>
+			<DeclaredIn>TSTabViewWithDropDownPanel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL showPanelBelowNavigationMenu</Declaration>
+			
+			
+			<Anchor>//api/name/showPanelBelowNavigationMenu</Anchor>
+            <NodeRef refid="14"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTabViewWithDropDownPanel/showPanelBelowNavigationMenu</TokenIdentifier>
+			<Abstract type="html">If YES then DropDownPanel will be shown below NavigationMenu.
+                If NO then DropDownPanel will be shown above NavigationMenu and NavigationMenu itself will slide down.
+    @def        YES</Abstract>
+			<DeclaredIn>TSTabViewWithDropDownPanel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL showPanelBelowNavigationMenu</Declaration>
+			
+			
+			<Anchor>//api/name/showPanelBelowNavigationMenu</Anchor>
+            <NodeRef refid="14"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/TSTabViewWithDropDownPanel/showPanelBelowNavigationMenu</TokenIdentifier>
+			<Abstract type="html">If YES then DropDownPanel will be shown below NavigationMenu.
+                If NO then DropDownPanel will be shown above NavigationMenu and NavigationMenu itself will slide down.
+    @def        YES</Abstract>
+			<DeclaredIn>TSTabViewWithDropDownPanel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL showPanelBelowNavigationMenu</Declaration>
+			
+			
+			<Anchor>//api/name/showPanelBelowNavigationMenu</Anchor>
+            <NodeRef refid="14"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTabViewWithDropDownPanel/setPanelIsHidden:</TokenIdentifier>
+			<Abstract type="html">DropDownPanel visibility status.</Abstract>
+			<DeclaredIn>TSTabViewWithDropDownPanel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign, readonly) BOOL panelIsHidden</Declaration>
+			
+			
+			<Anchor>//api/name/panelIsHidden</Anchor>
+            <NodeRef refid="14"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTabViewWithDropDownPanel/panelIsHidden</TokenIdentifier>
+			<Abstract type="html">DropDownPanel visibility status.</Abstract>
+			<DeclaredIn>TSTabViewWithDropDownPanel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign, readonly) BOOL panelIsHidden</Declaration>
+			
+			
+			<Anchor>//api/name/panelIsHidden</Anchor>
+            <NodeRef refid="14"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/TSTabViewWithDropDownPanel/panelIsHidden</TokenIdentifier>
+			<Abstract type="html">DropDownPanel visibility status.</Abstract>
+			<DeclaredIn>TSTabViewWithDropDownPanel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign, readonly) BOOL panelIsHidden</Declaration>
+			
+			
+			<Anchor>//api/name/panelIsHidden</Anchor>
+            <NodeRef refid="14"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTabViewWithDropDownPanel/showDropDownPanelWithAnimation:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSTabViewWithDropDownPanel.h</DeclaredIn>
+			
+			<Declaration>- (void)showDropDownPanelWithAnimation:(BOOL)animated</Declaration>
+			
+			
+			<Anchor>//api/name/showDropDownPanelWithAnimation:</Anchor>
+            <NodeRef refid="14"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTabViewWithDropDownPanel/hideDropDownPanelWithAnimation:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSTabViewWithDropDownPanel.h</DeclaredIn>
+			
+			<Declaration>- (void)hideDropDownPanelWithAnimation:(BOOL)animated</Declaration>
+			
+			
+			<Anchor>//api/name/hideDropDownPanelWithAnimation:</Anchor>
+            <NodeRef refid="14"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTabViewWithDropDownPanel/movePanel:finished:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSTabViewWithDropDownPanel.h</DeclaredIn>
+			
+			<Declaration>- (void)movePanel:(CGFloat)delta finished:(BOOL)finished</Declaration>
+			
+			
+			<Anchor>//api/name/movePanel:finished:</Anchor>
+            <NodeRef refid="14"/>
+		</Token>
+		
+        
+	</File>
+</Tokens>

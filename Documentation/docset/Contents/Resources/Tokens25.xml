@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/TSTableViewRow.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/TSTableViewRow</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSTableViewRow.h</DeclaredIn>
+            
+			
+			<NodeRef refid="25"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTableViewRow/setCells:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSTableViewRow.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSArray *cells</Declaration>
+			
+			
+			<Anchor>//api/name/cells</Anchor>
+            <NodeRef refid="25"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTableViewRow/cells</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSTableViewRow.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSArray *cells</Declaration>
+			
+			
+			<Anchor>//api/name/cells</Anchor>
+            <NodeRef refid="25"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/TSTableViewRow/cells</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSTableViewRow.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSArray *cells</Declaration>
+			
+			
+			<Anchor>//api/name/cells</Anchor>
+            <NodeRef refid="25"/>
+		</Token>
+		
+        
+	</File>
+</Tokens>

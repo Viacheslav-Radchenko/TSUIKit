@@ -1,0 +1,858 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/TSNavigationStripView.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/TSNavigationStripView</TokenIdentifier>
+			<Abstract type="html">TSNavigationStripView is navigation menu control with highly customizable design and flexible structure.
+                Provides smooth animations for dynamic content modification.
+                Basic layout shown below:
+*
+    | LEFT ITEMS | &lt; |   SECTIONS   | &gt; | RIGHT ITEMS |
+*
+                LEFT ITEMS and RIGHT ITEMS - containers for menu items.
+                SECTIONS - container for tab sections strip.
+*
+    @limitations - When total width of LEFT ITEMS and RIGHT ITEMS exceeds view&apos;s frame width then layout of control is undefined.
+                 - For central aligment (sectionsAligment = UIViewContentModeCenter) limitation described above is more stronger: 
+                    SECTIONS part should have space no less then (sectionWidth + selectedSectionWidth + sectionWidth or corresponding sizes specified in data source.</Abstract>
+			<DeclaredIn>TSNavigationStripView.h</DeclaredIn>
+            
+			
+			<NodeRef refid="7"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSNavigationStripView/setDelegate:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSNavigationStripView.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, weak) id&lt;TSNavigationStripViewDelegate&gt; delegate</Declaration>
+			
+			
+			<Anchor>//api/name/delegate</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSNavigationStripView/delegate</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSNavigationStripView.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, weak) id&lt;TSNavigationStripViewDelegate&gt; delegate</Declaration>
+			
+			
+			<Anchor>//api/name/delegate</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/TSNavigationStripView/delegate</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSNavigationStripView.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, weak) id&lt;TSNavigationStripViewDelegate&gt; delegate</Declaration>
+			
+			
+			<Anchor>//api/name/delegate</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSNavigationStripView/setDataSource:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSNavigationStripView.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, weak) id&lt;TSNavigationStripDataSource&gt; dataSource</Declaration>
+			
+			
+			<Anchor>//api/name/dataSource</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSNavigationStripView/dataSource</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSNavigationStripView.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, weak) id&lt;TSNavigationStripDataSource&gt; dataSource</Declaration>
+			
+			
+			<Anchor>//api/name/dataSource</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/TSNavigationStripView/dataSource</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSNavigationStripView.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, weak) id&lt;TSNavigationStripDataSource&gt; dataSource</Declaration>
+			
+			
+			<Anchor>//api/name/dataSource</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSNavigationStripView/setSelectedSection:</TokenIdentifier>
+			<Abstract type="html">Currently selected section.</Abstract>
+			<DeclaredIn>TSNavigationStripView.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign, readonly) NSInteger selectedSection</Declaration>
+			
+			
+			<Anchor>//api/name/selectedSection</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSNavigationStripView/selectedSection</TokenIdentifier>
+			<Abstract type="html">Currently selected section.</Abstract>
+			<DeclaredIn>TSNavigationStripView.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign, readonly) NSInteger selectedSection</Declaration>
+			
+			
+			<Anchor>//api/name/selectedSection</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/TSNavigationStripView/selectedSection</TokenIdentifier>
+			<Abstract type="html">Currently selected section.</Abstract>
+			<DeclaredIn>TSNavigationStripView.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign, readonly) NSInteger selectedSection</Declaration>
+			
+			
+			<Anchor>//api/name/selectedSection</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSNavigationStripView/setSelectedSectionWidth:</TokenIdentifier>
+			<Abstract type="html">Default section width value. These values used in case if dataSource is not provide this information.
+    @def        selectedSectionWidth = 256
+                sectionWidth = 128</Abstract>
+			<DeclaredIn>TSNavigationStripView.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) CGFloat selectedSectionWidth</Declaration>
+			
+			
+			<Anchor>//api/name/selectedSectionWidth</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSNavigationStripView/selectedSectionWidth</TokenIdentifier>
+			<Abstract type="html">Default section width value. These values used in case if dataSource is not provide this information.
+    @def        selectedSectionWidth = 256
+                sectionWidth = 128</Abstract>
+			<DeclaredIn>TSNavigationStripView.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) CGFloat selectedSectionWidth</Declaration>
+			
+			
+			<Anchor>//api/name/selectedSectionWidth</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/TSNavigationStripView/selectedSectionWidth</TokenIdentifier>
+			<Abstract type="html">Default section width value. These values used in case if dataSource is not provide this information.
+    @def        selectedSectionWidth = 256
+                sectionWidth = 128</Abstract>
+			<DeclaredIn>TSNavigationStripView.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) CGFloat selectedSectionWidth</Declaration>
+			
+			
+			<Anchor>//api/name/selectedSectionWidth</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSNavigationStripView/setSectionWidth:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSNavigationStripView.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) CGFloat sectionWidth</Declaration>
+			
+			
+			<Anchor>//api/name/sectionWidth</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSNavigationStripView/sectionWidth</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSNavigationStripView.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) CGFloat sectionWidth</Declaration>
+			
+			
+			<Anchor>//api/name/sectionWidth</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/TSNavigationStripView/sectionWidth</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSNavigationStripView.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) CGFloat sectionWidth</Declaration>
+			
+			
+			<Anchor>//api/name/sectionWidth</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSNavigationStripView/setDebugMode:</TokenIdentifier>
+			<Abstract type="html">If YES funny colors set to backroundColor property of subviews.
+    @def        NO</Abstract>
+			<DeclaredIn>TSNavigationStripView.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL debugMode</Declaration>
+			
+			
+			<Anchor>//api/name/debugMode</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSNavigationStripView/debugMode</TokenIdentifier>
+			<Abstract type="html">If YES funny colors set to backroundColor property of subviews.
+    @def        NO</Abstract>
+			<DeclaredIn>TSNavigationStripView.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL debugMode</Declaration>
+			
+			
+			<Anchor>//api/name/debugMode</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/TSNavigationStripView/debugMode</TokenIdentifier>
+			<Abstract type="html">If YES funny colors set to backroundColor property of subviews.
+    @def        NO</Abstract>
+			<DeclaredIn>TSNavigationStripView.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL debugMode</Declaration>
+			
+			
+			<Anchor>//api/name/debugMode</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSNavigationStripView/setMaskSectionsContainerEdges:</TokenIdentifier>
+			<Abstract type="html">If YES alpha mask applied to sections container to add effect of transparency on edges. 
+    @def        YES</Abstract>
+			<DeclaredIn>TSNavigationStripView.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL maskSectionsContainerEdges</Declaration>
+			
+			
+			<Anchor>//api/name/maskSectionsContainerEdges</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSNavigationStripView/maskSectionsContainerEdges</TokenIdentifier>
+			<Abstract type="html">If YES alpha mask applied to sections container to add effect of transparency on edges. 
+    @def        YES</Abstract>
+			<DeclaredIn>TSNavigationStripView.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL maskSectionsContainerEdges</Declaration>
+			
+			
+			<Anchor>//api/name/maskSectionsContainerEdges</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/TSNavigationStripView/maskSectionsContainerEdges</TokenIdentifier>
+			<Abstract type="html">If YES alpha mask applied to sections container to add effect of transparency on edges. 
+    @def        YES</Abstract>
+			<DeclaredIn>TSNavigationStripView.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL maskSectionsContainerEdges</Declaration>
+			
+			
+			<Anchor>//api/name/maskSectionsContainerEdges</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSNavigationStripView/setSectionsAligment:</TokenIdentifier>
+			<Abstract type="html">Determine how sections aligned in container view.
+    @supported
+        UIViewContentModeCenter,
+        UIViewContentModeLeft,
+        UIViewContentModeRight,
+        UIViewContentModeScaleAspectFill
+    @def
+        UIViewContentModeCenter</Abstract>
+			<DeclaredIn>TSNavigationStripView.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) UIViewContentMode sectionsAligment</Declaration>
+			
+			
+			<Anchor>//api/name/sectionsAligment</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSNavigationStripView/sectionsAligment</TokenIdentifier>
+			<Abstract type="html">Determine how sections aligned in container view.
+    @supported
+        UIViewContentModeCenter,
+        UIViewContentModeLeft,
+        UIViewContentModeRight,
+        UIViewContentModeScaleAspectFill
+    @def
+        UIViewContentModeCenter</Abstract>
+			<DeclaredIn>TSNavigationStripView.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) UIViewContentMode sectionsAligment</Declaration>
+			
+			
+			<Anchor>//api/name/sectionsAligment</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/TSNavigationStripView/sectionsAligment</TokenIdentifier>
+			<Abstract type="html">Determine how sections aligned in container view.
+    @supported
+        UIViewContentModeCenter,
+        UIViewContentModeLeft,
+        UIViewContentModeRight,
+        UIViewContentModeScaleAspectFill
+    @def
+        UIViewContentModeCenter</Abstract>
+			<DeclaredIn>TSNavigationStripView.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) UIViewContentMode sectionsAligment</Declaration>
+			
+			
+			<Anchor>//api/name/sectionsAligment</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSNavigationStripView/setAutohideNavigationButtons:</TokenIdentifier>
+			<Abstract type="html">If NO navigation buttons always displayed (if navigationButtonsHidden == NO)
+                if YES visibility of each button determined dynamically and depends on currenct selectedSection
+    @def        YES</Abstract>
+			<DeclaredIn>TSNavigationStripView.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL autohideNavigationButtons</Declaration>
+			
+			
+			<Anchor>//api/name/autohideNavigationButtons</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSNavigationStripView/autohideNavigationButtons</TokenIdentifier>
+			<Abstract type="html">If NO navigation buttons always displayed (if navigationButtonsHidden == NO)
+                if YES visibility of each button determined dynamically and depends on currenct selectedSection
+    @def        YES</Abstract>
+			<DeclaredIn>TSNavigationStripView.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL autohideNavigationButtons</Declaration>
+			
+			
+			<Anchor>//api/name/autohideNavigationButtons</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/TSNavigationStripView/autohideNavigationButtons</TokenIdentifier>
+			<Abstract type="html">If NO navigation buttons always displayed (if navigationButtonsHidden == NO)
+                if YES visibility of each button determined dynamically and depends on currenct selectedSection
+    @def        YES</Abstract>
+			<DeclaredIn>TSNavigationStripView.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL autohideNavigationButtons</Declaration>
+			
+			
+			<Anchor>//api/name/autohideNavigationButtons</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSNavigationStripView/setNavigationButtonsHidden:</TokenIdentifier>
+			<Abstract type="html">If YES navigation buttons are not shown,
+                if NO navigation buttons visibility depends on autohideNavigationButtons
+    @def        NO</Abstract>
+			<DeclaredIn>TSNavigationStripView.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL navigationButtonsHidden</Declaration>
+			
+			
+			<Anchor>//api/name/navigationButtonsHidden</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSNavigationStripView/navigationButtonsHidden</TokenIdentifier>
+			<Abstract type="html">If YES navigation buttons are not shown,
+                if NO navigation buttons visibility depends on autohideNavigationButtons
+    @def        NO</Abstract>
+			<DeclaredIn>TSNavigationStripView.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL navigationButtonsHidden</Declaration>
+			
+			
+			<Anchor>//api/name/navigationButtonsHidden</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/TSNavigationStripView/navigationButtonsHidden</TokenIdentifier>
+			<Abstract type="html">If YES navigation buttons are not shown,
+                if NO navigation buttons visibility depends on autohideNavigationButtons
+    @def        NO</Abstract>
+			<DeclaredIn>TSNavigationStripView.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL navigationButtonsHidden</Declaration>
+			
+			
+			<Anchor>//api/name/navigationButtonsHidden</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSNavigationStripView/setLeftNavigationButton:</TokenIdentifier>
+			<Abstract type="html">Customize appearance of default components</Abstract>
+			<DeclaredIn>TSNavigationStripView.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong, readonly) UIButton *leftNavigationButton</Declaration>
+			
+			
+			<Anchor>//api/name/leftNavigationButton</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSNavigationStripView/leftNavigationButton</TokenIdentifier>
+			<Abstract type="html">Customize appearance of default components</Abstract>
+			<DeclaredIn>TSNavigationStripView.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong, readonly) UIButton *leftNavigationButton</Declaration>
+			
+			
+			<Anchor>//api/name/leftNavigationButton</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/TSNavigationStripView/leftNavigationButton</TokenIdentifier>
+			<Abstract type="html">Customize appearance of default components</Abstract>
+			<DeclaredIn>TSNavigationStripView.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong, readonly) UIButton *leftNavigationButton</Declaration>
+			
+			
+			<Anchor>//api/name/leftNavigationButton</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSNavigationStripView/setRightNavigationButton:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSNavigationStripView.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong, readonly) UIButton *rightNavigationButton</Declaration>
+			
+			
+			<Anchor>//api/name/rightNavigationButton</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSNavigationStripView/rightNavigationButton</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSNavigationStripView.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong, readonly) UIButton *rightNavigationButton</Declaration>
+			
+			
+			<Anchor>//api/name/rightNavigationButton</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/TSNavigationStripView/rightNavigationButton</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSNavigationStripView.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong, readonly) UIButton *rightNavigationButton</Declaration>
+			
+			
+			<Anchor>//api/name/rightNavigationButton</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSNavigationStripView/setBackgroundImage:</TokenIdentifier>
+			<Abstract type="html">Customise appearance providing bacground image
+    @def        nil</Abstract>
+			<DeclaredIn>TSNavigationStripView.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) UIImage *backgroundImage</Declaration>
+			
+			
+			<Anchor>//api/name/backgroundImage</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSNavigationStripView/backgroundImage</TokenIdentifier>
+			<Abstract type="html">Customise appearance providing bacground image
+    @def        nil</Abstract>
+			<DeclaredIn>TSNavigationStripView.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) UIImage *backgroundImage</Declaration>
+			
+			
+			<Anchor>//api/name/backgroundImage</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/TSNavigationStripView/backgroundImage</TokenIdentifier>
+			<Abstract type="html">Customise appearance providing bacground image
+    @def        nil</Abstract>
+			<DeclaredIn>TSNavigationStripView.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) UIImage *backgroundImage</Declaration>
+			
+			
+			<Anchor>//api/name/backgroundImage</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSNavigationStripView/setEmptySpaceHolderImage:</TokenIdentifier>
+			<Abstract type="html">If sections conatainer not full then emptySpaceHolderImage would be displayed on one of the edge.
+                Set it if you need continious graphics layout.
+    @def        nil</Abstract>
+			<DeclaredIn>TSNavigationStripView.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) UIImage *emptySpaceHolderImage</Declaration>
+			
+			
+			<Anchor>//api/name/emptySpaceHolderImage</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSNavigationStripView/emptySpaceHolderImage</TokenIdentifier>
+			<Abstract type="html">If sections conatainer not full then emptySpaceHolderImage would be displayed on one of the edge.
+                Set it if you need continious graphics layout.
+    @def        nil</Abstract>
+			<DeclaredIn>TSNavigationStripView.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) UIImage *emptySpaceHolderImage</Declaration>
+			
+			
+			<Anchor>//api/name/emptySpaceHolderImage</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/TSNavigationStripView/emptySpaceHolderImage</TokenIdentifier>
+			<Abstract type="html">If sections conatainer not full then emptySpaceHolderImage would be displayed on one of the edge.
+                Set it if you need continious graphics layout.
+    @def        nil</Abstract>
+			<DeclaredIn>TSNavigationStripView.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) UIImage *emptySpaceHolderImage</Declaration>
+			
+			
+			<Anchor>//api/name/emptySpaceHolderImage</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSNavigationStripView/setSelectionMarker:</TokenIdentifier>
+			<Abstract type="html">Tis view would be layouted under selected section and smoothly moved during selection animation
+    @def        nil</Abstract>
+			<DeclaredIn>TSNavigationStripView.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) UIView *selectionMarker</Declaration>
+			
+			
+			<Anchor>//api/name/selectionMarker</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSNavigationStripView/selectionMarker</TokenIdentifier>
+			<Abstract type="html">Tis view would be layouted under selected section and smoothly moved during selection animation
+    @def        nil</Abstract>
+			<DeclaredIn>TSNavigationStripView.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) UIView *selectionMarker</Declaration>
+			
+			
+			<Anchor>//api/name/selectionMarker</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/TSNavigationStripView/selectionMarker</TokenIdentifier>
+			<Abstract type="html">Tis view would be layouted under selected section and smoothly moved during selection animation
+    @def        nil</Abstract>
+			<DeclaredIn>TSNavigationStripView.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) UIView *selectionMarker</Declaration>
+			
+			
+			<Anchor>//api/name/selectionMarker</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSNavigationStripView/initWithFrame:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSNavigationStripView.h</DeclaredIn>
+			
+			<Declaration>- (id)initWithFrame:(CGRect)frame</Declaration>
+			
+			
+			<Anchor>//api/name/initWithFrame:</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSNavigationStripView/reloadData</TokenIdentifier>
+			<Abstract type="html">Reload content</Abstract>
+			<DeclaredIn>TSNavigationStripView.h</DeclaredIn>
+			
+			<Declaration>- (void)reloadData</Declaration>
+			
+			
+			<Anchor>//api/name/reloadData</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSNavigationStripView/reloadSectionsData</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSNavigationStripView.h</DeclaredIn>
+			
+			<Declaration>- (void)reloadSectionsData</Declaration>
+			
+			
+			<Anchor>//api/name/reloadSectionsData</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSNavigationStripView/reloadItemsData</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSNavigationStripView.h</DeclaredIn>
+			
+			<Declaration>- (void)reloadItemsData</Declaration>
+			
+			
+			<Anchor>//api/name/reloadItemsData</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSNavigationStripView/selectSectionAtIndex:animated:</TokenIdentifier>
+			<Abstract type="html">Change selection</Abstract>
+			<DeclaredIn>TSNavigationStripView.h</DeclaredIn>
+			
+			<Declaration>- (void)selectSectionAtIndex:(NSInteger)index animated:(BOOL)animated</Declaration>
+			
+			
+			<Anchor>//api/name/selectSectionAtIndex:animated:</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSNavigationStripView/selectItemAtIndex:fromLeftSide:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSNavigationStripView.h</DeclaredIn>
+			
+			<Declaration>- (void)selectItemAtIndex:(NSInteger)index fromLeftSide:(BOOL)leftSide</Declaration>
+			
+			
+			<Anchor>//api/name/selectItemAtIndex:fromLeftSide:</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSNavigationStripView/deselectItemAtIndex:fromLeftSide:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSNavigationStripView.h</DeclaredIn>
+			
+			<Declaration>- (void)deselectItemAtIndex:(NSInteger)index fromLeftSide:(BOOL)leftSide</Declaration>
+			
+			
+			<Anchor>//api/name/deselectItemAtIndex:fromLeftSide:</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSNavigationStripView/isItemSelectedAtIndex:fromLeftSide:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSNavigationStripView.h</DeclaredIn>
+			
+			<Declaration>- (BOOL)isItemSelectedAtIndex:(NSInteger)index fromLeftSide:(BOOL)leftSide</Declaration>
+			
+			
+			<Anchor>//api/name/isItemSelectedAtIndex:fromLeftSide:</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSNavigationStripView/scrollSelectedSectionTo:</TokenIdentifier>
+			<Abstract type="html">Applied only if sectionsAligment is set to UIViewContentAligmentCenter. Shift selected section to right/left side.</Abstract>
+			<DeclaredIn>TSNavigationStripView.h</DeclaredIn>
+			
+			<Declaration>- (void)scrollSelectedSectionTo:(CGFloat)normOffset</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>normOffset</Name>
+					<Abstract type="html">- in range [-1..1]</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/scrollSelectedSectionTo:</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSNavigationStripView/insertSectionAtIndex:animated:</TokenIdentifier>
+			<Abstract type="html">Modify content</Abstract>
+			<DeclaredIn>TSNavigationStripView.h</DeclaredIn>
+			
+			<Declaration>- (void)insertSectionAtIndex:(NSInteger)index animated:(BOOL)animated</Declaration>
+			
+			
+			<Anchor>//api/name/insertSectionAtIndex:animated:</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSNavigationStripView/removeSectionAtIndex:animated:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSNavigationStripView.h</DeclaredIn>
+			
+			<Declaration>- (void)removeSectionAtIndex:(NSInteger)index animated:(BOOL)animated</Declaration>
+			
+			
+			<Anchor>//api/name/removeSectionAtIndex:animated:</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSNavigationStripView/insertItemAtIndex:fromLeftSide:animated:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSNavigationStripView.h</DeclaredIn>
+			
+			<Declaration>- (void)insertItemAtIndex:(NSInteger)index fromLeftSide:(BOOL)leftSide animated:(BOOL)animated</Declaration>
+			
+			
+			<Anchor>//api/name/insertItemAtIndex:fromLeftSide:animated:</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSNavigationStripView/removeItemAtIndex:fromLeftSide:animated:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSNavigationStripView.h</DeclaredIn>
+			
+			<Declaration>- (void)removeItemAtIndex:(NSInteger)index fromLeftSide:(BOOL)leftSide animated:(BOOL)animated</Declaration>
+			
+			
+			<Anchor>//api/name/removeItemAtIndex:fromLeftSide:animated:</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSNavigationStripView/updateSectionsAtIndexes:animated:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSNavigationStripView.h</DeclaredIn>
+			
+			<Declaration>- (void)updateSectionsAtIndexes:(NSArray *)indexes animated:(BOOL)animated</Declaration>
+			
+			
+			<Anchor>//api/name/updateSectionsAtIndexes:animated:</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSNavigationStripView/updateItemsAtIndexes:fromLeftSide:animated:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSNavigationStripView.h</DeclaredIn>
+			
+			<Declaration>- (void)updateItemsAtIndexes:(NSArray *)indexes fromLeftSide:(BOOL)leftSide animated:(BOOL)animated</Declaration>
+			
+			
+			<Anchor>//api/name/updateItemsAtIndexes:fromLeftSide:animated:</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSNavigationStripView/insertSectionsAtIndexes:animated:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSNavigationStripView.h</DeclaredIn>
+			
+			<Declaration>- (void)insertSectionsAtIndexes:(NSArray *)indexes animated:(BOOL)animated</Declaration>
+			
+			
+			<Anchor>//api/name/insertSectionsAtIndexes:animated:</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSNavigationStripView/removeSectionsAtIndexes:animated:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSNavigationStripView.h</DeclaredIn>
+			
+			<Declaration>- (void)removeSectionsAtIndexes:(NSArray *)indexes animated:(BOOL)animated</Declaration>
+			
+			
+			<Anchor>//api/name/removeSectionsAtIndexes:animated:</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSNavigationStripView/insertItemsAtIndexes:fromLeftSide:animated:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSNavigationStripView.h</DeclaredIn>
+			
+			<Declaration>- (void)insertItemsAtIndexes:(NSArray *)indexes fromLeftSide:(BOOL)leftSide animated:(BOOL)animated</Declaration>
+			
+			
+			<Anchor>//api/name/insertItemsAtIndexes:fromLeftSide:animated:</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSNavigationStripView/removeItemsAtIndexes:fromLeftSide:animated:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSNavigationStripView.h</DeclaredIn>
+			
+			<Declaration>- (void)removeItemsAtIndexes:(NSArray *)indexes fromLeftSide:(BOOL)leftSide animated:(BOOL)animated</Declaration>
+			
+			
+			<Anchor>//api/name/removeItemsAtIndexes:fromLeftSide:animated:</Anchor>
+            <NodeRef refid="7"/>
+		</Token>
+		
+        
+	</File>
+</Tokens>

@@ -32,21 +32,21 @@
 @optional
 
 /**
- *  @abstract Selection state changed callbacks
+    @abstract Selection state changed callbacks
  */
 - (void)navigationStrip:(TSNavigationStripView *)navigationStripView itemAtIndex:(NSInteger)index fromLeftSide:(BOOL)leftSide didChangeState:(BOOL)selected;
 - (void)navigationStrip:(TSNavigationStripView *)navigationStripView willSelectSectionAtIndex:(NSInteger)index animated:(BOOL)animated;
 - (void)navigationStrip:(TSNavigationStripView *)navigationStripView didSelectSectionAtIndex:(NSInteger)index;
 
 /**
- *  @abstract Invoked only if sectionsAligment is set to UIViewContentAligmentCenter.
- *  @param    normScrollOffset - in range [-1..1]               
+    @abstract Invoked only if sectionsAligment is set to UIViewContentAligmentCenter.
+    @param    normScrollOffset - in range [-1..1]               
  */
 - (void)navigationStrip:(TSNavigationStripView *)navigationStripView didScrollTo:(CGFloat)normScrollOffset;
 - (void)navigationStripDidEndScroll:(TSNavigationStripView *)navigationStripView;
 
 /**
- *  @abstract Invoked when user taps on selected section.
+    @abstract Invoked when user taps on selected section.
  */
 - (void)navigationStripDidRecognizeTapOnSelectedSection:(TSNavigationStripView *)navigationStripView;
 

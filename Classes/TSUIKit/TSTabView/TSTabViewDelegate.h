@@ -34,15 +34,15 @@
 @optional
 
 /**
- *  @abstract Selection state changed callbacks
+    @abstract Selection state changed callbacks
  */
 - (void)tabView:(TSTabView *)tabView menuItemAtIndex:(NSInteger)index fromLeftSide:(BOOL)leftSide didChangeState:(BOOL)selected;
 - (void)tabView:(TSTabView *)tabView willSelectTabAtIndex:(NSInteger)index animated:(BOOL)animated;
 - (void)tabView:(TSTabView *)tabView didSelectTabAtIndex:(NSInteger)index;
 
 /**
- *  @abstract 
- *  @param    normScrollOffset - in range [-1..1]
+    @abstract 
+    @param    normScrollOffset - in range [-1..1]
  */
 - (void)tabView:(TSTabView *)tabView didScrollTo:(CGFloat)normScrollOffset;
 

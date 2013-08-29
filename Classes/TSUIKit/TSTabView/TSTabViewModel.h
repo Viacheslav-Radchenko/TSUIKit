@@ -30,11 +30,11 @@
 
 
 /**
- *  @abstract   Classes provided below implement prototype for TSTabViewDataSource.
- *              It is optional part of TSTabView infrastructure, inluded as an example of possible data source implementation.
+    @abstract   Classes provided below implement prototype for TSTabViewDataSource.
+                It is optional part of TSTabView infrastructure, inluded as an example of possible data source implementation.
  *
- *              This prototype provides enough flexibility for building custom TSTabView containers.
- *              If you need something completly different you can always implement your own data source entity.
+                This prototype provides enough flexibility for building custom TSTabView containers.
+                If you need something completly different you can always implement your own data source entity.
  */
 
 /**************************************************************************************************************************************/
@@ -55,21 +55,21 @@
 /**************************************************************************************************************************************/
 
 /**
- *  @abstract   TSNavigationStripComponent is base class, which provides appearance information for TSNavigationStripView's section or item.
+    @abstract   TSNavigationStripComponent is base class, which provides appearance information for TSNavigationStripView's section or item.
  *
- *  @remark     In sake of code reuse, TSTabViewModel inherits from TSNavigationStripModel. 
- *              Because they have similar underlying data structure and logic, it safes many lines of code)
- *              Hovewer, few methods that provided by TSNavigationStripModel interface are not applied in context of TSTabViewModel.
- *                  - (id)initWithNavigationStrip:
- *                  - (void)insertNewSection:atIndex:animated:
- *                  - (void)removeSectionAtIndex:animated:
- *                  - (void)setSections:
- *              These methods are overrided as dummy and do nothing beside assertion.
- *              TSTabViewModel replace these methods with following:
- *                  - (id)initWithTabView:
- *                  - (void)insertNewTab:atIndex:animated:
- *                  - (void)removeTabAtIndex:animated:
- *                  - (void)setTabs:
+    @remark     In sake of code reuse, TSTabViewModel inherits from TSNavigationStripModel. 
+                Because they have similar underlying data structure and logic, it safes many lines of code)
+                Hovewer, few methods that provided by TSNavigationStripModel interface are not applied in context of TSTabViewModel.
+                    - (id)initWithNavigationStrip:
+                    - (void)insertNewSection:atIndex:animated:
+                    - (void)removeSectionAtIndex:animated:
+                    - (void)setSections:
+                These methods are overrided as dummy and do nothing beside assertion.
+                TSTabViewModel replace these methods with following:
+                    - (id)initWithTabView:
+                    - (void)insertNewTab:atIndex:animated:
+                    - (void)removeTabAtIndex:animated:
+                    - (void)setTabs:
  */
 
 @interface TSTabViewModel : TSNavigationStripModel <TSTabViewDataSource>

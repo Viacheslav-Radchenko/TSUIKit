@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Protocols/TSTableViewAppearanceCoordinator.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intf/TSTableViewAppearanceCoordinator</TokenIdentifier>
+			<Abstract type="html">TSTableViewAppearanceCoordinator is internal protocol for configuring TSTableView appearance. It&apos;s implemented by TSTableView.</Abstract>
+			<DeclaredIn>TSTableViewAppearanceCoordinator.h</DeclaredIn>
+            
+			
+			<NodeRef refid="33"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/TSTableViewAppearanceCoordinator/isRowExpanded:</TokenIdentifier>
+			<Abstract type="html">Return YES if row at specified path is expanded</Abstract>
+			<DeclaredIn>TSTableViewAppearanceCoordinator.h</DeclaredIn>
+			
+			<Declaration>- (BOOL)isRowExpanded:(NSIndexPath *)indexPath</Declaration>
+			
+			
+			<Anchor>//api/name/isRowExpanded:</Anchor>
+            <NodeRef refid="33"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/TSTableViewAppearanceCoordinator/isRowVisible:</TokenIdentifier>
+			<Abstract type="html">Return YES if row is visible, i.g. all its parent rows are expanded</Abstract>
+			<DeclaredIn>TSTableViewAppearanceCoordinator.h</DeclaredIn>
+			
+			<Declaration>- (BOOL)isRowVisible:(NSIndexPath *)indexPath</Declaration>
+			
+			
+			<Anchor>//api/name/isRowVisible:</Anchor>
+            <NodeRef refid="33"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/TSTableViewAppearanceCoordinator/highlightControlsOnTap</TokenIdentifier>
+			<Abstract type="html">Highlight contorls (slide button in header section and expand button in control panel) on tap</Abstract>
+			<DeclaredIn>TSTableViewAppearanceCoordinator.h</DeclaredIn>
+			
+			<Declaration>- (BOOL)highlightControlsOnTap</Declaration>
+			
+			
+			<Anchor>//api/name/highlightControlsOnTap</Anchor>
+            <NodeRef refid="33"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/TSTableViewAppearanceCoordinator/lineNumbersAreHidden</TokenIdentifier>
+			<Abstract type="html">Return YES if line numbers for rows shoulb be displayed in control panel</Abstract>
+			<DeclaredIn>TSTableViewAppearanceCoordinator.h</DeclaredIn>
+			
+			<Declaration>- (BOOL)lineNumbersAreHidden</Declaration>
+			
+			
+			<Anchor>//api/name/lineNumbersAreHidden</Anchor>
+            <NodeRef refid="33"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/TSTableViewAppearanceCoordinator/lineNumbersColor</TokenIdentifier>
+			<Abstract type="html">Color for line  numbers in expand control panel.</Abstract>
+			<DeclaredIn>TSTableViewAppearanceCoordinator.h</DeclaredIn>
+			
+			<Declaration>- (UIColor *)lineNumbersColor</Declaration>
+			
+			
+			<Anchor>//api/name/lineNumbersColor</Anchor>
+            <NodeRef refid="33"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/TSTableViewAppearanceCoordinator/controlPanelExpandItemNormalBackgroundImage</TokenIdentifier>
+			<Abstract type="html">Image for expand button normal state (not expanded). Image wouldn&apos;t be stretched and will be aligned to bottom left corner of expand section.</Abstract>
+			<DeclaredIn>TSTableViewAppearanceCoordinator.h</DeclaredIn>
+			
+			<Declaration>- (UIImage *)controlPanelExpandItemNormalBackgroundImage</Declaration>
+			
+			
+			<Anchor>//api/name/controlPanelExpandItemNormalBackgroundImage</Anchor>
+            <NodeRef refid="33"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/TSTableViewAppearanceCoordinator/controlPanelExpandItemSelectedBackgroundImage</TokenIdentifier>
+			<Abstract type="html">Image for expand button selected state (expanded). Image wouldn&apos;t be stretched and will be aligned to bottom left corner of expand section.</Abstract>
+			<DeclaredIn>TSTableViewAppearanceCoordinator.h</DeclaredIn>
+			
+			<Declaration>- (UIImage *)controlPanelExpandItemSelectedBackgroundImage</Declaration>
+			
+			
+			<Anchor>//api/name/controlPanelExpandItemSelectedBackgroundImage</Anchor>
+            <NodeRef refid="33"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/TSTableViewAppearanceCoordinator/controlPanelExpandSectionBackgroundImage</TokenIdentifier>
+			<Abstract type="html">Background image for expand section. Image would be stretched depending on section&apos;s size.</Abstract>
+			<DeclaredIn>TSTableViewAppearanceCoordinator.h</DeclaredIn>
+			
+			<Declaration>- (UIImage *)controlPanelExpandSectionBackgroundImage</Declaration>
+			
+			
+			<Anchor>//api/name/controlPanelExpandSectionBackgroundImage</Anchor>
+            <NodeRef refid="33"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/TSTableViewAppearanceCoordinator/tableTotalWidth</TokenIdentifier>
+			<Abstract type="html">Return total width of all columns</Abstract>
+			<DeclaredIn>TSTableViewAppearanceCoordinator.h</DeclaredIn>
+			
+			<Declaration>- (CGFloat)tableTotalWidth</Declaration>
+			
+			
+			<Anchor>//api/name/tableTotalWidth</Anchor>
+            <NodeRef refid="33"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/TSTableViewAppearanceCoordinator/tableTotalHeight</TokenIdentifier>
+			<Abstract type="html">Return total height of all rows</Abstract>
+			<DeclaredIn>TSTableViewAppearanceCoordinator.h</DeclaredIn>
+			
+			<Declaration>- (CGFloat)tableTotalHeight</Declaration>
+			
+			
+			<Anchor>//api/name/tableTotalHeight</Anchor>
+            <NodeRef refid="33"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/TSTableViewAppearanceCoordinator/tableHeight</TokenIdentifier>
+			<Abstract type="html">Return height of all visible (not expanded) rows</Abstract>
+			<DeclaredIn>TSTableViewAppearanceCoordinator.h</DeclaredIn>
+			
+			<Declaration>- (CGFloat)tableHeight</Declaration>
+			
+			
+			<Anchor>//api/name/tableHeight</Anchor>
+            <NodeRef refid="33"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/TSTableViewAppearanceCoordinator/widthForColumnAtIndex:</TokenIdentifier>
+			<Abstract type="html">Return current width for column at specified index</Abstract>
+			<DeclaredIn>TSTableViewAppearanceCoordinator.h</DeclaredIn>
+			
+			<Declaration>- (CGFloat)widthForColumnAtIndex:(NSInteger)columnIndex</Declaration>
+			
+			
+			<Anchor>//api/name/widthForColumnAtIndex:</Anchor>
+            <NodeRef refid="33"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/TSTableViewAppearanceCoordinator/widthForColumnAtPath:</TokenIdentifier>
+			<Abstract type="html">Return current width for column at specified path</Abstract>
+			<DeclaredIn>TSTableViewAppearanceCoordinator.h</DeclaredIn>
+			
+			<Declaration>- (CGFloat)widthForColumnAtPath:(NSIndexPath *)columnPath</Declaration>
+			
+			
+			<Anchor>//api/name/widthForColumnAtPath:</Anchor>
+            <NodeRef refid="33"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/TSTableViewAppearanceCoordinator/offsetForColumnAtPath:</TokenIdentifier>
+			<Abstract type="html">Return x offset for column at specified path</Abstract>
+			<DeclaredIn>TSTableViewAppearanceCoordinator.h</DeclaredIn>
+			
+			<Declaration>- (CGFloat)offsetForColumnAtPath:(NSIndexPath *)columnPath</Declaration>
+			
+			
+			<Anchor>//api/name/offsetForColumnAtPath:</Anchor>
+            <NodeRef refid="33"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/TSTableViewAppearanceCoordinator/cellViewForRowAtPath:cellIndex:</TokenIdentifier>
+			<Abstract type="html">Return height for header section at specified path</Abstract>
+			<DeclaredIn>TSTableViewAppearanceCoordinator.h</DeclaredIn>
+			
+			<Declaration>- (TSTableViewCell *)cellViewForRowAtPath:(NSIndexPath *)indexPath cellIndex:(NSInteger)index</Declaration>
+			
+			
+			<Anchor>//api/name/cellViewForRowAtPath:cellIndex:</Anchor>
+            <NodeRef refid="33"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/TSTableViewAppearanceCoordinator/headerSectionViewForColumnAtPath:</TokenIdentifier>
+			<Abstract type="html">Return height for header section at specified path</Abstract>
+			<DeclaredIn>TSTableViewAppearanceCoordinator.h</DeclaredIn>
+			
+			<Declaration>- (TSTableViewHeaderSectionView *)headerSectionViewForColumnAtPath:(NSIndexPath *)indexPath</Declaration>
+			
+			
+			<Anchor>//api/name/headerSectionViewForColumnAtPath:</Anchor>
+            <NodeRef refid="33"/>
+		</Token>
+		
+        
+	</File>
+</Tokens>

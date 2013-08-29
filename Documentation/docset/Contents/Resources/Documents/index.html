@@ -1,0 +1,286 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>TSUIKit Reference</title>
+		<link rel="stylesheet" type="text/css" href="css/styles.css" media="all" />
+		<link rel="stylesheet" type="text/css" media="print" href="css/stylesPrint.css" />
+		<meta name="generator" content="appledoc 2.1 (build 858)" />
+	</head>
+	<body>
+		<header id="top_header">
+			<div id="library" class="hideInXcode">
+				<h1><a id="libraryTitle" href="index.html">TSUIKit </a></h1>
+				<a id="developerHome" href="index.html">Viacheslav Radchenko</a>
+			</div>
+			
+			<div id="title" role="banner">
+				<h1 class="hideInXcode">TSUIKit Reference</h1>
+			</div>
+			<ul id="headerButtons" role="toolbar"></ul>
+		</header>
+		<article>
+			<div id="overview_contents" role="main">
+				<div class="main-navigation navigation-top">
+					<a href="hierarchy.html">Next</a>
+				</div>
+				<div id="header">
+					<div class="section-header">
+						<h1 class="title title-header">TSUIKit Reference</h1>
+					</div>		
+				</div>
+				<div id="container">
+					
+					<div class="section section-overview index-overview">
+						
+						
+						<h1>TSUIKit</h1>
+
+<p>Set of extended UI components for iOS.</p>
+
+<h2><a href="Classes/TSTableView.html">TSTableView</a></h2>
+
+<p><a href="Classes/TSTableView.html"><code>TSTableView</code></a> is UI component for displaying multi columns tabular data with support of hierarchical rows and columns structure.
+It provides smooth animations for item selection and dynamic content modification. Some features are listed below:</p>
+
+<ul>
+<li>Suport muti columns data structure.</li>
+<li>Support hierarchical column definition (i.e. column may have subsections).</li>
+<li>Support hierarchical row definition (i.e. row may have expand subrows).</li>
+<li>Optimized to display big sets of data: row and cell views are cached internally and reused during scrolling.</li>
+<li>Support row and column selection.</li>
+<li>Allow modification of column width by sliding column border.</li>
+<li>Allow expand/collapse subrows content.</li>
+<li>Support simple declarative syntax for columns and rows content definition.</li>
+<li>Providing your own implementation of <a href="Protocols/TSTableViewDataSource.html">TSTableViewDataSource</a> protocol will allow you fully customise structure and appearance of the table.</li>
+<li>Default TSTableViewModel implements TSTableViewDataSource protocol and includes two built in styles (see screenshots).</li>
+</ul>
+
+
+<p><img src="[https://raw.github.com/Viacheslav-Radchenko/TSUIKit/master/Screenshots/TSTableView](https://raw.github.com/Viacheslav-Radchenko/TSUIKit/master/Screenshots/TSTableView)_SCreenshot1.png" alt="TSTableView examples" width="360" height="480" />
+<img src="[https://raw.github.com/Viacheslav-Radchenko/TSUIKit/master/Screenshots/TSTableView](https://raw.github.com/Viacheslav-Radchenko/TSUIKit/master/Screenshots/TSTableView)_Screenshot4.png" alt="[TSTableView](Classes/TSTableView.html) examples" width="360" height="480" /></p>
+
+<p>Example of <a href="Classes/TSTableView.html">TSTableView</a> object instantiation provided below. See more complex examples in project.
+```
+    NSArray *columns = @[
+                         @{ @&ldquo;title&rdquo; : @&ldquo;Column 1&rdquo;, @&ldquo;subtitle&rdquo; : @&ldquo;This is first column&rdquo;},
+                         @{ @&ldquo;title&rdquo; : @&ldquo;Column 2&rdquo;, @&ldquo;subcolumns&rdquo; : @[
+                                    @{ @&ldquo;title&rdquo; : @&ldquo;Column 2.1&rdquo;, @&ldquo;headerHeight&rdquo; : @20},
+                                    @{ @&ldquo;title&rdquo; : @&ldquo;Column 2.2&rdquo;, @&ldquo;headerHeight&rdquo; : @20}]},
+                         @{ @&ldquo;title&rdquo; : @&ldquo;Column 3&rdquo;, @&ldquo;titleColor&rdquo; : @&ldquo;FF00CF00&rdquo;}
+                         ];</p>
+
+<pre><code>NSArray *rows = @[
+                  @{ @"cells" : @[
+                             @{ @"value" : @"Value 1"},
+                             @{ @"value" : @1},
+                             @{ @"value" : @2},
+                             @{ @"value" : @3}
+                             ]
+                     },
+                  @{ @"cells" : @[
+                             @{ @"value" : @"Value 2"},
+                             @{ @"value" : @2},
+                             @{ @"value" : @3},
+                             @{ @"value" : @4}
+                             ]
+                     }
+                  ];
+
+TSTableView *tableView = [[TSTableView alloc] initWithFrame:self.view.bounds];
+tableView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+tableView.delegate = self;
+[self.view addSubview:tableView];
+
+TSTableViewModel  *dataModel = [[TSTableViewModel alloc] initWithTableView:tableView andStyle:kTSTableViewStyleDark];
+[dataModel setColumnsInfo:columns andRowsInfo:rows];
+</code></pre>
+
+<p>```</p>
+
+<h2><a href="Classes/TSNavigationStripView.html">TSNavigationStripView</a></h2>
+
+<p><a href="Classes/TSNavigationStripView.html"><code>TSNavigationStripView</code></a> is a navigation menu control with highly customizable design and flexible structure.
+It provides smooth animations for item selection and dynamic content modification.</p>
+
+<p><img src="[https://raw.github.com/Viacheslav-Radchenko/TSUIKit/master/Screenshots/TSNavigationStripView](https://raw.github.com/Viacheslav-Radchenko/TSUIKit/master/Screenshots/TSNavigationStripView)_Screenshot1.jpg" alt="TSNavigationStripView examples" width="360" height="480" />
+<img src="[https://raw.github.com/Viacheslav-Radchenko/TSUIKit/master/Screenshots/TSNavigationStripView](https://raw.github.com/Viacheslav-Radchenko/TSUIKit/master/Screenshots/TSNavigationStripView)_Screenshot2.jpg" alt="[TSNavigationStripView](Classes/TSNavigationStripView.html) examples" width="360" height="480" /></p>
+
+<h2><a href="Classes/TSTabView.html">TSTabView</a></h2>
+
+<p><a href="Classes/TSTabView.html"><code>TSTabView</code></a> is a container component for set of views or view controllers.</p>
+
+<p><img src="[https://raw.github.com/Viacheslav-Radchenko/TSUIKit/master/Screenshots/TSTabView](https://raw.github.com/Viacheslav-Radchenko/TSUIKit/master/Screenshots/TSTabView)_Screenshot1.jpg" alt="TSTabView examples" width="360" height="480" />
+<img src="[https://raw.github.com/Viacheslav-Radchenko/SSUIKit/master/Screenshots/TSTabView](https://raw.github.com/Viacheslav-Radchenko/SSUIKit/master/Screenshots/TSTabView)_Screenshot2.jpg" alt="[TSTabView](Classes/TSTabView.html) examples" width="360" height="480" /></p>
+
+<h2><a href="Classes/TSTabViewWithDropDownPanel.html">TSTabViewWithDropDownPanel</a></h2>
+
+<p><a href="Classes/TSTabViewWithDropDownPanel.html"><code>TSTabViewWithDropDownPanel</code></a> extends <a href="Classes/TSTabView.html"><code>TSTabView</code></a>. Custom view can be attached to drop down panel which pull down/up on top of tabs container.</p>
+
+<p><img src="[https://raw.github.com/Viacheslav-Radchenko/TSUIKit/master/Screenshots/TSTabViewWithDropDownPanel_Screenshot1.jpg](https://raw.github.com/Viacheslav-Radchenko/TSUIKit/master/Screenshots/TSTabViewWithDropDownPanel_Screenshot1.jpg)" alt="[TSTabViewWithDropDownPanel](Classes/TSTabViewWithDropDownPanel.html) examples" width="360" height="480" /></p>
+
+<h2>Requirements</h2>
+
+<ul>
+<li>Xcode 4.5 or higher</li>
+<li>Apple LLVM compiler</li>
+<li>iOS 5.0 or higher</li>
+<li>ARC</li>
+<li>QuartzCore.framework</li>
+</ul>
+
+
+<h2>Demo</h2>
+
+<p>Build and run the <code>TSUIKit</code> project in Xcode to see examples of each component.
+Right now better way to see components functionality is to compile examples provided with project, they fully display structure and dynamics of controls, as well as possible use cases.</p>
+
+<h2>Installation</h2>
+
+<p>All you need to do is drop <code>TSUIKit</code> source files into your project and add corresponding <code>#include "*.h"</code> to the top of classes that will use particular component.
+<code>TS*Models</code> are optional part of <code>TSUIKit</code> infrastructure. They provide ready-to-use examples of corresponding data source implementations. You may use them or implement your own data sources.
+<code>TSUIKit</code> use <code>QuartzCore.framework</code>, so you might need to add it as well.</p>
+
+<h2>Contact</h2>
+
+<p>Viacheslav Radchenko</p>
+
+<ul>
+<li><a href="https://github.com/Viacheslav-Radchenko">https://github.com/Viacheslav-Radchenko</a></li>
+<li>radchencko.v.i@gmail.com</li>
+</ul>
+
+
+<h2>License</h2>
+
+<p>TSUKit is available under the MIT license.</p>
+
+<p>Copyright © 2013 Viacheslav Radchenko.</p>
+
+<p>Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the &ldquo;Software&rdquo;), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:</p>
+
+<p>The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.</p>
+
+<p>THE SOFTWARE IS PROVIDED &ldquo;AS IS&rdquo;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>
+						
+						
+					</div>
+					
+                        
+                    
+					
+					
+					<div class="index-column">
+						<h2 class="index-title">Class References</h2>
+						<ul>
+							
+							<li><a href="Classes/TSCell.html">TSCell</a></li>
+							
+							<li><a href="Classes/TSColumn.html">TSColumn</a></li>
+							
+							<li><a href="Classes/TSNavigationStripComponent.html">TSNavigationStripComponent</a></li>
+							
+							<li><a href="Classes/TSNavigationStripItem.html">TSNavigationStripItem</a></li>
+							
+							<li><a href="Classes/TSNavigationStripModel.html">TSNavigationStripModel</a></li>
+							
+							<li><a href="Classes/TSNavigationStripSection.html">TSNavigationStripSection</a></li>
+							
+							<li><a href="Classes/TSNavigationStripView.html">TSNavigationStripView</a></li>
+							
+							<li><a href="Classes/TSRow.html">TSRow</a></li>
+							
+							<li><a href="Classes/TSScrollView.html">TSScrollView</a></li>
+							
+							<li><a href="Classes/TSTabView.html">TSTabView</a></li>
+							
+							<li><a href="Classes/TSTabViewItem.html">TSTabViewItem</a></li>
+							
+							<li><a href="Classes/TSTabViewModel.html">TSTabViewModel</a></li>
+							
+							<li><a href="Classes/TSTabViewSection.html">TSTabViewSection</a></li>
+							
+							<li><a href="Classes/TSTabViewWithDropDownPanel.html">TSTabViewWithDropDownPanel</a></li>
+							
+							<li><a href="Classes/TSTabViewWithDropDownPanelModel.html">TSTabViewWithDropDownPanelModel</a></li>
+							
+							<li><a href="Classes/TSTableView.html">TSTableView</a></li>
+							
+							<li><a href="Classes/TSTableViewCell.html">TSTableViewCell</a></li>
+							
+							<li><a href="Classes/TSTableViewContentHolder.html">TSTableViewContentHolder</a></li>
+							
+							<li><a href="Classes/TSTableViewExpandControlPanel.html">TSTableViewExpandControlPanel</a></li>
+							
+							<li><a href="Classes/TSTableViewExpandSection.html">TSTableViewExpandSection</a></li>
+							
+							<li><a href="Classes/TSTableViewHeaderPanel.html">TSTableViewHeaderPanel</a></li>
+							
+							<li><a href="Classes/TSTableViewHeaderSection.html">TSTableViewHeaderSection</a></li>
+							
+							<li><a href="Classes/TSTableViewHeaderSectionView.html">TSTableViewHeaderSectionView</a></li>
+							
+							<li><a href="Classes/TSTableViewModel.html">TSTableViewModel</a></li>
+							
+							<li><a href="Classes/TSTableViewRow.html">TSTableViewRow</a></li>
+							
+							<li><a href="Classes/TSTableViewRowProxy.html">TSTableViewRowProxy</a></li>
+							
+							<li><a href="Classes/TSUtils.html">TSUtils</a></li>
+							
+						</ul>
+					</div>
+					
+					
+						
+					<div class="index-column">
+						
+						<h2 class="index-title">Protocol References</h2>
+						<ul>
+							
+							<li><a href="Protocols/TSNavigationStripDataSource.html">TSNavigationStripDataSource</a></li>
+							
+							<li><a href="Protocols/TSNavigationStripViewDelegate.html">TSNavigationStripViewDelegate</a></li>
+							
+							<li><a href="Protocols/TSTabViewDataSource.html">TSTabViewDataSource</a></li>
+							
+							<li><a href="Protocols/TSTabViewDelegate.html">TSTabViewDelegate</a></li>
+							
+							<li><a href="Protocols/TSTabViewWithDropDownPanelDelegate.html">TSTabViewWithDropDownPanelDelegate</a></li>
+							
+							<li><a href="Protocols/TSTableViewAppearanceCoordinator.html">TSTableViewAppearanceCoordinator</a></li>
+							
+							<li><a href="Protocols/TSTableViewContentHolderDelegate.html">TSTableViewContentHolderDelegate</a></li>
+							
+							<li><a href="Protocols/TSTableViewDataSource.html">TSTableViewDataSource</a></li>
+							
+							<li><a href="Protocols/TSTableViewDelegate.html">TSTableViewDelegate</a></li>
+							
+							<li><a href="Protocols/TSTableViewExpandControlPanelDelegate.html">TSTableViewExpandControlPanelDelegate</a></li>
+							
+							<li><a href="Protocols/TSTableViewHeaderPanelDelegate.html">TSTableViewHeaderPanelDelegate</a></li>
+							
+						</ul>
+						
+                        
+						
+					</div>
+					
+				</div>
+				<div class="main-navigation navigation-bottom">
+					<a href="hierarchy.html">Next</a>
+				</div>
+				<div id="footer">
+					<hr />
+					<div class="footer-copyright">
+						<p><span class="copyright">&copy; 2013 Viacheslav Radchenko. All rights reserved. (Last updated: 2013-08-29)</span><br />
+						
+						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.1 (build 858)</a>.</span></p>
+						
+	
+					</div>
+				</div>
+			</div>
+		</article>		
+	</body>
+</html>

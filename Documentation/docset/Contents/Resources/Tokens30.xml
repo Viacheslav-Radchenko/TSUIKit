@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Protocols/TSTabViewDataSource.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intf/TSTabViewDataSource</TokenIdentifier>
+			<Abstract type="html">TSTabViewDataSource is shared between TSTabView and TSNavigationStripView.  
+                 TSTabViewDataSource extends TSNavigationStripDataSource providing TSTabView with tabs information. </Abstract>
+			<DeclaredIn>TSTabViewDataSource.h</DeclaredIn>
+            
+			
+			<NodeRef refid="30"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/TSTabViewDataSource/viewControllerForTabAtIndex:</TokenIdentifier>
+			<Abstract type="html">Provide UI content for tab at index. Tabs can be represented by subclasses of UIView or UIViewController.
+                Only one of these methods is required for implementation.
+                tabViewControllerForIndex: has more priority, if it&apos;s implemented in data source then viewForIndex: wouldn&apos;t be invoked.</Abstract>
+			<DeclaredIn>TSTabViewDataSource.h</DeclaredIn>
+			
+			<Declaration>- (UIViewController *)viewControllerForTabAtIndex:(NSInteger)index</Declaration>
+			
+			
+			<Anchor>//api/name/viewControllerForTabAtIndex:</Anchor>
+            <NodeRef refid="30"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/TSTabViewDataSource/viewForTabAtIndex:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSTabViewDataSource.h</DeclaredIn>
+			
+			<Declaration>- (UIView *)viewForTabAtIndex:(NSInteger)index</Declaration>
+			
+			
+			<Anchor>//api/name/viewForTabAtIndex:</Anchor>
+            <NodeRef refid="30"/>
+		</Token>
+		
+        
+	</File>
+</Tokens>

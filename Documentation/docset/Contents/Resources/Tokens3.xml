@@ -1,0 +1,521 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/TSNavigationStripComponent.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/TSNavigationStripComponent</TokenIdentifier>
+			<Abstract type="html">TSNavigationStripComponent is base class, which provides appearance information for TSNavigationStripView&apos;s section or item.</Abstract>
+			<DeclaredIn>TSNavigationStripModel.h</DeclaredIn>
+            
+			
+			<NodeRef refid="3"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSNavigationStripComponent/setTitle:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSNavigationStripModel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSString *title</Declaration>
+			
+			
+			<Anchor>//api/name/title</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSNavigationStripComponent/title</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSNavigationStripModel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSString *title</Declaration>
+			
+			
+			<Anchor>//api/name/title</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/TSNavigationStripComponent/title</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSNavigationStripModel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSString *title</Declaration>
+			
+			
+			<Anchor>//api/name/title</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSNavigationStripComponent/setSelectedTitle:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSNavigationStripModel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSString *selectedTitle</Declaration>
+			
+			
+			<Anchor>//api/name/selectedTitle</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSNavigationStripComponent/selectedTitle</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSNavigationStripModel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSString *selectedTitle</Declaration>
+			
+			
+			<Anchor>//api/name/selectedTitle</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/TSNavigationStripComponent/selectedTitle</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSNavigationStripModel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSString *selectedTitle</Declaration>
+			
+			
+			<Anchor>//api/name/selectedTitle</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSNavigationStripComponent/setIcon:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSNavigationStripModel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) UIImage *icon</Declaration>
+			
+			
+			<Anchor>//api/name/icon</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSNavigationStripComponent/icon</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSNavigationStripModel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) UIImage *icon</Declaration>
+			
+			
+			<Anchor>//api/name/icon</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/TSNavigationStripComponent/icon</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSNavigationStripModel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) UIImage *icon</Declaration>
+			
+			
+			<Anchor>//api/name/icon</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSNavigationStripComponent/setSelectedIcon:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSNavigationStripModel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) UIImage *selectedIcon</Declaration>
+			
+			
+			<Anchor>//api/name/selectedIcon</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSNavigationStripComponent/selectedIcon</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSNavigationStripModel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) UIImage *selectedIcon</Declaration>
+			
+			
+			<Anchor>//api/name/selectedIcon</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/TSNavigationStripComponent/selectedIcon</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSNavigationStripModel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) UIImage *selectedIcon</Declaration>
+			
+			
+			<Anchor>//api/name/selectedIcon</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSNavigationStripComponent/setBackgroundImage:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSNavigationStripModel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) UIImage *backgroundImage</Declaration>
+			
+			
+			<Anchor>//api/name/backgroundImage</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSNavigationStripComponent/backgroundImage</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSNavigationStripModel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) UIImage *backgroundImage</Declaration>
+			
+			
+			<Anchor>//api/name/backgroundImage</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/TSNavigationStripComponent/backgroundImage</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSNavigationStripModel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) UIImage *backgroundImage</Declaration>
+			
+			
+			<Anchor>//api/name/backgroundImage</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSNavigationStripComponent/setSelectedBackgroundImage:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSNavigationStripModel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) UIImage *selectedBackgroundImage</Declaration>
+			
+			
+			<Anchor>//api/name/selectedBackgroundImage</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSNavigationStripComponent/selectedBackgroundImage</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSNavigationStripModel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) UIImage *selectedBackgroundImage</Declaration>
+			
+			
+			<Anchor>//api/name/selectedBackgroundImage</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/TSNavigationStripComponent/selectedBackgroundImage</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSNavigationStripModel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) UIImage *selectedBackgroundImage</Declaration>
+			
+			
+			<Anchor>//api/name/selectedBackgroundImage</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSNavigationStripComponent/setFont:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSNavigationStripModel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) UIFont *font</Declaration>
+			
+			
+			<Anchor>//api/name/font</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSNavigationStripComponent/font</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSNavigationStripModel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) UIFont *font</Declaration>
+			
+			
+			<Anchor>//api/name/font</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/TSNavigationStripComponent/font</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSNavigationStripModel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) UIFont *font</Declaration>
+			
+			
+			<Anchor>//api/name/font</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSNavigationStripComponent/setSelectedFont:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSNavigationStripModel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) UIFont *selectedFont</Declaration>
+			
+			
+			<Anchor>//api/name/selectedFont</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSNavigationStripComponent/selectedFont</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSNavigationStripModel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) UIFont *selectedFont</Declaration>
+			
+			
+			<Anchor>//api/name/selectedFont</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/TSNavigationStripComponent/selectedFont</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSNavigationStripModel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) UIFont *selectedFont</Declaration>
+			
+			
+			<Anchor>//api/name/selectedFont</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSNavigationStripComponent/setColor:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSNavigationStripModel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) UIColor *color</Declaration>
+			
+			
+			<Anchor>//api/name/color</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSNavigationStripComponent/color</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSNavigationStripModel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) UIColor *color</Declaration>
+			
+			
+			<Anchor>//api/name/color</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/TSNavigationStripComponent/color</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSNavigationStripModel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) UIColor *color</Declaration>
+			
+			
+			<Anchor>//api/name/color</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSNavigationStripComponent/setSelectedColor:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSNavigationStripModel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) UIColor *selectedColor</Declaration>
+			
+			
+			<Anchor>//api/name/selectedColor</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSNavigationStripComponent/selectedColor</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSNavigationStripModel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) UIColor *selectedColor</Declaration>
+			
+			
+			<Anchor>//api/name/selectedColor</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/TSNavigationStripComponent/selectedColor</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSNavigationStripModel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) UIColor *selectedColor</Declaration>
+			
+			
+			<Anchor>//api/name/selectedColor</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSNavigationStripComponent/setBackgroundColor:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSNavigationStripModel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) UIColor *backgroundColor</Declaration>
+			
+			
+			<Anchor>//api/name/backgroundColor</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSNavigationStripComponent/backgroundColor</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSNavigationStripModel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) UIColor *backgroundColor</Declaration>
+			
+			
+			<Anchor>//api/name/backgroundColor</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/TSNavigationStripComponent/backgroundColor</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSNavigationStripModel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) UIColor *backgroundColor</Declaration>
+			
+			
+			<Anchor>//api/name/backgroundColor</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSNavigationStripComponent/setSelectedBackgroundColor:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSNavigationStripModel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) UIColor *selectedBackgroundColor</Declaration>
+			
+			
+			<Anchor>//api/name/selectedBackgroundColor</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSNavigationStripComponent/selectedBackgroundColor</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSNavigationStripModel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) UIColor *selectedBackgroundColor</Declaration>
+			
+			
+			<Anchor>//api/name/selectedBackgroundColor</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/TSNavigationStripComponent/selectedBackgroundColor</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSNavigationStripModel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) UIColor *selectedBackgroundColor</Declaration>
+			
+			
+			<Anchor>//api/name/selectedBackgroundColor</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSNavigationStripComponent/setShadowColor:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSNavigationStripModel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) UIColor *shadowColor</Declaration>
+			
+			
+			<Anchor>//api/name/shadowColor</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSNavigationStripComponent/shadowColor</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSNavigationStripModel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) UIColor *shadowColor</Declaration>
+			
+			
+			<Anchor>//api/name/shadowColor</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/TSNavigationStripComponent/shadowColor</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSNavigationStripModel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) UIColor *shadowColor</Declaration>
+			
+			
+			<Anchor>//api/name/shadowColor</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSNavigationStripComponent/setShadowOffset:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSNavigationStripModel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) CGSize shadowOffset</Declaration>
+			
+			
+			<Anchor>//api/name/shadowOffset</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSNavigationStripComponent/shadowOffset</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSNavigationStripModel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) CGSize shadowOffset</Declaration>
+			
+			
+			<Anchor>//api/name/shadowOffset</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/TSNavigationStripComponent/shadowOffset</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSNavigationStripModel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) CGSize shadowOffset</Declaration>
+			
+			
+			<Anchor>//api/name/shadowOffset</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+        
+	</File>
+</Tokens>

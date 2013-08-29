@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Protocols/TSTableViewExpandControlPanelDelegate.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intf/TSTableViewExpandControlPanelDelegate</TokenIdentifier>
+			<Abstract type="html">Provide delegate object that implement TSTableViewExpandControlPanelDelegate to TSTableViewExpandControlPanel to be notified on expand state changes.</Abstract>
+			<DeclaredIn>TSTableViewExpandControlPanel.h</DeclaredIn>
+            
+			
+			<NodeRef refid="37"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/TSTableViewExpandControlPanelDelegate/tableViewSideControlPanel:expandStateDidChange:forRow:</TokenIdentifier>
+			<Abstract type="html">Invoked when user manually changing expand state</Abstract>
+			<DeclaredIn>TSTableViewExpandControlPanel.h</DeclaredIn>
+			
+			<Declaration>- (void)tableViewSideControlPanel:(TSTableViewExpandControlPanel *)controlPanel expandStateDidChange:(BOOL)expand forRow:(NSIndexPath *)rowPath</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>controlPanel</Name>
+					<Abstract type="html">Instance of TSTableViewExpandControlPanel.</Abstract>
+				</Parameter><Parameter>
+					<Name>expand</Name>
+					<Abstract type="html">Updated expand state.</Abstract>
+				</Parameter><Parameter>
+					<Name>rowPath</Name>
+					<Abstract type="html">Path to row where state was changed.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/tableViewSideControlPanel:expandStateDidChange:forRow:</Anchor>
+            <NodeRef refid="37"/>
+		</Token>
+		
+        
+	</File>
+</Tokens>

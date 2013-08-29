@@ -1,0 +1,413 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/TSTabView.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/TSTabView</TokenIdentifier>
+			<Abstract type="html">TSTabView is a container for set of views or view controllers.
+                Provides smooth animations while switching between visible tabs and for dynamic content modification.
+                Basic layout shown below:
+*
+    | LEFT ITEMS | &lt; |   SECTIONS   | &gt; | RIGHT ITEMS |  &lt;-- TSNavigationStripView as a subview. Set during TSTabView initialization.
+    |                                                 |
+    |                                                 |
+    |                      TABS                       |  &lt;-- Content container. Tabs can be represented by subclasses of UIView or UIViewController.
+    |                                                 |
+    |                                                 |</Abstract>
+			<DeclaredIn>TSTabView.h</DeclaredIn>
+            
+			
+			<NodeRef refid="10"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTabView/setDelegate:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSTabView.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, weak) id&lt;TSTabViewDelegate&gt; delegate</Declaration>
+			
+			
+			<Anchor>//api/name/delegate</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTabView/delegate</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSTabView.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, weak) id&lt;TSTabViewDelegate&gt; delegate</Declaration>
+			
+			
+			<Anchor>//api/name/delegate</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/TSTabView/delegate</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSTabView.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, weak) id&lt;TSTabViewDelegate&gt; delegate</Declaration>
+			
+			
+			<Anchor>//api/name/delegate</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTabView/setDataSource:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSTabView.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, weak) id&lt;TSTabViewDataSource&gt; dataSource</Declaration>
+			
+			
+			<Anchor>//api/name/dataSource</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTabView/dataSource</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSTabView.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, weak) id&lt;TSTabViewDataSource&gt; dataSource</Declaration>
+			
+			
+			<Anchor>//api/name/dataSource</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/TSTabView/dataSource</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSTabView.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, weak) id&lt;TSTabViewDataSource&gt; dataSource</Declaration>
+			
+			
+			<Anchor>//api/name/dataSource</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTabView/setNavigationMenu:</TokenIdentifier>
+			<Abstract type="html">Navigation control. Set during TSTabView initialization.</Abstract>
+			<DeclaredIn>TSTabView.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong, readonly) TSNavigationStripView *navigationMenu</Declaration>
+			
+			
+			<Anchor>//api/name/navigationMenu</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTabView/navigationMenu</TokenIdentifier>
+			<Abstract type="html">Navigation control. Set during TSTabView initialization.</Abstract>
+			<DeclaredIn>TSTabView.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong, readonly) TSNavigationStripView *navigationMenu</Declaration>
+			
+			
+			<Anchor>//api/name/navigationMenu</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/TSTabView/navigationMenu</TokenIdentifier>
+			<Abstract type="html">Navigation control. Set during TSTabView initialization.</Abstract>
+			<DeclaredIn>TSTabView.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong, readonly) TSNavigationStripView *navigationMenu</Declaration>
+			
+			
+			<Anchor>//api/name/navigationMenu</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTabView/setNavigationMenuEdgeInsets:</TokenIdentifier>
+			<Abstract type="html">Customize position and bounds of TSNavigationStripView and tabs container in root view.
+                By default both insets are UIEdgeInsetsZero: 
+                    - TSNavigationStripView is located along top edge of TSTabView view.
+                    - Tabs container is located below and fill remaining space in TSTabView view.
+                If navigationMenuEdgeInsets is UIEdgeInsetsZero, then contentViewEdgeInsets is applied considering TSNavigationStripView size.
+                If navigationMenuEdgeInsets isn&apos;t UIEdgeInsetsZero, then contentViewEdgeInsets is applied relative root view&apos;s frame,
+                size of TSNavigationStripView isn&apos;t taken into account during layout calculation.
+                This allows creating overlapping layouts when TSNavigationStripView is located above tabs container.
+    @def        UIEdgeInsetsZero</Abstract>
+			<DeclaredIn>TSTabView.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) UIEdgeInsets navigationMenuEdgeInsets</Declaration>
+			
+			
+			<Anchor>//api/name/navigationMenuEdgeInsets</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTabView/navigationMenuEdgeInsets</TokenIdentifier>
+			<Abstract type="html">Customize position and bounds of TSNavigationStripView and tabs container in root view.
+                By default both insets are UIEdgeInsetsZero: 
+                    - TSNavigationStripView is located along top edge of TSTabView view.
+                    - Tabs container is located below and fill remaining space in TSTabView view.
+                If navigationMenuEdgeInsets is UIEdgeInsetsZero, then contentViewEdgeInsets is applied considering TSNavigationStripView size.
+                If navigationMenuEdgeInsets isn&apos;t UIEdgeInsetsZero, then contentViewEdgeInsets is applied relative root view&apos;s frame,
+                size of TSNavigationStripView isn&apos;t taken into account during layout calculation.
+                This allows creating overlapping layouts when TSNavigationStripView is located above tabs container.
+    @def        UIEdgeInsetsZero</Abstract>
+			<DeclaredIn>TSTabView.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) UIEdgeInsets navigationMenuEdgeInsets</Declaration>
+			
+			
+			<Anchor>//api/name/navigationMenuEdgeInsets</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/TSTabView/navigationMenuEdgeInsets</TokenIdentifier>
+			<Abstract type="html">Customize position and bounds of TSNavigationStripView and tabs container in root view.
+                By default both insets are UIEdgeInsetsZero: 
+                    - TSNavigationStripView is located along top edge of TSTabView view.
+                    - Tabs container is located below and fill remaining space in TSTabView view.
+                If navigationMenuEdgeInsets is UIEdgeInsetsZero, then contentViewEdgeInsets is applied considering TSNavigationStripView size.
+                If navigationMenuEdgeInsets isn&apos;t UIEdgeInsetsZero, then contentViewEdgeInsets is applied relative root view&apos;s frame,
+                size of TSNavigationStripView isn&apos;t taken into account during layout calculation.
+                This allows creating overlapping layouts when TSNavigationStripView is located above tabs container.
+    @def        UIEdgeInsetsZero</Abstract>
+			<DeclaredIn>TSTabView.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) UIEdgeInsets navigationMenuEdgeInsets</Declaration>
+			
+			
+			<Anchor>//api/name/navigationMenuEdgeInsets</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTabView/setContentViewEdgeInsets:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSTabView.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) UIEdgeInsets contentViewEdgeInsets</Declaration>
+			
+			
+			<Anchor>//api/name/contentViewEdgeInsets</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTabView/contentViewEdgeInsets</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSTabView.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) UIEdgeInsets contentViewEdgeInsets</Declaration>
+			
+			
+			<Anchor>//api/name/contentViewEdgeInsets</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/TSTabView/contentViewEdgeInsets</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSTabView.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) UIEdgeInsets contentViewEdgeInsets</Declaration>
+			
+			
+			<Anchor>//api/name/contentViewEdgeInsets</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTabView/setSelectedTab:</TokenIdentifier>
+			<Abstract type="html">Currently selected tab.</Abstract>
+			<DeclaredIn>TSTabView.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign, readonly) NSInteger selectedTab</Declaration>
+			
+			
+			<Anchor>//api/name/selectedTab</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTabView/selectedTab</TokenIdentifier>
+			<Abstract type="html">Currently selected tab.</Abstract>
+			<DeclaredIn>TSTabView.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign, readonly) NSInteger selectedTab</Declaration>
+			
+			
+			<Anchor>//api/name/selectedTab</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/TSTabView/selectedTab</TokenIdentifier>
+			<Abstract type="html">Currently selected tab.</Abstract>
+			<DeclaredIn>TSTabView.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign, readonly) NSInteger selectedTab</Declaration>
+			
+			
+			<Anchor>//api/name/selectedTab</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTabView/setBounces:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSTabView.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL bounces</Declaration>
+			
+			
+			<Anchor>//api/name/bounces</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTabView/bounces</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSTabView.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL bounces</Declaration>
+			
+			
+			<Anchor>//api/name/bounces</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/TSTabView/bounces</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSTabView.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL bounces</Declaration>
+			
+			
+			<Anchor>//api/name/bounces</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTabView/setParentViewController:</TokenIdentifier>
+			<Abstract type="html">Should be set appropriatly in case if tab&apos;s content represented with UIVewController&apos;s subclasses.
+              Needed to keep valid UIViewControllers hierarchy.</Abstract>
+			<DeclaredIn>TSTabView.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, weak) UIViewController *parentViewController</Declaration>
+			
+			
+			<Anchor>//api/name/parentViewController</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTabView/parentViewController</TokenIdentifier>
+			<Abstract type="html">Should be set appropriatly in case if tab&apos;s content represented with UIVewController&apos;s subclasses.
+              Needed to keep valid UIViewControllers hierarchy.</Abstract>
+			<DeclaredIn>TSTabView.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, weak) UIViewController *parentViewController</Declaration>
+			
+			
+			<Anchor>//api/name/parentViewController</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/TSTabView/parentViewController</TokenIdentifier>
+			<Abstract type="html">Should be set appropriatly in case if tab&apos;s content represented with UIVewController&apos;s subclasses.
+              Needed to keep valid UIViewControllers hierarchy.</Abstract>
+			<DeclaredIn>TSTabView.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, weak) UIViewController *parentViewController</Declaration>
+			
+			
+			<Anchor>//api/name/parentViewController</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTabView/initWithFrame:navigationMenu:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSTabView.h</DeclaredIn>
+			
+			<Declaration>- (id)initWithFrame:(CGRect)rect navigationMenu:(TSNavigationStripView *)navigationMenu</Declaration>
+			
+			
+			<Anchor>//api/name/initWithFrame:navigationMenu:</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTabView/reloadData</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSTabView.h</DeclaredIn>
+			
+			<Declaration>- (void)reloadData</Declaration>
+			
+			
+			<Anchor>//api/name/reloadData</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTabView/reloadTabsData</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSTabView.h</DeclaredIn>
+			
+			<Declaration>- (void)reloadTabsData</Declaration>
+			
+			
+			<Anchor>//api/name/reloadTabsData</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTabView/selectTabAtIndex:animated:</TokenIdentifier>
+			<Abstract type="html">Selection.</Abstract>
+			<DeclaredIn>TSTabView.h</DeclaredIn>
+			
+			<Declaration>- (void)selectTabAtIndex:(NSInteger)index animated:(BOOL)animated</Declaration>
+			
+			
+			<Anchor>//api/name/selectTabAtIndex:animated:</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTabView/insertTabAtIndex:animated:</TokenIdentifier>
+			<Abstract type="html">Content modification. Should be invoked when data source content has been changed.</Abstract>
+			<DeclaredIn>TSTabView.h</DeclaredIn>
+			
+			<Declaration>- (void)insertTabAtIndex:(NSInteger)index animated:(BOOL)animated</Declaration>
+			
+			
+			<Anchor>//api/name/insertTabAtIndex:animated:</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTabView/removeTabAtIndex:animated:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSTabView.h</DeclaredIn>
+			
+			<Declaration>- (void)removeTabAtIndex:(NSInteger)index animated:(BOOL)animated</Declaration>
+			
+			
+			<Anchor>//api/name/removeTabAtIndex:animated:</Anchor>
+            <NodeRef refid="10"/>
+		</Token>
+		
+        
+	</File>
+</Tokens>

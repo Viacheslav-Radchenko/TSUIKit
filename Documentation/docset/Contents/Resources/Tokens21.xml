@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/TSTableViewHeaderPanel.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/TSTableViewHeaderPanel</TokenIdentifier>
+			<Abstract type="html">TSTableViewHeaderPanel is subcomponent of TSTableView. It represents columns structure of the table. 
+              Base layout is shown below:
+    |                          |                TSTableViewHeaderSection                    |                                  |
+    | TSTableViewHeaderSection +----------------------------+-------------------------------+  ...TSTableViewHeaderSection...  |
+    |                          |  TSTableViewHeaderSection  | ...TSTableViewHeaderSection   |                                  |</Abstract>
+			<DeclaredIn>TSTableViewHeaderPanel.h</DeclaredIn>
+            
+			
+			<NodeRef refid="21"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTableViewHeaderPanel/setHeaderDelegate:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSTableViewHeaderPanel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, weak) id&lt;TSTableViewHeaderPanelDelegate&gt; headerDelegate</Declaration>
+			
+			
+			<Anchor>//api/name/headerDelegate</Anchor>
+            <NodeRef refid="21"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTableViewHeaderPanel/headerDelegate</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSTableViewHeaderPanel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, weak) id&lt;TSTableViewHeaderPanelDelegate&gt; headerDelegate</Declaration>
+			
+			
+			<Anchor>//api/name/headerDelegate</Anchor>
+            <NodeRef refid="21"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/TSTableViewHeaderPanel/headerDelegate</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSTableViewHeaderPanel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, weak) id&lt;TSTableViewHeaderPanelDelegate&gt; headerDelegate</Declaration>
+			
+			
+			<Anchor>//api/name/headerDelegate</Anchor>
+            <NodeRef refid="21"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTableViewHeaderPanel/setDataSource:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSTableViewHeaderPanel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, weak) id&lt;TSTableViewDataSource,TSTableViewAppearanceCoordinator&gt; dataSource</Declaration>
+			
+			
+			<Anchor>//api/name/dataSource</Anchor>
+            <NodeRef refid="21"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTableViewHeaderPanel/dataSource</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSTableViewHeaderPanel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, weak) id&lt;TSTableViewDataSource,TSTableViewAppearanceCoordinator&gt; dataSource</Declaration>
+			
+			
+			<Anchor>//api/name/dataSource</Anchor>
+            <NodeRef refid="21"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/TSTableViewHeaderPanel/dataSource</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSTableViewHeaderPanel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, weak) id&lt;TSTableViewDataSource,TSTableViewAppearanceCoordinator&gt; dataSource</Declaration>
+			
+			
+			<Anchor>//api/name/dataSource</Anchor>
+            <NodeRef refid="21"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTableViewHeaderPanel/setAllowColumnSelection:</TokenIdentifier>
+			<Abstract type="html">Allow column selection</Abstract>
+			<DeclaredIn>TSTableViewHeaderPanel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL allowColumnSelection</Declaration>
+			
+			
+			<Anchor>//api/name/allowColumnSelection</Anchor>
+            <NodeRef refid="21"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTableViewHeaderPanel/allowColumnSelection</TokenIdentifier>
+			<Abstract type="html">Allow column selection</Abstract>
+			<DeclaredIn>TSTableViewHeaderPanel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL allowColumnSelection</Declaration>
+			
+			
+			<Anchor>//api/name/allowColumnSelection</Anchor>
+            <NodeRef refid="21"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/TSTableViewHeaderPanel/allowColumnSelection</TokenIdentifier>
+			<Abstract type="html">Allow column selection</Abstract>
+			<DeclaredIn>TSTableViewHeaderPanel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL allowColumnSelection</Declaration>
+			
+			
+			<Anchor>//api/name/allowColumnSelection</Anchor>
+            <NodeRef refid="21"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTableViewHeaderPanel/reloadData</TokenIdentifier>
+			<Abstract type="html">Reload column data</Abstract>
+			<DeclaredIn>TSTableViewHeaderPanel.h</DeclaredIn>
+			
+			<Declaration>- (void)reloadData</Declaration>
+			
+			
+			<Anchor>//api/name/reloadData</Anchor>
+            <NodeRef refid="21"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTableViewHeaderPanel/changeColumnWidthOnAmount:forColumn:animated:</TokenIdentifier>
+			<Abstract type="html">Change width of specified column</Abstract>
+			<DeclaredIn>TSTableViewHeaderPanel.h</DeclaredIn>
+			
+			<Declaration>- (void)changeColumnWidthOnAmount:(CGFloat)delta forColumn:(NSInteger)columnIndex animated:(BOOL)animated</Declaration>
+			
+			
+			<Anchor>//api/name/changeColumnWidthOnAmount:forColumn:animated:</Anchor>
+            <NodeRef refid="21"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTableViewHeaderPanel/tableTotalWidth</TokenIdentifier>
+			<Abstract type="html">Width of the table including all columns</Abstract>
+			<DeclaredIn>TSTableViewHeaderPanel.h</DeclaredIn>
+			
+			<Declaration>- (CGFloat)tableTotalWidth</Declaration>
+			
+			
+			<Anchor>//api/name/tableTotalWidth</Anchor>
+            <NodeRef refid="21"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTableViewHeaderPanel/widthForColumnAtIndex:</TokenIdentifier>
+			<Abstract type="html">Width of the specified column</Abstract>
+			<DeclaredIn>TSTableViewHeaderPanel.h</DeclaredIn>
+			
+			<Declaration>- (CGFloat)widthForColumnAtIndex:(NSInteger)index</Declaration>
+			
+			
+			<Anchor>//api/name/widthForColumnAtIndex:</Anchor>
+            <NodeRef refid="21"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTableViewHeaderPanel/widthForColumnAtPath:</TokenIdentifier>
+			<Abstract type="html">Width of the specified column</Abstract>
+			<DeclaredIn>TSTableViewHeaderPanel.h</DeclaredIn>
+			
+			<Declaration>- (CGFloat)widthForColumnAtPath:(NSIndexPath *)indexPath</Declaration>
+			
+			
+			<Anchor>//api/name/widthForColumnAtPath:</Anchor>
+            <NodeRef refid="21"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTableViewHeaderPanel/offsetForColumnAtPath:</TokenIdentifier>
+			<Abstract type="html">X offset of the specified column</Abstract>
+			<DeclaredIn>TSTableViewHeaderPanel.h</DeclaredIn>
+			
+			<Declaration>- (CGFloat)offsetForColumnAtPath:(NSIndexPath *)indexPath</Declaration>
+			
+			
+			<Anchor>//api/name/offsetForColumnAtPath:</Anchor>
+            <NodeRef refid="21"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTableViewHeaderPanel/headerHeight</TokenIdentifier>
+			<Abstract type="html">Height of the table&apos;s header. Value updated in reloadData.</Abstract>
+			<DeclaredIn>TSTableViewHeaderPanel.h</DeclaredIn>
+			
+			<Declaration>- (CGFloat)headerHeight</Declaration>
+			
+			
+			<Anchor>//api/name/headerHeight</Anchor>
+            <NodeRef refid="21"/>
+		</Token>
+		
+        
+	</File>
+</Tokens>

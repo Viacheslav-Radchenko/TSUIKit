@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/TSCell.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/TSCell</TokenIdentifier>
+			<Abstract type="html">TSCell provides inforamation about TableView cell content.</Abstract>
+			<DeclaredIn>TSTableViewModel.h</DeclaredIn>
+            
+			
+			<NodeRef refid="1"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSCell/setValue:</TokenIdentifier>
+			<Abstract type="html">Value for cell (NSString, NSNumber etc).</Abstract>
+			<DeclaredIn>TSTableViewModel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSObject *value</Declaration>
+			
+			
+			<Anchor>//api/name/value</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSCell/value</TokenIdentifier>
+			<Abstract type="html">Value for cell (NSString, NSNumber etc).</Abstract>
+			<DeclaredIn>TSTableViewModel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSObject *value</Declaration>
+			
+			
+			<Anchor>//api/name/value</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/TSCell/value</TokenIdentifier>
+			<Abstract type="html">Value for cell (NSString, NSNumber etc).</Abstract>
+			<DeclaredIn>TSTableViewModel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSObject *value</Declaration>
+			
+			
+			<Anchor>//api/name/value</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSCell/setDetails:</TokenIdentifier>
+			<Abstract type="html">Details text for cell.</Abstract>
+			<DeclaredIn>TSTableViewModel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSString *details</Declaration>
+			
+			
+			<Anchor>//api/name/details</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSCell/details</TokenIdentifier>
+			<Abstract type="html">Details text for cell.</Abstract>
+			<DeclaredIn>TSTableViewModel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSString *details</Declaration>
+			
+			
+			<Anchor>//api/name/details</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/TSCell/details</TokenIdentifier>
+			<Abstract type="html">Details text for cell.</Abstract>
+			<DeclaredIn>TSTableViewModel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSString *details</Declaration>
+			
+			
+			<Anchor>//api/name/details</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSCell/setIcon:</TokenIdentifier>
+			<Abstract type="html">Icon image for cell.</Abstract>
+			<DeclaredIn>TSTableViewModel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) UIImage *icon</Declaration>
+			
+			
+			<Anchor>//api/name/icon</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSCell/icon</TokenIdentifier>
+			<Abstract type="html">Icon image for cell.</Abstract>
+			<DeclaredIn>TSTableViewModel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) UIImage *icon</Declaration>
+			
+			
+			<Anchor>//api/name/icon</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/TSCell/icon</TokenIdentifier>
+			<Abstract type="html">Icon image for cell.</Abstract>
+			<DeclaredIn>TSTableViewModel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) UIImage *icon</Declaration>
+			
+			
+			<Anchor>//api/name/icon</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSCell/setTextAlignment:</TokenIdentifier>
+			<Abstract type="html">Text aligment in cell.</Abstract>
+			<DeclaredIn>TSTableViewModel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) NSTextAlignment textAlignment</Declaration>
+			
+			
+			<Anchor>//api/name/textAlignment</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSCell/textAlignment</TokenIdentifier>
+			<Abstract type="html">Text aligment in cell.</Abstract>
+			<DeclaredIn>TSTableViewModel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) NSTextAlignment textAlignment</Declaration>
+			
+			
+			<Anchor>//api/name/textAlignment</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/TSCell/textAlignment</TokenIdentifier>
+			<Abstract type="html">Text aligment in cell.</Abstract>
+			<DeclaredIn>TSTableViewModel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) NSTextAlignment textAlignment</Declaration>
+			
+			
+			<Anchor>//api/name/textAlignment</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSCell/setTextColor:</TokenIdentifier>
+			<Abstract type="html">Text color.</Abstract>
+			<DeclaredIn>TSTableViewModel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) UIColor *textColor</Declaration>
+			
+			
+			<Anchor>//api/name/textColor</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSCell/textColor</TokenIdentifier>
+			<Abstract type="html">Text color.</Abstract>
+			<DeclaredIn>TSTableViewModel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) UIColor *textColor</Declaration>
+			
+			
+			<Anchor>//api/name/textColor</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/TSCell/textColor</TokenIdentifier>
+			<Abstract type="html">Text color.</Abstract>
+			<DeclaredIn>TSTableViewModel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) UIColor *textColor</Declaration>
+			
+			
+			<Anchor>//api/name/textColor</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSCell/setDetailsColor:</TokenIdentifier>
+			<Abstract type="html">Details color.</Abstract>
+			<DeclaredIn>TSTableViewModel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) UIColor *detailsColor</Declaration>
+			
+			
+			<Anchor>//api/name/detailsColor</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSCell/detailsColor</TokenIdentifier>
+			<Abstract type="html">Details color.</Abstract>
+			<DeclaredIn>TSTableViewModel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) UIColor *detailsColor</Declaration>
+			
+			
+			<Anchor>//api/name/detailsColor</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/TSCell/detailsColor</TokenIdentifier>
+			<Abstract type="html">Details color.</Abstract>
+			<DeclaredIn>TSTableViewModel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) UIColor *detailsColor</Declaration>
+			
+			
+			<Anchor>//api/name/detailsColor</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/TSCell/cellWithValue:</TokenIdentifier>
+			<Abstract type="html">Create cell with value.</Abstract>
+			<DeclaredIn>TSTableViewModel.h</DeclaredIn>
+			
+			<Declaration>+ (id)cellWithValue:(NSObject *)value</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>value</Name>
+					<Abstract type="html">NSObject value type. Provide NSString, NSNumber etc arguments. </Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/cellWithValue:</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/clm/TSCell/cellWithDictionary:</TokenIdentifier>
+			<Abstract type="html">Create cell with dictionary which define content and properties of TSCell.</Abstract>
+			<DeclaredIn>TSTableViewModel.h</DeclaredIn>
+			
+			<Declaration>+ (id)cellWithDictionary:(NSDictionary *)info</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>info</Name>
+					<Abstract type="html">Dictionary containes values for named properties of TSCell.
+
+     NSDictionary *cellInfo = @{
+        @&quot;value&quot; : @1,
+        @&quot;icon&quot; : @&quot;image.png&quot;
+     };</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/cellWithDictionary:</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSCell/initWithValue:</TokenIdentifier>
+			<Abstract type="html">Initialize cell with value.</Abstract>
+			<DeclaredIn>TSTableViewModel.h</DeclaredIn>
+			
+			<Declaration>- (id)initWithValue:(NSObject *)value</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>value</Name>
+					<Abstract type="html">NSObject value type. Provide NSString, NSNumber etc arguments.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/initWithValue:</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSCell/initWithDictionary:</TokenIdentifier>
+			<Abstract type="html">Initialize cell with dictionary which define content and properties of TSCell.</Abstract>
+			<DeclaredIn>TSTableViewModel.h</DeclaredIn>
+			
+			<Declaration>- (id)initWithDictionary:(NSDictionary *)info</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>info</Name>
+					<Abstract type="html">Dictionary containes values for named properties of TSCell.
+
+     NSDictionary *cellInfo = @{
+         @&quot;value&quot; : @1,
+         @&quot;icon&quot; : @&quot;image.png&quot;
+     };</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/initWithDictionary:</Anchor>
+            <NodeRef refid="1"/>
+		</Token>
+		
+        
+	</File>
+</Tokens>

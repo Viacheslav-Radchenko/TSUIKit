@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Protocols/TSTabViewWithDropDownPanelDelegate.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intf/TSTabViewWithDropDownPanelDelegate</TokenIdentifier>
+			<Abstract type="html">TSTabViewWithDropDownPanelDelegate extends TSTabViewDelegate protocol.</Abstract>
+			<DeclaredIn>TSTabViewWithDropDownPanelDelegate.h</DeclaredIn>
+            
+			
+			<NodeRef refid="32"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/TSTabViewWithDropDownPanelDelegate/tabViewWithDropDownPanel:willShowPanel:animated:</TokenIdentifier>
+			<Abstract type="html">Drop down panel visibility state change callbacks</Abstract>
+			<DeclaredIn>TSTabViewWithDropDownPanelDelegate.h</DeclaredIn>
+			
+			<Declaration>- (void)tabViewWithDropDownPanel:(TSTabViewWithDropDownPanel *)tabView willShowPanel:(UIView *)panel animated:(BOOL)animated</Declaration>
+			
+			
+			<Anchor>//api/name/tabViewWithDropDownPanel:willShowPanel:animated:</Anchor>
+            <NodeRef refid="32"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/TSTabViewWithDropDownPanelDelegate/tabViewWithDropDownPanel:didShowPanel:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSTabViewWithDropDownPanelDelegate.h</DeclaredIn>
+			
+			<Declaration>- (void)tabViewWithDropDownPanel:(TSTabViewWithDropDownPanel *)tabView didShowPanel:(UIView *)panel</Declaration>
+			
+			
+			<Anchor>//api/name/tabViewWithDropDownPanel:didShowPanel:</Anchor>
+            <NodeRef refid="32"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/TSTabViewWithDropDownPanelDelegate/tabViewWithDropDownPanel:willHidePanel:animated:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSTabViewWithDropDownPanelDelegate.h</DeclaredIn>
+			
+			<Declaration>- (void)tabViewWithDropDownPanel:(TSTabViewWithDropDownPanel *)tabView willHidePanel:(UIView *)panel animated:(BOOL)animated</Declaration>
+			
+			
+			<Anchor>//api/name/tabViewWithDropDownPanel:willHidePanel:animated:</Anchor>
+            <NodeRef refid="32"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/TSTabViewWithDropDownPanelDelegate/tabViewWithDropDownPanel:didHidePanel:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSTabViewWithDropDownPanelDelegate.h</DeclaredIn>
+			
+			<Declaration>- (void)tabViewWithDropDownPanel:(TSTabViewWithDropDownPanel *)tabView didHidePanel:(UIView *)panel</Declaration>
+			
+			
+			<Anchor>//api/name/tabViewWithDropDownPanel:didHidePanel:</Anchor>
+            <NodeRef refid="32"/>
+		</Token>
+		
+        
+	</File>
+</Tokens>

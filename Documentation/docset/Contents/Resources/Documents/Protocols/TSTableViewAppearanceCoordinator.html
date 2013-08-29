@@ -1,0 +1,989 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
+		<title>TSTableViewAppearanceCoordinator Protocol Reference</title>
+		<meta id="xcode-display" name="xcode-display" content="render"/>
+		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
+		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
+		<meta name="generator" content="appledoc 2.1 (build 858)" />
+	</head>
+	<body>
+		<header id="top_header">
+			<div id="library" class="hideInXcode">
+				<h1><a id="libraryTitle" href="../index.html">TSUIKit </a></h1>
+				<a id="developerHome" href="../index.html">Viacheslav Radchenko</a>
+			</div>
+			
+			<div id="title" role="banner">
+				<h1 class="hideInXcode">TSTableViewAppearanceCoordinator Protocol Reference</h1>
+			</div>
+			<ul id="headerButtons" role="toolbar">
+				<li id="toc_button">
+					<button aria-label="Show Table of Contents" role="checkbox" class="open" id="table_of_contents"><span class="disclosure"></span>Table of Contents</button>
+				</li>
+				<li id="jumpto_button" role="navigation">
+					<select id="jumpTo">
+	<option value="top">Jump To&#133;</option>
+	
+	<option value="overview">Overview</option>
+	
+	
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<option value="instance_methods">Instance Methods</option>
+	
+	<option value="//api/name/cellViewForRowAtPath:cellIndex:">&nbsp;&nbsp;&nbsp;&nbsp;- cellViewForRowAtPath:cellIndex:</option>
+	
+	<option value="//api/name/controlPanelExpandItemNormalBackgroundImage">&nbsp;&nbsp;&nbsp;&nbsp;- controlPanelExpandItemNormalBackgroundImage</option>
+	
+	<option value="//api/name/controlPanelExpandItemSelectedBackgroundImage">&nbsp;&nbsp;&nbsp;&nbsp;- controlPanelExpandItemSelectedBackgroundImage</option>
+	
+	<option value="//api/name/controlPanelExpandSectionBackgroundImage">&nbsp;&nbsp;&nbsp;&nbsp;- controlPanelExpandSectionBackgroundImage</option>
+	
+	<option value="//api/name/headerSectionViewForColumnAtPath:">&nbsp;&nbsp;&nbsp;&nbsp;- headerSectionViewForColumnAtPath:</option>
+	
+	<option value="//api/name/highlightControlsOnTap">&nbsp;&nbsp;&nbsp;&nbsp;- highlightControlsOnTap</option>
+	
+	<option value="//api/name/isRowExpanded:">&nbsp;&nbsp;&nbsp;&nbsp;- isRowExpanded:</option>
+	
+	<option value="//api/name/isRowVisible:">&nbsp;&nbsp;&nbsp;&nbsp;- isRowVisible:</option>
+	
+	<option value="//api/name/lineNumbersAreHidden">&nbsp;&nbsp;&nbsp;&nbsp;- lineNumbersAreHidden</option>
+	
+	<option value="//api/name/lineNumbersColor">&nbsp;&nbsp;&nbsp;&nbsp;- lineNumbersColor</option>
+	
+	<option value="//api/name/offsetForColumnAtPath:">&nbsp;&nbsp;&nbsp;&nbsp;- offsetForColumnAtPath:</option>
+	
+	<option value="//api/name/tableHeight">&nbsp;&nbsp;&nbsp;&nbsp;- tableHeight</option>
+	
+	<option value="//api/name/tableTotalHeight">&nbsp;&nbsp;&nbsp;&nbsp;- tableTotalHeight</option>
+	
+	<option value="//api/name/tableTotalWidth">&nbsp;&nbsp;&nbsp;&nbsp;- tableTotalWidth</option>
+	
+	<option value="//api/name/widthForColumnAtIndex:">&nbsp;&nbsp;&nbsp;&nbsp;- widthForColumnAtIndex:</option>
+	
+	<option value="//api/name/widthForColumnAtPath:">&nbsp;&nbsp;&nbsp;&nbsp;- widthForColumnAtPath:</option>
+	
+	
+	
+</select>
+				</li>
+			</ul>
+		</header>
+		<nav id="tocContainer" class="isShowingTOC">
+			<ul id="toc" role="tree">
+				
+<li role="treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#overview">Overview</a></span></li>
+
+
+
+
+<li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
+	
+</ul></li>
+
+
+
+
+
+
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/cellViewForRowAtPath:cellIndex:">cellViewForRowAtPath:cellIndex:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/controlPanelExpandItemNormalBackgroundImage">controlPanelExpandItemNormalBackgroundImage</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/controlPanelExpandItemSelectedBackgroundImage">controlPanelExpandItemSelectedBackgroundImage</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/controlPanelExpandSectionBackgroundImage">controlPanelExpandSectionBackgroundImage</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/headerSectionViewForColumnAtPath:">headerSectionViewForColumnAtPath:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/highlightControlsOnTap">highlightControlsOnTap</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/isRowExpanded:">isRowExpanded:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/isRowVisible:">isRowVisible:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/lineNumbersAreHidden">lineNumbersAreHidden</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/lineNumbersColor">lineNumbersColor</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/offsetForColumnAtPath:">offsetForColumnAtPath:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/tableHeight">tableHeight</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/tableTotalHeight">tableTotalHeight</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/tableTotalWidth">tableTotalWidth</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/widthForColumnAtIndex:">widthForColumnAtIndex:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/widthForColumnAtPath:">widthForColumnAtPath:</a></span></li>
+	
+</ul></li>
+
+
+			</ul>
+		</nav>
+		<article>
+			<div id="contents" class="isShowingTOC" role="main">
+				<a title="TSTableViewAppearanceCoordinator Protocol Reference" name="top"></a>
+				<div class="main-navigation navigation-top">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="header">
+					<div class="section-header">
+						<h1 class="title title-header">TSTableViewAppearanceCoordinator Protocol Reference</h1>
+					</div>		
+				</div>
+				<div id="container">	
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<td class="specification-title">Conforms to</td>
+	<td class="specification-value">NSObject</td>
+</tr><tr>
+	<td class="specification-title">Declared in</td>
+	<td class="specification-value">TSTableViewAppearanceCoordinator.h</td>
+</tr>
+						</tbody></table></div>
+					
+                    
+                    
+					
+					
+					
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						<h2 class="subtitle subtitle-tasks">Tasks</h2>
+						
+						
+						
+						
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/isRowExpanded:">&ndash;&nbsp;isRowExpanded:</a></code>
+	</span>
+	
+	<span class="task-item-suffix">required method</span>
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/isRowVisible:">&ndash;&nbsp;isRowVisible:</a></code>
+	</span>
+	
+	<span class="task-item-suffix">required method</span>
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/highlightControlsOnTap">&ndash;&nbsp;highlightControlsOnTap</a></code>
+	</span>
+	
+	<span class="task-item-suffix">required method</span>
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/lineNumbersAreHidden">&ndash;&nbsp;lineNumbersAreHidden</a></code>
+	</span>
+	
+	<span class="task-item-suffix">required method</span>
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/lineNumbersColor">&ndash;&nbsp;lineNumbersColor</a></code>
+	</span>
+	
+	<span class="task-item-suffix">required method</span>
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/controlPanelExpandItemNormalBackgroundImage">&ndash;&nbsp;controlPanelExpandItemNormalBackgroundImage</a></code>
+	</span>
+	
+	<span class="task-item-suffix">required method</span>
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/controlPanelExpandItemSelectedBackgroundImage">&ndash;&nbsp;controlPanelExpandItemSelectedBackgroundImage</a></code>
+	</span>
+	
+	<span class="task-item-suffix">required method</span>
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/controlPanelExpandSectionBackgroundImage">&ndash;&nbsp;controlPanelExpandSectionBackgroundImage</a></code>
+	</span>
+	
+	<span class="task-item-suffix">required method</span>
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/tableTotalWidth">&ndash;&nbsp;tableTotalWidth</a></code>
+	</span>
+	
+	<span class="task-item-suffix">required method</span>
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/tableTotalHeight">&ndash;&nbsp;tableTotalHeight</a></code>
+	</span>
+	
+	<span class="task-item-suffix">required method</span>
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/tableHeight">&ndash;&nbsp;tableHeight</a></code>
+	</span>
+	
+	<span class="task-item-suffix">required method</span>
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/widthForColumnAtIndex:">&ndash;&nbsp;widthForColumnAtIndex:</a></code>
+	</span>
+	
+	<span class="task-item-suffix">required method</span>
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/widthForColumnAtPath:">&ndash;&nbsp;widthForColumnAtPath:</a></code>
+	</span>
+	
+	<span class="task-item-suffix">required method</span>
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/offsetForColumnAtPath:">&ndash;&nbsp;offsetForColumnAtPath:</a></code>
+	</span>
+	
+	<span class="task-item-suffix">required method</span>
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/cellViewForRowAtPath:cellIndex:">&ndash;&nbsp;cellViewForRowAtPath:cellIndex:</a></code>
+	</span>
+	
+	<span class="task-item-suffix">required method</span>
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/headerSectionViewForColumnAtPath:">&ndash;&nbsp;headerSectionViewForColumnAtPath:</a></code>
+	</span>
+	
+	<span class="task-item-suffix">required method</span>
+</li>
+						</ul>
+						
+					</div>
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Instance Methods" name="instance_methods"></a>
+						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/cellViewForRowAtPath:cellIndex:" title="cellViewForRowAtPath:cellIndex:"></a>
+	<h3 class="subsubtitle method-title">cellViewForRowAtPath:cellIndex:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Return height for header section at specified path</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (TSTableViewCell *)cellViewForRowAtPath:(NSIndexPath *)<em>indexPath</em> cellIndex:(NSInteger)<em>index</em></code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">TSTableViewAppearanceCoordinator.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/controlPanelExpandItemNormalBackgroundImage" title="controlPanelExpandItemNormalBackgroundImage"></a>
+	<h3 class="subsubtitle method-title">controlPanelExpandItemNormalBackgroundImage</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Image for expand button normal state (not expanded). Image wouldn&rsquo;t be stretched and will be aligned to bottom left corner of expand section.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (UIImage *)controlPanelExpandItemNormalBackgroundImage</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">TSTableViewAppearanceCoordinator.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/controlPanelExpandItemSelectedBackgroundImage" title="controlPanelExpandItemSelectedBackgroundImage"></a>
+	<h3 class="subsubtitle method-title">controlPanelExpandItemSelectedBackgroundImage</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Image for expand button selected state (expanded). Image wouldn&rsquo;t be stretched and will be aligned to bottom left corner of expand section.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (UIImage *)controlPanelExpandItemSelectedBackgroundImage</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">TSTableViewAppearanceCoordinator.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/controlPanelExpandSectionBackgroundImage" title="controlPanelExpandSectionBackgroundImage"></a>
+	<h3 class="subsubtitle method-title">controlPanelExpandSectionBackgroundImage</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Background image for expand section. Image would be stretched depending on section&rsquo;s size.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (UIImage *)controlPanelExpandSectionBackgroundImage</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">TSTableViewAppearanceCoordinator.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/headerSectionViewForColumnAtPath:" title="headerSectionViewForColumnAtPath:"></a>
+	<h3 class="subsubtitle method-title">headerSectionViewForColumnAtPath:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Return height for header section at specified path</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (TSTableViewHeaderSectionView *)headerSectionViewForColumnAtPath:(NSIndexPath *)<em>indexPath</em></code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">TSTableViewAppearanceCoordinator.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/highlightControlsOnTap" title="highlightControlsOnTap"></a>
+	<h3 class="subsubtitle method-title">highlightControlsOnTap</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Highlight contorls (slide button in header section and expand button in control panel) on tap</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (BOOL)highlightControlsOnTap</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">TSTableViewAppearanceCoordinator.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/isRowExpanded:" title="isRowExpanded:"></a>
+	<h3 class="subsubtitle method-title">isRowExpanded:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Return YES if row at specified path is expanded</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (BOOL)isRowExpanded:(NSIndexPath *)<em>indexPath</em></code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">TSTableViewAppearanceCoordinator.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/isRowVisible:" title="isRowVisible:"></a>
+	<h3 class="subsubtitle method-title">isRowVisible:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Return YES if row is visible, i.g. all its parent rows are expanded</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (BOOL)isRowVisible:(NSIndexPath *)<em>indexPath</em></code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">TSTableViewAppearanceCoordinator.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/lineNumbersAreHidden" title="lineNumbersAreHidden"></a>
+	<h3 class="subsubtitle method-title">lineNumbersAreHidden</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Return YES if line numbers for rows shoulb be displayed in control panel</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (BOOL)lineNumbersAreHidden</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">TSTableViewAppearanceCoordinator.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/lineNumbersColor" title="lineNumbersColor"></a>
+	<h3 class="subsubtitle method-title">lineNumbersColor</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Color for line  numbers in expand control panel.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (UIColor *)lineNumbersColor</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">TSTableViewAppearanceCoordinator.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/offsetForColumnAtPath:" title="offsetForColumnAtPath:"></a>
+	<h3 class="subsubtitle method-title">offsetForColumnAtPath:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Return x offset for column at specified path</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (CGFloat)offsetForColumnAtPath:(NSIndexPath *)<em>columnPath</em></code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">TSTableViewAppearanceCoordinator.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/tableHeight" title="tableHeight"></a>
+	<h3 class="subsubtitle method-title">tableHeight</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Return height of all visible (not expanded) rows</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (CGFloat)tableHeight</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">TSTableViewAppearanceCoordinator.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/tableTotalHeight" title="tableTotalHeight"></a>
+	<h3 class="subsubtitle method-title">tableTotalHeight</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Return total height of all rows</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (CGFloat)tableTotalHeight</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">TSTableViewAppearanceCoordinator.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/tableTotalWidth" title="tableTotalWidth"></a>
+	<h3 class="subsubtitle method-title">tableTotalWidth</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Return total width of all columns</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (CGFloat)tableTotalWidth</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">TSTableViewAppearanceCoordinator.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/widthForColumnAtIndex:" title="widthForColumnAtIndex:"></a>
+	<h3 class="subsubtitle method-title">widthForColumnAtIndex:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Return current width for column at specified index</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (CGFloat)widthForColumnAtIndex:(NSInteger)<em>columnIndex</em></code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">TSTableViewAppearanceCoordinator.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/widthForColumnAtPath:" title="widthForColumnAtPath:"></a>
+	<h3 class="subsubtitle method-title">widthForColumnAtPath:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Return current width for column at specified path</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (CGFloat)widthForColumnAtPath:(NSIndexPath *)<em>columnPath</em></code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">TSTableViewAppearanceCoordinator.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
+					
+                    
+                    
+				</div>
+				<div class="main-navigation navigation-bottom">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="footer">
+					<hr />
+					<div class="footer-copyright">
+						<p><span class="copyright">&copy; 2013 Viacheslav Radchenko. All rights reserved. (Last updated: 2013-08-29)</span><br />
+						
+						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.1 (build 858)</a>.</span></p>
+						
+					</div>
+				</div>
+			</div>
+		</article>
+		<script type="text/javascript">
+			function jumpToChange()
+			{
+				window.location.hash = this.options[this.selectedIndex].value;
+			}
+			
+			function toggleTOC()
+			{
+				var contents = document.getElementById('contents');
+				var tocContainer = document.getElementById('tocContainer');
+				
+				if (this.getAttribute('class') == 'open')
+				{
+					this.setAttribute('class', '');
+					contents.setAttribute('class', '');
+					tocContainer.setAttribute('class', '');
+					
+					window.name = "hideTOC";
+				}
+				else
+				{
+					this.setAttribute('class', 'open');
+					contents.setAttribute('class', 'isShowingTOC');
+					tocContainer.setAttribute('class', 'isShowingTOC');
+					
+					window.name = "";
+				}
+				return false;
+			}
+			
+			function toggleTOCEntryChildren(e)
+			{
+				e.stopPropagation();
+				var currentClass = this.getAttribute('class');
+				if (currentClass == 'children') {
+					this.setAttribute('class', 'children open');
+				}
+				else if (currentClass == 'children open') {
+					this.setAttribute('class', 'children');
+				}
+				return false;
+			}
+			
+			function tocEntryClick(e)
+			{
+				e.stopPropagation();
+				return true;
+			}
+			
+			function init()
+			{
+				var selectElement = document.getElementById('jumpTo');
+				selectElement.addEventListener('change', jumpToChange, false);
+				
+				var tocButton = document.getElementById('table_of_contents');
+				tocButton.addEventListener('click', toggleTOC, false);
+				
+				var taskTreeItem = document.getElementById('task_treeitem');
+				if (taskTreeItem.getElementsByTagName('li').length > 0)
+				{
+					taskTreeItem.setAttribute('class', 'children');
+					taskTreeItem.firstChild.setAttribute('class', 'disclosure');
+				}
+				
+				var tocList = document.getElementById('toc');
+				
+				var tocEntries = tocList.getElementsByTagName('li');
+				for (var i = 0; i < tocEntries.length; i++) {
+					tocEntries[i].addEventListener('click', toggleTOCEntryChildren, false);
+				}
+				
+				var tocLinks = tocList.getElementsByTagName('a');
+				for (var i = 0; i < tocLinks.length; i++) {
+					tocLinks[i].addEventListener('click', tocEntryClick, false);
+				}
+				
+				if (window.name == "hideTOC") {
+					toggleTOC.call(tocButton);
+				}
+			}
+			
+			window.onload = init;
+			
+			// If showing in Xcode, hide the TOC and Header
+			if (navigator.userAgent.match(/xcode/i)) {
+				document.getElementById("contents").className = "hideInXcode"
+				document.getElementById("tocContainer").className = "hideInXcode"
+				document.getElementById("top_header").className = "hideInXcode"
+			}
+			
+		</script>
+	</body>
+</html>

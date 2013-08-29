@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/TSTableViewExpandControlPanel.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/TSTableViewExpandControlPanel</TokenIdentifier>
+			<Abstract type="html">TSTableViewExpandControlPanel is subcomponent of TSTableView. It represents rows hierarchy of the table.
+    Base layout is shown below:</Abstract>
+			<DeclaredIn>TSTableViewExpandControlPanel.h</DeclaredIn>
+            
+			
+			<NodeRef refid="19"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTableViewExpandControlPanel/setControlPanelDelegate:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSTableViewExpandControlPanel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, weak) id&lt;TSTableViewExpandControlPanelDelegate&gt; controlPanelDelegate</Declaration>
+			
+			
+			<Anchor>//api/name/controlPanelDelegate</Anchor>
+            <NodeRef refid="19"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTableViewExpandControlPanel/controlPanelDelegate</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSTableViewExpandControlPanel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, weak) id&lt;TSTableViewExpandControlPanelDelegate&gt; controlPanelDelegate</Declaration>
+			
+			
+			<Anchor>//api/name/controlPanelDelegate</Anchor>
+            <NodeRef refid="19"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/TSTableViewExpandControlPanel/controlPanelDelegate</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSTableViewExpandControlPanel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, weak) id&lt;TSTableViewExpandControlPanelDelegate&gt; controlPanelDelegate</Declaration>
+			
+			
+			<Anchor>//api/name/controlPanelDelegate</Anchor>
+            <NodeRef refid="19"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTableViewExpandControlPanel/setDataSource:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSTableViewExpandControlPanel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, weak) id&lt;TSTableViewDataSource,TSTableViewAppearanceCoordinator&gt; dataSource</Declaration>
+			
+			
+			<Anchor>//api/name/dataSource</Anchor>
+            <NodeRef refid="19"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTableViewExpandControlPanel/dataSource</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSTableViewExpandControlPanel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, weak) id&lt;TSTableViewDataSource,TSTableViewAppearanceCoordinator&gt; dataSource</Declaration>
+			
+			
+			<Anchor>//api/name/dataSource</Anchor>
+            <NodeRef refid="19"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/TSTableViewExpandControlPanel/dataSource</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSTableViewExpandControlPanel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, weak) id&lt;TSTableViewDataSource,TSTableViewAppearanceCoordinator&gt; dataSource</Declaration>
+			
+			
+			<Anchor>//api/name/dataSource</Anchor>
+            <NodeRef refid="19"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTableViewExpandControlPanel/setMaxNestingLevel:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSTableViewExpandControlPanel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign, readonly) NSInteger maxNestingLevel</Declaration>
+			
+			
+			<Anchor>//api/name/maxNestingLevel</Anchor>
+            <NodeRef refid="19"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTableViewExpandControlPanel/maxNestingLevel</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSTableViewExpandControlPanel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign, readonly) NSInteger maxNestingLevel</Declaration>
+			
+			
+			<Anchor>//api/name/maxNestingLevel</Anchor>
+            <NodeRef refid="19"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/TSTableViewExpandControlPanel/maxNestingLevel</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSTableViewExpandControlPanel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign, readonly) NSInteger maxNestingLevel</Declaration>
+			
+			
+			<Anchor>//api/name/maxNestingLevel</Anchor>
+            <NodeRef refid="19"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTableViewExpandControlPanel/reloadData</TokenIdentifier>
+			<Abstract type="html">Reload expand rows data</Abstract>
+			<DeclaredIn>TSTableViewExpandControlPanel.h</DeclaredIn>
+			
+			<Declaration>- (void)reloadData</Declaration>
+			
+			
+			<Anchor>//api/name/reloadData</Anchor>
+            <NodeRef refid="19"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTableViewExpandControlPanel/changeExpandStateForRow:toValue:animated:</TokenIdentifier>
+			<Abstract type="html">Change expand state of the row</Abstract>
+			<DeclaredIn>TSTableViewExpandControlPanel.h</DeclaredIn>
+			
+			<Declaration>- (void)changeExpandStateForRow:(NSIndexPath *)rowPath toValue:(BOOL)expanded animated:(BOOL)animated</Declaration>
+			
+			
+			<Anchor>//api/name/changeExpandStateForRow:toValue:animated:</Anchor>
+            <NodeRef refid="19"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTableViewExpandControlPanel/expandAllRowsWithAnimation:</TokenIdentifier>
+			<Abstract type="html">Expand all rows</Abstract>
+			<DeclaredIn>TSTableViewExpandControlPanel.h</DeclaredIn>
+			
+			<Declaration>- (void)expandAllRowsWithAnimation:(BOOL)animated</Declaration>
+			
+			
+			<Anchor>//api/name/expandAllRowsWithAnimation:</Anchor>
+            <NodeRef refid="19"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTableViewExpandControlPanel/collapseAllRowsWithAnimation:</TokenIdentifier>
+			<Abstract type="html">Collapse all rows</Abstract>
+			<DeclaredIn>TSTableViewExpandControlPanel.h</DeclaredIn>
+			
+			<Declaration>- (void)collapseAllRowsWithAnimation:(BOOL)animated</Declaration>
+			
+			
+			<Anchor>//api/name/collapseAllRowsWithAnimation:</Anchor>
+            <NodeRef refid="19"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTableViewExpandControlPanel/isRowExpanded:</TokenIdentifier>
+			<Abstract type="html">Return row expand state</Abstract>
+			<DeclaredIn>TSTableViewExpandControlPanel.h</DeclaredIn>
+			
+			<Declaration>- (BOOL)isRowExpanded:(NSIndexPath *)rowPath</Declaration>
+			
+			
+			<Anchor>//api/name/isRowExpanded:</Anchor>
+            <NodeRef refid="19"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTableViewExpandControlPanel/isRowVisible:</TokenIdentifier>
+			<Abstract type="html">Return YES if all its parents are expanded</Abstract>
+			<DeclaredIn>TSTableViewExpandControlPanel.h</DeclaredIn>
+			
+			<Declaration>- (BOOL)isRowVisible:(NSIndexPath *)rowPath</Declaration>
+			
+			
+			<Anchor>//api/name/isRowVisible:</Anchor>
+            <NodeRef refid="19"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTableViewExpandControlPanel/tableHeight</TokenIdentifier>
+			<Abstract type="html">Height of the table taking into account expanded/collapsed rows</Abstract>
+			<DeclaredIn>TSTableViewExpandControlPanel.h</DeclaredIn>
+			
+			<Declaration>- (CGFloat)tableHeight</Declaration>
+			
+			
+			<Anchor>//api/name/tableHeight</Anchor>
+            <NodeRef refid="19"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTableViewExpandControlPanel/tableTotalHeight</TokenIdentifier>
+			<Abstract type="html">Height of the table with all rows expanded</Abstract>
+			<DeclaredIn>TSTableViewExpandControlPanel.h</DeclaredIn>
+			
+			<Declaration>- (CGFloat)tableTotalHeight</Declaration>
+			
+			
+			<Anchor>//api/name/tableTotalHeight</Anchor>
+            <NodeRef refid="19"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTableViewExpandControlPanel/panelWidth</TokenIdentifier>
+			<Abstract type="html">Width of expand control panel. Updated in reloadData.
+              Equal to maxNestingLevel * widthOfExpandItem</Abstract>
+			<DeclaredIn>TSTableViewExpandControlPanel.h</DeclaredIn>
+			
+			<Declaration>- (CGFloat)panelWidth</Declaration>
+			
+			
+			<Anchor>//api/name/panelWidth</Anchor>
+            <NodeRef refid="19"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTableViewExpandControlPanel/insertRowAtPath:animated:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSTableViewExpandControlPanel.h</DeclaredIn>
+			
+			<Declaration>- (void)insertRowAtPath:(NSIndexPath *)path animated:(BOOL)animated</Declaration>
+			
+			
+			<Anchor>//api/name/insertRowAtPath:animated:</Anchor>
+            <NodeRef refid="19"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTableViewExpandControlPanel/removeRowAtPath:animated:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSTableViewExpandControlPanel.h</DeclaredIn>
+			
+			<Declaration>- (void)removeRowAtPath:(NSIndexPath *)path animated:(BOOL)animated</Declaration>
+			
+			
+			<Anchor>//api/name/removeRowAtPath:animated:</Anchor>
+            <NodeRef refid="19"/>
+		</Token>
+		
+        
+	</File>
+</Tokens>

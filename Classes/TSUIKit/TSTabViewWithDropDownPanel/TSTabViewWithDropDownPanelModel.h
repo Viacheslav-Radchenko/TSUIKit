@@ -28,12 +28,12 @@
 #import "TSTabViewModel.h"
 
 /**
- *  @abstract  TSTabViewWithDropDownPanelModel extends TSTabViewModel. 
- *             Actually it uses same date model as TSTabViewModel and implements same TSTabViewDataSource protocol.
- *             Separate entity was added only for convenience and possible future extensions.
+    @abstract  TSTabViewWithDropDownPanelModel extends TSTabViewModel. 
+               Actually it uses same date model as TSTabViewModel and implements same TSTabViewDataSource protocol.
+               Separate entity was added only for convenience and possible future extensions.
  *
- *             Again, all models are just ready to use examples of possible data source implementation. 
- *             You free to create your own implementation of TSTabViewDataSource protocol.
+               Again, all models are just ready to use examples of possible data source implementation. 
+               You free to create your own implementation of TSTabViewDataSource protocol.
  */
 
 @interface TSTabViewWithDropDownPanelModel : TSTabViewModel

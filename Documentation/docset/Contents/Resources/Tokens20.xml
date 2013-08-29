@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/TSTableViewExpandSection.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/TSTableViewExpandSection</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSTableViewExpandSection.h</DeclaredIn>
+            
+			
+			<NodeRef refid="20"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTableViewExpandSection/setRowHeight:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSTableViewExpandSection.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) CGFloat rowHeight</Declaration>
+			
+			
+			<Anchor>//api/name/rowHeight</Anchor>
+            <NodeRef refid="20"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTableViewExpandSection/rowHeight</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSTableViewExpandSection.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) CGFloat rowHeight</Declaration>
+			
+			
+			<Anchor>//api/name/rowHeight</Anchor>
+            <NodeRef refid="20"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/TSTableViewExpandSection/rowHeight</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSTableViewExpandSection.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) CGFloat rowHeight</Declaration>
+			
+			
+			<Anchor>//api/name/rowHeight</Anchor>
+            <NodeRef refid="20"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTableViewExpandSection/setExpanded:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSTableViewExpandSection.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL expanded</Declaration>
+			
+			
+			<Anchor>//api/name/expanded</Anchor>
+            <NodeRef refid="20"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTableViewExpandSection/expanded</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSTableViewExpandSection.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL expanded</Declaration>
+			
+			
+			<Anchor>//api/name/expanded</Anchor>
+            <NodeRef refid="20"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/TSTableViewExpandSection/expanded</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSTableViewExpandSection.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL expanded</Declaration>
+			
+			
+			<Anchor>//api/name/expanded</Anchor>
+            <NodeRef refid="20"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTableViewExpandSection/setRowPath:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSTableViewExpandSection.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSIndexPath *rowPath</Declaration>
+			
+			
+			<Anchor>//api/name/rowPath</Anchor>
+            <NodeRef refid="20"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTableViewExpandSection/rowPath</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSTableViewExpandSection.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSIndexPath *rowPath</Declaration>
+			
+			
+			<Anchor>//api/name/rowPath</Anchor>
+            <NodeRef refid="20"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/TSTableViewExpandSection/rowPath</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSTableViewExpandSection.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSIndexPath *rowPath</Declaration>
+			
+			
+			<Anchor>//api/name/rowPath</Anchor>
+            <NodeRef refid="20"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTableViewExpandSection/setSubrows:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSTableViewExpandSection.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSMutableArray *subrows</Declaration>
+			
+			
+			<Anchor>//api/name/subrows</Anchor>
+            <NodeRef refid="20"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTableViewExpandSection/subrows</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSTableViewExpandSection.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSMutableArray *subrows</Declaration>
+			
+			
+			<Anchor>//api/name/subrows</Anchor>
+            <NodeRef refid="20"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/TSTableViewExpandSection/subrows</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSTableViewExpandSection.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSMutableArray *subrows</Declaration>
+			
+			
+			<Anchor>//api/name/subrows</Anchor>
+            <NodeRef refid="20"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTableViewExpandSection/setExpandButton:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSTableViewExpandSection.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) UIButton *expandButton</Declaration>
+			
+			
+			<Anchor>//api/name/expandButton</Anchor>
+            <NodeRef refid="20"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTableViewExpandSection/expandButton</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSTableViewExpandSection.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) UIButton *expandButton</Declaration>
+			
+			
+			<Anchor>//api/name/expandButton</Anchor>
+            <NodeRef refid="20"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/TSTableViewExpandSection/expandButton</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSTableViewExpandSection.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) UIButton *expandButton</Declaration>
+			
+			
+			<Anchor>//api/name/expandButton</Anchor>
+            <NodeRef refid="20"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTableViewExpandSection/setLineLabel:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSTableViewExpandSection.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong, readonly) UILabel *lineLabel</Declaration>
+			
+			
+			<Anchor>//api/name/lineLabel</Anchor>
+            <NodeRef refid="20"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTableViewExpandSection/lineLabel</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSTableViewExpandSection.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong, readonly) UILabel *lineLabel</Declaration>
+			
+			
+			<Anchor>//api/name/lineLabel</Anchor>
+            <NodeRef refid="20"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/TSTableViewExpandSection/lineLabel</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSTableViewExpandSection.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong, readonly) UILabel *lineLabel</Declaration>
+			
+			
+			<Anchor>//api/name/lineLabel</Anchor>
+            <NodeRef refid="20"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTableViewExpandSection/setBackgroundImage:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSTableViewExpandSection.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong, readonly) UIImageView *backgroundImage</Declaration>
+			
+			
+			<Anchor>//api/name/backgroundImage</Anchor>
+            <NodeRef refid="20"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTableViewExpandSection/backgroundImage</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSTableViewExpandSection.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong, readonly) UIImageView *backgroundImage</Declaration>
+			
+			
+			<Anchor>//api/name/backgroundImage</Anchor>
+            <NodeRef refid="20"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/TSTableViewExpandSection/backgroundImage</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSTableViewExpandSection.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong, readonly) UIImageView *backgroundImage</Declaration>
+			
+			
+			<Anchor>//api/name/backgroundImage</Anchor>
+            <NodeRef refid="20"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTableViewExpandSection/setLineNumber:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSTableViewExpandSection.h</DeclaredIn>
+			
+			<Declaration>- (void)setLineNumber:(NSInteger)lineNumber</Declaration>
+			
+			
+			<Anchor>//api/name/setLineNumber:</Anchor>
+            <NodeRef refid="20"/>
+		</Token>
+		
+        
+	</File>
+</Tokens>

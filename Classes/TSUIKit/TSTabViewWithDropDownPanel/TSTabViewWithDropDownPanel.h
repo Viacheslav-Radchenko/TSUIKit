@@ -30,60 +30,60 @@
 #import "TSTabViewWithDropDownPanelDelegate.h"
 
 /**
- *  @abstract   TSTabViewWithDropDownPanel extends TSTabView. 
- *              Custom panel can be attached to navigation menu and pull down/up on top of tabs container.
- *              Provides smooth animations while switching between visible tabs and for dynamic content modification.
- *              Basic layout shown below:
+    @abstract   TSTabViewWithDropDownPanel extends TSTabView. 
+                Custom panel can be attached to navigation menu and pull down/up on top of tabs container.
+                Provides smooth animations while switching between visible tabs and for dynamic content modification.
+                Basic layout shown below:
  *
- *  +-------------------------------------------------+
- *  |              TSNavigationStripView              |  <-- TSNavigationStripView as a subview. Set during TSTabView initialization.
- *  +-------------------------------------------------+
- *  |                                                 |
- *  |              ATTACHED PANEL (MENU)              | <-- Custom UIView.
- *  |                                                 |
- *  +-------------------------------------------------+
- *  |                                                 |
- *  |                      TABS                       |  <-- Content container. Tabs can be represented by subclasses of UIView or UIViewController.
- *  |                                                 |
- *  |                                                 |
- *  +-------------------------------------------------+
+    +-------------------------------------------------+
+    |              TSNavigationStripView              |  <-- TSNavigationStripView as a subview. Set during TSTabView initialization.
+    +-------------------------------------------------+
+    |                                                 |
+    |              ATTACHED PANEL (MENU)              | <-- Custom UIView.
+    |                                                 |
+    +-------------------------------------------------+
+    |                                                 |
+    |                      TABS                       |  <-- Content container. Tabs can be represented by subclasses of UIView or UIViewController.
+    |                                                 |
+    |                                                 |
+    +-------------------------------------------------+
  */
 
 @interface TSTabViewWithDropDownPanel : TSTabView
 
 /**
- *  @abstract   Custom UIView. Would be shouwn in drop down container.
- *  @def        nil
+    @abstract   Custom UIView. Would be shouwn in drop down container.
+    @def        nil
  */
 @property (nonatomic, strong) UIView *attachedPanel;
 
 /**
- *  @abstract   TSTabViewWithDropDownPanelDelegate extends TSTabViewDelegate with callback for DropDownPanel state changes.
+    @abstract   TSTabViewWithDropDownPanelDelegate extends TSTabViewDelegate with callback for DropDownPanel state changes.
  */
 @property (nonatomic, weak) id<TSTabViewWithDropDownPanelDelegate> delegate;
 
 /**
- *  @abstract   If YES then tabs container's size would be changed during DropDownPanel show/hide animation
- *              If NO then DropDownPanel will be shown on top of tabs container.
- *  @def        YES
+    @abstract   If YES then tabs container's size would be changed during DropDownPanel show/hide animation
+                If NO then DropDownPanel will be shown on top of tabs container.
+    @def        YES
  */
 @property (nonatomic, assign) BOOL shouldAdjustTabsContainerSize;
 
 /**
- *  @abstract   If YES then DropDownPanel will be shown/hidden on selected section tap.
- *  @def        YES
+    @abstract   If YES then DropDownPanel will be shown/hidden on selected section tap.
+    @def        YES
  */
 @property (nonatomic, assign) BOOL showPanelOnSelectedSectionTap;
 
 /**
- *  @abstract   If YES then DropDownPanel will be shown below NavigationMenu.
- *              If NO then DropDownPanel will be shown above NavigationMenu and NavigationMenu itself will slide down.
- *  @def        YES
+    @abstract   If YES then DropDownPanel will be shown below NavigationMenu.
+                If NO then DropDownPanel will be shown above NavigationMenu and NavigationMenu itself will slide down.
+    @def        YES
  */
 @property (nonatomic, assign) BOOL showPanelBelowNavigationMenu;
 
 /**
- *  @abstract   DropDownPanel visibility status.
+    @abstract   DropDownPanel visibility status.
  */
 @property (nonatomic, assign, readonly) BOOL panelIsHidden;
 

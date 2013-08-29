@@ -1,0 +1,935 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/TSTableView.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/TSTableView</TokenIdentifier>
+			<Abstract type="html">TSTableView is UI component for displaying multicolumns tabular data. It supports hierarchical rows and columns structure.
+                Component optimized to display big sets of data: row and cell views are cached internaly and reused during scrolling/expanding.
+                Basic layout is shown below:
+*
+    |     |          TSTableViewHeaderPanel           |  
+    |     |                                           |
+    |  T  |                                           |
+    |  S  |                                           |
+    |  S  |                                           | 
+    |  i  |                                           |
+    |  d  |                                           |
+    |  e  |                                           |
+    |  C  |                                           |
+    |  o  |        TSTableViewContentHolder           |
+    |  n  |                                           |
+    |  t  |                                           |
+    |  r  |                                           |
+    |  o  |                                           |
+    |  l  |                                           |
+    |     |                                           |
+*
+*</Abstract>
+			<DeclaredIn>TSTableView.h</DeclaredIn>
+            
+			
+			<NodeRef refid="16"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTableView/setDataSource:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSTableView.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, weak) id&lt;TSTableViewDataSource&gt; dataSource</Declaration>
+			
+			
+			<Anchor>//api/name/dataSource</Anchor>
+            <NodeRef refid="16"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTableView/dataSource</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSTableView.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, weak) id&lt;TSTableViewDataSource&gt; dataSource</Declaration>
+			
+			
+			<Anchor>//api/name/dataSource</Anchor>
+            <NodeRef refid="16"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/TSTableView/dataSource</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSTableView.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, weak) id&lt;TSTableViewDataSource&gt; dataSource</Declaration>
+			
+			
+			<Anchor>//api/name/dataSource</Anchor>
+            <NodeRef refid="16"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTableView/setDelegate:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSTableView.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, weak) id&lt;TSTableViewDelegate&gt; delegate</Declaration>
+			
+			
+			<Anchor>//api/name/delegate</Anchor>
+            <NodeRef refid="16"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTableView/delegate</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSTableView.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, weak) id&lt;TSTableViewDelegate&gt; delegate</Declaration>
+			
+			
+			<Anchor>//api/name/delegate</Anchor>
+            <NodeRef refid="16"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/TSTableView/delegate</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSTableView.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, weak) id&lt;TSTableViewDelegate&gt; delegate</Declaration>
+			
+			
+			<Anchor>//api/name/delegate</Anchor>
+            <NodeRef refid="16"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTableView/setMaxNestingLevel:</TokenIdentifier>
+			<Abstract type="html">Maximum nesting level in rows hierarchy</Abstract>
+			<DeclaredIn>TSTableView.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign, readonly) NSInteger maxNestingLevel</Declaration>
+			
+			
+			<Anchor>//api/name/maxNestingLevel</Anchor>
+            <NodeRef refid="16"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTableView/maxNestingLevel</TokenIdentifier>
+			<Abstract type="html">Maximum nesting level in rows hierarchy</Abstract>
+			<DeclaredIn>TSTableView.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign, readonly) NSInteger maxNestingLevel</Declaration>
+			
+			
+			<Anchor>//api/name/maxNestingLevel</Anchor>
+            <NodeRef refid="16"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/TSTableView/maxNestingLevel</TokenIdentifier>
+			<Abstract type="html">Maximum nesting level in rows hierarchy</Abstract>
+			<DeclaredIn>TSTableView.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign, readonly) NSInteger maxNestingLevel</Declaration>
+			
+			
+			<Anchor>//api/name/maxNestingLevel</Anchor>
+            <NodeRef refid="16"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTableView/setHighlightControlsOnTap:</TokenIdentifier>
+			<Abstract type="html">Show hihlights when user taps control (slide control in header secrion and expand control in side panel)</Abstract>
+			<DeclaredIn>TSTableView.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL highlightControlsOnTap</Declaration>
+			
+			
+			<Anchor>//api/name/highlightControlsOnTap</Anchor>
+            <NodeRef refid="16"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTableView/highlightControlsOnTap</TokenIdentifier>
+			<Abstract type="html">Show hihlights when user taps control (slide control in header secrion and expand control in side panel)</Abstract>
+			<DeclaredIn>TSTableView.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL highlightControlsOnTap</Declaration>
+			
+			
+			<Anchor>//api/name/highlightControlsOnTap</Anchor>
+            <NodeRef refid="16"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/TSTableView/highlightControlsOnTap</TokenIdentifier>
+			<Abstract type="html">Show hihlights when user taps control (slide control in header secrion and expand control in side panel)</Abstract>
+			<DeclaredIn>TSTableView.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL highlightControlsOnTap</Declaration>
+			
+			
+			<Anchor>//api/name/highlightControlsOnTap</Anchor>
+            <NodeRef refid="16"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTableView/setAllowRowSelection:</TokenIdentifier>
+			<Abstract type="html">Allow row selection on tap
+    @def YES</Abstract>
+			<DeclaredIn>TSTableView.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL allowRowSelection</Declaration>
+			
+			
+			<Anchor>//api/name/allowRowSelection</Anchor>
+            <NodeRef refid="16"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTableView/allowRowSelection</TokenIdentifier>
+			<Abstract type="html">Allow row selection on tap
+    @def YES</Abstract>
+			<DeclaredIn>TSTableView.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL allowRowSelection</Declaration>
+			
+			
+			<Anchor>//api/name/allowRowSelection</Anchor>
+            <NodeRef refid="16"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/TSTableView/allowRowSelection</TokenIdentifier>
+			<Abstract type="html">Allow row selection on tap
+    @def YES</Abstract>
+			<DeclaredIn>TSTableView.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL allowRowSelection</Declaration>
+			
+			
+			<Anchor>//api/name/allowRowSelection</Anchor>
+            <NodeRef refid="16"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTableView/setAllowColumnSelection:</TokenIdentifier>
+			<Abstract type="html">Allow column selection on tap
+    @def YES</Abstract>
+			<DeclaredIn>TSTableView.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL allowColumnSelection</Declaration>
+			
+			
+			<Anchor>//api/name/allowColumnSelection</Anchor>
+            <NodeRef refid="16"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTableView/allowColumnSelection</TokenIdentifier>
+			<Abstract type="html">Allow column selection on tap
+    @def YES</Abstract>
+			<DeclaredIn>TSTableView.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL allowColumnSelection</Declaration>
+			
+			
+			<Anchor>//api/name/allowColumnSelection</Anchor>
+            <NodeRef refid="16"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/TSTableView/allowColumnSelection</TokenIdentifier>
+			<Abstract type="html">Allow column selection on tap
+    @def YES</Abstract>
+			<DeclaredIn>TSTableView.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL allowColumnSelection</Declaration>
+			
+			
+			<Anchor>//api/name/allowColumnSelection</Anchor>
+            <NodeRef refid="16"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTableView/setLineNumbersHidden:</TokenIdentifier>
+			<Abstract type="html">If NO then line numbers are displayed in side panel</Abstract>
+			<DeclaredIn>TSTableView.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL lineNumbersHidden</Declaration>
+			
+			
+			<Anchor>//api/name/lineNumbersHidden</Anchor>
+            <NodeRef refid="16"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTableView/lineNumbersHidden</TokenIdentifier>
+			<Abstract type="html">If NO then line numbers are displayed in side panel</Abstract>
+			<DeclaredIn>TSTableView.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL lineNumbersHidden</Declaration>
+			
+			
+			<Anchor>//api/name/lineNumbersHidden</Anchor>
+            <NodeRef refid="16"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/TSTableView/lineNumbersHidden</TokenIdentifier>
+			<Abstract type="html">If NO then line numbers are displayed in side panel</Abstract>
+			<DeclaredIn>TSTableView.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL lineNumbersHidden</Declaration>
+			
+			
+			<Anchor>//api/name/lineNumbersHidden</Anchor>
+            <NodeRef refid="16"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTableView/setHeaderPanelHidden:</TokenIdentifier>
+			<Abstract type="html">If YES then header niew isn&apos;t shown
+    @def NO</Abstract>
+			<DeclaredIn>TSTableView.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL headerPanelHidden</Declaration>
+			
+			
+			<Anchor>//api/name/headerPanelHidden</Anchor>
+            <NodeRef refid="16"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTableView/headerPanelHidden</TokenIdentifier>
+			<Abstract type="html">If YES then header niew isn&apos;t shown
+    @def NO</Abstract>
+			<DeclaredIn>TSTableView.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL headerPanelHidden</Declaration>
+			
+			
+			<Anchor>//api/name/headerPanelHidden</Anchor>
+            <NodeRef refid="16"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/TSTableView/headerPanelHidden</TokenIdentifier>
+			<Abstract type="html">If YES then header niew isn&apos;t shown
+    @def NO</Abstract>
+			<DeclaredIn>TSTableView.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL headerPanelHidden</Declaration>
+			
+			
+			<Anchor>//api/name/headerPanelHidden</Anchor>
+            <NodeRef refid="16"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTableView/setExpandPanelHidden:</TokenIdentifier>
+			<Abstract type="html">If YES then expand niew isn&apos;t shown
+    @def NO</Abstract>
+			<DeclaredIn>TSTableView.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL expandPanelHidden</Declaration>
+			
+			
+			<Anchor>//api/name/expandPanelHidden</Anchor>
+            <NodeRef refid="16"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTableView/expandPanelHidden</TokenIdentifier>
+			<Abstract type="html">If YES then expand niew isn&apos;t shown
+    @def NO</Abstract>
+			<DeclaredIn>TSTableView.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL expandPanelHidden</Declaration>
+			
+			
+			<Anchor>//api/name/expandPanelHidden</Anchor>
+            <NodeRef refid="16"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/TSTableView/expandPanelHidden</TokenIdentifier>
+			<Abstract type="html">If YES then expand niew isn&apos;t shown
+    @def NO</Abstract>
+			<DeclaredIn>TSTableView.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) BOOL expandPanelHidden</Declaration>
+			
+			
+			<Anchor>//api/name/expandPanelHidden</Anchor>
+            <NodeRef refid="16"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTableView/setLineNumbersColor:</TokenIdentifier>
+			<Abstract type="html">Color for row line numbers in side panel</Abstract>
+			<DeclaredIn>TSTableView.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) UIColor *lineNumbersColor</Declaration>
+			
+			
+			<Anchor>//api/name/lineNumbersColor</Anchor>
+            <NodeRef refid="16"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTableView/lineNumbersColor</TokenIdentifier>
+			<Abstract type="html">Color for row line numbers in side panel</Abstract>
+			<DeclaredIn>TSTableView.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) UIColor *lineNumbersColor</Declaration>
+			
+			
+			<Anchor>//api/name/lineNumbersColor</Anchor>
+            <NodeRef refid="16"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/TSTableView/lineNumbersColor</TokenIdentifier>
+			<Abstract type="html">Color for row line numbers in side panel</Abstract>
+			<DeclaredIn>TSTableView.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) UIColor *lineNumbersColor</Declaration>
+			
+			
+			<Anchor>//api/name/lineNumbersColor</Anchor>
+            <NodeRef refid="16"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTableView/setHeaderBackgroundImage:</TokenIdentifier>
+			<Abstract type="html">Set background image for header panel to customize appearance</Abstract>
+			<DeclaredIn>TSTableView.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) UIImage *headerBackgroundImage</Declaration>
+			
+			
+			<Anchor>//api/name/headerBackgroundImage</Anchor>
+            <NodeRef refid="16"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTableView/headerBackgroundImage</TokenIdentifier>
+			<Abstract type="html">Set background image for header panel to customize appearance</Abstract>
+			<DeclaredIn>TSTableView.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) UIImage *headerBackgroundImage</Declaration>
+			
+			
+			<Anchor>//api/name/headerBackgroundImage</Anchor>
+            <NodeRef refid="16"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/TSTableView/headerBackgroundImage</TokenIdentifier>
+			<Abstract type="html">Set background image for header panel to customize appearance</Abstract>
+			<DeclaredIn>TSTableView.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) UIImage *headerBackgroundImage</Declaration>
+			
+			
+			<Anchor>//api/name/headerBackgroundImage</Anchor>
+            <NodeRef refid="16"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTableView/setExpandPanelBackgroundImage:</TokenIdentifier>
+			<Abstract type="html">Set background image for expand panel to customize appearance</Abstract>
+			<DeclaredIn>TSTableView.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) UIImage *expandPanelBackgroundImage</Declaration>
+			
+			
+			<Anchor>//api/name/expandPanelBackgroundImage</Anchor>
+            <NodeRef refid="16"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTableView/expandPanelBackgroundImage</TokenIdentifier>
+			<Abstract type="html">Set background image for expand panel to customize appearance</Abstract>
+			<DeclaredIn>TSTableView.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) UIImage *expandPanelBackgroundImage</Declaration>
+			
+			
+			<Anchor>//api/name/expandPanelBackgroundImage</Anchor>
+            <NodeRef refid="16"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/TSTableView/expandPanelBackgroundImage</TokenIdentifier>
+			<Abstract type="html">Set background image for expand panel to customize appearance</Abstract>
+			<DeclaredIn>TSTableView.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) UIImage *expandPanelBackgroundImage</Declaration>
+			
+			
+			<Anchor>//api/name/expandPanelBackgroundImage</Anchor>
+            <NodeRef refid="16"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTableView/setTopLeftCornerBackgroundImage:</TokenIdentifier>
+			<Abstract type="html">Set background image for top left panel to customize appearance</Abstract>
+			<DeclaredIn>TSTableView.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) UIImage *topLeftCornerBackgroundImage</Declaration>
+			
+			
+			<Anchor>//api/name/topLeftCornerBackgroundImage</Anchor>
+            <NodeRef refid="16"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTableView/topLeftCornerBackgroundImage</TokenIdentifier>
+			<Abstract type="html">Set background image for top left panel to customize appearance</Abstract>
+			<DeclaredIn>TSTableView.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) UIImage *topLeftCornerBackgroundImage</Declaration>
+			
+			
+			<Anchor>//api/name/topLeftCornerBackgroundImage</Anchor>
+            <NodeRef refid="16"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/TSTableView/topLeftCornerBackgroundImage</TokenIdentifier>
+			<Abstract type="html">Set background image for top left panel to customize appearance</Abstract>
+			<DeclaredIn>TSTableView.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) UIImage *topLeftCornerBackgroundImage</Declaration>
+			
+			
+			<Anchor>//api/name/topLeftCornerBackgroundImage</Anchor>
+            <NodeRef refid="16"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTableView/setExpandItemNormalBackgroundImage:</TokenIdentifier>
+			<Abstract type="html">This image is used for expand item control in normal (not expanded) state.
+               Image wouldn&apos;t be stretched and will have bottom left alignment</Abstract>
+			<DeclaredIn>TSTableView.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) UIImage *expandItemNormalBackgroundImage</Declaration>
+			
+			
+			<Anchor>//api/name/expandItemNormalBackgroundImage</Anchor>
+            <NodeRef refid="16"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTableView/expandItemNormalBackgroundImage</TokenIdentifier>
+			<Abstract type="html">This image is used for expand item control in normal (not expanded) state.
+               Image wouldn&apos;t be stretched and will have bottom left alignment</Abstract>
+			<DeclaredIn>TSTableView.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) UIImage *expandItemNormalBackgroundImage</Declaration>
+			
+			
+			<Anchor>//api/name/expandItemNormalBackgroundImage</Anchor>
+            <NodeRef refid="16"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/TSTableView/expandItemNormalBackgroundImage</TokenIdentifier>
+			<Abstract type="html">This image is used for expand item control in normal (not expanded) state.
+               Image wouldn&apos;t be stretched and will have bottom left alignment</Abstract>
+			<DeclaredIn>TSTableView.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) UIImage *expandItemNormalBackgroundImage</Declaration>
+			
+			
+			<Anchor>//api/name/expandItemNormalBackgroundImage</Anchor>
+            <NodeRef refid="16"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTableView/setExpandItemSelectedBackgroundImage:</TokenIdentifier>
+			<Abstract type="html">This image is used for expand item control in selected (expanded) state.
+               Image wouldn&apos;t be stretched and will have bottom left alignment</Abstract>
+			<DeclaredIn>TSTableView.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) UIImage *expandItemSelectedBackgroundImage</Declaration>
+			
+			
+			<Anchor>//api/name/expandItemSelectedBackgroundImage</Anchor>
+            <NodeRef refid="16"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTableView/expandItemSelectedBackgroundImage</TokenIdentifier>
+			<Abstract type="html">This image is used for expand item control in selected (expanded) state.
+               Image wouldn&apos;t be stretched and will have bottom left alignment</Abstract>
+			<DeclaredIn>TSTableView.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) UIImage *expandItemSelectedBackgroundImage</Declaration>
+			
+			
+			<Anchor>//api/name/expandItemSelectedBackgroundImage</Anchor>
+            <NodeRef refid="16"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/TSTableView/expandItemSelectedBackgroundImage</TokenIdentifier>
+			<Abstract type="html">This image is used for expand item control in selected (expanded) state.
+               Image wouldn&apos;t be stretched and will have bottom left alignment</Abstract>
+			<DeclaredIn>TSTableView.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) UIImage *expandItemSelectedBackgroundImage</Declaration>
+			
+			
+			<Anchor>//api/name/expandItemSelectedBackgroundImage</Anchor>
+            <NodeRef refid="16"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTableView/setExpandSectionBackgroundImage:</TokenIdentifier>
+			<Abstract type="html">Provide background image for expand section in side control panel.
+               Image would be stretched depending on the size of section.</Abstract>
+			<DeclaredIn>TSTableView.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) UIImage *expandSectionBackgroundImage</Declaration>
+			
+			
+			<Anchor>//api/name/expandSectionBackgroundImage</Anchor>
+            <NodeRef refid="16"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTableView/expandSectionBackgroundImage</TokenIdentifier>
+			<Abstract type="html">Provide background image for expand section in side control panel.
+               Image would be stretched depending on the size of section.</Abstract>
+			<DeclaredIn>TSTableView.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) UIImage *expandSectionBackgroundImage</Declaration>
+			
+			
+			<Anchor>//api/name/expandSectionBackgroundImage</Anchor>
+            <NodeRef refid="16"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/TSTableView/expandSectionBackgroundImage</TokenIdentifier>
+			<Abstract type="html">Provide background image for expand section in side control panel.
+               Image would be stretched depending on the size of section.</Abstract>
+			<DeclaredIn>TSTableView.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) UIImage *expandSectionBackgroundImage</Declaration>
+			
+			
+			<Anchor>//api/name/expandSectionBackgroundImage</Anchor>
+            <NodeRef refid="16"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTableView/setHeaderBackgroundColor:</TokenIdentifier>
+			<Abstract type="html">Background color for header panel</Abstract>
+			<DeclaredIn>TSTableView.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) UIColor *headerBackgroundColor</Declaration>
+			
+			
+			<Anchor>//api/name/headerBackgroundColor</Anchor>
+            <NodeRef refid="16"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTableView/headerBackgroundColor</TokenIdentifier>
+			<Abstract type="html">Background color for header panel</Abstract>
+			<DeclaredIn>TSTableView.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) UIColor *headerBackgroundColor</Declaration>
+			
+			
+			<Anchor>//api/name/headerBackgroundColor</Anchor>
+            <NodeRef refid="16"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/TSTableView/headerBackgroundColor</TokenIdentifier>
+			<Abstract type="html">Background color for header panel</Abstract>
+			<DeclaredIn>TSTableView.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) UIColor *headerBackgroundColor</Declaration>
+			
+			
+			<Anchor>//api/name/headerBackgroundColor</Anchor>
+            <NodeRef refid="16"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTableView/setExpandPanelBackgroundColor:</TokenIdentifier>
+			<Abstract type="html">Background color for expand panel</Abstract>
+			<DeclaredIn>TSTableView.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) UIColor *expandPanelBackgroundColor</Declaration>
+			
+			
+			<Anchor>//api/name/expandPanelBackgroundColor</Anchor>
+            <NodeRef refid="16"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTableView/expandPanelBackgroundColor</TokenIdentifier>
+			<Abstract type="html">Background color for expand panel</Abstract>
+			<DeclaredIn>TSTableView.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) UIColor *expandPanelBackgroundColor</Declaration>
+			
+			
+			<Anchor>//api/name/expandPanelBackgroundColor</Anchor>
+            <NodeRef refid="16"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/TSTableView/expandPanelBackgroundColor</TokenIdentifier>
+			<Abstract type="html">Background color for expand panel</Abstract>
+			<DeclaredIn>TSTableView.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) UIColor *expandPanelBackgroundColor</Declaration>
+			
+			
+			<Anchor>//api/name/expandPanelBackgroundColor</Anchor>
+            <NodeRef refid="16"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTableView/reloadData</TokenIdentifier>
+			<Abstract type="html">Reload content. Both columns and rows are updated</Abstract>
+			<DeclaredIn>TSTableView.h</DeclaredIn>
+			
+			<Declaration>- (void)reloadData</Declaration>
+			
+			
+			<Anchor>//api/name/reloadData</Anchor>
+            <NodeRef refid="16"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTableView/reloadRowsData</TokenIdentifier>
+			<Abstract type="html">Reload rows data</Abstract>
+			<DeclaredIn>TSTableView.h</DeclaredIn>
+			
+			<Declaration>- (void)reloadRowsData</Declaration>
+			
+			
+			<Anchor>//api/name/reloadRowsData</Anchor>
+            <NodeRef refid="16"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTableView/dequeueReusableCellViewWithIdentifier:</TokenIdentifier>
+			<Abstract type="html">Reuse cached instance of cell view with specified Id.</Abstract>
+			<DeclaredIn>TSTableView.h</DeclaredIn>
+			
+			<Declaration>- (TSTableViewCell *)dequeueReusableCellViewWithIdentifier:(NSString *)identifier</Declaration>
+			
+			
+			<Anchor>//api/name/dequeueReusableCellViewWithIdentifier:</Anchor>
+            <NodeRef refid="16"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTableView/clearCachedData</TokenIdentifier>
+			<Abstract type="html">Clear cached data (reusable rows, cells that aren&apos;t used at this moment).</Abstract>
+			<DeclaredIn>TSTableView.h</DeclaredIn>
+			
+			<Declaration>- (void)clearCachedData</Declaration>
+			
+			
+			<Anchor>//api/name/clearCachedData</Anchor>
+            <NodeRef refid="16"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTableView/changeExpandStateForRow:toValue:animated:</TokenIdentifier>
+			<Abstract type="html">Change expand state of the row</Abstract>
+			<DeclaredIn>TSTableView.h</DeclaredIn>
+			
+			<Declaration>- (void)changeExpandStateForRow:(NSIndexPath *)rowPath toValue:(BOOL)expanded animated:(BOOL)animated</Declaration>
+			
+			
+			<Anchor>//api/name/changeExpandStateForRow:toValue:animated:</Anchor>
+            <NodeRef refid="16"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTableView/expandAllRowsWithAnimation:</TokenIdentifier>
+			<Abstract type="html">Expand all rows</Abstract>
+			<DeclaredIn>TSTableView.h</DeclaredIn>
+			
+			<Declaration>- (void)expandAllRowsWithAnimation:(BOOL)animated</Declaration>
+			
+			
+			<Anchor>//api/name/expandAllRowsWithAnimation:</Anchor>
+            <NodeRef refid="16"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTableView/collapseAllRowsWithAnimation:</TokenIdentifier>
+			<Abstract type="html">Collapse all rows</Abstract>
+			<DeclaredIn>TSTableView.h</DeclaredIn>
+			
+			<Declaration>- (void)collapseAllRowsWithAnimation:(BOOL)animated</Declaration>
+			
+			
+			<Anchor>//api/name/collapseAllRowsWithAnimation:</Anchor>
+            <NodeRef refid="16"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTableView/selectRowAtPath:animated:</TokenIdentifier>
+			<Abstract type="html">Select row at path</Abstract>
+			<DeclaredIn>TSTableView.h</DeclaredIn>
+			
+			<Declaration>- (void)selectRowAtPath:(NSIndexPath *)rowPath animated:(BOOL)animated</Declaration>
+			
+			
+			<Anchor>//api/name/selectRowAtPath:animated:</Anchor>
+            <NodeRef refid="16"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTableView/resetRowSelectionWithAnimtaion:</TokenIdentifier>
+			<Abstract type="html">Hide current selection</Abstract>
+			<DeclaredIn>TSTableView.h</DeclaredIn>
+			
+			<Declaration>- (void)resetRowSelectionWithAnimtaion:(BOOL)animated</Declaration>
+			
+			
+			<Anchor>//api/name/resetRowSelectionWithAnimtaion:</Anchor>
+            <NodeRef refid="16"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTableView/selectColumnAtPath:animated:</TokenIdentifier>
+			<Abstract type="html">Select row at path</Abstract>
+			<DeclaredIn>TSTableView.h</DeclaredIn>
+			
+			<Declaration>- (void)selectColumnAtPath:(NSIndexPath *)rowPath animated:(BOOL)animated</Declaration>
+			
+			
+			<Anchor>//api/name/selectColumnAtPath:animated:</Anchor>
+            <NodeRef refid="16"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTableView/resetColumnSelectionWithAnimtaion:</TokenIdentifier>
+			<Abstract type="html">Hide current selection</Abstract>
+			<DeclaredIn>TSTableView.h</DeclaredIn>
+			
+			<Declaration>- (void)resetColumnSelectionWithAnimtaion:(BOOL)animated</Declaration>
+			
+			
+			<Anchor>//api/name/resetColumnSelectionWithAnimtaion:</Anchor>
+            <NodeRef refid="16"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTableView/pathToSelectedRow</TokenIdentifier>
+			<Abstract type="html">Return path to selected row. If no row currently selected return nil.</Abstract>
+			<DeclaredIn>TSTableView.h</DeclaredIn>
+			
+			<Declaration>- (NSIndexPath *)pathToSelectedRow</Declaration>
+			
+			
+			<Anchor>//api/name/pathToSelectedRow</Anchor>
+            <NodeRef refid="16"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTableView/pathToSelectedColumn</TokenIdentifier>
+			<Abstract type="html">Return path to selected column. If no column currently selected return nil.</Abstract>
+			<DeclaredIn>TSTableView.h</DeclaredIn>
+			
+			<Declaration>- (NSIndexPath *)pathToSelectedColumn</Declaration>
+			
+			
+			<Anchor>//api/name/pathToSelectedColumn</Anchor>
+            <NodeRef refid="16"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTableView/insertRowAtPath:animated:</TokenIdentifier>
+			<Abstract type="html">Modify content</Abstract>
+			<DeclaredIn>TSTableView.h</DeclaredIn>
+			
+			<Declaration>- (void)insertRowAtPath:(NSIndexPath *)path animated:(BOOL)animated</Declaration>
+			
+			
+			<Anchor>//api/name/insertRowAtPath:animated:</Anchor>
+            <NodeRef refid="16"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTableView/removeRowAtPath:animated:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSTableView.h</DeclaredIn>
+			
+			<Declaration>- (void)removeRowAtPath:(NSIndexPath *)path animated:(BOOL)animated</Declaration>
+			
+			
+			<Anchor>//api/name/removeRowAtPath:animated:</Anchor>
+            <NodeRef refid="16"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTableView/updateRowAtPath:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSTableView.h</DeclaredIn>
+			
+			<Declaration>- (void)updateRowAtPath:(NSIndexPath *)path</Declaration>
+			
+			
+			<Anchor>//api/name/updateRowAtPath:</Anchor>
+            <NodeRef refid="16"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTableView/insertRowsAtPathes:animated:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSTableView.h</DeclaredIn>
+			
+			<Declaration>- (void)insertRowsAtPathes:(NSArray *)pathes animated:(BOOL)animated</Declaration>
+			
+			
+			<Anchor>//api/name/insertRowsAtPathes:animated:</Anchor>
+            <NodeRef refid="16"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTableView/updateRowsAtPathes:animated:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSTableView.h</DeclaredIn>
+			
+			<Declaration>- (void)updateRowsAtPathes:(NSArray *)pathes animated:(BOOL)animated</Declaration>
+			
+			
+			<Anchor>//api/name/updateRowsAtPathes:animated:</Anchor>
+            <NodeRef refid="16"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTableView/removeRowsAtPathes:animated:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSTableView.h</DeclaredIn>
+			
+			<Declaration>- (void)removeRowsAtPathes:(NSArray *)pathes animated:(BOOL)animated</Declaration>
+			
+			
+			<Anchor>//api/name/removeRowsAtPathes:animated:</Anchor>
+            <NodeRef refid="16"/>
+		</Token>
+		
+        
+	</File>
+</Tokens>

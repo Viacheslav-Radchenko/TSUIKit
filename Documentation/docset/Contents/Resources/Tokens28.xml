@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Protocols/TSNavigationStripDataSource.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intf/TSNavigationStripDataSource</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSNavigationStripDataSource.h</DeclaredIn>
+            
+			
+			<NodeRef refid="28"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/TSNavigationStripDataSource/numberOfSections</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSNavigationStripDataSource.h</DeclaredIn>
+			
+			<Declaration>- (NSInteger)numberOfSections</Declaration>
+			
+			
+			<Anchor>//api/name/numberOfSections</Anchor>
+            <NodeRef refid="28"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/TSNavigationStripDataSource/numberOfItemsFromLeftSide:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSNavigationStripDataSource.h</DeclaredIn>
+			
+			<Declaration>- (NSInteger)numberOfItemsFromLeftSide:(BOOL)leftSide</Declaration>
+			
+			
+			<Anchor>//api/name/numberOfItemsFromLeftSide:</Anchor>
+            <NodeRef refid="28"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/TSNavigationStripDataSource/customSectionControlForIndex:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSNavigationStripDataSource.h</DeclaredIn>
+			
+			<Declaration>- (UIButton *)customSectionControlForIndex:(NSInteger)index</Declaration>
+			
+			
+			<Anchor>//api/name/customSectionControlForIndex:</Anchor>
+            <NodeRef refid="28"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/TSNavigationStripDataSource/titleForSectionAtIndex:forSelectedState:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSNavigationStripDataSource.h</DeclaredIn>
+			
+			<Declaration>- (NSString *)titleForSectionAtIndex:(NSInteger)index forSelectedState:(BOOL)selected</Declaration>
+			
+			
+			<Anchor>//api/name/titleForSectionAtIndex:forSelectedState:</Anchor>
+            <NodeRef refid="28"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/TSNavigationStripDataSource/iconForSectionAtIndex:forSelectedState:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSNavigationStripDataSource.h</DeclaredIn>
+			
+			<Declaration>- (UIImage *)iconForSectionAtIndex:(NSInteger)index forSelectedState:(BOOL)selected</Declaration>
+			
+			
+			<Anchor>//api/name/iconForSectionAtIndex:forSelectedState:</Anchor>
+            <NodeRef refid="28"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/TSNavigationStripDataSource/sectionWidthAtIndex:forSelectedState:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSNavigationStripDataSource.h</DeclaredIn>
+			
+			<Declaration>- (CGFloat)sectionWidthAtIndex:(NSInteger)index forSelectedState:(BOOL)selected</Declaration>
+			
+			
+			<Anchor>//api/name/sectionWidthAtIndex:forSelectedState:</Anchor>
+            <NodeRef refid="28"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/TSNavigationStripDataSource/titleColorForSectionAtIndex:forSelectedState:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSNavigationStripDataSource.h</DeclaredIn>
+			
+			<Declaration>- (UIColor *)titleColorForSectionAtIndex:(NSInteger)index forSelectedState:(BOOL)selected</Declaration>
+			
+			
+			<Anchor>//api/name/titleColorForSectionAtIndex:forSelectedState:</Anchor>
+            <NodeRef refid="28"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/TSNavigationStripDataSource/titleFontForSectionAtIndex:forSelectedState:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSNavigationStripDataSource.h</DeclaredIn>
+			
+			<Declaration>- (UIFont *)titleFontForSectionAtIndex:(NSInteger)index forSelectedState:(BOOL)selected</Declaration>
+			
+			
+			<Anchor>//api/name/titleFontForSectionAtIndex:forSelectedState:</Anchor>
+            <NodeRef refid="28"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/TSNavigationStripDataSource/shadowColorForSectionAtIndex:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSNavigationStripDataSource.h</DeclaredIn>
+			
+			<Declaration>- (UIColor *)shadowColorForSectionAtIndex:(NSInteger)index</Declaration>
+			
+			
+			<Anchor>//api/name/shadowColorForSectionAtIndex:</Anchor>
+            <NodeRef refid="28"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/TSNavigationStripDataSource/shadowOffsetForSectionAtIndex:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSNavigationStripDataSource.h</DeclaredIn>
+			
+			<Declaration>- (CGSize)shadowOffsetForSectionAtIndex:(NSInteger)index</Declaration>
+			
+			
+			<Anchor>//api/name/shadowOffsetForSectionAtIndex:</Anchor>
+            <NodeRef refid="28"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/TSNavigationStripDataSource/edgeInsetsForSectionAtIndex:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSNavigationStripDataSource.h</DeclaredIn>
+			
+			<Declaration>- (UIEdgeInsets)edgeInsetsForSectionAtIndex:(NSInteger)index</Declaration>
+			
+			
+			<Anchor>//api/name/edgeInsetsForSectionAtIndex:</Anchor>
+            <NodeRef refid="28"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/TSNavigationStripDataSource/backgroundImageForSectionAtIndex:forSelectedState:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSNavigationStripDataSource.h</DeclaredIn>
+			
+			<Declaration>- (UIImage *)backgroundImageForSectionAtIndex:(NSInteger)index forSelectedState:(BOOL)selected</Declaration>
+			
+			
+			<Anchor>//api/name/backgroundImageForSectionAtIndex:forSelectedState:</Anchor>
+            <NodeRef refid="28"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/TSNavigationStripDataSource/backgroundColorForSectionAtIndex:forSelectedState:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSNavigationStripDataSource.h</DeclaredIn>
+			
+			<Declaration>- (UIColor *)backgroundColorForSectionAtIndex:(NSInteger)index forSelectedState:(BOOL)selected</Declaration>
+			
+			
+			<Anchor>//api/name/backgroundColorForSectionAtIndex:forSelectedState:</Anchor>
+            <NodeRef refid="28"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/TSNavigationStripDataSource/customItemControlForIndex:fromLeftSide:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSNavigationStripDataSource.h</DeclaredIn>
+			
+			<Declaration>- (UIButton *)customItemControlForIndex:(NSInteger)index fromLeftSide:(BOOL)leftSide</Declaration>
+			
+			
+			<Anchor>//api/name/customItemControlForIndex:fromLeftSide:</Anchor>
+            <NodeRef refid="28"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/TSNavigationStripDataSource/titleForItemAtIndex:fromLeftSide:forSelectedState:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSNavigationStripDataSource.h</DeclaredIn>
+			
+			<Declaration>- (NSString *)titleForItemAtIndex:(NSInteger)index fromLeftSide:(BOOL)leftSide forSelectedState:(BOOL)selected</Declaration>
+			
+			
+			<Anchor>//api/name/titleForItemAtIndex:fromLeftSide:forSelectedState:</Anchor>
+            <NodeRef refid="28"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/TSNavigationStripDataSource/iconForItemAtIndex:fromLeftSide:forSelectedState:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSNavigationStripDataSource.h</DeclaredIn>
+			
+			<Declaration>- (UIImage *)iconForItemAtIndex:(NSInteger)index fromLeftSide:(BOOL)leftSide forSelectedState:(BOOL)selected</Declaration>
+			
+			
+			<Anchor>//api/name/iconForItemAtIndex:fromLeftSide:forSelectedState:</Anchor>
+            <NodeRef refid="28"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/TSNavigationStripDataSource/itemWidthAtIndex:fromLeftSide:forSelectedState:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSNavigationStripDataSource.h</DeclaredIn>
+			
+			<Declaration>- (CGFloat)itemWidthAtIndex:(NSInteger)index fromLeftSide:(BOOL)leftSide forSelectedState:(BOOL)selected</Declaration>
+			
+			
+			<Anchor>//api/name/itemWidthAtIndex:fromLeftSide:forSelectedState:</Anchor>
+            <NodeRef refid="28"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/TSNavigationStripDataSource/titleColorForItemAtIndex:fromLeftSide:forSelectedState:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSNavigationStripDataSource.h</DeclaredIn>
+			
+			<Declaration>- (UIColor *)titleColorForItemAtIndex:(NSInteger)index fromLeftSide:(BOOL)leftSide forSelectedState:(BOOL)selected</Declaration>
+			
+			
+			<Anchor>//api/name/titleColorForItemAtIndex:fromLeftSide:forSelectedState:</Anchor>
+            <NodeRef refid="28"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/TSNavigationStripDataSource/titleFontForItemAtIndex:fromLeftSide:forSelectedState:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSNavigationStripDataSource.h</DeclaredIn>
+			
+			<Declaration>- (UIFont *)titleFontForItemAtIndex:(NSInteger)index fromLeftSide:(BOOL)leftSide forSelectedState:(BOOL)selected</Declaration>
+			
+			
+			<Anchor>//api/name/titleFontForItemAtIndex:fromLeftSide:forSelectedState:</Anchor>
+            <NodeRef refid="28"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/TSNavigationStripDataSource/shadowColorForItemAtIndex:fromLeftSide:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSNavigationStripDataSource.h</DeclaredIn>
+			
+			<Declaration>- (UIColor *)shadowColorForItemAtIndex:(NSInteger)index fromLeftSide:(BOOL)leftSide</Declaration>
+			
+			
+			<Anchor>//api/name/shadowColorForItemAtIndex:fromLeftSide:</Anchor>
+            <NodeRef refid="28"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/TSNavigationStripDataSource/shadowOffsetForItemAtIndex:fromLeftSide:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSNavigationStripDataSource.h</DeclaredIn>
+			
+			<Declaration>- (CGSize)shadowOffsetForItemAtIndex:(NSInteger)index fromLeftSide:(BOOL)leftSide</Declaration>
+			
+			
+			<Anchor>//api/name/shadowOffsetForItemAtIndex:fromLeftSide:</Anchor>
+            <NodeRef refid="28"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/TSNavigationStripDataSource/edgeInsetsForItemAtIndex:fromLeftSide:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSNavigationStripDataSource.h</DeclaredIn>
+			
+			<Declaration>- (UIEdgeInsets)edgeInsetsForItemAtIndex:(NSInteger)index fromLeftSide:(BOOL)leftSide</Declaration>
+			
+			
+			<Anchor>//api/name/edgeInsetsForItemAtIndex:fromLeftSide:</Anchor>
+            <NodeRef refid="28"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/TSNavigationStripDataSource/backgroundImageForItemAtIndex:fromLeftSide:forSelectedState:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSNavigationStripDataSource.h</DeclaredIn>
+			
+			<Declaration>- (UIImage *)backgroundImageForItemAtIndex:(NSInteger)index fromLeftSide:(BOOL)leftSide forSelectedState:(BOOL)selected</Declaration>
+			
+			
+			<Anchor>//api/name/backgroundImageForItemAtIndex:fromLeftSide:forSelectedState:</Anchor>
+            <NodeRef refid="28"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/TSNavigationStripDataSource/backgroundColorForItemAtIndex:fromLeftSide:forSelectedState:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSNavigationStripDataSource.h</DeclaredIn>
+			
+			<Declaration>- (UIColor *)backgroundColorForItemAtIndex:(NSInteger)index fromLeftSide:(BOOL)leftSide forSelectedState:(BOOL)selected</Declaration>
+			
+			
+			<Anchor>//api/name/backgroundColorForItemAtIndex:fromLeftSide:forSelectedState:</Anchor>
+            <NodeRef refid="28"/>
+		</Token>
+		
+        
+	</File>
+</Tokens>

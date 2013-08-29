@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/TSTableViewModel.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/TSTableViewModel</TokenIdentifier>
+			<Abstract type="html">TSTableViewModel is a prototype for TSTableViewDataSource.
+    There are two default ready-to-use appearance styles kTSTableViewStyleDark and kTSTableViewStyleLight provided by TSTableViewModel.</Abstract>
+			<DeclaredIn>TSTableViewModel.h</DeclaredIn>
+            
+			
+			<NodeRef refid="24"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTableViewModel/setColumns:</TokenIdentifier>
+			<Abstract type="html">Readonly array with information about columns hierarchy.</Abstract>
+			<DeclaredIn>TSTableViewModel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong, readonly) NSArray *columns</Declaration>
+			
+			
+			<Anchor>//api/name/columns</Anchor>
+            <NodeRef refid="24"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTableViewModel/columns</TokenIdentifier>
+			<Abstract type="html">Readonly array with information about columns hierarchy.</Abstract>
+			<DeclaredIn>TSTableViewModel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong, readonly) NSArray *columns</Declaration>
+			
+			
+			<Anchor>//api/name/columns</Anchor>
+            <NodeRef refid="24"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/TSTableViewModel/columns</TokenIdentifier>
+			<Abstract type="html">Readonly array with information about columns hierarchy.</Abstract>
+			<DeclaredIn>TSTableViewModel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong, readonly) NSArray *columns</Declaration>
+			
+			
+			<Anchor>//api/name/columns</Anchor>
+            <NodeRef refid="24"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTableViewModel/setRows:</TokenIdentifier>
+			<Abstract type="html">Readonly array with information about rows data.</Abstract>
+			<DeclaredIn>TSTableViewModel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong, readonly) NSArray *rows</Declaration>
+			
+			
+			<Anchor>//api/name/rows</Anchor>
+            <NodeRef refid="24"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTableViewModel/rows</TokenIdentifier>
+			<Abstract type="html">Readonly array with information about rows data.</Abstract>
+			<DeclaredIn>TSTableViewModel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong, readonly) NSArray *rows</Declaration>
+			
+			
+			<Anchor>//api/name/rows</Anchor>
+            <NodeRef refid="24"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/TSTableViewModel/rows</TokenIdentifier>
+			<Abstract type="html">Readonly array with information about rows data.</Abstract>
+			<DeclaredIn>TSTableViewModel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong, readonly) NSArray *rows</Declaration>
+			
+			
+			<Anchor>//api/name/rows</Anchor>
+            <NodeRef refid="24"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTableViewModel/setTableView:</TokenIdentifier>
+			<Abstract type="html">Readonly reference to TSTableView instance managed by this model.</Abstract>
+			<DeclaredIn>TSTableViewModel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong, readonly) TSTableView *tableView</Declaration>
+			
+			
+			<Anchor>//api/name/tableView</Anchor>
+            <NodeRef refid="24"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTableViewModel/tableView</TokenIdentifier>
+			<Abstract type="html">Readonly reference to TSTableView instance managed by this model.</Abstract>
+			<DeclaredIn>TSTableViewModel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong, readonly) TSTableView *tableView</Declaration>
+			
+			
+			<Anchor>//api/name/tableView</Anchor>
+            <NodeRef refid="24"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/TSTableViewModel/tableView</TokenIdentifier>
+			<Abstract type="html">Readonly reference to TSTableView instance managed by this model.</Abstract>
+			<DeclaredIn>TSTableViewModel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong, readonly) TSTableView *tableView</Declaration>
+			
+			
+			<Anchor>//api/name/tableView</Anchor>
+            <NodeRef refid="24"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTableViewModel/setTableStyle:</TokenIdentifier>
+			<Abstract type="html">TSTableView style choosen during initialization</Abstract>
+			<DeclaredIn>TSTableViewModel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign, readonly) TSTableViewStyle tableStyle</Declaration>
+			
+			
+			<Anchor>//api/name/tableStyle</Anchor>
+            <NodeRef refid="24"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTableViewModel/tableStyle</TokenIdentifier>
+			<Abstract type="html">TSTableView style choosen during initialization</Abstract>
+			<DeclaredIn>TSTableViewModel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign, readonly) TSTableViewStyle tableStyle</Declaration>
+			
+			
+			<Anchor>//api/name/tableStyle</Anchor>
+            <NodeRef refid="24"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/TSTableViewModel/tableStyle</TokenIdentifier>
+			<Abstract type="html">TSTableView style choosen during initialization</Abstract>
+			<DeclaredIn>TSTableViewModel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign, readonly) TSTableViewStyle tableStyle</Declaration>
+			
+			
+			<Anchor>//api/name/tableStyle</Anchor>
+            <NodeRef refid="24"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTableViewModel/setHeightForRow:</TokenIdentifier>
+			<Abstract type="html">Row height.</Abstract>
+			<DeclaredIn>TSTableViewModel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) CGFloat heightForRow</Declaration>
+			
+			
+			<Anchor>//api/name/heightForRow</Anchor>
+            <NodeRef refid="24"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTableViewModel/heightForRow</TokenIdentifier>
+			<Abstract type="html">Row height.</Abstract>
+			<DeclaredIn>TSTableViewModel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) CGFloat heightForRow</Declaration>
+			
+			
+			<Anchor>//api/name/heightForRow</Anchor>
+            <NodeRef refid="24"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/TSTableViewModel/heightForRow</TokenIdentifier>
+			<Abstract type="html">Row height.</Abstract>
+			<DeclaredIn>TSTableViewModel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) CGFloat heightForRow</Declaration>
+			
+			
+			<Anchor>//api/name/heightForRow</Anchor>
+            <NodeRef refid="24"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTableViewModel/setWidthForExpandItem:</TokenIdentifier>
+			<Abstract type="html">Width of one nesting level in expand panel. Total panel width would be widthForExpandItem * maxRowNestingLevel.</Abstract>
+			<DeclaredIn>TSTableViewModel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) CGFloat widthForExpandItem</Declaration>
+			
+			
+			<Anchor>//api/name/widthForExpandItem</Anchor>
+            <NodeRef refid="24"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTableViewModel/widthForExpandItem</TokenIdentifier>
+			<Abstract type="html">Width of one nesting level in expand panel. Total panel width would be widthForExpandItem * maxRowNestingLevel.</Abstract>
+			<DeclaredIn>TSTableViewModel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) CGFloat widthForExpandItem</Declaration>
+			
+			
+			<Anchor>//api/name/widthForExpandItem</Anchor>
+            <NodeRef refid="24"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/TSTableViewModel/widthForExpandItem</TokenIdentifier>
+			<Abstract type="html">Width of one nesting level in expand panel. Total panel width would be widthForExpandItem * maxRowNestingLevel.</Abstract>
+			<DeclaredIn>TSTableViewModel.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) CGFloat widthForExpandItem</Declaration>
+			
+			
+			<Anchor>//api/name/widthForExpandItem</Anchor>
+            <NodeRef refid="24"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTableViewModel/initWithTableView:andStyle:</TokenIdentifier>
+			<Abstract type="html">Initialize instance of TSTableViewModel with corresponding TSTableView object and appearance style.</Abstract>
+			<DeclaredIn>TSTableViewModel.h</DeclaredIn>
+			
+			<Declaration>- (id)initWithTableView:(TSTableView *)tableView andStyle:(TSTableViewStyle)style</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>tableView</Name>
+					<Abstract type="html">Instance of TSTableView which would be managed by this data model.</Abstract>
+				</Parameter><Parameter>
+					<Name>style</Name>
+					<Abstract type="html">Appearance style of TSTableView.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/initWithTableView:andStyle:</Anchor>
+            <NodeRef refid="24"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTableViewModel/setColumns:andRows:</TokenIdentifier>
+			<Abstract type="html">Initialize with array of TSColumn objects and array TSRow objects.</Abstract>
+			<DeclaredIn>TSTableViewModel.h</DeclaredIn>
+			
+			<Declaration>- (void)setColumns:(NSArray *)columns andRows:(NSArray *)rows</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>columns</Name>
+					<Abstract type="html">Array with TSColumn objects.</Abstract>
+				</Parameter><Parameter>
+					<Name>rows</Name>
+					<Abstract type="html">Array with TSRow objects.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/setColumns:andRows:</Anchor>
+            <NodeRef refid="24"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTableViewModel/setColumnsInfo:andRowsInfo:</TokenIdentifier>
+			<Abstract type="html">Initialize with array of NSDictionary decriptions for columns and array of NSDictionary decriptions for rows.</Abstract>
+			<DeclaredIn>TSTableViewModel.h</DeclaredIn>
+			
+			<Declaration>- (void)setColumnsInfo:(NSArray *)columns andRowsInfo:(NSArray *)rows</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>columns</Name>
+					<Abstract type="html">Array with columns information.</Abstract>
+				</Parameter><Parameter>
+					<Name>rows</Name>
+					<Abstract type="html">Array with rows data.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/setColumnsInfo:andRowsInfo:</Anchor>
+            <NodeRef refid="24"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTableViewModel/setRows:</TokenIdentifier>
+			<Abstract type="html">Initialize with array of TSRow objects. Columns hierarchy remains the same.</Abstract>
+			<DeclaredIn>TSTableViewModel.h</DeclaredIn>
+			
+			<Declaration>- (void)setRows:(NSArray *)rows</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>rows</Name>
+					<Abstract type="html">Array with TSRow objects.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/setRows:</Anchor>
+            <NodeRef refid="24"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTableViewModel/setRowsInfo:</TokenIdentifier>
+			<Abstract type="html">Initialize with array of NSDictionary decriptions for rows. Rows hierarchy remains the same.</Abstract>
+			<DeclaredIn>TSTableViewModel.h</DeclaredIn>
+			
+			<Declaration>- (void)setRowsInfo:(NSArray *)rows</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>rows</Name>
+					<Abstract type="html">Array with rows data.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/setRowsInfo:</Anchor>
+            <NodeRef refid="24"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTableViewModel/insertRow:atPath:</TokenIdentifier>
+			<Abstract type="html">Insert new row at specified path. TSTableView would be notified about changes in data model.</Abstract>
+			<DeclaredIn>TSTableViewModel.h</DeclaredIn>
+			
+			<Declaration>- (void)insertRow:(TSRow *)rowInfo atPath:(NSIndexPath *)indexPath</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>rowInfo</Name>
+					<Abstract type="html">TSRow instance with new data.</Abstract>
+				</Parameter><Parameter>
+					<Name>indexPath</Name>
+					<Abstract type="html">Insert positon.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/insertRow:atPath:</Anchor>
+            <NodeRef refid="24"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTableViewModel/removeRowAtPath:</TokenIdentifier>
+			<Abstract type="html">Remove row at specified path. TSTableView would be notified about changes in data model.</Abstract>
+			<DeclaredIn>TSTableViewModel.h</DeclaredIn>
+			
+			<Declaration>- (void)removeRowAtPath:(NSIndexPath *)indexPath</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>indexPath</Name>
+					<Abstract type="html">Remove positon.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/removeRowAtPath:</Anchor>
+            <NodeRef refid="24"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTableViewModel/replcaceRowAtPath:withRow:</TokenIdentifier>
+			<Abstract type="html">Replace (update) information in row at specified path. TSTableView would be notified about changes in data model.</Abstract>
+			<DeclaredIn>TSTableViewModel.h</DeclaredIn>
+			
+			<Declaration>- (void)replcaceRowAtPath:(NSIndexPath *)indexPath withRow:(TSRow *)rowInfo</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>indexPath</Name>
+					<Abstract type="html">Updated row positon.</Abstract>
+				</Parameter><Parameter>
+					<Name>rowInfo</Name>
+					<Abstract type="html">TSRow instance with new data.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/replcaceRowAtPath:withRow:</Anchor>
+            <NodeRef refid="24"/>
+		</Token>
+		
+        
+	</File>
+</Tokens>

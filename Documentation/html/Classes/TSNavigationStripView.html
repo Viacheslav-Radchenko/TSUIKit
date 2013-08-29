@@ -1,0 +1,1387 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="html/html; charset=utf-8" />
+		<title>TSNavigationStripView Class Reference</title>
+		<meta id="xcode-display" name="xcode-display" content="render"/>
+		<link rel="stylesheet" type="text/css" href="../css/styles.css" media="all" />
+		<link rel="stylesheet" type="text/css" media="print" href="../css/stylesPrint.css" />
+		<meta name="generator" content="appledoc 2.1 (build 858)" />
+	</head>
+	<body>
+		<header id="top_header">
+			<div id="library" class="hideInXcode">
+				<h1><a id="libraryTitle" href="../index.html">TSUIKit </a></h1>
+				<a id="developerHome" href="../index.html">Viacheslav Radchenko</a>
+			</div>
+			
+			<div id="title" role="banner">
+				<h1 class="hideInXcode">TSNavigationStripView Class Reference</h1>
+			</div>
+			<ul id="headerButtons" role="toolbar">
+				<li id="toc_button">
+					<button aria-label="Show Table of Contents" role="checkbox" class="open" id="table_of_contents"><span class="disclosure"></span>Table of Contents</button>
+				</li>
+				<li id="jumpto_button" role="navigation">
+					<select id="jumpTo">
+	<option value="top">Jump To&#133;</option>
+	
+	<option value="overview">Overview</option>
+	
+	
+	
+	
+	<option value="tasks">Tasks</option>
+	
+	
+	
+	
+	
+	<option value="properties">Properties</option>
+	
+	<option value="//api/name/autohideNavigationButtons">&nbsp;&nbsp;&nbsp;&nbsp;autohideNavigationButtons</option>
+	
+	<option value="//api/name/backgroundImage">&nbsp;&nbsp;&nbsp;&nbsp;backgroundImage</option>
+	
+	<option value="//api/name/dataSource">&nbsp;&nbsp;&nbsp;&nbsp;dataSource</option>
+	
+	<option value="//api/name/debugMode">&nbsp;&nbsp;&nbsp;&nbsp;debugMode</option>
+	
+	<option value="//api/name/delegate">&nbsp;&nbsp;&nbsp;&nbsp;delegate</option>
+	
+	<option value="//api/name/emptySpaceHolderImage">&nbsp;&nbsp;&nbsp;&nbsp;emptySpaceHolderImage</option>
+	
+	<option value="//api/name/leftNavigationButton">&nbsp;&nbsp;&nbsp;&nbsp;leftNavigationButton</option>
+	
+	<option value="//api/name/maskSectionsContainerEdges">&nbsp;&nbsp;&nbsp;&nbsp;maskSectionsContainerEdges</option>
+	
+	<option value="//api/name/navigationButtonsHidden">&nbsp;&nbsp;&nbsp;&nbsp;navigationButtonsHidden</option>
+	
+	<option value="//api/name/rightNavigationButton">&nbsp;&nbsp;&nbsp;&nbsp;rightNavigationButton</option>
+	
+	<option value="//api/name/sectionWidth">&nbsp;&nbsp;&nbsp;&nbsp;sectionWidth</option>
+	
+	<option value="//api/name/sectionsAligment">&nbsp;&nbsp;&nbsp;&nbsp;sectionsAligment</option>
+	
+	<option value="//api/name/selectedSection">&nbsp;&nbsp;&nbsp;&nbsp;selectedSection</option>
+	
+	<option value="//api/name/selectedSectionWidth">&nbsp;&nbsp;&nbsp;&nbsp;selectedSectionWidth</option>
+	
+	<option value="//api/name/selectionMarker">&nbsp;&nbsp;&nbsp;&nbsp;selectionMarker</option>
+	
+	
+	
+	
+	
+	
+	<option value="instance_methods">Instance Methods</option>
+	
+	<option value="//api/name/deselectItemAtIndex:fromLeftSide:">&nbsp;&nbsp;&nbsp;&nbsp;- deselectItemAtIndex:fromLeftSide:</option>
+	
+	<option value="//api/name/initWithFrame:">&nbsp;&nbsp;&nbsp;&nbsp;- initWithFrame:</option>
+	
+	<option value="//api/name/insertItemAtIndex:fromLeftSide:animated:">&nbsp;&nbsp;&nbsp;&nbsp;- insertItemAtIndex:fromLeftSide:animated:</option>
+	
+	<option value="//api/name/insertItemsAtIndexes:fromLeftSide:animated:">&nbsp;&nbsp;&nbsp;&nbsp;- insertItemsAtIndexes:fromLeftSide:animated:</option>
+	
+	<option value="//api/name/insertSectionAtIndex:animated:">&nbsp;&nbsp;&nbsp;&nbsp;- insertSectionAtIndex:animated:</option>
+	
+	<option value="//api/name/insertSectionsAtIndexes:animated:">&nbsp;&nbsp;&nbsp;&nbsp;- insertSectionsAtIndexes:animated:</option>
+	
+	<option value="//api/name/isItemSelectedAtIndex:fromLeftSide:">&nbsp;&nbsp;&nbsp;&nbsp;- isItemSelectedAtIndex:fromLeftSide:</option>
+	
+	<option value="//api/name/reloadData">&nbsp;&nbsp;&nbsp;&nbsp;- reloadData</option>
+	
+	<option value="//api/name/reloadItemsData">&nbsp;&nbsp;&nbsp;&nbsp;- reloadItemsData</option>
+	
+	<option value="//api/name/reloadSectionsData">&nbsp;&nbsp;&nbsp;&nbsp;- reloadSectionsData</option>
+	
+	<option value="//api/name/removeItemAtIndex:fromLeftSide:animated:">&nbsp;&nbsp;&nbsp;&nbsp;- removeItemAtIndex:fromLeftSide:animated:</option>
+	
+	<option value="//api/name/removeItemsAtIndexes:fromLeftSide:animated:">&nbsp;&nbsp;&nbsp;&nbsp;- removeItemsAtIndexes:fromLeftSide:animated:</option>
+	
+	<option value="//api/name/removeSectionAtIndex:animated:">&nbsp;&nbsp;&nbsp;&nbsp;- removeSectionAtIndex:animated:</option>
+	
+	<option value="//api/name/removeSectionsAtIndexes:animated:">&nbsp;&nbsp;&nbsp;&nbsp;- removeSectionsAtIndexes:animated:</option>
+	
+	<option value="//api/name/scrollSelectedSectionTo:">&nbsp;&nbsp;&nbsp;&nbsp;- scrollSelectedSectionTo:</option>
+	
+	<option value="//api/name/selectItemAtIndex:fromLeftSide:">&nbsp;&nbsp;&nbsp;&nbsp;- selectItemAtIndex:fromLeftSide:</option>
+	
+	<option value="//api/name/selectSectionAtIndex:animated:">&nbsp;&nbsp;&nbsp;&nbsp;- selectSectionAtIndex:animated:</option>
+	
+	<option value="//api/name/updateItemsAtIndexes:fromLeftSide:animated:">&nbsp;&nbsp;&nbsp;&nbsp;- updateItemsAtIndexes:fromLeftSide:animated:</option>
+	
+	<option value="//api/name/updateSectionsAtIndexes:animated:">&nbsp;&nbsp;&nbsp;&nbsp;- updateSectionsAtIndexes:animated:</option>
+	
+	
+	
+</select>
+				</li>
+			</ul>
+		</header>
+		<nav id="tocContainer" class="isShowingTOC">
+			<ul id="toc" role="tree">
+				
+<li role="treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#overview">Overview</a></span></li>
+
+
+
+
+<li role="treeitem" id="task_treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#tasks">Tasks</a></span><ul>
+	
+</ul></li>
+
+
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#properties">Properties</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/autohideNavigationButtons">autohideNavigationButtons</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/backgroundImage">backgroundImage</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/dataSource">dataSource</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/debugMode">debugMode</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/delegate">delegate</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/emptySpaceHolderImage">emptySpaceHolderImage</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/leftNavigationButton">leftNavigationButton</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/maskSectionsContainerEdges">maskSectionsContainerEdges</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/navigationButtonsHidden">navigationButtonsHidden</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/rightNavigationButton">rightNavigationButton</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/sectionWidth">sectionWidth</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/sectionsAligment">sectionsAligment</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/selectedSection">selectedSection</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/selectedSectionWidth">selectedSectionWidth</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/selectionMarker">selectionMarker</a></span></li>
+	
+</ul></li>
+
+
+
+
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/deselectItemAtIndex:fromLeftSide:">deselectItemAtIndex:fromLeftSide:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/initWithFrame:">initWithFrame:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/insertItemAtIndex:fromLeftSide:animated:">insertItemAtIndex:fromLeftSide:animated:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/insertItemsAtIndexes:fromLeftSide:animated:">insertItemsAtIndexes:fromLeftSide:animated:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/insertSectionAtIndex:animated:">insertSectionAtIndex:animated:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/insertSectionsAtIndexes:animated:">insertSectionsAtIndexes:animated:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/isItemSelectedAtIndex:fromLeftSide:">isItemSelectedAtIndex:fromLeftSide:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/reloadData">reloadData</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/reloadItemsData">reloadItemsData</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/reloadSectionsData">reloadSectionsData</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/removeItemAtIndex:fromLeftSide:animated:">removeItemAtIndex:fromLeftSide:animated:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/removeItemsAtIndexes:fromLeftSide:animated:">removeItemsAtIndexes:fromLeftSide:animated:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/removeSectionAtIndex:animated:">removeSectionAtIndex:animated:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/removeSectionsAtIndexes:animated:">removeSectionsAtIndexes:animated:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/scrollSelectedSectionTo:">scrollSelectedSectionTo:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/selectItemAtIndex:fromLeftSide:">selectItemAtIndex:fromLeftSide:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/selectSectionAtIndex:animated:">selectSectionAtIndex:animated:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/updateItemsAtIndexes:fromLeftSide:animated:">updateItemsAtIndexes:fromLeftSide:animated:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/updateSectionsAtIndexes:animated:">updateSectionsAtIndexes:animated:</a></span></li>
+	
+</ul></li>
+
+
+			</ul>
+		</nav>
+		<article>
+			<div id="contents" class="isShowingTOC" role="main">
+				<a title="TSNavigationStripView Class Reference" name="top"></a>
+				<div class="main-navigation navigation-top">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="header">
+					<div class="section-header">
+						<h1 class="title title-header">TSNavigationStripView Class Reference</h1>
+					</div>		
+				</div>
+				<div id="container">	
+					
+					<div class="section section-specification"><table cellspacing="0"><tbody>
+						<tr>
+	<td class="specification-title">Inherits from</td>
+	<td class="specification-value">UIView</td>
+</tr><tr>
+	<td class="specification-title">Declared in</td>
+	<td class="specification-value">TSNavigationStripView.h</td>
+</tr>
+						</tbody></table></div>
+					
+                    
+                    
+					
+					
+					
+					
+					
+					<div class="section section-tasks">
+						<a title="Tasks" name="tasks"></a>
+						<h2 class="subtitle subtitle-tasks">Tasks</h2>
+						
+						
+						
+						
+
+						<ul class="task-list">
+							<li>
+	<span class="tooltip">
+		<code><a href="#//api/name/delegate">&nbsp;&nbsp;delegate</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/dataSource">&nbsp;&nbsp;dataSource</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/selectedSection">&nbsp;&nbsp;selectedSection</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/selectedSectionWidth">&nbsp;&nbsp;selectedSectionWidth</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/sectionWidth">&nbsp;&nbsp;sectionWidth</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/debugMode">&nbsp;&nbsp;debugMode</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/maskSectionsContainerEdges">&nbsp;&nbsp;maskSectionsContainerEdges</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/sectionsAligment">&nbsp;&nbsp;sectionsAligment</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/autohideNavigationButtons">&nbsp;&nbsp;autohideNavigationButtons</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/navigationButtonsHidden">&nbsp;&nbsp;navigationButtonsHidden</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/leftNavigationButton">&nbsp;&nbsp;leftNavigationButton</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/rightNavigationButton">&nbsp;&nbsp;rightNavigationButton</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/backgroundImage">&nbsp;&nbsp;backgroundImage</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/emptySpaceHolderImage">&nbsp;&nbsp;emptySpaceHolderImage</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/selectionMarker">&nbsp;&nbsp;selectionMarker</a></code>
+	</span>
+	<span class="task-item-suffix">property</span>
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/initWithFrame:">&ndash;&nbsp;initWithFrame:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/reloadData">&ndash;&nbsp;reloadData</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/reloadSectionsData">&ndash;&nbsp;reloadSectionsData</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/reloadItemsData">&ndash;&nbsp;reloadItemsData</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/selectSectionAtIndex:animated:">&ndash;&nbsp;selectSectionAtIndex:animated:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/selectItemAtIndex:fromLeftSide:">&ndash;&nbsp;selectItemAtIndex:fromLeftSide:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/deselectItemAtIndex:fromLeftSide:">&ndash;&nbsp;deselectItemAtIndex:fromLeftSide:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/isItemSelectedAtIndex:fromLeftSide:">&ndash;&nbsp;isItemSelectedAtIndex:fromLeftSide:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/scrollSelectedSectionTo:">&ndash;&nbsp;scrollSelectedSectionTo:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/insertSectionAtIndex:animated:">&ndash;&nbsp;insertSectionAtIndex:animated:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/removeSectionAtIndex:animated:">&ndash;&nbsp;removeSectionAtIndex:animated:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/insertItemAtIndex:fromLeftSide:animated:">&ndash;&nbsp;insertItemAtIndex:fromLeftSide:animated:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/removeItemAtIndex:fromLeftSide:animated:">&ndash;&nbsp;removeItemAtIndex:fromLeftSide:animated:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/updateSectionsAtIndexes:animated:">&ndash;&nbsp;updateSectionsAtIndexes:animated:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/updateItemsAtIndexes:fromLeftSide:animated:">&ndash;&nbsp;updateItemsAtIndexes:fromLeftSide:animated:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/insertSectionsAtIndexes:animated:">&ndash;&nbsp;insertSectionsAtIndexes:animated:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/removeSectionsAtIndexes:animated:">&ndash;&nbsp;removeSectionsAtIndexes:animated:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/insertItemsAtIndexes:fromLeftSide:animated:">&ndash;&nbsp;insertItemsAtIndexes:fromLeftSide:animated:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/removeItemsAtIndexes:fromLeftSide:animated:">&ndash;&nbsp;removeItemsAtIndexes:fromLeftSide:animated:</a></code>
+	</span>
+	
+	
+</li>
+						</ul>
+						
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Properties" name="properties"></a>
+						<h2 class="subtitle subtitle-methods">Properties</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/autohideNavigationButtons" title="autohideNavigationButtons"></a>
+	<h3 class="subsubtitle method-title">autohideNavigationButtons</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>If NO navigation buttons always displayed (if <a href="#//api/name/navigationButtonsHidden">navigationButtonsHidden</a> == NO)
+                if YES visibility of each button determined dynamically and depends on currenct <a href="#//api/name/selectedSection">selectedSection</a>
+    @def        YES</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) BOOL autohideNavigationButtons</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">TSNavigationStripView.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/backgroundImage" title="backgroundImage"></a>
+	<h3 class="subsubtitle method-title">backgroundImage</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Customise appearance providing bacground image
+    @def        nil</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) UIImage *backgroundImage</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">TSNavigationStripView.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/dataSource" title="dataSource"></a>
+	<h3 class="subsubtitle method-title">dataSource</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, weak) id&lt;TSNavigationStripDataSource&gt; dataSource</code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/debugMode" title="debugMode"></a>
+	<h3 class="subsubtitle method-title">debugMode</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>If YES funny colors set to backroundColor property of subviews.
+    @def        NO</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) BOOL debugMode</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">TSNavigationStripView.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/delegate" title="delegate"></a>
+	<h3 class="subsubtitle method-title">delegate</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, weak) id&lt;TSNavigationStripViewDelegate&gt; delegate</code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/emptySpaceHolderImage" title="emptySpaceHolderImage"></a>
+	<h3 class="subsubtitle method-title">emptySpaceHolderImage</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>If sections conatainer not full then emptySpaceHolderImage would be displayed on one of the edge.
+                Set it if you need continious graphics layout.
+    @def        nil</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) UIImage *emptySpaceHolderImage</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">TSNavigationStripView.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/leftNavigationButton" title="leftNavigationButton"></a>
+	<h3 class="subsubtitle method-title">leftNavigationButton</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Customize appearance of default components</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) UIButton *leftNavigationButton</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">TSNavigationStripView.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/maskSectionsContainerEdges" title="maskSectionsContainerEdges"></a>
+	<h3 class="subsubtitle method-title">maskSectionsContainerEdges</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>If YES alpha mask applied to sections container to add effect of transparency on edges.
+    @def        YES</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) BOOL maskSectionsContainerEdges</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">TSNavigationStripView.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/navigationButtonsHidden" title="navigationButtonsHidden"></a>
+	<h3 class="subsubtitle method-title">navigationButtonsHidden</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>If YES navigation buttons are not shown,
+                if NO navigation buttons visibility depends on <a href="#//api/name/autohideNavigationButtons">autohideNavigationButtons</a>
+    @def        NO</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) BOOL navigationButtonsHidden</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">TSNavigationStripView.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/rightNavigationButton" title="rightNavigationButton"></a>
+	<h3 class="subsubtitle method-title">rightNavigationButton</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) UIButton *rightNavigationButton</code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/sectionWidth" title="sectionWidth"></a>
+	<h3 class="subsubtitle method-title">sectionWidth</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) CGFloat sectionWidth</code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/sectionsAligment" title="sectionsAligment"></a>
+	<h3 class="subsubtitle method-title">sectionsAligment</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Determine how sections aligned in container view.
+    @supported
+        UIViewContentModeCenter,
+        UIViewContentModeLeft,
+        UIViewContentModeRight,
+        UIViewContentModeScaleAspectFill
+    @def
+        UIViewContentModeCenter</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) UIViewContentMode sectionsAligment</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">TSNavigationStripView.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/selectedSection" title="selectedSection"></a>
+	<h3 class="subsubtitle method-title">selectedSection</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Currently selected section.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign, readonly) NSInteger selectedSection</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">TSNavigationStripView.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/selectedSectionWidth" title="selectedSectionWidth"></a>
+	<h3 class="subsubtitle method-title">selectedSectionWidth</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Default section width value. These values used in case if <a href="#//api/name/dataSource">dataSource</a> is not provide this information.
+    @def        selectedSectionWidth = 256
+                <a href="#//api/name/sectionWidth">sectionWidth</a> = 128</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, assign) CGFloat selectedSectionWidth</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">TSNavigationStripView.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/selectionMarker" title="selectionMarker"></a>
+	<h3 class="subsubtitle method-title">selectionMarker</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Tis view would be layouted under selected section and smoothly moved during selection animation
+    @def        nil</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) UIView *selectionMarker</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">TSNavigationStripView.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
+					
+					
+					
+					
+					
+					<div class="section section-methods">
+						<a title="Instance Methods" name="instance_methods"></a>
+						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/deselectItemAtIndex:fromLeftSide:" title="deselectItemAtIndex:fromLeftSide:"></a>
+	<h3 class="subsubtitle method-title">deselectItemAtIndex:fromLeftSide:</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>- (void)deselectItemAtIndex:(NSInteger)<em>index</em> fromLeftSide:(BOOL)<em>leftSide</em></code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/initWithFrame:" title="initWithFrame:"></a>
+	<h3 class="subsubtitle method-title">initWithFrame:</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>- (id)initWithFrame:(CGRect)<em>frame</em></code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/insertItemAtIndex:fromLeftSide:animated:" title="insertItemAtIndex:fromLeftSide:animated:"></a>
+	<h3 class="subsubtitle method-title">insertItemAtIndex:fromLeftSide:animated:</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>- (void)insertItemAtIndex:(NSInteger)<em>index</em> fromLeftSide:(BOOL)<em>leftSide</em> animated:(BOOL)<em>animated</em></code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/insertItemsAtIndexes:fromLeftSide:animated:" title="insertItemsAtIndexes:fromLeftSide:animated:"></a>
+	<h3 class="subsubtitle method-title">insertItemsAtIndexes:fromLeftSide:animated:</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>- (void)insertItemsAtIndexes:(NSArray *)<em>indexes</em> fromLeftSide:(BOOL)<em>leftSide</em> animated:(BOOL)<em>animated</em></code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/insertSectionAtIndex:animated:" title="insertSectionAtIndex:animated:"></a>
+	<h3 class="subsubtitle method-title">insertSectionAtIndex:animated:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Modify content</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)insertSectionAtIndex:(NSInteger)<em>index</em> animated:(BOOL)<em>animated</em></code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">TSNavigationStripView.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/insertSectionsAtIndexes:animated:" title="insertSectionsAtIndexes:animated:"></a>
+	<h3 class="subsubtitle method-title">insertSectionsAtIndexes:animated:</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>- (void)insertSectionsAtIndexes:(NSArray *)<em>indexes</em> animated:(BOOL)<em>animated</em></code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/isItemSelectedAtIndex:fromLeftSide:" title="isItemSelectedAtIndex:fromLeftSide:"></a>
+	<h3 class="subsubtitle method-title">isItemSelectedAtIndex:fromLeftSide:</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>- (BOOL)isItemSelectedAtIndex:(NSInteger)<em>index</em> fromLeftSide:(BOOL)<em>leftSide</em></code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/reloadData" title="reloadData"></a>
+	<h3 class="subsubtitle method-title">reloadData</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Reload content</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)reloadData</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">TSNavigationStripView.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/reloadItemsData" title="reloadItemsData"></a>
+	<h3 class="subsubtitle method-title">reloadItemsData</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>- (void)reloadItemsData</code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/reloadSectionsData" title="reloadSectionsData"></a>
+	<h3 class="subsubtitle method-title">reloadSectionsData</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>- (void)reloadSectionsData</code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/removeItemAtIndex:fromLeftSide:animated:" title="removeItemAtIndex:fromLeftSide:animated:"></a>
+	<h3 class="subsubtitle method-title">removeItemAtIndex:fromLeftSide:animated:</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>- (void)removeItemAtIndex:(NSInteger)<em>index</em> fromLeftSide:(BOOL)<em>leftSide</em> animated:(BOOL)<em>animated</em></code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/removeItemsAtIndexes:fromLeftSide:animated:" title="removeItemsAtIndexes:fromLeftSide:animated:"></a>
+	<h3 class="subsubtitle method-title">removeItemsAtIndexes:fromLeftSide:animated:</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>- (void)removeItemsAtIndexes:(NSArray *)<em>indexes</em> fromLeftSide:(BOOL)<em>leftSide</em> animated:(BOOL)<em>animated</em></code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/removeSectionAtIndex:animated:" title="removeSectionAtIndex:animated:"></a>
+	<h3 class="subsubtitle method-title">removeSectionAtIndex:animated:</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>- (void)removeSectionAtIndex:(NSInteger)<em>index</em> animated:(BOOL)<em>animated</em></code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/removeSectionsAtIndexes:animated:" title="removeSectionsAtIndexes:animated:"></a>
+	<h3 class="subsubtitle method-title">removeSectionsAtIndexes:animated:</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>- (void)removeSectionsAtIndexes:(NSArray *)<em>indexes</em> animated:(BOOL)<em>animated</em></code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/scrollSelectedSectionTo:" title="scrollSelectedSectionTo:"></a>
+	<h3 class="subsubtitle method-title">scrollSelectedSectionTo:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Applied only if <a href="#//api/name/sectionsAligment">sectionsAligment</a> is set to UIViewContentAligmentCenter. Shift selected section to right/left side.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)scrollSelectedSectionTo:(CGFloat)<em>normOffset</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>normOffset</em></dt>
+			<dd><ul>
+<li>in range [-1..1]</li>
+</ul>
+</dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">TSNavigationStripView.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/selectItemAtIndex:fromLeftSide:" title="selectItemAtIndex:fromLeftSide:"></a>
+	<h3 class="subsubtitle method-title">selectItemAtIndex:fromLeftSide:</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>- (void)selectItemAtIndex:(NSInteger)<em>index</em> fromLeftSide:(BOOL)<em>leftSide</em></code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/selectSectionAtIndex:animated:" title="selectSectionAtIndex:animated:"></a>
+	<h3 class="subsubtitle method-title">selectSectionAtIndex:animated:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Change selection</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (void)selectSectionAtIndex:(NSInteger)<em>index</em> animated:(BOOL)<em>animated</em></code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">TSNavigationStripView.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/updateItemsAtIndexes:fromLeftSide:animated:" title="updateItemsAtIndexes:fromLeftSide:animated:"></a>
+	<h3 class="subsubtitle method-title">updateItemsAtIndexes:fromLeftSide:animated:</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>- (void)updateItemsAtIndexes:(NSArray *)<em>indexes</em> fromLeftSide:(BOOL)<em>leftSide</em> animated:(BOOL)<em>animated</em></code></div>
+
+    
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/updateSectionsAtIndexes:animated:" title="updateSectionsAtIndexes:animated:"></a>
+	<h3 class="subsubtitle method-title">updateSectionsAtIndexes:animated:</h3>
+	
+	
+
+	<div class="method-subsection method-declaration"><code>- (void)updateSectionsAtIndexes:(NSArray *)<em>indexes</em> animated:(BOOL)<em>animated</em></code></div>
+
+    
+</div>
+						
+					</div>
+					
+					
+                    
+                    
+				</div>
+				<div class="main-navigation navigation-bottom">
+					<ul>
+	<li><a href="../index.html">Index</a></li>
+	<li><a href="../hierarchy.html">Hierarchy</a></li>
+</ul>
+				</div>
+				<div id="footer">
+					<hr />
+					<div class="footer-copyright">
+						<p><span class="copyright">&copy; 2013 Viacheslav Radchenko. All rights reserved. (Last updated: 2013-08-29)</span><br />
+						
+						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.1 (build 858)</a>.</span></p>
+						
+					</div>
+				</div>
+			</div>
+		</article>
+		<script type="text/javascript">
+			function jumpToChange()
+			{
+				window.location.hash = this.options[this.selectedIndex].value;
+			}
+			
+			function toggleTOC()
+			{
+				var contents = document.getElementById('contents');
+				var tocContainer = document.getElementById('tocContainer');
+				
+				if (this.getAttribute('class') == 'open')
+				{
+					this.setAttribute('class', '');
+					contents.setAttribute('class', '');
+					tocContainer.setAttribute('class', '');
+					
+					window.name = "hideTOC";
+				}
+				else
+				{
+					this.setAttribute('class', 'open');
+					contents.setAttribute('class', 'isShowingTOC');
+					tocContainer.setAttribute('class', 'isShowingTOC');
+					
+					window.name = "";
+				}
+				return false;
+			}
+			
+			function toggleTOCEntryChildren(e)
+			{
+				e.stopPropagation();
+				var currentClass = this.getAttribute('class');
+				if (currentClass == 'children') {
+					this.setAttribute('class', 'children open');
+				}
+				else if (currentClass == 'children open') {
+					this.setAttribute('class', 'children');
+				}
+				return false;
+			}
+			
+			function tocEntryClick(e)
+			{
+				e.stopPropagation();
+				return true;
+			}
+			
+			function init()
+			{
+				var selectElement = document.getElementById('jumpTo');
+				selectElement.addEventListener('change', jumpToChange, false);
+				
+				var tocButton = document.getElementById('table_of_contents');
+				tocButton.addEventListener('click', toggleTOC, false);
+				
+				var taskTreeItem = document.getElementById('task_treeitem');
+				if (taskTreeItem.getElementsByTagName('li').length > 0)
+				{
+					taskTreeItem.setAttribute('class', 'children');
+					taskTreeItem.firstChild.setAttribute('class', 'disclosure');
+				}
+				
+				var tocList = document.getElementById('toc');
+				
+				var tocEntries = tocList.getElementsByTagName('li');
+				for (var i = 0; i < tocEntries.length; i++) {
+					tocEntries[i].addEventListener('click', toggleTOCEntryChildren, false);
+				}
+				
+				var tocLinks = tocList.getElementsByTagName('a');
+				for (var i = 0; i < tocLinks.length; i++) {
+					tocLinks[i].addEventListener('click', tocEntryClick, false);
+				}
+				
+				if (window.name == "hideTOC") {
+					toggleTOC.call(tocButton);
+				}
+			}
+			
+			window.onload = init;
+			
+			// If showing in Xcode, hide the TOC and Header
+			if (navigator.userAgent.match(/xcode/i)) {
+				document.getElementById("contents").className = "hideInXcode"
+				document.getElementById("tocContainer").className = "hideInXcode"
+				document.getElementById("top_header").className = "hideInXcode"
+			}
+			
+		</script>
+	</body>
+</html>

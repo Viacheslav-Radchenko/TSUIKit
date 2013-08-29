@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Protocols/TSTableViewContentHolderDelegate.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intf/TSTableViewContentHolderDelegate</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSTableViewContentHolder.h</DeclaredIn>
+            
+			
+			<NodeRef refid="34"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/TSTableViewContentHolderDelegate/tableViewContentHolder:contentOffsetDidChange:animated:</TokenIdentifier>
+			<Abstract type="html">Invoked when user manually changing content offset (i.e. scrolling)</Abstract>
+			<DeclaredIn>TSTableViewContentHolder.h</DeclaredIn>
+			
+			<Declaration>- (void)tableViewContentHolder:(TSTableViewContentHolder *)contentHolder contentOffsetDidChange:(CGPoint)contentOffset animated:(BOOL)animated</Declaration>
+			
+			
+			<Anchor>//api/name/tableViewContentHolder:contentOffsetDidChange:animated:</Anchor>
+            <NodeRef refid="34"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/TSTableViewContentHolderDelegate/tableViewContentHolder:willSelectRowAtPath:animated:</TokenIdentifier>
+			<Abstract type="html">Invoked when user manually changing row selection (i.e. tap on row)</Abstract>
+			<DeclaredIn>TSTableViewContentHolder.h</DeclaredIn>
+			
+			<Declaration>- (void)tableViewContentHolder:(TSTableViewContentHolder *)contentHolder willSelectRowAtPath:(NSIndexPath *)rowPath animated:(BOOL)animated</Declaration>
+			
+			
+			<Anchor>//api/name/tableViewContentHolder:willSelectRowAtPath:animated:</Anchor>
+            <NodeRef refid="34"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/TSTableViewContentHolderDelegate/tableViewContentHolder:didSelectRowAtPath:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSTableViewContentHolder.h</DeclaredIn>
+			
+			<Declaration>- (void)tableViewContentHolder:(TSTableViewContentHolder *)contentHolder didSelectRowAtPath:(NSIndexPath *)rowPath</Declaration>
+			
+			
+			<Anchor>//api/name/tableViewContentHolder:didSelectRowAtPath:</Anchor>
+            <NodeRef refid="34"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/TSTableViewContentHolderDelegate/tableViewContentHolder:willSelectColumnAtPath:animated:</TokenIdentifier>
+			<Abstract type="html">Invoked when user manually changing column selection (i.e. tap on column header)</Abstract>
+			<DeclaredIn>TSTableViewContentHolder.h</DeclaredIn>
+			
+			<Declaration>- (void)tableViewContentHolder:(TSTableViewContentHolder *)contentHolder willSelectColumnAtPath:(NSIndexPath *)columnPath animated:(BOOL)animated</Declaration>
+			
+			
+			<Anchor>//api/name/tableViewContentHolder:willSelectColumnAtPath:animated:</Anchor>
+            <NodeRef refid="34"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/intfm/TSTableViewContentHolderDelegate/tableViewContentHolder:didSelectColumnAtPath:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSTableViewContentHolder.h</DeclaredIn>
+			
+			<Declaration>- (void)tableViewContentHolder:(TSTableViewContentHolder *)contentHolder didSelectColumnAtPath:(NSIndexPath *)columnPath</Declaration>
+			
+			
+			<Anchor>//api/name/tableViewContentHolder:didSelectColumnAtPath:</Anchor>
+            <NodeRef refid="34"/>
+		</Token>
+		
+        
+	</File>
+</Tokens>

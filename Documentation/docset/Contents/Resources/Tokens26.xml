@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tokens version="1.0">
+	<File path="Classes/TSTableViewRowProxy.html">
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/cl/TSTableViewRowProxy</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSTableViewRow.h</DeclaredIn>
+            
+			
+			<NodeRef refid="26"/>
+		</Token>
+		
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTableViewRowProxy/setRowHeight:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSTableViewRow.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) CGFloat rowHeight</Declaration>
+			
+			
+			<Anchor>//api/name/rowHeight</Anchor>
+            <NodeRef refid="26"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTableViewRowProxy/rowHeight</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSTableViewRow.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) CGFloat rowHeight</Declaration>
+			
+			
+			<Anchor>//api/name/rowHeight</Anchor>
+            <NodeRef refid="26"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/TSTableViewRowProxy/rowHeight</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSTableViewRow.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) CGFloat rowHeight</Declaration>
+			
+			
+			<Anchor>//api/name/rowHeight</Anchor>
+            <NodeRef refid="26"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTableViewRowProxy/setFrame:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSTableViewRow.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) CGRect frame</Declaration>
+			
+			
+			<Anchor>//api/name/frame</Anchor>
+            <NodeRef refid="26"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTableViewRowProxy/frame</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSTableViewRow.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) CGRect frame</Declaration>
+			
+			
+			<Anchor>//api/name/frame</Anchor>
+            <NodeRef refid="26"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/TSTableViewRowProxy/frame</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSTableViewRow.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, assign) CGRect frame</Declaration>
+			
+			
+			<Anchor>//api/name/frame</Anchor>
+            <NodeRef refid="26"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTableViewRowProxy/setRowView:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSTableViewRow.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) TSTableViewRow *rowView</Declaration>
+			
+			
+			<Anchor>//api/name/rowView</Anchor>
+            <NodeRef refid="26"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTableViewRowProxy/rowView</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSTableViewRow.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) TSTableViewRow *rowView</Declaration>
+			
+			
+			<Anchor>//api/name/rowView</Anchor>
+            <NodeRef refid="26"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/TSTableViewRowProxy/rowView</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSTableViewRow.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) TSTableViewRow *rowView</Declaration>
+			
+			
+			<Anchor>//api/name/rowView</Anchor>
+            <NodeRef refid="26"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTableViewRowProxy/setSubrows:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSTableViewRow.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSMutableArray *subrows</Declaration>
+			
+			
+			<Anchor>//api/name/subrows</Anchor>
+            <NodeRef refid="26"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTableViewRowProxy/subrows</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSTableViewRow.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSMutableArray *subrows</Declaration>
+			
+			
+			<Anchor>//api/name/subrows</Anchor>
+            <NodeRef refid="26"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instp/TSTableViewRowProxy/subrows</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSTableViewRow.h</DeclaredIn>
+			
+			<Declaration>@property (nonatomic, strong) NSMutableArray *subrows</Declaration>
+			
+			
+			<Anchor>//api/name/subrows</Anchor>
+            <NodeRef refid="26"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTableViewRowProxy/setFrame:animated:</TokenIdentifier>
+			<Abstract type="html"></Abstract>
+			<DeclaredIn>TSTableViewRow.h</DeclaredIn>
+			
+			<Declaration>- (void)setFrame:(CGRect)frame animated:(BOOL)animated</Declaration>
+			
+			
+			<Anchor>//api/name/setFrame:animated:</Anchor>
+            <NodeRef refid="26"/>
+		</Token>
+		
+        
+	</File>
+</Tokens>
