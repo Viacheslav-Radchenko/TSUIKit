@@ -62,17 +62,50 @@ Example of TSTableView object instantiation provided below. See more complex exa
 ## TSNavigationStripView
 
 `TSNavigationStripView` is a navigation menu control with highly customizable design and flexible structure.
-It provides smooth animations for item selection and dynamic content modification.
+It provides smooth animations for item selection and dynamic content modification. Some features are listed below:
+
+* Display set of section titles (tabs).
+* Select section (tab) from list.
+* Scroll between sections (tabs).
+* Left and right navigation buttons on sides.
+* Fully customized appearance (see examples).
+* Support different types of layout and alignment: alignment to left side, alignment to right side, autofill available space, central alignment (which imitate behaviour of ViewPager component on Android).
+* Additinal not scrolled menu items can be added on left and right sides.
             
 <img src="https://raw.github.com/Viacheslav-Radchenko/TSUIKit/master/Screenshots/TSNavigationStripView_Screenshot1.jpg" alt="TSNavigationStripView examples" width="360" height="480" />
 <img src="https://raw.github.com/Viacheslav-Radchenko/TSUIKit/master/Screenshots/TSNavigationStripView_Screenshot2.jpg" alt="TSNavigationStripView examples" width="360" height="480" />
 
 ## TSTabView
 
-`TSTabView` is a container component for set of views or view controllers.
+`TSTabView` UI component that allows to flip left and right through pages of data. Pages content provided to TSTabView by implementing TSTabViewDataSource protocol. TSTabView can manage set of UIView or UIViewController objects. TSNavigationStripView control is used to display available pages titles/tabs and navigate between them.
+Some features are listed below. Custom TSNavigationStripView entity should be provided to TSTabView during initialisation. Some features are listed below:
+
+* Navigates through set of UIView or UIViewController objects.
+* Support far jumps between pages.
+* Tabs list in TSNavigationStripView support different types of layout and alignment, including: alignment to left side, alignment to right side, autofill available space, central alignment (which imitate behaviour of ViewPager component on Android).
+* Tabs list in TSNavigationStripView can be scrollable.
+* TSNavigationStripView can display additional menu items on left or right sides.
+* TSNavigationStripView provide great flexibility for appearance  customisation.
+* All view transitions are down with smooth animations.
 
 <img src="https://raw.github.com/Viacheslav-Radchenko/TSUIKit/master/Screenshots/TSTabView_Screenshot1.jpg" alt="TSTabView examples" width="360" height="480" />
 <img src="https://raw.github.com/Viacheslav-Radchenko/SSUIKit/master/Screenshots/TSTabView_Screenshot2.jpg" alt="TSTabView examples" width="360" height="480" />
+
+Example of TSTabView object instantiation provided below.
+```
+TSNavigationStripView *navigationStripView = [[TSNavigationStripView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 32)];
+// Customize navigation view appearance...
+
+TSTabView *tabView = [[TSTabView alloc] initWithFrame:self.view.bounds navigationMenu:navigationStripView];
+tabView.delegate = self;
+[self.view addSubview: tabView];
+
+TSTabViewModel *tabViewModel = [[TSTabViewModel alloc] initWithTabView:tabView];
+[tabViewModel setTabs:@[
+	[[TSTabViewSection alloc] initWithTitle:@"Tab 1" andView: /* Provide view */],
+	[[TSTabViewSection alloc] initWithTitle:@"Tab 2" andView: /* Provide view */]]
+];
+```
 
 ## TSTabViewWithDropDownPanel
 
