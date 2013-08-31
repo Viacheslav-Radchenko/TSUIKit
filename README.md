@@ -126,6 +126,9 @@ TSTabViewModel *tabViewModel = [[TSTabViewModel alloc] initWithTabView:tabView];
 Build and run the `TSUIKit` project in Xcode to see examples of each component.
 Right now better way to see components functionality is to compile examples provided with project, they fully display structure and dynamics of controls, as well as possible use cases.
 
+* Demo video [TSTableView](http://youtu.be/Zd2CGbj0yUU).
+* Demo video [TSTabView](http://youtu.be/GvTfKJM43uQ).
+
 ## Installation
 
 All you need to do is drop `TSUIKit` source files into your project and add corresponding `#include "*.h"` to the top of classes that will use particular component.
