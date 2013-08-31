@@ -474,7 +474,10 @@
     {
         [self.delegate tabView:self didScrollTo:normScrollOffset];
     }
-    [_scrollView setContentOffset:CGPointMake((_navigationMenu.selectedSection + normScrollOffset) * self.frame.size.width, 0)];
+    CGFloat xOffset = (_navigationMenu.selectedSection + normScrollOffset) * self.frame.size.width;
+    if(!_scrollView.bounces)
+        xOffset = MAX( 0, MIN( xOffset, (_tabsContent.count - 1) * self.frame.size.width));
+    [_scrollView setContentOffset:CGPointMake(xOffset, 0)];
 }
 
 - (void)navigationStripDidEndScroll:(TSNavigationStripView *)navigationStripView

@@ -27,7 +27,35 @@
 
 #import "TSTabViewModel.h"
 
-@implementation TSTabViewSection 
+@implementation TSTabViewSection
+
+- (id)initWithDictionary:(NSDictionary *)dictionary
+{
+    if(self = [super initWithDictionary:dictionary])
+    {
+        _tabContent = dictionary[@"tabContent"];
+        _tabController = dictionary[@"tabController"];
+    }
+    return self;
+}
+
+- (id)initWithTitle:(NSString *)title andView:(UIView *)view
+{
+    if(self = [super initWithTitle:title])
+    {
+        _tabContent = view;
+    }
+    return self;
+}
+
+- (id)initWithTitle:(NSString *)title andController:(UIViewController *)controller
+{
+    if(self = [super initWithTitle:title])
+    {
+        _tabController = controller;
+    }
+    return self;
+}
 
 @end
 
@@ -74,7 +102,23 @@
 - (void)setTabs:(NSArray *)tabs
 {
     [_sections removeAllObjects];
-    [_sections addObjectsFromArray:tabs];
+    
+    for(id tabInfo in tabs)
+    {
+        if([tabInfo isKindOfClass:[TSTabViewSection class]])
+        {
+            [_sections addObject:tabInfo];
+        }
+        else if([tabInfo isKindOfClass:[NSDictionary class]])
+        {
+            [_sections addObject:[[TSTabViewSection alloc] initWithDictionary:tabInfo]];
+        }
+        else
+        {
+            NSAssert(FALSE, @"Type is not supported");
+        }
+    }
+    
     [_tabView reloadTabsData];
 }
 

@@ -26,35 +26,152 @@
 //  THE SOFTWARE.
 
 #import "TSNavigationStripModel.h"
+#import "TSUtils.h"
 
 @implementation TSNavigationStripComponent
+
+- (void)setup
+{
+    _title = @"";
+    _selectedTitle = nil;
+    
+    _icon = nil;
+    _selectedIcon = nil;
+    
+    _backgroundImage = nil;
+    _selectedBackgroundImage = nil;
+    
+    _font = [UIFont systemFontOfSize:15.0f];
+    _selectedFont = [UIFont boldSystemFontOfSize:15.0f];
+    
+    _color = [UIColor darkGrayColor];
+    _selectedColor = [UIColor blackColor];
+    
+    _backgroundColor = [UIColor clearColor];
+    _selectedBackgroundColor = [UIColor clearColor];
+    
+    _shadowColor = [UIColor clearColor];
+    _shadowOffset = CGSizeZero;
+}
 
 - (id)init
 {
     if(self = [super init])
     {
-        _title = @"";
-        _selectedTitle = @"";
-        
-        _icon = nil;
-        _selectedIcon = nil;
-        
-        _backgroundImage = nil;
-        _selectedBackgroundImage = nil;
-        
-        _font = [UIFont systemFontOfSize:15.0f];
-        _selectedFont = [UIFont boldSystemFontOfSize:15.0f];
-        
-        _color = [UIColor darkGrayColor];
-        _selectedColor = [UIColor blackColor];
-        
-        _backgroundColor = [UIColor clearColor];
-        _selectedBackgroundColor = [UIColor clearColor];
-        
-        _shadowColor = [UIColor clearColor];
-        _shadowOffset = CGSizeZero;
+        [self setup];
     }
     return self;
+}
+
+- (id)initWithTitle:(NSString *)title
+{
+    if(self = [super init])
+    {
+        [self setup];
+        _title = title;
+        _selectedTitle = title;
+    }
+    return self;
+}
+
+- (id)initWithDictionary:(NSDictionary *)info
+{
+    if(self = [super init])
+    {
+        [self setup];
+        _title = info[@"title"];
+        _selectedTitle = info[@"selectedTitle"];
+        
+        id imgVal = info[@"icon"];
+        if([imgVal isKindOfClass:[UIImage class]])
+            _icon = imgVal;
+        else if([imgVal isKindOfClass:[NSString class]])
+            _icon = [UIImage imageNamed:imgVal];
+        
+        imgVal = info[@"selectedIcon"];
+        if([imgVal isKindOfClass:[UIImage class]])
+            _selectedIcon = imgVal;
+        else if([imgVal isKindOfClass:[NSString class]])
+            _selectedIcon = [UIImage imageNamed:imgVal];
+        
+        imgVal = info[@"backgroundImage"];
+        if([imgVal isKindOfClass:[UIImage class]])
+            _backgroundImage = imgVal;
+        else if([imgVal isKindOfClass:[NSString class]])
+            _backgroundImage = [UIImage imageNamed:imgVal];
+        
+        imgVal = info[@"selectedBackgroundImage"];
+        if([imgVal isKindOfClass:[UIImage class]])
+            _selectedBackgroundImage = imgVal;
+        else if([imgVal isKindOfClass:[NSString class]])
+            _selectedBackgroundImage = [UIImage imageNamed:imgVal];
+        
+        _font = info[@"font"];
+        _selectedFont = info[@"selectedFont"];
+        
+        id colorVal = info[@"color"];
+        if([colorVal isKindOfClass:[UIColor class]])
+            _color = colorVal;
+        else if([colorVal isKindOfClass:[NSString class]])
+            _color = [TSUtils colorWithHexString:colorVal];
+        
+        colorVal = info[@"selectedColor"];
+        if([colorVal isKindOfClass:[UIColor class]])
+            _selectedColor = colorVal;
+        else if([colorVal isKindOfClass:[NSString class]])
+            _selectedColor = [TSUtils colorWithHexString:colorVal];
+    
+        colorVal = info[@"backgroundColor"];
+        if([colorVal isKindOfClass:[UIColor class]])
+            _backgroundColor = colorVal;
+        else if([colorVal isKindOfClass:[NSString class]])
+            _backgroundColor = [TSUtils colorWithHexString:colorVal];
+        
+        colorVal = info[@"selectedBackgroundColor"];
+        if([colorVal isKindOfClass:[UIColor class]])
+            _selectedBackgroundColor = colorVal;
+        else if([colorVal isKindOfClass:[NSString class]])
+            _selectedBackgroundColor = [TSUtils colorWithHexString:colorVal];
+        
+        colorVal = info[@"shadowColor"];
+        if([colorVal isKindOfClass:[UIColor class]])
+            _shadowColor = colorVal;
+        else if([colorVal isKindOfClass:[NSString class]])
+            _shadowColor = [TSUtils colorWithHexString:colorVal];
+        
+        _shadowOffset = [info[@"shadowOffset"] CGSizeValue];
+    }
+    return self;
+}
+
+- (NSString *)selectedTitle
+{
+    return (_selectedTitle ? _selectedTitle : _title);
+}
+
+- (UIImage *)selectedIcon
+{
+    return (_selectedIcon ? _selectedIcon : _icon);
+}
+
+- (UIImage *)selectedBackgroundImage
+{
+    return (_selectedBackgroundImage ? _selectedBackgroundImage : _backgroundImage);
+}
+
+- (UIFont *)selectedFont
+{
+    return (_selectedFont ? _selectedFont : _font);
+}
+
+- (UIColor *)selectedColor
+{
+    return (_selectedColor ? _selectedColor : _color);
+}
+
+- (UIColor *)selectedBackgroundColor
+{
+    return (_selectedBackgroundColor ? _selectedBackgroundColor : _backgroundColor);
 }
 
 @end
@@ -176,27 +293,66 @@
 - (void)setSections:(NSArray *)sections
 {
     [_sections removeAllObjects];
-    [_sections addObjectsFromArray:sections];
+    
+    for(id sectionInfo in sections)
+    {
+        if([sectionInfo isKindOfClass:[TSNavigationStripSection class]])
+        {
+            [_sections addObject:sectionInfo];
+        }
+        else if([sectionInfo isKindOfClass:[NSDictionary class]])
+        {
+            [_sections addObject:[[TSNavigationStripSection alloc] initWithDictionary:sectionInfo]];
+        }
+        else if([sectionInfo isKindOfClass:[NSString class]])
+        {
+            [_sections addObject:[[TSNavigationStripSection alloc] initWithTitle:sectionInfo]];
+        }
+        else
+        {
+            NSAssert(FALSE, @"Type is not supported!");
+        }
+    }
     [_navigationStrip reloadSectionsData];
 }
 
 - (void)setItems:(NSArray *)items fromLeft:(BOOL)fromLeft
 {
+    NSMutableArray *destItems;
     if(fromLeft)
     {
         [_leftItems removeAllObjects];
-        [_leftItems addObjectsFromArray:items];
+        destItems = _leftItems;
     }
     else
     {
         [_rightItems removeAllObjects];
-        [_rightItems addObjectsFromArray:items];
-        
+        destItems = _rightItems;
+    }
+    
+    for(id sectionInfo in items)
+    {
+        if([sectionInfo isKindOfClass:[TSNavigationStripItem class]])
+        {
+            [destItems addObject:sectionInfo];
+        }
+        else if([sectionInfo isKindOfClass:[NSDictionary class]])
+        {
+            [destItems addObject:[[TSNavigationStripItem alloc] initWithDictionary:sectionInfo]];
+        }
+        else if([sectionInfo isKindOfClass:[NSString class]])
+        {
+            [destItems addObject:[[TSNavigationStripItem alloc] initWithTitle:sectionInfo]];
+        }
+        else
+        {
+            NSAssert(FALSE, @"Type is not supported");
+        }
     }
     [_navigationStrip reloadItemsData];
 }
 
-#pragma mark - TSNavigationStripDataSource
+#pragma mark - TSNavigationStripDataSource (Sections)
 
 - (NSInteger)numberOfSections
 {
@@ -293,7 +449,7 @@
     return res;
 }
 
-#pragma mark - Items
+#pragma mark - TSNavigationStripDataSource (Items)
 
 - (NSInteger)numberOfItemsFromLeftSide:(BOOL)leftSide
 {

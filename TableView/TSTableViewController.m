@@ -48,7 +48,7 @@
     _model1 = [[TSTableViewModel alloc] initWithTableView:_tableView1 andStyle:kTSTableViewStyleDark];
 //    NSArray *columns1 = [self columnsInfo1];
 //    NSArray *rows1 = [self rowsInfo1];
-//    [_model1 setColumnsInfo:columns1 andRowsInfo:rows1];
+//    [_model1 setColumns:columns1 andRows:rows1];
     
     NSArray *columns1 = [self columnsForFileSystemTree];
     NSArray *rows1 = [self rowsForAppDirectory];
@@ -67,7 +67,7 @@
     
 //    NSArray *columns2 = [self columnsInfo2];
 //    NSArray *rows2 = [self rowsInfo2];
-//    [_model2 setColumnsInfo:columns2 andRowsInfo:rows2];
+//    [_model2 setColumns:columns2 andRows:rows2];
     
     NSArray *columns2 = [self columnsForFileSystemTree];
     NSArray *rows2 = [self rowsForAppDirectory];

@@ -96,26 +96,59 @@ TSTableViewModel  *dataModel = [[TSTableViewModel alloc] initWithTableView:table
 [dataModel setColumnsInfo:columns andRowsInfo:rows];
 </code></pre>
 
-<p>```</p>
+<pre><code>
+## TSNavigationStripView
 
-<h2><a href="Classes/TSNavigationStripView.html">TSNavigationStripView</a></h2>
+`TSNavigationStripView` is a navigation menu control with highly customizable design and flexible structure.
+It provides smooth animations for item selection and dynamic content modification. Some features are listed below:
 
-<p><a href="Classes/TSNavigationStripView.html"><code>TSNavigationStripView</code></a> is a navigation menu control with highly customizable design and flexible structure.
-It provides smooth animations for item selection and dynamic content modification.</p>
+* Display set of section titles (tabs).
+* Select section (tab) from list.
+* Scroll between sections (tabs).
+* Left and right navigation buttons on sides.
+* Fully customized appearance (see examples).
+* Support different types of layout and alignment: alignment to left side, alignment to right side, autofill available space, central alignment (which imitate behaviour of ViewPager component on Android).
+* Additinal not scrolled menu items can be added on left and right sides.
 
-<p><img src="[https://raw.github.com/Viacheslav-Radchenko/TSUIKit/master/Screenshots/TSNavigationStripView](https://raw.github.com/Viacheslav-Radchenko/TSUIKit/master/Screenshots/TSNavigationStripView)_Screenshot1.jpg" alt="TSNavigationStripView examples" width="360" height="480" />
-<img src="[https://raw.github.com/Viacheslav-Radchenko/TSUIKit/master/Screenshots/TSNavigationStripView](https://raw.github.com/Viacheslav-Radchenko/TSUIKit/master/Screenshots/TSNavigationStripView)_Screenshot2.jpg" alt="[TSNavigationStripView](Classes/TSNavigationStripView.html) examples" width="360" height="480" /></p>
+&lt;img src="https://raw.github.com/Viacheslav-Radchenko/TSUIKit/master/Screenshots/TSNavigationStripView_Screenshot1.jpg" alt="TSNavigationStripView examples" width="360" height="480" /&gt;
+&lt;img src="https://raw.github.com/Viacheslav-Radchenko/TSUIKit/master/Screenshots/TSNavigationStripView_Screenshot2.jpg" alt="TSNavigationStripView examples" width="360" height="480" /&gt;
 
-<h2><a href="Classes/TSTabView.html">TSTabView</a></h2>
+## TSTabView
 
-<p><a href="Classes/TSTabView.html"><code>TSTabView</code></a> is a container component for set of views or view controllers.</p>
+`TSTabView` UI component that allows to flip left and right through pages of data. Pages content provided to TSTabView by implementing TSTabViewDataSource protocol. TSTabView can manage set of UIView or UIViewController objects. TSNavigationStripView control is used to display available pages titles/tabs and navigate between them.
+Some features are listed below. Custom TSNavigationStripView entity should be provided to TSTabView during initialisation. Some features are listed below:
 
-<p><img src="[https://raw.github.com/Viacheslav-Radchenko/TSUIKit/master/Screenshots/TSTabView](https://raw.github.com/Viacheslav-Radchenko/TSUIKit/master/Screenshots/TSTabView)_Screenshot1.jpg" alt="TSTabView examples" width="360" height="480" />
-<img src="[https://raw.github.com/Viacheslav-Radchenko/SSUIKit/master/Screenshots/TSTabView](https://raw.github.com/Viacheslav-Radchenko/SSUIKit/master/Screenshots/TSTabView)_Screenshot2.jpg" alt="[TSTabView](Classes/TSTabView.html) examples" width="360" height="480" /></p>
+* Navigates through set of UIView or UIViewController objects.
+* Support far jumps between pages.
+* Tabs list in TSNavigationStripView support different types of layout and alignment, including: alignment to left side, alignment to right side, autofill available space, central alignment (which imitate behaviour of ViewPager component on Android).
+* Tabs list in TSNavigationStripView can be scrollable.
+* TSNavigationStripView can display additional menu items on left or right sides.
+* TSNavigationStripView provide great flexibility for appearance  customisation.
+* All view transitions are down with smooth animations.
 
-<h2><a href="Classes/TSTabViewWithDropDownPanel.html">TSTabViewWithDropDownPanel</a></h2>
+&lt;img src="https://raw.github.com/Viacheslav-Radchenko/TSUIKit/master/Screenshots/TSTabView_Screenshot1.jpg" alt="TSTabView examples" width="360" height="480" /&gt;
+&lt;img src="https://raw.github.com/Viacheslav-Radchenko/SSUIKit/master/Screenshots/TSTabView_Screenshot2.jpg" alt="TSTabView examples" width="360" height="480" /&gt;
 
-<p><a href="Classes/TSTabViewWithDropDownPanel.html"><code>TSTabViewWithDropDownPanel</code></a> extends <a href="Classes/TSTabView.html"><code>TSTabView</code></a>. Custom view can be attached to drop down panel which pull down/up on top of tabs container.</p>
+Example of TSTabView object instantiation provided below.
+</code></pre>
+
+<p><a href="Classes/TSNavigationStripView.html">TSNavigationStripView</a> *navigationStripView = [[TSNavigationStripView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 32)];
+// Customize navigation view appearance&hellip;</p>
+
+<p><a href="Classes/TSTabView.html">TSTabView</a> *tabView = [[TSTabView alloc] initWithFrame:self.view.bounds navigationMenu:navigationStripView];
+tabView.delegate = self;
+[self.view addSubview: tabView];</p>
+
+<p><a href="Classes/TSTabViewModel.html">TSTabViewModel</a> <em>tabViewModel = [[TSTabViewModel alloc] initWithTabView:tabView];
+[tabViewModel setTabs:@[
+    [[TSTabViewSection alloc] initWithTitle:@&ldquo;Tab 1&rdquo; andView: /</em> Provide view <em>/],
+    [[TSTabViewSection alloc] initWithTitle:@&ldquo;Tab 2&rdquo; andView: /</em> Provide view */]]
+];
+```</p>
+
+<h2>TSTabViewWithDropDownPanel</h2>
+
+<p><code>TSTabViewWithDropDownPanel</code> extends <code>TSTabView</code>. Custom view can be attached to drop down panel which pull down/up on top of tabs container.</p>
 
 <p><img src="[https://raw.github.com/Viacheslav-Radchenko/TSUIKit/master/Screenshots/TSTabViewWithDropDownPanel_Screenshot1.jpg](https://raw.github.com/Viacheslav-Radchenko/TSUIKit/master/Screenshots/TSTabViewWithDropDownPanel_Screenshot1.jpg)" alt="[TSTabViewWithDropDownPanel](Classes/TSTabViewWithDropDownPanel.html) examples" width="360" height="480" /></p>
 
@@ -273,7 +306,7 @@ Right now better way to see components functionality is to compile examples prov
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2013 Viacheslav Radchenko. All rights reserved. (Last updated: 2013-08-29)</span><br />
+						<p><span class="copyright">&copy; 2013 Viacheslav Radchenko. All rights reserved. (Last updated: 2013-08-31)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.1 (build 858)</a>.</span></p>
 						

@@ -39,31 +39,36 @@
 
 /**************************************************************************************************************************************/
 
-/**
-    @abstract   TSNavigationStripComponent is base class, which provides appearance information for TSNavigationStripView's section or item.
- */
-
+/** TSNavigationStripComponent provides content and appearance information for TSNavigationStripView's section or item. */
 @interface TSNavigationStripComponent : NSObject
 
+/** Title string which is displaying in TSNavigationStrip when section isn't selected. */
 @property (nonatomic, strong) NSString *title;
+/** Title string which is displaying in TSNavigationStrip when section is selected. Optional, if nil title is used. */
 @property (nonatomic, strong) NSString *selectedTitle;
-
+/** Icon image which is displaying in TSNavigationStrip when section isn't selected. Optional. */
 @property (nonatomic, strong) UIImage *icon;
+/** Icon image which is displaying in TSNavigationStrip when section is selected. Optional. */
 @property (nonatomic, strong) UIImage *selectedIcon;
-
+/** Background image which is displaying in TSNavigationStrip when section isn't selected. Optional. */
 @property (nonatomic, strong) UIImage *backgroundImage;
+/** Background image which is displaying in TSNavigationStrip when section is selected. Optional. */
 @property (nonatomic, strong) UIImage *selectedBackgroundImage;
-
+/** Font which is used when section is selected. Default is [UIFont systemFontOfSize:15.0f]. */
 @property (nonatomic, strong) UIFont *font;
+/** Font which is used when section isn't selected. Default is [UIFont boldSystemFontOfSize:15.0f]. */
 @property (nonatomic, strong) UIFont *selectedFont;
-
+/** Text color which is used when section isn't selected. Default is [UIColor darkGrayColor]. */
 @property (nonatomic, strong) UIColor *color;
+/** Text color which is used when section is selected. Default is [UIColor blackColor]. */
 @property (nonatomic, strong) UIColor *selectedColor;
-
+/** Background color which is used when section isn't selected. Default is [UIColor clearColor]. */
 @property (nonatomic, strong) UIColor *backgroundColor;
+/** Background color which is used when section is selected. Default is [UIColor clearColor]. */
 @property (nonatomic, strong) UIColor *selectedBackgroundColor;
-
+/** Text shadow color. Default is [UIColor clearColor]. */
 @property (nonatomic, strong) UIColor *shadowColor;
+/** Text shadow offset. Default is CGSizeZero. */
 @property (nonatomic, assign) CGSize  shadowOffset;
 
 // Bind Strip Component with action.
@@ -71,26 +76,35 @@
 //@property (nonatomic, assign) SEL action;
 //@property (nonatomic, copy) void (^selectionHandler)();
 
+/** Initialize TSNavigationStripComponent with section title 
+    @param title Section title. 
+ */
+- (id)initWithTitle:(NSString *)title;
+
+/** Initialize TSNavigationStripComponent with dictionary. 
+    @param info Dictionary with values for named properties.
+ */
+- (id)initWithDictionary:(NSDictionary *)info;
+
 @end
 
 /**************************************************************************************************************************************/
 
+/** Provide information about menu item in  TSNavigationStripView. */
 @interface TSNavigationStripItem : TSNavigationStripComponent
 
 @end
 
 /**************************************************************************************************************************************/
 
+/** Provide information about section in  TSNavigationStripView. */
 @interface TSNavigationStripSection : TSNavigationStripComponent
 
 @end
 
 /**************************************************************************************************************************************/
 
-/**
-    @abstract   TSNavigationStripModel is a prototype for TSNavigationStripDataSource
- */
-
+/** TSNavigationStripModel is a prototype for TSNavigationStripDataSource. */
 @interface TSNavigationStripModel : NSObject <TSNavigationStripDataSource>
 {
     NSMutableArray *_leftItems;
@@ -99,33 +113,63 @@
     TSNavigationStripView *_navigationStrip;
 }
 
+/** Menu items located on the left side of TSNavigationStripView. */
 @property (nonatomic, strong, readonly) NSArray *leftItems;
+/** Menu items located on the right side of TSNavigationStripView. */
 @property (nonatomic, strong, readonly) NSArray *rightItems;
+/** Navigation sections. */
 @property (nonatomic, strong, readonly) NSArray *sections;
+/** Instance of TSNavigationStripView which is managed by this data model. */
 @property (nonatomic, strong, readonly) TSNavigationStripView *navigationStrip;
 
-/**
-    @abstract   if YES edge insets are used for section's content. Need for some UI layouts where graphics from one section should overlap sibling sections 
+/** If YES edge insets are used for section's content. Need for some UI layouts where graphics from one section should overlap sibling sections. 
     @def        NO
  */
 @property (nonatomic, assign) BOOL useEdgeInsetsForSections;
 
-/**
-    @abstract   if not set then UIButton class is used
+/** If not set then UIButton class is used. Specify if you want to provide specific draw implementation or additional functionalit for section view.
+    @warning If you provide custom class it should inherit from UIButton.
     @def        nil
  */
 @property (nonatomic, strong) NSString *customClassForSection;
 
+/** Initialize TSNavigationStripModel and provide instance of TSNavigationStripView which would display content of the data model.
+    @param navigationStrip Instance of TSNavigationStripView.
+ */
 - (id)initWithNavigationStrip:(TSNavigationStripView *)navigationStrip;
 
-/**
-    @abstract Modify content
+/** Set sections information. TSNavigationStripView would be notified about changes in data model.
+    @param sections Array of TSNavigationStripSection objects.
  */
 - (void)setSections:(NSArray *)sections;
-- (void)setItems:(NSArray *)sections fromLeft:(BOOL)fromLeft;
+/** Set menu items information. TSNavigationStripView would be notified about changes in data model.
+    @param items Array of TSNavigationStripItem objects.
+    @param fromLeft Specify on which side menu items should be updated.
+ */
+- (void)setItems:(NSArray *)items fromLeft:(BOOL)fromLeft;
+/** Insert new section at specified position. TSNavigationStripView would be notified about changes in data model.
+    @param sectionInfo Information about new section.
+    @param index Insert position.
+    @param animated If YES section will be appear with animation.
+ */
 - (void)insertNewSection:(TSNavigationStripSection *)sectionInfo atIndex:(NSInteger)index animated:(BOOL)animated;
+/** Insert new menu item at specified position. TSNavigationStripView would be notified about changes in data model.
+    @param itemInfo Information about new menu item.
+    @param index Insert position.
+    @param fromLeft Specify on which side menu item should be inserted.
+    @param animated If YES item will be appear with animation.
+ */
 - (void)insertNewItem:(TSNavigationStripItem *)itemInfo atIndex:(NSInteger)index fromLeft:(BOOL)fromLeft animated:(BOOL)animated;
+/** Remove section at specified position. TSNavigationStripView would be notified about changes in data model.
+     @param index Remove position.
+     @param animated If YES section will be removed with animation.
+ */
 - (void)removeSectionAtIndex:(NSInteger)index animated:(BOOL)animated;
+/** Remove menu item at specified position. TSNavigationStripView would be notified about changes in data model.
+     @param index Remove position.
+     @param fromLeft Specify on which side menu item should be removed.
+     @param animated If YES item will be removed with animation.
+ */
 - (void)removeItemAtIndex:(NSInteger)index fromLeft:(BOOL)fromLeft animated:(BOOL)animated;
 
 @end

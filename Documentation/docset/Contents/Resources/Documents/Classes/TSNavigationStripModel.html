@@ -167,6 +167,12 @@
                     
                     
 					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>TSNavigationStripModel is a prototype for <a href="../Protocols/TSNavigationStripDataSource.html">TSNavigationStripDataSource</a>.</p>
+					</div>
+					
 					
 					
 					
@@ -278,13 +284,54 @@
 	
 	
 	<div class="method-subsection brief-description">
-		<p>if not set then UIButton class is used
-    @def        nil</p>
+		<p>If not set then UIButton class is used. Specify if you want to provide specific draw implementation or additional functionalit for section view.</p>
 	</div>		
 	
     
 
 	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) NSString *customClassForSection</code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection discussion-section">
+		<h4 class="method-subtitle">Discussion</h4>
+		<div class="warning"><p><strong>Warning:</strong> If you provide custom class it should inherit from UIButton.
+    @def        nil</p></div>
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">TSNavigationStripModel.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/leftItems" title="leftItems"></a>
+	<h3 class="subsubtitle method-title">leftItems</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Menu items located on the left side of <a href="../Classes/TSNavigationStripView.html">TSNavigationStripView</a>.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) NSArray *leftItems</code></div>
 
     
 	
@@ -309,25 +356,39 @@
 </div>
 						
 						<div class="section-method">
-	<a name="//api/name/leftItems" title="leftItems"></a>
-	<h3 class="subsubtitle method-title">leftItems</h3>
-	
-	
-
-	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) NSArray *leftItems</code></div>
-
-    
-</div>
-						
-						<div class="section-method">
 	<a name="//api/name/navigationStrip" title="navigationStrip"></a>
 	<h3 class="subsubtitle method-title">navigationStrip</h3>
 	
 	
+	
+	<div class="method-subsection brief-description">
+		<p>Instance of <a href="../Classes/TSNavigationStripView.html">TSNavigationStripView</a> which is managed by this data model.</p>
+	</div>		
+	
+    
 
 	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) TSNavigationStripView *navigationStrip</code></div>
 
     
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">TSNavigationStripModel.h</code><br />
+	</div>				
+	
+	
 </div>
 						
 						<div class="section-method">
@@ -335,10 +396,35 @@
 	<h3 class="subsubtitle method-title">rightItems</h3>
 	
 	
+	
+	<div class="method-subsection brief-description">
+		<p>Menu items located on the right side of <a href="../Classes/TSNavigationStripView.html">TSNavigationStripView</a>.</p>
+	</div>		
+	
+    
 
 	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) NSArray *rightItems</code></div>
 
     
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">TSNavigationStripModel.h</code><br />
+	</div>				
+	
+	
 </div>
 						
 						<div class="section-method">
@@ -346,10 +432,35 @@
 	<h3 class="subsubtitle method-title">sections</h3>
 	
 	
+	
+	<div class="method-subsection brief-description">
+		<p>Navigation sections.</p>
+	</div>		
+	
+    
 
 	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) NSArray *sections</code></div>
 
     
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">TSNavigationStripModel.h</code><br />
+	</div>				
+	
+	
 </div>
 						
 						<div class="section-method">
@@ -359,7 +470,7 @@
 	
 	
 	<div class="method-subsection brief-description">
-		<p>if YES edge insets are used for section&rsquo;s content. Need for some UI layouts where graphics from one section should overlap sibling <a href="#//api/name/sections">sections</a>
+		<p>If YES edge insets are used for section&rsquo;s content. Need for some UI layouts where graphics from one section should overlap sibling <a href="#//api/name/sections">sections</a>.
     @def        NO</p>
 	</div>		
 	
@@ -404,10 +515,45 @@
 	<h3 class="subsubtitle method-title">initWithNavigationStrip:</h3>
 	
 	
+	
+	<div class="method-subsection brief-description">
+		<p>Initialize TSNavigationStripModel and provide instance of <a href="../Classes/TSNavigationStripView.html">TSNavigationStripView</a> which would display content of the data model.</p>
+	</div>		
+	
+    
 
 	<div class="method-subsection method-declaration"><code>- (id)initWithNavigationStrip:(TSNavigationStripView *)<em>navigationStrip</em></code></div>
 
     
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>navigationStrip</em></dt>
+			<dd><p>Instance of <a href="../Classes/TSNavigationStripView.html">TSNavigationStripView</a>.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">TSNavigationStripModel.h</code><br />
+	</div>				
+	
+	
 </div>
 						
 						<div class="section-method">
@@ -415,10 +561,60 @@
 	<h3 class="subsubtitle method-title">insertNewItem:atIndex:fromLeft:animated:</h3>
 	
 	
+	
+	<div class="method-subsection brief-description">
+		<p>Insert new menu item at specified position. <a href="../Classes/TSNavigationStripView.html">TSNavigationStripView</a> would be notified about changes in data model.</p>
+	</div>		
+	
+    
 
 	<div class="method-subsection method-declaration"><code>- (void)insertNewItem:(TSNavigationStripItem *)<em>itemInfo</em> atIndex:(NSInteger)<em>index</em> fromLeft:(BOOL)<em>fromLeft</em> animated:(BOOL)<em>animated</em></code></div>
 
     
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>itemInfo</em></dt>
+			<dd><p>Information about new menu item.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>index</em></dt>
+			<dd><p>Insert position.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>fromLeft</em></dt>
+			<dd><p>Specify on which side menu item should be inserted.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>animated</em></dt>
+			<dd><p>If YES item will be appear with animation.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">TSNavigationStripModel.h</code><br />
+	</div>				
+	
+	
 </div>
 						
 						<div class="section-method">
@@ -426,10 +622,55 @@
 	<h3 class="subsubtitle method-title">insertNewSection:atIndex:animated:</h3>
 	
 	
+	
+	<div class="method-subsection brief-description">
+		<p>Insert new section at specified position. <a href="../Classes/TSNavigationStripView.html">TSNavigationStripView</a> would be notified about changes in data model.</p>
+	</div>		
+	
+    
 
 	<div class="method-subsection method-declaration"><code>- (void)insertNewSection:(TSNavigationStripSection *)<em>sectionInfo</em> atIndex:(NSInteger)<em>index</em> animated:(BOOL)<em>animated</em></code></div>
 
     
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>sectionInfo</em></dt>
+			<dd><p>Information about new section.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>index</em></dt>
+			<dd><p>Insert position.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>animated</em></dt>
+			<dd><p>If YES section will be appear with animation.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">TSNavigationStripModel.h</code><br />
+	</div>				
+	
+	
 </div>
 						
 						<div class="section-method">
@@ -437,10 +678,55 @@
 	<h3 class="subsubtitle method-title">removeItemAtIndex:fromLeft:animated:</h3>
 	
 	
+	
+	<div class="method-subsection brief-description">
+		<p>Remove menu item at specified position. <a href="../Classes/TSNavigationStripView.html">TSNavigationStripView</a> would be notified about changes in data model.</p>
+	</div>		
+	
+    
 
 	<div class="method-subsection method-declaration"><code>- (void)removeItemAtIndex:(NSInteger)<em>index</em> fromLeft:(BOOL)<em>fromLeft</em> animated:(BOOL)<em>animated</em></code></div>
 
     
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>index</em></dt>
+			<dd><p>Remove position.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>fromLeft</em></dt>
+			<dd><p>Specify on which side menu item should be removed.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>animated</em></dt>
+			<dd><p>If YES item will be removed with animation.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">TSNavigationStripModel.h</code><br />
+	</div>				
+	
+	
 </div>
 						
 						<div class="section-method">
@@ -448,10 +734,50 @@
 	<h3 class="subsubtitle method-title">removeSectionAtIndex:animated:</h3>
 	
 	
+	
+	<div class="method-subsection brief-description">
+		<p>Remove section at specified position. <a href="../Classes/TSNavigationStripView.html">TSNavigationStripView</a> would be notified about changes in data model.</p>
+	</div>		
+	
+    
 
 	<div class="method-subsection method-declaration"><code>- (void)removeSectionAtIndex:(NSInteger)<em>index</em> animated:(BOOL)<em>animated</em></code></div>
 
     
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>index</em></dt>
+			<dd><p>Remove position.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>animated</em></dt>
+			<dd><p>If YES section will be removed with animation.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">TSNavigationStripModel.h</code><br />
+	</div>				
+	
+	
 </div>
 						
 						<div class="section-method">
@@ -459,10 +785,50 @@
 	<h3 class="subsubtitle method-title">setItems:fromLeft:</h3>
 	
 	
+	
+	<div class="method-subsection brief-description">
+		<p>Set menu items information. <a href="../Classes/TSNavigationStripView.html">TSNavigationStripView</a> would be notified about changes in data model.</p>
+	</div>		
+	
+    
 
-	<div class="method-subsection method-declaration"><code>- (void)setItems:(NSArray *)<em>sections</em> fromLeft:(BOOL)<em>fromLeft</em></code></div>
+	<div class="method-subsection method-declaration"><code>- (void)setItems:(NSArray *)<em>items</em> fromLeft:(BOOL)<em>fromLeft</em></code></div>
 
     
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>items</em></dt>
+			<dd><p>Array of <a href="../Classes/TSNavigationStripItem.html">TSNavigationStripItem</a> objects.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>fromLeft</em></dt>
+			<dd><p>Specify on which side menu items should be updated.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">TSNavigationStripModel.h</code><br />
+	</div>				
+	
+	
 </div>
 						
 						<div class="section-method">
@@ -472,7 +838,7 @@
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Modify content</p>
+		<p>Set <a href="#//api/name/sections">sections</a> information. <a href="../Classes/TSNavigationStripView.html">TSNavigationStripView</a> would be notified about changes in data model.</p>
 	</div>		
 	
     
@@ -480,6 +846,16 @@
 	<div class="method-subsection method-declaration"><code>- (void)setSections:(NSArray *)<em>sections</em></code></div>
 
     
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>sections</em></dt>
+			<dd><p>Array of <a href="../Classes/TSNavigationStripSection.html">TSNavigationStripSection</a> objects.</p></dd>
+		</dl>
+		
+	</div>
 	
 	
 	
@@ -516,7 +892,7 @@
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2013 Viacheslav Radchenko. All rights reserved. (Last updated: 2013-08-29)</span><br />
+						<p><span class="copyright">&copy; 2013 Viacheslav Radchenko. All rights reserved. (Last updated: 2013-08-31)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.1 (build 858)</a>.</span></p>
 						

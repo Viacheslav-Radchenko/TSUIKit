@@ -68,11 +68,7 @@
 	
 	<option value="//api/name/setColumns:andRows:">&nbsp;&nbsp;&nbsp;&nbsp;- setColumns:andRows:</option>
 	
-	<option value="//api/name/setColumnsInfo:andRowsInfo:">&nbsp;&nbsp;&nbsp;&nbsp;- setColumnsInfo:andRowsInfo:</option>
-	
 	<option value="//api/name/setRows:">&nbsp;&nbsp;&nbsp;&nbsp;- setRows:</option>
-	
-	<option value="//api/name/setRowsInfo:">&nbsp;&nbsp;&nbsp;&nbsp;- setRowsInfo:</option>
 	
 	
 	
@@ -128,11 +124,7 @@
 	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/setColumns:andRows:">setColumns:andRows:</a></span></li>
 	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/setColumnsInfo:andRowsInfo:">setColumnsInfo:andRowsInfo:</a></span></li>
-	
 	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/setRows:">setRows:</a></span></li>
-	
-	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/setRowsInfo:">setRowsInfo:</a></span></li>
 	
 </ul></li>
 
@@ -241,19 +233,7 @@
 	
 </li><li>
 	<span class="tooltip">
-		<code><a href="#//api/name/setColumnsInfo:andRowsInfo:">&ndash;&nbsp;setColumnsInfo:andRowsInfo:</a></code>
-	</span>
-	
-	
-</li><li>
-	<span class="tooltip">
 		<code><a href="#//api/name/setRows:">&ndash;&nbsp;setRows:</a></code>
-	</span>
-	
-	
-</li><li>
-	<span class="tooltip">
-		<code><a href="#//api/name/setRowsInfo:">&ndash;&nbsp;setRowsInfo:</a></code>
 	</span>
 	
 	
@@ -725,7 +705,7 @@
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Initialize with array of <a href="../Classes/TSColumn.html">TSColumn</a> objects and array <a href="../Classes/TSRow.html">TSRow</a> objects.</p>
+		<p>Initialize with array of <a href="#//api/name/columns">columns</a> and <a href="#//api/name/rows">rows</a>.</p>
 	</div>		
 	
     
@@ -739,63 +719,12 @@
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>columns</em></dt>
-			<dd><p>Array with <a href="../Classes/TSColumn.html">TSColumn</a> objects.</p></dd>
+			<dd><p>Array can contain objects of mixed types (<a href="../Classes/TSColumn.html">TSColumn</a>, NSDictionary, NSString). <a href="../Classes/TSColumn.html">TSColumn</a> objects would be constructed if needed.</p></dd>
 		</dl>
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>rows</em></dt>
-			<dd><p>Array with <a href="../Classes/TSRow.html">TSRow</a> objects.</p></dd>
-		</dl>
-		
-	</div>
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection declared-in-section">
-		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">TSTableViewModel.h</code><br />
-	</div>				
-	
-	
-</div>
-						
-						<div class="section-method">
-	<a name="//api/name/setColumnsInfo:andRowsInfo:" title="setColumnsInfo:andRowsInfo:"></a>
-	<h3 class="subsubtitle method-title">setColumnsInfo:andRowsInfo:</h3>
-	
-	
-	
-	<div class="method-subsection brief-description">
-		<p>Initialize with array of NSDictionary decriptions for <a href="#//api/name/columns">columns</a> and array of NSDictionary decriptions for <a href="#//api/name/rows">rows</a>.</p>
-	</div>		
-	
-    
-
-	<div class="method-subsection method-declaration"><code>- (void)setColumnsInfo:(NSArray *)<em>columns</em> andRowsInfo:(NSArray *)<em>rows</em></code></div>
-
-    
-	
-	<div class="method-subsection arguments-section parameters">
-		<h4 class="method-subtitle parameter-title">Parameters</h4>
-		
-		<dl class="argument-def parameter-def">
-			<dt><em>columns</em></dt>
-			<dd><p>Array with <a href="#//api/name/columns">columns</a> information.</p></dd>
-		</dl>
-		
-		<dl class="argument-def parameter-def">
-			<dt><em>rows</em></dt>
-			<dd><p>Array with <a href="#//api/name/rows">rows</a> data.</p></dd>
+			<dd><p>Array can contain objects of mixed types (<a href="../Classes/TSRow.html">TSRow</a>, NSDictionary, NSString). <a href="../Classes/TSRow.html">TSRow</a> objects would be constructed if needed.</p></dd>
 		</dl>
 		
 	</div>
@@ -827,7 +756,7 @@
 	
 	
 	<div class="method-subsection brief-description">
-		<p>Initialize with array of <a href="../Classes/TSRow.html">TSRow</a> objects. Columns hierarchy remains the same.</p>
+		<p>Initialize with <a href="#//api/name/rows">rows</a> data. Columns hierarchy remains the same.</p>
 	</div>		
 	
     
@@ -841,53 +770,7 @@
 		
 		<dl class="argument-def parameter-def">
 			<dt><em>rows</em></dt>
-			<dd><p>Array with <a href="../Classes/TSRow.html">TSRow</a> objects.</p></dd>
-		</dl>
-		
-	</div>
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	<div class="method-subsection declared-in-section">
-		<h4 class="method-subtitle">Declared In</h4>
-		<code class="declared-in-ref">TSTableViewModel.h</code><br />
-	</div>				
-	
-	
-</div>
-						
-						<div class="section-method">
-	<a name="//api/name/setRowsInfo:" title="setRowsInfo:"></a>
-	<h3 class="subsubtitle method-title">setRowsInfo:</h3>
-	
-	
-	
-	<div class="method-subsection brief-description">
-		<p>Initialize with array of NSDictionary decriptions for <a href="#//api/name/rows">rows</a>. Rows hierarchy remains the same.</p>
-	</div>		
-	
-    
-
-	<div class="method-subsection method-declaration"><code>- (void)setRowsInfo:(NSArray *)<em>rows</em></code></div>
-
-    
-	
-	<div class="method-subsection arguments-section parameters">
-		<h4 class="method-subtitle parameter-title">Parameters</h4>
-		
-		<dl class="argument-def parameter-def">
-			<dt><em>rows</em></dt>
-			<dd><p>Array with <a href="#//api/name/rows">rows</a> data.</p></dd>
+			<dd><p>Array can contain objects of mixed types (<a href="../Classes/TSRow.html">TSRow</a>, NSDictionary, NSString). <a href="../Classes/TSRow.html">TSRow</a> objects would be constructed if needed.</p></dd>
 		</dl>
 		
 	</div>
@@ -927,7 +810,7 @@
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2013 Viacheslav Radchenko. All rights reserved. (Last updated: 2013-08-29)</span><br />
+						<p><span class="copyright">&copy; 2013 Viacheslav Radchenko. All rights reserved. (Last updated: 2013-08-31)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.1 (build 858)</a>.</span></p>
 						

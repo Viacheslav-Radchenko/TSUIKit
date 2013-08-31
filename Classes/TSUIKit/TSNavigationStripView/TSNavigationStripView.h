@@ -31,14 +31,14 @@
     @abstract   TSNavigationStripView is navigation menu control with highly customizable design and flexible structure.
                 Provides smooth animations for dynamic content modification.
                 Basic layout shown below:
- *
+ 
     +------------+---+--------------+---+-------------+
     | LEFT ITEMS | < |   SECTIONS   | > | RIGHT ITEMS |
     +------------+---+--------------+---+-------------+
- *
+ 
                 LEFT ITEMS and RIGHT ITEMS - containers for menu items.
                 SECTIONS - container for tab sections strip.
- *
+ 
     @limitations - When total width of LEFT ITEMS and RIGHT ITEMS exceeds view's frame width then layout of control is undefined.
                  - For central aligment (sectionsAligment = UIViewContentModeCenter) limitation described above is more stronger: 
                     SECTIONS part should have space no less then (sectionWidth + selectedSectionWidth + sectionWidth) or corresponding sizes specified in data source.

@@ -4,7 +4,7 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/cl/TSNavigationStripComponent</TokenIdentifier>
-			<Abstract type="html">TSNavigationStripComponent is base class, which provides appearance information for TSNavigationStripView&apos;s section or item.</Abstract>
+			<Abstract type="html">TSNavigationStripComponent provides content and appearance information for TSNavigationStripView&apos;s section or item.</Abstract>
 			<DeclaredIn>TSNavigationStripModel.h</DeclaredIn>
             
 			
@@ -14,7 +14,7 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/TSNavigationStripComponent/setTitle:</TokenIdentifier>
-			<Abstract type="html"></Abstract>
+			<Abstract type="html">Title string which is displaying in TSNavigationStrip when section isn&apos;t selected.</Abstract>
 			<DeclaredIn>TSNavigationStripModel.h</DeclaredIn>
 			
 			<Declaration>@property (nonatomic, strong) NSString *title</Declaration>
@@ -26,7 +26,7 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/TSNavigationStripComponent/title</TokenIdentifier>
-			<Abstract type="html"></Abstract>
+			<Abstract type="html">Title string which is displaying in TSNavigationStrip when section isn&apos;t selected.</Abstract>
 			<DeclaredIn>TSNavigationStripModel.h</DeclaredIn>
 			
 			<Declaration>@property (nonatomic, strong) NSString *title</Declaration>
@@ -38,7 +38,7 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instp/TSNavigationStripComponent/title</TokenIdentifier>
-			<Abstract type="html"></Abstract>
+			<Abstract type="html">Title string which is displaying in TSNavigationStrip when section isn&apos;t selected.</Abstract>
 			<DeclaredIn>TSNavigationStripModel.h</DeclaredIn>
 			
 			<Declaration>@property (nonatomic, strong) NSString *title</Declaration>
@@ -50,7 +50,7 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/TSNavigationStripComponent/setSelectedTitle:</TokenIdentifier>
-			<Abstract type="html"></Abstract>
+			<Abstract type="html">Title string which is displaying in TSNavigationStrip when section is selected. Optional, if nil title is used.</Abstract>
 			<DeclaredIn>TSNavigationStripModel.h</DeclaredIn>
 			
 			<Declaration>@property (nonatomic, strong) NSString *selectedTitle</Declaration>
@@ -62,7 +62,7 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/TSNavigationStripComponent/selectedTitle</TokenIdentifier>
-			<Abstract type="html"></Abstract>
+			<Abstract type="html">Title string which is displaying in TSNavigationStrip when section is selected. Optional, if nil title is used.</Abstract>
 			<DeclaredIn>TSNavigationStripModel.h</DeclaredIn>
 			
 			<Declaration>@property (nonatomic, strong) NSString *selectedTitle</Declaration>
@@ -74,7 +74,7 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instp/TSNavigationStripComponent/selectedTitle</TokenIdentifier>
-			<Abstract type="html"></Abstract>
+			<Abstract type="html">Title string which is displaying in TSNavigationStrip when section is selected. Optional, if nil title is used.</Abstract>
 			<DeclaredIn>TSNavigationStripModel.h</DeclaredIn>
 			
 			<Declaration>@property (nonatomic, strong) NSString *selectedTitle</Declaration>
@@ -86,7 +86,7 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/TSNavigationStripComponent/setIcon:</TokenIdentifier>
-			<Abstract type="html"></Abstract>
+			<Abstract type="html">Icon image which is displaying in TSNavigationStrip when section isn&apos;t selected. Optional.</Abstract>
 			<DeclaredIn>TSNavigationStripModel.h</DeclaredIn>
 			
 			<Declaration>@property (nonatomic, strong) UIImage *icon</Declaration>
@@ -98,7 +98,7 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/TSNavigationStripComponent/icon</TokenIdentifier>
-			<Abstract type="html"></Abstract>
+			<Abstract type="html">Icon image which is displaying in TSNavigationStrip when section isn&apos;t selected. Optional.</Abstract>
 			<DeclaredIn>TSNavigationStripModel.h</DeclaredIn>
 			
 			<Declaration>@property (nonatomic, strong) UIImage *icon</Declaration>
@@ -110,7 +110,7 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instp/TSNavigationStripComponent/icon</TokenIdentifier>
-			<Abstract type="html"></Abstract>
+			<Abstract type="html">Icon image which is displaying in TSNavigationStrip when section isn&apos;t selected. Optional.</Abstract>
 			<DeclaredIn>TSNavigationStripModel.h</DeclaredIn>
 			
 			<Declaration>@property (nonatomic, strong) UIImage *icon</Declaration>
@@ -122,7 +122,7 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/TSNavigationStripComponent/setSelectedIcon:</TokenIdentifier>
-			<Abstract type="html"></Abstract>
+			<Abstract type="html">Icon image which is displaying in TSNavigationStrip when section is selected. Optional.</Abstract>
 			<DeclaredIn>TSNavigationStripModel.h</DeclaredIn>
 			
 			<Declaration>@property (nonatomic, strong) UIImage *selectedIcon</Declaration>
@@ -134,7 +134,7 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/TSNavigationStripComponent/selectedIcon</TokenIdentifier>
-			<Abstract type="html"></Abstract>
+			<Abstract type="html">Icon image which is displaying in TSNavigationStrip when section is selected. Optional.</Abstract>
 			<DeclaredIn>TSNavigationStripModel.h</DeclaredIn>
 			
 			<Declaration>@property (nonatomic, strong) UIImage *selectedIcon</Declaration>
@@ -146,7 +146,7 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instp/TSNavigationStripComponent/selectedIcon</TokenIdentifier>
-			<Abstract type="html"></Abstract>
+			<Abstract type="html">Icon image which is displaying in TSNavigationStrip when section is selected. Optional.</Abstract>
 			<DeclaredIn>TSNavigationStripModel.h</DeclaredIn>
 			
 			<Declaration>@property (nonatomic, strong) UIImage *selectedIcon</Declaration>
@@ -158,7 +158,7 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/TSNavigationStripComponent/setBackgroundImage:</TokenIdentifier>
-			<Abstract type="html"></Abstract>
+			<Abstract type="html">Background image which is displaying in TSNavigationStrip when section isn&apos;t selected. Optional.</Abstract>
 			<DeclaredIn>TSNavigationStripModel.h</DeclaredIn>
 			
 			<Declaration>@property (nonatomic, strong) UIImage *backgroundImage</Declaration>
@@ -170,7 +170,7 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/TSNavigationStripComponent/backgroundImage</TokenIdentifier>
-			<Abstract type="html"></Abstract>
+			<Abstract type="html">Background image which is displaying in TSNavigationStrip when section isn&apos;t selected. Optional.</Abstract>
 			<DeclaredIn>TSNavigationStripModel.h</DeclaredIn>
 			
 			<Declaration>@property (nonatomic, strong) UIImage *backgroundImage</Declaration>
@@ -182,7 +182,7 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instp/TSNavigationStripComponent/backgroundImage</TokenIdentifier>
-			<Abstract type="html"></Abstract>
+			<Abstract type="html">Background image which is displaying in TSNavigationStrip when section isn&apos;t selected. Optional.</Abstract>
 			<DeclaredIn>TSNavigationStripModel.h</DeclaredIn>
 			
 			<Declaration>@property (nonatomic, strong) UIImage *backgroundImage</Declaration>
@@ -194,7 +194,7 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/TSNavigationStripComponent/setSelectedBackgroundImage:</TokenIdentifier>
-			<Abstract type="html"></Abstract>
+			<Abstract type="html">Background image which is displaying in TSNavigationStrip when section is selected. Optional.</Abstract>
 			<DeclaredIn>TSNavigationStripModel.h</DeclaredIn>
 			
 			<Declaration>@property (nonatomic, strong) UIImage *selectedBackgroundImage</Declaration>
@@ -206,7 +206,7 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/TSNavigationStripComponent/selectedBackgroundImage</TokenIdentifier>
-			<Abstract type="html"></Abstract>
+			<Abstract type="html">Background image which is displaying in TSNavigationStrip when section is selected. Optional.</Abstract>
 			<DeclaredIn>TSNavigationStripModel.h</DeclaredIn>
 			
 			<Declaration>@property (nonatomic, strong) UIImage *selectedBackgroundImage</Declaration>
@@ -218,7 +218,7 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instp/TSNavigationStripComponent/selectedBackgroundImage</TokenIdentifier>
-			<Abstract type="html"></Abstract>
+			<Abstract type="html">Background image which is displaying in TSNavigationStrip when section is selected. Optional.</Abstract>
 			<DeclaredIn>TSNavigationStripModel.h</DeclaredIn>
 			
 			<Declaration>@property (nonatomic, strong) UIImage *selectedBackgroundImage</Declaration>
@@ -230,7 +230,7 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/TSNavigationStripComponent/setFont:</TokenIdentifier>
-			<Abstract type="html"></Abstract>
+			<Abstract type="html">Font which is used when section is selected. Default is [UIFont systemFontOfSize:15.0f].</Abstract>
 			<DeclaredIn>TSNavigationStripModel.h</DeclaredIn>
 			
 			<Declaration>@property (nonatomic, strong) UIFont *font</Declaration>
@@ -242,7 +242,7 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/TSNavigationStripComponent/font</TokenIdentifier>
-			<Abstract type="html"></Abstract>
+			<Abstract type="html">Font which is used when section is selected. Default is [UIFont systemFontOfSize:15.0f].</Abstract>
 			<DeclaredIn>TSNavigationStripModel.h</DeclaredIn>
 			
 			<Declaration>@property (nonatomic, strong) UIFont *font</Declaration>
@@ -254,7 +254,7 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instp/TSNavigationStripComponent/font</TokenIdentifier>
-			<Abstract type="html"></Abstract>
+			<Abstract type="html">Font which is used when section is selected. Default is [UIFont systemFontOfSize:15.0f].</Abstract>
 			<DeclaredIn>TSNavigationStripModel.h</DeclaredIn>
 			
 			<Declaration>@property (nonatomic, strong) UIFont *font</Declaration>
@@ -266,7 +266,7 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/TSNavigationStripComponent/setSelectedFont:</TokenIdentifier>
-			<Abstract type="html"></Abstract>
+			<Abstract type="html">Font which is used when section isn&apos;t selected. Default is [UIFont boldSystemFontOfSize:15.0f].</Abstract>
 			<DeclaredIn>TSNavigationStripModel.h</DeclaredIn>
 			
 			<Declaration>@property (nonatomic, strong) UIFont *selectedFont</Declaration>
@@ -278,7 +278,7 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/TSNavigationStripComponent/selectedFont</TokenIdentifier>
-			<Abstract type="html"></Abstract>
+			<Abstract type="html">Font which is used when section isn&apos;t selected. Default is [UIFont boldSystemFontOfSize:15.0f].</Abstract>
 			<DeclaredIn>TSNavigationStripModel.h</DeclaredIn>
 			
 			<Declaration>@property (nonatomic, strong) UIFont *selectedFont</Declaration>
@@ -290,7 +290,7 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instp/TSNavigationStripComponent/selectedFont</TokenIdentifier>
-			<Abstract type="html"></Abstract>
+			<Abstract type="html">Font which is used when section isn&apos;t selected. Default is [UIFont boldSystemFontOfSize:15.0f].</Abstract>
 			<DeclaredIn>TSNavigationStripModel.h</DeclaredIn>
 			
 			<Declaration>@property (nonatomic, strong) UIFont *selectedFont</Declaration>
@@ -302,7 +302,7 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/TSNavigationStripComponent/setColor:</TokenIdentifier>
-			<Abstract type="html"></Abstract>
+			<Abstract type="html">Text color which is used when section isn&apos;t selected. Default is [UIColor darkGrayColor].</Abstract>
 			<DeclaredIn>TSNavigationStripModel.h</DeclaredIn>
 			
 			<Declaration>@property (nonatomic, strong) UIColor *color</Declaration>
@@ -314,7 +314,7 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/TSNavigationStripComponent/color</TokenIdentifier>
-			<Abstract type="html"></Abstract>
+			<Abstract type="html">Text color which is used when section isn&apos;t selected. Default is [UIColor darkGrayColor].</Abstract>
 			<DeclaredIn>TSNavigationStripModel.h</DeclaredIn>
 			
 			<Declaration>@property (nonatomic, strong) UIColor *color</Declaration>
@@ -326,7 +326,7 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instp/TSNavigationStripComponent/color</TokenIdentifier>
-			<Abstract type="html"></Abstract>
+			<Abstract type="html">Text color which is used when section isn&apos;t selected. Default is [UIColor darkGrayColor].</Abstract>
 			<DeclaredIn>TSNavigationStripModel.h</DeclaredIn>
 			
 			<Declaration>@property (nonatomic, strong) UIColor *color</Declaration>
@@ -338,7 +338,7 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/TSNavigationStripComponent/setSelectedColor:</TokenIdentifier>
-			<Abstract type="html"></Abstract>
+			<Abstract type="html">Text color which is used when section is selected. Default is [UIColor blackColor].</Abstract>
 			<DeclaredIn>TSNavigationStripModel.h</DeclaredIn>
 			
 			<Declaration>@property (nonatomic, strong) UIColor *selectedColor</Declaration>
@@ -350,7 +350,7 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/TSNavigationStripComponent/selectedColor</TokenIdentifier>
-			<Abstract type="html"></Abstract>
+			<Abstract type="html">Text color which is used when section is selected. Default is [UIColor blackColor].</Abstract>
 			<DeclaredIn>TSNavigationStripModel.h</DeclaredIn>
 			
 			<Declaration>@property (nonatomic, strong) UIColor *selectedColor</Declaration>
@@ -362,7 +362,7 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instp/TSNavigationStripComponent/selectedColor</TokenIdentifier>
-			<Abstract type="html"></Abstract>
+			<Abstract type="html">Text color which is used when section is selected. Default is [UIColor blackColor].</Abstract>
 			<DeclaredIn>TSNavigationStripModel.h</DeclaredIn>
 			
 			<Declaration>@property (nonatomic, strong) UIColor *selectedColor</Declaration>
@@ -374,7 +374,7 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/TSNavigationStripComponent/setBackgroundColor:</TokenIdentifier>
-			<Abstract type="html"></Abstract>
+			<Abstract type="html">Background color which is used when section isn&apos;t selected. Default is [UIColor clearColor].</Abstract>
 			<DeclaredIn>TSNavigationStripModel.h</DeclaredIn>
 			
 			<Declaration>@property (nonatomic, strong) UIColor *backgroundColor</Declaration>
@@ -386,7 +386,7 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/TSNavigationStripComponent/backgroundColor</TokenIdentifier>
-			<Abstract type="html"></Abstract>
+			<Abstract type="html">Background color which is used when section isn&apos;t selected. Default is [UIColor clearColor].</Abstract>
 			<DeclaredIn>TSNavigationStripModel.h</DeclaredIn>
 			
 			<Declaration>@property (nonatomic, strong) UIColor *backgroundColor</Declaration>
@@ -398,7 +398,7 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instp/TSNavigationStripComponent/backgroundColor</TokenIdentifier>
-			<Abstract type="html"></Abstract>
+			<Abstract type="html">Background color which is used when section isn&apos;t selected. Default is [UIColor clearColor].</Abstract>
 			<DeclaredIn>TSNavigationStripModel.h</DeclaredIn>
 			
 			<Declaration>@property (nonatomic, strong) UIColor *backgroundColor</Declaration>
@@ -410,7 +410,7 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/TSNavigationStripComponent/setSelectedBackgroundColor:</TokenIdentifier>
-			<Abstract type="html"></Abstract>
+			<Abstract type="html">Background color which is used when section is selected. Default is [UIColor clearColor].</Abstract>
 			<DeclaredIn>TSNavigationStripModel.h</DeclaredIn>
 			
 			<Declaration>@property (nonatomic, strong) UIColor *selectedBackgroundColor</Declaration>
@@ -422,7 +422,7 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/TSNavigationStripComponent/selectedBackgroundColor</TokenIdentifier>
-			<Abstract type="html"></Abstract>
+			<Abstract type="html">Background color which is used when section is selected. Default is [UIColor clearColor].</Abstract>
 			<DeclaredIn>TSNavigationStripModel.h</DeclaredIn>
 			
 			<Declaration>@property (nonatomic, strong) UIColor *selectedBackgroundColor</Declaration>
@@ -434,7 +434,7 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instp/TSNavigationStripComponent/selectedBackgroundColor</TokenIdentifier>
-			<Abstract type="html"></Abstract>
+			<Abstract type="html">Background color which is used when section is selected. Default is [UIColor clearColor].</Abstract>
 			<DeclaredIn>TSNavigationStripModel.h</DeclaredIn>
 			
 			<Declaration>@property (nonatomic, strong) UIColor *selectedBackgroundColor</Declaration>
@@ -446,7 +446,7 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/TSNavigationStripComponent/setShadowColor:</TokenIdentifier>
-			<Abstract type="html"></Abstract>
+			<Abstract type="html">Text shadow color. Default is [UIColor clearColor].</Abstract>
 			<DeclaredIn>TSNavigationStripModel.h</DeclaredIn>
 			
 			<Declaration>@property (nonatomic, strong) UIColor *shadowColor</Declaration>
@@ -458,7 +458,7 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/TSNavigationStripComponent/shadowColor</TokenIdentifier>
-			<Abstract type="html"></Abstract>
+			<Abstract type="html">Text shadow color. Default is [UIColor clearColor].</Abstract>
 			<DeclaredIn>TSNavigationStripModel.h</DeclaredIn>
 			
 			<Declaration>@property (nonatomic, strong) UIColor *shadowColor</Declaration>
@@ -470,7 +470,7 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instp/TSNavigationStripComponent/shadowColor</TokenIdentifier>
-			<Abstract type="html"></Abstract>
+			<Abstract type="html">Text shadow color. Default is [UIColor clearColor].</Abstract>
 			<DeclaredIn>TSNavigationStripModel.h</DeclaredIn>
 			
 			<Declaration>@property (nonatomic, strong) UIColor *shadowColor</Declaration>
@@ -482,7 +482,7 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/TSNavigationStripComponent/setShadowOffset:</TokenIdentifier>
-			<Abstract type="html"></Abstract>
+			<Abstract type="html">Text shadow offset. Default is CGSizeZero.</Abstract>
 			<DeclaredIn>TSNavigationStripModel.h</DeclaredIn>
 			
 			<Declaration>@property (nonatomic, assign) CGSize shadowOffset</Declaration>
@@ -494,7 +494,7 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/TSNavigationStripComponent/shadowOffset</TokenIdentifier>
-			<Abstract type="html"></Abstract>
+			<Abstract type="html">Text shadow offset. Default is CGSizeZero.</Abstract>
 			<DeclaredIn>TSNavigationStripModel.h</DeclaredIn>
 			
 			<Declaration>@property (nonatomic, assign) CGSize shadowOffset</Declaration>
@@ -506,13 +506,47 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instp/TSNavigationStripComponent/shadowOffset</TokenIdentifier>
-			<Abstract type="html"></Abstract>
+			<Abstract type="html">Text shadow offset. Default is CGSizeZero.</Abstract>
 			<DeclaredIn>TSNavigationStripModel.h</DeclaredIn>
 			
 			<Declaration>@property (nonatomic, assign) CGSize shadowOffset</Declaration>
 			
 			
 			<Anchor>//api/name/shadowOffset</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSNavigationStripComponent/initWithTitle:</TokenIdentifier>
+			<Abstract type="html">Initialize TSNavigationStripComponent with section title</Abstract>
+			<DeclaredIn>TSNavigationStripModel.h</DeclaredIn>
+			
+			<Declaration>- (id)initWithTitle:(NSString *)title</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>title</Name>
+					<Abstract type="html">Section title. </Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/initWithTitle:</Anchor>
+            <NodeRef refid="3"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSNavigationStripComponent/initWithDictionary:</TokenIdentifier>
+			<Abstract type="html">Initialize TSNavigationStripComponent with dictionary.</Abstract>
+			<DeclaredIn>TSNavigationStripModel.h</DeclaredIn>
+			
+			<Declaration>- (id)initWithDictionary:(NSDictionary *)info</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>info</Name>
+					<Abstract type="html">Dictionary with values for named properties.</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/initWithDictionary:</Anchor>
             <NodeRef refid="3"/>
 		</Token>
 		

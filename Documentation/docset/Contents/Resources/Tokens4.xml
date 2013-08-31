@@ -4,7 +4,7 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/cl/TSNavigationStripItem</TokenIdentifier>
-			<Abstract type="html"></Abstract>
+			<Abstract type="html">Provide information about menu item in  TSNavigationStripView.</Abstract>
 			<DeclaredIn>TSNavigationStripModel.h</DeclaredIn>
             
 			

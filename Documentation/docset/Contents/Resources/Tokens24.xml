@@ -251,17 +251,17 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/TSTableViewModel/setColumns:andRows:</TokenIdentifier>
-			<Abstract type="html">Initialize with array of TSColumn objects and array TSRow objects.</Abstract>
+			<Abstract type="html">Initialize with array of columns and rows.</Abstract>
 			<DeclaredIn>TSTableViewModel.h</DeclaredIn>
 			
 			<Declaration>- (void)setColumns:(NSArray *)columns andRows:(NSArray *)rows</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>columns</Name>
-					<Abstract type="html">Array with TSColumn objects.</Abstract>
+					<Abstract type="html">Array can contain objects of mixed types (TSColumn, NSDictionary, NSString). TSColumn objects would be constructed if needed.  </Abstract>
 				</Parameter><Parameter>
 					<Name>rows</Name>
-					<Abstract type="html">Array with TSRow objects.</Abstract>
+					<Abstract type="html">Array can contain objects of mixed types (TSRow, NSDictionary, NSString). TSRow objects would be constructed if needed.</Abstract>
 				</Parameter>
 			</Parameters>
 			
@@ -270,56 +270,19 @@
 		</Token>
 		
 		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/TSTableViewModel/setColumnsInfo:andRowsInfo:</TokenIdentifier>
-			<Abstract type="html">Initialize with array of NSDictionary decriptions for columns and array of NSDictionary decriptions for rows.</Abstract>
-			<DeclaredIn>TSTableViewModel.h</DeclaredIn>
-			
-			<Declaration>- (void)setColumnsInfo:(NSArray *)columns andRowsInfo:(NSArray *)rows</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>columns</Name>
-					<Abstract type="html">Array with columns information.</Abstract>
-				</Parameter><Parameter>
-					<Name>rows</Name>
-					<Abstract type="html">Array with rows data.</Abstract>
-				</Parameter>
-			</Parameters>
-			
-			<Anchor>//api/name/setColumnsInfo:andRowsInfo:</Anchor>
-            <NodeRef refid="24"/>
-		</Token>
-		
-		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/TSTableViewModel/setRows:</TokenIdentifier>
-			<Abstract type="html">Initialize with array of TSRow objects. Columns hierarchy remains the same.</Abstract>
+			<Abstract type="html">Initialize with rows data. Columns hierarchy remains the same.</Abstract>
 			<DeclaredIn>TSTableViewModel.h</DeclaredIn>
 			
 			<Declaration>- (void)setRows:(NSArray *)rows</Declaration>
 			<Parameters>
 				<Parameter>
 					<Name>rows</Name>
-					<Abstract type="html">Array with TSRow objects.</Abstract>
+					<Abstract type="html">Array can contain objects of mixed types (TSRow, NSDictionary, NSString). TSRow objects would be constructed if needed.</Abstract>
 				</Parameter>
 			</Parameters>
 			
 			<Anchor>//api/name/setRows:</Anchor>
-            <NodeRef refid="24"/>
-		</Token>
-		
-		<Token>
-			<TokenIdentifier>//apple_ref/occ/instm/TSTableViewModel/setRowsInfo:</TokenIdentifier>
-			<Abstract type="html">Initialize with array of NSDictionary decriptions for rows. Rows hierarchy remains the same.</Abstract>
-			<DeclaredIn>TSTableViewModel.h</DeclaredIn>
-			
-			<Declaration>- (void)setRowsInfo:(NSArray *)rows</Declaration>
-			<Parameters>
-				<Parameter>
-					<Name>rows</Name>
-					<Abstract type="html">Array with rows data.</Abstract>
-				</Parameter>
-			</Parameters>
-			
-			<Anchor>//api/name/setRowsInfo:</Anchor>
             <NodeRef refid="24"/>
 		</Token>
 		

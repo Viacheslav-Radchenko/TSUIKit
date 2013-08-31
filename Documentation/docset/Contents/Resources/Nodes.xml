@@ -171,6 +171,12 @@
                 
                 
                 
+                <Node type="section">
+                    <Path>Classes/TSNavigationStripComponent.html</Path>
+                    <Name>Instance Methods</Name>
+                    <Anchor>instance_methods</Anchor>
+                </Node>
+                
             </Subnodes>
             
         </Node>
@@ -410,6 +416,12 @@
                 </Node>
                 
                 
+                
+                <Node type="section">
+                    <Path>Classes/TSTabViewSection.html</Path>
+                    <Name>Instance Methods</Name>
+                    <Anchor>instance_methods</Anchor>
+                </Node>
                 
             </Subnodes>
             

@@ -135,6 +135,28 @@
                     
                     
 					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<pre><code>TSNavigationStripComponent is base class, which provides appearance information for TSNavigationStripView's section or item.
+</code></pre>
+
+<p>@warning
+    In sake of code reuse, TSTabViewModel inherits from <a href="../Classes/TSNavigationStripModel.html">TSNavigationStripModel</a>.
+    Because they have similar underlying data structure and logic, it safes many lines of code)
+    Hovewer, few methods that provided by <a href="../Classes/TSNavigationStripModel.html">TSNavigationStripModel</a> interface are not applied in context of TSTabViewModel.
+        - (id)initWithNavigationStrip:
+        - (void)insertNewSection:atIndex:animated:
+        - (void)removeSectionAtIndex:animated:
+        - (void)setSections:
+    These methods are overrided as dummy and do nothing beside assertion.
+    TSTabViewModel replace these methods with following:
+        - (id)<a href="#//api/name/initWithTabView:">initWithTabView:</a>
+        - (void)<a href="#//api/name/insertNewTab:atIndex:animated:">insertNewTab:atIndex:animated:</a>
+        - (void)<a href="#//api/name/removeTabAtIndex:animated:">removeTabAtIndex:animated:</a>
+        - (void)<a href="#//api/name/setTabs:">setTabs:</a></p>
+					</div>
+					
 					
 					
 					
@@ -196,10 +218,35 @@
 	<h3 class="subsubtitle method-title">tabView</h3>
 	
 	
+	
+	<div class="method-subsection brief-description">
+		<p>Readonly reference to <a href="../Classes/TSTabView.html">TSTabView</a> instance managed by this model.</p>
+	</div>		
+	
+    
 
 	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong, readonly) TSTabView *tabView</code></div>
 
     
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">TSTabViewModel.h</code><br />
+	</div>				
+	
+	
 </div>
 						
 					</div>
@@ -217,10 +264,45 @@
 	<h3 class="subsubtitle method-title">initWithTabView:</h3>
 	
 	
+	
+	<div class="method-subsection brief-description">
+		<p>  Initialize instance of TSTabViewModel with corresponding <a href="../Classes/TSTabView.html">TSTabView</a> object.</p>
+	</div>		
+	
+    
 
 	<div class="method-subsection method-declaration"><code>- (id)initWithTabView:(TSTabView *)<em>tabView</em></code></div>
 
     
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>tabView</em></dt>
+			<dd><p>Instance of <a href="../Classes/TSTabView.html">TSTabView</a> which would be managed by this data model.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">TSTabViewModel.h</code><br />
+	</div>				
+	
+	
 </div>
 						
 						<div class="section-method">
@@ -228,10 +310,55 @@
 	<h3 class="subsubtitle method-title">insertNewTab:atIndex:animated:</h3>
 	
 	
+	
+	<div class="method-subsection brief-description">
+		<p>Insert new tab/page into TSTabViewModel. <a href="../Classes/TSTabView.html">TSTabView</a> would be notified about changes in data model.</p>
+	</div>		
+	
+    
 
 	<div class="method-subsection method-declaration"><code>- (void)insertNewTab:(TSTabViewSection *)<em>tabInfo</em> atIndex:(NSInteger)<em>index</em> animated:(BOOL)<em>animated</em></code></div>
 
     
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>tabInfo</em></dt>
+			<dd><p>Provide appearance and content infomation about new tab.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>index</em></dt>
+			<dd><p>Insert position.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>animated</em></dt>
+			<dd><p>If YES insertion would be done aniamted.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">TSTabViewModel.h</code><br />
+	</div>				
+	
+	
 </div>
 						
 						<div class="section-method">
@@ -239,10 +366,50 @@
 	<h3 class="subsubtitle method-title">removeTabAtIndex:animated:</h3>
 	
 	
+	
+	<div class="method-subsection brief-description">
+		<p>  Insert new tab/page into TSTabViewModel. <a href="../Classes/TSTabView.html">TSTabView</a> would be notified about changes in data model.</p>
+	</div>		
+	
+    
 
 	<div class="method-subsection method-declaration"><code>- (void)removeTabAtIndex:(NSInteger)<em>index</em> animated:(BOOL)<em>animated</em></code></div>
 
     
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>index</em></dt>
+			<dd><p>Remove position.</p></dd>
+		</dl>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>animated</em></dt>
+			<dd><p>If YES removing would be done aniamted.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">TSTabViewModel.h</code><br />
+	</div>				
+	
+	
 </div>
 						
 						<div class="section-method">
@@ -250,10 +417,45 @@
 	<h3 class="subsubtitle method-title">setTabs:</h3>
 	
 	
+	
+	<div class="method-subsection brief-description">
+		<p>  Provide content description for TSTabViewModel.</p>
+	</div>		
+	
+    
 
 	<div class="method-subsection method-declaration"><code>- (void)setTabs:(NSArray *)<em>tabs</em></code></div>
 
     
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>tabs</em></dt>
+			<dd><p>Array of <a href="../Classes/TSTabViewSection.html">TSTabViewSection</a> or NSDictionary  objects. <a href="../Classes/TSTabViewSection.html">TSTabViewSection</a> instance would be constructed if needed.</p></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">TSTabViewModel.h</code><br />
+	</div>				
+	
+	
 </div>
 						
 					</div>
@@ -271,7 +473,7 @@
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2013 Viacheslav Radchenko. All rights reserved. (Last updated: 2013-08-29)</span><br />
+						<p><span class="copyright">&copy; 2013 Viacheslav Radchenko. All rights reserved. (Last updated: 2013-08-31)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.1 (build 858)</a>.</span></p>
 						

@@ -26,6 +26,8 @@
 					<select id="jumpTo">
 	<option value="top">Jump To&#133;</option>
 	
+	<option value="overview">Overview</option>
+	
 	
 	
 	
@@ -46,6 +48,15 @@
 	
 	
 	
+	<option value="instance_methods">Instance Methods</option>
+	
+	<option value="//api/name/initWithDictionary:">&nbsp;&nbsp;&nbsp;&nbsp;- initWithDictionary:</option>
+	
+	<option value="//api/name/initWithTitle:andController:">&nbsp;&nbsp;&nbsp;&nbsp;- initWithTitle:andController:</option>
+	
+	<option value="//api/name/initWithTitle:andView:">&nbsp;&nbsp;&nbsp;&nbsp;- initWithTitle:andView:</option>
+	
+	
 	
 </select>
 				</li>
@@ -54,6 +65,8 @@
 		<nav id="tocContainer" class="isShowingTOC">
 			<ul id="toc" role="tree">
 				
+<li role="treeitem"><span class="nodisclosure"></span><span class="sectionName"><a href="#overview">Overview</a></span></li>
+
 
 
 
@@ -76,6 +89,16 @@
 
 
 
+
+<li role="treeitem" class="children"><span class="disclosure"></span><span class="sectionName"><a href="#instance_methods">Instance Methods</a></span><ul>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/initWithDictionary:">initWithDictionary:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/initWithTitle:andController:">initWithTitle:andController:</a></span></li>
+	
+	<li><span class="nodisclosure"></span><span class="sectionName"><a href="#//api/name/initWithTitle:andView:">initWithTitle:andView:</a></span></li>
+	
+</ul></li>
 
 
 			</ul>
@@ -109,6 +132,14 @@
                     
                     
 					
+					<div class="section section-overview">
+						<a title="Overview" name="overview"></a>
+						<h2 class="subtitle subtitle-overview">Overview</h2>
+						<p>TSTabViewSection contains information about corresponding tab in <a href="../Classes/TSTabView.html">TSTabView</a>. This information includes appearance and content properties.</p>
+					</div>
+					
+					
+					
 					
 					
 					<div class="section section-tasks">
@@ -132,6 +163,24 @@
 	</span>
 	<span class="task-item-suffix">property</span>
 	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/initWithTitle:andView:">&ndash;&nbsp;initWithTitle:andView:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/initWithTitle:andController:">&ndash;&nbsp;initWithTitle:andController:</a></code>
+	</span>
+	
+	
+</li><li>
+	<span class="tooltip">
+		<code><a href="#//api/name/initWithDictionary:">&ndash;&nbsp;initWithDictionary:</a></code>
+	</span>
+	
+	
 </li>
 						</ul>
 						
@@ -150,10 +199,35 @@
 	<h3 class="subsubtitle method-title">tabContent</h3>
 	
 	
+	
+	<div class="method-subsection brief-description">
+		<p>UIView assotiated with this section</p>
+	</div>		
+	
+    
 
 	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) UIView *tabContent</code></div>
 
     
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">TSTabViewModel.h</code><br />
+	</div>				
+	
+	
 </div>
 						
 						<div class="section-method">
@@ -161,10 +235,35 @@
 	<h3 class="subsubtitle method-title">tabController</h3>
 	
 	
+	
+	<div class="method-subsection brief-description">
+		<p>UIViewController assotiated with this section</p>
+	</div>		
+	
+    
 
 	<div class="method-subsection method-declaration"><code>@property (nonatomic, strong) UIViewController *tabController</code></div>
 
     
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">TSTabViewModel.h</code><br />
+	</div>				
+	
+	
 </div>
 						
 					</div>
@@ -172,6 +271,136 @@
 					
 					
 					
+					
+					<div class="section section-methods">
+						<a title="Instance Methods" name="instance_methods"></a>
+						<h2 class="subtitle subtitle-methods">Instance Methods</h2>
+						
+						<div class="section-method">
+	<a name="//api/name/initWithDictionary:" title="initWithDictionary:"></a>
+	<h3 class="subsubtitle method-title">initWithDictionary:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Initialize TSTabViewSection with dictionary which define content and appearance.</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (id)initWithDictionary:(NSDictionary *)<em>dictionary</em></code></div>
+
+    
+	
+	<div class="method-subsection arguments-section parameters">
+		<h4 class="method-subtitle parameter-title">Parameters</h4>
+		
+		<dl class="argument-def parameter-def">
+			<dt><em>info</em></dt>
+			<dd><p>Dictionary containes information about tab.</p>
+
+<pre><code> NSDictionary *tabInfo = @{
+     @"tabContent" : [[UIView alloc] init],
+     @"title" : @"Tab 1"
+ };
+</code></pre></dd>
+		</dl>
+		
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">TSTabViewModel.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/initWithTitle:andController:" title="initWithTitle:andController:"></a>
+	<h3 class="subsubtitle method-title">initWithTitle:andController:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Initialize TSTabViewSection with section title and corresponding UIViewController</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (id)initWithTitle:(NSString *)<em>title</em> andController:(UIViewController *)<em>controller</em></code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">TSTabViewModel.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+						<div class="section-method">
+	<a name="//api/name/initWithTitle:andView:" title="initWithTitle:andView:"></a>
+	<h3 class="subsubtitle method-title">initWithTitle:andView:</h3>
+	
+	
+	
+	<div class="method-subsection brief-description">
+		<p>Initialize TSTabViewSection with section title and corresponding UIView</p>
+	</div>		
+	
+    
+
+	<div class="method-subsection method-declaration"><code>- (id)initWithTitle:(NSString *)<em>title</em> andView:(UIView *)<em>view</em></code></div>
+
+    
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="method-subsection declared-in-section">
+		<h4 class="method-subtitle">Declared In</h4>
+		<code class="declared-in-ref">TSTabViewModel.h</code><br />
+	</div>				
+	
+	
+</div>
+						
+					</div>
 					
 					
                     
@@ -186,7 +415,7 @@
 				<div id="footer">
 					<hr />
 					<div class="footer-copyright">
-						<p><span class="copyright">&copy; 2013 Viacheslav Radchenko. All rights reserved. (Last updated: 2013-08-29)</span><br />
+						<p><span class="copyright">&copy; 2013 Viacheslav Radchenko. All rights reserved. (Last updated: 2013-08-31)</span><br />
 						
 						<span class="generator">Generated by <a href="http://appledoc.gentlebytes.com">appledoc 2.1 (build 858)</a>.</span></p>
 						

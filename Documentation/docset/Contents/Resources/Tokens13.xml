@@ -4,7 +4,7 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/cl/TSTabViewSection</TokenIdentifier>
-			<Abstract type="html"></Abstract>
+			<Abstract type="html">TSTabViewSection contains information about corresponding tab in TSTabView. This information includes appearance and content properties.</Abstract>
 			<DeclaredIn>TSTabViewModel.h</DeclaredIn>
             
 			
@@ -14,7 +14,7 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/TSTabViewSection/setTabContent:</TokenIdentifier>
-			<Abstract type="html"></Abstract>
+			<Abstract type="html">UIView assotiated with this section</Abstract>
 			<DeclaredIn>TSTabViewModel.h</DeclaredIn>
 			
 			<Declaration>@property (nonatomic, strong) UIView *tabContent</Declaration>
@@ -26,7 +26,7 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/TSTabViewSection/tabContent</TokenIdentifier>
-			<Abstract type="html"></Abstract>
+			<Abstract type="html">UIView assotiated with this section</Abstract>
 			<DeclaredIn>TSTabViewModel.h</DeclaredIn>
 			
 			<Declaration>@property (nonatomic, strong) UIView *tabContent</Declaration>
@@ -38,7 +38,7 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instp/TSTabViewSection/tabContent</TokenIdentifier>
-			<Abstract type="html"></Abstract>
+			<Abstract type="html">UIView assotiated with this section</Abstract>
 			<DeclaredIn>TSTabViewModel.h</DeclaredIn>
 			
 			<Declaration>@property (nonatomic, strong) UIView *tabContent</Declaration>
@@ -50,7 +50,7 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/TSTabViewSection/setTabController:</TokenIdentifier>
-			<Abstract type="html"></Abstract>
+			<Abstract type="html">UIViewController assotiated with this section</Abstract>
 			<DeclaredIn>TSTabViewModel.h</DeclaredIn>
 			
 			<Declaration>@property (nonatomic, strong) UIViewController *tabController</Declaration>
@@ -62,7 +62,7 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instm/TSTabViewSection/tabController</TokenIdentifier>
-			<Abstract type="html"></Abstract>
+			<Abstract type="html">UIViewController assotiated with this section</Abstract>
 			<DeclaredIn>TSTabViewModel.h</DeclaredIn>
 			
 			<Declaration>@property (nonatomic, strong) UIViewController *tabController</Declaration>
@@ -74,13 +74,59 @@
 		
 		<Token>
 			<TokenIdentifier>//apple_ref/occ/instp/TSTabViewSection/tabController</TokenIdentifier>
-			<Abstract type="html"></Abstract>
+			<Abstract type="html">UIViewController assotiated with this section</Abstract>
 			<DeclaredIn>TSTabViewModel.h</DeclaredIn>
 			
 			<Declaration>@property (nonatomic, strong) UIViewController *tabController</Declaration>
 			
 			
 			<Anchor>//api/name/tabController</Anchor>
+            <NodeRef refid="13"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTabViewSection/initWithTitle:andView:</TokenIdentifier>
+			<Abstract type="html">Initialize TSTabViewSection with section title and corresponding UIView</Abstract>
+			<DeclaredIn>TSTabViewModel.h</DeclaredIn>
+			
+			<Declaration>- (id)initWithTitle:(NSString *)title andView:(UIView *)view</Declaration>
+			
+			
+			<Anchor>//api/name/initWithTitle:andView:</Anchor>
+            <NodeRef refid="13"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTabViewSection/initWithTitle:andController:</TokenIdentifier>
+			<Abstract type="html">Initialize TSTabViewSection with section title and corresponding UIViewController</Abstract>
+			<DeclaredIn>TSTabViewModel.h</DeclaredIn>
+			
+			<Declaration>- (id)initWithTitle:(NSString *)title andController:(UIViewController *)controller</Declaration>
+			
+			
+			<Anchor>//api/name/initWithTitle:andController:</Anchor>
+            <NodeRef refid="13"/>
+		</Token>
+		
+		<Token>
+			<TokenIdentifier>//apple_ref/occ/instm/TSTabViewSection/initWithDictionary:</TokenIdentifier>
+			<Abstract type="html">Initialize TSTabViewSection with dictionary which define content and appearance.</Abstract>
+			<DeclaredIn>TSTabViewModel.h</DeclaredIn>
+			
+			<Declaration>- (id)initWithDictionary:(NSDictionary *)dictionary</Declaration>
+			<Parameters>
+				<Parameter>
+					<Name>info</Name>
+					<Abstract type="html">Dictionary containes information about tab.
+
+     NSDictionary *tabInfo = @{
+         @&quot;tabContent&quot; : [[UIView alloc] init],
+         @&quot;title&quot; : @&quot;Tab 1&quot;
+     };</Abstract>
+				</Parameter>
+			</Parameters>
+			
+			<Anchor>//api/name/initWithDictionary:</Anchor>
             <NodeRef refid="13"/>
 		</Token>
 		
