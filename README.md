@@ -55,7 +55,7 @@ Example of TSTableView object instantiation provided below. See more complex exa
     [self.view addSubview:tableView];
     
     TSTableViewModel  *dataModel = [[TSTableViewModel alloc] initWithTableView:tableView andStyle:kTSTableViewStyleDark];
-    [dataModel setColumnsInfo:columns andRowsInfo:rows];
+    [dataModel setColumns:columns andRows:rows];
 
 ```
 
