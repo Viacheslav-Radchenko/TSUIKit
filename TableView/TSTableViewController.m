@@ -156,12 +156,12 @@
 
 #pragma mark - TSTableViewDelegate
 
-- (void)tableView:(TSTableView *)tableView willSelectRowAtPath:(NSIndexPath *)rowPath animated:(BOOL)animated
+- (void)tableView:(TSTableView *)tableView willSelectRowAtPath:(NSIndexPath *)rowPath selectedCell:(NSInteger)cellIndex animated:(BOOL)animated
 {
     VerboseLog();
 }
 
-- (void)tableView:(TSTableView *)tableView didSelectRowAtPath:(NSIndexPath *)rowPath
+- (void)tableView:(TSTableView *)tableView didSelectRowAtPath:(NSIndexPath *)rowPath selectedCell:(NSInteger)cellIndex
 {
     VerboseLog();
 }
