@@ -48,7 +48,7 @@
 
 @interface TSTableView () <TSTableViewHeaderPanelDelegate, TSTableViewExpandControlPanelDelegate, TSTableViewContentHolderDelegate, TSTableViewAppearanceCoordinator>
 
-@property (nonatomic, assign) CGFloat contentAdditionalSize;
+
 @property (nonatomic, strong) TSTableViewHeaderPanel *tableHeader;
 @property (nonatomic, strong) TSTableViewExpandControlPanel *tableControlPanel;
 @property (nonatomic, strong) TSTableViewContentHolder *tableContentHolder;

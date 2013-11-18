@@ -69,6 +69,11 @@
 @property (nonatomic, assign, readonly) NSInteger maxNestingLevel;
 
 /**
+    @abstract Additionl scrollable content from right side and bottom side. Change applied after reloadData.
+ */
+@property (nonatomic, assign) CGFloat contentAdditionalSize;
+
+/**
     @abstract Show hihlights when user taps control (slide control in header secrion and expand control in side panel)
  */
 @property (nonatomic, assign) BOOL highlightControlsOnTap;
