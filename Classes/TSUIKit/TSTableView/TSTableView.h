@@ -181,6 +181,11 @@
 - (void)changeExpandStateForRow:(NSIndexPath *)rowPath toValue:(BOOL)expanded animated:(BOOL)animated;
 
 /**
+ @abstract Toggle expand state of the row
+ */
+- (void)toggleExpandStateForRow:(NSIndexPath *)rowPath animated:(BOOL)animated;
+
+/**
     @abstract Expand all rows
  */
 - (void)expandAllRowsWithAnimation:(BOOL)animated;

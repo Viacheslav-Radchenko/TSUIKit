@@ -423,9 +423,17 @@
 
 #pragma mark - 
 
+- (void)toggleExpandStateForRow:(NSIndexPath *)rowPath animated:(BOOL)animated
+{
+    VerboseLog();
+    BOOL expand = ![_tableControlPanel isRowExpanded:rowPath];
+    [self changeExpandStateForRow:rowPath toValue:expand animated:animated];
+}
+
 - (void)changeExpandStateForRow:(NSIndexPath *)rowPath toValue:(BOOL)expanded animated:(BOOL)animated
 {
     VerboseLog();
+    [_tableControlPanel changeExpandStateForRow:rowPath toValue:expanded animated:YES];
     [_tableContentHolder changeExpandStateForRow:rowPath toValue:expanded animated:YES];
     [self updateLayout];
 }
