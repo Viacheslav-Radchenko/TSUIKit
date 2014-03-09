@@ -33,7 +33,6 @@
 #import "TSUtils.h"
 #import "TSDefines.h"
 
-
 @interface TSTableViewHeaderPanel ()
 {
     NSMutableArray *_headerSections;

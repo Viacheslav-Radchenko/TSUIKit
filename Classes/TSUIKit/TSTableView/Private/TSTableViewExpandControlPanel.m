@@ -117,7 +117,7 @@
         UIImage *selectedImage = [self.dataSource controlPanelExpandItemSelectedBackgroundImage];
         CGFloat rowHeight = [self.dataSource heightForRowAtPath:rowPath];
         UIButton *expandBtn = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, expandRow.frame.size.width, rowHeight)];
-        expandBtn.autoresizingMask = UIViewAutoresizingFlexibleWidth;
+//        expandBtn.autoresizingMask = UIViewAutoresizingFlexibleWidth;
         expandBtn.showsTouchWhenHighlighted = [self.dataSource highlightControlsOnTap];
         expandBtn.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
         expandBtn.contentVerticalAlignment = UIControlContentVerticalAlignmentBottom;

@@ -33,7 +33,7 @@
 #import "TSUtils.h"
 #import "TSDefines.h"
 
- 
+
 
 /**
     @abstract Selection rectangle view
@@ -77,6 +77,17 @@
     [self addSubview:_imageView];
     
     self.selectionColor = [UIColor colorWithRed:1 green:0 blue:0 alpha:0.25f];
+    
+    //pzq
+    //add hide event
+    UITapGestureRecognizer *hideEvent = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleHide:)];
+    [self addGestureRecognizer:hideEvent];
+}
+
+- (void)handleHide:(UITapGestureRecognizer *)recognizer
+{
+    self.alpha = 0;
+    self.hidden = YES;
 }
 
 - (void)setSelectionColor:(UIColor *)selectionColor
@@ -102,8 +113,6 @@
 
 @property (nonatomic, strong) TSTableViewSelection *rowSelectionView;
 @property (nonatomic, strong) TSTableViewSelection *columnSelectionView;
-
-@property (nonatomic, strong) UITapGestureRecognizer *tapGestureRecognizer;
 
 @end
 
@@ -164,8 +173,9 @@
     _reusableCells = [[NSMutableDictionary alloc] init];
     _reusableRows = [[NSMutableArray alloc] init];
     
-    _tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapGestureDidRecognized:)];
-    [self addGestureRecognizer:_tapGestureRecognizer];
+    //pzq
+//    _tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapGestureDidRecognized:)];
+//    [self addGestureRecognizer:_tapGestureRecognizer];
 }
 
 - (TSTableViewSelection *)rowSelectionView
@@ -788,6 +798,7 @@
     if(_allowRowSelection)
     {
         CGPoint pos = [recognizer locationInView:self];
+        pos.x += self.frame.origin.x;//pzq
         NSIndexPath *rowIndexPath = [self findRowAtPosition:pos parentRow:nil parentPowPath:nil];
 
         if(rowIndexPath)

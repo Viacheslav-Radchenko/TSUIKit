@@ -685,14 +685,27 @@
     return _widthForExpandItem;
 }
 
+//pzq
+-(void)tapTableViewCell:(UITapGestureRecognizer *)recognizer
+{
+    TSTableViewCell *cell = (TSTableViewCell*)recognizer.view;
+    [_tableView.delegate tableView:_tableView tapCellView:cell cellValue:cell.textLabel.text];
+//    NSLog(@"%@ ",cell.textLabel.text);
+}
+
 - (TSTableViewCell *)tableView:(TSTableView *)tableView cellViewForRowAtPath:(NSIndexPath *)indexPath cellIndex:(NSInteger)index
 {
     VerboseLog();
     NSString * const kReuseCellId = @"TSTableViewCell";
     TSCell *cellInfo = [self cellAtRowPath:indexPath atIndex:index];
     TSTableViewCell *cell =  [tableView dequeueReusableCellViewWithIdentifier:kReuseCellId];
-    if(!cell)
+    if(!cell){
         cell = [[TSTableViewCell alloc] initWithReuseIdentifier:kReuseCellId];
+        //pzq
+        //add TSTableViewCell UITapGestureRecognizer
+        UITapGestureRecognizer *tapCell = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapTableViewCell:)];
+        [cell addGestureRecognizer:tapCell];
+    }
 
     TSColumn *columnInfo = [self columnAtIndex:index];
     if(columnInfo.titleColor)

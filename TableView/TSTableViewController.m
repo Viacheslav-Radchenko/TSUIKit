@@ -159,31 +159,42 @@
 - (void)tableView:(TSTableView *)tableView willSelectRowAtPath:(NSIndexPath *)rowPath selectedCell:(NSInteger)cellIndex animated:(BOOL)animated
 {
     VerboseLog();
+//    NSLog(@"willSelectRowAtPath");
 }
 
 - (void)tableView:(TSTableView *)tableView didSelectRowAtPath:(NSIndexPath *)rowPath selectedCell:(NSInteger)cellIndex
 {
     VerboseLog();
+//    NSLog(@"didSelectRowAtPath");
 }
 
 - (void)tableView:(TSTableView *)tableView willSelectColumnAtPath:(NSIndexPath *)columnPath animated:(BOOL)animated
 {
     VerboseLog();
+//    NSLog(@"willSelectColumnAtPath");
 }
 
 - (void)tableView:(TSTableView *)tableView didSelectColumnAtPath:(NSIndexPath *)columnPath
 {
     VerboseLog();
+//    NSLog(@"didSelectColumnAtPath");
 }
 
 - (void)tableView:(TSTableView *)tableView widthDidChangeForColumnAtIndex:(NSInteger)columnIndex
 {
     VerboseLog();
+//    NSLog(@"widthDidChangeForColumnAtIndex");
 }
 
 - (void)tableView:(TSTableView *)tableView expandStateDidChange:(BOOL)expand forRowAtPath:(NSIndexPath *)rowPath
 {
     VerboseLog();
+//    NSLog(@"expandStateDidChange");
+}
+
+- (void)tableView:(TSTableView *)tableView tapCellView:(TSTableViewCell*)cell cellValue:(NSString*)value
+{
+    NSLog(@"cell value == %@",value);
 }
 
 #pragma mark - FileSystem

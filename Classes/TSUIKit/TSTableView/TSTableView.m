@@ -123,6 +123,11 @@
     _tableContentHolder.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
     _tableContentHolder.contentHolderDelegate = self;
     [self addSubview: _tableContentHolder];
+    
+    //pzq
+    UITapGestureRecognizer *tapExpandPanel = [[UITapGestureRecognizer alloc] initWithTarget:_tableContentHolder action:@selector(tapGestureDidRecognized:)];
+    [_tableControlPanel addGestureRecognizer:tapExpandPanel];
+    
 }
 
 - (void)setDataSource:(id<TSTableViewDataSource>)dSource
