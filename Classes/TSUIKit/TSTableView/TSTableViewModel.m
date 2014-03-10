@@ -685,7 +685,7 @@
     return _widthForExpandItem;
 }
 
-//pzq
+//mark: 单元格点击事件处理。调用协议中的方法，让其动作给实现协议的类处理。
 -(void)tapTableViewCell:(UITapGestureRecognizer *)recognizer
 {
     TSTableViewCell *cell = (TSTableViewCell*)recognizer.view;
@@ -701,8 +701,7 @@
     TSTableViewCell *cell =  [tableView dequeueReusableCellViewWithIdentifier:kReuseCellId];
     if(!cell){
         cell = [[TSTableViewCell alloc] initWithReuseIdentifier:kReuseCellId];
-        //pzq
-        //add TSTableViewCell UITapGestureRecognizer
+        //mark: add TSTableViewCell UITapGestureRecognizer
         UITapGestureRecognizer *tapCell = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapTableViewCell:)];
         [cell addGestureRecognizer:tapCell];
     }

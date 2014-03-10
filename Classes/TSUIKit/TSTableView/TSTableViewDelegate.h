@@ -40,7 +40,7 @@
 - (void)tableView:(TSTableView *)tableView widthDidChangeForColumnAtIndex:(NSInteger)columnIndex;
 - (void)tableView:(TSTableView *)tableView expandStateDidChange:(BOOL)expand forRowAtPath:(NSIndexPath *)rowPath;
 
-//pzq
+//mark: 添加单元格点击处理协议
 - (void)tableView:(TSTableView *)tableView tapCellView:(TSTableViewCell*)cell cellValue:(NSString*)value;
 
 @end

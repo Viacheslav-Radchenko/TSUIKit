@@ -78,8 +78,7 @@
     
     self.selectionColor = [UIColor colorWithRed:1 green:0 blue:0 alpha:0.25f];
     
-    //pzq
-    //add hide event
+    //mark: add hide TSTableViewSelection event
     UITapGestureRecognizer *hideEvent = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleHide:)];
     [self addGestureRecognizer:hideEvent];
 }
@@ -173,7 +172,7 @@
     _reusableCells = [[NSMutableDictionary alloc] init];
     _reusableRows = [[NSMutableArray alloc] init];
     
-    //pzq
+    //mark: remove TSTableViewContentHolder's tapGestureRecognizer
 //    _tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapGestureDidRecognized:)];
 //    [self addGestureRecognizer:_tapGestureRecognizer];
 }
@@ -792,13 +791,13 @@
 }
 
 #pragma mark - Selection 
-
-- (void)tapGestureDidRecognized:(UITapGestureRecognizer *)recognizer
+//mark: 响应左侧面板的点击事件
+- (void)tapExpandPanelRecognized:(UITapGestureRecognizer *)recognizer
 {
     if(_allowRowSelection)
     {
         CGPoint pos = [recognizer locationInView:self];
-        pos.x += self.frame.origin.x;//pzq
+        pos.x += self.frame.origin.x;//mark: 把事件发生的点偏移一个左侧面板宽度的距离
         NSIndexPath *rowIndexPath = [self findRowAtPosition:pos parentRow:nil parentPowPath:nil];
 
         if(rowIndexPath)

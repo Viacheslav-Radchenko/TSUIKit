@@ -124,8 +124,8 @@
     _tableContentHolder.contentHolderDelegate = self;
     [self addSubview: _tableContentHolder];
     
-    //pzq
-    UITapGestureRecognizer *tapExpandPanel = [[UITapGestureRecognizer alloc] initWithTarget:_tableContentHolder action:@selector(tapGestureDidRecognized:)];
+    //mark: 给左侧的ExpandControlPanel添加点击事件。让其响应为选中某一行。代替原来点击TSTableViewContentHolder的事件响应。
+    UITapGestureRecognizer *tapExpandPanel = [[UITapGestureRecognizer alloc] initWithTarget:_tableContentHolder action:@selector(tapExpandPanelRecognized:)];
     [_tableControlPanel addGestureRecognizer:tapExpandPanel];
     
 }
