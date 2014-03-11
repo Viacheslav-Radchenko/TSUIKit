@@ -94,11 +94,6 @@
 		F6141F3D17C6A64C003455EB /* TSTableViewHeaderSectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = F6141EEA17C6A64C003455EB /* TSTableViewHeaderSectionView.m */; };
 		F6141F3E17C6A64C003455EB /* TSTableViewHeaderSectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = F6141EEA17C6A64C003455EB /* TSTableViewHeaderSectionView.m */; };
 		F6141F3F17C6A64C003455EB /* TSTableViewHeaderSectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = F6141EEA17C6A64C003455EB /* TSTableViewHeaderSectionView.m */; };
-		F6141F4017C6A64C003455EB /* TSTableViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F6141EEC17C6A64C003455EB /* TSTableViewModel.m */; };
-		F6141F4117C6A64C003455EB /* TSTableViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F6141EEC17C6A64C003455EB /* TSTableViewModel.m */; };
-		F6141F4217C6A64C003455EB /* TSTableViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F6141EEC17C6A64C003455EB /* TSTableViewModel.m */; };
-		F6141F4317C6A64C003455EB /* TSTableViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F6141EEC17C6A64C003455EB /* TSTableViewModel.m */; };
-		F6141F4417C6A64C003455EB /* TSTableViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F6141EEC17C6A64C003455EB /* TSTableViewModel.m */; };
 		F6141F4517C6A64C003455EB /* TSTabView.m in Sources */ = {isa = PBXBuildFile; fileRef = F6141EEF17C6A64C003455EB /* TSTabView.m */; };
 		F6141F4617C6A64C003455EB /* TSTabView.m in Sources */ = {isa = PBXBuildFile; fileRef = F6141EEF17C6A64C003455EB /* TSTabView.m */; };
 		F6141F4717C6A64C003455EB /* TSTabView.m in Sources */ = {isa = PBXBuildFile; fileRef = F6141EEF17C6A64C003455EB /* TSTabView.m */; };
@@ -507,8 +502,6 @@
 		F6141EE817C6A64C003455EB /* TSTableViewDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSTableViewDelegate.h; sourceTree = "<group>"; };
 		F6141EE917C6A64C003455EB /* TSTableViewHeaderSectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSTableViewHeaderSectionView.h; sourceTree = "<group>"; };
 		F6141EEA17C6A64C003455EB /* TSTableViewHeaderSectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSTableViewHeaderSectionView.m; sourceTree = "<group>"; };
-		F6141EEB17C6A64C003455EB /* TSTableViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSTableViewModel.h; sourceTree = "<group>"; };
-		F6141EEC17C6A64C003455EB /* TSTableViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSTableViewModel.m; sourceTree = "<group>"; };
 		F6141EEE17C6A64C003455EB /* TSTabView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSTabView.h; sourceTree = "<group>"; };
 		F6141EEF17C6A64C003455EB /* TSTabView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSTabView.m; sourceTree = "<group>"; };
 		F6141EF017C6A64C003455EB /* TSTabViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSTabViewDataSource.h; sourceTree = "<group>"; };
@@ -785,8 +778,6 @@
 				F6141EE817C6A64C003455EB /* TSTableViewDelegate.h */,
 				F6141EE917C6A64C003455EB /* TSTableViewHeaderSectionView.h */,
 				F6141EEA17C6A64C003455EB /* TSTableViewHeaderSectionView.m */,
-				F6141EEB17C6A64C003455EB /* TSTableViewModel.h */,
-				F6141EEC17C6A64C003455EB /* TSTableViewModel.m */,
 			);
 			path = TSTableView;
 			sourceTree = "<group>";
@@ -1653,7 +1644,6 @@
 				F6141F3317C6A64C003455EB /* TSTableView.m in Sources */,
 				F6141F3817C6A64C003455EB /* TSTableViewCell.m in Sources */,
 				F6141F3D17C6A64C003455EB /* TSTableViewHeaderSectionView.m in Sources */,
-				F6141F4217C6A64C003455EB /* TSTableViewModel.m in Sources */,
 				F6141F4717C6A64C003455EB /* TSTabView.m in Sources */,
 				F6141F4C17C6A64C003455EB /* TSTabViewModel.m in Sources */,
 				F6141F5117C6A64C003455EB /* TSTabViewWithDropDownPanel.m in Sources */,
@@ -1687,7 +1677,6 @@
 				F6141F3117C6A64C003455EB /* TSTableView.m in Sources */,
 				F6141F3617C6A64C003455EB /* TSTableViewCell.m in Sources */,
 				F6141F3B17C6A64C003455EB /* TSTableViewHeaderSectionView.m in Sources */,
-				F6141F4017C6A64C003455EB /* TSTableViewModel.m in Sources */,
 				F6141F4517C6A64C003455EB /* TSTabView.m in Sources */,
 				F6141F4A17C6A64C003455EB /* TSTabViewModel.m in Sources */,
 				F6141F4F17C6A64C003455EB /* TSTabViewWithDropDownPanel.m in Sources */,
@@ -1717,7 +1706,6 @@
 				F6141F3217C6A64C003455EB /* TSTableView.m in Sources */,
 				F6141F3717C6A64C003455EB /* TSTableViewCell.m in Sources */,
 				F6141F3C17C6A64C003455EB /* TSTableViewHeaderSectionView.m in Sources */,
-				F6141F4117C6A64C003455EB /* TSTableViewModel.m in Sources */,
 				F6141F4617C6A64C003455EB /* TSTabView.m in Sources */,
 				F6141F4B17C6A64C003455EB /* TSTabViewModel.m in Sources */,
 				F6141F5017C6A64C003455EB /* TSTabViewWithDropDownPanel.m in Sources */,
@@ -1745,7 +1733,6 @@
 				F6141F3517C6A64C003455EB /* TSTableView.m in Sources */,
 				F6141F3A17C6A64C003455EB /* TSTableViewCell.m in Sources */,
 				F6141F3F17C6A64C003455EB /* TSTableViewHeaderSectionView.m in Sources */,
-				F6141F4417C6A64C003455EB /* TSTableViewModel.m in Sources */,
 				F6141F4917C6A64C003455EB /* TSTabView.m in Sources */,
 				F6141F4E17C6A64C003455EB /* TSTabViewModel.m in Sources */,
 				F6141F5317C6A64C003455EB /* TSTabViewWithDropDownPanel.m in Sources */,
@@ -1774,7 +1761,6 @@
 				F6141F3417C6A64C003455EB /* TSTableView.m in Sources */,
 				F6141F3917C6A64C003455EB /* TSTableViewCell.m in Sources */,
 				F6141F3E17C6A64C003455EB /* TSTableViewHeaderSectionView.m in Sources */,
-				F6141F4317C6A64C003455EB /* TSTableViewModel.m in Sources */,
 				F6141F4817C6A64C003455EB /* TSTabView.m in Sources */,
 				F6141F4D17C6A64C003455EB /* TSTabViewModel.m in Sources */,
 				F6141F5217C6A64C003455EB /* TSTabViewWithDropDownPanel.m in Sources */,
@@ -2120,6 +2106,7 @@
 				F63D2F1717CE48F900515A24 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F680D29C1774B9C3005ACD94 /* Build configuration list for PBXNativeTarget "TabViewTest" */ = {
 			isa = XCConfigurationList;

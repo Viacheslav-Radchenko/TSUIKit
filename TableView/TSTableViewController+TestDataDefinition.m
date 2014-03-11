@@ -7,7 +7,7 @@
 //
 
 #import "TSTableViewController+TestDataDefinition.h"
-#import "TSTableViewModel.h"
+#import "TSTableView.h"
 
 @implementation TSTableViewController (TestDataDefinition)
 
