@@ -57,11 +57,11 @@
     // Bottom table
    
     
-    _tableView2 = [[TSTableView alloc] initWithFrame:CGRectMake(20, self.view.frame.size.height/2 + 50, self.view.frame.size.width - 40, self.view.frame.size.height/2 - 70) andStyle:kTSTableViewStyleDark];
-    _tableView2.autoresizingMask = UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
-    _tableView2.delegate = self;
-    
-    [self.view addSubview:_tableView2];
+//    _tableView2 = [[TSTableView alloc] initWithFrame:CGRectMake(20, self.view.frame.size.height/2 + 50, self.view.frame.size.width - 40, self.view.frame.size.height/2 - 70) andStyle:kTSTableViewStyleDark];
+//    _tableView2.autoresizingMask = UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+//    _tableView2.delegate = self;
+//    
+//    [self.view addSubview:_tableView2];
     
 //    _model2 = [[TSTableViewModel alloc] initWithTableView:_tableView2 andStyle:kTSTableViewStyleLight];
     
@@ -69,12 +69,12 @@
 //    NSArray *rows2 = [self rowsInfo2];
 //    [_model2 setColumns:columns2 andRows:rows2];
     
-    NSArray *columns2 = [self columnsForFileSystemTree];
-    NSArray *rows2 = [self rowsForAppDirectory];
-    [_tableView2 setColumns:columns2 andRows:rows2];
+//    NSArray *columns2 = [self columnsForFileSystemTree];
+//    NSArray *rows2 = [self rowsForAppDirectory];
+//    [_tableView2 setColumns:columns2 andRows:rows2];
     
 //    _dataModels = @[_model1, _model2];
-    _tables = @[_tableView1, _tableView2];
+    _tables = @[_tableView1];
     
     // Row examples should correspond to columnsInfo* and rowsInfo* used above
 //    _rowExamples = @[
@@ -190,9 +190,27 @@
 //    NSLog(@"expandStateDidChange");
 }
 
+//mark: cell click callback 1
 - (void)tableView:(TSTableView *)tableView tapCellView:(TSTableViewCell*)cell cellValue:(NSString*)value
 {
-    NSLog(@"cell value == %@",value);
+//    NSInteger col = cell.colIndex;
+//    NSIndexPath *rowPath = cell.rowPath;
+//    NSString *pathstr = rowPath.description;
+//    NSString *pre = @"path =";
+//    NSString *suff = @"}";
+//    NSRange preRange = [pathstr rangeOfString:pre];
+//    NSUInteger preIndex = preRange.location + preRange.length;
+//    NSRange suffRange = [pathstr rangeOfString:suff];
+//    NSUInteger suffIndex = suffRange.location;
+//    NSRange rang = NSMakeRange(preIndex+1, suffIndex-preIndex-1);
+//    NSString *row = [pathstr substringWithRange:rang];
+//    NSLog(@"rowpath = %@ ,col = %d ,value = %@",row,col,value);
+}
+
+//mark: cell click callback 2
+- (void)cellClickWithRowPath:(NSString *)rowPath colIndex:(NSInteger)col cellValue:(NSString *)value
+{
+    NSLog(@"rowpath = %@ ,col = %d ,value = %@",rowPath,col,value);
 }
 
 #pragma mark - FileSystem

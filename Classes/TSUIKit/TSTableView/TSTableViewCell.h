@@ -43,6 +43,10 @@
 @property (nonatomic, strong) UIImageView *iconView;
 @property (nonatomic, strong) UIImageView *backgroundImageView;
 
+//mark: add row and col index
+@property (nonatomic, strong) NSIndexPath *rowPath;
+@property (nonatomic) NSInteger colIndex;
+
 - (id)initWithReuseIdentifier:(NSString *)reuseId;
 
 /**

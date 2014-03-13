@@ -399,8 +399,9 @@
            (topTreshold <= CGRectGetMaxY(row.frame) && CGRectGetMaxY(row.frame) <= bottomTreshold) ||
            (CGRectGetMinY(row.frame) < topTreshold && bottomTreshold < CGRectGetMaxY(row.frame)))
         {
-            if(!row.rowView)
+            if(!row.rowView){
                 [self rowWillAppear:row atPath:[NSIndexPath indexPathWithIndex:i]];
+            }
         }
         else
         {

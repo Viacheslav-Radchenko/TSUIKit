@@ -26,8 +26,8 @@
 //  THE SOFTWARE.
 
 #import <Foundation/Foundation.h>
+#include "TSTableViewCell.h"
 
-@class TSTableViewCell;
 @class TSTableViewHeaderSectionView;
 @class TSTableView;
 

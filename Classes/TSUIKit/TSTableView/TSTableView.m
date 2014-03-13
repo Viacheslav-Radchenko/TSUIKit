@@ -1421,8 +1421,23 @@
 -(void)tapTableViewCell:(UITapGestureRecognizer *)recognizer
 {
     TSTableViewCell *cell = (TSTableViewCell*)recognizer.view;
-    [self.delegate tableView:self tapCellView:cell cellValue:cell.textLabel.text];
-    //    NSLog(@"%@ ",cell.textLabel.text);
+    NSString *value = cell.textLabel.text;
+    
+    [self.delegate tableView:self tapCellView:cell cellValue:value];
+    
+    NSIndexPath *rowPath = cell.rowPath;
+    NSString *pathstr = rowPath.description;
+    NSString *pre = @"path =";
+    NSString *suff = @"}";
+    NSRange preRange = [pathstr rangeOfString:pre];
+    NSUInteger preIndex = preRange.location + preRange.length;
+    NSRange suffRange = [pathstr rangeOfString:suff];
+    NSUInteger suffIndex = suffRange.location;
+    NSRange rang = NSMakeRange(preIndex+1, suffIndex-preIndex-1);
+    NSString *row = [pathstr substringWithRange:rang];
+    NSInteger col = cell.colIndex;
+    
+    [self.delegate cellClickWithRowPath:row colIndex:col cellValue:value];
 }
 
 - (TSTableViewCell *)tableView:(TSTableView *)tableView cellViewForRowAtPath:(NSIndexPath *)indexPath cellIndex:(NSInteger)index
@@ -1433,6 +1448,9 @@
     TSTableViewCell *cell =  [tableView dequeueReusableCellViewWithIdentifier:kReuseCellId];
     if(!cell){
         cell = [[TSTableViewCell alloc] initWithReuseIdentifier:kReuseCellId];
+        cell.rowPath = indexPath;
+        cell.colIndex = index;
+        
         //mark: add TSTableViewCell UITapGestureRecognizer
         UITapGestureRecognizer *tapCell = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapTableViewCell:)];
         [cell addGestureRecognizer:tapCell];
