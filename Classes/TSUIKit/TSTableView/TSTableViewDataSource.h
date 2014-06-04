@@ -70,6 +70,11 @@
  */
 - (TSTableViewHeaderSectionView *)tableView:(TSTableView *)tableView headerSectionViewForColumnAtPath:(NSIndexPath *)indexPath;
 
+/*
+ mark:
+ */
+- (NSString *)rowHead:(NSIndexPath *)indexPath;
+
 @optional
 
 /**

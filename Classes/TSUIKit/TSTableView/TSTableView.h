@@ -148,6 +148,9 @@ typedef enum {
 /** TSRow provides information about table row content (cells) and hierarchy (subrows). */
 @interface TSRow : NSObject
 
+//mark: 添加行头属性
+@property (nonatomic, strong) NSString *rowHead;
+
 /** Array of TSCell objects. */
 @property (nonatomic, strong) NSArray *cells;
 /** Array of TSRow objects (subrows). */
@@ -162,6 +165,8 @@ typedef enum {
  @param subrows Array may contain mix of TSRow and NSArray objects.
  */
 + (id)rowWithCells:(NSArray *)cells andSubrows:(NSArray *)subrows;
++ (id)rowWithCells:(NSArray *)cells andSubrows:(NSArray *)subrows andRowHead:(NSString*)rowHead;
+
 /** Create row with dictionary which define content TSRow.
  @param info Dictionary containes values for cells and subrows.
  
@@ -186,15 +191,18 @@ typedef enum {
  ```
  */
 + (id)rowWithDictionary:(NSDictionary *)info;
+
 /** Initialize row with set of cells.
  @param cells Array may contain mix of TSCell objects and any other NSObject value (which would be converted to TSCell).
  */
 - (id)initWithCells:(NSArray *)cells;
+- (id)initWithCells:(NSArray *)cells andRowHead:(NSString*)rowHead;
+
 /** Initialize row with set of cells.
  @param cells Array may contain mix of TSCell objects and any other NSObject value (which would be converted to TSCell).
  @param subrows Array may contain mix of TSRow and NSArray objects.
  */
-- (id)initWithCells:(NSArray *)cells andSubrows:(NSArray *)subrows;
+- (id)initWithCells:(NSArray *)cells andSubrows:(NSArray *)subrows andRowHead:(NSString*)rowHead;
 /** Initialize row with dictionary which define content TSRow.
  @param info Dictionary containes values for cells and subrows.
  

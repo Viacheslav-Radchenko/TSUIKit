@@ -31,7 +31,7 @@
 #import "TSTableViewExpandSection.h"
 #import "TSUtils.h"
 #import "TSDefines.h"
-
+#define NESTING_SIZE 12 //缩进大小
 
 @interface TSTableViewExpandControlPanel ()
 {
@@ -116,7 +116,7 @@
         UIImage *normalImage = [self.dataSource controlPanelExpandItemNormalBackgroundImage];
         UIImage *selectedImage = [self.dataSource controlPanelExpandItemSelectedBackgroundImage];
         CGFloat rowHeight = [self.dataSource heightForRowAtPath:rowPath];
-        UIButton *expandBtn = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, expandRow.frame.size.width, rowHeight)];
+        UIButton *expandBtn = [[UIButton alloc] initWithFrame:CGRectMake(-14, 0, expandRow.frame.size.width+20, rowHeight)];
 //        expandBtn.autoresizingMask = UIViewAutoresizingFlexibleWidth;
         expandBtn.showsTouchWhenHighlighted = [self.dataSource highlightControlsOnTap];
         expandBtn.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
@@ -168,7 +168,7 @@
     NSInteger numberOfRows = [self.dataSource numberOfRowsAtPath:rowPath];
     if(numberOfRows)
     {
-        CGFloat controlPanelExpandButtonWidth = [self.dataSource widthForExpandItem];
+        CGFloat controlPanelExpandButtonWidth = [self.dataSource widthForExpandItem];//此宽度决定行头内容显示的宽度
         UIImage *controlPanelExpandBackImage = [self.dataSource controlPanelExpandSectionBackgroundImage];
         NSMutableArray *newRows = [[NSMutableArray alloc] init];
         for(int j = 0; j < numberOfRows; ++j)
@@ -192,6 +192,10 @@
                 rowView.lineLabel.textColor = [self.dataSource lineNumbersColor];
             }
             [self addExpandButtonAtPath:subrowPath expandRowView:rowView];
+            
+            //mark: 在TSTableViewExpandSection中添加一个label
+            NSString *rowhead = [self.dataSource rowHead:subrowPath];
+            rowView.rowHeadLabel.text = rowhead;
             [self loadSubrowsForRowAtPath:subrowPath expandRowView:rowView];
             
             [newRows addObject:rowView];
@@ -570,7 +574,7 @@
                 totalHeight:(CGFloat *)totalHeight
                nestingLevel:(NSInteger *)maxNestingLevel
 {
-    CGFloat controlPanelExpandButtonWidth = [self.dataSource widthForExpandItem];
+    CGFloat controlPanelExpandButtonWidth = [self.dataSource widthForExpandItem];//此宽度决定整个controlPanel的宽度
     CGFloat maxWidth = 0;
     NSInteger maxNestLevel = 0;
     for(int i = 0; i < rows.count; ++i)
@@ -584,7 +588,7 @@
         {
             [self updateLayoutForRows:row.subrows
                               yOffset:totalRowHeight
-                              xOffset:totalRowWidth
+                              xOffset:NESTING_SIZE
                            totalWidth:&totalRowWidth
                           totalHeight:&totalRowHeight
                           nestingLevel:&nestingLevel];
@@ -606,14 +610,14 @@
 
 - (void)adjustRowWidthTo:(CGFloat)rowWidth forRows:(NSArray *)rows
 {
-    CGFloat controlPanelExpandButtonWidth = [self.dataSource widthForExpandItem];
+//    CGFloat controlPanelExpandButtonWidth = [self.dataSource widthForExpandItem];
     for(int i = 0; i < rows.count; ++i)
     {
         TSTableViewExpandSection *row = rows[i];
         row.frame = CGRectMake(row.frame.origin.x, row.frame.origin.y, rowWidth, row.frame.size.height);
         if(row.subrows.count)
         {
-            [self adjustRowWidthTo:rowWidth - controlPanelExpandButtonWidth  forRows:row.subrows];
+            [self adjustRowWidthTo:rowWidth - NESTING_SIZE  forRows:row.subrows];
         }
     }
 }

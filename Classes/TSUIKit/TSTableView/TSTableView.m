@@ -44,7 +44,7 @@
 #define DEF_COLUMN_WIDTH          128
 #define DEF_COLUMN_HEADER_HEIGHT  32
 #define DEF_ROW_HEIGHT            28
-#define DEF_EXPAND_ITEM_WIDTH     24
+#define DEF_EXPAND_ITEM_WIDTH     34
 
 #define DEF_TABLE_CONTENT_ADDITIONAL_SIZE   32
 #define DEF_TABLE_MIN_COLUMN_WIDTH          64
@@ -337,7 +337,7 @@
 {
     VerboseLog();
     CGFloat headerHeight = (_tableHeader.hidden ? 0 : [_tableHeader headerHeight]);
-    CGFloat controlPanleWidth = (_tableControlPanel.hidden ? 0 : [_tableControlPanel panelWidth]);
+    CGFloat controlPanleWidth = (_tableControlPanel.hidden ? 0 : [_tableControlPanel panelWidth]);//mark: controlPanleWidth需要重新计算！
     CGFloat tableWidth = [_tableHeader tableTotalWidth];
     CGFloat tableHeight = [_tableControlPanel tableHeight];
     
@@ -1325,6 +1325,23 @@
 
 #pragma mark - TSTableViewDataSource
 
+//mark:
+/*
+ 根据path取行头内容
+ */
+- (NSString *)rowHead:(NSIndexPath *)indexPath
+{
+    TSRow *row;
+    NSMutableArray *rows = _rows;
+    for(int i = 0; i < indexPath.length;  ++i)
+    {
+        NSInteger index = [indexPath indexAtPosition:i];
+        row = rows[index];
+        rows = row.subrows;
+    }
+    return [row rowHead];
+}
+
 - (NSInteger)numberOfColumns
 {
     VerboseLog();
@@ -1584,7 +1601,7 @@
         }
         else if([rowInfo isKindOfClass:[NSArray class]])
         {
-            [_rows addObject:[[TSRow alloc] initWithCells:rowInfo]];
+            [_rows addObject:[[TSRow alloc] initWithCells:rowInfo]];//此分支不能加行头!
         }
         else if([rowInfo isKindOfClass:[NSDictionary class]])
         {
@@ -1928,7 +1945,12 @@
 
 + (id)rowWithCells:(NSArray *)cells andSubrows:(NSArray *)subrows
 {
-    return [[TSRow alloc] initWithCells:cells andSubrows:subrows];
+    return [[TSRow alloc] initWithCells:cells andSubrows:subrows andRowHead:nil];
+}
+
++ (id)rowWithCells:(NSArray *)cells andSubrows:(NSArray *)subrows andRowHead:(NSString*)rowHead
+{
+    return [[TSRow alloc] initWithCells:cells andSubrows:subrows andRowHead:rowHead];
 }
 
 + (id)rowWithDictionary:(NSDictionary *)info
@@ -1938,13 +1960,21 @@
 
 - (id)initWithCells:(NSArray *)cells
 {
-    return [self initWithCells:cells andSubrows:nil];
+    return [self initWithCells:cells andSubrows:nil andRowHead:nil];
 }
 
-- (id)initWithCells:(NSArray *)cells andSubrows:(NSArray *)subrows
+- (id)initWithCells:(NSArray *)cells andRowHead:(NSString*)rowHead
+{
+    return [self initWithCells:cells andSubrows:nil andRowHead:rowHead];
+}
+
+- (id)initWithCells:(NSArray *)cells andSubrows:(NSArray *)subrows andRowHead:(NSString*)rowHead
 {
     if(self = [super init])
     {
+        if (rowHead) {
+            _rowHead = rowHead;
+        }
         if(cells)
         {
             NSMutableArray *tmpCells = [[NSMutableArray alloc] initWithCapacity:cells.count];
@@ -1990,6 +2020,12 @@
 {
     if(self = [super init])
     {
+        //mark: rowHead 处理
+        NSString *rowHead = info[@"rowHead"];
+        if (rowHead) {
+            _rowHead = rowHead;
+        }
+        
         NSArray *cells = info[@"cells"];
         if(cells)
         {

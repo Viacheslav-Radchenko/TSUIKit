@@ -261,6 +261,7 @@
                                                                       options:0//(NSDirectoryEnumerationSkipsHiddenFiles)
                                                                         error:&error];
     NSMutableArray *rows = [[NSMutableArray alloc] initWithCapacity:array.count];
+    NSInteger r = 11;
     for(NSURL * url in array)
     {
         NSString *localizedName = nil;
@@ -316,6 +317,7 @@
         [url getResourceValue:&modificationDate forKey:NSURLContentModificationDateKey error:NULL];
 
         TSRow *row = [TSRow rowWithDictionary:@{
+                      @"rowHead" : [NSString stringWithFormat:@"%d",r],
                       @"cells" : @[
                               cellFilename,
                               @{@"value" : fileSizeStr},
@@ -326,6 +328,7 @@
                       @"subrows" : subrows
          }];
         [rows addObject:row];
+        r++;
     }
     return [NSArray arrayWithArray:rows];
 }
