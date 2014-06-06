@@ -84,9 +84,11 @@
     if(!_rowHeadLabel)
     {
         _rowHeadLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0,self.bounds.size.width, _rowHeight)];
-//        _rowHeadLabel.backgroundColor = [UIColor colorWithRed:0 green:0 blue:1 alpha:0.2];
+        _rowHeadLabel.backgroundColor = [UIColor clearColor];
         _rowHeadLabel.textColor = [UIColor blackColor];
-        _rowHeadLabel.font = [UIFont systemFontOfSize:14];
+        _rowHeadLabel.font = [UIFont systemFontOfSize:14.0f];
+        _rowHeadLabel.textColor = [UIColor darkGrayColor];
+        
 //        _rowHeadLabel.textAlignment = NSTextAlignmentCenter;
 //        _rowHeadLabel.autoresizingMask = UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleBottomMargin;
 //        _rowHeadLabel.layer.cornerRadius = 3;

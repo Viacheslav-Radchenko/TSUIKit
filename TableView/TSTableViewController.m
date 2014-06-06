@@ -317,15 +317,15 @@
         [url getResourceValue:&modificationDate forKey:NSURLContentModificationDateKey error:NULL];
 
         TSRow *row = [TSRow rowWithDictionary:@{
-                      @"rowHead" : [NSString stringWithFormat:@"%d",r],
+                      @"rowHead" : [NSString stringWithFormat:@"目录结构%d",r],
                       @"cells" : @[
                               cellFilename,
                               @{@"value" : fileSizeStr},
                               @{@"value" : [dateFormatter stringFromDate:modificationDate]},
                               @{@"value" : [dateFormatter stringFromDate:creationDate]}
                               
-                      ],
-                      @"subrows" : subrows
+                      ]
+                      ,@"subrows" : subrows
          }];
         [rows addObject:row];
         r++;

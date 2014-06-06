@@ -89,6 +89,8 @@
  */
 - (CGFloat)widthForExpandItem;
 
+- (CGFloat)expandNestingSize;
+
 /**
     @abstract Return default/prefered width for column at specified index
  */

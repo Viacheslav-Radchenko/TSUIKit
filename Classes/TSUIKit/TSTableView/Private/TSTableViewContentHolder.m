@@ -87,6 +87,7 @@
 {
     self.alpha = 0;
     self.hidden = YES;
+    self.selectedItem = nil;
 }
 
 - (void)setSelectionColor:(UIColor *)selectionColor

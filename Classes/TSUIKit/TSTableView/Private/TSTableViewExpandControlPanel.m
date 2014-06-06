@@ -31,7 +31,6 @@
 #import "TSTableViewExpandSection.h"
 #import "TSUtils.h"
 #import "TSDefines.h"
-#define NESTING_SIZE 12 //缩进大小
 
 @interface TSTableViewExpandControlPanel ()
 {
@@ -116,7 +115,8 @@
         UIImage *normalImage = [self.dataSource controlPanelExpandItemNormalBackgroundImage];
         UIImage *selectedImage = [self.dataSource controlPanelExpandItemSelectedBackgroundImage];
         CGFloat rowHeight = [self.dataSource heightForRowAtPath:rowPath];
-        UIButton *expandBtn = [[UIButton alloc] initWithFrame:CGRectMake(-14, 0, expandRow.frame.size.width+20, rowHeight)];
+        UIButton *expandBtn = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 24, rowHeight)];
+//        expandBtn.backgroundColor = [UIColor colorWithRed:0 green:0.8 blue:0 alpha:0.3];
 //        expandBtn.autoresizingMask = UIViewAutoresizingFlexibleWidth;
         expandBtn.showsTouchWhenHighlighted = [self.dataSource highlightControlsOnTap];
         expandBtn.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
@@ -575,6 +575,7 @@
                nestingLevel:(NSInteger *)maxNestingLevel
 {
     CGFloat controlPanelExpandButtonWidth = [self.dataSource widthForExpandItem];//此宽度决定整个controlPanel的宽度
+    CGFloat nestingSize = [self.dataSource expandNestingSize];
     CGFloat maxWidth = 0;
     NSInteger maxNestLevel = 0;
     for(int i = 0; i < rows.count; ++i)
@@ -588,7 +589,7 @@
         {
             [self updateLayoutForRows:row.subrows
                               yOffset:totalRowHeight
-                              xOffset:NESTING_SIZE
+                              xOffset:nestingSize
                            totalWidth:&totalRowWidth
                           totalHeight:&totalRowHeight
                           nestingLevel:&nestingLevel];
@@ -604,20 +605,20 @@
         if(nestingLevel > maxNestLevel)
             maxNestLevel = nestingLevel;
     }
-    *totalWidth += maxWidth;
+    *totalWidth = maxWidth + nestingSize;
     *maxNestingLevel += maxNestLevel;
 }
 
 - (void)adjustRowWidthTo:(CGFloat)rowWidth forRows:(NSArray *)rows
 {
-//    CGFloat controlPanelExpandButtonWidth = [self.dataSource widthForExpandItem];
+    CGFloat nestingSize = [self.dataSource expandNestingSize];
     for(int i = 0; i < rows.count; ++i)
     {
         TSTableViewExpandSection *row = rows[i];
         row.frame = CGRectMake(row.frame.origin.x, row.frame.origin.y, rowWidth, row.frame.size.height);
         if(row.subrows.count)
         {
-            [self adjustRowWidthTo:rowWidth - NESTING_SIZE  forRows:row.subrows];
+            [self adjustRowWidthTo:rowWidth - nestingSize  forRows:row.subrows];
         }
     }
 }

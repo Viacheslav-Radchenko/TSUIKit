@@ -44,7 +44,8 @@
 #define DEF_COLUMN_WIDTH          128
 #define DEF_COLUMN_HEADER_HEIGHT  32
 #define DEF_ROW_HEIGHT            28
-#define DEF_EXPAND_ITEM_WIDTH     34
+#define DEF_EXPAND_ITEM_WIDTH     90
+#define DEF_EXPAND_NESTING_SIZE   12
 
 #define DEF_TABLE_CONTENT_ADDITIONAL_SIZE   32
 #define DEF_TABLE_MIN_COLUMN_WIDTH          64
@@ -337,7 +338,7 @@
 {
     VerboseLog();
     CGFloat headerHeight = (_tableHeader.hidden ? 0 : [_tableHeader headerHeight]);
-    CGFloat controlPanleWidth = (_tableControlPanel.hidden ? 0 : [_tableControlPanel panelWidth]);//mark: controlPanleWidth需要重新计算！
+    CGFloat controlPanleWidth = (_tableControlPanel.hidden ? 0 : [_tableControlPanel panelWidth]);
     CGFloat tableWidth = [_tableHeader tableTotalWidth];
     CGFloat tableHeight = [_tableControlPanel tableHeight];
     
@@ -911,7 +912,7 @@
 
 - (UIImage *)lightExpandItemNormalBackgroundImage
 {
-    CGFloat expandItemWidth = [self widthForExpandItem];
+    CGFloat expandItemWidth = DEF_EXPAND_NESTING_SIZE;
     CGFloat rowHeight = [self heightForRow];
     CGRect rect = CGRectMake(0.0f, 0.0f, 2 * expandItemWidth, rowHeight);
     UIGraphicsBeginImageContextWithOptions(rect.size, NO, [[UIScreen mainScreen] scale]);
@@ -939,7 +940,7 @@
 
 - (UIImage *)lightExpandItemSelectedBackgroundImage
 {
-    CGFloat expandItemWidth = [self widthForExpandItem];
+    CGFloat expandItemWidth = DEF_EXPAND_NESTING_SIZE;
     CGFloat rowHeight = [self heightForRow];
     CGRect rect = CGRectMake(0.0f, 0.0f, 2 * expandItemWidth, rowHeight);
     UIGraphicsBeginImageContextWithOptions(rect.size, NO, [[UIScreen mainScreen] scale]);
@@ -1432,6 +1433,11 @@
 {
     VerboseLog();
     return _widthForExpandItem;
+}
+
+- (CGFloat)expandNestingSize
+{
+    return DEF_EXPAND_NESTING_SIZE;
 }
 
 //mark: 单元格点击事件处理。调用协议中的方法，让其动作给实现协议的类处理。
