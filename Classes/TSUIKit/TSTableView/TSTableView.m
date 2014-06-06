@@ -120,7 +120,7 @@
         if(_tableStyle == kTSTableViewStyleLight)
         {
             self.lineNumbersColor = [UIColor blackColor];
-            self.backgroundColor = [UIColor grayColor];
+            self.backgroundColor = [UIColor colorWithWhite:0.922 alpha:1];
         }
         else
         {
