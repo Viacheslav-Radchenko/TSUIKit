@@ -70,6 +70,10 @@
     NSMutableArray *_columns;
     NSMutableArray *_bottomEndColumns;
     NSMutableArray *_rows;
+    
+    //add TopLeftCorner touch event
+    CGPoint _lastTouchPos;
+    BOOL _changingColumnSize;
 }
 
 @property (nonatomic, strong) TSTableViewHeaderPanel *tableHeader;
@@ -326,9 +330,56 @@
     if(!_topLeftCornerBackgroundImageView)
     {
         _topLeftCornerBackgroundImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, _tableControlPanel.frame.size.width, _tableHeader.frame.size.height)];
+        _topLeftCornerBackgroundImageView.userInteractionEnabled = YES;
         [self addSubview:_topLeftCornerBackgroundImageView];
+        [self addSlideButtonToTopLeftCorner:_topLeftCornerBackgroundImageView];
     }
     return _topLeftCornerBackgroundImageView;
+}
+
+#pragma mark - Slide Button
+
+- (void)addSlideButtonToTopLeftCorner:(UIImageView *)section
+{
+    VerboseLog();
+    CGFloat slideBtnWidth = 10;
+    UIButton *slideBtn = [[UIButton alloc] initWithFrame:CGRectMake(section.frame.size.width - slideBtnWidth, 0, slideBtnWidth, section.frame.size.height)];
+    slideBtn.showsTouchWhenHighlighted = [self highlightControlsOnTap];
+    [slideBtn addTarget:self action:@selector(slideTouchBegin:withEvent:) forControlEvents:UIControlEventTouchDown];
+    [slideBtn addTarget:self action:@selector(slideTouch:withEvent:) forControlEvents:UIControlEventAllTouchEvents];
+    [slideBtn addTarget:self action:@selector(slideTouchEnd:withEvent:) forControlEvents:UIControlEventTouchUpInside];
+    [slideBtn addTarget:self action:@selector(slideTouchEnd:withEvent:) forControlEvents:UIControlEventTouchUpOutside];
+    
+    slideBtn.backgroundColor = [UIColor colorWithRed:0.81 green:0.81 blue:0.81 alpha:0.85];
+    slideBtn.autoresizingMask = UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleHeight;
+    [section addSubview:slideBtn];
+}
+
+- (void)slideTouchBegin:(UIButton *)sender withEvent:(UIEvent *)event
+{
+    VerboseLog();
+    _changingColumnSize = YES;
+    _lastTouchPos = [[[event allTouches] anyObject] locationInView:self];
+}
+
+- (void)slideTouchEnd:(UIButton *)sender withEvent:(UIEvent *)event
+{
+    VerboseLog();
+    _changingColumnSize = NO;
+}
+
+- (void)slideTouch:(UIButton *)sender withEvent:(UIEvent *)event
+{
+    VerboseLog();
+    if(_changingColumnSize)
+    {
+        CGPoint centerPoint = [[[event allTouches] anyObject] locationInView:self];
+        CGFloat delta = centerPoint.x - _lastTouchPos.x;
+        _widthForExpandItem += delta;
+        [self reloadData];
+        [self reloadRowsData];
+        _lastTouchPos = centerPoint;
+    }
 }
 
 
@@ -1446,21 +1497,27 @@
     TSTableViewCell *cell = (TSTableViewCell*)recognizer.view;
     NSString *value = cell.textLabel.text;
     
-    [self.delegate tableView:self tapCellView:cell cellValue:value];
+    if(self.delegate && [self.delegate respondsToSelector:@selector(tableView:tapCellView:cellValue:)])
+    {
+        [self.delegate tableView:self tapCellView:cell cellValue:value];
+    }
     
-    NSIndexPath *rowPath = cell.rowPath;
-    NSString *pathstr = rowPath.description;
-    NSString *pre = @"path =";
-    NSString *suff = @"}";
-    NSRange preRange = [pathstr rangeOfString:pre];
-    NSUInteger preIndex = preRange.location + preRange.length;
-    NSRange suffRange = [pathstr rangeOfString:suff];
-    NSUInteger suffIndex = suffRange.location;
-    NSRange rang = NSMakeRange(preIndex+1, suffIndex-preIndex-1);
-    NSString *row = [pathstr substringWithRange:rang];
-    NSInteger col = cell.colIndex;
-    
-    [self.delegate cellClickWithRowPath:row colIndex:col cellValue:value];
+    if(self.delegate && [self.delegate respondsToSelector:@selector(cellClickWithRowPath:colIndex:cellValue:)])
+    {
+        NSIndexPath *rowPath = cell.rowPath;
+        NSString *pathstr = rowPath.description;
+        NSString *pre = @"path =";
+        NSString *suff = @"}";
+        NSRange preRange = [pathstr rangeOfString:pre];
+        NSUInteger preIndex = preRange.location + preRange.length;
+        NSRange suffRange = [pathstr rangeOfString:suff];
+        NSUInteger suffIndex = suffRange.location;
+        NSRange rang = NSMakeRange(preIndex+1, suffIndex-preIndex-1);
+        NSString *row = [pathstr substringWithRange:rang];
+        NSInteger col = cell.colIndex;
+        
+        [self.delegate cellClickWithRowPath:row colIndex:col cellValue:value];
+    }
 }
 
 - (TSTableViewCell *)tableView:(TSTableView *)tableView cellViewForRowAtPath:(NSIndexPath *)indexPath cellIndex:(NSInteger)index
