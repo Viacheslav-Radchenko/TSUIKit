@@ -85,7 +85,6 @@
     {
         _rowHeadLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0,self.bounds.size.width, _rowHeight)];
         _rowHeadLabel.backgroundColor = [UIColor clearColor];
-        _rowHeadLabel.textColor = [UIColor blackColor];
         _rowHeadLabel.font = [UIFont systemFontOfSize:14.0f];
         _rowHeadLabel.textColor = [UIColor darkGrayColor];
         

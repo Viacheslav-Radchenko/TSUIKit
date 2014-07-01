@@ -88,6 +88,7 @@
               where maxNesingLevel is maximal depth of subrows hierarchy
  */
 - (CGFloat)widthForExpandItem;
+- (void)widthForExpandItem:(CGFloat)width;
 
 - (CGFloat)expandNestingSize;
 

@@ -82,10 +82,10 @@
 //                     [self rowExample2],
 //                     ];
     
-    _rowExamples = @[
-                     [self rowForDummyFile],
-                     [self rowForDummyFile],
-                     ];
+//    _rowExamples = @[
+//                     [self rowForDummyFile],
+//                     [self rowForDummyFile],
+//                     ];
     
 }
 
@@ -317,7 +317,7 @@
         [url getResourceValue:&modificationDate forKey:NSURLContentModificationDateKey error:NULL];
 
         TSRow *row = [TSRow rowWithDictionary:@{
-                      @"rowHead" : [NSString stringWithFormat:@"目录结构%d",r],
+                      @"rowHead" : [NSString stringWithFormat:@"%d",r],
                       @"cells" : @[
                               cellFilename,
                               @{@"value" : fileSizeStr},
@@ -325,7 +325,7 @@
                               @{@"value" : [dateFormatter stringFromDate:creationDate]}
                               
                       ]
-//                      ,@"subrows" : subrows
+                      ,@"subrows" : subrows
          }];
         [rows addObject:row];
         r++;

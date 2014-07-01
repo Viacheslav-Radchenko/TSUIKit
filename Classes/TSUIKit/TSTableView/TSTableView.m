@@ -44,7 +44,8 @@
 #define DEF_COLUMN_WIDTH          128
 #define DEF_COLUMN_HEADER_HEIGHT  32
 #define DEF_ROW_HEIGHT            28
-#define DEF_EXPAND_ITEM_WIDTH     90
+#define DEF_EXPAND_ITEM_WIDTH     8
+#define MAX_ROWHEAD_WIDTH     68
 #define DEF_EXPAND_NESTING_SIZE   12
 
 #define DEF_TABLE_CONTENT_ADDITIONAL_SIZE   32
@@ -338,7 +339,7 @@
 }
 
 #pragma mark - Slide Button
-
+//mark: addSlideButtonToTopLeftCorner
 - (void)addSlideButtonToTopLeftCorner:(UIImageView *)section
 {
     VerboseLog();
@@ -376,6 +377,9 @@
         CGPoint centerPoint = [[[event allTouches] anyObject] locationInView:self];
         CGFloat delta = centerPoint.x - _lastTouchPos.x;
         _widthForExpandItem += delta;
+        if (_widthForExpandItem < DEF_EXPAND_ITEM_WIDTH) {
+            _widthForExpandItem = DEF_EXPAND_ITEM_WIDTH;
+        }
         [self reloadData];
         [self reloadRowsData];
         _lastTouchPos = centerPoint;
@@ -1377,9 +1381,9 @@
 
 #pragma mark - TSTableViewDataSource
 
-//mark:
+
 /*
- 根据path取行头内容
+ //mark: 根据path取行头内容
  */
 - (NSString *)rowHead:(NSIndexPath *)indexPath
 {
@@ -1484,6 +1488,11 @@
 {
     VerboseLog();
     return _widthForExpandItem;
+}
+
+- (void)widthForExpandItem:(CGFloat)width
+{
+    _widthForExpandItem = width;
 }
 
 - (CGFloat)expandNestingSize
@@ -1655,20 +1664,24 @@
         }
         [self addLeafColumnsFrom:[_columns lastObject]];
     }
-    
+    CGFloat max = 0.0;
     for(id rowInfo in rows)
     {
         if([rowInfo isKindOfClass:[TSRow class]])
         {
+            TSRow *row = (TSRow*)rowInfo;
+            [self setExpandItemWidth:row maxWidth:&max];
             [_rows addObject:rowInfo];
         }
         else if([rowInfo isKindOfClass:[NSArray class]])
         {
-            [_rows addObject:[[TSRow alloc] initWithCells:rowInfo]];//此分支不能加行头!
+            [_rows addObject:[[TSRow alloc] initWithCells:rowInfo]];//TODO: 此分支不能加行头!
         }
         else if([rowInfo isKindOfClass:[NSDictionary class]])
         {
-            [_rows addObject:[TSRow rowWithDictionary:rowInfo]];
+            TSRow *row = [TSRow rowWithDictionary:rowInfo];
+            [self setExpandItemWidth:row maxWidth:&max];
+            [_rows addObject:row];
         }
         else
         {
@@ -1676,6 +1689,26 @@
         }
     }
     [self reloadData];
+}
+
+
+ //mark: 根据内容动态调整行头大小
+-(void)setExpandItemWidth:(TSRow *)row maxWidth:(CGFloat*)max
+{
+    NSString *head = row.rowHead;
+    
+    if(head !=nil){
+        CGSize size = [head sizeWithFont:[UIFont systemFontOfSize:14.0f] constrainedToSize:CGSizeMake(MAXFLOAT, MAXFLOAT)];
+        CGFloat width = size.width + 20;
+        if (width > *max) {
+            *max = width;
+        }
+        if (*max < MAX_ROWHEAD_WIDTH && *max > DEF_EXPAND_ITEM_WIDTH) {
+            _widthForExpandItem = *max;
+        }else if(width >= MAX_ROWHEAD_WIDTH){
+            _widthForExpandItem = MAX_ROWHEAD_WIDTH;
+        }
+    }
 }
 
 - (void)addLeafColumnsFrom:(TSColumn *)parentColumn

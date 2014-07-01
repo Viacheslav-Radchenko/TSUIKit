@@ -195,7 +195,13 @@
             
             //mark: 在TSTableViewExpandSection中添加一个label
             NSString *rowhead = [self.dataSource rowHead:subrowPath];
+
+            //根据计算结果重新设置UILabel的尺寸
+            CGSize size = [rowhead sizeWithFont:rowView.rowHeadLabel.font constrainedToSize:CGSizeMake(controlPanelExpandButtonWidth, rowView.rowHeadLabel.frame.size.height)];
+            [rowView.rowHeadLabel setFrame:CGRectMake(rowView.rowHeadLabel.frame.origin.x, rowView.rowHeadLabel.frame.origin.y, size.width, rowView.rowHeadLabel.frame.size.height)];
+
             rowView.rowHeadLabel.text = rowhead;
+            
             [self loadSubrowsForRowAtPath:subrowPath expandRowView:rowView];
             
             [newRows addObject:rowView];
