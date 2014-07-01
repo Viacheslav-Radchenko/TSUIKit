@@ -34,7 +34,7 @@
 
 @property (nonatomic, strong, readwrite) UILabel *lineLabel;
 @property (nonatomic, strong, readwrite) UIImageView *backgroundImage;
-
+@property (nonatomic, strong, readwrite) UILabel *rowHeadLabel;
 
 @end
 
@@ -69,7 +69,7 @@
         _lineLabel.backgroundColor = [UIColor colorWithWhite:0 alpha:0.1f];
         _lineLabel.textAlignment = NSTextAlignmentCenter;
         _lineLabel.textColor = [UIColor blackColor];
-        _lineLabel.font = [UIFont italicSystemFontOfSize:7];
+        _lineLabel.font = [UIFont italicSystemFontOfSize:6.5];
         _lineLabel.autoresizingMask = UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleBottomMargin;
         _lineLabel.layer.cornerRadius = 3;
         _lineLabel.layer.masksToBounds = YES;
@@ -77,6 +77,25 @@
         [self updateLineLabelLayout];
     }
     return _lineLabel;
+}
+
+- (UILabel *)rowHeadLabel
+{
+    if(!_rowHeadLabel)
+    {
+        _rowHeadLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0,self.bounds.size.width, _rowHeight)];
+        _rowHeadLabel.backgroundColor = [UIColor clearColor];
+        _rowHeadLabel.font = [UIFont systemFontOfSize:14.0f];
+        _rowHeadLabel.textColor = [UIColor darkGrayColor];
+        
+//        _rowHeadLabel.textAlignment = NSTextAlignmentCenter;
+//        _rowHeadLabel.autoresizingMask = UIViewAutoresizingFlexibleRightMargin | UIViewAutoresizingFlexibleBottomMargin;
+//        _rowHeadLabel.layer.cornerRadius = 3;
+//        _rowHeadLabel.layer.masksToBounds = YES;
+        [self addSubview:_rowHeadLabel];
+        [self updateRowHeadLabelLayout];
+    }
+    return _rowHeadLabel;
 }
 
 - (UIImageView *)backgroundImage
@@ -109,6 +128,15 @@
     {
         [self.lineLabel sizeToFit];
         self.lineLabel.frame = CGRectMake(0, 2,  self.lineLabel.frame.size.width + 4,  self.lineLabel.frame.size.height);
+    }
+}
+
+- (void)updateRowHeadLabelLayout
+{
+    if(_rowHeadLabel)
+    {
+//        [self.rowHeadLabel sizeThatFits:CGSizeMake(200, 20)];
+        self.rowHeadLabel.frame = CGRectMake(25, 0,  self.rowHeadLabel.frame.size.width + 40,  self.rowHeadLabel.frame.size.height);
     }
 }
 

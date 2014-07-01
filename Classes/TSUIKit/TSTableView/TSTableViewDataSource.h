@@ -26,8 +26,8 @@
 //  THE SOFTWARE.
 
 #import <Foundation/Foundation.h>
+#include "TSTableViewCell.h"
 
-@class TSTableViewCell;
 @class TSTableViewHeaderSectionView;
 @class TSTableView;
 
@@ -70,6 +70,11 @@
  */
 - (TSTableViewHeaderSectionView *)tableView:(TSTableView *)tableView headerSectionViewForColumnAtPath:(NSIndexPath *)indexPath;
 
+/*
+ mark:
+ */
+- (NSString *)rowHead:(NSIndexPath *)indexPath;
+
 @optional
 
 /**
@@ -83,6 +88,9 @@
               where maxNesingLevel is maximal depth of subrows hierarchy
  */
 - (CGFloat)widthForExpandItem;
+- (void)widthForExpandItem:(CGFloat)width;
+
+- (CGFloat)expandNestingSize;
 
 /**
     @abstract Return default/prefered width for column at specified index

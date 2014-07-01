@@ -18,3 +18,5 @@ DerivedData
 .idea/
 /TSTableView
 /TSTabView
+/.project
+/.gitignore

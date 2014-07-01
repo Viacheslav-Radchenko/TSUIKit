@@ -36,6 +36,7 @@
 @property (nonatomic, strong) UIButton *expandButton;
 @property (nonatomic, strong, readonly) UILabel *lineLabel;
 @property (nonatomic, strong, readonly) UIImageView *backgroundImage;
+@property (nonatomic, strong, readonly) UILabel *rowHeadLabel;
 
 - (void)setLineNumber:(NSInteger)lineNumber;
 

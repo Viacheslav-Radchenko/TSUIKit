@@ -33,7 +33,7 @@
 #import "TSUtils.h"
 #import "TSDefines.h"
 
- 
+
 
 /**
     @abstract Selection rectangle view
@@ -77,6 +77,17 @@
     [self addSubview:_imageView];
     
     self.selectionColor = [UIColor colorWithRed:1 green:0 blue:0 alpha:0.25f];
+    
+    //mark: add hide TSTableViewSelection event
+    UITapGestureRecognizer *hideEvent = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleHide:)];
+    [self addGestureRecognizer:hideEvent];
+}
+
+- (void)handleHide:(UITapGestureRecognizer *)recognizer
+{
+    self.alpha = 0;
+    self.hidden = YES;
+    self.selectedItem = nil;
 }
 
 - (void)setSelectionColor:(UIColor *)selectionColor
@@ -102,8 +113,6 @@
 
 @property (nonatomic, strong) TSTableViewSelection *rowSelectionView;
 @property (nonatomic, strong) TSTableViewSelection *columnSelectionView;
-
-@property (nonatomic, strong) UITapGestureRecognizer *tapGestureRecognizer;
 
 @end
 
@@ -164,8 +173,9 @@
     _reusableCells = [[NSMutableDictionary alloc] init];
     _reusableRows = [[NSMutableArray alloc] init];
     
-    _tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapGestureDidRecognized:)];
-    [self addGestureRecognizer:_tapGestureRecognizer];
+    //mark: remove TSTableViewContentHolder's tapGestureRecognizer
+//    _tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapGestureDidRecognized:)];
+//    [self addGestureRecognizer:_tapGestureRecognizer];
 }
 
 - (TSTableViewSelection *)rowSelectionView
@@ -390,8 +400,9 @@
            (topTreshold <= CGRectGetMaxY(row.frame) && CGRectGetMaxY(row.frame) <= bottomTreshold) ||
            (CGRectGetMinY(row.frame) < topTreshold && bottomTreshold < CGRectGetMaxY(row.frame)))
         {
-            if(!row.rowView)
+            if(!row.rowView){
                 [self rowWillAppear:row atPath:[NSIndexPath indexPathWithIndex:i]];
+            }
         }
         else
         {
@@ -782,12 +793,13 @@
 }
 
 #pragma mark - Selection 
-
-- (void)tapGestureDidRecognized:(UITapGestureRecognizer *)recognizer
+//mark: 响应左侧面板的点击事件
+- (void)tapExpandPanelRecognized:(UITapGestureRecognizer *)recognizer
 {
     if(_allowRowSelection)
     {
         CGPoint pos = [recognizer locationInView:self];
+        pos.x += self.frame.origin.x;//mark: 把事件发生的点偏移一个左侧面板宽度的距离
         NSIndexPath *rowIndexPath = [self findRowAtPosition:pos parentRow:nil parentPowPath:nil];
 
         if(rowIndexPath)

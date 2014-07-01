@@ -181,13 +181,13 @@
 
 - (void)prepareForReuse
 {
-    if(_detailsLabel)
+    if(_textLabel)
     {
         _textLabel.textAlignment = NSTextAlignmentCenter;
         _textLabel.font = [UIFont systemFontOfSize:14.0f];
         _textLabel.textColor = [UIColor darkGrayColor];
     }
-    if(_textLabel)
+    if(_detailsLabel)
     {
         _detailsLabel.textAlignment = NSTextAlignmentCenter;
         _detailsLabel.font = [UIFont systemFontOfSize:10.0f];

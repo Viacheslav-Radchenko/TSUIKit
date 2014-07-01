@@ -7,7 +7,7 @@
 //
 
 #import "TSTableViewController.h"
-#import "TSTableViewModel.h"
+#import "TSTableView.h"
 #import "TSDefines.h"
 #import "TSTableViewController+TestDataDefinition.h"
 #import <QuartzCore/QuartzCore.h>
@@ -16,8 +16,8 @@
 {
     TSTableView *_tableView1;
     TSTableView *_tableView2;
-    TSTableViewModel *_model1;
-    TSTableViewModel *_model2;
+//    TSTableViewModel *_model1;
+//    TSTableViewModel *_model2;
     
     NSArray *_tables;
     NSArray *_dataModels;
@@ -40,41 +40,41 @@
     self.settingsView.layer.shadowOffset = CGSizeMake(2, 4);
     
     // Top table
-    _tableView1 = [[TSTableView alloc] initWithFrame:CGRectMake(20, 80, self.view.frame.size.width - 40, self.view.frame.size.height/2 - 70)];
+    _tableView1 = [[TSTableView alloc] initWithFrame:CGRectMake(20, 80, self.view.frame.size.width - 40, self.view.frame.size.height/2 - 70) andStyle:kTSTableViewStyleLight];
     _tableView1.autoresizingMask = UIViewAutoresizingFlexibleBottomMargin | UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
     _tableView1.delegate = self;
     [self.view addSubview:_tableView1];
     
-    _model1 = [[TSTableViewModel alloc] initWithTableView:_tableView1 andStyle:kTSTableViewStyleDark];
+//    _model1 = [[TSTableViewModel alloc] initWithTableView:_tableView1 andStyle:kTSTableViewStyleDark];
 //    NSArray *columns1 = [self columnsInfo1];
 //    NSArray *rows1 = [self rowsInfo1];
 //    [_model1 setColumns:columns1 andRows:rows1];
     
     NSArray *columns1 = [self columnsForFileSystemTree];
     NSArray *rows1 = [self rowsForAppDirectory];
-    [_model1 setColumns:columns1 andRows:rows1];
+    [_tableView1 setColumns:columns1 andRows:rows1];
     
     // Bottom table
    
     
-    _tableView2 = [[TSTableView alloc] initWithFrame:CGRectMake(20, self.view.frame.size.height/2 + 50, self.view.frame.size.width - 40, self.view.frame.size.height/2 - 70)];
-    _tableView2.autoresizingMask = UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
-    _tableView2.delegate = self;
+//    _tableView2 = [[TSTableView alloc] initWithFrame:CGRectMake(20, self.view.frame.size.height/2 + 50, self.view.frame.size.width - 40, self.view.frame.size.height/2 - 70) andStyle:kTSTableViewStyleDark];
+//    _tableView2.autoresizingMask = UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+//    _tableView2.delegate = self;
+//    
+//    [self.view addSubview:_tableView2];
     
-    [self.view addSubview:_tableView2];
-    
-    _model2 = [[TSTableViewModel alloc] initWithTableView:_tableView2 andStyle:kTSTableViewStyleLight];
+//    _model2 = [[TSTableViewModel alloc] initWithTableView:_tableView2 andStyle:kTSTableViewStyleLight];
     
 //    NSArray *columns2 = [self columnsInfo2];
 //    NSArray *rows2 = [self rowsInfo2];
 //    [_model2 setColumns:columns2 andRows:rows2];
     
-    NSArray *columns2 = [self columnsForFileSystemTree];
-    NSArray *rows2 = [self rowsForAppDirectory];
-    [_model2 setColumns:columns2 andRows:rows2];
+//    NSArray *columns2 = [self columnsForFileSystemTree];
+//    NSArray *rows2 = [self rowsForAppDirectory];
+//    [_tableView2 setColumns:columns2 andRows:rows2];
     
-    _dataModels = @[_model1, _model2];
-    _tables = @[_tableView1, _tableView2];
+//    _dataModels = @[_model1, _model2];
+    _tables = @[_tableView1];
     
     // Row examples should correspond to columnsInfo* and rowsInfo* used above
 //    _rowExamples = @[
@@ -82,10 +82,10 @@
 //                     [self rowExample2],
 //                     ];
     
-    _rowExamples = @[
-                     [self rowForDummyFile],
-                     [self rowForDummyFile],
-                     ];
+//    _rowExamples = @[
+//                     [self rowForDummyFile],
+//                     [self rowForDummyFile],
+//                     ];
     
 }
 
@@ -102,27 +102,25 @@
     NSInteger val = [stepper value];
     if(val > _stepperPreviousValue)
     {
-        for(int i = 0; i < _dataModels.count;  ++i)
+        for(int i = 0; i < _tables.count;  ++i)
         {
             TSTableView *table = _tables[i];
-            TSTableViewModel *model = _dataModels[i];
             NSIndexPath *rowPath = [table pathToSelectedRow];
             if(!rowPath)
                 rowPath = [NSIndexPath indexPathWithIndex:0];
             
             TSRow *row = _rowExamples[i];
-            [model insertRow:row atPath:rowPath];
+            [table insertRow:row atPath:rowPath];
         }
     }
     else
     {
-        for(int i = 0; i < _dataModels.count;  ++i)
+        for(int i = 0; i < _tables.count;  ++i)
         {
             TSTableView *table = _tables[i];
-            TSTableViewModel *model = _dataModels[i];
             NSIndexPath *rowPath = [table pathToSelectedRow];
             if(rowPath)
-                [model removeRowAtPath:rowPath];
+                [table removeRowAtPath:rowPath];
             
         }
     }
@@ -159,31 +157,60 @@
 - (void)tableView:(TSTableView *)tableView willSelectRowAtPath:(NSIndexPath *)rowPath selectedCell:(NSInteger)cellIndex animated:(BOOL)animated
 {
     VerboseLog();
+//    NSLog(@"willSelectRowAtPath");
 }
 
 - (void)tableView:(TSTableView *)tableView didSelectRowAtPath:(NSIndexPath *)rowPath selectedCell:(NSInteger)cellIndex
 {
     VerboseLog();
+//    NSLog(@"didSelectRowAtPath");
 }
 
 - (void)tableView:(TSTableView *)tableView willSelectColumnAtPath:(NSIndexPath *)columnPath animated:(BOOL)animated
 {
     VerboseLog();
+//    NSLog(@"willSelectColumnAtPath");
 }
 
 - (void)tableView:(TSTableView *)tableView didSelectColumnAtPath:(NSIndexPath *)columnPath
 {
     VerboseLog();
+//    NSLog(@"didSelectColumnAtPath");
 }
 
 - (void)tableView:(TSTableView *)tableView widthDidChangeForColumnAtIndex:(NSInteger)columnIndex
 {
     VerboseLog();
+//    NSLog(@"widthDidChangeForColumnAtIndex");
 }
 
 - (void)tableView:(TSTableView *)tableView expandStateDidChange:(BOOL)expand forRowAtPath:(NSIndexPath *)rowPath
 {
     VerboseLog();
+//    NSLog(@"expandStateDidChange");
+}
+
+//mark: cell click callback 1
+- (void)tableView:(TSTableView *)tableView tapCellView:(TSTableViewCell*)cell cellValue:(NSString*)value
+{
+//    NSInteger col = cell.colIndex;
+//    NSIndexPath *rowPath = cell.rowPath;
+//    NSString *pathstr = rowPath.description;
+//    NSString *pre = @"path =";
+//    NSString *suff = @"}";
+//    NSRange preRange = [pathstr rangeOfString:pre];
+//    NSUInteger preIndex = preRange.location + preRange.length;
+//    NSRange suffRange = [pathstr rangeOfString:suff];
+//    NSUInteger suffIndex = suffRange.location;
+//    NSRange rang = NSMakeRange(preIndex+1, suffIndex-preIndex-1);
+//    NSString *row = [pathstr substringWithRange:rang];
+//    NSLog(@"rowpath = %@ ,col = %d ,value = %@",row,col,value);
+}
+
+//mark: cell click callback 2
+- (void)cellClickWithRowPath:(NSString *)rowPath colIndex:(NSInteger)col cellValue:(NSString *)value
+{
+    NSLog(@"rowpath = %@ ,col = %d ,value = %@",rowPath,col,value);
 }
 
 #pragma mark - FileSystem
@@ -234,6 +261,7 @@
                                                                       options:0//(NSDirectoryEnumerationSkipsHiddenFiles)
                                                                         error:&error];
     NSMutableArray *rows = [[NSMutableArray alloc] initWithCapacity:array.count];
+    NSInteger r = 11;
     for(NSURL * url in array)
     {
         NSString *localizedName = nil;
@@ -289,16 +317,18 @@
         [url getResourceValue:&modificationDate forKey:NSURLContentModificationDateKey error:NULL];
 
         TSRow *row = [TSRow rowWithDictionary:@{
+                      @"rowHead" : [NSString stringWithFormat:@"%d",r],
                       @"cells" : @[
                               cellFilename,
                               @{@"value" : fileSizeStr},
                               @{@"value" : [dateFormatter stringFromDate:modificationDate]},
                               @{@"value" : [dateFormatter stringFromDate:creationDate]}
                               
-                      ],
-                      @"subrows" : subrows
+                      ]
+                      ,@"subrows" : subrows
          }];
         [rows addObject:row];
+        r++;
     }
     return [NSArray arrayWithArray:rows];
 }

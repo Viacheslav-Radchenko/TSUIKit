@@ -32,7 +32,6 @@
 #import "TSUtils.h"
 #import "TSDefines.h"
 
-
 @interface TSTableViewExpandControlPanel ()
 {
     NSMutableArray* _rows;
@@ -116,8 +115,9 @@
         UIImage *normalImage = [self.dataSource controlPanelExpandItemNormalBackgroundImage];
         UIImage *selectedImage = [self.dataSource controlPanelExpandItemSelectedBackgroundImage];
         CGFloat rowHeight = [self.dataSource heightForRowAtPath:rowPath];
-        UIButton *expandBtn = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, expandRow.frame.size.width, rowHeight)];
-        expandBtn.autoresizingMask = UIViewAutoresizingFlexibleWidth;
+        UIButton *expandBtn = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 24, rowHeight)];
+//        expandBtn.backgroundColor = [UIColor colorWithRed:0 green:0.8 blue:0 alpha:0.3];
+//        expandBtn.autoresizingMask = UIViewAutoresizingFlexibleWidth;
         expandBtn.showsTouchWhenHighlighted = [self.dataSource highlightControlsOnTap];
         expandBtn.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
         expandBtn.contentVerticalAlignment = UIControlContentVerticalAlignmentBottom;
@@ -168,7 +168,7 @@
     NSInteger numberOfRows = [self.dataSource numberOfRowsAtPath:rowPath];
     if(numberOfRows)
     {
-        CGFloat controlPanelExpandButtonWidth = [self.dataSource widthForExpandItem];
+        CGFloat controlPanelExpandButtonWidth = [self.dataSource widthForExpandItem];//此宽度决定行头内容显示的宽度
         UIImage *controlPanelExpandBackImage = [self.dataSource controlPanelExpandSectionBackgroundImage];
         NSMutableArray *newRows = [[NSMutableArray alloc] init];
         for(int j = 0; j < numberOfRows; ++j)
@@ -192,6 +192,16 @@
                 rowView.lineLabel.textColor = [self.dataSource lineNumbersColor];
             }
             [self addExpandButtonAtPath:subrowPath expandRowView:rowView];
+            
+            //mark: 在TSTableViewExpandSection中添加一个label
+            NSString *rowhead = [self.dataSource rowHead:subrowPath];
+
+            //根据计算结果重新设置UILabel的尺寸
+            CGSize size = [rowhead sizeWithFont:rowView.rowHeadLabel.font constrainedToSize:CGSizeMake(controlPanelExpandButtonWidth, rowView.rowHeadLabel.frame.size.height)];
+            [rowView.rowHeadLabel setFrame:CGRectMake(rowView.rowHeadLabel.frame.origin.x, rowView.rowHeadLabel.frame.origin.y, size.width, rowView.rowHeadLabel.frame.size.height)];
+
+            rowView.rowHeadLabel.text = rowhead;
+            
             [self loadSubrowsForRowAtPath:subrowPath expandRowView:rowView];
             
             [newRows addObject:rowView];
@@ -570,7 +580,8 @@
                 totalHeight:(CGFloat *)totalHeight
                nestingLevel:(NSInteger *)maxNestingLevel
 {
-    CGFloat controlPanelExpandButtonWidth = [self.dataSource widthForExpandItem];
+    CGFloat controlPanelExpandButtonWidth = [self.dataSource widthForExpandItem];//此宽度决定整个controlPanel的宽度
+    CGFloat nestingSize = [self.dataSource expandNestingSize];
     CGFloat maxWidth = 0;
     NSInteger maxNestLevel = 0;
     for(int i = 0; i < rows.count; ++i)
@@ -584,7 +595,7 @@
         {
             [self updateLayoutForRows:row.subrows
                               yOffset:totalRowHeight
-                              xOffset:totalRowWidth
+                              xOffset:nestingSize
                            totalWidth:&totalRowWidth
                           totalHeight:&totalRowHeight
                           nestingLevel:&nestingLevel];
@@ -600,20 +611,20 @@
         if(nestingLevel > maxNestLevel)
             maxNestLevel = nestingLevel;
     }
-    *totalWidth += maxWidth;
+    *totalWidth = maxWidth + nestingSize;
     *maxNestingLevel += maxNestLevel;
 }
 
 - (void)adjustRowWidthTo:(CGFloat)rowWidth forRows:(NSArray *)rows
 {
-    CGFloat controlPanelExpandButtonWidth = [self.dataSource widthForExpandItem];
+    CGFloat nestingSize = [self.dataSource expandNestingSize];
     for(int i = 0; i < rows.count; ++i)
     {
         TSTableViewExpandSection *row = rows[i];
         row.frame = CGRectMake(row.frame.origin.x, row.frame.origin.y, rowWidth, row.frame.size.height);
         if(row.subrows.count)
         {
-            [self adjustRowWidthTo:rowWidth - controlPanelExpandButtonWidth  forRows:row.subrows];
+            [self adjustRowWidthTo:rowWidth - nestingSize  forRows:row.subrows];
         }
     }
 }
