@@ -50,7 +50,7 @@ typedef enum {
 
 @implementation TSTabViewWithDropDownPanel
 
-//@dynamic delegate;
+@dynamic delegate;
 
 - (id)initWithFrame:(CGRect)rect navigationMenu:(TSNavigationStripView *)navigationMenu
 {
