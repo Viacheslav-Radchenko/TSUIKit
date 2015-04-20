@@ -50,6 +50,8 @@ typedef enum {
 
 @implementation TSTabViewWithDropDownPanel
 
+@dynamic delegate;
+
 - (id)initWithFrame:(CGRect)rect navigationMenu:(TSNavigationStripView *)navigationMenu
 {
     VerboseLog();
